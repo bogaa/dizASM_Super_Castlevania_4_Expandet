@@ -4091,9 +4091,9 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A0FFB8|        |FFFFFF;  
                        db $45,$58,$50,$41,$4E,$44,$45,$44   ;A0FFC0|        |000058;  
                        db $20,$52,$4F,$4D,$20,$00,$04,$00   ;A0FFC8|        |A04F52;  
-                       db $00,$00,$FF,$FF,$FF,$FF,$FF,$FF   ;A0FFD0|        |      ;  
-                       db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A0FFD8|        |FFFFFF;  
-                       db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A0FFE0|        |FFFFFF;  
-                       db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A0FFE8|        |FFFFFF;  
-                       db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A0FFF0|        |FFFFFF;  
-                       db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A0FFF8|        |FFFFFF;  
+          DATAlevel00: db $00,$00,$FF,$FF,$FF,$FF,$FF,$FF   ;A0FFD0|        |      ; donno what this is should be spriteGFX lol
+                       db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A0FFD8|        |      ;  
+                       db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A0FFE0|        |      ;  
+                       db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A0FFE8|        |      ;  
+                       db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A0FFF0|        |      ;  
+                       db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A0FFF8|        |      ;  
