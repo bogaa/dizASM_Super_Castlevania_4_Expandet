@@ -5440,7 +5440,7 @@ sprAssID_508_bossRowedin_FireBall: db $01                               ;84B02E|
                        AND.W #$00FF                         ;84ED54|29FF00  |      ;  
                        ASL A                                ;84ED57|0A      |      ;  
                        TAY                                  ;84ED58|A8      |      ;  
-                       LDA.W DATA16_8182E4,Y                ;84ED59|B9E482  |8182E4;  
+                       LDA.W mode7RotationIValue,Y          ;84ED59|B9E482  |8182E4;  
                        RTS                                  ;84ED5C|60      |      ;  
           CODE_84ED5D: LDY.W #$0008                         ;84ED5D|A00800  |      ;  
                        LDA.W $1388                          ;84ED60|AD8813  |811388;  

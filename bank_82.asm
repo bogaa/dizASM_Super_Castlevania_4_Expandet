@@ -74,7 +74,7 @@
                        LDY.B RAM_currentLevel               ;8280A7|A486    |000086;  
                        LDA.W DATA16_81B395,Y                ;8280A9|B995B3  |81B395;  
                        AND.W #$00FF                         ;8280AC|29FF00  |      ;  
-                       JSL.L CODE_85BE90                    ;8280AF|2290BE85|85BE90;  
+                       JSL.L loadDeathEntranceRoutine       ;8280AF|2290BE85|85BE90;  
                        NOP                                  ;8280B3|EA      |      ;  
                        LDA.W RAM_81_simonStat_Health_HUD    ;8280B4|ADF413  |8113F4;  
                        BNE CODE_8280C1                      ;8280B7|D008    |8280C1;  
@@ -1866,7 +1866,7 @@ event_ID_45_unused_fallingObj: LDA.B RAM_bg1CamXpos,X               ;829317|B51C
                        AND.W #$007F                         ;829393|297F00  |      ;  
                        ASL A                                ;829396|0A      |      ;  
                        TAY                                  ;829397|A8      |      ;  
-                       LDX.W DATA16_81B9D6,Y                ;829398|BED6B9  |81B9D6;  
+                       LDX.W bossSrcDestPointer,Y           ;829398|BED6B9  |81B9D6;  
                        JML.L CODE_8280E8                    ;82939B|5CE88082|8280E8;  
 clearEventTableBeforBoss: REP #$30                             ;82939F|C230    |      ;  
                        PHB                                  ;8293A1|8B      |      ;  
@@ -4714,7 +4714,7 @@ coffineCircleRoutine00: LDA.B RAM_gameState,X                ;82AD7A|B532    |00
                        AND.W #$00FF                         ;82AD7C|29FF00  |      ;  
                        ASL A                                ;82AD7F|0A      |      ;  
                        TAY                                  ;82AD80|A8      |      ;  
-                       LDA.W DATA16_8182E4,Y                ;82AD81|B9E482  |8182E4;  
+                       LDA.W mode7RotationIValue,Y          ;82AD81|B9E482  |8182E4;  
                        LSR A                                ;82AD84|4A      |      ;  
                        LSR A                                ;82AD85|4A      |      ;  
                        LSR A                                ;82AD86|4A      |      ;  
@@ -4751,7 +4751,7 @@ coffineCircleRoutine01: LDA.B RAM_gameState,X                ;82ADA7|B532    |00
                        SBC.W #$0080                         ;82ADB9|E98000  |      ;  
                        ASL A                                ;82ADBC|0A      |      ;  
                        TAY                                  ;82ADBD|A8      |      ;  
-                       LDA.W DATA16_8182E4,Y                ;82ADBE|B9E482  |8182E4;  
+                       LDA.W mode7RotationIValue,Y          ;82ADBE|B9E482  |8182E4;  
           CODE_82ADC1: LSR A                                ;82ADC1|4A      |      ;  
                        LSR A                                ;82ADC2|4A      |      ;  
                        LSR A                                ;82ADC3|4A      |      ;  
@@ -8856,7 +8856,7 @@ event_ID_53_axeProjectile: REP #$20                             ;82D1DA|C220    
                        INC A                                ;82D32B|1A      |      ;  
           CODE_82D32C: ASL A                                ;82D32C|0A      |      ;  
                        TAY                                  ;82D32D|A8      |      ;  
-                       LDA.W DATA16_8182E4,Y                ;82D32E|B9E482  |8182E4;  
+                       LDA.W mode7RotationIValue,Y          ;82D32E|B9E482  |8182E4;  
                        STA.B $0C                            ;82D331|850C    |00000C;  
                        LDA.W DATA16_8183E4,Y                ;82D333|B9E483  |8183E4;  
                        STA.B $0E                            ;82D336|850E    |00000E;  

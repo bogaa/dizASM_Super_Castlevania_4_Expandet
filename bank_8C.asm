@@ -4210,7 +4210,7 @@ event_ID_61_SwingingSpikePlatform: LDA.B $14,X                          ;8CFA57|
                        ASL A                                ;8CFB38|0A      |      ;  
                        TAY                                  ;8CFB39|A8      |      ;  
                        STY.B $FE                            ;8CFB3A|84FE    |0000FE;  
-                       LDA.W DATA16_8182E4,Y                ;8CFB3C|B9E482  |8182E4;  
+                       LDA.W mode7RotationIValue,Y          ;8CFB3C|B9E482  |8182E4;  
                        STA.B RAM_general                    ;8CFB3F|8500    |000000;  
                        LDA.W #$0040                         ;8CFB41|A94000  |      ;  
                        STA.B $02                            ;8CFB44|8502    |000002;  

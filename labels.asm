@@ -700,8 +700,9 @@
                        ;      |        |      ;  
                        ;      |        |      ;  
                        ;      |        |      ;  
-                       UNREACH_7DFFFB = $7DFFFB             ;      |        |      ;  
-                       UNREACH_7DFFFE = $7DFFFE             ;      |        |      ;  
+                       ;      |        |      ;  
+                       GFX_7DFFFB = $7DFFFB                 ;      |        |      ;  
+                       GFX_7DFFFE = $7DFFFE                 ;      |        |      ;  
                        CODE_009491 = $009491                ;      |        |      ;  
                        CODE_00952F = $00952F                ;      |        |      ;  
                        CODE_009537 = $009537                ;      |        |      ;  
@@ -748,7 +749,6 @@
                        PTR16_00FFFF = $00FFFF               ;      |        |      ;  
                        DATA16_AFA5B4 = $AFA5B4              ;      |        |      ;  
                        DATA16_81DEA5 = $81DEA5              ;      |        |      ;  
-                       DATA16_81D69D = $81D69D              ;      |        |      ;  
                        PTR16_A68001 = $A68001               ;      |        |      ;  
                        DATA16_81B395 = $81B395              ;      |        |      ;  
                        DATA16_81B753 = $81B753              ;      |        |      ;  

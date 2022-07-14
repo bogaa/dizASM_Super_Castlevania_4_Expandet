@@ -1,2 +1,2 @@
-asar\asar.exe main.asm
+asarASM\asar.exe main.asm
 pause
