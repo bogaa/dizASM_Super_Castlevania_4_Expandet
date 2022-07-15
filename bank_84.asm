@@ -4881,11 +4881,11 @@ sprAssID_508_bossRowedin_FireBall: db $01                               ;84B02E|
                        BNE CODE_84E81E                      ;84E808|D014    |84E81E;  
                        DEC.B $24,X                          ;84E80A|D624    |000024;  
                        BNE CODE_84E81E                      ;84E80C|D010    |84E81E;  
-                       STZ.W $1C00                          ;84E80E|9C001C  |811C00;  
+NEWbossGrakulSC4edExitHandler: STZ.W $1C00                          ;84E80E|9C001C  |811C00;  
                        LDA.W #$0006                         ;84E811|A90600  |      ;  
                        STA.W $1C02                          ;84E814|8D021C  |811C02;  
                        LDA.W #$000B                         ;84E817|A90B00  |      ;  
-                       JML.L levelLoadInit                  ;84E81A|5CC0FF82|82FFC0;  
+                       JML.L levelLoadInitSC4edHandler      ;84E81A|5CC0FF82|82FFC0;  
           CODE_84E81E: RTL                                  ;84E81E|6B      |      ;  
           CODE_84E81F: LDA.W #$0081                         ;84E81F|A98100  |      ;  
                        JSL.L CODE_808D55                    ;84E822|22558D80|808D55;  

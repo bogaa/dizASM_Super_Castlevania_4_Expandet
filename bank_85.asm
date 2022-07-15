@@ -2003,7 +2003,7 @@ thisHasToDoWithScrollBehavier4EachLevel: dw $0003,$0003,$0003,$0003           ;8
                        db $8A,$8A,$8A,$8A,$8A,$00,$00,$00   ;85BE78|        |      ;  
                        db $00,$8A,$8A,$00,$00,$00,$00,$0A   ;85BE80|        |      ;  
                        db $0A,$0A,$0A,$0A,$00,$8A,$8A,$00   ;85BE88|        |      ;  
-loadDeathEntranceRoutine: PHX                                  ;85BE90|DA      |      ;  
+loadNewDeathEntranceRoutineSC4ed: PHX                                  ;85BE90|DA      |      ; new death entrance code
                        CMP.B RAM_currentLevel               ;85BE91|C586    |000086;  
                        BEQ CODE_85BE9C                      ;85BE93|F007    |85BE9C;  
                        STA.B RAM_currentLevel               ;85BE95|8586    |000086;  
@@ -2541,7 +2541,7 @@ levelTileAnimationPointer01: dw levelTileAnimationEnteryEmpty00   ;85CB0A|      
                        dw levelTileAnimationEnteryEmpty00   ;85CB8C|        |8187BF;  
                        dw levelTileAnimationEnteryEmpty00   ;85CB8E|        |8187BF;  
                        dw levelTileAnimationEnteryEmpty00   ;85CB90|        |8187BF;  
-deathEntranceEventLoadDirection: PHA                                  ;85CB92|48      |      ;  
+deathEntranceEventLoadDirectionSC4ed: PHA                                  ;85CB92|48      |      ;  
                        LDA.W RAM_81_deathEntrance           ;85CB93|ADD413  |8113D4;  
                        AND.W #$0001                         ;85CB96|290100  |      ;  
                        BEQ CODE_85CBA1                      ;85CB99|F006    |85CBA1;  
@@ -2550,7 +2550,7 @@ deathEntranceEventLoadDirection: PHA                                  ;85CB92|48
                        BRA CODE_85CBA2                      ;85CB9F|8001    |85CBA2;  
           CODE_85CBA1: PLA                                  ;85CBA1|68      |      ;  
           CODE_85CBA2: STA.B $9A                            ;85CBA2|859A    |00009A;  
-                       RTL                                  ;85CBA4|6B      |      ;  
+                       RTL                                  ;85CBA4|6B      |      ; end sc4ed fixes
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;85CBA5|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;85CBAD|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;85CBB5|        |FFFFFF;  
@@ -4316,7 +4316,7 @@ event_ID_5f_ectoplasm: LDA.B $12,X                          ;85D302|B512    |000
                        CPY.W #$0D00                         ;85E15A|C0000D  |      ;  
                        BCC CODE_85E14F                      ;85E15D|90F0    |85E14F;  
                        db $6B                               ;85E15F|        |      ;  
-          CODE_85E160: JSL.L CODE_82B3F4                    ;85E160|22F4B382|82B3F4;  
+          CODE_85E160: JSL.L clearCurrentEventSlot          ;85E160|22F4B382|82B3F4;  
                        CLC                                  ;85E164|18      |      ;  
                        RTL                                  ;85E165|6B      |      ;  
           CODE_85E166: PHX                                  ;85E166|DA      |      ;  
@@ -4936,7 +4936,7 @@ animBGSkellyc0State07: STZ.B $12,X                          ;85E68D|7412    |000
                        STA.B $3C,X                          ;85E70E|953C    |00003C;  
                        JSR.W CODE_85EBF7                    ;85E710|20F7EB  |85EBF7;  
                        LDX.W #$F349                         ;85E713|A249F3  |      ;  
-                       JSL.L CODE_8280E8                    ;85E716|22E88082|8280E8;  
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;85E716|22E88082|8280E8;  
                        JSL.L CODE_808B93                    ;85E71A|22938B80|808B93;  
                        LDX.W #$05C0                         ;85E71E|A2C005  |      ;  
                        LDA.W #$A70A                         ;85E721|A90AA7  |      ;  
@@ -6077,9 +6077,9 @@ bossKoranot_getMovingPlatform: LDA.B $10,X                          ;85ED19|B510
                        JSL.L CODE_808ACE                    ;85F1C2|22CE8A80|808ACE;  
                        JSL.L CODE_808F63                    ;85F1C6|22638F80|808F63;  
                        LDX.W #$B545                         ;85F1CA|A245B5  |      ;  
-                       JSL.L CODE_8280E8                    ;85F1CD|22E88082|8280E8;  
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;85F1CD|22E88082|8280E8;  
                        LDX.W #$B567                         ;85F1D1|A267B5  |      ;  
-                       JSL.L CODE_8280E8                    ;85F1D4|22E88082|8280E8;  
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;85F1D4|22E88082|8280E8;  
                        LDY.W #$87A5                         ;85F1D8|A0A587  |      ;  
                        JSL.L getPaletteFirstTableY2X        ;85F1DB|22E69080|8090E6;  
                        LDA.W #$0600                         ;85F1DF|A90006  |      ;  
@@ -7262,8 +7262,10 @@ collusionRoutineGoldPlatform: LDA.W #$0008                         ;85FB91|A9080
                        LDA.B RAM_currentLevel               ;85FF2B|A586    |000086;  
                        CMP.W #$0009                         ;85FF2D|C90900  |      ;  
                        BNE CODE_85FF40                      ;85FF30|D00E    |85FF40;  
-                       db $A9,$05,$00,$8D,$F2,$13,$A9,$03   ;85FF32|        |      ;  
-                       db $00,$5C,$C0,$FF,$82               ;85FF3A|        |      ;  
+                       db $A9,$05,$00,$8D,$F2,$13           ;85FF32|        |      ;  
+NEWcutSceneHandlerSC4ed00: LDA.W #$0003                         ;85FF38|A90300  |      ;  
+                       JML.L levelLoadInitSC4edHandler      ;85FF3B|5CC0FF82|82FFC0;  
+                                                            ;      |        |      ;  
           CODE_85FF3F: RTL                                  ;85FF3F|6B      |      ;  
           CODE_85FF40: LDA.W #$000B                         ;85FF40|A90B00  |      ;  
                        STA.B RAM_mainGameState              ;85FF43|8570    |000070;  
@@ -7278,8 +7280,8 @@ collusionRoutineGoldPlatform: LDA.W #$0008                         ;85FB91|A9080
                        BCC CODE_85FF4B                      ;85FF59|90F0    |85FF4B;  
                        db $A0,$00,$00                       ;85FF5B|        |      ;  
           CODE_85FF5E: STY.W $1C02                          ;85FF5E|8C021C  |811C02;  
-                       INC.W $13E8                          ;85FF61|EEE813  |8113E8;  
-                       JMP.W CODE_85FFC0                    ;85FF64|4CC0FF  |85FFC0;  
+NEWcutSceneHandlerSC4ed01: INC.W $13E8                          ;85FF61|EEE813  |8113E8;  
+                       JMP.W NEWcutSceneHandlerSC4ed02      ;85FF64|4CC0FF  |85FFC0;  
                        JML.L CODE_84E5C4                    ;85FF67|5CC4E584|84E5C4;  
                        JML.L CODE_86B930                    ;85FF6B|5C30B986|86B930;  
                        JML.L CODE_86C0D7                    ;85FF6F|5CD7C086|86C0D7;  
@@ -7294,7 +7296,7 @@ collusionRoutineGoldPlatform: LDA.W #$0008                         ;85FB91|A9080
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;85FFAB|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;85FFB3|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF               ;85FFBB|        |FFFFFF;  
-          CODE_85FFC0: PHX                                  ;85FFC0|DA      |      ;  
+NEWcutSceneHandlerSC4ed02: PHX                                  ;85FFC0|DA      |      ;  
                        LDA.B RAM_currentLevel               ;85FFC1|A586    |000086;  
                        ASL A                                ;85FFC3|0A      |      ;  
                        ASL A                                ;85FFC4|0A      |      ;  
@@ -7309,7 +7311,7 @@ collusionRoutineGoldPlatform: LDA.W #$0008                         ;85FB91|A9080
                        AND.W #$00FF                         ;85FFD6|29FF00  |      ;  
                        STA.W RAM_81_deathEntrance           ;85FFD9|8DD413  |8113D4;  
                        PLX                                  ;85FFDC|FA      |      ;  
-                       RTL                                  ;85FFDD|6B      |      ;  
+                       RTL                                  ;85FFDD|6B      |      ; end SC4ed Tweaks
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;85FFDE|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;85FFE6|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;85FFEE|        |FFFFFF;  

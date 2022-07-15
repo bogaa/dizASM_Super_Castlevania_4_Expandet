@@ -9,3 +9,5 @@
 (9) Offset 0x1461D: Branch or jump instruction to a non-instruction.
 (10) Offset 0x17E4C: Branch or jump instruction to a non-instruction.
 (11) Offset 0x1F31A: Branch or jump instruction to a non-instruction.
+(12) Offset 0x32417: Branch or jump instruction to a non-instruction.
+(13) Offset 0x3241E: Bytes marked as operands formatted as Data.

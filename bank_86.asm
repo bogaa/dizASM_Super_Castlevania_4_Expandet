@@ -2044,7 +2044,7 @@ paletteDataBGcolor4EachLevel: db $02,$10,$01,$04,$00,$00,$00,$00   ;8694F7|     
                        db $00,$08,$00,$00,$00,$00,$00,$00   ;86956F|        |      ;  
                        db $00,$00,$00,$00,$20,$08,$20,$08   ;869577|        |      ;  
                        LDX.W #$F9DC                         ;86957F|A2DCF9  |      ;  
-                       JSL.L CODE_8280E8                    ;869582|22E88082|8280E8;  
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;869582|22E88082|8280E8;  
                        LDA.W #$03E0                         ;869586|A9E003  |      ;  
                        STA.W $1EA6                          ;869589|8DA61E  |001EA6;  
                        LDA.W #$00B8                         ;86958C|A9B800  |      ;  
@@ -3611,41 +3611,71 @@ paletteDataBGcolor4EachLevel: db $02,$10,$01,$04,$00,$00,$00,$00   ;8694F7|     
                        STA.B $0A                            ;86A3AC|850A    |00000A;  
                        LDA.B $08                            ;86A3AE|A508    |000008;  
                        AND.W #$03FF                         ;86A3B0|29FF03  |      ;  
-                       PHY                                  ;86A3B3|5A      |      ;  
+SC4edNewTableBasedCollusionFirstLevelFIX: PHY                                  ;86A3B3|5A      |      ;  
                        TAY                                  ;86A3B4|A8      |      ;  
                        LDA.B [$C8],Y                        ;86A3B5|B7C8    |0000C8;  
                        PLY                                  ;86A3B7|7A      |      ;  
                        AND.W #$00FF                         ;86A3B8|29FF00  |      ;  
                        CMP.W #$0002                         ;86A3BB|C90200  |      ;  
-                       BCC CODE_86A433                      ;86A3BE|9073    |86A433;  
+                       BCC CODE_86A433                      ;86A3BE|9073    |86A433; FIXME!
                        CMP.B $E4                            ;86A3C0|C5E4    |0000E4;  
                        BEQ CODE_86A42C                      ;86A3C2|F068    |86A42C;  
                        CMP.W #$0004                         ;86A3C4|C90400  |      ;  
                        BCC CODE_86A431                      ;86A3C7|9068    |86A431;  
                        CMP.W #$0006                         ;86A3C9|C90600  |      ;  
-                       BCC CODE_86A433                      ;86A3CC|9065    |86A433;  
-                       BNE CODE_86A3D5                      ;86A3CE|D005    |86A3D5;  
+                       BCC CODE_86A433                      ;86A3CC|9065    |86A433; FIXME!
+                       BNE CODE_86A3D5                      ;86A3CE|D005    |86A3D5; FIXME!
                        LDA.W #$FFFF                         ;86A3D0|A9FFFF  |      ;  
-                       BRA CODE_86A431                      ;86A3D3|805C    |86A431;  
+                       BRA CODE_86A431                      ;86A3D3|805C    |86A431; FIXME!
           CODE_86A3D5: CMP.W #$000C                         ;86A3D5|C90C00  |      ;  
                        BCC CODE_86A431                      ;86A3D8|9057    |86A431;  
-                       BNE CODE_86A427                      ;86A3DA|D04B    |86A427;  
+                       BNE CODE_86A427                      ;86A3DA|D04B    |86A427; FIXME!
                        LDA.W #$8000                         ;86A3DC|A90080  |      ;  
-                       BRA CODE_86A431                      ;86A3DF|8050    |86A431;  
-                       db $B0,$05,$A9,$05,$00,$80,$4B,$C5   ;86A3E1|        |86A3E8;  
-                       db $D4,$B0,$05,$A9,$FF,$FF,$80,$40   ;86A3E9|        |0000B0;  
-                       db $C5,$D6,$B0,$05,$A9,$07,$00,$80   ;86A3F1|        |0000D6;  
-                       db $37,$C5,$D8,$B0,$05,$A9,$08,$00   ;86A3F9|        |0000C5;  
-                       db $80,$2E,$C5,$DA,$B0,$05,$A9,$09   ;86A401|        |86A431;  
-                       db $00,$80,$25,$C5,$DC,$B0,$05,$A9   ;86A409|        |      ;  
-                       db $0A,$00,$80,$1C,$C5,$DE,$B0,$05   ;86A411|        |      ;  
-                       db $A9,$0B,$00,$80,$13,$C5,$E0,$B0   ;86A419|        |      ;  
-                       db $05,$A9,$00,$80,$80,$0A           ;86A421|        |0000A9;  
+                       BRA CODE_86A431                      ;86A3DF|8050    |86A431; FIXME!
+                       BCS CODE_86A3E8                      ;86A3E1|B005    |86A3E8; unsed Setup by Redguy or orginal Setup..
+                       LDA.W #$0005                         ;86A3E3|A90500  |      ;  
+                       BRA CODE_86A433                      ;86A3E6|804B    |86A433;  
+                                                            ;      |        |      ;  
+          CODE_86A3E8: CMP.B $D4                            ;86A3E8|C5D4    |0000D4;  
+                       BCS CODE_86A3F1                      ;86A3EA|B005    |86A3F1;  
+                       LDA.W #$FFFF                         ;86A3EC|A9FFFF  |      ;  
+                       BRA CODE_86A431                      ;86A3EF|8040    |86A431;  
+                                                            ;      |        |      ;  
+          CODE_86A3F1: CMP.B $D6                            ;86A3F1|C5D6    |0000D6;  
+                       BCS CODE_86A3FA                      ;86A3F3|B005    |86A3FA;  
+                       LDA.W #$0007                         ;86A3F5|A90700  |      ;  
+                       BRA CODE_86A431                      ;86A3F8|8037    |86A431;  
+                                                            ;      |        |      ;  
+          CODE_86A3FA: CMP.B $D8                            ;86A3FA|C5D8    |0000D8;  
+                       BCS CODE_86A403                      ;86A3FC|B005    |86A403;  
+                       LDA.W #$0008                         ;86A3FE|A90800  |      ;  
+                       BRA CODE_86A431                      ;86A401|802E    |86A431;  
+                                                            ;      |        |      ;  
+          CODE_86A403: CMP.B $DA                            ;86A403|C5DA    |0000DA;  
+                       BCS CODE_86A40C                      ;86A405|B005    |86A40C;  
+                       LDA.W #$0009                         ;86A407|A90900  |      ;  
+                       BRA CODE_86A431                      ;86A40A|8025    |86A431;  
+                                                            ;      |        |      ;  
+          CODE_86A40C: CMP.B $DC                            ;86A40C|C5DC    |0000DC;  
+                       BCS CODE_86A415                      ;86A40E|B005    |86A415;  
+                       LDA.W #$000A                         ;86A410|A90A00  |      ;  
+                       BRA CODE_86A431                      ;86A413|801C    |86A431;  
+                                                            ;      |        |      ;  
+          CODE_86A415: CMP.B $DE                            ;86A415|C5DE    |0000DE;  
+                       BCS LOOSE_OP_86A41E                  ;86A417|B005    |86A41E;  
+                       LDA.W #$000B                         ;86A419|A90B00  |      ;  
+                       BRA CODE_86A431                      ;86A41C|8013    |86A431;  
+                                                            ;      |        |      ;  
+      LOOSE_OP_86A41E: db $C5                               ;86A41E|        |      ;  
+                       CPX.W #$05B0                         ;86A41F|E0B005  |      ;  
+                       LDA.W #$8000                         ;86A422|A90080  |      ;  
+                       BRA CODE_86A431                      ;86A425|800A    |86A431;  
+                                                            ;      |        |      ;  
           CODE_86A427: LDA.W #$0006                         ;86A427|A90600  |      ;  
                        BRA CODE_86A433                      ;86A42A|8007    |86A433;  
           CODE_86A42C: LDA.W #$0000                         ;86A42C|A90000  |      ;  
                        BRA CODE_86A433                      ;86A42F|8002    |86A433;  
-          CODE_86A431: EOR.B $0A                            ;86A431|450A    |00000A;  
+          CODE_86A431: EOR.B $0A                            ;86A431|450A    |00000A; end collusion table Setup
           CODE_86A433: STA.B (RAM_general)                  ;86A433|9200    |000000;  
                        LDA.B RAM_general                    ;86A435|A500    |000000;  
                        CLC                                  ;86A437|18      |      ;  
@@ -3730,20 +3760,20 @@ paletteDataBGcolor4EachLevel: db $02,$10,$01,$04,$00,$00,$00,$00   ;8694F7|     
                        STA.B $0A                            ;86A4D8|850A    |00000A;  
                        LDA.B $08                            ;86A4DA|A508    |000008;  
                        AND.W #$03FF                         ;86A4DC|29FF03  |      ;  
-                       PHY                                  ;86A4DF|5A      |      ;  
+SC4edSeconLevelColluisonTableFIX00: PHY                                  ;86A4DF|5A      |      ;  
                        TAY                                  ;86A4E0|A8      |      ;  
                        LDA.B [$C8],Y                        ;86A4E1|B7C8    |0000C8;  
                        AND.W #$00FF                         ;86A4E3|29FF00  |      ;  
                        PLY                                  ;86A4E6|7A      |      ;  
                        PHA                                  ;86A4E7|48      |      ;  
                        CMP.W #$0002                         ;86A4E8|C90200  |      ;  
-                       BCC CODE_86A4FC                      ;86A4EB|900F    |86A4FC;  
+                       BCC CODE_86A4FC                      ;86A4EB|900F    |86A4FC; FIXME
                        CMP.B $CC                            ;86A4ED|C5CC    |0000CC;  
-                       BEQ CODE_86A4F6                      ;86A4EF|F005    |86A4F6;  
+                       BEQ CODE_86A4F6                      ;86A4EF|F005    |86A4F6; FIXME // BEQ - branch if 2 (#8000)
                        LDA.W #$0000                         ;86A4F1|A90000  |      ;  
-                       BRA CODE_86A4FC                      ;86A4F4|8006    |86A4FC;  
+                       BRA CODE_86A4FC                      ;86A4F4|8006    |86A4FC; // FIXME
           CODE_86A4F6: LDA.W #$8000                         ;86A4F6|A90080  |      ;  
-                       NOP                                  ;86A4F9|EA      |      ;  
+                       NOP                                  ;86A4F9|EA      |      ; end reguy edits
                        EOR.B $0A                            ;86A4FA|450A    |00000A;  
           CODE_86A4FC: STA.B ($10)                          ;86A4FC|9210    |000010;  
                        LDA.B $10                            ;86A4FE|A510    |000010;  
@@ -3752,19 +3782,19 @@ paletteDataBGcolor4EachLevel: db $02,$10,$01,$04,$00,$00,$00,$00   ;8694F7|     
                        STA.B $10                            ;86A504|8510    |000010;  
                        LDA.B $08                            ;86A506|A508    |000008;  
                        AND.W #$03FF                         ;86A508|29FF03  |      ;  
-                       PLA                                  ;86A50B|68      |      ;  
+SC4edSeconLevelColluisonTableFIX01: PLA                                  ;86A50B|68      |      ;  
                        CMP.W #$000E                         ;86A50C|C90E00  |      ;  
                        BCS CODE_86A517                      ;86A50F|B006    |86A517;  
                        CMP.B $CE                            ;86A511|C5CE    |0000CE;  
                        BEQ CODE_86A51C                      ;86A513|F007    |86A51C;  
                        BCS CODE_86A521                      ;86A515|B00A    |86A521;  
-          CODE_86A517: LDA.W #$0000                         ;86A517|A90000  |      ;  
+          CODE_86A517: LDA.W #$0000                         ;86A517|A90000  |      ; // FIXME
                        BRA CODE_86A528                      ;86A51A|800C    |86A528;  
-          CODE_86A51C: LDA.W #$0001                         ;86A51C|A90100  |      ;  
+          CODE_86A51C: LDA.W #$0001                         ;86A51C|A90100  |      ; // FIXME
                        BRA CODE_86A528                      ;86A51F|8007    |86A528;  
-          CODE_86A521: LDA.W #$8000                         ;86A521|A90080  |      ;  
+          CODE_86A521: LDA.W #$8000                         ;86A521|A90080  |      ; // FIXME
                        NOP                                  ;86A524|EA      |      ;  
-                       NOP                                  ;86A525|EA      |      ;  
+                       NOP                                  ;86A525|EA      |      ; end redguy collusion table setup edits
                        EOR.B $0A                            ;86A526|450A    |00000A;  
           CODE_86A528: STA.B ($12)                          ;86A528|9212    |000012;  
                        LDA.B $12                            ;86A52A|A512    |000012;  
@@ -5335,7 +5365,7 @@ paletteDataBGcolor4EachLevel: db $02,$10,$01,$04,$00,$00,$00,$00   ;8694F7|     
                        db $B8,$00,$28,$01,$98,$01,$80,$3C   ;86B4D6|        |      ;  
                        db $82,$3C,$84,$3C,$86,$3C,$88,$3C   ;86B4DE|        |86391D;  
                        db $8A,$3C,$8C,$3C,$8C,$3C,$8C,$3C   ;86B4E6|        |      ;  
-  levelLoadingRoutine: REP #$30                             ;86B4EE|C230    |      ;  
+  levelLoadingRoutine: REP #$30                             ;86B4EE|C230    |      ; check if $33 or $1C requiring STZ $13D4 and INC of $1602/$1604. fix secret exits to use entrance 2
                        JSL.L CODE_808AE5                    ;86B4F0|22E58A80|808AE5;  
                        JSL.L CODE_808A89                    ;86B4F4|22898A80|808A89;  
                        STZ.B $B8                            ;86B4F8|64B8    |0000B8;  
@@ -5385,7 +5415,7 @@ paletteDataBGcolor4EachLevel: db $02,$10,$01,$04,$00,$00,$00,$00   ;8694F7|     
                        STA.B $02                            ;86B567|8502    |000002;  
                        JSR.W CODE_86B8B4                    ;86B569|20B4B8  |86B8B4;  
                        LDX.W #$1750                         ;86B56C|A25017  |      ;  
-                       JSL.L CODE_8280E8                    ;86B56F|22E88082|8280E8;  
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;86B56F|22E88082|8280E8;  
                        LDX.B RAM_XregSlotCurrent            ;86B573|A6FC    |0000FC;  
                        LDA.L sceneMabSrcDestPointerTable,X  ;86B575|BF1E8386|86831E;  
                        STA.B RAM_general                    ;86B579|8500    |000000;  
@@ -5393,7 +5423,7 @@ paletteDataBGcolor4EachLevel: db $02,$10,$01,$04,$00,$00,$00,$00   ;8694F7|     
                        STA.B $02                            ;86B57E|8502    |000002;  
                        JSR.W CODE_86B8B4                    ;86B580|20B4B8  |86B8B4;  
                        LDX.W #$1750                         ;86B583|A25017  |      ;  
-                       JSL.L CODE_8280E8                    ;86B586|22E88082|8280E8;  
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;86B586|22E88082|8280E8;  
                        LDX.B RAM_XregSlotCurrent            ;86B58A|A6FC    |0000FC;  
                        LDA.L gfxLvlDataPointerTable,X       ;86B58C|BF9C8886|86889C;  
                        CMP.W $13C2                          ;86B590|CDC213  |0013C2;  
@@ -5405,13 +5435,13 @@ paletteDataBGcolor4EachLevel: db $02,$10,$01,$04,$00,$00,$00,$00   ;8694F7|     
                        STA.B $02                            ;86B59D|8502    |000002;  
                        JSR.W CODE_86B8B4                    ;86B59F|20B4B8  |86B8B4;  
                        LDX.W #$1750                         ;86B5A2|A25017  |      ;  
-                       JSL.L CODE_8280E8                    ;86B5A5|22E88082|8280E8;  
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;86B5A5|22E88082|8280E8;  
                        LDA.B RAM_simon_whipType             ;86B5A9|A592    |000092;  
                        ASL A                                ;86B5AB|0A      |      ;  
                        TAX                                  ;86B5AC|AA      |      ;  
                        LDA.L DATA16_81FA0F,X                ;86B5AD|BF0FFA81|81FA0F;  
                        TAX                                  ;86B5B1|AA      |      ;  
-                       JSL.L CODE_8280E8                    ;86B5B2|22E88082|8280E8;  
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;86B5B2|22E88082|8280E8;  
                        LDX.B RAM_XregSlotCurrent            ;86B5B6|A6FC    |0000FC;  
                        LDA.L enemyGFXPointerForEachLevel,X  ;86B5B8|BF458B86|868B45;  
                        CMP.W #$FFFF                         ;86B5BC|C9FFFF  |      ;  
@@ -5421,7 +5451,7 @@ paletteDataBGcolor4EachLevel: db $02,$10,$01,$04,$00,$00,$00,$00   ;8694F7|     
                        STA.B $02                            ;86B5C6|8502    |000002;  
                        JSR.W CODE_86B8B4                    ;86B5C8|20B4B8  |86B8B4;  
                        LDX.W #$1750                         ;86B5CB|A25017  |      ;  
-                       JSL.L CODE_8280E8                    ;86B5CE|22E88082|8280E8;  
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;86B5CE|22E88082|8280E8;  
           CODE_86B5D2: LDY.W #$8715                         ;86B5D2|A01587  |      ;  
                        JSL.L getPaletteFirstTableY2X        ;86B5D5|22E69080|8090E6;  
                        LDX.B RAM_XregSlotCurrent            ;86B5D9|A6FC    |0000FC;  
@@ -5439,10 +5469,10 @@ paletteDataBGcolor4EachLevel: db $02,$10,$01,$04,$00,$00,$00,$00   ;8694F7|     
                        STA.L $7E2200                        ;86B5FB|8F00227E|7E2200;  
                        LDA.B RAM_gameState                  ;86B5FF|A532    |000032;  
                        CMP.W #$0007                         ;86B601|C90700  |      ;  
-                       BNE CODE_86B60D                      ;86B604|D007    |86B60D;  
+                       BNE NewEntranceSC4edFixSecretRoom00  ;86B604|D007    |86B60D;  
                        JSL.L CODE_83F9D5                    ;86B606|22D5F983|83F9D5;  
                        BRL CODE_86B6AA                      ;86B60A|829D00  |86B6AA;  
-          CODE_86B60D: LDA.B RAM_currentLevel               ;86B60D|A586    |000086;  
+NewEntranceSC4edFixSecretRoom00: LDA.B RAM_currentLevel               ;86B60D|A586    |000086;  
                        CMP.W #$0033                         ;86B60F|C93300  |      ;  
                        BNE CODE_86B627                      ;86B612|D013    |86B627;  
                        LDA.W $1604                          ;86B614|AD0416  |001604;  
@@ -5536,8 +5566,8 @@ paletteDataBGcolor4EachLevel: db $02,$10,$01,$04,$00,$00,$00,$00   ;8694F7|     
                        STA.B RAM_BG1_YposScrollSpeed        ;86B6EE|85AA    |0000AA;  
                        LDA.L DATA16_A7801E,X                ;86B6F0|BF1E80A7|A7801E;  
                        TAX                                  ;86B6F4|AA      |      ;  
-                       BRL CODE_86B79A                      ;86B6F5|82A200  |86B79A;  
-                       db $12,$A9,$02,$00,$8D,$02,$16,$80   ;86B6F8|        |0000A9;  
+                       BRL CODE_86B79A                      ;86B6F5|82A200  |86B79A; end secret entrance Fix
+                       db $12,$A9,$02,$00,$8D,$02,$16,$80   ;86B6F8|        |0000A9; old Routine
                        db $88,$A6,$FC,$BF,$08,$BE,$85,$EB   ;86B700|        |      ;  
                        db $29,$7F,$00,$8D,$52,$05,$BF,$08   ;86B708|        |      ;  
                        db $BE,$85,$0A,$0A,$EB,$29,$02,$00   ;86B710|        |000A85;  
@@ -5558,7 +5588,7 @@ paletteDataBGcolor4EachLevel: db $02,$10,$01,$04,$00,$00,$00,$00   ;8694F7|     
                        db $A6,$BF,$F2,$D1,$85,$85,$A8,$BF   ;86B788|        |0000BF;  
                        db $7A,$D2,$85,$85,$AA,$BF,$D0,$C2   ;86B790|        |      ;  
                        db $85,$AA                           ;86B798|        |0000AA;  
-          CODE_86B79A: JSL.L CODE_86B859                    ;86B79A|2259B886|86B859;  
+          CODE_86B79A: JSL.L NewTableBasedCollusionSettup   ;86B79A|2259B886|86B859;  
                        STZ.B RAM_IndexSpecialLevelBehavier  ;86B79E|64AE    |0000AE;  
                        LDA.B RAM_currentLevel               ;86B7A0|A586    |000086;  
                        CMP.W #$0017                         ;86B7A2|C91700  |      ;  
@@ -5618,8 +5648,8 @@ paletteDataBGcolor4EachLevel: db $02,$10,$01,$04,$00,$00,$00,$00   ;8694F7|     
                        db $DF,$95,$86,$BC,$AA,$86,$AB,$96   ;86B847|        |BC8695;  
                        db $86,$A5,$9B,$86,$60,$9B,$86,$D1   ;86B84F|        |0000A5;  
                        db $95,$86                           ;86B857|        |000086;  
-          CODE_86B859: LDA.W #$0002                         ;86B859|A90200  |      ;  
-                       STA.B $CC                            ;86B85C|85CC    |0000CC;  
+NewTableBasedCollusionSettup: LDA.W #$0002                         ;86B859|A90200  |      ;  replace collision setup with table base setup in $C8
+                       STA.B $CC                            ;86B85C|85CC    |0000CC; SC4ed Edit by Redguy
                        INC A                                ;86B85E|1A      |      ;  
                        STA.B $CE                            ;86B85F|85CE    |0000CE;  
                        INC A                                ;86B861|1A      |      ;  
@@ -5724,7 +5754,7 @@ paletteDataBGcolor4EachLevel: db $02,$10,$01,$04,$00,$00,$00,$00   ;8694F7|     
                        STA.B RAM_blackFadeCounter,X         ;86B971|953E    |00003E;  
                        INC.B $64                            ;86B973|E664    |000064;  
                        LDX.W #$FA19                         ;86B975|A219FA  |      ;  
-                       JSL.L CODE_8280E8                    ;86B978|22E88082|8280E8;  
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;86B978|22E88082|8280E8;  
                        LDY.W #$FA22                         ;86B97C|A022FA  |      ;  
                        JSL.L getPaletteFirstTableY2X        ;86B97F|22E69080|8090E6;  
                        LDX.B RAM_XregSlotCurrent            ;86B983|A6FC    |0000FC;  
@@ -5800,7 +5830,7 @@ paletteDataBGcolor4EachLevel: db $02,$10,$01,$04,$00,$00,$00,$00   ;8694F7|     
                        JSL.L CODE_808D91                    ;86BA37|22918D80|808D91;  
           CODE_86BA3B: RTL                                  ;86BA3B|6B      |      ;  
                        INC.B $12,X                          ;86BA3C|F612    |000012;  
-                       NOP                                  ;86BA3E|EA      |      ;  
+                       NOP                                  ;86BA3E|EA      |      ; remove Increment On Bat SC4ed Edit
                        NOP                                  ;86BA3F|EA      |      ;  
                        LDX.W #$05C0                         ;86BA40|A2C005  |      ;  
                        LDA.W #$0015                         ;86BA43|A91500  |      ;  
@@ -6482,7 +6512,7 @@ gear_phusing2TheSideStateState02: JSR.W CODE_86BEB3                    ;86BE88|2
                        db $6E,$C1,$88,$C1                   ;86C0FF|        |0088C1;  
                        JSL.L CODE_84E619                    ;86C103|2219E684|84E619;  
                        LDX.W #$FA77                         ;86C107|A277FA  |      ;  
-                       JSL.L CODE_8280E8                    ;86C10A|22E88082|8280E8;  
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;86C10A|22E88082|8280E8;  
                        LDX.B RAM_XregSlotCurrent            ;86C10E|A6FC    |0000FC;  
                        LDA.W #$0004                         ;86C110|A90400  |      ;  
                        STA.B RAM_transoEffectSprite         ;86C113|8544    |000044;  
@@ -6537,11 +6567,11 @@ gear_phusing2TheSideStateState02: JSR.W CODE_86BEB3                    ;86BE88|2
                        RTL                                  ;86C187|6B      |      ;  
                        DEC.B $24,X                          ;86C188|D624    |000024;  
                        BNE CODE_86C182                      ;86C18A|D0F6    |86C182;  
-                       STZ.W $1C00                          ;86C18C|9C001C  |001C00;  
+NewBossMummySC4edExitHandler: STZ.W $1C00                          ;86C18C|9C001C  |001C00;  
                        LDA.W #$0009                         ;86C18F|A90900  |      ;  
                        STA.W $1C02                          ;86C192|8D021C  |001C02;  
                        LDA.W #$000B                         ;86C195|A90B00  |      ;  
-                       JML.L levelLoadInit                  ;86C198|5CC0FF82|82FFC0;  
+                       JML.L levelLoadInitSC4edHandler      ;86C198|5CC0FF82|82FFC0;  
                        db $6B                               ;86C19C|        |      ;  
 event48_SubID_14_deathExitTourchesRoutine: LDA.B $12,X                          ;86C19D|B512    |000012;  
                        PHX                                  ;86C19F|DA      |      ;  
@@ -6595,7 +6625,7 @@ deathExitTourchesState00: LDA.W #$0080                         ;86C1BA|A98000  |
                        LDA.W #$0021                         ;86C221|A92100  |      ;  
                        STA.W RAM_currentMusicTrack          ;86C224|8DE213  |0013E2;  
                        LDX.W #$FACC                         ;86C227|A2CCFA  |      ;  
-                       JML.L CODE_8280E8                    ;86C22A|5CE88082|8280E8;  
+                       JML.L miscGFXloadRoutineXPlus81Bank  ;86C22A|5CE88082|8280E8;  
 deathExitTourchesState01: JSR.W CODE_86C276                    ;86C22E|2076C2  |86C276;  
                        STZ.W $02BC                          ;86C231|9CBC02  |0002BC;  
                        LDA.W #$0100                         ;86C234|A90001  |      ;  
@@ -6675,13 +6705,13 @@ deathExitTourchesState02: STZ.B RAM_buttonPress                ;86C297|6420    |
                        STA.B $24,X                          ;86C2E6|9524    |000024;  
                        INC.B $12,X                          ;86C2E8|F612    |000012;  
           CODE_86C2EA: RTL                                  ;86C2EA|6B      |      ;  
-          CODE_86C2EB: STZ.W RAM_deathEntrance              ;86C2EB|9CD413  |0013D4;  
+NewBossDeathSC4edExitHandler: STZ.W RAM_deathEntrance              ;86C2EB|9CD413  |0013D4;  
                        LDA.W #$0006                         ;86C2EE|A90600  |      ;  
-                       JML.L levelLoadInit                  ;86C2F1|5CC0FF82|82FFC0;  
+                       JML.L levelLoadInitSC4edHandler      ;86C2F1|5CC0FF82|82FFC0;  
                        db $6B                               ;86C2F5|        |      ;  
 deathExitTourchesState04: LDA.W RAM_simonSlot_Xpos             ;86C2F6|AD4A05  |00054A;  
                        CMP.W #$0010                         ;86C2F9|C91000  |      ;  
-                       BCC CODE_86C2EB                      ;86C2FC|90ED    |86C2EB;  
+                       BCC NewBossDeathSC4edExitHandler     ;86C2FC|90ED    |86C2EB;  
                        STZ.B RAM_camLockLeft                ;86C2FE|64A0    |0000A0;  
                        LDA.W #$0022                         ;86C300|A92200  |      ;  
                        STA.B RAM_mode7Mode                  ;86C303|8546    |000046;  
@@ -6853,9 +6883,9 @@ deathExitTourchesState06: LDA.B $0E,X                          ;86C39D|B50E    |
                        LDA.W RAM_81_simonSlot_Xpos          ;86C49F|AD4A05  |81054A;  
                        CMP.W #$0EF0                         ;86C4A2|C9F00E  |      ;  
                        BCC UNREACH_86C4B1                   ;86C4A5|900A    |86C4B1;  
-                       STZ.W RAM_81_deathEntrance           ;86C4A7|9CD413  |8113D4;  
+NEWbossMedusaSC4edExitHandler: STZ.W RAM_81_deathEntrance           ;86C4A7|9CD413  |8113D4;  
                        LDA.W #$0006                         ;86C4AA|A90600  |      ;  
-                       JML.L levelLoadInit                  ;86C4AD|5CC0FF82|82FFC0;  
+                       JML.L levelLoadInitSC4edHandler      ;86C4AD|5CC0FF82|82FFC0;  
        UNREACH_86C4B1: db $6B                               ;86C4B1|        |      ;  
           CODE_86C4B2: STZ.B RAM_buttonPress                ;86C4B2|6420    |000020;  
                        STZ.B RAM_buttonPressCurFram         ;86C4B4|6428    |000028;  
@@ -6898,9 +6928,9 @@ deathExitTourchesState06: LDA.B $0E,X                          ;86C39D|B50E    |
           CODE_86C517: STA.B RAM_gameState,X                ;86C517|9532    |000032;  
                        CMP.W #$03F0                         ;86C519|C9F003  |      ;  
                        BCC UNREACH_86C528                   ;86C51C|900A    |86C528;  
-                       STZ.W RAM_81_deathEntrance           ;86C51E|9CD413  |8113D4;  
+NewBossPuwexilSC4edExitHandler: STZ.W RAM_81_deathEntrance           ;86C51E|9CD413  |8113D4;  
                        LDA.W #$0006                         ;86C521|A90600  |      ;  
-                       JML.L levelLoadInit                  ;86C524|5CC0FF82|82FFC0;  
+                       JML.L levelLoadInitSC4edHandler      ;86C524|5CC0FF82|82FFC0;  
        UNREACH_86C528: db $6B                               ;86C528|        |      ;  
       event_ID_0c_Bat: LDA.B $12,X                          ;86C529|B512    |000012;  
                        PHX                                  ;86C52B|DA      |      ;  

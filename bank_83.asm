@@ -19,7 +19,7 @@
                        JSL.L CODE_80859E                    ;83802B|229E8580|80859E;  
                        JSL.L CODE_808F63                    ;83802F|22638F80|808F63;  
                        LDX.W #$B4E6                         ;838033|A2E6B4  |      ;  
-                       JSL.L CODE_8280E8                    ;838036|22E88082|8280E8;  
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;838036|22E88082|8280E8;  
                        LDY.W #$8722                         ;83803A|A02287  |      ;  
                        JSL.L getPaletteFirstTableY2X        ;83803D|22E69080|8090E6;  
                        LDA.W #$0004                         ;838041|A90400  |      ;  
@@ -234,7 +234,7 @@
                        db $42,$83                           ;838241|        |      ;  
                        JSL.L CODE_808F63                    ;838243|22638F80|808F63;  
                        LDX.W #$B51A                         ;838247|A21AB5  |      ;  
-                       JSL.L CODE_8280E8                    ;83824A|22E88082|8280E8;  
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;83824A|22E88082|8280E8;  
                        LDY.W #$8744                         ;83824E|A04487  |      ;  
                        JSL.L getPaletteFirstTableY2X        ;838251|22E69080|8090E6;  
                        JSR.W CODE_8384B0                    ;838255|20B084  |8384B0;  
@@ -540,7 +540,7 @@
        UNREACH_8385C9: db $CD,$85,$F5,$85                   ;8385C9|        |00F585;  
                        JSL.L CODE_808F63                    ;8385CD|22638F80|808F63;  
                        LDX.W #$B503                         ;8385D1|A203B5  |      ;  
-                       JSL.L CODE_8280E8                    ;8385D4|22E88082|8280E8;  
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;8385D4|22E88082|8280E8;  
                        LDY.W #$8722                         ;8385D8|A02287  |      ;  
                        JSL.L getPaletteFirstTableY2X        ;8385DB|22E69080|8090E6;  
                        LDX.W #$8641                         ;8385DF|A24186  |      ;  
@@ -1792,7 +1792,7 @@
                        CPY.W #$0E00                         ;83923B|C0000E  |      ;  
                        BCC CODE_839230                      ;83923E|90F0    |839230;  
                        RTL                                  ;839240|6B      |      ;  
-          CODE_839241: JSL.L CODE_82B3F4                    ;839241|22F4B382|82B3F4;  
+          CODE_839241: JSL.L clearCurrentEventSlot          ;839241|22F4B382|82B3F4;  
                        CLC                                  ;839245|18      |      ;  
                        RTL                                  ;839246|6B      |      ;  
           CODE_839247: LDA.B $0A,X                          ;839247|B50A    |00000A;  
@@ -2551,7 +2551,7 @@
                        CPY.W #$0E00                         ;839ACC|C0000E  |      ;  
                        BCC CODE_839AC1                      ;839ACF|90F0    |839AC1;  
                        db $6B                               ;839AD1|        |      ;  
-          CODE_839AD2: JSL.L CODE_82B3F4                    ;839AD2|22F4B382|82B3F4;  
+          CODE_839AD2: JSL.L clearCurrentEventSlot          ;839AD2|22F4B382|82B3F4;  
                        CLC                                  ;839AD6|18      |      ;  
                        RTL                                  ;839AD7|6B      |      ;  
           CODE_839AD8: BCS CODE_839B2D                      ;839AD8|B053    |839B2D;  
@@ -3368,7 +3368,7 @@
                        CPY.W #$0D00                         ;83A2A3|C0000D  |      ;  
                        BCC CODE_83A298                      ;83A2A6|90F0    |83A298;  
                        db $6B                               ;83A2A8|        |      ;  
-          CODE_83A2A9: JSL.L CODE_82B3F4                    ;83A2A9|22F4B382|82B3F4;  
+          CODE_83A2A9: JSL.L clearCurrentEventSlot          ;83A2A9|22F4B382|82B3F4;  
                        CLC                                  ;83A2AD|18      |      ;  
                        RTL                                  ;83A2AE|6B      |      ;  
           CODE_83A2AF: PHX                                  ;83A2AF|DA      |      ;  
@@ -4550,7 +4550,7 @@
                        CPY.W #$0D00                         ;83AE1F|C0000D  |      ;  
                        BCC CODE_83AE14                      ;83AE22|90F0    |83AE14;  
                        db $6B                               ;83AE24|        |      ;  
-          CODE_83AE25: JSL.L CODE_82B3F4                    ;83AE25|22F4B382|82B3F4;  
+          CODE_83AE25: JSL.L clearCurrentEventSlot          ;83AE25|22F4B382|82B3F4;  
                        CLC                                  ;83AE29|18      |      ;  
                        RTL                                  ;83AE2A|6B      |      ;  
           CODE_83AE2B: LDA.B RAM_frameCounter,X             ;83AE2B|B53A    |00003A;  
@@ -5292,7 +5292,7 @@
                        CPY.W #$0D00                         ;83B555|C0000D  |      ;  
                        BCC CODE_83B54A                      ;83B558|90F0    |83B54A;  
                        db $6B                               ;83B55A|        |      ;  
-          CODE_83B55B: JSL.L CODE_82B3F4                    ;83B55B|22F4B382|82B3F4;  
+          CODE_83B55B: JSL.L clearCurrentEventSlot          ;83B55B|22F4B382|82B3F4;  
                        CLC                                  ;83B55F|18      |      ;  
                        RTL                                  ;83B560|6B      |      ;  
           CODE_83B561: LDX.W #$0D80                         ;83B561|A2800D  |      ;  
@@ -6286,7 +6286,7 @@
                        CPY.W #$0C00                         ;83BEDB|C0000C  |      ;  
                        BCC CODE_83BED0                      ;83BEDE|90F0    |83BED0;  
                        db $6B                               ;83BEE0|        |      ;  
-          CODE_83BEE1: JSL.L CODE_82B3F4                    ;83BEE1|22F4B382|82B3F4;  
+          CODE_83BEE1: JSL.L clearCurrentEventSlot          ;83BEE1|22F4B382|82B3F4;  
                        CLC                                  ;83BEE5|18      |      ;  
                        RTL                                  ;83BEE6|6B      |      ;  
           CODE_83BEE7: LDX.W #$0580                         ;83BEE7|A28005  |      ;  
@@ -6534,7 +6534,7 @@
                        STA.B $12,X                          ;83C14E|9512    |000012;  
                        RTL                                  ;83C150|6B      |      ;  
           CODE_83C151: LDY.W #$05C0                         ;83C151|A0C005  |      ;  
-                       JSL.L CODE_82B3F4                    ;83C154|22F4B382|82B3F4;  
+                       JSL.L clearCurrentEventSlot          ;83C154|22F4B382|82B3F4;  
                        LDA.W #$000C                         ;83C158|A90C00  |      ;  
                        STA.W RAM_81_X_event_slot_ID,Y       ;83C15B|991000  |810010;  
                        LDA.W #$8018                         ;83C15E|A91880  |      ;  
@@ -7093,7 +7093,7 @@
                        CPY.W #$0DC0                         ;83C6CB|C0C00D  |      ;  
                        BCC CODE_83C6C0                      ;83C6CE|90F0    |83C6C0;  
                        RTL                                  ;83C6D0|6B      |      ;  
-          CODE_83C6D1: JSL.L CODE_82B3F4                    ;83C6D1|22F4B382|82B3F4;  
+          CODE_83C6D1: JSL.L clearCurrentEventSlot          ;83C6D1|22F4B382|82B3F4;  
                        CLC                                  ;83C6D5|18      |      ;  
                        RTL                                  ;83C6D6|6B      |      ;  
           CODE_83C6D7: LDX.W #$05C0                         ;83C6D7|A2C005  |      ;  
@@ -9191,9 +9191,9 @@ cellingSkellyMod7State01: LDA.B $14,X                          ;83D9D6|B514    |
                        JSL.L CODE_808F63                    ;83DAF9|22638F80|808F63;  
                        JSL.L CODE_8089D7                    ;83DAFD|22D78980|8089D7;  
                        LDX.W #$B5A7                         ;83DB01|A2A7B5  |      ;  
-                       JSL.L CODE_8280E8                    ;83DB04|22E88082|8280E8;  
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;83DB04|22E88082|8280E8;  
                        LDX.W #$B5CE                         ;83DB08|A2CEB5  |      ;  
-                       JSL.L CODE_8280E8                    ;83DB0B|22E88082|8280E8;  
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;83DB0B|22E88082|8280E8;  
                        LDY.W #$86F7                         ;83DB0F|A0F786  |      ;  
                        JSL.L getPaletteFirstTableY2X        ;83DB12|22E69080|8090E6;  
                        LDA.W #$0118                         ;83DB16|A91801  |      ;  
@@ -9673,7 +9673,7 @@ event48_SubID00_HydraBoss: LDA.B $12,X                          ;83DF7E|B512    
                        BNE CODE_83DFD2                      ;83DF98|D038    |83DFD2;  
                        INC.B $12,X                          ;83DF9A|F612    |000012;  
                        LDX.W #$E267                         ;83DF9C|A267E2  |      ;  
-                       JSL.L CODE_8280E8                    ;83DF9F|22E88082|8280E8;  
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;83DF9F|22E88082|8280E8;  
                        LDX.W #$0580                         ;83DFA3|A28005  |      ;  
           CODE_83DFA6: LDA.B $10,X                          ;83DFA6|B510    |000010;  
                        CMP.W #$0048                         ;83DFA8|C94800  |      ;  
@@ -10062,8 +10062,8 @@ event48_SubID03_exitBG: LDA.W RAM_81_simonSlot_spritePriority;83E30D|AD4205  |81
                        LDA.W RAM_81_simonSlot_Xpos          ;83E312|AD4A05  |81054A;  
                        CMP.W #$07E0                         ;83E315|C9E007  |      ;  
                        BCC CODE_83E321                      ;83E318|9007    |83E321;  
-                       LDA.W #$0006                         ;83E31A|A90600  |      ;  
-                       JML.L levelLoadInit                  ;83E31D|5CC0FF82|82FFC0;  
+NewLevel01SC4edExitHandler: LDA.W #$0006                         ;83E31A|A90600  |      ;  
+                       JML.L levelLoadInitSC4edHandler      ;83E31D|5CC0FF82|82FFC0;  
           CODE_83E321: RTL                                  ;83E321|6B      |      ;  
 event48_SubID04_unused: LDA.W RAM_81_BG1_ScrollingSlot       ;83E322|AD8012  |811280;  
                        CMP.W #$0248                         ;83E325|C94802  |      ;  
@@ -10410,7 +10410,7 @@ event48_SubID07_collusionMod7RoRoom: JSR.W collusionMod7RoRoom            ;83E42
                        CMP.W #$0040                         ;83E657|C94000  |      ;  
                        BCS CODE_83E663                      ;83E65A|B007    |83E663;  
                        LDA.W #$0006                         ;83E65C|A90600  |      ;  
-                       JSL.L levelLoadInit                  ;83E65F|22C0FF82|82FFC0;  
+NewSC4edRotatingLevelExitTweak: JSL.L levelLoadInitSC4edHandler      ;83E65F|22C0FF82|82FFC0;  
           CODE_83E663: RTL                                  ;83E663|6B      |      ;  
                        db $6B                               ;83E664|        |      ;  
           CODE_83E665: SEP #$20                             ;83E665|E220    |      ;  
@@ -11993,7 +11993,7 @@ risingPlatforms_state03: LDA.B $0A,X                          ;83F478|B50A    |0
                        INC A                                ;83F4BB|1A      |      ;  
                        STA.L $7E80EE                        ;83F4BC|8FEE807E|7E80EE;  
                        LDX.W #$E843                         ;83F4C0|A243E8  |      ;  
-                       JML.L CODE_8280E8                    ;83F4C3|5CE88082|8280E8;  
+                       JML.L miscGFXloadRoutineXPlus81Bank  ;83F4C3|5CE88082|8280E8;  
                        LDA.W $1298                          ;83F4C7|AD9812  |811298;  
                        EOR.W #$0002                         ;83F4CA|490200  |      ;  
                        STA.W $1298                          ;83F4CD|8D9812  |811298;  
@@ -12570,7 +12570,7 @@ headlessKnight_state04: LDA.W #$99B3                         ;83F97A|A9B399  |  
                        JSL.L sfxPlayBackFromBuffer          ;83FA63|22438580|808543;  
                        JSL.L CODE_808F63                    ;83FA67|22638F80|808F63;  
                        LDX.W #$B47D                         ;83FA6B|A27DB4  |      ;  
-                       JSL.L CODE_8280E8                    ;83FA6E|22E88082|8280E8;  
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;83FA6E|22E88082|8280E8;  
                        LDY.W #$87B6                         ;83FA72|A0B687  |      ;  
                        JSL.L getPaletteFirstTableY2X        ;83FA75|22E69080|8090E6;  
                        LDA.W #$FFFF                         ;83FA79|A9FFFF  |      ;  
@@ -12723,7 +12723,7 @@ headlessKnight_state04: LDA.W #$99B3                         ;83F97A|A9B399  |  
                        INC.W $1C10                          ;83FBCE|EE101C  |811C10;  
           CODE_83FBD1: RTL                                  ;83FBD1|6B      |      ;  
                        LDX.W #$B49A                         ;83FBD2|A29AB4  |      ;  
-                       JSL.L CODE_8280E8                    ;83FBD5|22E88082|8280E8;  
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;83FBD5|22E88082|8280E8;  
                        LDA.W #$0040                         ;83FBD9|A94000  |      ;  
                        STA.W $1C12                          ;83FBDC|8D121C  |811C12;  
                        LDA.B $4C                            ;83FBDF|A54C    |00004C;  
