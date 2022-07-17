@@ -2635,7 +2635,7 @@ event_ID_5a_womanGhost: LDA.B $12,X                          ;8299A7|B512    |00
                        TAY                                  ;829A7C|A8      |      ;  
                        LDA.B RAM_bg1CamXpos,X               ;829A7D|B51C    |00001C;  
                        CLC                                  ;829A7F|18      |      ;  
-                       ADC.W DATA16_81BBC9,Y                ;829A80|79C9BB  |81BBC9;  
+                       ADC.W SpriteAnimationTableEmpty02,Y  ;829A80|79C9BB  |81BBC9;  
                        STA.B RAM_bg1CamXpos,X               ;829A83|951C    |00001C;  
                        LDA.B RAM_bg1CamYpos,X               ;829A85|B51E    |00001E;  
                        ADC.W DATA16_81BBCB,Y                ;829A87|79CBBB  |81BBCB;  
@@ -2662,7 +2662,7 @@ event_ID_5a_womanGhost: LDA.B $12,X                          ;8299A7|B512    |00
                        TAY                                  ;829AB4|A8      |      ;  
                        LDA.B $18,X                          ;829AB5|B518    |000018;  
                        CLC                                  ;829AB7|18      |      ;  
-                       ADC.W DATA16_81BBC9,Y                ;829AB8|79C9BB  |81BBC9;  
+                       ADC.W SpriteAnimationTableEmpty02,Y  ;829AB8|79C9BB  |81BBC9;  
                        STA.B $18,X                          ;829ABB|9518    |000018;  
                        LDA.B $1A,X                          ;829ABD|B51A    |00001A;  
                        ADC.W DATA16_81BBCB,Y                ;829ABF|79CBBB  |81BBCB;  
@@ -3679,7 +3679,7 @@ horseHeadNormalState05: JSR.W UNREACH_82A25B                 ;82A252|205BA2  |82
                        LDA.B $30,X                          ;82A3F1|B530    |000030;  
                        ASL A                                ;82A3F3|0A      |      ;  
                        TAY                                  ;82A3F4|A8      |      ;  
-                       LDA.W DATA16_81BC67,Y                ;82A3F5|B967BC  |81BC67;  
+                       LDA.W SpriteAnimationTable13,Y       ;82A3F5|B967BC  |81BC67;  
                        STA.B RAM_general,X                  ;82A3F8|9500    |000000;  
                        LDA.W DATA16_81BC77,Y                ;82A3FA|B977BC  |81BC77;  
                        STA.B RAM_buttonPressCurFram,X       ;82A3FD|9528    |000028;  
@@ -3738,7 +3738,7 @@ horseHeadNormalState05: JSR.W UNREACH_82A25B                 ;82A252|205BA2  |82
                        BCS CODE_82A48E                      ;82A473|B019    |82A48E;  
                        ASL A                                ;82A475|0A      |      ;  
                        TAY                                  ;82A476|A8      |      ;  
-                       LDA.W DATA16_81BC67,Y                ;82A477|B967BC  |81BC67;  
+                       LDA.W SpriteAnimationTable13,Y       ;82A477|B967BC  |81BC67;  
                        STA.B RAM_general,X                  ;82A47A|9500    |000000;  
                        LDA.W DATA16_81BC77,Y                ;82A47C|B977BC  |81BC77;  
                        STA.B RAM_buttonPressCurFram,X       ;82A47F|9528    |000028;  
@@ -3764,7 +3764,7 @@ horseHeadNormalState05: JSR.W UNREACH_82A25B                 ;82A252|205BA2  |82
                        BMI CODE_82A4C0                      ;82A4AC|3012    |82A4C0;  
                        ASL A                                ;82A4AE|0A      |      ;  
                        TAY                                  ;82A4AF|A8      |      ;  
-                       LDA.W DATA16_81BC67,Y                ;82A4B0|B967BC  |81BC67;  
+                       LDA.W SpriteAnimationTable13,Y       ;82A4B0|B967BC  |81BC67;  
                        STA.B RAM_general,X                  ;82A4B3|9500    |000000;  
                        LDA.W DATA16_81BC77,Y                ;82A4B5|B977BC  |81BC77;  
                        STA.B RAM_buttonPressCurFram,X       ;82A4B8|9528    |000028;  
@@ -3902,7 +3902,7 @@ caterpillarStateTable: dw caterpillarState00                ;82A4E3|        |82A
                        TAY                                  ;82A5F5|A8      |      ;  
                        LDA.B $38,X                          ;82A5F6|B538    |000038;  
                        AND.W #$FFFE                         ;82A5F8|29FEFF  |      ;  
-                       CMP.W DATA16_81BCA1,Y                ;82A5FB|D9A1BC  |81BCA1;  
+                       CMP.W noMoreSpritesHereIGuess00,Y    ;82A5FB|D9A1BC  |81BCA1;  
                        BEQ CODE_82A614                      ;82A5FE|F014    |82A614;  
                        BCS CODE_82A60B                      ;82A600|B009    |82A60B;  
                        INC.B $38,X                          ;82A602|F638    |000038;  
@@ -4554,7 +4554,7 @@ spearKnightStateTable: dw spearKnightState00                ;82A984|        |82A
                        ASL A                                ;82AC14|0A      |      ;  
                        STX.B RAM_XregSlotCurrent            ;82AC15|86FC    |0000FC;  
                        TAX                                  ;82AC17|AA      |      ;  
-                       LDA.W PTR16_81BF6D,X                 ;82AC18|BD6DBF  |81BF6D;  
+                       LDA.W SpriteAnimationTable17,X       ;82AC18|BD6DBF  |81BF6D;  
                        STA.W RAM_81_X_event_slot_mask,Y     ;82AC1B|993000  |810030;  
                        LDX.B RAM_XregSlotCurrent            ;82AC1E|A6FC    |0000FC;  
                        LDA.B RAM_RNG_2                      ;82AC20|A5E8    |0000E8;  
@@ -5829,7 +5829,7 @@ event_ID_5d_5e_boneDragon: REP #$20                             ;82B55F|C220    
                        TAY                                  ;82B756|A8      |      ;  
                        LDA.W RAM_81_X_event_slot_3e,X       ;82B757|BD3E00  |81003E;  
                        AND.W #$FFFE                         ;82B75A|29FEFF  |      ;  
-                       CMP.W DATA16_81BFE5,Y                ;82B75D|D9E5BF  |81BFE5;  
+                       CMP.W noMoreSpritesHereIGuess01,Y    ;82B75D|D9E5BF  |81BFE5;  
                        BEQ CODE_82B772                      ;82B760|F010    |82B772;  
                        BCS CODE_82B76B                      ;82B762|B007    |82B76B;  
                        INC.W RAM_81_X_event_slot_3e,X       ;82B764|FE3E00  |81003E;  
@@ -5965,7 +5965,7 @@ event_ID_5d_5e_boneDragon: REP #$20                             ;82B55F|C220    
                        LSR A                                ;82B890|4A      |      ;  
                        LSR A                                ;82B891|4A      |      ;  
                        TAY                                  ;82B892|A8      |      ;  
-                       LDA.W boneDragonAnimationFrame,Y     ;82B893|B9FBBF  |81BFFB;  
+                       LDA.W boneDragonAnimationFrame23,Y   ;82B893|B9FBBF  |81BFFB;  
                        STA.B RAM_general,X                  ;82B896|9500    |000000;  
                        LDA.B $10,X                          ;82B898|B510    |000010;  
                        CMP.W #$005E                         ;82B89A|C95E00  |      ;  
@@ -6142,7 +6142,7 @@ skellyHighFiveTable04: LDA.B $30,X                          ;82B9F3|B530    |000
                        LDA.B $30,X                          ;82BA26|B530    |000030;  
                        ASL A                                ;82BA28|0A      |      ;  
                        TAX                                  ;82BA29|AA      |      ;  
-                       LDA.W DATA16_81C041,X                ;82BA2A|BD41C0  |81C041;  
+                       LDA.W SpriteAnimationTable26,X       ;82BA2A|BD41C0  |81C041;  
                        STA.W RAM_81_X_event_slot_sprite_assembly,Y;82BA2D|990000  |810000;  
                        LDX.B RAM_XregSlotCurrent            ;82BA30|A6FC    |0000FC;  
                        LDA.B $30,X                          ;82BA32|B530    |000030;  
@@ -6956,7 +6956,7 @@ enemyMedusaStateJumpTable: dw enemyMedusaState00                ;82C1CC|        
                        LSR A                                ;82C20E|4A      |      ;  
                        AND.W #$0002                         ;82C20F|290200  |      ;  
                        TAY                                  ;82C212|A8      |      ;  
-                       LDA.W DATA16_81C1BB,Y                ;82C213|B9BBC1  |81C1BB;  
+                       LDA.W PTR16_81C1BB,Y                 ;82C213|B9BBC1  |81C1BB;  
                        STA.B RAM_general,X                  ;82C216|9500    |000000;  
                        LDA.B RAM_gameState,X                ;82C218|B532    |000032; medusa movement
                        BNE CODE_82C242                      ;82C21A|D026    |82C242;  
@@ -7504,7 +7504,7 @@ event_ID_4a_TurningPlatformSpikes: LDA.B $12,X                          ;82C65B|
                        CLC                                  ;82C72B|18      |      ;  
                        ADC.B $38,X                          ;82C72C|7538    |000038;  
                        TAY                                  ;82C72E|A8      |      ;  
-                       LDA.W DATA16_81C30F,Y                ;82C72F|B90FC3  |81C30F;  
+                       LDA.W PTR16_81C30F,Y                 ;82C72F|B90FC3  |81C30F;  
                        STA.B RAM_general,X                  ;82C732|9500    |000000;  
                        LDA.W #$0004                         ;82C734|A90400  |      ;  
                        STA.B $24,X                          ;82C737|9524    |000024;  
@@ -7930,12 +7930,12 @@ fishmanJumpingState0a: JSL.L CODE_82CAFA                    ;82CAAD|22FACA82|82C
                        RTL                                  ;82CAD8|6B      |      ;  
           CODE_82CAD9: LDY.W #$0006                         ;82CAD9|A00600  |      ;  
                        LDA.B $22,X                          ;82CADC|B522    |000022;  
-          CODE_82CADE: CMP.W DATA16_81C35F,Y                ;82CADE|D95FC3  |81C35F;  
+          CODE_82CADE: CMP.W PTR16_81C35F,Y                 ;82CADE|D95FC3  |81C35F;  
                        BCS CODE_82CAE7                      ;82CAE1|B004    |82CAE7;  
                        DEY                                  ;82CAE3|88      |      ;  
                        DEY                                  ;82CAE4|88      |      ;  
                        BNE CODE_82CADE                      ;82CAE5|D0F7    |82CADE;  
-          CODE_82CAE7: LDA.W DATA16_81C367,Y                ;82CAE7|B967C3  |81C367;  
+          CODE_82CAE7: LDA.W PTR16_81C367,Y                 ;82CAE7|B967C3  |81C367;  
                        STA.B RAM_general,X                  ;82CAEA|9500    |000000;  
                        LDA.B $22,X                          ;82CAEC|B522    |000022;  
                        INC A                                ;82CAEE|1A      |      ;  
@@ -7954,12 +7954,12 @@ fishmanJumpingState0a: JSL.L CODE_82CAFA                    ;82CAAD|22FACA82|82C
           CODE_82CB0A: RTL                                  ;82CB0A|6B      |      ;  
           CODE_82CB0B: LDY.W #$0006                         ;82CB0B|A00600  |      ;  
                        LDA.B $22,X                          ;82CB0E|B522    |000022;  
-          CODE_82CB10: CMP.W DATA16_81C36D,Y                ;82CB10|D96DC3  |81C36D;  
+          CODE_82CB10: CMP.W PTR16_81C36D,Y                 ;82CB10|D96DC3  |81C36D;  
                        BCS CODE_82CB19                      ;82CB13|B004    |82CB19;  
                        DEY                                  ;82CB15|88      |      ;  
                        DEY                                  ;82CB16|88      |      ;  
                        BNE CODE_82CB10                      ;82CB17|D0F7    |82CB10;  
-          CODE_82CB19: LDA.W DATA16_81C375,Y                ;82CB19|B975C3  |81C375;  
+          CODE_82CB19: LDA.W PTR16_81C375,Y                 ;82CB19|B975C3  |81C375;  
                        STA.B RAM_general,X                  ;82CB1C|9500    |000000;  
                        LDA.B $22,X                          ;82CB1E|B522    |000022;  
                        INC A                                ;82CB20|1A      |      ;  
@@ -9773,14 +9773,14 @@ rowdinState08_walkLeft: LDA.W #$0006                         ;82DB1D|A90600  |  
                        RTL                                  ;82DB53|6B      |      ;  
           CODE_82DB54: LDA.W RAM_81_X_event_slot_32,X       ;82DB54|BD3200  |810032;  
                        BNE CODE_82DB6A                      ;82DB57|D011    |82DB6A;  
-                       LDA.W DATA16_81C50B,Y                ;82DB59|B90BC5  |81C50B;  
+                       LDA.W areThisSpritesAgain,Y          ;82DB59|B90BC5  |81C50B;  
                        STA.W RAM_81_X_event_slot_sprite_assembly,X;82DB5C|9D0000  |810000;  
                        LDA.W #$000A                         ;82DB5F|A90A00  |      ;  
                        STA.B RAM_buttonPressCurFram,X       ;82DB62|9528    |000028;  
                        LDA.W #$0018                         ;82DB64|A91800  |      ;  
                        STA.B $2A,X                          ;82DB67|952A    |00002A;  
                        RTL                                  ;82DB69|6B      |      ;  
-          CODE_82DB6A: LDA.W DATA16_81C52F,Y                ;82DB6A|B92FC5  |81C52F;  
+          CODE_82DB6A: LDA.W PTR16_81C52F,Y                 ;82DB6A|B92FC5  |81C52F;  
                        STA.W RAM_81_X_event_slot_sprite_assembly,X;82DB6D|9D0000  |810000;  
                        LDA.W DATA16_81C54F,Y                ;82DB70|B94FC5  |81C54F;  
                        STA.W RAM_81_X_event_slot_HitboxXpos,X;82DB73|9D2800  |810028;  
@@ -10027,7 +10027,7 @@ bossRowdinDefetedAnimationInit: PHX                                  ;82DD56|DA 
                        LDA.B $10                            ;82DDAF|A510    |000010;  
                        ASL A                                ;82DDB1|0A      |      ;  
                        TAX                                  ;82DDB2|AA      |      ;  
-                       LDA.W DATA16_81C5C5,X                ;82DDB3|BDC5C5  |81C5C5;  
+                       LDA.W PTR16_81C5C5,X                 ;82DDB3|BDC5C5  |81C5C5;  
                        STA.W RAM_81_X_event_slot_sprite_assembly,Y;82DDB6|990000  |810000;  
                        LDA.W DATA16_81C5D9,X                ;82DDB9|BDD9C5  |81C5D9;  
                        STA.W RAM_81_X_event_slot_32,Y       ;82DDBC|993200  |810032;  
@@ -10239,7 +10239,7 @@ bossRowdinLastStandSplit: LDX.W #$05C0                         ;82DF6B|A2C005  |
                        AND.W #$000C                         ;82DFA7|290C00  |      ;  
                        LSR A                                ;82DFAA|4A      |      ;  
                        TAY                                  ;82DFAB|A8      |      ;  
-                       LDA.W DATA16_81C5ED,Y                ;82DFAC|B9EDC5  |81C5ED;  
+                       LDA.W PTR16_81C5ED,Y                 ;82DFAC|B9EDC5  |81C5ED;  
                        STA.B RAM_general,X                  ;82DFAF|9500    |000000;  
                        RTL                                  ;82DFB1|6B      |      ;  
           CODE_82DFB2: STZ.B $24,X                          ;82DFB2|7424    |000024;  
@@ -10420,7 +10420,7 @@ bossRowsdinFireBallNextSlot: TXA                                  ;82E15E|8A    
                        AND.W #$0004                         ;82E16F|290400  |      ;  
                        LSR A                                ;82E172|4A      |      ;  
                        TAY                                  ;82E173|A8      |      ;  
-                       LDA.W DATA16_81C6AA,Y                ;82E174|B9AAC6  |81C6AA;  
+                       LDA.W PTR16_81C6AA,Y                 ;82E174|B9AAC6  |81C6AA;  
                        STA.B RAM_general,X                  ;82E177|9500    |000000;  
                        PLY                                  ;82E179|7A      |      ;  
                        RTL                                  ;82E17A|6B      |      ;  
@@ -10507,7 +10507,7 @@ bossRowdinHorseBodyMovement: LDA.W $07B0                          ;82E22D|ADB007
                        LSR A                                ;82E238|4A      |      ;  
                        LSR A                                ;82E239|4A      |      ;  
                        TAY                                  ;82E23A|A8      |      ;  
-                       LDA.W DATA16_81C6B6,Y                ;82E23B|B9B6C6  |81C6B6; sprite animation??
+                       LDA.W PTR16_81C6B6,Y                 ;82E23B|B9B6C6  |81C6B6; sprite animation??
                        STA.B RAM_general,X                  ;82E23E|9500    |000000;  
                        RTL                                  ;82E240|6B      |      ;  
 bossRowdinHorseBodyMoveLeft: LDA.B $22,X                          ;82E241|B522    |000022;  
@@ -10516,7 +10516,7 @@ bossRowdinHorseBodyMoveLeft: LDA.B $22,X                          ;82E241|B522  
                        LSR A                                ;82E247|4A      |      ;  
                        LSR A                                ;82E248|4A      |      ;  
                        TAY                                  ;82E249|A8      |      ;  
-                       LDA.W DATA16_81C6AE,Y                ;82E24A|B9AEC6  |81C6AE; sprite animation??
+                       LDA.W PTR16_81C6AE,Y                 ;82E24A|B9AEC6  |81C6AE; sprite animation??
                        STA.B RAM_general,X                  ;82E24D|9500    |000000;  
                        RTL                                  ;82E24F|6B      |      ;  
         ViperBossMain: REP #$20                             ;82E250|C220    |      ;  
@@ -11464,7 +11464,7 @@ bossRowdinHorseBodyMoveLeft: LDA.B $22,X                          ;82E241|B522  
                        LSR A                                ;82EBEA|4A      |      ;  
                        LSR A                                ;82EBEB|4A      |      ;  
                        TAY                                  ;82EBEC|A8      |      ;  
-                       LDA.W DATA16_81C7CA,Y                ;82EBED|B9CAC7  |81C7CA;  
+                       LDA.W SpriteAnimationTable34,Y       ;82EBED|B9CAC7  |81C7CA;  
                        STA.B RAM_general,X                  ;82EBF0|9500    |000000;  
                        TYA                                  ;82EBF2|98      |      ;  
                        AND.W #$0010                         ;82EBF3|291000  |      ;  
@@ -12424,16 +12424,16 @@ bossMedusaSeconState01: LDA.W #$CAE4                         ;82F089|A9E4CA  |  
                        BCS CODE_82F544                      ;82F52F|B013    |82F544;  
                        CMP.W #$0004                         ;82F531|C90400  |      ;  
                        BCS CODE_82F53D                      ;82F534|B007    |82F53D;  
-                       LDA.W DATA16_81CBC9,Y                ;82F536|B9C9CB  |81CBC9;  
+                       LDA.W PTR16_81CBC9,Y                 ;82F536|B9C9CB  |81CBC9;  
                        STA.B RAM_general,X                  ;82F539|9500    |000000;  
                        BRA CODE_82F552                      ;82F53B|8015    |82F552;  
-          CODE_82F53D: LDA.W DATA16_81CBC5,Y                ;82F53D|B9C5CB  |81CBC5;  
+          CODE_82F53D: LDA.W PTR16_81CBC5,Y                 ;82F53D|B9C5CB  |81CBC5;  
                        STA.B RAM_general,X                  ;82F540|9500    |000000;  
                        BRA CODE_82F552                      ;82F542|800E    |82F552;  
-          CODE_82F544: LDA.W DATA16_81CBC1,Y                ;82F544|B9C1CB  |81CBC1;  
+          CODE_82F544: LDA.W PTR16_81CBC1,Y                 ;82F544|B9C1CB  |81CBC1;  
                        STA.B RAM_general,X                  ;82F547|9500    |000000;  
                        BRA CODE_82F552                      ;82F549|8007    |82F552;  
-          CODE_82F54B: LDA.W DATA16_81CBBD,Y                ;82F54B|B9BDCB  |81CBBD;  
+          CODE_82F54B: LDA.W PTR16_81CBBD,Y                 ;82F54B|B9BDCB  |81CBBD;  
                        STA.B RAM_general,X                  ;82F54E|9500    |000000;  
                        BRA CODE_82F552                      ;82F550|8000    |82F552;  
           CODE_82F552: LDA.W DATA16_81CBCD,Y                ;82F552|B9CDCB  |81CBCD;  
@@ -12520,14 +12520,14 @@ bossMedusaSeconState01: LDA.W #$CAE4                         ;82F089|A9E4CA  |  
                        BCS UNREACH_82F630                   ;82F61B|B013    |82F630;  
                        CMP.W #$0004                         ;82F61D|C90400  |      ;  
                        BCS CODE_82F629                      ;82F620|B007    |82F629;  
-                       LDA.W DATA16_81CBDD,Y                ;82F622|B9DDCB  |81CBDD;  
+                       LDA.W PTR16_81CBDD,Y                 ;82F622|B9DDCB  |81CBDD;  
                        STA.B RAM_general,X                  ;82F625|9500    |000000;  
                        BRA CODE_82F63E                      ;82F627|8015    |82F63E;  
-          CODE_82F629: LDA.W DATA16_81CBD9,Y                ;82F629|B9D9CB  |81CBD9;  
+          CODE_82F629: LDA.W PTR16_81CBD9,Y                 ;82F629|B9D9CB  |81CBD9;  
                        STA.B RAM_general,X                  ;82F62C|9500    |000000;  
                        BRA CODE_82F63E                      ;82F62E|800E    |82F63E;  
        UNREACH_82F630: db $B9,$D5,$CB,$95,$00,$80,$07       ;82F630|        |00CBD5;  
-          CODE_82F637: LDA.W DATA16_81CBD1,Y                ;82F637|B9D1CB  |81CBD1;  
+          CODE_82F637: LDA.W PTR16_81CBD1,Y                 ;82F637|B9D1CB  |81CBD1;  
                        STA.B RAM_general,X                  ;82F63A|9500    |000000;  
                        BRA CODE_82F63E                      ;82F63C|8000    |82F63E;  
           CODE_82F63E: LDA.W #$0000                         ;82F63E|A90000  |      ;  
@@ -12818,7 +12818,7 @@ bossMedusaSeconState01: LDA.W #$CAE4                         ;82F089|A9E4CA  |  
                        STA.W RAM_81_X_event_slot_xSpd,Y     ;82F8FC|991A00  |81001A;  
                        LDA.W DATA16_81CC97,X                ;82F8FF|BD97CC  |81CC97;  
                        STA.W RAM_81_X_event_slot_ySpd,Y     ;82F902|991E00  |81001E;  
-                       LDA.W DATA16_81CCA9,X                ;82F905|BDA9CC  |81CCA9;  
+                       LDA.W PTR16_81CCA9,X                 ;82F905|BDA9CC  |81CCA9;  
                        STA.W RAM_81_X_event_slot_sprite_assembly,Y;82F908|990000  |810000;  
                        LDX.B $18                            ;82F90B|A618    |000018;  
                        LDA.W #$0001                         ;82F90D|A90100  |      ;  
@@ -12904,7 +12904,7 @@ bossMedusaSeconState01: LDA.W #$CAE4                         ;82F089|A9E4CA  |  
                        ASL A                                ;82F9D1|0A      |      ;  
                        ASL A                                ;82F9D2|0A      |      ;  
                        TAY                                  ;82F9D3|A8      |      ;  
-                       LDA.W DATA16_81CC19,Y                ;82F9D4|B919CC  |81CC19;  
+                       LDA.W SpriteAnimationTable44,Y       ;82F9D4|B919CC  |81CC19;  
                        STA.B RAM_general,X                  ;82F9D7|9500    |000000;  
                        RTL                                  ;82F9D9|6B      |      ;  
           CODE_82F9DA: STZ.B RAM_general,X                  ;82F9DA|7400    |000000;  
@@ -13028,7 +13028,7 @@ bossMedusaSeconState01: LDA.W #$CAE4                         ;82F089|A9E4CA  |  
                        LDA.B $10                            ;82FAF7|A510    |000010;  
                        ASL A                                ;82FAF9|0A      |      ;  
                        TAX                                  ;82FAFA|AA      |      ;  
-                       LDA.W DATA16_81CD29,X                ;82FAFB|BD29CD  |81CD29;  
+                       LDA.W PTR16_81CD29,X                 ;82FAFB|BD29CD  |81CD29;  
                        STA.W RAM_81_X_event_slot_sprite_assembly,Y;82FAFE|990000  |810000;  
                        LDA.W DATA16_81CD3F,X                ;82FB01|BD3FCD  |81CD3F;  
                        STA.W RAM_81_X_event_slot_32,Y       ;82FB04|993200  |810032;  
@@ -13115,11 +13115,11 @@ bossMedusaSeconState01: LDA.W #$CAE4                         ;82F089|A9E4CA  |  
                        LSR A                                ;82FBAC|4A      |      ;  
                        LSR A                                ;82FBAD|4A      |      ;  
                        TAY                                  ;82FBAE|A8      |      ;  
-                       LDA.W DATA16_81CD55,Y                ;82FBAF|B955CD  |81CD55;  
+                       LDA.W PTR16_81CD55,Y                 ;82FBAF|B955CD  |81CD55;  
                        STA.B RAM_general,X                  ;82FBB2|9500    |000000;  
                        CPX.W #$0800                         ;82FBB4|E00008  |      ;  
                        BNE CODE_82FBBE                      ;82FBB7|D005    |82FBBE;  
-                       LDA.W DATA16_81CD75,Y                ;82FBB9|B975CD  |81CD75;  
+                       LDA.W PTR16_81CD75,Y                 ;82FBB9|B975CD  |81CD75;  
                        STA.B RAM_general,X                  ;82FBBC|9500    |000000;  
           CODE_82FBBE: TYA                                  ;82FBBE|98      |      ;  
                        AND.W #$0010                         ;82FBBF|291000  |      ;  

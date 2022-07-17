@@ -770,7 +770,7 @@ titleScreenCinematicState01: JSL.L CODE_85F17E                    ;8086A7|227EF1
                        LDA.B $38                            ;8086AB|A538    |000038;  
                        BNE CODE_8086B0                      ;8086AD|D001    |8086B0;  
                        RTL                                  ;8086AF|6B      |      ;  
-          CODE_8086B0: JSL.L CODE_809807                    ;8086B0|22079880|809807;  
+          CODE_8086B0: JSL.L titleIntroScreenRoutine00      ;8086B0|22079880|809807;  
                        BRL CODE_808764                      ;8086B4|82AD00  |808764;  
 titleScreenCinematicState02: JSL.L CODE_80942F                    ;8086B7|222F9480|80942F;  
                        LDA.B $38                            ;8086BB|A538    |000038;  
@@ -2354,7 +2354,7 @@ mainGameStartUp_01_Intro: JSL.L CODE_838000                    ;8094B4|22008083|
                        JSL.L CODE_80850D                    ;809565|220D8580|80850D;  
                        STZ.W $13E4                          ;809569|9CE413  |8113E4;  
                        LDX.B RAM_currentLevel               ;80956C|A686    |000086;  
-                       LDA.L UNREACH_8097C3,X               ;80956E|BFC39780|8097C3;  
+                       LDA.L musicID4EachLevel,X            ;80956E|BFC39780|8097C3;  
                        AND.W #$00FF                         ;809572|29FF00  |      ;  
                        CMP.W RAM_81_currentMusicTrack       ;809575|CDE213  |8113E2;  
                        BEQ CODE_80959A                      ;809578|F020    |80959A;  
@@ -2362,7 +2362,7 @@ mainGameStartUp_01_Intro: JSL.L CODE_838000                    ;8094B4|22008083|
                        BNE CODE_80959A                      ;80957C|D01C    |80959A;  
                        JSL.L CODE_808584                    ;80957E|22848580|808584;  
                        LDX.B RAM_currentLevel               ;809582|A686    |000086;  
-                       LDA.L UNREACH_8097C3,X               ;809584|BFC39780|8097C3;  
+                       LDA.L musicID4EachLevel,X            ;809584|BFC39780|8097C3;  
                        AND.W #$00FF                         ;809588|29FF00  |      ;  
                        STA.W RAM_81_currentMusicTrack       ;80958B|8DE213  |8113E2;  
                        ASL A                                ;80958E|0A      |      ;  
@@ -2469,7 +2469,7 @@ mainGameStartUp_01_Intro: JSL.L CODE_838000                    ;8094B4|22008083|
                        CMP.W #$FFFF                         ;8096A6|C9FFFF  |      ;  
                        BEQ CODE_8096C6                      ;8096A9|F01B    |8096C6;  
                        LDX.B RAM_currentLevel               ;8096AB|A686    |000086;  
-                       LDA.L UNREACH_8097C3,X               ;8096AD|BFC39780|8097C3;  
+                       LDA.L musicID4EachLevel,X            ;8096AD|BFC39780|8097C3;  
                        AND.W #$00FF                         ;8096B1|29FF00  |      ;  
                        CMP.W RAM_81_currentMusicTrack       ;8096B4|CDE213  |8113E2;  
                        BEQ CODE_8096C6                      ;8096B7|F00D    |8096C6;  
@@ -2562,16 +2562,16 @@ mainGameStartUp_01_Intro: JSL.L CODE_838000                    ;8094B4|22008083|
                        LDA.W #$00F1                         ;8097BB|A9F100  |      ;  
                        JSL.L CODE_8085E3                    ;8097BE|22E38580|8085E3;  
           CODE_8097C2: RTL                                  ;8097C2|6B      |      ;  
-       UNREACH_8097C3: db $00,$01,$01,$01,$01,$01,$01,$01   ;8097C3|        |      ;  
+    musicID4EachLevel: db $00,$01,$01,$01,$01,$01,$01,$01   ;8097C3|        |      ;  
                        db $02,$02,$02,$02,$03,$04,$05,$05   ;8097CB|        |      ;  
-                       db $05,$05,$06,$06,$06,$06,$07,$07   ;8097D3|        |000005;  
+                       db $05,$05,$06,$06,$06,$06,$07,$07   ;8097D3|        |      ;  
                        db $08,$1A,$09,$0A,$0A,$0A,$12,$0A   ;8097DB|        |      ;  
                        db $0A,$0A,$0A,$0B,$0B,$0B,$0B,$0B   ;8097E3|        |      ;  
                        db $0B,$0B,$0C,$0C,$0C,$0C,$0D,$0D   ;8097EB|        |      ;  
-                       db $0D,$0D,$0D,$0D,$0D,$0D,$12,$0E   ;8097F3|        |000D0D;  
-                       db $0E,$0E,$0E,$0E,$0F,$0F,$10,$11   ;8097FB|        |000E0E;  
-                       db $11,$11,$21,$21                   ;809803|        |000011;  
-          CODE_809807: REP #$30                             ;809807|C230    |      ;  
+                       db $0D,$0D,$0D,$0D,$0D,$0D,$12,$0E   ;8097F3|        |      ;  
+                       db $0E,$0E,$0E,$0E,$0F,$0F,$10,$11   ;8097FB|        |      ;  
+                       db $11,$11,$21,$21                   ;809803|        |      ;  
+titleIntroScreenRoutine00: REP #$30                             ;809807|C230    |      ; donno
                        LDA.B $4C                            ;809809|A54C    |00004C;  
                        INC A                                ;80980B|1A      |      ;  
                        AND.W #$0003                         ;80980C|290300  |      ;  
@@ -2580,7 +2580,7 @@ mainGameStartUp_01_Intro: JSL.L CODE_838000                    ;8094B4|22008083|
                        TAY                                  ;809812|A8      |      ;  
                        LDA.W DATA16_818B31,Y                ;809813|B9318B  |818B31;  
                        STA.W $1C00                          ;809816|8D001C  |811C00;  
-                       LDA.W DATA16_818B39,Y                ;809819|B9398B  |818B39;  
+                       LDA.W demoLevelStuffTitleScreen01,Y  ;809819|B9398B  |818B39;  
                        STA.B RAM_currentLevel               ;80981C|8586    |000086;  
           CODE_80981E: STZ.B RAM_RNG_2                      ;80981E|64E8    |0000E8;  
                        STZ.B RAM_RNG_3                      ;809820|64EA    |0000EA;  

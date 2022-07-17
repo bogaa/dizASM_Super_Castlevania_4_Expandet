@@ -4057,7 +4057,7 @@ event_ID_5f_ectoplasm: LDA.B $12,X                          ;85D302|B512    |000
                        LSR A                                ;85DF08|4A      |      ;  
                        LSR A                                ;85DF09|4A      |      ;  
                        TAY                                  ;85DF0A|A8      |      ;  
-                       LDA.W DATA16_81F26B,Y                ;85DF0B|B96BF2  |81F26B;  
+                       LDA.W SpriteAnimationTable141,Y      ;85DF0B|B96BF2  |81F26B;  
                        STA.B RAM_general,X                  ;85DF0E|9500    |000000;  
                        LDA.W DATA16_81F27B,Y                ;85DF10|B97BF2  |81F27B;  
                        STA.B $04,X                          ;85DF13|9504    |000004;  
@@ -4191,7 +4191,7 @@ event_ID_5f_ectoplasm: LDA.B $12,X                          ;85D302|B512    |000
                        LSR A                                ;85E04F|4A      |      ;  
                        LSR A                                ;85E050|4A      |      ;  
                        TAY                                  ;85E051|A8      |      ;  
-                       LDA.W DATA16_81F28B,Y                ;85E052|B98BF2  |81F28B;  
+                       LDA.W SpriteAnimationTable142,Y      ;85E052|B98BF2  |81F28B;  
                        STA.B RAM_general,X                  ;85E055|9500    |000000;  
                        RTL                                  ;85E057|6B      |      ;  
                        JSL.L CODE_85E080                    ;85E058|2280E085|85E080;  
@@ -4272,7 +4272,7 @@ event_ID_5f_ectoplasm: LDA.B $12,X                          ;85D302|B512    |000
                        LSR A                                ;85E0FC|4A      |      ;  
                        LSR A                                ;85E0FD|4A      |      ;  
                        TAY                                  ;85E0FE|A8      |      ;  
-                       LDA.W DATA16_81F293,Y                ;85E0FF|B993F2  |81F293;  
+                       LDA.W PTR16_81F293,Y                 ;85E0FF|B993F2  |81F293;  
                        STA.B RAM_general,X                  ;85E102|9500    |000000;  
                        RTL                                  ;85E104|6B      |      ;  
                        db $6B                               ;85E105|        |      ;  
@@ -6216,7 +6216,7 @@ bossKoranot_getMovingPlatform: LDA.B $10,X                          ;85ED19|B510
           CODE_85F334: RTL                                  ;85F334|6B      |      ;  
                        LDY.W #$0000                         ;85F335|A00000  |      ;  
                        LDX.W #$0580                         ;85F338|A28005  |      ;  
-          CODE_85F33B: LDA.W DATA16_81F422,Y                ;85F33B|B922F4  |81F422;  
+          CODE_85F33B: LDA.W SpriteAnimationTable143,Y      ;85F33B|B922F4  |81F422;  
                        STA.B $30,X                          ;85F33E|9530    |000030;  
                        LDA.W #$0060                         ;85F340|A96000  |      ;  
                        STA.B $0A,X                          ;85F343|950A    |00000A;  
