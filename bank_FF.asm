@@ -4096,6 +4096,4 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FFFFE0|        |      ;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FFFFE8|        |      ;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FFFFF0|        |      ;  
-                       db $FF,$FF,$FF,$FF,$FF,$FF,$FF       ;FFFFF8|        |      ;  
-                                                            ;      |        |      ;  
-         EMPTY_FFFFFF: db $FF                               ;FFFFFF|        |      ;  
+                       db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FFFFF8|        |      ;  
