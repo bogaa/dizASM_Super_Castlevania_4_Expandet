@@ -1025,6 +1025,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EC9FE8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EC9FF0|        |FFFFFF;  
                        db $FF,$3B,$0B,$03,$FF               ;EC9FF8|        |030B3B;  
+                                                            ;      |        |      ;  
 spriteGFX_DraculasLightning_Fire00: db $03,$0C,$80                       ;EC9FFD|        |      ;  
                        db $02,$03,$02,$03,$05,$06,$05,$06   ;ECA000|        |      ;  
                        db $05,$06,$05,$06,$02,$03,$02,$03   ;ECA008|        |      ;  
@@ -1422,6 +1423,7 @@ spriteGFX_DraculasLightning_Fire00: db $03,$0C,$80                       ;EC9FFD
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ECAC48|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ECAC50|        |FFFFFF;  
                        db $FF,$40,$0B,$03,$FF               ;ECAC58|        |030B40;  
+                                                            ;      |        |      ;  
 spriteGFX_DraculasLightning_Fire01: db $83,$1F,$80                       ;ECAC5D|        |      ;  
                        db $10,$00,$00,$00,$00,$00,$00,$00   ;ECAC60|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$10   ;ECAC68|        |      ;  
@@ -2443,6 +2445,7 @@ spriteGFX_DraculasLightning_Fire01: db $83,$1F,$80                       ;ECAC5D
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ECCC28|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ECCC30|        |FFFFFF;  
                        db $FF,$91,$08,$03,$FF               ;ECCC38|        |030891;  
+                                                            ;      |        |      ;  
 sceneMabDataStageB_Dracula_01_BG1: dw $2003,$0180,$0200,$0300           ;ECCC3D|        |      ;  
                        dw $0400,$0400,$0300,$0280           ;ECCC45|        |      ;  
                        dw $1180,$0500,$0600,$0700           ;ECCC4D|        |      ;  
@@ -3480,6 +3483,7 @@ sceneMabDataStageB_Dracula_01_BG1: dw $2003,$0180,$0200,$0300           ;ECCC3D|
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ECEC89|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ECEC91|        |FFFFFF;  
                        db $F2,$B9,$00,$FF                   ;ECEC99|        |0000B9;  
+                                                            ;      |        |      ;  
    rowdinGFXdataPart2: db $04,$0C,$80                       ;ECEC9D|        |      ;  
                        db $01,$01,$01,$00,$06,$02,$0B,$05   ;ECECA0|        |      ;  
                        db $B9,$6B,$51,$C0,$20,$10,$68,$10   ;ECECA8|        |      ;  
@@ -3882,6 +3886,7 @@ sceneMabDataStageB_Dracula_01_BG1: dw $2003,$0180,$0200,$0300           ;ECCC3D|
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ECF909|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ECF911|        |FFFFFF;  
                        db $F7,$B9,$00,$FF                   ;ECF919|        |0000B9;  
+                                                            ;      |        |      ;  
    rowdinGFXdataPart1: db $03,$20,$80                       ;ECF91D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;ECF920|        |      ;  
                        db $00,$00,$02,$03,$0D,$04,$52,$3C   ;ECF928|        |      ;  

@@ -930,6 +930,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F49CE9|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F49CF1|        |FFFFFF;  
                        db $44,$B4,$00,$FF                   ;F49CF9|        |      ;  
+                                                            ;      |        |      ;  
 castleMap2Mode7Tilemap: db $84,$3F,$80,$00,$00,$00,$00,$00   ;F49CFD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F49D05|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F49D0D|        |      ;  
@@ -2979,6 +2980,7 @@ castleMap2Mode7Tilemap: db $84,$3F,$80,$00,$00,$00,$00,$00   ;F49CFD|        |  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F4DCE9|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F4DCF1|        |FFFFFF;  
                        db $4D,$B4,$00,$FF                   ;F4DCF9|        |0000B4;  
+                                                            ;      |        |      ;  
 someDataThatGotExpanded00: db $03,$10,$80                       ;F4DCFD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;F4DD00|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;F4DD08|        |      ;  
@@ -3504,6 +3506,7 @@ someDataThatGotExpanded00: db $03,$10,$80                       ;F4DCFD|        
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F4ED48|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F4ED50|        |FFFFFF;  
                        db $FF,$52,$B4,$00,$FF               ;F4ED58|        |00B452;  
+                                                            ;      |        |      ;  
 someDataThatGotExpanded01: db $03,$10,$80                       ;F4ED5D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;F4ED60|        |      ;  
                        dw $0000,$0000,$0000,$7B00           ;F4ED68|        |      ;  
@@ -4029,6 +4032,7 @@ someDataThatGotExpanded01: db $03,$10,$80                       ;F4ED5D|        
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F4FDA8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F4FDB0|        |FFFFFF;  
                        db $FF,$5B,$B4,$00,$FF               ;F4FDB8|        |00B45B;  
+                                                            ;      |        |      ;  
 someDataThatGotExpanded02: db $03,$10,$80                       ;F4FDBD|        |      ;  
                        dw $0101,$0101,$0101,$0101           ;F4FDC0|        |      ;  
                        dw $0101,$0101,$0101,$0101           ;F4FDC8|        |      ;  

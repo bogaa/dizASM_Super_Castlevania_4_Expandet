@@ -33,6 +33,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FA80E8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FA80F0|        |FFFFFF;  
                        db $FF,$B0,$B5,$00,$FF               ;FA80F8|        |00B5B0;  
+                                                            ;      |        |      ;  
 titleScreenLogoBGwallTileData00: db $03,$20,$80                       ;FA80FD|        |      ;  
                        db $FF,$00,$C0,$00,$01,$00,$5F,$00   ;FA8100|        |      ;  
                        db $44,$00,$D8,$DD,$8B,$8B,$C1,$E0   ;FA8108|        |      ;  
@@ -1070,6 +1071,7 @@ titleScreenLogoBGwallTileData00: db $03,$20,$80                       ;FA80FD|  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FAA148|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FAA150|        |FFFFFF;  
                        db $FF,$B5,$B5,$00,$FF               ;FAA158|        |00B5B5;  
+                                                            ;      |        |      ;  
 titleScreenLogoBGwallTileData01: db $C3,$0D,$80                       ;FAA15D|        |      ;  
                        db $30,$2C,$C1,$03,$01,$09,$51,$17   ;FAA160|        |      ;  
                        db $9F,$1F,$3C,$3C,$60,$60,$00,$0E   ;FAA168|        |      ;  
@@ -1523,6 +1525,7 @@ titleScreenLogoBGwallTileData01: db $C3,$0D,$80                       ;FAA15D|  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FAAF68|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FAAF70|        |FFFFFF;  
                        db $FF,$C4,$B5,$00,$FF               ;FAAF78|        |00B5C4;  
+                                                            ;      |        |      ;  
 probablyTitleScreenBGBlockmapData: db $03,$08,$80                       ;FAAF7D|        |      ;  
                        dw $2400,$2400,$2400,$2400           ;FAAF80|        |      ;  
                        dw $2400,$2400,$2400,$2400           ;FAAF88|        |      ;  
@@ -1792,6 +1795,7 @@ probablyTitleScreenBGBlockmapData: db $03,$08,$80                       ;FAAF7D|
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FAB7C8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FAB7D0|        |FFFFFF;  
                        db $FF,$C9,$B5,$00,$FF               ;FAB7D8|        |00B5C9;  
+                                                            ;      |        |      ;  
 probablyTitleScreenBGSceneData: db $03,$10,$80                       ;FAB7DD|        |      ;  
                        dw $18EF,$18F0,$18F1,$18F2           ;FAB7E0|        |      ;  
                        dw $18F3,$18F4,$18F4,$18F5           ;FAB7E8|        |      ;  
@@ -2317,6 +2321,7 @@ probablyTitleScreenBGSceneData: db $03,$10,$80                       ;FAB7DD|   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FAC828|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FAC830|        |FFFFFF;  
                        db $FF,$D2,$B5,$00,$FF               ;FAC838|        |00B5D2;  
+                                                            ;      |        |      ;  
 titleScreenSpriteGFXdata: db $83,$16,$80                       ;FAC83D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;FAC840|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$1B,$20   ;FAC848|        |      ;  
@@ -3050,6 +3055,7 @@ titleScreenSpriteGFXdata: db $83,$16,$80                       ;FAC83D|        |
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FADF08|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FADF10|        |FFFFFF;  
                        db $FF,$DB,$B5,$00,$FF               ;FADF18|        |00B5DB;  
+                                                            ;      |        |      ;  
 introScreenCastleGFXdata: db $03,$20,$80                       ;FADF1D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;FADF20|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;FADF28|        |      ;  
@@ -4087,6 +4093,7 @@ introScreenCastleGFXdata: db $03,$20,$80                       ;FADF1D|        |
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FAFF68|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FAFF70|        |FFFFFF;  
                        db $FF,$E0,$B5,$00,$FF               ;FAFF78|        |00B5E0;  
+                                                            ;      |        |      ;  
        UNREACH_FAFF7D: db $03,$20,$80,$FF,$00,$FF,$01,$FC   ;FAFF7D|        |000020;  
                        db $03,$FE,$03,$FD,$03,$FD,$03,$FF   ;FAFF85|        |0000FE;  
                        db $01,$FF,$01,$00,$00,$00,$00,$02   ;FAFF8D|        |0000FF;  

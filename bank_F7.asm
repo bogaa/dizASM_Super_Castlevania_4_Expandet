@@ -217,6 +217,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F786A8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F786B0|        |FFFFFF;  
                        db $FF,$C3,$B4,$00,$FF               ;F786B8|        |00B4C3;  
+                                                            ;      |        |      ;  
     simonSpriteData03: db $03,$20,$80                       ;F786BD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F786C0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F786C8|        |      ;  
@@ -1254,6 +1255,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F7A708|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F7A710|        |FFFFFF;  
                        db $FF,$C9,$B4,$00,$FF               ;F7A718|        |00B4C9;  
+                                                            ;      |        |      ;  
     simonSpriteData04: db $03,$20,$80                       ;F7A71D|        |      ;  
                        db $30,$0C,$44,$BC,$F8,$F8,$F8,$F8   ;F7A720|        |      ;  
                        db $C0,$F0,$A0,$D0,$60,$90,$40,$E0   ;F7A728|        |      ;  
@@ -2291,6 +2293,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F7C768|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F7C770|        |FFFFFF;  
                        db $FF,$CF,$B4,$00,$FF               ;F7C778|        |00B4CF;  
+                                                            ;      |        |      ;  
     simonSpriteData05: db $03,$20,$80                       ;F7C77D|        |      ;  
                        db $01,$00,$3A,$00,$00,$1F,$00,$07   ;F7C780|        |      ;  
                        db $00,$01,$00,$00,$00,$00,$00,$00   ;F7C788|        |      ;  
@@ -3328,6 +3331,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F7E7C8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F7E7D0|        |FFFFFF;  
                        db $FF,$D5,$B4,$00,$FF               ;F7E7D8|        |00B4D5;  
+                                                            ;      |        |      ;  
     simonSpriteData06: db $03,$20,$80                       ;F7E7DD|        |      ;  
                        db $00,$00,$00,$20,$41,$3E,$00,$C3   ;F7E7E0|        |      ;  
                        db $02,$83,$07,$5B,$83,$BF,$42,$99   ;F7E7E8|        |      ;  

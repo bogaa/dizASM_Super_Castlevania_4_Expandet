@@ -201,6 +201,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BE8628|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BE8630|        |FFFFFF;  
                        db $FF,$49,$05,$03,$FF               ;BE8638|        |030549;  
+                                                            ;      |        |      ;  
 sceneMabDataStage4_SkullTower_01_BG1: dw $2003,$0280,$5300,$5300           ;BE863D|        |      ;  
                        dw $1F00,$4A00,$0000,$0000           ;BE8645|        |      ;  
                        dw $0000,$0200,$5300,$1F00           ;BE864D|        |      ;  
@@ -1238,6 +1239,7 @@ sceneMabDataStage4_SkullTower_01_BG1: dw $2003,$0280,$5300,$5300           ;BE86
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BEA687|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BEA68F|        |FFFFFF;  
                        db $FF,$FF,$59,$05,$03,$FF           ;BEA697|        |0559FF;  
+                                                            ;      |        |      ;  
 sceneMabDataStage4_SkullTower_02_BG1: dw $2003,$0180,$2800,$2900           ;BEA69D|        |      ;  
                        dw $2800,$2900,$2800,$2900           ;BEA6A5|        |      ;  
                        dw $2800,$0200,$3F00,$3C00           ;BEA6AD|        |      ;  
@@ -2275,6 +2277,7 @@ sceneMabDataStage4_SkullTower_02_BG1: dw $2003,$0180,$2800,$2900           ;BEA6
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BEC6E9|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BEC6F1|        |FFFFFF;  
                        db $5F,$05,$03,$FF                   ;BEC6F9|        |FF0305;  
+                                                            ;      |        |      ;  
 sceneMabDataStage4_SkullTower_02_BG0: dw $2003,$0980,$0900,$0900           ;BEC6FD|        |      ;  
                        dw $0900,$0900,$0900,$0900           ;BEC705|        |      ;  
                        dw $0900,$0900,$0900,$0900           ;BEC70D|        |      ;  
@@ -3312,6 +3315,7 @@ sceneMabDataStage4_SkullTower_02_BG0: dw $2003,$0980,$0900,$0900           ;BEC6
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BEE749|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BEE751|        |FFFFFF;  
                        db $C7,$09,$03,$FF                   ;BEE759|        |000009;  
+                                                            ;      |        |      ;  
 levelGFXStage4_rotatingRoomMod78bppLinear: db $44,$18,$80                       ;BEE75D|        |      ;  
                        db $2E,$2E,$2E,$2E,$2E,$34,$24,$2E   ;BEE760|        |      ;  
                        db $26,$26,$26,$26,$26,$34,$2E,$26   ;BEE768|        |      ;  

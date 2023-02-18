@@ -957,6 +957,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BB9DC8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BB9DD0|        |FFFFFF;  
                        db $FF,$19,$05,$03,$FF               ;BB9DD8|        |030519;  
+                                                            ;      |        |      ;  
 sceneMabDataStage3_Aquaduct_02_BG1: db $03,$20,$80                       ;BB9DDD|        |      ;  
                        dw $0022,$0022,$8040,$0044           ;BB9DE0|        |      ;  
                        dw $0045,$804E,$802B,$0025           ;BB9DE8|        |      ;  
@@ -1994,6 +1995,7 @@ sceneMabDataStage3_Aquaduct_02_BG1: db $03,$20,$80                       ;BB9DDD
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BBBE28|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BBBE30|        |FFFFFF;  
                        db $FF,$1F,$05,$03,$FF               ;BBBE38|        |03051F;  
+                                                            ;      |        |      ;  
 sceneMabDataStage3_Aquaduct_02_BG0: db $03,$20,$80                       ;BBBE3D|        |      ;  
                        dw $0003,$0000,$0000,$0000           ;BBBE40|        |      ;  
                        dw $0000,$0000,$0005,$0000           ;BBBE48|        |      ;  
@@ -3031,6 +3033,7 @@ sceneMabDataStage3_Aquaduct_02_BG0: db $03,$20,$80                       ;BBBE3D
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BBDE88|        |FFFFFF;  
                        db $FF,$41,$0F,$03,$FF,$0B,$0F,$03   ;BBDE90|        |030F41;  
                        db $FF,$E7,$0E,$03,$FF               ;BBDE98|        |030EE7;  
+                                                            ;      |        |      ;  
 spriteGFX_swordSkelly: db $03,$0C,$80                       ;BBDE9D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;BBDEA0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;BBDEA8|        |      ;  
@@ -3428,6 +3431,7 @@ spriteGFX_swordSkelly: db $03,$0C,$80                       ;BBDE9D|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BBEAE8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BBEAF0|        |FFFFFF;  
                        db $FF,$29,$05,$03,$FF               ;BBEAF8|        |030529;  
+                                                            ;      |        |      ;  
 sceneMabDataStage3_Aquaduct_03_BG1: dw $2003,$3F80,$1980,$3E80           ;BBEAFD|        |      ;  
                        dw $0000,$0000,$3E00,$1900           ;BBEB05|        |      ;  
                        dw $3F00,$1C00,$2280,$4700           ;BBEB0D|        |      ;  

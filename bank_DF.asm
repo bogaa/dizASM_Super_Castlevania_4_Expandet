@@ -973,6 +973,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DF9E48|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DF9E50|        |FFFFFF;  
                        db $FF,$D7,$07,$03,$FF               ;DF9E58|        |0307D7;  
+                                                            ;      |        |      ;  
 sceneMabDataStageA_ClockTower_00_BG0: db $03,$20,$80                       ;DF9E5D|        |      ;  
                        dw $0001,$0001,$0001,$0001           ;DF9E60|        |      ;  
                        dw $0001,$0009,$000A,$0001           ;DF9E68|        |      ;  
@@ -2010,6 +2011,7 @@ sceneMabDataStageA_ClockTower_00_BG0: db $03,$20,$80                       ;DF9E
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DFBEA8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$6D,$13,$03   ;DFBEB0|        |FFFFFF;  
                        db $FF,$27,$13,$03,$FF               ;DFBEB8|        |031327;  
+                                                            ;      |        |      ;  
   spriteGFX_smallGear: db $04,$08,$80                       ;DFBEBD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;DFBEC0|        |      ;  
                        db $00,$00,$06,$11,$16,$10,$28,$20   ;DFBEC8|        |      ;  
@@ -2283,6 +2285,7 @@ sceneMabDataStageA_ClockTower_00_BG0: db $03,$20,$80                       ;DF9E
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DFC728|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DFC730|        |FFFFFF;  
                        db $FF,$E1,$07,$03,$FF               ;DFC738|        |0307E1;  
+                                                            ;      |        |      ;  
 sceneMabDataStageA_ClockTower_01_BG1: dw $2003,$2B80,$7200,$1F00           ;DFC73D|        |      ;  
                        dw $0000,$5300,$5280,$0080           ;DFC745|        |      ;  
                        dw $0000,$6C00,$3C00,$1F00           ;DFC74D|        |      ;  
@@ -3320,6 +3323,7 @@ sceneMabDataStageA_ClockTower_01_BG1: dw $2003,$2B80,$7200,$1F00           ;DFC7
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DFE789|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DFE791|        |FFFFFF;  
                        db $E7,$07,$03,$FF                   ;DFE799|        |000007;  
+                                                            ;      |        |      ;  
 sceneMabDataStageA_ClockTower_01_BG0: dw $2003,$0B80,$1200,$1300           ;DFE79D|        |      ;  
                        dw $0B00,$1200,$2900,$2880           ;DFE7A5|        |      ;  
                        dw $2780,$1580,$1200,$1300           ;DFE7AD|        |      ;  

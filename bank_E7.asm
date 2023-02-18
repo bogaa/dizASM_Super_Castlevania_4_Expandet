@@ -645,6 +645,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E79408|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$71,$02,$03   ;E79410|        |FFFFFF;  
                        db $FF,$61,$02,$03,$FF               ;E79418|        |030261;  
+                                                            ;      |        |      ;  
 blockMabData_StageB_slogra_BG0: db $03,$20,$80                       ;E7941D|        |      ;  
                        dw $0400,$0400,$0400,$0400           ;E79420|        |      ;  
                        dw $0400,$0400,$0400,$0400           ;E79428|        |      ;  
@@ -1682,6 +1683,7 @@ blockMabData_StageB_slogra_BG0: db $03,$20,$80                       ;E7941D|   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E7B468|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E7B470|        |FFFFFF;  
                        db $FF,$51,$08,$03,$FF               ;E7B478|        |030851;  
+                                                            ;      |        |      ;  
 sceneMabDataStageB_Slogra_BG1: db $03,$20,$80                       ;E7B47D|        |      ;  
                        dw $0005,$0007,$0006,$0002           ;E7B480|        |      ;  
                        dw $000C,$000D,$0012,$0005           ;E7B488|        |      ;  
@@ -2719,6 +2721,7 @@ sceneMabDataStageB_Slogra_BG1: db $03,$20,$80                       ;E7B47D|    
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E7D4C8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$67,$08,$03   ;E7D4D0|        |FFFFFF;  
                        db $FF,$57,$08,$03,$FF               ;E7D4D8|        |030857;  
+                                                            ;      |        |      ;  
 sceneMabDataStageB_SlograAndGaibon_BG0: db $03,$20,$80                       ;E7D4DD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;E7D4E0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;E7D4E8|        |      ;  
@@ -3756,6 +3759,7 @@ sceneMabDataStageB_SlograAndGaibon_BG0: db $03,$20,$80                       ;E7
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E7F528|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$02,$0B,$03   ;E7F530|        |FFFFFF;  
                        db $FF,$FD,$0A,$03,$FF               ;E7F538|        |030AFD;  
+                                                            ;      |        |      ;  
 levelGFXStageB_gaiboneQuater: db $03,$40,$80                       ;E7F53D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E7F540|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E7F548|        |      ;  

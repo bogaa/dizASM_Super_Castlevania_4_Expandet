@@ -341,6 +341,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E28A88|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E28A90|        |FFFFFF;  
                        db $FF,$11,$08,$03,$FF               ;E28A98|        |030811;  
+                                                            ;      |        |      ;  
 sceneMabDataStageA_ClockTower_mummyQuater_BG1: db $03,$20,$80                       ;E28A9D|        |      ;  
                        dw $0001,$0002,$0003,$000C           ;E28AA0|        |      ;  
                        dw $000D,$0000,$0000,$0000           ;E28AA8|        |      ;  
@@ -1378,6 +1379,7 @@ sceneMabDataStageA_ClockTower_mummyQuater_BG1: db $03,$20,$80                   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E2AAE8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E2AAF0|        |FFFFFF;  
                        db $FF,$17,$08,$03,$FF               ;E2AAF8|        |030817;  
+                                                            ;      |        |      ;  
 sceneMabDataStageA_ClockTower_mummyQuater_BG0: db $03,$20,$80                       ;E2AAFD|        |      ;  
                        dw $0001,$0001,$0002,$0003           ;E2AB00|        |      ;  
                        dw $0008,$0007,$0001,$0001           ;E2AB08|        |      ;  
@@ -2415,6 +2417,7 @@ sceneMabDataStageA_ClockTower_mummyQuater_BG0: db $03,$20,$80                   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E2CB48|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$D3,$0A,$03   ;E2CB50|        |FFFFFF;  
                        db $FF,$CE,$0A,$03,$FF               ;E2CB58|        |030ACE;  
+                                                            ;      |        |      ;  
 levelGFXStageB_bridge: db $03,$40,$80                       ;E2CB5D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E2CB60|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E2CB68|        |      ;  

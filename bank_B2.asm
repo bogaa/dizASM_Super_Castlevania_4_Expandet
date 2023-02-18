@@ -1549,6 +1549,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B2B048|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FC,$0E,$03   ;B2B050|        |FFFFFF;  
                        db $FF,$86,$0D,$03,$FF               ;B2B058|        |030D86;  
+                                                            ;      |        |      ;  
 spriteGFX_floatingPlatformSwamp: db $44,$02,$80                       ;B2B05D|        |      ;  
                        db $3E,$27,$4A,$2E,$97,$DC,$D6,$92   ;B2B060|        |      ;  
                        db $ED,$8E,$AA,$E7,$AF,$4E,$7A,$56   ;B2B068|        |      ;  
@@ -1638,6 +1639,7 @@ spriteGFX_floatingPlatformSwamp: db $44,$02,$80                       ;B2B05D|  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B2B308|        |FFFFFF;  
                        db $FF,$E2,$0D,$03,$FF,$BA,$0D,$03   ;B2B310|        |030DE2;  
                        db $FF,$90,$0D,$03,$FF               ;B2B318|        |030D90;  
+                                                            ;      |        |      ;  
        spriteGFX_frog: db $43,$03,$80                       ;B2B31D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B2B320|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B2B328|        |      ;  
@@ -1755,6 +1757,7 @@ spriteGFX_floatingPlatformSwamp: db $44,$02,$80                       ;B2B05D|  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B2B6A8|        |FFFFFF;  
                        db $FF,$A1,$0E,$03,$FF,$4E,$0E,$03   ;B2B6B0|        |030EA1;  
                        db $FF,$A4,$0D,$03,$FF               ;B2B6B8|        |030DA4;  
+                                                            ;      |        |      ;  
       spriteGFX_plant: db $03,$04,$80                       ;B2B6BD|        |      ;  
                        db $00,$00,$04,$00,$01,$00,$20,$11   ;B2B6C0|        |      ;  
                        db $60,$10,$40,$20,$A0,$60,$40,$C1   ;B2B6C8|        |      ;  
@@ -1896,6 +1899,7 @@ spriteGFX_floatingPlatformSwamp: db $44,$02,$80                       ;B2B05D|  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B2BB08|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B2BB10|        |FFFFFF;  
                        db $FF,$DD,$00,$03,$FF               ;B2BB18|        |0300DD;  
+                                                            ;      |        |      ;  
 blockMabData_Stage2Swamp_BG1: db $03,$20,$80                       ;B2BB1D|        |      ;  
                        dw $0800,$0800,$0800,$0800           ;B2BB20|        |      ;  
                        dw $0800,$0800,$0800,$0800           ;B2BB28|        |      ;  
@@ -2933,6 +2937,7 @@ blockMabData_Stage2Swamp_BG1: db $03,$20,$80                       ;B2BB1D|     
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B2DB68|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B2DB70|        |FFFFFF;  
                        db $FF,$E3,$00,$03,$FF               ;B2DB78|        |0300E3;  
+                                                            ;      |        |      ;  
 blockMabData_Stage2Swamp_BG0: db $03,$20,$80                       ;B2DB7D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;B2DB80|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;B2DB88|        |      ;  
@@ -3970,6 +3975,7 @@ blockMabData_Stage2Swamp_BG0: db $03,$20,$80                       ;B2DB7D|     
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B2FBC8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$5B,$04,$03   ;B2FBD0|        |FFFFFF;  
                        db $FF,$55,$04,$03,$FF               ;B2FBD8|        |030455;  
+                                                            ;      |        |      ;  
 sceneMabDataStage2_Swamp_BG1: db $03,$20,$80                       ;B2FBDD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;B2FBE0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;B2FBE8|        |      ;  

@@ -889,6 +889,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AF9BA8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AF9BB0|        |FFFFFF;  
                        db $FF,$01,$04,$03,$FF               ;AF9BB8|        |030401;  
+                                                            ;      |        |      ;  
 sceneMabDataStage1_Barn_BG0: db $03,$20,$80                       ;AF9BBD|        |      ;  
                        dw $0000,$0001,$0000,$0000           ;AF9BC0|        |      ;  
                        dw $0000,$0000,$0001,$0000           ;AF9BC8|        |      ;  
@@ -1209,6 +1210,7 @@ sceneMabDataStage1_Barn_BG0: db $03,$20,$80                       ;AF9BBD|      
                        dw $0000,$0000,$0000,$0000           ;AFA5A0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;AFA5A8|        |      ;  
                        dw $0000,$0000                       ;AFA5B0|        |      ;  
+                                                            ;      |        |      ;  
         DATA16_AFA5B4: dw $0000,$0000,$0000,$0000           ;AFA5B4|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;AFA5BC|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;AFA5C4|        |      ;  
@@ -1218,6 +1220,7 @@ sceneMabDataStage1_Barn_BG0: db $03,$20,$80                       ;AF9BBD|      
                        dw $0000,$0000,$0000,$0000           ;AFA5E4|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;AFA5EC|        |      ;  
                        dw $0000,$0000,$0000                 ;AFA5F4|        |      ;  
+                                                            ;      |        |      ;  
       soundEmptySpace: dw $0000,$0000,$0000,$0000           ;AFA5FA|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;AFA602|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;AFA60A|        |      ;  
@@ -1927,6 +1930,7 @@ sceneMabDataStage1_Barn_BG0: db $03,$20,$80                       ;AF9BBD|      
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AFBC08|        |FFFFFF;  
                        db $FF,$44,$0E,$03,$FF,$4F,$0D,$03   ;AFBC10|        |030E44;  
                        db $FF,$26,$0D,$03,$FF               ;AFBC18|        |030D26;  
+                                                            ;      |        |      ;  
 spriteGFX_turningPlatform: db $C3,$03,$80                       ;AFBC1D|        |      ;  
                        db $00,$00,$4D,$72,$E7,$B8,$1F,$60   ;AFBC20|        |      ;  
                        db $42,$3F,$AF,$FF,$A9,$1F,$F5,$DA   ;AFBC28|        |      ;  
@@ -2060,6 +2064,7 @@ spriteGFX_turningPlatform: db $C3,$03,$80                       ;AFBC1D|        
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AFC028|        |FFFFFF;  
                        db $FF,$59,$0F,$03,$FF,$3C,$0F,$03   ;AFC030|        |030F59;  
                        db $FF,$2B,$0D,$03,$FF               ;AFC038|        |030D2B;  
+                                                            ;      |        |      ;  
  spriteGFX_medusaHead: db $03,$04,$80                       ;AFC03D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;AFC040|        |      ;  
                        db $00,$00,$00,$00,$00,$01,$00,$07   ;AFC048|        |      ;  
@@ -2201,6 +2206,7 @@ spriteGFX_turningPlatform: db $C3,$03,$80                       ;AFBC1D|        
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AFC488|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AFC490|        |FFFFFF;  
                        db $FF,$0B,$04,$03,$FF               ;AFC498|        |03040B;  
+                                                            ;      |        |      ;  
 sceneMabDataStage1_Barn_01_BG1: dw $2003,$2180,$1580,$1500           ;AFC49D|        |      ;  
                        dw $1500,$1500,$1500,$1500           ;AFC4A5|        |      ;  
                        dw $1500,$2100,$5680,$5600           ;AFC4AD|        |      ;  
@@ -3238,6 +3244,7 @@ sceneMabDataStage1_Barn_01_BG1: dw $2003,$2180,$1580,$1500           ;AFC49D|   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AFE4E9|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AFE4F1|        |FFFFFF;  
                        db $11,$04,$03,$FF                   ;AFE4F9|        |000004;  
+                                                            ;      |        |      ;  
 sceneMabDataStage1_Barn_01_BG0: dw $2003,$0080,$0000,$0000           ;AFE4FD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;AFE505|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;AFE50D|        |      ;  

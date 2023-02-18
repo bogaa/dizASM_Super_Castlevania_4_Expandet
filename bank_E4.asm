@@ -821,6 +821,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E49988|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E49990|        |FFFFFF;  
                        db $FF,$B8,$13,$03,$FF               ;E49998|        |0313B8;  
+                                                            ;      |        |      ;  
 spriteGFX_bridgeCrumbles: db $03,$03,$80                       ;E4999D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E499A0|        |      ;  
                        db $02,$02,$00,$00,$01,$01,$00,$00   ;E499A8|        |      ;  
@@ -930,6 +931,7 @@ spriteGFX_bridgeCrumbles: db $03,$03,$80                       ;E4999D|        |
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E49CE8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E49CF0|        |FFFFFF;  
                        db $FF,$31,$08,$03,$FF               ;E49CF8|        |030831;  
+                                                            ;      |        |      ;  
 sceneMabDataStageB_Bridge_01_BG1: dw $2003,$6880,$7200,$6880           ;E49CFD|        |      ;  
                        dw $7200,$7080,$7100,$7200           ;E49D05|        |      ;  
                        dw $7280,$6A00,$6A00,$6A00           ;E49D0D|        |      ;  
@@ -1967,6 +1969,7 @@ sceneMabDataStageB_Bridge_01_BG1: dw $2003,$6880,$7200,$6880           ;E49CFD| 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E4BD49|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E4BD51|        |FFFFFF;  
                        db $37,$08,$03,$FF                   ;E4BD59|        |000008;  
+                                                            ;      |        |      ;  
 sceneMabDataStageB_Bridge_01_BG0: dw $2003,$3280,$3200,$3200           ;E4BD5D|        |      ;  
                        dw $3200,$3200,$3200,$3200           ;E4BD65|        |      ;  
                        dw $3200,$3300,$3400,$3500           ;E4BD6D|        |      ;  
@@ -3004,6 +3007,7 @@ sceneMabDataStageB_Bridge_01_BG0: dw $2003,$3280,$3200,$3200           ;E4BD5D| 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E4DDA9|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$E1,$0A,$03,$FF   ;E4DDB1|        |FFFFFF;  
                        db $DC,$0A,$03,$FF                   ;E4DDB9|        |00030A;  
+                                                            ;      |        |      ;  
  levelGFXStageB_Tower: db $03,$40,$80                       ;E4DDBD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E4DDC0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E4DDC8|        |      ;  

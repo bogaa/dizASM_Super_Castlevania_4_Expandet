@@ -177,6 +177,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C18568|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C18570|        |FFFFFF;  
                        db $FF,$57,$01,$03,$FF               ;C18578|        |030157;  
+                                                            ;      |        |      ;  
 blockMabData_Stage4_koranotQuater_BG0: db $03,$20,$80                       ;C1857D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C18580|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C18588|        |      ;  
@@ -1214,6 +1215,7 @@ blockMabData_Stage4_koranotQuater_BG0: db $03,$20,$80                       ;C18
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C1A5C8|        |FFFFFF;  
                        db $FF,$A1,$05,$03,$FF,$9B,$05,$03   ;C1A5D0|        |0305A1;  
                        db $FF,$95,$05,$03,$FF               ;C1A5D8|        |030595;  
+                                                            ;      |        |      ;  
 sceneMabDataStage4_KoranotQuater_02_BG1: db $03,$20,$80                       ;C1A5DD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C1A5E0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C1A5E8|        |      ;  
@@ -2251,6 +2253,7 @@ sceneMabDataStage4_KoranotQuater_02_BG1: db $03,$20,$80                       ;C
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C1C628|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$B3,$05,$03   ;C1C630|        |FFFFFF;  
                        db $FF,$AD,$05,$03,$FF               ;C1C638|        |0305AD;  
+                                                            ;      |        |      ;  
 sceneMabDataStage4_KoranotQuater_02_BG0: db $03,$20,$80                       ;C1C63D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C1C640|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C1C648|        |      ;  
@@ -3288,6 +3291,7 @@ sceneMabDataStage4_KoranotQuater_02_BG0: db $03,$20,$80                       ;C
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C1E688|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$09,$0A,$03   ;C1E690|        |FFFFFF;  
                        db $FF,$EC,$09,$03,$FF               ;C1E698|        |0309EC;  
+                                                            ;      |        |      ;  
 levelGFXStage5_blueRoude: db $03,$40,$80                       ;C1E69D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C1E6A0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C1E6A8|        |      ;  

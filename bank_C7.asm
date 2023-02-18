@@ -689,6 +689,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C79568|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$17,$06,$03   ;C79570|        |FFFFFF;  
                        db $FF,$11,$06,$03,$FF               ;C79578|        |030611;  
+                                                            ;      |        |      ;  
 sceneMabDataStage6_Chandelire_Mode7: db $03,$20,$80                       ;C7957D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C79580|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C79588|        |      ;  
@@ -1726,6 +1727,7 @@ sceneMabDataStage6_Chandelire_Mode7: db $03,$20,$80                       ;C7957
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C7B5C8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$41,$0A,$03   ;C7B5D0|        |FFFFFF;  
                        db $FF,$2E,$0A,$03,$FF               ;C7B5D8|        |030A2E;  
+                                                            ;      |        |      ;  
 levelGFXStage6_middleSection: db $03,$40,$80                       ;C7B5DD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C7B5E0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C7B5E8|        |      ;  
@@ -3787,6 +3789,7 @@ levelGFXStage6_middleSection: db $03,$40,$80                       ;C7B5DD|     
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C7F628|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C7F630|        |FFFFFF;  
                        db $FF,$01,$10,$03,$FF               ;C7F638|        |031001;  
+                                                            ;      |        |      ;  
 spriteGFX_turningPlatformWithSpikes: db $83,$03,$80                       ;C7F63D|        |      ;  
                        db $00,$11,$38,$38,$09,$1B,$58,$75   ;C7F640|        |      ;  
                        db $36,$07,$D6,$C4,$D7,$82,$2B,$D3   ;C7F648|        |      ;  
@@ -3912,6 +3915,7 @@ spriteGFX_turningPlatformWithSpikes: db $83,$03,$80                       ;C7F63
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C7FA08|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C7FA10|        |FFFFFF;  
                        db $FF,$06,$10,$03,$FF               ;C7FA18|        |031006;  
+                                                            ;      |        |      ;  
  spriteGFX_ghostWoman: db $43,$0B,$80                       ;C7FA1D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C7FA20|        |      ;  
                        db $00,$00,$00,$00,$00,$01,$01,$02   ;C7FA28|        |      ;  

@@ -113,6 +113,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F18366|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F1836E|        |FFFFFF;  
                        db $FF,$FF,$FF,$6F,$B6,$00,$FF       ;F18376|        |6FFFFF;  
+                                                            ;      |        |      ;  
          music_stage3: db $5B,$06,$80                       ;F1837D|        |      ;  
                        db $0C,$3C,$1C,$3C,$2C,$3C,$C8,$00   ;F18380|        |      ;  
                        db $00,$3C,$00,$00,$3C,$3C,$62,$3C   ;F18388|        |      ;  
@@ -330,6 +331,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F18A28|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F18A30|        |FFFFFF;  
                        db $FF,$76,$B6,$00,$FF               ;F18A38|        |00B676;  
+                                                            ;      |        |      ;  
    music_stage3_climb: db $AA,$05,$80                       ;F18A3D|        |      ;  
                        db $0C,$3C,$1C,$3C,$2C,$3C,$C8,$00   ;F18A40|        |      ;  
                        db $00,$3C,$00,$00,$3C,$3C,$75,$3C   ;F18A48|        |      ;  
@@ -527,6 +529,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F19047|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F1904F|        |FFFFFF;  
                        db $FF,$FF,$7D,$B6,$00,$FF           ;F19057|        |B67DFF;  
+                                                            ;      |        |      ;  
 music_stage3_aquaduct: db $E6,$0E,$80                       ;F1905D|        |      ;  
                        db $18,$3C,$28,$3C,$38,$3C,$48,$3C   ;F19060|        |      ;  
                        db $28,$3C,$58,$3C,$28,$3C,$68,$3C   ;F19068|        |      ;  
@@ -1021,6 +1024,7 @@ music_stage3_aquaduct: db $E6,$0E,$80                       ;F1905D|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F19FAB|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$84,$B6   ;F19FB3|        |FFFFFF;  
                        db $00,$FF                           ;F19FBB|        |      ;  
+                                                            ;      |        |      ;  
          music_stage4: db $62,$0E,$80                       ;F19FBD|        |      ;  
                        db $24,$3C,$34,$3C,$44,$3C,$14,$3C   ;F19FC0|        |      ;  
                        db $74,$3C,$54,$3C,$64,$3C,$C8,$00   ;F19FC8|        |      ;  
@@ -1494,6 +1498,7 @@ music_stage3_aquaduct: db $E6,$0E,$80                       ;F1905D|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F1AE67|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F1AE6F|        |FFFFFF;  
                        db $FF,$FF,$8B,$B6,$00,$FF           ;F1AE77|        |B68BFF;  
+                                                            ;      |        |      ;  
     music_stage4_maze: db $25,$0B,$80                       ;F1AE7D|        |      ;  
                        db $0E,$3C,$1E,$3C,$2E,$3C,$3E,$3C   ;F1AE80|        |      ;  
                        db $C8,$00,$02,$3C,$00,$00,$4E,$3C   ;F1AE88|        |      ;  
@@ -1868,6 +1873,7 @@ music_stage3_aquaduct: db $E6,$0E,$80                       ;F1905D|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F1BA0A|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$92   ;F1BA12|        |FFFFFF;  
                        db $B6,$00,$FF                       ;F1BA1A|        |000000;  
+                                                            ;      |        |      ;  
          music_stage5: db $7F,$04,$80                       ;F1BA1D|        |      ;  
                        db $2C,$3C,$0C,$3C,$1C,$3C,$C8,$00   ;F1BA20|        |      ;  
                        db $00,$3C,$00,$00,$3C,$3C,$A0,$3C   ;F1BA28|        |      ;  
@@ -2026,6 +2032,7 @@ music_stage3_aquaduct: db $E6,$0E,$80                       ;F1905D|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F1BEEC|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$A0,$B6,$00   ;F1BEF4|        |FFFFFF;  
                        db $FF                               ;F1BEFC|        |800670;  
+                                                            ;      |        |      ;  
          music_stage6: db $70,$06,$80                       ;F1BEFD|        |      ;  
                        db $08,$3C,$C8,$00,$00,$3C,$00,$00   ;F1BF00|        |      ;  
                        db $18,$3C,$0E,$3D,$52,$3E,$31,$3F   ;F1BF08|        |      ;  
@@ -2247,6 +2254,7 @@ music_stage3_aquaduct: db $E6,$0E,$80                       ;F1905D|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F1C5C5|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F1C5CD|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$A7,$B6,$00,$FF   ;F1C5D5|        |FFFFFF;  
+                                                            ;      |        |      ;  
 music_stage6_chandelire: db $A4,$10,$80                       ;F1C5DD|        |      ;  
                        db $64,$3C,$14,$3C,$24,$3C,$34,$3C   ;F1C5E0|        |      ;  
                        db $44,$3C,$54,$3C,$C8,$00,$02,$3C   ;F1C5E8|        |      ;  
@@ -2797,6 +2805,7 @@ music_stage6_chandelire: db $A4,$10,$80                       ;F1C5DD|        | 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F1D6E9|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F1D6F1|        |FFFFFF;  
                        db $AE,$B6,$00,$FF                   ;F1D6F9|        |0000B6;  
+                                                            ;      |        |      ;  
          music_stage7: db $D1,$0B,$80                       ;F1D6FD|        |      ;  
                        db $14,$3C,$24,$3C,$44,$3C,$54,$3C   ;F1D700|        |      ;  
                        db $44,$3C,$34,$3C,$64,$3C,$C8,$00   ;F1D708|        |      ;  
@@ -3190,6 +3199,7 @@ music_stage6_chandelire: db $A4,$10,$80                       ;F1C5DD|        | 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F1E326|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F1E32E|        |FFFFFF;  
                        db $FF,$FF,$FF,$B5,$B6,$00,$FF       ;F1E336|        |B5FFFF;  
+                                                            ;      |        |      ;  
          music_stage8: db $32,$0A,$80                       ;F1E33D|        |      ;  
                        db $6A,$3C,$2A,$3C,$4A,$3C,$5A,$3C   ;F1E340|        |      ;  
                        db $4A,$3C,$3A,$3C,$5A,$3C,$3A,$3C   ;F1E348|        |      ;  
@@ -3531,6 +3541,7 @@ music_stage6_chandelire: db $A4,$10,$80                       ;F1C5DD|        | 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F1EDC7|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F1EDCF|        |FFFFFF;  
                        db $FF,$FF,$BC,$B6,$00,$FF           ;F1EDD7|        |B6BCFF;  
+                                                            ;      |        |      ;  
          music_stage9: db $28,$13,$80                       ;F1EDDD|        |      ;  
                        db $7A,$3C,$1A,$3C,$2A,$3C,$3A,$3C   ;F1EDE0|        |      ;  
                        db $4A,$3C,$5A,$3C,$6A,$3C,$4A,$3C   ;F1EDE8|        |      ;  

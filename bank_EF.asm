@@ -313,6 +313,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EF89A8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EF89B0|        |FFFFFF;  
                        db $FF,$54,$BA,$00,$FF               ;EF89B8|        |00BA54;  
+                                                            ;      |        |      ;  
   gaiboneGFXdataPart1: db $03,$20,$80                       ;EF89BD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;EF89C0|        |      ;  
                        db $00,$00,$78,$F8,$03,$FF,$10,$FF   ;EF89C8|        |      ;  
@@ -1350,6 +1351,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EFAA08|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EFAA10|        |FFFFFF;  
                        db $FF,$5D,$BA,$00,$FF               ;EFAA18|        |00BA5D;  
+                                                            ;      |        |      ;  
    slograGFXdataPart2: db $04,$0C,$80                       ;EFAA1D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;EFAA20|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;EFAA28|        |      ;  
@@ -1752,6 +1754,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EFB689|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EFB691|        |FFFFFF;  
                        db $62,$BA,$00,$FF                   ;EFB699|        |EFB756;  
+                                                            ;      |        |      ;  
    slograGFXdataPart1: db $03,$20,$80                       ;EFB69D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;EFB6A0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;EFB6A8|        |      ;  
@@ -2789,6 +2792,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EFD6E8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EFD6F0|        |FFFFFF;  
                        db $FF,$6B,$BA,$00,$FF               ;EFD6F8|        |00BA6B;  
+                                                            ;      |        |      ;  
    grakulGFXdataPart2: db $04,$0C,$80                       ;EFD6FD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;EFD700|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;EFD708|        |      ;  
@@ -3191,6 +3195,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EFE369|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EFE371|        |FFFFFF;  
                        db $70,$BA,$00,$FF                   ;EFE379|        |EFE335;  
+                                                            ;      |        |      ;  
    grakulGFXdataPart1: db $03,$20,$80                       ;EFE37D|        |      ;  
                        db $40,$00,$80,$20,$40,$20,$A0,$60   ;EFE380|        |      ;  
                        db $40,$40,$A0,$E0,$50,$B0,$50,$B0   ;EFE388|        |      ;  

@@ -189,6 +189,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DA85C8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DA85D0|        |FFFFFF;  
                        db $FF,$61,$07,$03,$FF               ;DA85D8|        |030761;  
+                                                            ;      |        |      ;  
 sceneMabDataStage9_Gold_02_BG0: db $03,$20,$80                       ;DA85DD|        |      ;  
                        dw $001B,$001B,$001D,$001B           ;DA85E0|        |      ;  
                        dw $001B,$001B,$001D,$001B           ;DA85E8|        |      ;  
@@ -1226,6 +1227,7 @@ sceneMabDataStage9_Gold_02_BG0: db $03,$20,$80                       ;DA85DD|   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DAA628|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DAA630|        |FFFFFF;  
                        db $FF,$9A,$0A,$03,$FF               ;DAA638|        |030A9A;  
+                                                            ;      |        |      ;  
 levelGFXStage9_ZapfQuater: db $03,$40,$80                       ;DAA63D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;DAA640|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;DAA648|        |      ;  
@@ -3287,6 +3289,7 @@ levelGFXStage9_ZapfQuater: db $03,$40,$80                       ;DAA63D|        
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DAE688|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DAE690|        |FFFFFF;  
                        db $FF,$A4,$0A,$03,$FF               ;DAE698|        |030AA4;  
+                                                            ;      |        |      ;  
 levelGFXStage9_BG_tresure: db $03,$0A,$80                       ;DAE69D|        |      ;  
                        db $6C,$9F,$F7,$B7,$01,$AD,$80,$77   ;DAE6A0|        |      ;  
                        db $44,$5D,$00,$83,$00,$8F,$00,$FF   ;DAE6A8|        |      ;  
@@ -3620,6 +3623,7 @@ levelGFXStage9_BG_tresure: db $03,$0A,$80                       ;DAE69D|        
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DAF0E8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DAF0F0|        |FFFFFF;  
                        db $FF,$0B,$02,$03,$FF               ;DAF0F8|        |03020B;  
+                                                            ;      |        |      ;  
 blockMabData_Stage9_zapfQuater_BG1: db $03,$20,$80                       ;DAF0FD|        |      ;  
                        dw $0C00,$0C00,$0C00,$0C00           ;DAF100|        |      ;  
                        dw $0C00,$0C00,$0C00,$0C00           ;DAF108|        |      ;  

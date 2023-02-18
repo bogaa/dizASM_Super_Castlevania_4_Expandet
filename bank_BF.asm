@@ -5,6 +5,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BF8008|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BF8010|        |FFFFFF;  
                        db $FF,$3D,$01,$03,$FF               ;BF8018|        |03013D;  
+                                                            ;      |        |      ;  
 blockMabData_Stage4_Rotating_BGMode7: db $03,$20,$80                       ;BF801D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;BF8020|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;BF8028|        |      ;  
@@ -1042,6 +1043,7 @@ blockMabData_Stage4_Rotating_BGMode7: db $03,$20,$80                       ;BF80
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BFA068|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$6F,$05,$03   ;BFA070|        |FFFFFF;  
                        db $FF,$69,$05,$03,$FF               ;BFA078|        |030569;  
+                                                            ;      |        |      ;  
 sceneMabDataStage4_RotatingRoom_Mode7: db $03,$20,$80                       ;BFA07D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;BFA080|        |      ;  
                        dw $0000,$0000,$0000,$001A           ;BFA088|        |      ;  
@@ -2079,6 +2081,7 @@ sceneMabDataStage4_RotatingRoom_Mode7: db $03,$20,$80                       ;BFA
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BFC0C8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BFC0D0|        |FFFFFF;  
                        db $FF,$D0,$09,$03,$FF               ;BFC0D8|        |0309D0;  
+                                                            ;      |        |      ;  
 levelGFXStage4_CastleWashinMachine8BPPlinear: db $84,$18,$80                       ;BFC0DD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;BFC0E0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;BFC0E8|        |      ;  
@@ -2881,6 +2884,7 @@ levelGFXStage4_CastleWashinMachine8BPPlinear: db $84,$18,$80                    
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BFD9C9|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BFD9D1|        |FFFFFF;  
                        db $65,$0F,$03,$FF                   ;BFD9D9|        |00000F;  
+                                                            ;      |        |      ;  
 spriteGFX_platformTunnel: db $C3,$02,$80                       ;BFD9DD|        |      ;  
                        db $00,$00,$12,$14,$2E,$23,$4F,$4B   ;BFD9E0|        |      ;  
                        db $B4,$9C,$6B,$76,$13,$08,$4A,$17   ;BFD9E8|        |      ;  
@@ -2982,6 +2986,7 @@ spriteGFX_platformTunnel: db $C3,$02,$80                       ;BFD9DD|        |
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BFDCE8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BFDCF0|        |FFFFFF;  
                        db $FF,$47,$01,$03,$FF               ;BFDCF8|        |030147;  
+                                                            ;      |        |      ;  
 blockMabData_Stage4_WaschingMachine_BGMode7: db $03,$20,$80                       ;BFDCFD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;BFDD00|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;BFDD08|        |      ;  
@@ -4019,6 +4024,7 @@ blockMabData_Stage4_WaschingMachine_BGMode7: db $03,$20,$80                     
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BFFD48|        |FFFFFF;  
                        db $FF,$85,$05,$03,$FF,$7F,$05,$03   ;BFFD50|        |030585;  
                        db $FF,$79,$05,$03,$FF               ;BFFD58|        |030579;  
+                                                            ;      |        |      ;  
 sceneMabDataStage4_WashingMachine_Mode7: db $03,$20,$80                       ;BFFD5D|        |      ;  
                        dw $000F,$000F,$0007,$0001           ;BFFD60|        |      ;  
                        dw $0001,$0001,$0007,$0001           ;BFFD68|        |      ;  

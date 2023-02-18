@@ -141,6 +141,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D98448|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D98450|        |FFFFFF;  
                        db $FF,$41,$07,$03,$FF               ;D98458|        |030741;  
+                                                            ;      |        |      ;  
 sceneMabDataStage9_Gold_00_BG0: db $03,$20,$80                       ;D9845D|        |      ;  
                        dw $0002,$0009,$0000,$0000           ;D98460|        |      ;  
                        dw $0000,$0020,$0002,$0002           ;D98468|        |      ;  
@@ -1178,6 +1179,7 @@ sceneMabDataStage9_Gold_00_BG0: db $03,$20,$80                       ;D9845D|   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D9A4A8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D9A4B0|        |FFFFFF;  
                        db $FF,$4B,$07,$03,$FF               ;D9A4B8|        |03074B;  
+                                                            ;      |        |      ;  
 sceneMabDataStage9_Gold_01_BG1: db $03,$20,$80                       ;D9A4BD|        |      ;  
                        dw $0004,$0005,$000A,$000D           ;D9A4C0|        |      ;  
                        dw $000C,$0018,$000A,$000B           ;D9A4C8|        |      ;  
@@ -2215,6 +2217,7 @@ sceneMabDataStage9_Gold_01_BG1: db $03,$20,$80                       ;D9A4BD|   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D9C508|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D9C510|        |FFFFFF;  
                        db $FF,$51,$07,$03,$FF               ;D9C518|        |030751;  
+                                                            ;      |        |      ;  
 sceneMabDataStage9_Gold_01_BG0: db $03,$20,$80                       ;D9C51D|        |      ;  
                        dw $0002,$0002,$0002,$0002           ;D9C520|        |      ;  
                        dw $0002,$0002,$0002,$0002           ;D9C528|        |      ;  
@@ -3252,6 +3255,7 @@ sceneMabDataStage9_Gold_01_BG0: db $03,$20,$80                       ;D9C51D|   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D9E568|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D9E570|        |FFFFFF;  
                        db $FF,$5B,$07,$03,$FF               ;D9E578|        |03075B;  
+                                                            ;      |        |      ;  
 sceneMabDataStage9_Gold_02_BG1: db $03,$20,$80                       ;D9E57D|        |      ;  
                        dw $0050,$0000,$0000,$803D           ;D9E580|        |      ;  
                        dw $803C,$002F,$0000,$0050           ;D9E588|        |      ;  
