@@ -2663,17 +2663,17 @@ music_SrcDes_OrbDracula: dw $A001,$3C00                       ;81B73D|        | 
                        dw $A54A,$A553,$A560,$A569           ;81B773|        |      ;  
                        dw $A54A,$A5F6,$A603,$A60C           ;81B77B|        |      ;  
                                                             ;      |        |      ;  
-NewSC4edCamaraLockSubIDRoutine: STA.B RAM_X_event_slot_state,X       ;81B783|9512    |000012; expand camera locks $20
+NewSC4edCamaraLockSubIDRoutine: STA.B $12,X                          ;81B783|9512    |000012; expand camera locks $20
                        LDA.B RAM_currentLevel               ;81B785|A586    |000086;  
                        XBA                                  ;81B787|EB      |      ;  
                        CLC                                  ;81B788|18      |      ;  
-                       ADC.B RAM_X_event_slot_state,X       ;81B789|7512    |000012;  
-                       STA.B RAM_X_event_slot_state,X       ;81B78B|9512    |000012;  
+                       ADC.B $12,X                          ;81B789|7512    |000012;  
+                       STA.B $12,X                          ;81B78B|9512    |000012;  
                        LDA.B RAM_currentLevel               ;81B78D|A586    |000086;  
                        XBA                                  ;81B78F|EB      |      ;  
                        LSR A                                ;81B790|4A      |      ;  
                        CLC                                  ;81B791|18      |      ;  
-                       ADC.B RAM_X_event_slot_state,X       ;81B792|7512    |000012;  
+                       ADC.B $12,X                          ;81B792|7512    |000012;  
                        TAY                                  ;81B794|A8      |      ;  
                        PHB                                  ;81B795|8B      |      ;  
                        LDA.W #$A5A5                         ;81B796|A9A5A5  |      ; change Bank
@@ -2681,17 +2681,17 @@ NewSC4edCamaraLockSubIDRoutine: STA.B RAM_X_event_slot_state,X       ;81B783|951
                        PLB                                  ;81B79A|AB      |      ;  
                        PLB                                  ;81B79B|AB      |      ;  
                        LDA.W DATA16_818000,Y                ;81B79C|B90080  |818000;  
-                       STA.B RAM_X_event_slot_state,X       ;81B79F|9512    |000012;  
+                       STA.B $12,X                          ;81B79F|9512    |000012;  
                        LDA.W RAM_whiteFade_data03,Y         ;81B7A1|B90280  |818002;  
-                       STA.B RAM_X_event_slot_34,X          ;81B7A4|9534    |000034;  
+                       STA.B RAM_subGameState,X             ;81B7A4|9534    |000034;  
                        LDA.W DATA16_818004,Y                ;81B7A6|B90480  |818004;  
-                       STA.B RAM_X_event_slot_36,X          ;81B7A9|9536    |000036;  
+                       STA.B $36,X                          ;81B7A9|9536    |000036;  
                        LDA.W DATA16_818006,Y                ;81B7AB|B90680  |818006;  
-                       STA.B RAM_X_event_slot_38,X          ;81B7AE|9538    |000038;  
+                       STA.B $38,X                          ;81B7AE|9538    |000038;  
                        LDA.W DATA16_818008,Y                ;81B7B0|B90880  |818008;  
-                       STA.B RAM_X_event_slot_3a,X          ;81B7B3|953A    |00003A;  
+                       STA.B RAM_frameCounter,X             ;81B7B3|953A    |00003A;  
                        LDA.W DATA16_81800A,Y                ;81B7B5|B90A80  |81800A;  
-                       STA.B RAM_X_event_slot_3c,X          ;81B7B8|953C    |00003C;  
+                       STA.B $3C,X                          ;81B7B8|953C    |00003C;  
                        PLB                                  ;81B7BA|AB      |      ;  
                        RTL                                  ;81B7BB|6B      |      ; end New CameraLock settup
                                                             ;      |        |      ;  
@@ -3290,30 +3290,30 @@ noMoreSpritesHereIGuess02: dw $C000,$FFFE,$3000,$0001           ;81C05D|        
 noMoreSpritesHereIGuess03: dw $6000,$FFFD,$0000,$0001           ;81C06D|        |      ;  
                        dw $8000,$FFFD,$8000,$FFFE           ;81C075|        |      ;  
                                                             ;      |        |      ;  
-newSC4edLevelEntranceRoutine: STA.B RAM_X_event_slot_state,X       ;81C07D|9512    |000012; This will make the game use the expanded entrance tables
+newSC4edLevelEntranceRoutine: STA.B $12,X                          ;81C07D|9512    |000012; This will make the game use the expanded entrance tables
                                                             ;      |        |      ;  
           CODE_81C07F: LDA.B RAM_currentLevel               ;81C07F|A586    |000086;  
                        XBA                                  ;81C081|EB      |      ;  
                        CLC                                  ;81C082|18      |      ;  
-                       ADC.B RAM_X_event_slot_state,X       ;81C083|7512    |000012;  
+                       ADC.B $12,X                          ;81C083|7512    |000012;  
                        TAY                                  ;81C085|A8      |      ;  
                        PHX                                  ;81C086|DA      |      ;  
                        TYX                                  ;81C087|BB      |      ;  
                        LDA.L pointerTableNewEntrances,X     ;81C088|BF0080A6|A68000;  
                        AND.W #$00FF                         ;81C08C|29FF00  |      ;  
                        PLX                                  ;81C08F|FA      |      ;  
-                       STA.B RAM_X_event_slot_state,X       ;81C090|9512    |000012;  
+                       STA.B $12,X                          ;81C090|9512    |000012;  
                        PHX                                  ;81C092|DA      |      ;  
                        TYX                                  ;81C093|BB      |      ;  
                        LDA.L PTR16_A68001,X                 ;81C094|BF0180A6|A68001;  
                        AND.W #$00FF                         ;81C098|29FF00  |      ;  
                        PLX                                  ;81C09B|FA      |      ;  
-                       STA.B RAM_X_event_slot_3c,X          ;81C09C|953C    |00003C;  
+                       STA.B $3C,X                          ;81C09C|953C    |00003C;  
                        PHX                                  ;81C09E|DA      |      ;  
                        TYX                                  ;81C09F|BB      |      ;  
                        LDA.L PTR16_A68002,X                 ;81C0A0|BF0280A6|A68002;  
                        PLX                                  ;81C0A4|FA      |      ;  
-                       STA.B RAM_X_event_slot_3e,X          ;81C0A5|953E    |00003E;  
+                       STA.B RAM_blackFadeCounter,X         ;81C0A5|953E    |00003E;  
                        RTL                                  ;81C0A7|6B      |      ; end new entrance routine
                                                             ;      |        |      ;  
                        dw $FFFF,$FFFF,$FFFF,$FFFF           ;81C0A8|        |      ;  
