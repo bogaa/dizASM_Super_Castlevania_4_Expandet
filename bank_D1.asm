@@ -521,7 +521,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D19028|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D19030|        |FFFFFF;  
                        db $FF,$D1,$01,$03,$FF               ;D19038|        |0301D1;  
-                                                            ;      |        |      ;  
 blockMabData_Stage7_GrakulQuater_BG0: db $03,$20,$80                       ;D1903D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;D19040|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;D19048|        |      ;  
@@ -1559,7 +1558,6 @@ blockMabData_Stage7_GrakulQuater_BG0: db $03,$20,$80                       ;D190
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D1B088|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D1B090|        |FFFFFF;  
                        db $FF,$BB,$06,$03,$FF               ;D1B098|        |0306BB;  
-                                                            ;      |        |      ;  
 sceneMabDataStage7_GrakulQuater_00_BG1: db $03,$20,$80                       ;D1B09D|        |      ;  
                        dw $0078,$0026,$0026,$007F           ;D1B0A0|        |      ;  
                        dw $0045,$401C,$401D,$0027           ;D1B0A8|        |      ;  
@@ -2597,7 +2595,6 @@ sceneMabDataStage7_GrakulQuater_00_BG1: db $03,$20,$80                       ;D1
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D1D0E8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D1D0F0|        |FFFFFF;  
                        db $FF,$C1,$06,$03,$FF               ;D1D0F8|        |0306C1;  
-                                                            ;      |        |      ;  
 sceneMabDataStage7_GrakulQuater_00_BG0: db $03,$20,$80                       ;D1D0FD|        |      ;  
                        dw $000B,$0001,$8002,$0002           ;D1D100|        |      ;  
                        dw $0001,$8002,$0002,$0001           ;D1D108|        |      ;  
@@ -3635,7 +3632,6 @@ sceneMabDataStage7_GrakulQuater_00_BG0: db $03,$20,$80                       ;D1
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D1F148|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D1F150|        |FFFFFF;  
                        db $FF,$26,$11,$03,$FF               ;D1F158|        |031126;  
-                                                            ;      |        |      ;  
 spriteGFX_caterpillar: db $03,$04,$80                       ;D1F15D|        |      ;  
                        db $00,$00,$0A,$0A,$50,$38,$0C,$8C   ;D1F160|        |      ;  
                        db $00,$00,$04,$07,$0B,$0C,$0B,$4C   ;D1F168|        |      ;  
@@ -3777,7 +3773,6 @@ spriteGFX_caterpillar: db $03,$04,$80                       ;D1F15D|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D1F5A8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D1F5B0|        |FFFFFF;  
                        db $FF,$CB,$06,$03,$FF               ;D1F5B8|        |0306CB;  
-                                                            ;      |        |      ;  
 sceneMabDataStage7_GrakulQuater_01_BG1: dw $2003,$1780,$0040,$0000           ;D1F5BD|        |      ;  
                        dw $2A00,$2B00,$6900,$2A00           ;D1F5C5|        |      ;  
                        dw $2B00,$1800,$1800,$0080           ;D1F5CD|        |      ;  

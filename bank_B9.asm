@@ -2037,7 +2037,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B9BF88|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B9BF90|        |FFFFFF;  
                        db $FF,$64,$0E,$03,$FF               ;B9BF98|        |030E64;  
-                                                            ;      |        |      ;  
 spriteGFX_fallingPillar: db $C3,$02,$80                       ;B9BF9D|        |      ;  
                        db $00,$00,$00,$00,$61,$50,$33,$5C   ;B9BFA0|        |      ;  
                        db $1D,$5E,$12,$52,$0C,$60,$48,$67   ;B9BFA8|        |      ;  
@@ -2139,7 +2138,6 @@ spriteGFX_fallingPillar: db $C3,$02,$80                       ;B9BF9D|        | 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B9C2A8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$92,$0E,$03   ;B9C2B0|        |FFFFFF;  
                        db $FF,$69,$0E,$03,$FF               ;B9C2B8|        |030E69;  
-                                                            ;      |        |      ;  
     spriteGFX_fishman: db $03,$0C,$80                       ;B9C2BD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B9C2C0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B9C2C8|        |      ;  
@@ -2537,7 +2535,6 @@ spriteGFX_fallingPillar: db $C3,$02,$80                       ;B9BF9D|        | 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B9CF08|        |FFFFFF;  
                        db $FF,$DD,$0E,$03,$FF,$8D,$0E,$03   ;B9CF10|        |030EDD;  
                        db $FF,$73,$0E,$03,$FF               ;B9CF18|        |030E73;  
-                                                            ;      |        |      ;  
 spriteGFX_boneDragon01: db $C3,$07,$80                       ;B9CF1D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B9CF20|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B9CF28|        |      ;  
@@ -2799,7 +2796,6 @@ spriteGFX_boneDragon01: db $C3,$07,$80                       ;B9CF1D|        |  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B9D728|        |FFFFFF;  
                        db $FF,$82,$11,$03,$FF,$9C,$0E,$03   ;B9D730|        |031182;  
                        db $FF,$78,$0E,$03,$FF               ;B9D738|        |030E78;  
-                                                            ;      |        |      ;  
         spriteGFX_eye: db $03,$04,$80                       ;B9D73D|        |      ;  
                        db $37,$23,$35,$01,$66,$40,$3D,$7C   ;B9D740|        |      ;  
                        db $57,$56,$67,$7F,$1F,$33,$4F,$63   ;B9D748|        |      ;  
@@ -2941,7 +2937,6 @@ spriteGFX_boneDragon01: db $C3,$07,$80                       ;B9CF1D|        |  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B9DB88|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B9DB90|        |FFFFFF;  
                        db $FF,$1D,$01,$03,$FF               ;B9DB98|        |03011D;  
-                                                            ;      |        |      ;  
 blockMabData_Stage3Aquaduct_BG0: db $03,$20,$80                       ;B9DB9D|        |      ;  
                        dw $0800,$0800,$0800,$0800           ;B9DBA0|        |      ;  
                        dw $0800,$0800,$0800,$0800           ;B9DBA8|        |      ;  
@@ -3979,7 +3974,6 @@ blockMabData_Stage3Aquaduct_BG0: db $03,$20,$80                       ;B9DB9D|  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B9FBE8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B9FBF0|        |FFFFFF;  
                        db $FF,$23,$01,$03,$FF               ;B9FBF8|        |030123;  
-                                                            ;      |        |      ;  
 blockMabData_Stage3Aquaduct_BG1: db $03,$20,$80                       ;B9FBFD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;B9FC00|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;B9FC08|        |      ;  

@@ -125,7 +125,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F083C8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F083D0|        |FFFFFF;  
                        db $FF,$79,$BA,$00,$FF               ;F083D8|        |00BA79;  
-                                                            ;      |        |      ;  
     deathGFXdataPart2: db $03,$0C,$80                       ;F083DD|        |      ;  
                        db $02,$00,$00,$00,$00,$00,$01,$00   ;F083E0|        |      ;  
                        db $03,$04,$05,$0A,$13,$1D,$35,$1F   ;F083E8|        |      ;  
@@ -523,7 +522,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F09028|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F09030|        |FFFFFF;  
                        db $FF,$7E,$BA,$00,$FF               ;F09038|        |00BA7E;  
-                                                            ;      |        |      ;  
     deathGFXdataPart1: db $03,$20,$80                       ;F0903D|        |      ;  
                        db $F3,$44,$EE,$05,$F7,$00,$9E,$50   ;F09040|        |      ;  
                        db $F1,$C8,$77,$F8,$BF,$7C,$BE,$5F   ;F09048|        |      ;  
@@ -1561,7 +1559,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F0B088|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F0B090|        |FFFFFF;  
                        db $FF,$87,$BA,$00,$FF               ;F0B098|        |00BA87;  
-                                                            ;      |        |      ;  
     mummyGFXdataPart2: db $04,$0C,$80                       ;F0B09D|        |      ;  
                        db $00,$00,$25,$3C,$43,$46,$30,$49   ;F0B0A0|        |      ;  
                        db $34,$43,$74,$0D,$41,$7E,$30,$0F   ;F0B0A8|        |      ;  
@@ -1964,7 +1961,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F0BD09|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F0BD11|        |FFFFFF;  
                        db $8C,$BA,$00,$FF                   ;F0BD19|        |0000BA;  
-                                                            ;      |        |      ;  
     mummyGFXdataPart1: db $03,$20,$80                       ;F0BD1D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F0BD20|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F0BD28|        |      ;  
@@ -3002,7 +2998,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F0DD68|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F0DD70|        |FFFFFF;  
                        db $FF,$5A,$B6,$00,$FF               ;F0DD78|        |00B65A;  
-                                                            ;      |        |      ;  
          music_stage0: db $0F,$01,$80                       ;F0DD7D|        |      ;  
                        dw $3C08,$00C8,$3C00,$0000           ;F0DD80|        |      ; pointer 01
                        dw $3C18,$3C3F,$3C65,$3C8B           ;F0DD88|        |      ; channel 1 Pointer
@@ -3053,7 +3048,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F0DEEC|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$61,$B6,$00   ;F0DEF4|        |FFFFFF;  
                        db $FF                               ;F0DEFC|        |801334;  
-                                                            ;      |        |      ;  
          music_stage1: db $34,$13,$80                       ;F0DEFD|        |      ;  
                        dw $3C14,$3C64,$3C24,$3C34           ;F0DF00|        |      ; ??channel 1 
                        dw $3C44,$3C54,$3C64                 ;F0DF08|        |      ; ??channel 5
@@ -3684,7 +3678,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F0F289|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F0F291|        |FFFFFF;  
                        db $68,$B6,$00,$FF                   ;F0F299|        |      ;  
-                                                            ;      |        |      ;  
          music_stage2: db $79,$10,$80                       ;F0F29D|        |      ;  
                        db $10,$3C,$20,$3C,$30,$3C,$40,$3C   ;F0F2A0|        |      ;  
                        db $50,$3C,$63,$00,$02,$3C,$00,$00   ;F0F2A8|        |      ;  

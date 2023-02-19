@@ -765,7 +765,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EA97C8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EA97D0|        |FFFFFF;  
                        db $FF,$77,$08,$03,$FF               ;EA97D8|        |030877;  
-                                                            ;      |        |      ;  
 sceneMabDataStageB_Death_BG0: db $03,$20,$80                       ;EA97DD|        |      ;  
                        dw $0002,$0003,$0002,$0003           ;EA97E0|        |      ;  
                        dw $0002,$0003,$0002,$0003           ;EA97E8|        |      ;  
@@ -1803,7 +1802,6 @@ sceneMabDataStageB_Death_BG0: db $03,$20,$80                       ;EA97DD|     
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EAB828|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$36,$0B,$03   ;EAB830|        |FFFFFF;  
                        db $FF,$19,$0B,$03,$FF               ;EAB838|        |030B19;  
-                                                            ;      |        |      ;  
 levelGFXStageB_draculasQuater00: db $03,$20,$80                       ;EAB83D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;EAB840|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;EAB848|        |      ;  
@@ -2841,7 +2839,6 @@ levelGFXStageB_draculasQuater00: db $03,$20,$80                       ;EAB83D|  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EAD888|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$23,$0B,$03   ;EAD890|        |FFFFFF;  
                        db $FF,$1E,$0B,$03,$FF               ;EAD898|        |030B1E;  
-                                                            ;      |        |      ;  
 levelGFXStageB_draculasQuater01: db $03,$40,$80                       ;EAD89D|        |      ;  
                        db $BF,$C0,$3F,$C0,$3F,$C0,$BF,$C0   ;EAD8A0|        |      ;  
                        db $3F,$C0,$BF,$40,$67,$1F,$00,$FF   ;EAD8A8|        |      ;  

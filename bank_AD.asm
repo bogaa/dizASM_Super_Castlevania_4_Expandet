@@ -13,7 +13,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AD8048|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AD8050|        |FFFFFF;  
                        db $FF,$DB,$03,$03,$FF               ;AD8058|        |0303DB;  
-                                                            ;      |        |      ;  
 sceneMabDataStage1_Castle_01_BG1: dw $2003,$0580,$1C00,$2200           ;AD805D|        |      ;  
                        dw $0500,$0000,$0500,$0400           ;AD8065|        |      ;  
                        dw $0500,$0500,$1C00,$2B00           ;AD806D|        |      ;  
@@ -1051,7 +1050,6 @@ sceneMabDataStage1_Castle_01_BG1: dw $2003,$0580,$1C00,$2200           ;AD805D| 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ADA0A9|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ADA0B1|        |FFFFFF;  
                        db $E1,$03,$03,$FF                   ;ADA0B9|        |000003;  
-                                                            ;      |        |      ;  
 sceneMabDataStage1_Castle_01_BG0: dw $2003,$0080,$0000,$0000           ;ADA0BD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;ADA0C5|        |      ;  
                        dw $0000,$0100,$0100,$0100           ;ADA0CD|        |      ;  
@@ -2089,7 +2087,6 @@ sceneMabDataStage1_Castle_01_BG0: dw $2003,$0080,$0000,$0000           ;ADA0BD| 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ADC109|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ADC111|        |FFFFFF;  
                        db $EB,$03,$03,$FF                   ;ADC119|        |      ;  
-                                                            ;      |        |      ;  
 sceneMabDataStage1_Castle_02_BG1: dw $2003,$0580,$0000,$0000           ;ADC11D|        |      ;  
                        dw $2000,$1C00,$1700,$1C00           ;ADC125|        |      ;  
                        dw $1300,$0500,$0D00,$1800           ;ADC12D|        |      ;  
@@ -3127,7 +3124,6 @@ sceneMabDataStage1_Castle_02_BG1: dw $2003,$0580,$0000,$0000           ;ADC11D| 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ADE169|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$4D,$09,$03,$FF   ;ADE171|        |FFFFFF;  
                        db $48,$09,$03,$FF                   ;ADE179|        |      ;  
-                                                            ;      |        |      ;  
 levelGFXStage1_stables: db $03,$40,$80                       ;ADE17D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;ADE180|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;ADE188|        |      ;  

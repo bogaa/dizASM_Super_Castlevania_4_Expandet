@@ -1753,7 +1753,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E9B6A8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E9B6B0|        |FFFFFF;  
                        db $FF,$7B,$02,$03,$FF               ;E9B6B8|        |03027B;  
-                                                            ;      |        |      ;  
 blockMabData_StageB_Death_BG1: db $03,$20,$80                       ;E9B6BD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;E9B6C0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;E9B6C8|        |      ;  
@@ -2791,7 +2790,6 @@ blockMabData_StageB_Death_BG1: db $03,$20,$80                       ;E9B6BD|    
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E9D708|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E9D710|        |FFFFFF;  
                        db $FF,$81,$02,$03,$FF               ;E9D718|        |030281;  
-                                                            ;      |        |      ;  
 blockMabData_StageB_Death_BG0: db $03,$20,$80                       ;E9D71D|        |      ;  
                        dw $1400,$1400,$1400,$1400           ;E9D720|        |      ;  
                        dw $1400,$1400,$1400,$1400           ;E9D728|        |      ;  
@@ -3829,7 +3827,6 @@ blockMabData_StageB_Death_BG0: db $03,$20,$80                       ;E9D71D|    
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E9F768|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E9F770|        |FFFFFF;  
                        db $FF,$71,$08,$03,$FF               ;E9F778|        |030871;  
-                                                            ;      |        |      ;  
 sceneMabDataStageB_Death_BG1: db $03,$20,$80                       ;E9F77D|        |      ;  
                        dw $0001,$0002,$0008,$0008           ;E9F780|        |      ;  
                        dw $0008,$0008,$0008,$0008           ;E9F788|        |      ;  

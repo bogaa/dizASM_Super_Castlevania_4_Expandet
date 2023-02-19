@@ -349,7 +349,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CF8AC8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CF8AD0|        |FFFFFF;  
                        db $FF,$C5,$10,$03,$FF               ;CF8AD8|        |0310C5;  
-                                                            ;      |        |      ;  
    spriteGFX_bookBird: db $03,$03,$80                       ;CF8ADD|        |      ;  
                        db $06,$04,$00,$0F,$07,$00,$0F,$0E   ;CF8AE0|        |      ;  
                        db $09,$0E,$09,$0C,$09,$0C,$09,$0C   ;CF8AE8|        |      ;  
@@ -459,7 +458,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CF8E28|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CF8E30|        |FFFFFF;  
                        db $FF,$CA,$10,$03,$FF               ;CF8E38|        |0310CA;  
-                                                            ;      |        |      ;  
 spriteGFX_shildGargoyle: db $03,$0C,$80                       ;CF8E3D|        |      ;  
                        db $00,$00,$20,$00,$10,$08,$08,$0E   ;CF8E40|        |      ;  
                        db $0F,$08,$0F,$10,$0F,$10,$07,$30   ;CF8E48|        |      ;  
@@ -857,7 +855,6 @@ spriteGFX_shildGargoyle: db $03,$0C,$80                       ;CF8E3D|        | 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CF9A88|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CF9A90|        |FFFFFF;  
                        db $FF,$9B,$06,$03,$FF               ;CF9A98|        |03069B;  
-                                                            ;      |        |      ;  
 sceneMabDataStage7_Liberary_01_BG1: dw $2003,$2180,$3000,$0080           ;CF9A9D|        |      ;  
                        dw $0500,$3100,$0000,$4C00           ;CF9AA5|        |      ;  
                        dw $1C00,$2980,$3300,$0480           ;CF9AAD|        |      ;  
@@ -1895,7 +1892,6 @@ sceneMabDataStage7_Liberary_01_BG1: dw $2003,$2180,$3000,$0080           ;CF9A9D
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CFBAE9|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CFBAF1|        |FFFFFF;  
                        db $A1,$06,$03,$FF                   ;CFBAF9|        |000006;  
-                                                            ;      |        |      ;  
 sceneMabDataStage7_Liberary_01_BG0: dw $2003,$1A80,$1A00,$1900           ;CFBAFD|        |      ;  
                        dw $0280,$0300,$1900,$1A00           ;CFBB05|        |      ;  
                        dw $1A00,$2600,$2600,$1D80           ;CFBB0D|        |      ;  
@@ -2933,7 +2929,6 @@ sceneMabDataStage7_Liberary_01_BG0: dw $2003,$1A80,$1A00,$1900           ;CFBAFD
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CFDB49|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CFDB51|        |FFFFFF;  
                        db $DC,$10,$03,$FF                   ;CFDB59|        |000310;  
-                                                            ;      |        |      ;  
 spriteGFX_floatingPlatformBook03: db $83,$02,$80                       ;CFDB5D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$01   ;CFDB60|        |      ;  
                        db $08,$10,$1B,$07,$3A,$47,$04,$8E   ;CFDB68|        |      ;  
@@ -3027,7 +3022,6 @@ spriteGFX_floatingPlatformBook03: db $83,$02,$80                       ;CFDB5D| 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CFDE28|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CFDE30|        |FFFFFF;  
                        db $FF,$AB,$06,$03,$FF               ;CFDE38|        |0306AB;  
-                                                            ;      |        |      ;  
 sceneMabDataStage7_Liberary_02_BG1: dw $2003,$2280,$1800,$0000           ;CFDE3D|        |      ;  
                        dw $3100,$0580,$0080,$0000           ;CFDE45|        |      ;  
                        dw $5300,$1900,$1C00,$0000           ;CFDE4D|        |      ;  
@@ -4065,7 +4059,6 @@ sceneMabDataStage7_Liberary_02_BG1: dw $2003,$2280,$1800,$0000           ;CFDE3D
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CFFE89|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CFFE91|        |FFFFFF;  
                        db $B1,$06,$03,$FF                   ;CFFE99|        |000006;  
-                                                            ;      |        |      ;  
 sceneMabDataStage7_Liberary_02_BG0: dw $2003,$3280,$2600,$2600           ;CFFE9D|        |      ;  
                        dw $2480,$2300,$2300,$0A80           ;CFFEA5|        |      ;  
                        dw $3200,$3200,$2300,$2300           ;CFFEAD|        |      ;  

@@ -781,7 +781,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CD9848|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CD9850|        |FFFFFF;  
                        db $FF,$81,$06,$03,$FF               ;CD9858|        |030681;  
-                                                            ;      |        |      ;  
 sceneMabDataStage6_DanceQuater_03_BG0: dw $2003,$2D80,$2500,$2A00           ;CD985D|        |      ;  
                        dw $2500,$2200,$2200,$2A00           ;CD9865|        |      ;  
                        dw $2A00,$2D00,$2200,$2200           ;CD986D|        |      ;  
@@ -1819,7 +1818,6 @@ sceneMabDataStage6_DanceQuater_03_BG0: dw $2003,$2D80,$2500,$2A00           ;CD9
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CDB8A9|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CDB8B1|        |FFFFFF;  
                        db $4F,$0A,$03,$FF                   ;CDB8B9|        |FF030A;  
-                                                            ;      |        |      ;  
 levelGFXStage7_lieberary: db $03,$40,$80                       ;CDB8BD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;CDB8C0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;CDB8C8|        |      ;  
@@ -3881,7 +3879,6 @@ levelGFXStage7_lieberary: db $03,$40,$80                       ;CDB8BD|        |
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CDF908|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$E6,$10,$03   ;CDF910|        |FFFFFF;  
                        db $FF,$A8,$10,$03,$FF               ;CDF918|        |0310A8;  
-                                                            ;      |        |      ;  
 spriteGFX_spearKnight: db $C4,$0F,$80                       ;CDF91D|        |      ;  
                        db $00,$00,$00,$20,$21,$30,$21,$30   ;CDF920|        |      ;  
                        db $09,$10,$09,$10,$0C,$00,$04,$08   ;CDF928|        |      ;  

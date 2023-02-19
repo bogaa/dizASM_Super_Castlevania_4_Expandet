@@ -1,7 +1,6 @@
                                                             ;      |        |      ;  
                        ORG $928000                          ;      |        |      ;  
                                                             ;      |        |      ;  
-                                                            ;      |        |      ;  
 compressedLevelGFXStage1_beginning: db $E5,$1C,$FE                       ;928000|        |      ;  
                        db $9D,$01,$28,$1B,$65,$34,$85,$2D   ;928003|        |      ;  
                        db $5D,$3C,$F6,$FD,$51,$B8,$26,$FF   ;92800B|        |      ;  
@@ -928,7 +927,6 @@ compressedLevelGFXStage1_beginning: db $E5,$1C,$FE                       ;928000
                        db $BF,$03,$C3,$02,$C7,$81,$14,$26   ;929CD3|        |      ;  
                        db $CA,$03,$D3,$02,$D7,$82,$CB,$34   ;929CDB|        |      ;  
                        db $0A,$DB                           ;929CE3|        |      ;  
-                                                            ;      |        |      ;  
 compressedLevelGFXStage1Garden: db $36,$1A,$FE                       ;929CE5|        |      ;  
                        db $C0,$FF,$93,$F4,$0C,$44,$CB,$D4   ;929CE8|        |      ;  
                        db $CB,$F7,$FF,$59,$CC,$42,$BD,$7A   ;929CF0|        |      ;  

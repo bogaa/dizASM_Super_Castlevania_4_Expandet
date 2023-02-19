@@ -1,7 +1,6 @@
                                                             ;      |        |      ;  
                        ORG $FF8000                          ;      |        |      ;  
                                                             ;      |        |      ;  
-                                                            ;      |        |      ;  
           emptyBankFF: db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FF8000|        |      ;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FF8008|        |      ;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FF8010|        |      ;  

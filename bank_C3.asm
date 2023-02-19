@@ -745,7 +745,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C39728|        |FFFFFF;  
                        db $FF,$DB,$05,$03,$FF,$D5,$05,$03   ;C39730|        |0305DB;  
                        db $FF,$CF,$05,$03,$FF               ;C39738|        |0305CF;  
-                                                            ;      |        |      ;  
 sceneMabDataStage5_BlueGune_BG0: db $03,$20,$80                       ;C3973D|        |      ;  
                        dw $8016,$0010,$0028,$8016           ;C39740|        |      ;  
                        dw $0010,$0010,$001D,$8017           ;C39748|        |      ;  
@@ -1783,7 +1782,6 @@ sceneMabDataStage5_BlueGune_BG0: db $03,$20,$80                       ;C3973D|  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C3B788|        |FFFFFF;  
                        db $FF,$17,$0A,$03,$FF,$04,$0A,$03   ;C3B790|        |030A17;  
                        db $FF,$FF,$09,$03,$FF               ;C3B798|        |0309FF;  
-                                                            ;      |        |      ;  
 levelGFXStage5_CastleEntrance: db $03,$40,$80                       ;C3B79D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C3B7A0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C3B7A8|        |      ;  
@@ -3845,7 +3843,6 @@ levelGFXStage5_CastleEntrance: db $03,$40,$80                       ;C3B79D|    
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C3F7E8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C3F7F0|        |FFFFFF;  
                        db $FF,$71,$01,$03,$FF               ;C3F7F8|        |030171;  
-                                                            ;      |        |      ;  
 blockMabData_Stage5_Entrance_BG1: db $03,$20,$80                       ;C3F7FD|        |      ;  
                        dw $1000,$1000,$1000,$1000           ;C3F800|        |      ;  
                        dw $1000,$1000,$1000,$1000           ;C3F808|        |      ;  

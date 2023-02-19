@@ -605,7 +605,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DC92C8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DC92D0|        |FFFFFF;  
                        db $FF,$8B,$07,$03,$FF               ;DC92D8|        |03078B;  
-                                                            ;      |        |      ;  
 sceneMabDataStage9_ZapfQuater_02_BG1: db $03,$20,$80                       ;DC92DD|        |      ;  
                        dw $0000,$0000,$002F,$0030           ;DC92E0|        |      ;  
                        dw $0032,$0008,$0009,$0010           ;DC92E8|        |      ;  
@@ -1643,7 +1642,6 @@ sceneMabDataStage9_ZapfQuater_02_BG1: db $03,$20,$80                       ;DC92
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DCB328|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DCB330|        |FFFFFF;  
                        db $FF,$91,$07,$03,$FF               ;DCB338|        |030791;  
-                                                            ;      |        |      ;  
 sceneMabDataStage9_ZapfQuater_02_BG0: db $03,$20,$80                       ;DCB33D|        |      ;  
                        dw $000D,$000D,$000E,$000F           ;DCB340|        |      ;  
                        dw $0012,$0013,$0002,$0002           ;DCB348|        |      ;  
@@ -2681,7 +2679,6 @@ sceneMabDataStage9_ZapfQuater_02_BG0: db $03,$20,$80                       ;DCB3
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DCD388|        |FFFFFF;  
                        db $FF,$1D,$FA,$00,$FF,$05,$13,$03   ;DCD390|        |00FA1D;  
                        db $FF,$DD,$12,$03,$FF               ;DCD398|        |0312DD;  
-                                                            ;      |        |      ;  
       suckholeStone02: db $44,$07,$80                       ;DCD39D|        |      ;  
                        db $82,$00,$28,$00,$6C,$28,$10,$10   ;DCD3A0|        |      ;  
                        db $6C,$28,$28,$00,$82,$00,$00,$00   ;DCD3A8|        |      ;  
@@ -2931,7 +2928,6 @@ sceneMabDataStage9_ZapfQuater_02_BG0: db $03,$20,$80                       ;DCB3
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DCDB48|        |FFFFFF;  
                        db $FF,$2C,$13,$03,$FF,$0A,$13,$03   ;DCDB50|        |03132C;  
                        db $FF,$E2,$12,$03,$FF               ;DCDB58|        |0312E2;  
-                                                            ;      |        |      ;  
 spriteGFX_brumblingBlocksAndRings03: db $C3,$03,$80                       ;DCDB5D|        |      ;  
                        db $13,$2F,$17,$60,$0E,$C0,$B5,$18   ;DCDB60|        |      ;  
                        db $C0,$3F,$00,$7B,$40,$3F,$80,$7F   ;DCDB68|        |      ;  
@@ -3065,7 +3061,6 @@ spriteGFX_brumblingBlocksAndRings03: db $C3,$03,$80                       ;DCDB5
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DCDF68|        |FFFFFF;  
                        db $FF,$1B,$13,$03,$FF,$FA,$12,$03   ;DCDF70|        |03131B;  
                        db $FF,$E7,$12,$03,$FF               ;DCDF78|        |0312E7;  
-                                                            ;      |        |      ;  
    spriteGFX_skelly02: db $04,$0F,$80                       ;DCDF7D|        |      ;  
                        db $00,$00,$00,$00,$0A,$0E,$0D,$13   ;DCDF80|        |      ;  
                        db $2C,$32,$13,$1E,$3E,$1D,$1D,$1B   ;DCDF88|        |      ;  
@@ -3563,7 +3558,6 @@ spriteGFX_brumblingBlocksAndRings03: db $C3,$03,$80                       ;DCDB5
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DCEEE8|        |FFFFFF;  
                        db $FF,$77,$13,$03,$FF,$36,$13,$03   ;DCEEF0|        |031377;  
                        db $FF,$EC,$12,$03,$FF               ;DCEEF8|        |0312EC;  
-                                                            ;      |        |      ;  
 spriteGFX_boneDragon02: db $C3,$07,$80                       ;DCEEFD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;DCEF00|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;DCEF08|        |      ;  
@@ -3825,7 +3819,6 @@ spriteGFX_boneDragon02: db $C3,$07,$80                       ;DCEEFD|        |  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DCF708|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DCF710|        |FFFFFF;  
                        db $FF,$9B,$07,$03,$FF               ;DCF718|        |03079B;  
-                                                            ;      |        |      ;  
 sceneMabDataStage9_ZapfQuater_03_BG1: dw $2003,$0080,$0000,$3200           ;DCF71D|        |      ;  
                        dw $3080,$2F80,$0080,$0000           ;DCF725|        |      ;  
                        dw $0C00,$0000,$0000,$0000           ;DCF72D|        |      ;  

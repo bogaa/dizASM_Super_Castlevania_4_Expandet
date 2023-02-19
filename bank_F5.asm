@@ -453,7 +453,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F58E08|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F58E10|        |FFFFFF;  
                        db $FF,$60,$B4,$00,$FF               ;F58E18|        |00B460;  
-                                                            ;      |        |      ;  
 someDataThatGotExpanded03: db $03,$10,$80                       ;F58E1D|        |      ;  
                        dw $0101,$0101,$0101,$1001           ;F58E20|        |      ;  
                        dw $0101,$5D01,$295E,$2929           ;F58E28|        |      ;  
@@ -979,7 +978,6 @@ someDataThatGotExpanded03: db $03,$10,$80                       ;F58E1D|        
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F59E68|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F59E70|        |FFFFFF;  
                        db $FF,$69,$B4,$00,$FF               ;F59E78|        |00B469;  
-                                                            ;      |        |      ;  
 someDataThatGotExpanded04: db $03,$08,$80                       ;F59E7D|        |      ; probably tilemap titlescreen stuff..
                        dw $0601,$4601,$0602,$0602           ;F59E80|        |      ;  
                        dw $0602,$0602,$0602,$0602           ;F59E88|        |      ;  
@@ -1249,7 +1247,6 @@ someDataThatGotExpanded04: db $03,$08,$80                       ;F59E7D|        
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F5A6C8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F5A6D0|        |FFFFFF;  
                        db $FF,$6E,$B4,$00,$FF               ;F5A6D8|        |00B46E;  
-                                                            ;      |        |      ;  
 nameScreenGFXdataBorders: db $A3,$03,$80                       ;F5A6DD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;F5A6E0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;F5A6E8|        |      ;  
@@ -1379,7 +1376,6 @@ nameScreenGFXdataBorders: db $A3,$03,$80                       ;F5A6DD|        |
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F5AAC8|        |FFFFFF;  
                        db $FF,$F9,$B4,$00,$FF,$9E,$B4,$00   ;F5AAD0|        |00B4F9;  
                        db $FF,$73,$B4,$00,$FF               ;F5AAD8|        |00B473;  
-                                                            ;      |        |      ;  
 nameScreenBigFontsGFXdata: db $63,$09,$80                       ;F5AADD|        |      ;  
                        dw $0403,$170F,$2818,$5033           ;F5AAE0|        |      ;  
                        dw $2364,$276E,$2869,$2163           ;F5AAE8|        |      ;  
@@ -1693,7 +1689,6 @@ nameScreenBigFontsGFXdata: db $63,$09,$80                       ;F5AADD|        
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F5B488|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F5B490|        |FFFFFF;  
                        db $FF,$78,$B4,$00,$FF               ;F5B498|        |00B478;  
-                                                            ;      |        |      ;  
 mapScreenBordersBatDotsGFXdata: db $03,$0F,$80                       ;F5B49D|        |      ;  
                        dw $0808,$1200,$123B,$357F           ;F5B4A0|        |      ;  
                        dw $FE7F,$FFED,$FFC9,$5383           ;F5B4A8|        |      ;  
@@ -2187,7 +2182,6 @@ mapScreenBordersBatDotsGFXdata: db $03,$0F,$80                       ;F5B49D|   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F5C3E8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F5C3F0|        |FFFFFF;  
                        db $FF,$81,$B4,$00,$FF               ;F5C3F8|        |00B481;  
-                                                            ;      |        |      ;  
 endingScreenTileData00: db $03,$20,$80                       ;F5C3FD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F5C400|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F5C408|        |      ;  
@@ -3225,7 +3219,6 @@ endingScreenTileData00: db $03,$20,$80                       ;F5C3FD|        |  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F5E448|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F5E450|        |FFFFFF;  
                        db $FF,$86,$B4,$00,$FF               ;F5E458|        |00B486;  
-                                                            ;      |        |      ;  
 endingScreenTileData01: db $43,$0B,$80                       ;F5E45D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F5E460|        |      ;  
                        db $00,$00,$01,$01,$1F,$1F,$FF,$FF   ;F5E468|        |      ;  
@@ -3599,7 +3592,6 @@ endingScreenTileData01: db $43,$0B,$80                       ;F5E45D|        |  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F5EFE8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F5EFF0|        |FFFFFF;  
                        db $FF,$8B,$B4,$00,$FF               ;F5EFF8|        |00B48B;  
-                                                            ;      |        |      ;  
 endingScreenSpritesData: db $44,$14,$80                       ;F5EFFD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F5F000|        |      ;  
                        db $00,$00,$00,$00,$00,$80,$00,$80   ;F5F008|        |      ;  

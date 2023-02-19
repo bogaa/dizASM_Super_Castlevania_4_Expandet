@@ -633,7 +633,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B693A8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B693B0|        |FFFFFF;  
                        db $FF,$8F,$09,$03,$FF               ;B693B8|        |03098F;  
-                                                            ;      |        |      ;  
 levelGFXStage3_cave_2bppBG: db $F3,$02,$80                       ;B693BD|        |      ;  
                        db $80,$80,$C0,$C0,$20,$20,$C0,$C0   ;B693C0|        |      ;  
                        db $A0,$E0,$F0,$F0,$7C,$FC,$7A,$FA   ;B693C8|        |      ;  
@@ -743,7 +742,6 @@ levelGFXStage3_cave_2bppBG: db $F3,$02,$80                       ;B693BD|       
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B69708|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B69710|        |FFFFFF;  
                        db $FF,$01,$0E,$03,$FF               ;B69718|        |030E01;  
-                                                            ;      |        |      ;  
  spriteGFX_stalactite: db $03,$04,$80                       ;B6971D|        |      ;  
                        db $1E,$00,$2E,$13,$45,$15,$2C,$2F   ;B69720|        |      ;  
                        db $D0,$7F,$DD,$7F,$6F,$4F,$69,$49   ;B69728|        |      ;  
@@ -885,7 +883,6 @@ levelGFXStage3_cave_2bppBG: db $F3,$02,$80                       ;B693BD|       
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B69B68|        |FFFFFF;  
                        db $FF,$A7,$11,$03,$FF,$78,$11,$03   ;B69B70|        |0311A7;  
                        db $FF,$06,$0E,$03,$FF               ;B69B78|        |030E06;  
-                                                            ;      |        |      ;  
   spriteGFX_waterDrip: db $C3,$03,$80                       ;B69B7D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B69B80|        |      ;  
                        db $04,$00,$04,$04,$06,$04,$07,$02   ;B69B88|        |      ;  
@@ -1019,7 +1016,6 @@ levelGFXStage3_cave_2bppBG: db $F3,$02,$80                       ;B693BD|       
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B69F88|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B69F90|        |FFFFFF;  
                        db $FF,$0B,$0E,$03,$FF               ;B69F98|        |030E0B;  
-                                                            ;      |        |      ;  
      spriteGFX_mudman: db $03,$0C,$80                       ;B69F9D|        |      ;  
                        db $04,$06,$0B,$08,$05,$00,$09,$02   ;B69FA0|        |      ;  
                        db $06,$04,$02,$07,$02,$08,$0A,$09   ;B69FA8|        |      ;  
@@ -1417,7 +1413,6 @@ levelGFXStage3_cave_2bppBG: db $F3,$02,$80                       ;B693BD|       
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B6ABE8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B6ABF0|        |FFFFFF;  
                        db $FF,$15,$0E,$03,$FF               ;B6ABF8|        |030E15;  
-                                                            ;      |        |      ;  
   spriteGFX_unusedBat: db $43,$03,$80                       ;B6ABFD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B6AC00|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$07,$00   ;B6AC08|        |      ;  
@@ -1535,7 +1530,6 @@ levelGFXStage3_cave_2bppBG: db $F3,$02,$80                       ;B693BD|       
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B6AF88|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B6AF90|        |FFFFFF;  
                        db $FF,$FD,$00,$03,$FF               ;B6AF98|        |0300FD;  
-                                                            ;      |        |      ;  
 blockMabData_Stage3Cave_BG1: db $03,$20,$80                       ;B6AF9D|        |      ;  
                        dw $0800,$0800,$0800,$0800           ;B6AFA0|        |      ;  
                        dw $0800,$0800,$0800,$0800           ;B6AFA8|        |      ;  
@@ -2573,7 +2567,6 @@ blockMabData_Stage3Cave_BG1: db $03,$20,$80                       ;B6AF9D|      
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B6CFE8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B6CFF0|        |FFFFFF;  
                        db $FF,$03,$01,$03,$FF               ;B6CFF8|        |030103;  
-                                                            ;      |        |      ;  
 blockMabData_Stage3Cave_BG0: db $03,$20,$80                       ;B6CFFD|        |      ;  
                        dw $1800,$1800,$1800,$1800           ;B6D000|        |      ;  
                        dw $1800,$1800,$1800,$1800           ;B6D008|        |      ;  
@@ -3611,7 +3604,6 @@ blockMabData_Stage3Cave_BG0: db $03,$20,$80                       ;B6CFFD|      
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B6F048|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$D3,$04,$03   ;B6F050|        |FFFFFF;  
                        db $FF,$CD,$04,$03,$FF               ;B6F058|        |0304CD;  
-                                                            ;      |        |      ;  
 sceneMabDataStage3_Cave_00_BG1: db $03,$20,$80                       ;B6F05D|        |      ;  
                        dw $0022,$4022,$0029,$8024           ;B6F060|        |      ;  
                        dw $8029,$8024,$8010,$0022           ;B6F068|        |      ;  

@@ -781,7 +781,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C49848|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C49850|        |FFFFFF;  
                        db $FF,$77,$01,$03,$FF               ;C49858|        |030177;  
-                                                            ;      |        |      ;  
 blockMabData_Stage5_Entrance_BG0: db $03,$20,$80                       ;C4985D|        |      ;  
                        dw $0C00,$0C00,$0C00,$0C00           ;C49860|        |      ;  
                        dw $0C00,$0C00,$0C00,$0C00           ;C49868|        |      ;  
@@ -1819,7 +1818,6 @@ blockMabData_Stage5_Entrance_BG0: db $03,$20,$80                       ;C4985D| 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C4B8A8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$EB,$05,$03   ;C4B8B0|        |FFFFFF;  
                        db $FF,$E5,$05,$03,$FF               ;C4B8B8|        |0305E5;  
-                                                            ;      |        |      ;  
 sceneMabDataStage5_Entrance_BG1: db $03,$20,$80                       ;C4B8BD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C4B8C0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C4B8C8|        |      ;  
@@ -2857,7 +2855,6 @@ sceneMabDataStage5_Entrance_BG1: db $03,$20,$80                       ;C4B8BD|  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C4D908|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$F7,$05,$03   ;C4D910|        |FFFFFF;  
                        db $FF,$F1,$05,$03,$FF               ;C4D918|        |0305F1;  
-                                                            ;      |        |      ;  
 sceneMabDataStage5_Entrance_BG0: db $03,$20,$80                       ;C4D91D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C4D920|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C4D928|        |      ;  
@@ -3895,7 +3892,6 @@ sceneMabDataStage5_Entrance_BG0: db $03,$20,$80                       ;C4D91D|  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C4F968|        |FFFFFF;  
                        db $FF,$46,$0A,$03,$FF,$33,$0A,$03   ;C4F970|        |030A46;  
                        db $FF,$12,$0A,$03,$FF               ;C4F978|        |030A12;  
-                                                            ;      |        |      ;  
 levelGFXStage6_Entrance: db $03,$40,$80                       ;C4F97D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C4F980|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C4F988|        |      ;  

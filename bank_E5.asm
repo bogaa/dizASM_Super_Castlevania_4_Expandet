@@ -965,7 +965,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E59E08|        |FFFFFF;  
                        db $FF,$E5,$B5,$00,$FF,$53,$B5,$00   ;E59E10|        |00B5E5;  
                        db $FF,$E6,$0A,$03,$FF               ;E59E18|        |030AE6;  
-                                                            ;      |        |      ;  
 levelGFXStageB_tower_BG_Clouds: db $63,$1F,$80                       ;E59E1D|        |      ;  
                        db $87,$7F,$FF,$08,$0F,$3C,$07,$0E   ;E59E20|        |      ;  
                        db $BA,$06,$DF,$02,$42,$22,$61,$02   ;E59E28|        |      ;  
@@ -1983,7 +1982,6 @@ levelGFXStageB_tower_BG_Clouds: db $63,$1F,$80                       ;E59E1D|   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E5BDC8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E5BDD0|        |FFFFFF;  
                        db $FF,$C9,$13,$03,$FF               ;E5BDD8|        |0313C9;  
-                                                            ;      |        |      ;  
     spriteGFX_rockMan: db $03,$0C,$80                       ;E5BDDD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E5BDE0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$03   ;E5BDE8|        |      ;  
@@ -2381,7 +2379,6 @@ levelGFXStageB_tower_BG_Clouds: db $63,$1F,$80                       ;E59E1D|   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E5CA28|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E5CA30|        |FFFFFF;  
                        db $FF,$CE,$13,$03,$FF               ;E5CA38|        |0313CE;  
-                                                            ;      |        |      ;  
 spriteGFX_floatingPlatformStairAndRing: db $C3,$03,$80                       ;E5CA3D|        |      ;  
                        db $01,$17,$10,$7F,$1B,$E1,$04,$6C   ;E5CA40|        |      ;  
                        db $43,$DE,$DB,$95,$0F,$9E,$3C,$C8   ;E5CA48|        |      ;  
@@ -2515,7 +2512,6 @@ spriteGFX_floatingPlatformStairAndRing: db $C3,$03,$80                       ;E5
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E5CE48|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E5CE50|        |FFFFFF;  
                        db $FF,$DD,$13,$03,$FF               ;E5CE58|        |0313DD;  
-                                                            ;      |        |      ;  
   spriteGFX_spikeGear: db $83,$03,$80                       ;E5CE5D|        |      ;  
                        db $02,$01,$00,$02,$00,$00,$00,$01   ;E5CE60|        |      ;  
                        db $01,$01,$01,$02,$02,$03,$01,$07   ;E5CE68|        |      ;  
@@ -2641,7 +2637,6 @@ spriteGFX_floatingPlatformStairAndRing: db $C3,$03,$80                       ;E5
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E5D228|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$51,$02,$03   ;E5D230|        |FFFFFF;  
                        db $FF,$4B,$02,$03,$FF               ;E5D238|        |03024B;  
-                                                            ;      |        |      ;  
 blockMabData_StageB_tower_BG1andBG0: db $03,$20,$80                       ;E5D23D|        |      ;  
                        dw $0400,$0400,$0400,$0400           ;E5D240|        |      ;  
                        dw $0400,$0400,$0400,$0400           ;E5D248|        |      ;  
@@ -3679,7 +3674,6 @@ blockMabData_StageB_tower_BG1andBG0: db $03,$20,$80                       ;E5D23
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E5F288|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E5F290|        |FFFFFF;  
                        db $FF,$41,$08,$03,$FF               ;E5F298|        |030841;  
-                                                            ;      |        |      ;  
 sceneMabDataStageB_Tower_BG1: db $03,$20,$80                       ;E5F29D|        |      ;  
                        dw $0001,$0001,$0001,$0001           ;E5F2A0|        |      ;  
                        dw $0001,$0006,$0007,$0008           ;E5F2A8|        |      ;  

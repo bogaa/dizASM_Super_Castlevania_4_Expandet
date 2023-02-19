@@ -733,7 +733,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AC96C8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AC96D0|        |FFFFFF;  
                        db $FF,$B3,$00,$03,$FF               ;AC96D8|        |0300B3;  
-                                                            ;      |        |      ;  
 blockMabData_Stage1Castle_BG0: db $03,$20,$80                       ;AC96DD|        |      ;  
                        dw $1C00,$1C00,$1C00,$1C00           ;AC96E0|        |      ;  
                        dw $1C00,$1C00,$1C00,$1C00           ;AC96E8|        |      ;  
@@ -1771,7 +1770,6 @@ blockMabData_Stage1Castle_BG0: db $03,$20,$80                       ;AC96DD|    
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ACB728|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ACB730|        |FFFFFF;  
                        db $FF,$CB,$03,$03,$FF               ;ACB738|        |0303CB;  
-                                                            ;      |        |      ;  
 sceneMabDataStage1_Castle_BG1: db $03,$20,$80                       ;ACB73D|        |      ;  
                        dw $0005,$0000,$0005,$000D           ;ACB740|        |      ;  
                        dw $0018,$001C,$0022,$0005           ;ACB748|        |      ;  
@@ -2809,7 +2807,6 @@ sceneMabDataStage1_Castle_BG1: db $03,$20,$80                       ;ACB73D|    
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ACD788|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$F1,$03,$03   ;ACD790|        |FFFFFF;  
                        db $FF,$D1,$03,$03,$FF               ;ACD798|        |0303D1;  
-                                                            ;      |        |      ;  
 sceneMabDataStage1_Castle_BG0: db $03,$20,$80                       ;ACD79D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;ACD7A0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;ACD7A8|        |      ;  
@@ -3847,7 +3844,6 @@ sceneMabDataStage1_Castle_BG0: db $03,$20,$80                       ;ACD79D|    
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ACF7E8|        |FFFFFF;  
                        db $FF,$C0,$0E,$03,$FF,$30,$0D,$03   ;ACF7F0|        |030EC0;  
                        db $FF,$C7,$0C,$03,$FF               ;ACF7F8|        |030CC7;  
-                                                            ;      |        |      ;  
     spriteGFX_clubGuy: db $03,$08,$80                       ;ACF7FD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;ACF800|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;ACF808|        |      ;  

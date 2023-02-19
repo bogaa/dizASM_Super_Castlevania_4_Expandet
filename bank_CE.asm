@@ -301,7 +301,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CE8948|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CE8950|        |FFFFFF;  
                        db $FF,$BB,$01,$03,$FF               ;CE8958|        |0301BB;  
-                                                            ;      |        |      ;  
 blockMabData_Stage7_Liberary_BG1: db $03,$20,$80                       ;CE895D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;CE8960|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;CE8968|        |      ;  
@@ -1339,7 +1338,6 @@ blockMabData_Stage7_Liberary_BG1: db $03,$20,$80                       ;CE895D| 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CEA9A8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CEA9B0|        |FFFFFF;  
                        db $FF,$C1,$01,$03,$FF               ;CEA9B8|        |0301C1;  
-                                                            ;      |        |      ;  
 blockMabData_Stage7_Liberary_BG0: db $03,$20,$80                       ;CEA9BD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;CEA9C0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;CEA9C8|        |      ;  
@@ -2377,7 +2375,6 @@ blockMabData_Stage7_Liberary_BG0: db $03,$20,$80                       ;CEA9BD| 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CECA08|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CECA10|        |FFFFFF;  
                        db $FF,$8B,$06,$03,$FF               ;CECA18|        |03068B;  
-                                                            ;      |        |      ;  
 sceneMabDataStage7_Liberary_00_BG1: db $03,$20,$80                       ;CECA1D|        |      ;  
                        dw $002E,$002E,$0010,$0011           ;CECA20|        |      ;  
                        dw $000B,$000C,$0000,$0000           ;CECA28|        |      ;  
@@ -3415,7 +3412,6 @@ sceneMabDataStage7_Liberary_00_BG1: db $03,$20,$80                       ;CECA1D
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CEEA68|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CEEA70|        |FFFFFF;  
                        db $FF,$91,$06,$03,$FF               ;CEEA78|        |030691;  
-                                                            ;      |        |      ;  
 sceneMabDataStage7_Liberary_00_BG0: db $03,$20,$80                       ;CEEA7D|        |      ;  
                        dw $0001,$0002,$0003,$0018           ;CEEA80|        |      ;  
                        dw $0018,$0018,$0001,$0002           ;CEEA88|        |      ;  

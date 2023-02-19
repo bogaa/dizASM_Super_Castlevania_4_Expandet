@@ -265,7 +265,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F88828|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F88830|        |FFFFFF;  
                        db $FF,$DB,$B4,$00,$FF               ;F88838|        |00B4DB;  
-                                                            ;      |        |      ;  
 animatedTilesGFXdataWater00: db $03,$13,$80                       ;F8883D|        |      ;  
                        db $E0,$00,$FF,$E0,$C3,$3F,$BB,$04   ;F88840|        |      ;  
                        db $01,$01,$F0,$00,$1F,$E0,$00,$FF   ;F88848|        |      ;  
@@ -887,7 +886,6 @@ animatedTilesGFXdataWater00: db $03,$13,$80                       ;F8883D|      
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F89B88|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F89B90|        |FFFFFF;  
                        db $FF,$E1,$B4,$00,$FF               ;F89B98|        |00B4E1;  
-                                                            ;      |        |      ;  
 miscDataProbablyTilemaping: db $04,$03,$80,$5F,$00,$00,$00,$00   ;F89B9D|        |      ;  
                        db $00,$00,$00,$54,$00,$00,$00,$00   ;F89BA5|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F89BAD|        |      ;  
@@ -1001,7 +999,6 @@ miscDataProbablyTilemaping: db $04,$03,$80,$5F,$00,$00,$00,$00   ;F89B9D|       
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F89F09|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F89F11|        |FFFFFF;  
                        db $EA,$B4,$00,$FF                   ;F89F19|        |      ;  
-                                                            ;      |        |      ;  
 nameScreenBorderGFXdata02: db $03,$1B,$80                       ;F89F1D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F89F20|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F89F28|        |      ;  
@@ -1879,7 +1876,6 @@ nameScreenBorderGFXdata02: db $03,$1B,$80                       ;F89F1D|        
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F8BA68|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F8BA70|        |FFFFFF;  
                        db $FF,$EF,$B4,$00,$FF               ;F8BA78|        |00B4EF;  
-                                                            ;      |        |      ;  
 probablyMoreTilemapDataTitlescreen01: db $03,$08,$80                       ;F8BA7D|        |      ;  
                        dw $1001,$1002,$0803,$0804           ;F8BA80|        |      ;  
                        dw $0805,$0806,$0803,$0804           ;F8BA88|        |      ;  
@@ -2149,7 +2145,6 @@ probablyMoreTilemapDataTitlescreen01: db $03,$08,$80                       ;F8BA
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F8C2C8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$07,$B5,$00   ;F8C2D0|        |FFFFFF;  
                        db $FF,$FE,$B4,$00,$FF               ;F8C2D8|        |00B4FE;  
-                                                            ;      |        |      ;  
 selectionFlameNameScreenSpriteGFXdata: db $43,$03,$80                       ;F8C2DD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$01   ;F8C2E0|        |      ;  
                        db $01,$01,$00,$02,$05,$0D,$02,$03   ;F8C2E8|        |      ;  
@@ -2267,7 +2262,6 @@ selectionFlameNameScreenSpriteGFXdata: db $43,$03,$80                       ;F8C
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F8C668|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$AB,$B5,$00   ;F8C670|        |FFFFFF;  
                        db $FF,$10,$B5,$00,$FF               ;F8C678|        |00B510;  
-                                                            ;      |        |      ;  
 titleScreenCastlevaniaLogoGFXdata: db $03,$20,$80                       ;F8C67D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F8C680|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F8C688|        |      ;  
@@ -3305,7 +3299,6 @@ titleScreenCastlevaniaLogoGFXdata: db $03,$20,$80                       ;F8C67D|
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F8E6C8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F8E6D0|        |FFFFFF;  
                        db $FF,$1E,$B5,$00,$FF               ;F8E6D8|        |00B51E;  
-                                                            ;      |        |      ;  
 passwordScreenTileGFXdata: db $03,$20,$80                       ;F8E6DD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F8E6E0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F8E6E8|        |      ;  

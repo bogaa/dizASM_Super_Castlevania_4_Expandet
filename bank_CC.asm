@@ -1005,7 +1005,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CC9F48|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CC9F50|        |FFFFFF;  
                        db $FF,$86,$10,$03,$FF               ;CC9F58|        |031086;  
-                                                            ;      |        |      ;  
 spriteGFX_dancingCouple: db $04,$0C,$80                       ;CC9F5D|        |      ;  
                        db $01,$01,$00,$01,$01,$01,$01,$01   ;CC9F60|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;CC9F68|        |      ;  
@@ -1407,7 +1406,6 @@ spriteGFX_dancingCouple: db $04,$0C,$80                       ;CC9F5D|        | 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CCABC8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CCABD0|        |FFFFFF;  
                        db $FF,$90,$10,$03,$FF               ;CCABD8|        |031090;  
-                                                            ;      |        |      ;  
 spriteGFX_tableAndChairs: db $03,$0B,$80                       ;CCABDD|        |      ;  
                        db $6C,$0F,$59,$9E,$A0,$C0,$5F,$1F   ;CCABE0|        |      ;  
                        db $93,$1F,$2D,$33,$AD,$B3,$2D,$B3   ;CCABE8|        |      ;  
@@ -1773,7 +1771,6 @@ spriteGFX_tableAndChairs: db $03,$0B,$80                       ;CCABDD|        |
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CCB728|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CCB730|        |FFFFFF;  
                        db $FF,$6B,$06,$03,$FF               ;CCB738|        |03066B;  
-                                                            ;      |        |      ;  
 sceneMabDataStage6_DanceQuater_02_BG1: dw $2003,$2480,$2500,$7000           ;CCB73D|        |      ;  
                        dw $6200,$6200,$6200,$1F00           ;CCB745|        |      ;  
                        dw $3180,$1F00,$2900,$7300           ;CCB74D|        |      ;  
@@ -2811,7 +2808,6 @@ sceneMabDataStage6_DanceQuater_02_BG1: dw $2003,$2480,$2500,$7000           ;CCB
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CCD789|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CCD791|        |FFFFFF;  
                        db $71,$06,$03,$FF                   ;CCD799|        |000006;  
-                                                            ;      |        |      ;  
 sceneMabDataStage6_DanceQuater_02_BG0: dw $2003,$1780,$1800,$1700           ;CCD79D|        |      ;  
                        dw $1800,$1700,$1800,$1700           ;CCD7A5|        |      ;  
                        dw $1800,$1500,$1600,$1500           ;CCD7AD|        |      ;  
@@ -3849,7 +3845,6 @@ sceneMabDataStage6_DanceQuater_02_BG0: dw $2003,$1780,$1800,$1700           ;CCD
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CCF7E9|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CCF7F1|        |FFFFFF;  
                        db $7B,$06,$03,$FF                   ;CCF7F9|        |      ;  
-                                                            ;      |        |      ;  
 sceneMabDataStage6_DanceQuater_03_BG1: dw $2003,$0880,$5500,$0000           ;CCF7FD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;CCF805|        |      ;  
                        dw $5800,$0840,$5500,$0000           ;CCF80D|        |      ;  

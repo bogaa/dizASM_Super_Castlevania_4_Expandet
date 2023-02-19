@@ -1853,7 +1853,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C5B9C8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C5B9D0|        |FFFFFF;  
                        db $FF,$1C,$0A,$03,$FF               ;C5B9D8|        |030A1C;  
-                                                            ;      |        |      ;  
 levelGFXStage6_2bppBG_entrance: db $A3,$00,$80                       ;C5B9DD|        |      ;  
                        db $B9,$C7,$B9,$C7,$B9,$C7,$B9,$C7   ;C5B9E0|        |      ;  
                        db $B9,$C7,$B9,$C7,$B9,$C7,$B9,$C7   ;C5B9E8|        |      ;  
@@ -1887,7 +1886,6 @@ levelGFXStage6_2bppBG_entrance: db $A3,$00,$80                       ;C5B9DD|   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C5BAC8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C5BAD0|        |FFFFFF;  
                        db $FF,$D3,$0F,$03,$FF               ;C5BAD8|        |030FD3;  
-                                                            ;      |        |      ;  
 spriteGFX_castleGhostZombie: db $43,$07,$80                       ;C5BADD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C5BAE0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C5BAE8|        |      ;  
@@ -2133,7 +2131,6 @@ spriteGFX_castleGhostZombie: db $43,$07,$80                       ;C5BADD|      
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C5C268|        |FFFFFF;  
                        db $FF,$9D,$10,$03,$FF,$15,$10,$03   ;C5C270|        |03109D;  
                        db $FF,$D8,$0F,$03,$FF               ;C5C278|        |030FD8;  
-                                                            ;      |        |      ;  
   spriteGFX_axeKnight: db $03,$0C,$80                       ;C5C27D|        |      ;  
                        db $00,$00,$00,$00,$00,$01,$00,$01   ;C5C280|        |      ;  
                        db $00,$01,$00,$01,$00,$01,$00,$00   ;C5C288|        |      ;  
@@ -2531,7 +2528,6 @@ spriteGFX_castleGhostZombie: db $43,$07,$80                       ;C5BADD|      
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C5CEC8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C5CED0|        |FFFFFF;  
                        db $FF,$81,$01,$03,$FF               ;C5CED8|        |030181;  
-                                                            ;      |        |      ;  
 blockMabData_Stage6_Castle_BG1: db $03,$20,$80                       ;C5CEDD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C5CEE0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C5CEE8|        |      ;  
@@ -3569,7 +3565,6 @@ blockMabData_Stage6_Castle_BG1: db $03,$20,$80                       ;C5CEDD|   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C5EF28|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C5EF30|        |FFFFFF;  
                        db $FF,$87,$01,$03,$FF               ;C5EF38|        |030187;  
-                                                            ;      |        |      ;  
 blockMabData_Stage6_Castle_BG0: db $03,$20,$80                       ;C5EF3D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C5EF40|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C5EF48|        |      ;  

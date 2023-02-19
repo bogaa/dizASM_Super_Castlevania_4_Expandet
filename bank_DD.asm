@@ -753,7 +753,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DD9768|        |FFFFFF;  
                        db $FF,$B7,$07,$03,$FF,$A7,$07,$03   ;DD9770|        |0307B7;  
                        db $FF,$A1,$07,$03,$FF               ;DD9778|        |0307A1;  
-                                                            ;      |        |      ;  
 sceneMabDataStage9_ZapfQuater_03_BG0: dw $2003,$0180,$0100,$0100           ;DD977D|        |      ;  
                        dw $0100,$0100,$0100,$0100           ;DD9785|        |      ;  
                        dw $0100,$0200,$0200,$0200           ;DD978D|        |      ;  
@@ -1791,7 +1790,6 @@ sceneMabDataStage9_ZapfQuater_03_BG0: dw $2003,$0180,$0100,$0100           ;DD97
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DDB7C9|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DDB7D1|        |FFFFFF;  
                        db $B1,$07,$03,$FF                   ;DDB7D9|        |000007;  
-                                                            ;      |        |      ;  
 sceneMabDataStage9_ZapfQuater_04_BG1: dw $2003,$2280,$2200,$0900           ;DDB7DD|        |      ;  
                        dw $0A00,$0900,$0800,$0080           ;DDB7E5|        |      ;  
                        dw $0000,$0A00,$0980,$1080           ;DDB7ED|        |      ;  
@@ -2829,7 +2827,6 @@ sceneMabDataStage9_ZapfQuater_04_BG1: dw $2003,$2280,$2200,$0900           ;DDB7
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DDD829|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DDD831|        |FFFFFF;  
                        db $C1,$07,$03,$FF                   ;DDD839|        |000007;  
-                                                            ;      |        |      ;  
 sceneMabDataStage9_SecretRoom_05_BG1: dw $2003,$2A80,$2A00,$2A00           ;DDD83D|        |      ;  
                        dw $2A00,$2A00,$2A00,$3600           ;DDD845|        |      ;  
                        dw $3480,$3A00,$2A00,$3700           ;DDD84D|        |      ;  
@@ -3867,7 +3864,6 @@ sceneMabDataStage9_SecretRoom_05_BG1: dw $2003,$2A80,$2A00,$2A00           ;DDD8
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DDF889|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$B2,$0A,$03,$FF   ;DDF891|        |FFFFFF;  
                        db $AD,$0A,$03,$FF                   ;DDF899|        |00030A;  
-                                                            ;      |        |      ;  
 levelGFXStageA_ClockTower: db $03,$40,$80                       ;DDF89D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;DDF8A0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;DDF8A8|        |      ;  

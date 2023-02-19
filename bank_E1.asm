@@ -305,7 +305,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E18968|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$C0,$0A,$03   ;E18970|        |FFFFFF;  
                        db $FF,$BB,$0A,$03,$FF               ;E18978|        |030ABB;  
-                                                            ;      |        |      ;  
 levelGFXStageA_mummyQuater: db $03,$40,$80                       ;E1897D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E18980|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E18988|        |      ;  
@@ -2367,7 +2366,6 @@ levelGFXStageA_mummyQuater: db $03,$40,$80                       ;E1897D|       
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E1C9C8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E1C9D0|        |FFFFFF;  
                        db $FF,$2B,$02,$03,$FF               ;E1C9D8|        |03022B;  
-                                                            ;      |        |      ;  
 blockMabData_StageA_mummyQuater_BG1: db $03,$20,$80                       ;E1C9DD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;E1C9E0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;E1C9E8|        |      ;  
@@ -3405,7 +3403,6 @@ blockMabData_StageA_mummyQuater_BG1: db $03,$20,$80                       ;E1C9D
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E1EA28|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E1EA30|        |FFFFFF;  
                        db $FF,$31,$02,$03,$FF               ;E1EA38|        |030231;  
-                                                            ;      |        |      ;  
 blockMabData_StageA_mummyQuater_BG0: db $03,$20,$80                       ;E1EA3D|        |      ;  
                        dw $1400,$1400,$1400,$1400           ;E1EA40|        |      ;  
                        dw $1400,$1400,$1400,$1400           ;E1EA48|        |      ;  

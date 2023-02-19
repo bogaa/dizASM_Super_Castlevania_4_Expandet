@@ -557,7 +557,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DB9148|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DB9150|        |FFFFFF;  
                        db $FF,$11,$02,$03,$FF               ;DB9158|        |030211;  
-                                                            ;      |        |      ;  
 blockMabData_Stage9_zapfQuater_BG0: db $03,$20,$80                       ;DB915D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;DB9160|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;DB9168|        |      ;  
@@ -1595,7 +1594,6 @@ blockMabData_Stage9_zapfQuater_BG0: db $03,$20,$80                       ;DB915D
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DBB1A8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DBB1B0|        |FFFFFF;  
                        db $FF,$6B,$07,$03,$FF               ;DBB1B8|        |03076B;  
-                                                            ;      |        |      ;  
 sceneMabDataStage9_ZapfQuater_00_BG1: db $03,$20,$80                       ;DBB1BD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;DBB1C0|        |      ;  
                        dw $0000,$0000,$000C,$000A           ;DBB1C8|        |      ;  
@@ -2633,7 +2631,6 @@ sceneMabDataStage9_ZapfQuater_00_BG1: db $03,$20,$80                       ;DBB1
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DBD208|        |FFFFFF;  
                        db $FF,$C7,$07,$03,$FF,$81,$07,$03   ;DBD210|        |0307C7;  
                        db $FF,$71,$07,$03,$FF               ;DBD218|        |030771;  
-                                                            ;      |        |      ;  
 sceneMabDataStage9_ZapfQuater_01_BG0: db $03,$20,$80                       ;DBD21D|        |      ;  
                        dw $0001,$0001,$0001,$0001           ;DBD220|        |      ;  
                        dw $000B,$0001,$0001,$0001           ;DBD228|        |      ;  
@@ -3671,7 +3668,6 @@ sceneMabDataStage9_ZapfQuater_01_BG0: db $03,$20,$80                       ;DBD2
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DBF268|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;DBF270|        |FFFFFF;  
                        db $FF,$7B,$07,$03,$FF               ;DBF278|        |03077B;  
-                                                            ;      |        |      ;  
 sceneMabDataStage9_ZapfQuater_01_BG1: db $03,$20,$80                       ;DBF27D|        |      ;  
                        dw $002A,$002A,$002A,$002A           ;DBF280|        |      ;  
                        dw $002A,$0018,$0018,$0018           ;DBF288|        |      ;  

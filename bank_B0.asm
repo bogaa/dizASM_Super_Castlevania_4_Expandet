@@ -173,7 +173,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B08548|        |FFFFFF;  
                        db $FF,$69,$09,$03,$FF,$5B,$09,$03   ;B08550|        |030969;  
                        db $FF,$56,$09,$03,$FF               ;B08558|        |030956;  
-                                                            ;      |        |      ;  
 levelGFXStage2_graveyard: db $03,$40,$80                       ;B0855D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B08560|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B08568|        |      ;  
@@ -2235,7 +2234,6 @@ levelGFXStage2_graveyard: db $03,$40,$80                       ;B0855D|        |
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B0C5A8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B0C5B0|        |FFFFFF;  
                        db $FF,$5D,$0D,$03,$FF               ;B0C5B8|        |030D5D;  
-                                                            ;      |        |      ;  
 spriteGFX_grabingHand: db $03,$08,$80                       ;B0C5BD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B0C5C0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B0C5C8|        |      ;  
@@ -2505,7 +2503,6 @@ spriteGFX_grabingHand: db $03,$08,$80                       ;B0C5BD|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B0CE08|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B0CE10|        |FFFFFF;  
                        db $FF,$62,$0D,$03,$FF               ;B0CE18|        |030D62;  
-                                                            ;      |        |      ;  
 spriteGFX_leaveMonster: db $03,$08,$80                       ;B0CE1D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B0CE20|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B0CE28|        |      ;  
@@ -2775,7 +2772,6 @@ spriteGFX_leaveMonster: db $03,$08,$80                       ;B0CE1D|        |  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B0D668|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$95,$0D,$03   ;B0D670|        |FFFFFF;  
                        db $FF,$67,$0D,$03,$FF               ;B0D678|        |030D67;  
-                                                            ;      |        |      ;  
    spriteGFX_hedgehog: db $03,$04,$80                       ;B0D67D|        |      ;  
                        db $02,$05,$00,$0D,$01,$17,$07,$14   ;B0D680|        |      ;  
                        db $2B,$1A,$7C,$13,$78,$76,$E1,$9F   ;B0D688|        |      ;  
@@ -2917,7 +2913,6 @@ spriteGFX_leaveMonster: db $03,$08,$80                       ;B0CE1D|        |  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B0DAC8|        |FFFFFF;  
                        db $FF,$D8,$0E,$03,$FF,$8B,$0D,$03   ;B0DAD0|        |030ED8;  
                        db $FF,$6C,$0D,$03,$FF               ;B0DAD8|        |030D6C;  
-                                                            ;      |        |      ;  
        spriteGFX_bird: db $03,$07,$80                       ;B0DADD|        |      ;  
                        db $00,$00,$00,$00,$24,$30,$2C,$28   ;B0DAE0|        |      ;  
                        db $36,$04,$4D,$0F,$1B,$0F,$0D,$0D   ;B0DAE8|        |      ;  
@@ -3155,7 +3150,6 @@ spriteGFX_leaveMonster: db $03,$08,$80                       ;B0CE1D|        |  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B0E228|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B0E230|        |FFFFFF;  
                        db $FF,$71,$0D,$03,$FF               ;B0E238|        |030D71;  
-                                                            ;      |        |      ;  
 spriteGFX_graveDigger: db $83,$07,$80                       ;B0E23D|        |      ;  
                        db $00,$00,$00,$00,$14,$16,$30,$3A   ;B0E240|        |      ;  
                        db $28,$28,$30,$32,$38,$3F,$2E,$2F   ;B0E248|        |      ;  
@@ -3409,7 +3403,6 @@ spriteGFX_graveDigger: db $83,$07,$80                       ;B0E23D|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B0EA08|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$7D,$11,$03   ;B0EA10|        |FFFFFF;  
                        db $FF,$76,$0D,$03,$FF               ;B0EA18|        |030D76;  
-                                                            ;      |        |      ;  
      spriteGFX_spider: db $03,$04,$80                       ;B0EA1D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B0EA20|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B0EA28|        |      ;  
@@ -3551,7 +3544,6 @@ spriteGFX_graveDigger: db $83,$07,$80                       ;B0E23D|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B0EE68|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B0EE70|        |FFFFFF;  
                        db $FF,$CD,$00,$03,$FF               ;B0EE78|        |0300CD;  
-                                                            ;      |        |      ;  
 blockMabData_Stage2Gravyard_BG1: db $03,$20,$80                       ;B0EE7D|        |      ;  
                        dw $0C00,$0C00,$0C00,$0C00           ;B0EE80|        |      ;  
                        dw $0C00,$0C00,$0C00,$0C00           ;B0EE88|        |      ;  

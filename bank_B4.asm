@@ -49,7 +49,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B48168|        |FFFFFF;  
                        db $FF,$9E,$0F,$03,$FF,$D8,$0D,$03   ;B48170|        |030F9E;  
                        db $FF,$B5,$0D,$03,$FF               ;B48178|        |030DB5;  
-                                                            ;      |        |      ;  
    spriteGFX_gargoyle: db $C4,$0B,$80                       ;B4817D|        |      ;  
                        db $00,$00,$00,$00,$00,$40,$40,$40   ;B48180|        |      ;  
                        db $20,$20,$20,$20,$10,$10,$08,$08   ;B48188|        |      ;  
@@ -443,7 +442,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B48DA8|        |FFFFFF;  
                        db $FF,$A8,$0F,$03,$FF,$EC,$0D,$03   ;B48DB0|        |030FA8;  
                        db $FF,$C4,$0D,$03,$FF               ;B48DB8|        |030DC4;  
-                                                            ;      |        |      ;  
 spriteGFX_stealingHand: db $03,$03,$80                       ;B48DBD|        |      ;  
                        db $38,$08,$6C,$1C,$DF,$BF,$BF,$FE   ;B48DC0|        |      ;  
                        db $CF,$CC,$AE,$A9,$4D,$4B,$4B,$4F   ;B48DC8|        |      ;  
@@ -553,7 +551,6 @@ spriteGFX_stealingHand: db $03,$03,$80                       ;B48DBD|        |  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B49108|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B49110|        |FFFFFF;  
                        db $FF,$ED,$00,$03,$FF               ;B49118|        |0300ED;  
-                                                            ;      |        |      ;  
 blockMabData_Stage2WaterSlide_BG1: db $03,$20,$80                       ;B4911D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;B49120|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;B49128|        |      ;  
@@ -1591,7 +1588,6 @@ blockMabData_Stage2WaterSlide_BG1: db $03,$20,$80                       ;B4911D|
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B4B168|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B4B170|        |FFFFFF;  
                        db $FF,$F3,$00,$03,$FF               ;B4B178|        |0300F3;  
-                                                            ;      |        |      ;  
 blockMabData_Stage2WaterSlide_BG0: db $03,$20,$80                       ;B4B17D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;B4B180|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;B4B188|        |      ;  
@@ -2629,7 +2625,6 @@ blockMabData_Stage2WaterSlide_BG0: db $03,$20,$80                       ;B4B17D|
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B4D1C8|        |FFFFFF;  
                        db $FF,$7D,$04,$03,$FF,$77,$04,$03   ;B4D1D0|        |03047D;  
                        db $FF,$71,$04,$03,$FF               ;B4D1D8|        |030471;  
-                                                            ;      |        |      ;  
 sceneMabDataStage2_WaterSlide_00_BG1: db $03,$20,$80                       ;B4D1DD|        |      ;  
                        dw $0049,$0045,$8044,$0049           ;B4D1E0|        |      ;  
                        dw $0045,$0044,$0045,$8044           ;B4D1E8|        |      ;  
@@ -3667,7 +3662,6 @@ sceneMabDataStage2_WaterSlide_00_BG1: db $03,$20,$80                       ;B4D1
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B4F228|        |FFFFFF;  
                        db $FF,$8F,$04,$03,$FF,$89,$04,$03   ;B4F230|        |03048F;  
                        db $FF,$83,$04,$03,$FF               ;B4F238|        |030483;  
-                                                            ;      |        |      ;  
 sceneMabDataStage2_WaterSlide_00_BG0: db $03,$20,$80                       ;B4F23D|        |      ;  
                        dw $0011,$000D,$000D,$400C           ;B4F240|        |      ;  
                        dw $400D,$000D,$0011,$000D           ;B4F248|        |      ;  

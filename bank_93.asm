@@ -1,7 +1,6 @@
                                                             ;      |        |      ;  
                        ORG $938000                          ;      |        |      ;  
                                                             ;      |        |      ;  
-                                                            ;      |        |      ;  
 MayBeOldEntranceTable: dw $1DB4,$9FFE,$05F0,$1AF0           ;938000|        |      ; I think this is something else..
                        dw $35B1,$2D4D,$BB83,$4517           ;938008|        |      ;  
                        dw $6D09,$9858,$0806,$001D           ;938010|        |      ;  

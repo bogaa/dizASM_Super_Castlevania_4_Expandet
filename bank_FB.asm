@@ -1021,7 +1021,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FB9FC8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FB9FD0|        |FFFFFF;  
                        db $FF,$EA,$B5,$00,$FF               ;FB9FD8|        |00B5EA;  
-                                                            ;      |        |      ;  
        UNREACH_FB9FDD: db $03,$10,$80,$00,$3C,$00,$3C,$00   ;FB9FDD|        |000010;  
                        db $3C,$00,$3C,$00,$3C,$00,$3C,$00   ;FB9FE5|        |003C00;  
                        db $3C,$00,$3C,$00,$3C,$00,$3C,$00   ;FB9FED|        |003C00;  
@@ -1546,7 +1545,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FBB025|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FBB02D|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$EF,$B5,$00,$FF   ;FBB035|        |FFFFFF;  
-                                                            ;      |        |      ;  
        UNREACH_FBB03D: db $03,$08,$80,$01,$14,$01,$14,$01   ;FBB03D|        |000008;  
                        db $14,$01,$14,$01,$14,$01,$14,$01   ;FBB045|        |000001;  
                        db $14,$01,$14,$01,$14,$01,$14,$01   ;FBB04D|        |000001;  
@@ -1815,7 +1813,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FBB885|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FBB88D|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$F4,$B5,$00,$FF   ;FBB895|        |FFFFFF;  
-                                                            ;      |        |      ;  
 introSimonWhipingGFXdata: db $43,$16,$80                       ;FBB89D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;FBB8A0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;FBB8A8|        |      ;  
@@ -2541,7 +2538,6 @@ introSimonWhipingGFXdata: db $43,$16,$80                       ;FBB89D|        |
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FBCF28|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FBCF30|        |FFFFFF;  
                        db $FF,$FD,$B5,$00,$FF               ;FBCF38|        |00B5FD;  
-                                                            ;      |        |      ;  
        UNREACH_FBCF3D: db $03,$80,$80,$0F,$00,$00,$10,$10   ;FBCF3D|        |000080;  
                        db $00,$DE,$02,$9A,$7D,$C6,$01,$F1   ;FBCF45|        |      ;  
                        db $0B,$F0,$0F,$CC,$AA,$F3,$30,$1F   ;FBCF4D|        |      ;  

@@ -821,7 +821,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CB9988|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CB9990|        |FFFFFF;  
                        db $FF,$4B,$06,$03,$FF               ;CB9998|        |03064B;  
-                                                            ;      |        |      ;  
 sceneMabDataStage6_DanceQuater_00_BG1: db $03,$20,$80                       ;CB999D|        |      ;  
                        dw $005E,$005F,$0062,$0062           ;CB99A0|        |      ;  
                        dw $0062,$0062,$0062,$0062           ;CB99A8|        |      ;  
@@ -1859,7 +1858,6 @@ sceneMabDataStage6_DanceQuater_00_BG1: db $03,$20,$80                       ;CB9
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CBB9E8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CBB9F0|        |FFFFFF;  
                        db $FF,$51,$06,$03,$FF               ;CBB9F8|        |030651;  
-                                                            ;      |        |      ;  
 sceneMabDataStage6_DanceQuater_00_BG0: db $03,$20,$80                       ;CBB9FD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;CBBA00|        |      ;  
                        dw $0000,$801E,$001D,$0001           ;CBBA08|        |      ;  
@@ -2897,7 +2895,6 @@ sceneMabDataStage6_DanceQuater_00_BG0: db $03,$20,$80                       ;CBB
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CBDA48|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CBDA50|        |FFFFFF;  
                        db $FF,$6F,$10,$03,$FF               ;CBDA58|        |03106F;  
-                                                            ;      |        |      ;  
 spriteGFX_ghostHandAlongSwordSkelly: db $C4,$03,$80                       ;CBDA5D|        |      ;  
                        db $08,$08,$04,$0C,$08,$08,$00,$00   ;CBDA60|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;CBDA68|        |      ;  
@@ -3035,7 +3032,6 @@ spriteGFX_ghostHandAlongSwordSkelly: db $C4,$03,$80                       ;CBDA5
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CBDE88|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CBDE90|        |FFFFFF;  
                        db $FF,$5B,$06,$03,$FF               ;CBDE98|        |03065B;  
-                                                            ;      |        |      ;  
 sceneMabDataStage6_DanceQuater_01_BG1: dw $2003,$6280,$0600,$0700           ;CBDE9D|        |      ;  
                        dw $6200,$6200,$6200,$3C00           ;CBDEA5|        |      ;  
                        dw $4700,$5A00,$6100,$0600           ;CBDEAD|        |      ;  
@@ -4073,7 +4069,6 @@ sceneMabDataStage6_DanceQuater_01_BG1: dw $2003,$6280,$0600,$0700           ;CBD
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CBFEE9|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;CBFEF1|        |FFFFFF;  
                        db $61,$06,$03,$FF                   ;CBFEF9|        |000006;  
-                                                            ;      |        |      ;  
 sceneMabDataStage6_DanceQuater_01_BG0: dw $2003,$0080,$0000,$0000           ;CBFEFD|        |      ;  
                        dw $0000,$0000,$0D00,$0E00           ;CBFF05|        |      ;  
                        dw $0E00,$0080,$0000,$0000           ;CBFF0D|        |      ;  

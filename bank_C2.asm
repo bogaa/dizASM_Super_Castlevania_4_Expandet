@@ -1249,7 +1249,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C2A6E8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C2A6F0|        |FFFFFF;  
                        db $FF,$99,$0F,$03,$FF               ;C2A6F8|        |030F99;  
-                                                            ;      |        |      ;  
     spriteGFX_harpies: db $C3,$0E,$80                       ;C2A6FD|        |      ;  
                        db $00,$00,$0C,$00,$08,$06,$0A,$07   ;C2A700|        |      ;  
                        db $0A,$07,$0A,$07,$0A,$07,$03,$0F   ;C2A708|        |      ;  
@@ -1735,7 +1734,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C2B608|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C2B610|        |FFFFFF;  
                        db $FF,$61,$01,$03,$FF               ;C2B618|        |030161;  
-                                                            ;      |        |      ;  
 blockMabData_Stage5_BG1: db $03,$20,$80                       ;C2B61D|        |      ;  
                        dw $0800,$0800,$0800,$0800           ;C2B620|        |      ;  
                        dw $0800,$0800,$0800,$0800           ;C2B628|        |      ;  
@@ -2773,7 +2771,6 @@ blockMabData_Stage5_BG1: db $03,$20,$80                       ;C2B61D|        | 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C2D668|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C2D670|        |FFFFFF;  
                        db $FF,$67,$01,$03,$FF               ;C2D678|        |030167;  
-                                                            ;      |        |      ;  
 blockMabData_Stage5_BG0: db $03,$20,$80                       ;C2D67D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C2D680|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C2D688|        |      ;  
@@ -3811,7 +3808,6 @@ blockMabData_Stage5_BG0: db $03,$20,$80                       ;C2D67D|        | 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C2F6C8|        |FFFFFF;  
                        db $FF,$C9,$05,$03,$FF,$C3,$05,$03   ;C2F6D0|        |0305C9;  
                        db $FF,$BD,$05,$03,$FF               ;C2F6D8|        |0305BD;  
-                                                            ;      |        |      ;  
 sceneMabDataStage5_BlueGune_BG1: db $03,$20,$80                       ;C2F6DD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C2F6E0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C2F6E8|        |      ;  

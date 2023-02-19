@@ -722,7 +722,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A9966A|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$AB   ;A99672|        |FFFFFF;  
                        db $03,$03,$FF                       ;A9967A|        |000003;  
-                                                            ;      |        |      ;  
 sceneMabDataLvL00_BG1: dw $2003,$0080,$0000,$0000           ;A9967D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;A99685|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;A9968D|        |      ;  
@@ -1760,7 +1759,6 @@ sceneMabDataLvL00_BG1: dw $2003,$0080,$0000,$0000           ;A9967D|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A9B6C9|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A9B6D1|        |FFFFFF;  
                        db $B1,$03,$03,$FF                   ;A9B6D9|        |000003;  
-                                                            ;      |        |      ;  
 sceneMabDataLvL00_BG0: dw $2003,$0080,$0000,$0000           ;A9B6DD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;A9B6E5|        |      ;  
                        dw $0000,$0300,$0400,$0000           ;A9B6ED|        |      ;  
@@ -2798,7 +2796,6 @@ sceneMabDataLvL00_BG0: dw $2003,$0080,$0000,$0000           ;A9B6DD|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A9D729|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A9D731|        |FFFFFF;  
                        db $31,$09,$03,$FF                   ;A9D739|        |000009;  
-                                                            ;      |        |      ;  
  levelGFXStage1Garden: db $03,$40,$80                       ;A9D73D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;A9D740|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;A9D748|        |      ;  

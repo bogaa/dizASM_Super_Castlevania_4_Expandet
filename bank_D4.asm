@@ -17,7 +17,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D48068|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D48070|        |FFFFFF;  
                        db $FF,$DB,$01,$03,$FF               ;D48078|        |0301DB;  
-                                                            ;      |        |      ;  
 blockMabData_Stage8_dungeon_BG1: db $03,$20,$80                       ;D4807D|        |      ;  
                        dw $1000,$1000,$1000,$1000           ;D48080|        |      ;  
                        dw $1000,$1000,$1000,$1000           ;D48088|        |      ;  
@@ -1055,7 +1054,6 @@ blockMabData_Stage8_dungeon_BG1: db $03,$20,$80                       ;D4807D|  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D4A0C8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D4A0D0|        |FFFFFF;  
                        db $FF,$E1,$01,$03,$FF               ;D4A0D8|        |0301E1;  
-                                                            ;      |        |      ;  
 blockMabData_Stage8_dungeon_BG0: db $03,$20,$80                       ;D4A0DD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;D4A0E0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;D4A0E8|        |      ;  
@@ -2093,7 +2091,6 @@ blockMabData_Stage8_dungeon_BG0: db $03,$20,$80                       ;D4A0DD|  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D4C128|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D4C130|        |FFFFFF;  
                        db $FF,$FB,$06,$03,$FF               ;D4C138|        |0306FB;  
-                                                            ;      |        |      ;  
 sceneMabDataStage8_Dungeon_00_BG1: db $03,$20,$80                       ;D4C13D|        |      ;  
                        dw $0004,$0005,$001C,$0037           ;D4C140|        |      ;  
                        dw $0001,$0002,$0003,$0003           ;D4C148|        |      ;  
@@ -3131,7 +3128,6 @@ sceneMabDataStage8_Dungeon_00_BG1: db $03,$20,$80                       ;D4C13D|
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D4E188|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D4E190|        |FFFFFF;  
                        db $FF,$01,$07,$03,$FF               ;D4E198|        |030701;  
-                                                            ;      |        |      ;  
 sceneMabDataStage8_Dungeon_00_BG0: db $03,$20,$80                       ;D4E19D|        |      ;  
                        dw $0015,$0001,$0001,$0001           ;D4E1A0|        |      ;  
                        dw $0015,$0001,$0001,$0001           ;D4E1A8|        |      ;  

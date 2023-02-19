@@ -365,7 +365,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BC8B48|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BC8B50|        |FFFFFF;  
                        db $FF,$2F,$05,$03,$FF               ;BC8B58|        |03052F;  
-                                                            ;      |        |      ;  
 sceneMabDataStage3_Aquaduct_03_BG0: dw $2003,$0080,$0000,$0000           ;BC8B5D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;BC8B65|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;BC8B6D|        |      ;  
@@ -1403,7 +1402,6 @@ sceneMabDataStage3_Aquaduct_03_BG0: dw $2003,$0080,$0000,$0000           ;BC8B5D
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BCABA9|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BCABB1|        |FFFFFF;  
                        db $B9,$09,$03,$FF                   ;BCABB9|        |000309;  
-                                                            ;      |        |      ;  
 levelGFXStage4_SkullTower: db $03,$40,$80                       ;BCABBD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;BCABC0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;BCABC8|        |      ;  
@@ -3465,7 +3463,6 @@ levelGFXStage4_SkullTower: db $03,$40,$80                       ;BCABBD|        
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BCEC08|        |FFFFFF;  
                        db $FF,$37,$0F,$03,$FF,$1A,$0F,$03   ;BCEC10|        |030F37;  
                        db $FF,$F7,$0E,$03,$FF               ;BCEC18|        |030EF7;  
-                                                            ;      |        |      ;  
 spriteGFX_turningPlaform02: db $C4,$03,$80                       ;BCEC1D|        |      ;  
                        db $52,$1E,$CD,$7C,$85,$82,$49,$66   ;BCEC20|        |      ;  
                        db $A7,$3E,$9F,$06,$05,$3A,$33,$4C   ;BCEC28|        |      ;  
@@ -3603,7 +3600,6 @@ spriteGFX_turningPlaform02: db $C4,$03,$80                       ;BCEC1D|       
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BCF048|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$24,$0F,$03   ;BCF050|        |FFFFFF;  
                        db $FF,$06,$0F,$03,$FF               ;BCF058|        |030F06;  
-                                                            ;      |        |      ;  
  spriteGFX_wallCorpse: db $03,$0C,$80                       ;BCF05D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;BCF060|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;BCF068|        |      ;  
@@ -4001,7 +3997,6 @@ spriteGFX_turningPlaform02: db $C4,$03,$80                       ;BCEC1D|       
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BCFCA8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;BCFCB0|        |FFFFFF;  
                        db $FF,$2D,$01,$03,$FF               ;BCFCB8|        |03012D;  
-                                                            ;      |        |      ;  
 blockMabData_Stage4_SkullTower_BG1: db $03,$20,$80                       ;BCFCBD|        |      ;  
                        dw $1000,$1000,$1000,$1000           ;BCFCC0|        |      ;  
                        dw $1000,$1000,$1000,$1000           ;BCFCC8|        |      ;  

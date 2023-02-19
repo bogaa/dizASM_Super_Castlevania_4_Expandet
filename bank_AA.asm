@@ -757,7 +757,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AA9788|        |FFFFFF;  
                        db $FF,$B3,$0C,$03,$FF,$96,$0C,$03   ;AA9790|        |030CB3;  
                        db $FF,$7B,$0C,$03,$FF               ;AA9798|        |030C7B;  
-                                                            ;      |        |      ;  
         spriteGFX_bat: db $03,$04,$80                       ;AA979D|        |      ;  
                        db $00,$00,$00,$00,$01,$01,$0A,$09   ;AA97A0|        |      ;  
                        db $07,$07,$2F,$2F,$1B,$0F,$36,$5D   ;AA97A8|        |      ;  
@@ -899,7 +898,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AA9BE8|        |FFFFFF;  
                        db $FF,$B8,$0C,$03,$FF,$9B,$0C,$03   ;AA9BF0|        |030CB8;  
                        db $FF,$80,$0C,$03,$FF               ;AA9BF8|        |030C80;  
-                                                            ;      |        |      ;  
    spriteGFX_skelly01: db $04,$0F,$80                       ;AA9BFD|        |      ;  
                        db $00,$00,$00,$00,$0A,$0E,$0D,$13   ;AA9C00|        |      ;  
                        db $2C,$32,$13,$1E,$3E,$1D,$1D,$1B   ;AA9C08|        |      ;  
@@ -1397,7 +1395,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AAAB68|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AAAB70|        |FFFFFF;  
                        db $FF,$85,$0C,$03,$FF               ;AAAB78|        |030C85;  
-                                                            ;      |        |      ;  
   spriteGFX_dirtFence: db $63,$00,$80                       ;AAAB7D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$28,$38   ;AAAB80|        |      ;  
                        db $10,$28,$24,$3C,$3A,$3A,$48,$58   ;AAAB88|        |      ;  
@@ -1423,7 +1420,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AAAC28|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AAAC30|        |FFFFFF;  
                        db $FF,$9D,$00,$03,$FF               ;AAAC38|        |03009D;  
-                                                            ;      |        |      ;  
 blockMabData_LvL01_Garden_BG1: db $03,$20,$80                       ;AAAC3D|        |      ;  
                        dw $3000,$3000,$3000,$3000           ;AAAC40|        |      ;  
                        dw $3000,$3000,$3000,$3000           ;AAAC48|        |      ;  
@@ -2461,7 +2457,6 @@ blockMabData_LvL01_Garden_BG1: db $03,$20,$80                       ;AAAC3D|    
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AACC88|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AACC90|        |FFFFFF;  
                        db $FF,$A3,$00,$03,$FF               ;AACC98|        |0300A3;  
-                                                            ;      |        |      ;  
 blockMabData_LvL01_Garden_BG0: db $03,$20,$80                       ;AACC9D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;AACCA0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;AACCA8|        |      ;  
@@ -3499,7 +3494,6 @@ blockMabData_LvL01_Garden_BG0: db $03,$20,$80                       ;AACC9D|    
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AAECE8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AAECF0|        |FFFFFF;  
                        db $FF,$BB,$03,$03,$FF               ;AAECF8|        |0303BB;  
-                                                            ;      |        |      ;  
 sceneMabDataLvL01_Garden_BG1: db $03,$20,$80                       ;AAECFD|        |      ;  
                        dw $0001,$0000,$0000,$0000           ;AAED00|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;AAED08|        |      ;  

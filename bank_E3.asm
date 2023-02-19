@@ -377,7 +377,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E38BA8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$D3,$13,$03   ;E38BB0|        |FFFFFF;  
                        db $FF,$AC,$13,$03,$FF               ;E38BB8|        |0313AC;  
-                                                            ;      |        |      ;  
 spriteGFX_headlessKnight: db $03,$0C,$80                       ;E38BBD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E38BC0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E38BC8|        |      ;  
@@ -775,7 +774,6 @@ spriteGFX_headlessKnight: db $03,$0C,$80                       ;E38BBD|        |
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E39808|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E39810|        |FFFFFF;  
                        db $FF,$3B,$02,$03,$FF               ;E39818|        |03023B;  
-                                                            ;      |        |      ;  
 blockMabData_StageB_bridge_BG1: db $03,$20,$80                       ;E3981D|        |      ;  
                        dw $0800,$0400,$0400,$0400           ;E39820|        |      ;  
                        dw $0400,$0400,$0400,$0400           ;E39828|        |      ;  
@@ -1813,7 +1811,6 @@ blockMabData_StageB_bridge_BG1: db $03,$20,$80                       ;E3981D|   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E3B868|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E3B870|        |FFFFFF;  
                        db $FF,$41,$02,$03,$FF               ;E3B878|        |030241;  
-                                                            ;      |        |      ;  
 blockMabData_StageB_bridge_BG0: db $03,$20,$80                       ;E3B87D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;E3B880|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;E3B888|        |      ;  
@@ -2851,7 +2848,6 @@ blockMabData_StageB_bridge_BG0: db $03,$20,$80                       ;E3B87D|   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E3D8C8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E3D8D0|        |FFFFFF;  
                        db $FF,$21,$08,$03,$FF               ;E3D8D8|        |030821;  
-                                                            ;      |        |      ;  
 sceneMabDataStageB_Bridge_00_BG1: db $03,$20,$80                       ;E3D8DD|        |      ;  
                        dw $0001,$0002,$0000,$0000           ;E3D8E0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;E3D8E8|        |      ;  
@@ -3889,7 +3885,6 @@ sceneMabDataStageB_Bridge_00_BG1: db $03,$20,$80                       ;E3D8DD| 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E3F928|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E3F930|        |FFFFFF;  
                        db $FF,$27,$08,$03,$FF               ;E3F938|        |030827;  
-                                                            ;      |        |      ;  
 sceneMabDataStageB_Bridge_00_BG0: db $03,$20,$80                       ;E3F93D|        |      ;  
                        dw $0001,$0002,$0003,$0004           ;E3F940|        |      ;  
                        dw $000E,$000F,$0010,$0011           ;E3F948|        |      ;  

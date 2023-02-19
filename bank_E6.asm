@@ -609,7 +609,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E692E8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E692F0|        |FFFFFF;  
                        db $FF,$47,$08,$03,$FF               ;E692F8|        |030847;  
-                                                            ;      |        |      ;  
 sceneMabDataStageB_Tower_BG0: db $03,$20,$80                       ;E692FD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;E69300|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;E69308|        |      ;  
@@ -1647,7 +1646,6 @@ sceneMabDataStageB_Tower_BG0: db $03,$20,$80                       ;E692FD|     
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E6B348|        |FFFFFF;  
                        db $FF,$10,$0B,$03,$FF,$F4,$0A,$03   ;E6B350|        |030B10;  
                        db $FF,$EF,$0A,$03,$FF               ;E6B358|        |030AEF;  
-                                                            ;      |        |      ;  
 levelGFXStageB_slograsQuater: db $03,$40,$80                       ;E6B35D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E6B360|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E6B368|        |      ;  
@@ -3709,7 +3707,6 @@ levelGFXStageB_slograsQuater: db $03,$40,$80                       ;E6B35D|     
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E6F3A8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E6F3B0|        |FFFFFF;  
                        db $FF,$5B,$02,$03,$FF               ;E6F3B8|        |03025B;  
-                                                            ;      |        |      ;  
 blockMabData_StageB_slogra_BG1: db $03,$20,$80                       ;E6F3BD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;E6F3C0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;E6F3C8|        |      ;  

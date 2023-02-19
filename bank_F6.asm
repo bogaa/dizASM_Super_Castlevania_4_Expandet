@@ -153,7 +153,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F684A8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F684B0|        |FFFFFF;  
                        db $FF,$90,$B4,$00,$FF               ;F684B8|        |00B490;  
-                                                            ;      |        |      ;  
 probablyEndingScreenBlockMapData: db $03,$10,$80                       ;F684BD|        |      ;  
                        dw $1400,$1400,$1400,$1400           ;F684C0|        |      ;  
                        dw $1400,$1400,$1400,$1400           ;F684C8|        |      ;  
@@ -679,7 +678,6 @@ probablyEndingScreenBlockMapData: db $03,$10,$80                       ;F684BD| 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F69508|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F69510|        |FFFFFF;  
                        db $FF,$95,$B4,$00,$FF               ;F69518|        |00B495;  
-                                                            ;      |        |      ;  
 probablyEndingScreenSceneMapData: db $03,$10,$80                       ;F6951D|        |      ;  
                        dw $1001,$1001,$1001,$1001           ;F69520|        |      ;  
                        dw $1001,$1001,$1001,$1001           ;F69528|        |      ;  
@@ -1205,7 +1203,6 @@ probablyEndingScreenSceneMapData: db $03,$10,$80                       ;F6951D| 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F6A568|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F6A570|        |FFFFFF;  
                        db $FF,$B1,$B4,$00,$FF               ;F6A578|        |00B4B1;  
-                                                            ;      |        |      ;  
     simonSpriteData00: db $04,$20,$80                       ;F6A57D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F6A580|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F6A588|        |      ;  
@@ -2247,7 +2244,6 @@ probablyEndingScreenSceneMapData: db $03,$10,$80                       ;F6951D| 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F6C5E8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F6C5F0|        |FFFFFF;  
                        db $FF,$B7,$B4,$00,$FF               ;F6C5F8|        |00B4B7;  
-                                                            ;      |        |      ;  
     simonSpriteData01: db $03,$20,$80                       ;F6C5FD|        |      ;  
                        db $1E,$D5,$16,$F9,$18,$36,$30,$6C   ;F6C600|        |      ;  
                        db $08,$60,$30,$78,$6A,$30,$04,$7B   ;F6C608|        |      ;  
@@ -3285,7 +3281,6 @@ probablyEndingScreenSceneMapData: db $03,$10,$80                       ;F6951D| 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F6E648|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F6E650|        |FFFFFF;  
                        db $FF,$BD,$B4,$00,$FF               ;F6E658|        |00B4BD;  
-                                                            ;      |        |      ;  
     simonSpriteData02: db $03,$20,$80                       ;F6E65D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F6E660|        |      ;  
                        db $00,$00,$00,$00,$00,$01,$00,$03   ;F6E668|        |      ;  

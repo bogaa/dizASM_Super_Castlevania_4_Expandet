@@ -2049,7 +2049,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A0BFE8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A0BFF0|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A0BFF8|        |FFFFFF;  
-                                                            ;      |        |      ;  
        UNREACH_A0C000: db $01,$00,$FF,$01,$FF,$FF,$FF,$FF   ;A0C000|        |000000;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A0C008|        |FFFFFF;  
                        db $02,$00,$00,$01,$FF,$FF,$FF,$FF   ;A0C010|        |      ;  
@@ -4092,7 +4091,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A0FFB8|        |FFFFFF;  
                        db $45,$58,$50,$41,$4E,$44,$45,$44   ;A0FFC0|        |000058;  
                        db $20,$52,$4F,$4D,$20,$00,$04,$00   ;A0FFC8|        |A04F52;  
-                                                            ;      |        |      ;  
           DATAlevel00: db $00,$00,$FF,$FF,$FF,$FF,$FF,$FF   ;A0FFD0|        |      ; donno what this is should be spriteGFX lol
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A0FFD8|        |      ;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A0FFE0|        |      ;  

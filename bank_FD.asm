@@ -257,7 +257,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FD87E8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FD87F0|        |FFFFFF;  
                        db $FF,$6B,$E2,$00,$FF               ;FD87F8|        |00E26B;  
-                                                            ;      |        |      ;  
 viperBossGFXdataPart2: db $03,$0C,$80                       ;FD87FD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;FD8800|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;FD8808|        |      ;  
@@ -655,7 +654,6 @@ viperBossGFXdataPart2: db $03,$0C,$80                       ;FD87FD|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FD9448|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FD9450|        |FFFFFF;  
                        db $FF,$70,$E2,$00,$FF               ;FD9458|        |00E270;  
-                                                            ;      |        |      ;  
 viperBossGFXdataPart1: db $03,$20,$80                       ;FD945D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;FD9460|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;FD9468|        |      ;  
@@ -1693,7 +1691,6 @@ viperBossGFXdataPart1: db $03,$20,$80                       ;FD945D|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDB4A8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDB4B0|        |FFFFFF;  
                        db $FF,$47,$E8,$00,$FF               ;FDB4B8|        |00E847;  
-                                                            ;      |        |      ;  
     slograExitGFXdata: db $43,$02,$80                       ;FDB4BD|        |      ;  
                        db $FF,$FF,$C0,$FF,$C0,$FF,$F2,$E3   ;FDB4C0|        |      ;  
                        db $A6,$C7,$A6,$C7,$A6,$C7,$A6,$C7   ;FDB4C8|        |      ;  
@@ -1779,7 +1776,6 @@ viperBossGFXdataPart1: db $03,$20,$80                       ;FD945D|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDB748|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDB750|        |FFFFFF;  
                        db $FF,$4D,$F3,$00,$FF               ;FDB758|        |00F34D;  
-                                                            ;      |        |      ;  
 koranotGFXdataMod7_8bppLinear: db $44,$3C,$80                       ;FDB75D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;FDB760|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;FDB768|        |      ;  
@@ -3726,7 +3722,6 @@ koranotGFXdataMod7_8bppLinear: db $44,$3C,$80                       ;FDB75D|    
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDF409|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDF411|        |FFFFFF;  
                        db $7B,$FA,$00,$FF                   ;FDF419|        |      ;  
-                                                            ;      |        |      ;  
      mummyExitGFXdata: db $C4,$06,$80                       ;FDF41D|        |      ;  
                        db $00,$00,$01,$00,$03,$03,$07,$07   ;FDF420|        |      ;  
                        db $0C,$0F,$39,$1F,$33,$3F,$60,$3E   ;FDF428|        |      ;  
@@ -3961,7 +3956,6 @@ koranotGFXdataMod7_8bppLinear: db $44,$3C,$80                       ;FDB75D|    
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFB49|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFB51|        |FFFFFF;  
                        db $D0,$FA,$00,$FF                   ;FDFB59|        |FDFB55;  
-                                                            ;      |        |      ;  
      deathExitGFXdata: db $43,$03,$80                       ;FDFB5D|        |      ;  
                        db $01,$02,$01,$06,$03,$04,$02,$0C   ;FDFB60|        |      ;  
                        db $0F,$00,$0D,$12,$16,$28,$2C,$00   ;FDFB68|        |      ;  
@@ -4079,7 +4073,6 @@ koranotGFXdataMod7_8bppLinear: db $44,$3C,$80                       ;FDB75D|    
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFEE8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFEF0|        |FFFFFF;  
                        db $FF,$E0,$F9,$00,$FF               ;FDFEF8|        |00F9E0;  
-                                                            ;      |        |      ;  
 mostlyEmptySpaceGFXdata: db $03,$10,$80                       ;FDFEFD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;FDFF00|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;FDFF08|        |      ;  

@@ -505,7 +505,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C98FA8|        |FFFFFF;  
                        db $FF,$8A,$12,$03,$FF,$8B,$10,$03   ;C98FB0|        |03128A;  
                        db $FF,$34,$10,$03,$FF               ;C98FB8|        |031034;  
-                                                            ;      |        |      ;  
      spriteGFX_coffin: db $84,$0F,$80                       ;C98FBD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C98FC0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C98FC8|        |      ;  
@@ -1019,7 +1018,6 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C99FA8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C99FB0|        |FFFFFF;  
                        db $FF,$31,$06,$03,$FF               ;C99FB8|        |030631;  
-                                                            ;      |        |      ;  
 sceneMabDataStage6_Middle_01_BG1: dw $2003,$4980,$7780,$7800           ;C99FBD|        |      ;  
                        dw $7900,$7800,$7700,$7600           ;C99FC5|        |      ;  
                        dw $7800,$0700,$0100,$0200           ;C99FCD|        |      ;  
@@ -2057,7 +2055,6 @@ sceneMabDataStage6_Middle_01_BG1: dw $2003,$4980,$7780,$7800           ;C99FBD| 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C9C009|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C9C011|        |FFFFFF;  
                        db $37,$06,$03,$FF                   ;C9C019|        |000006;  
-                                                            ;      |        |      ;  
 sceneMabDataStage6_Middle_01_BG0: dw $2003,$0480,$0B00,$0400           ;C9C01D|        |      ;  
                        dw $0200,$0400,$0200,$0400           ;C9C025|        |      ;  
                        dw $0B00,$0400,$0B00,$0100           ;C9C02D|        |      ;  
@@ -3095,7 +3092,6 @@ sceneMabDataStage6_Middle_01_BG0: dw $2003,$0480,$0B00,$0400           ;C9C01D| 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C9E069|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C9E071|        |FFFFFF;  
                        db $4D,$10,$03,$FF                   ;C9E079|        |000310;  
-                                                            ;      |        |      ;  
   spriteGFX_secretMan: db $03,$0C,$80                       ;C9E07D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C9E080|        |      ;  
                        db $01,$00,$00,$00,$00,$00,$00,$00   ;C9E088|        |      ;  
@@ -3493,7 +3489,6 @@ sceneMabDataStage6_Middle_01_BG0: dw $2003,$0480,$0B00,$0400           ;C9C01D| 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C9ECC8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C9ECD0|        |FFFFFF;  
                        db $FF,$41,$06,$03,$FF               ;C9ECD8|        |030641;  
-                                                            ;      |        |      ;  
 sceneMabDataStage6_Secret_BG1: dw $2003,$2880,$3F00,$3C00           ;C9ECDD|        |      ;  
                        dw $3C00,$3C00,$3C00,$3C00           ;C9ECE5|        |      ;  
                        dw $3C00,$2800,$3400,$3E00           ;C9ECED|        |      ;  
