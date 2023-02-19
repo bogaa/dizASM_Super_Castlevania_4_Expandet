@@ -2549,6 +2549,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FCCF88|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FCCF90|        |FFFFFF;  
                        db $FF,$0B,$B6,$00,$FF               ;FCCF98|        |00B60B;  
+                                                            ;      |        |      ;  
        UNREACH_FCCF9D: db $03,$38,$80,$20,$CD,$CF,$BD,$E8   ;FCCF9D|        |000038;  
                        db $00,$5D,$AF,$C8,$E0,$D0,$FB,$8D   ;FCCFA5|        |      ;  
                        db $02,$DA,$14,$FD,$D7,$14,$FC,$D0   ;FCCFAD|        |      ;  

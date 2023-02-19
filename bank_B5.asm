@@ -597,6 +597,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B59288|        |FFFFFF;  
                        db $FF,$A5,$04,$03,$FF,$9F,$04,$03   ;B59290|        |0304A5;  
                        db $FF,$99,$04,$03,$FF               ;B59298|        |030499;  
+                                                            ;      |        |      ;  
 sceneMabDataStage2_WaterSlide_01_BG1: db $03,$20,$80                       ;B5929D|        |      ;  
                        dw $0010,$004F,$0010,$4051           ;B592A0|        |      ;  
                        dw $0010,$0000,$0010,$404F           ;B592A8|        |      ;  
@@ -1634,6 +1635,7 @@ sceneMabDataStage2_WaterSlide_01_BG1: db $03,$20,$80                       ;B592
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B5B2E8|        |FFFFFF;  
                        db $FF,$BD,$04,$03,$FF,$B7,$04,$03   ;B5B2F0|        |0304BD;  
                        db $FF,$B1,$04,$03,$FF               ;B5B2F8|        |0304B1;  
+                                                            ;      |        |      ;  
 sceneMabDataStage2_WaterSlide_01_BG0: db $03,$20,$80                       ;B5B2FD|        |      ;  
                        dw $0000,$4000,$0000,$0000           ;B5B300|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;B5B308|        |      ;  
@@ -2671,6 +2673,7 @@ sceneMabDataStage2_WaterSlide_01_BG0: db $03,$20,$80                       ;B5B2
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B5D348|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B5D350|        |FFFFFF;  
                        db $FF,$8A,$09,$03,$FF               ;B5D358|        |03098A;  
+                                                            ;      |        |      ;  
   levelGFXStage3_cave: db $03,$40,$80                       ;B5D35D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B5D360|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B5D368|        |      ;  

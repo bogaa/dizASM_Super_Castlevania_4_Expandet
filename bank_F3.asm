@@ -586,6 +586,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3922B|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$25,$B7   ;F39233|        |FFFFFF;  
                        db $00,$FF                           ;F3923B|        |      ;  
+                                                            ;      |        |      ;  
            music_map2: db $9B,$03,$80                       ;F3923D|        |      ;  
                        db $04,$3C,$00,$00,$14,$3C,$A0,$3C   ;F39240|        |      ;  
                        db $2D,$3D,$CC,$3D,$57,$3E,$F4,$3E   ;F39248|        |      ;  
@@ -715,6 +716,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F39628|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F39630|        |FFFFFF;  
                        db $FF,$2C,$B7,$00,$FF               ;F39638|        |00B72C;  
+                                                            ;      |        |      ;  
      music_map_introA: db $8A,$01,$80                       ;F3963D|        |      ;  
                        db $04,$3C,$00,$00,$14,$3C,$3E,$3C   ;F39640|        |      ;  
                        db $64,$3C,$8C,$3C,$D6,$3C,$27,$3D   ;F39648|        |      ;  
@@ -780,6 +782,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F39827|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3982F|        |FFFFFF;  
                        db $FF,$FF,$FB,$B6,$00,$FF           ;F39837|        |B6FBFF;  
+                                                            ;      |        |      ;  
    music_boss_dracula: db $F1,$09,$80                       ;F3983D|        |      ;  
                        db $0A,$3C,$1A,$3C,$C8,$00,$02,$3C   ;F39840|        |      ;  
                        db $00,$00,$2A,$3C,$28,$3D,$F8,$3E   ;F39848|        |      ;  
@@ -1113,6 +1116,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3A286|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3A28E|        |FFFFFF;  
                        db $FF,$FF,$FF,$33,$B7,$00,$FF       ;F3A296|        |33FFFF;  
+                                                            ;      |        |      ;  
      music_map_introB: db $73,$02,$80                       ;F3A29D|        |      ;  
                        db $04,$3C,$00,$00,$14,$3C,$3E,$3C   ;F3A2A0|        |      ;  
                        db $61,$3C,$F3,$3C,$8B,$3D,$F6,$3D   ;F3A2A8|        |      ;  
@@ -1206,6 +1210,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3A568|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3A570|        |FFFFFF;  
                        db $FF,$61,$8B,$00,$FF               ;F3A578|        |008B61;  
+                                                            ;      |        |      ;  
 konamiLogoFirstScreenGFXData: db $03,$14,$80                       ;F3A57D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F3A580|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F3A588|        |      ;  
@@ -1859,6 +1864,7 @@ konamiLogoFirstScreenGFXData: db $03,$14,$80                       ;F3A57D|     
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3B9C8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3B9D0|        |FFFFFF;  
                        db $FF,$66,$8B,$00,$FF               ;F3B9D8|        |008B66;  
+                                                            ;      |        |      ;  
    miscContentTable00: db $03,$08,$80,$00,$08,$00,$08,$00   ;F3B9DD|        |      ;  
                        db $08,$00,$08,$00,$08,$00,$08,$00   ;F3B9E5|        |      ;  
                        db $08,$00,$08,$00,$08,$00,$08,$00   ;F3B9ED|        |      ;  
@@ -2128,6 +2134,7 @@ konamiLogoFirstScreenGFXData: db $03,$14,$80                       ;F3A57D|     
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3C228|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3C230|        |FFFFFF;  
                        db $FF,$6B,$8B,$00,$FF               ;F3C238|        |008B6B;  
+                                                            ;      |        |      ;  
    miscContentTable01: db $03,$02,$80,$00,$08,$00,$08,$00   ;F3C23D|        |      ;  
                        db $08,$00,$08,$00,$08,$00,$08,$00   ;F3C245|        |      ;  
                        db $08,$00,$08,$00,$08,$00,$08,$00   ;F3C24D|        |      ;  
@@ -2205,6 +2212,7 @@ konamiLogoFirstScreenGFXData: db $03,$14,$80                       ;F3A57D|     
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3C488|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3C490|        |FFFFFF;  
                        db $FF,$70,$8B,$00,$FF               ;F3C498|        |008B70;  
+                                                            ;      |        |      ;  
    miscContentTable03: db $03,$02,$80,$84,$00,$84,$00,$84   ;F3C49D|        |      ;  
                        db $00,$84,$00,$84,$00,$84,$00,$84   ;F3C4A5|        |      ;  
                        db $00,$84,$00,$84,$00,$84,$00,$84   ;F3C4AD|        |      ;  
@@ -2282,6 +2290,7 @@ konamiLogoFirstScreenGFXData: db $03,$14,$80                       ;F3A57D|     
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3C6E8|        |FFFFFF;  
                        db $FF,$F4,$B4,$00,$FF,$A7,$B4,$00   ;F3C6F0|        |00B4F4;  
                        db $FF,$DD,$B3,$00,$FF               ;F3C6F8|        |00B3DD;  
+                                                            ;      |        |      ;  
       fontGFXdata2bpp: db $F3,$02,$80                       ;F3C6FD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F3C700|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F3C708|        |      ;  
@@ -2391,6 +2400,7 @@ konamiLogoFirstScreenGFXData: db $03,$14,$80                       ;F3A57D|     
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3CA48|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$2D,$B5,$00   ;F3CA50|        |FFFFFF;  
                        db $FF,$E6,$B3,$00,$FF               ;F3CA58|        |00B3E6;  
+                                                            ;      |        |      ;  
 dataGFXSpritesEquipment: db $03,$10,$80                       ;F3CA5D|        |      ;  
                        db $00,$00,$00,$00,$00,$08,$1C,$1C   ;F3CA60|        |      ;  
                        db $D4,$FE,$1C,$1C,$00,$08,$00,$00   ;F3CA68|        |      ;  
@@ -2916,6 +2926,7 @@ dataGFXSpritesEquipment: db $03,$10,$80                       ;F3CA5D|        | 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3DAA8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$15,$B4,$00   ;F3DAB0|        |FFFFFF;  
                        db $FF,$EF,$B3,$00,$FF               ;F3DAB8|        |00B3EF;  
+                                                            ;      |        |      ;  
 whipLeatherStrightGFXdata: db $83,$00,$80                       ;F3DABD|        |      ;  
                        db $00,$00,$03,$03,$03,$06,$AC,$FA   ;F3DAC0|        |      ;  
                        db $50,$A8,$00,$00,$00,$00,$00,$00   ;F3DAC8|        |      ;  
@@ -2945,6 +2956,7 @@ whipLeatherStrightGFXdata: db $83,$00,$80                       ;F3DABD|        
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3DB88|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$1A,$B4,$00   ;F3DB90|        |FFFFFF;  
                        db $FF,$F4,$B3,$00,$FF               ;F3DB98|        |00B3F4;  
+                                                            ;      |        |      ;  
 whipLeatherLimpGFXdata: db $83,$00,$80                       ;F3DB9D|        |      ;  
                        db $00,$00,$00,$00,$00,$04,$08,$0C   ;F3DBA0|        |      ;  
                        db $08,$10,$20,$30,$20,$40,$80,$C0   ;F3DBA8|        |      ;  
@@ -2974,6 +2986,7 @@ whipLeatherLimpGFXdata: db $83,$00,$80                       ;F3DB9D|        |  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3DC68|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$1F,$B4,$00   ;F3DC70|        |FFFFFF;  
                        db $FF,$F9,$B3,$00,$FF               ;F3DC78|        |00B3F9;  
+                                                            ;      |        |      ;  
 whipLeatherNoWhipGFXdata: db $23,$00,$80                       ;F3DC7D|        |      ;  
                        db $80,$80,$00,$C0,$60,$20,$09,$39   ;F3DC80|        |      ;  
                        db $1F,$07,$06,$00,$00,$00,$00,$00   ;F3DC88|        |      ;  
@@ -2991,6 +3004,7 @@ whipLeatherNoWhipGFXdata: db $23,$00,$80                       ;F3DC7D|        |
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3DCE8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$28,$B4,$00   ;F3DCF0|        |FFFFFF;  
                        db $FF,$02,$B4,$00,$FF               ;F3DCF8|        |00B402;  
+                                                            ;      |        |      ;  
 whipChainStrightGFXdata: db $83,$00,$80                       ;F3DCFD|        |      ;  
                        db $00,$00,$00,$00,$00,$08,$00,$00   ;F3DD00|        |      ;  
                        db $00,$2A,$00,$00,$00,$08,$00,$00   ;F3DD08|        |      ;  
@@ -3020,6 +3034,7 @@ whipChainStrightGFXdata: db $83,$00,$80                       ;F3DCFD|        | 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3DDC8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$2D,$B4,$00   ;F3DDD0|        |FFFFFF;  
                        db $FF,$07,$B4,$00,$FF               ;F3DDD8|        |00B407;  
+                                                            ;      |        |      ;  
 whipChainLimphGFXdata: db $83,$00,$80                       ;F3DDDD|        |      ;  
                        db $00,$00,$00,$00,$00,$04,$00,$00   ;F3DDE0|        |      ;  
                        db $00,$00,$00,$20,$00,$00,$00,$00   ;F3DDE8|        |      ;  
@@ -3049,6 +3064,7 @@ whipChainLimphGFXdata: db $83,$00,$80                       ;F3DDDD|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3DEA8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$32,$B4,$00   ;F3DEB0|        |FFFFFF;  
                        db $FF,$0C,$B4,$00,$FF               ;F3DEB8|        |00B40C;  
+                                                            ;      |        |      ;  
 whipChainNoWhipGFXdata: db $23,$00,$80                       ;F3DEBD|        |      ;  
                        db $00,$00,$00,$00,$00,$08,$00,$00   ;F3DEC0|        |      ;  
                        db $00,$2A,$00,$00,$00,$08,$00,$00   ;F3DEC8|        |      ;  
@@ -3066,6 +3082,7 @@ whipChainNoWhipGFXdata: db $23,$00,$80                       ;F3DEBD|        |  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3DF28|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F3DF30|        |FFFFFF;  
                        db $FF,$3B,$B4,$00,$FF               ;F3DF38|        |00B43B;  
+                                                            ;      |        |      ;  
 castleMap1Mode7Tilemap: db $44,$3D,$80,$00,$00,$00,$00,$00   ;F3DF3D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F3DF45|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F3DF4D|        |      ;  

@@ -1085,6 +1085,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AEA1C8|        |FFFFFF;  
                        db $FF,$45,$0D,$03,$FF,$1C,$0D,$03   ;AEA1D0|        |030D45;  
                        db $FF,$F9,$0C,$03,$FF               ;AEA1D8|        |030CF9;  
+                                                            ;      |        |      ;  
 spriteGFX_snakesSworm: db $43,$03,$80                       ;AEA1DD|        |      ;  
                        db $00,$00,$00,$00,$2D,$03,$12,$05   ;AEA1E0|        |      ;  
                        db $00,$03,$60,$00,$01,$00,$05,$1C   ;AEA1E8|        |      ;  
@@ -1202,6 +1203,7 @@ spriteGFX_snakesSworm: db $43,$03,$80                       ;AEA1DD|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AEA568|        |FFFFFF;  
                        db $FF,$4A,$0D,$03,$FF,$21,$0D,$03   ;AEA570|        |030D4A;  
                        db $FF,$FE,$0C,$03,$FF               ;AEA578|        |030CFE;  
+                                                            ;      |        |      ;  
       spriteGFX_ghost: db $03,$04,$80                       ;AEA57D|        |      ;  
                        db $00,$00,$17,$07,$09,$0F,$37,$1B   ;AEA580|        |      ;  
                        db $12,$1F,$1B,$24,$01,$00,$01,$00   ;AEA588|        |      ;  
@@ -1343,6 +1345,7 @@ spriteGFX_snakesSworm: db $43,$03,$80                       ;AEA1DD|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AEA9C8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AEA9D0|        |FFFFFF;  
                        db $FF,$03,$0D,$03,$FF               ;AEA9D8|        |030D03;  
+                                                            ;      |        |      ;  
   spriteGFX_horseHead: db $03,$04,$80                       ;AEA9DD|        |      ;  
                        db $04,$04,$00,$00,$02,$00,$01,$00   ;AEA9E0|        |      ;  
                        db $01,$00,$01,$00,$05,$03,$01,$02   ;AEA9E8|        |      ;  
@@ -1484,6 +1487,7 @@ spriteGFX_snakesSworm: db $43,$03,$80                       ;AEA1DD|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AEAE28|        |FFFFFF;  
                        db $FF,$52,$10,$03,$FF,$DD,$0F,$03   ;AEAE30|        |031052;  
                        db $FF,$08,$0D,$03,$FF               ;AEAE38|        |030D08;  
+                                                            ;      |        |      ;  
         spriteGFX_dog: db $03,$0C,$80                       ;AEAE3D|        |      ;  
                        db $00,$00,$00,$00,$02,$02,$0B,$18   ;AEAE40|        |      ;  
                        db $16,$13,$22,$00,$01,$01,$00,$00   ;AEAE48|        |      ;  
@@ -1881,6 +1885,7 @@ spriteGFX_snakesSworm: db $43,$03,$80                       ;AEA1DD|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AEBA88|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AEBA90|        |FFFFFF;  
                        db $FF,$BD,$00,$03,$FF               ;AEBA98|        |0300BD;  
+                                                            ;      |        |      ;  
 blockMabData_Stage1Barn_BG1: db $03,$20,$80                       ;AEBA9D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;AEBAA0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;AEBAA8|        |      ;  
@@ -2918,6 +2923,7 @@ blockMabData_Stage1Barn_BG1: db $03,$20,$80                       ;AEBA9D|      
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AEDAE8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AEDAF0|        |FFFFFF;  
                        db $FF,$C3,$00,$03,$FF               ;AEDAF8|        |0300C3;  
+                                                            ;      |        |      ;  
 blockMabData_Stage1Barn_BG0: db $03,$20,$80                       ;AEDAFD|        |      ;  
                        dw $0800,$0800,$0800,$0800           ;AEDB00|        |      ;  
                        dw $0800,$0800,$0800,$0800           ;AEDB08|        |      ;  
@@ -3955,6 +3961,7 @@ blockMabData_Stage1Barn_BG0: db $03,$20,$80                       ;AEDAFD|      
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AEFB48|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;AEFB50|        |FFFFFF;  
                        db $FF,$FB,$03,$03,$FF               ;AEFB58|        |0303FB;  
+                                                            ;      |        |      ;  
 sceneMabDataStage1_Barn_BG1: db $03,$20,$80                       ;AEFB5D|        |      ;  
                        dw $0033,$0000,$0000,$0000           ;AEFB60|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;AEFB68|        |      ;  

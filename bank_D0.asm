@@ -993,6 +993,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D09EE8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$5D,$0A,$03   ;D09EF0|        |FFFFFF;  
                        db $FF,$58,$0A,$03,$FF               ;D09EF8|        |030A58;  
+                                                            ;      |        |      ;  
 levelGFXStage7_GrqulesQuater: db $03,$40,$80                       ;D09EFD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;D09F00|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;D09F08|        |      ;  
@@ -3054,6 +3055,7 @@ levelGFXStage7_GrqulesQuater: db $03,$40,$80                       ;D09EFD|     
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D0DF48|        |FFFFFF;  
                        db $FF,$45,$11,$03,$FF,$1C,$11,$03   ;D0DF50|        |031145;  
                        db $FF,$F9,$10,$03,$FF               ;D0DF58|        |0310F9;  
+                                                            ;      |        |      ;  
 spriteGFX_libraryTrapBallHand: db $C3,$03,$80                       ;D0DF5D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;D0DF60|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;D0DF68|        |      ;  
@@ -3187,6 +3189,7 @@ spriteGFX_libraryTrapBallHand: db $C3,$03,$80                       ;D0DF5D|    
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D0E368|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$2B,$11,$03   ;D0E370|        |FFFFFF;  
                        db $FF,$03,$11,$03,$FF               ;D0E378|        |031103;  
+                                                            ;      |        |      ;  
   spriteGFX_candleDog: db $03,$0C,$80                       ;D0E37D|        |      ;  
                        db $05,$05,$1C,$1C,$2D,$3B,$2A,$15   ;D0E380|        |      ;  
                        db $14,$1F,$10,$0F,$01,$01,$00,$00   ;D0E388|        |      ;  
@@ -3584,6 +3587,7 @@ spriteGFX_libraryTrapBallHand: db $C3,$03,$80                       ;D0DF5D|    
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D0EFC8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D0EFD0|        |FFFFFF;  
                        db $FF,$CB,$01,$03,$FF               ;D0EFD8|        |0301CB;  
+                                                            ;      |        |      ;  
 blockMabData_Stage7_GrakulQuater_BG1: db $03,$20,$80                       ;D0EFDD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;D0EFE0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;D0EFE8|        |      ;  

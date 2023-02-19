@@ -757,6 +757,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D39788|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D39790|        |FFFFFF;  
                        db $FF,$F1,$06,$03,$FF               ;D39798|        |0306F1;  
+                                                            ;      |        |      ;  
 sceneMabDataStage7_GrakulQuater_03_BG0: dw $2003,$2D80,$3000,$3100           ;D3979D|        |      ;  
                        dw $2D00,$2D00,$2D00,$2D00           ;D397A5|        |      ;  
                        dw $3400,$2D00,$2D00,$2D00           ;D397AD|        |      ;  
@@ -1794,6 +1795,7 @@ sceneMabDataStage7_GrakulQuater_03_BG0: dw $2003,$2D80,$3000,$3100           ;D3
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D3B7E9|        |FFFFFF;  
                        db $79,$0A,$03,$FF,$6B,$0A,$03,$FF   ;D3B7F1|        |00030A;  
                        db $66,$0A,$03,$FF                   ;D3B7F9|        |00000A;  
+                                                            ;      |        |      ;  
 levelGFXStage8_dungeon: db $03,$40,$80                       ;D3B7FD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;D3B800|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;D3B808|        |      ;  
@@ -3855,6 +3857,7 @@ levelGFXStage8_dungeon: db $03,$40,$80                       ;D3B7FD|        |  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D3F848|        |FFFFFF;  
                        db $FF,$D1,$11,$03,$FF,$A2,$11,$03   ;D3F850|        |0311D1;  
                        db $FF,$73,$11,$03,$FF               ;D3F858|        |031173;  
+                                                            ;      |        |      ;  
 spriteGFX_dungeonTrapsCrusherDaggerStairs: db $C3,$07,$80                       ;D3F85D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;D3F860|        |      ;  
                        db $00,$00,$00,$00,$06,$07,$13,$20   ;D3F868|        |      ;  

@@ -65,6 +65,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D581E8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D581F0|        |FFFFFF;  
                        db $FF,$0B,$07,$03,$FF               ;D581F8|        |03070B;  
+                                                            ;      |        |      ;  
 sceneMabDataStage8_Dungeon_01_BG1: db $03,$20,$80                       ;D581FD|        |      ;  
                        dw $0004,$0005,$8007,$0003           ;D58200|        |      ;  
                        dw $0003,$0007,$0000,$0050           ;D58208|        |      ;  
@@ -1102,6 +1103,7 @@ sceneMabDataStage8_Dungeon_01_BG1: db $03,$20,$80                       ;D581FD|
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D5A248|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D5A250|        |FFFFFF;  
                        db $FF,$11,$07,$03,$FF               ;D5A258|        |030711;  
+                                                            ;      |        |      ;  
 sceneMabDataStage8_Dungeon_01_BG0: db $03,$20,$80                       ;D5A25D|        |      ;  
                        dw $0013,$0001,$0002,$0002           ;D5A260|        |      ;  
                        dw $0001,$0015,$0015,$0016           ;D5A268|        |      ;  
@@ -2139,6 +2141,7 @@ sceneMabDataStage8_Dungeon_01_BG0: db $03,$20,$80                       ;D5A25D|
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D5C2A8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D5C2B0|        |FFFFFF;  
                        db $FF,$74,$0A,$03,$FF               ;D5C2B8|        |030A74;  
+                                                            ;      |        |      ;  
 levelGFXStage8_franksQuater: db $03,$40,$80                       ;D5C2BD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;D5C2C0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;D5C2C8|        |      ;  

@@ -953,6 +953,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C09DA8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C09DB0|        |FFFFFF;  
                        db $FF,$D9,$09,$03,$FF               ;C09DB8|        |0309D9;  
+                                                            ;      |        |      ;  
 levelGFXStage4_koranotQuater: db $03,$40,$80                       ;C09DBD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C09DC0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C09DC8|        |      ;  
@@ -3014,6 +3015,7 @@ levelGFXStage4_koranotQuater: db $03,$40,$80                       ;C09DBD|     
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C0DE08|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$7C,$0F,$03   ;C0DE10|        |FFFFFF;  
                        db $FF,$DE,$09,$03,$FF               ;C0DE18|        |0309DE;  
+                                                            ;      |        |      ;  
 spriteGFX_crusherWithFloatingBlock: db $C3,$02,$80                       ;C0DE1D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C0DE20|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C0DE28|        |      ;  
@@ -3115,6 +3117,7 @@ spriteGFX_crusherWithFloatingBlock: db $C3,$02,$80                       ;C0DE1D
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C0E128|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C0E130|        |FFFFFF;  
                        db $FF,$E3,$09,$03,$FF               ;C0E138|        |0309E3;  
+                                                            ;      |        |      ;  
        UNREACH_C0E13D: db $73,$03,$80,$00,$00,$00,$00,$00   ;C0E13D|        |000003;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C0E145|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C0E14D|        |      ;  
@@ -3239,6 +3242,7 @@ spriteGFX_crusherWithFloatingBlock: db $C3,$02,$80                       ;C0DE1D
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C0E505|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C0E50D|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$51,$01,$03,$FF   ;C0E515|        |FFFFFF;  
+                                                            ;      |        |      ;  
 blockMabData_Stage4_koranotQuater_BG1: db $03,$20,$80                       ;C0E51D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C0E520|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C0E528|        |      ;  

@@ -185,6 +185,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C885A8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C885B0|        |FFFFFF;  
                        db $FF,$0B,$10,$03,$FF               ;C885B8|        |03100B;  
+                                                            ;      |        |      ;  
    spriteGFX_ghostMan: db $03,$04,$80                       ;C885BD|        |      ;  
                        db $00,$00,$01,$01,$00,$00,$00,$00   ;C885C0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;C885C8|        |      ;  
@@ -326,6 +327,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C88A08|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C88A10|        |FFFFFF;  
                        db $FF,$10,$10,$03,$FF               ;C88A18|        |031010;  
+                                                            ;      |        |      ;  
 spriteGFX_fallingChandelire: db $C3,$03,$80                       ;C88A1D|        |      ;  
                        db $00,$80,$80,$00,$42,$C0,$A5,$A2   ;C88A20|        |      ;  
                        db $25,$22,$A7,$A0,$C0,$42,$00,$82   ;C88A28|        |      ;  
@@ -459,6 +461,7 @@ spriteGFX_fallingChandelire: db $C3,$03,$80                       ;C88A1D|      
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C88E28|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C88E30|        |FFFFFF;  
                        db $FF,$9B,$01,$03,$FF               ;C88E38|        |03019B;  
+                                                            ;      |        |      ;  
 blockMabData_Stage6_middle_BG1: db $03,$20,$80                       ;C88E3D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C88E40|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C88E48|        |      ;  
@@ -1496,6 +1499,7 @@ blockMabData_Stage6_middle_BG1: db $03,$20,$80                       ;C88E3D|   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C8AE88|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C8AE90|        |FFFFFF;  
                        db $FF,$A1,$01,$03,$FF               ;C8AE98|        |0301A1;  
+                                                            ;      |        |      ;  
 blockMabData_Stage6_middle_BG0: db $03,$20,$80                       ;C8AE9D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C8AEA0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;C8AEA8|        |      ;  
@@ -2533,6 +2537,7 @@ blockMabData_Stage6_middle_BG0: db $03,$20,$80                       ;C8AE9D|   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C8CEE8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C8CEF0|        |FFFFFF;  
                        db $FF,$21,$06,$03,$FF               ;C8CEF8|        |030621;  
+                                                            ;      |        |      ;  
 sceneMabDataStage6_Middle_00_BG1: db $03,$20,$80                       ;C8CEFD|        |      ;  
                        dw $001B,$8049,$0078,$0079           ;C8CF00|        |      ;  
                        dw $8078,$8077,$8078,$0076           ;C8CF08|        |      ;  
@@ -3570,6 +3575,7 @@ sceneMabDataStage6_Middle_00_BG1: db $03,$20,$80                       ;C8CEFD| 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C8EF48|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;C8EF50|        |FFFFFF;  
                        db $FF,$27,$06,$03,$FF               ;C8EF58|        |030627;  
+                                                            ;      |        |      ;  
 sceneMabDataStage6_Middle_00_BG0: db $03,$20,$80                       ;C8EF5D|        |      ;  
                        dw $0002,$0004,$000B,$0004           ;C8EF60|        |      ;  
                        dw $0002,$0004,$000B,$0004           ;C8EF68|        |      ;  

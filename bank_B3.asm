@@ -905,6 +905,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B39C28|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$67,$04,$03   ;B39C30|        |FFFFFF;  
                        db $FF,$61,$04,$03,$FF               ;B39C38|        |030461;  
+                                                            ;      |        |      ;  
 sceneMabDataStage2_Swamp_BG0: db $03,$20,$80                       ;B39C3D|        |      ;  
                        dw $000E,$000B,$000C,$000D           ;B39C40|        |      ;  
                        dw $000E,$000C,$000D,$000E           ;B39C48|        |      ;  
@@ -1942,6 +1943,7 @@ sceneMabDataStage2_Swamp_BG0: db $03,$20,$80                       ;B39C3D|     
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B3BC88|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$F6,$09,$03   ;B3BC90|        |FFFFFF;  
                        db $FF,$77,$09,$03,$FF               ;B3BC98|        |030977;  
+                                                            ;      |        |      ;  
 levelGFXStage2_waterSlide: db $03,$40,$80                       ;B3BC9D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B3BCA0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B3BCA8|        |      ;  
@@ -4003,6 +4005,7 @@ levelGFXStage2_waterSlide: db $03,$40,$80                       ;B3BC9D|        
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B3FCE8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;B3FCF0|        |FFFFFF;  
                        db $FF,$81,$09,$03,$FF               ;B3FCF8|        |030981;  
+                                                            ;      |        |      ;  
 levelGFXStage2_waterSlide2bbpBG: db $13,$04,$80                       ;B3FCFD|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B3FD00|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B3FD08|        |      ;  

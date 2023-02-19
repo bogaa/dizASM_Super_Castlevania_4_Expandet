@@ -99,6 +99,7 @@ pointerTableNewEntrances: dw $0001                             ;A68000|        |
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A681EC|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;A681F4|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$01               ;A681FC|        |FFFFFF;  
+                                                            ;      |        |      ;  
        UNREACH_A68201: db $00,$08,$00,$04,$00,$F0,$02,$02   ;A68201|        |      ;  
                        db $01,$C0,$00,$02,$00,$C0,$00,$01   ;A68209|        |0000C0;  
                        db $01,$08,$00,$04,$00,$F0,$0A,$04   ;A68211|        |000008;  

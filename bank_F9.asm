@@ -233,6 +233,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F98728|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F98730|        |FFFFFF;  
                        db $FF,$23,$B5,$00,$FF               ;F98738|        |00B523;  
+                                                            ;      |        |      ;  
 moreTilemapDataIshouldFigureOut: db $03,$08,$80                       ;F9873D|        |      ;  
                        dw $0801,$0802,$0803,$0804           ;F98740|        |      ;  
                        dw $1005,$1405,$1406,$0C07           ;F98748|        |      ;  
@@ -502,6 +503,7 @@ moreTilemapDataIshouldFigureOut: db $03,$08,$80                       ;F9873D|  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F98F88|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F98F90|        |FFFFFF;  
                        db $FF,$32,$B5,$00,$FF               ;F98F98|        |00B532;  
+                                                            ;      |        |      ;  
     someBorderGFXdata: db $43,$02,$80                       ;F98F9D|        |      ;  
                        db $00,$00,$00,$00,$1F,$00,$30,$00   ;F98FA0|        |      ;  
                        db $20,$00,$20,$00,$20,$00,$20,$00   ;F98FA8|        |      ;  
@@ -587,6 +589,7 @@ moreTilemapDataIshouldFigureOut: db $03,$08,$80                       ;F9873D|  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F99228|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F99230|        |FFFFFF;  
                        db $FF,$3B,$B5,$00,$FF               ;F99238|        |00B53B;  
+                                                            ;      |        |      ;  
  japaneseFontsGFXdata: db $F3,$07,$80                       ;F9923D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F99240|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F99248|        |      ;  
@@ -856,6 +859,7 @@ moreTilemapDataIshouldFigureOut: db $03,$08,$80                       ;F9873D|  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F99A88|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F99A90|        |FFFFFF;  
                        db $FF,$49,$B5,$00,$FF               ;F99A98|        |00B549;  
+                                                            ;      |        |      ;  
 introGraveTileGFXdata00: db $03,$20,$80                       ;F99A9D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F99AA0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F99AA8|        |      ;  
@@ -1893,6 +1897,7 @@ introGraveTileGFXdata00: db $03,$20,$80                       ;F99A9D|        | 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F9BAE8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F9BAF0|        |FFFFFF;  
                        db $FF,$4E,$B5,$00,$FF               ;F9BAF8|        |00B54E;  
+                                                            ;      |        |      ;  
 introGraveTileGFXdata01: db $04,$20,$80                       ;F9BAFD|        |      ;  
                        db $FF,$00,$FF,$1C,$FF,$00,$FF,$00   ;F9BB00|        |      ;  
                        db $18,$E7,$E3,$1C,$DF,$20,$3F,$C0   ;F9BB08|        |      ;  
@@ -2935,6 +2940,7 @@ introGraveTileGFXdata01: db $04,$20,$80                       ;F9BAFD|        | 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F9DB69|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$BF,$B5,$00,$FF   ;F9DB71|        |FFFFFF;  
                        db $5D,$B5,$00,$FF                   ;F9DB79|        |0000B5;  
+                                                            ;      |        |      ;  
 introGraveTileGFXdata02: db $33,$00,$80                       ;F9DB7D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F9DB80|        |      ;  
                        db $00,$00,$28,$18,$28,$18,$50,$30   ;F9DB88|        |      ;  
@@ -2956,6 +2962,7 @@ introGraveTileGFXdata02: db $33,$00,$80                       ;F9DB7D|        | 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F9DC08|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F9DC10|        |FFFFFF;  
                        db $FF,$62,$B5,$00,$FF               ;F9DC18|        |00B562;  
+                                                            ;      |        |      ;  
 introGraveTileGFXdata03: db $83,$0B,$80                       ;F9DC1D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;F9DC20|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$01,$00   ;F9DC28|        |      ;  
@@ -3337,6 +3344,7 @@ introGraveTileGFXdata03: db $83,$0B,$80                       ;F9DC1D|        | 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F9E7E8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F9E7F0|        |FFFFFF;  
                        db $FF,$6C,$B5,$00,$FF               ;F9E7F8|        |00B56C;  
+                                                            ;      |        |      ;  
 tilemapDataProbablyGravyardScene: db $23,$09,$80                       ;F9E7FD|        |      ;  
                        dw $1C00,$1C00,$1C00,$1C00           ;F9E800|        |      ;  
                        dw $1C00,$1C00,$1C00,$1C00           ;F9E808|        |      ;  
@@ -3642,6 +3650,7 @@ tilemapDataProbablyGravyardScene: db $23,$09,$80                       ;F9E7FD| 
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F9F168|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F9F170|        |FFFFFF;  
                        db $FF,$72,$B5,$00,$FF               ;F9F178|        |00B572;  
+                                                            ;      |        |      ;  
 moreTilemapDataProbablyGravyardIguess: db $03,$0A,$80                       ;F9F17D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;F9F180|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;F9F188|        |      ;  
@@ -3975,6 +3984,7 @@ moreTilemapDataProbablyGravyardIguess: db $03,$0A,$80                       ;F9F
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F9FBC8|        |FFFFFF;  
                        db $FF,$84,$B5,$00,$FF,$7E,$B5,$00   ;F9FBD0|        |00B584;  
                        db $FF,$78,$B5,$00,$FF               ;F9FBD8|        |00B578;  
+                                                            ;      |        |      ;  
 mightBeTilemapDataGraveExplosion00: db $84,$00,$80,$01,$00,$02,$00,$01   ;F9FBDD|        |      ;  
                        db $00,$02,$00,$01,$00,$02,$00,$01   ;F9FBE5|        |      ;  
                        db $00,$02,$00,$03,$00,$04,$00,$03   ;F9FBED|        |      ;  
@@ -4008,6 +4018,7 @@ mightBeTilemapDataGraveExplosion00: db $84,$00,$80,$01,$00,$02,$00,$01   ;F9FBDD
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F9FCC9|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F9FCD1|        |FFFFFF;  
                        db $96,$B5,$00,$FF                   ;F9FCD9|        |0000B5;  
+                                                            ;      |        |      ;  
 mightBeTilemapDataGraveExplosion01: db $03,$01,$80                       ;F9FCDD|        |      ;  
                        dw $0001,$0002,$0001,$0002           ;F9FCE0|        |      ;  
                        dw $0001,$0002,$0001,$0002           ;F9FCE8|        |      ;  
@@ -4053,6 +4064,7 @@ mightBeTilemapDataGraveExplosion01: db $03,$01,$80                       ;F9FCDD
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F9FE28|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F9FE30|        |FFFFFF;  
                        db $FF,$9C,$B5,$00,$FF               ;F9FE38|        |00B59C;  
+                                                            ;      |        |      ;  
 mightBeTilemapDataGraveExplosion02: db $03,$01,$80                       ;F9FE3D|        |      ;  
                        dw $0001,$0001,$0001,$0001           ;F9FE40|        |      ;  
                        dw $0001,$0001,$0001,$0001           ;F9FE48|        |      ;  
@@ -4098,6 +4110,7 @@ mightBeTilemapDataGraveExplosion02: db $03,$01,$80                       ;F9FE3D
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F9FF88|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F9FF90|        |FFFFFF;  
                        db $FF,$A2,$B5,$00,$FF               ;F9FF98|        |00B5A2;  
+                                                            ;      |        |      ;  
 mightBeTilemapDataGraveExplosion03: db $03,$01,$80                       ;F9FF9D|        |      ;  
                        dw $0001,$0001,$0034,$0035           ;F9FFA0|        |      ;  
                        dw $0028,$0029,$002A,$002B           ;F9FFA8|        |      ;  

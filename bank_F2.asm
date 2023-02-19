@@ -49,6 +49,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F28165|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2816D|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$C3,$B6,$00,$FF   ;F28175|        |FFFFFF;  
+                                                            ;      |        |      ;  
          music_stageA: db $95,$0E,$80                       ;F2817D|        |      ;  
                        db $12,$3C,$52,$3C,$42,$3C,$22,$3C   ;F28180|        |      ;  
                        db $32,$3C,$62,$3C,$C8,$00,$02,$3C   ;F28188|        |      ;  
@@ -531,6 +532,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2906A|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$CA   ;F29072|        |FFFFFF;  
                        db $B6,$00,$FF                       ;F2907A|        |000000;  
+                                                            ;      |        |      ;  
           musicStageB: db $02,$0B,$80                       ;F2907D|        |      ;  
                        db $0E,$3C,$1E,$3C,$2E,$3C,$3E,$3C   ;F29080|        |      ;  
                        db $C8,$00,$00,$3C,$00,$00,$4E,$3C   ;F29088|        |      ;  
@@ -896,6 +898,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F29BC7|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F29BCF|        |FFFFFF;  
                        db $FF,$FF,$D1,$B6,$00,$FF           ;F29BD7|        |B6D1FF;  
+                                                            ;      |        |      ;  
    music_stageB_climb: db $83,$0D,$80                       ;F29BDD|        |      ;  
                        db $10,$3C,$20,$3C,$30,$3C,$40,$3C   ;F29BE0|        |      ;  
                        db $50,$3C,$C8,$00,$00,$3C,$00,$00   ;F29BE8|        |      ;  
@@ -1341,6 +1344,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2A9A8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2A9B0|        |FFFFFF;  
                        db $FF,$D8,$B6,$00,$FF               ;F2A9B8|        |00B6D8;  
+                                                            ;      |        |      ;  
        music_bossRush: db $C0,$0B,$80                       ;F2A9BD|        |      ;  
                        db $10,$3C,$20,$3C,$50,$3C,$30,$3C   ;F2A9C0|        |      ;  
                        db $40,$3C,$C8,$00,$00,$3C,$00,$00   ;F2A9C8|        |      ;  
@@ -1730,6 +1734,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2B5C5|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2B5CD|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$DF,$B6,$00,$FF   ;F2B5D5|        |FFFFFF;  
+                                                            ;      |        |      ;  
      music_secretRoom: db $64,$0A,$80                       ;F2B5DD|        |      ;  
                        db $0E,$3C,$1E,$3C,$2E,$3C,$3E,$3C   ;F2B5E0|        |      ;  
                        db $C8,$00,$00,$3C,$00,$00,$4E,$3C   ;F2B5E8|        |      ;  
@@ -2080,6 +2085,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2C0A9|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2C0B1|        |FFFFFF;  
                        db $02,$B7,$00,$FF                   ;F2C0B9|        |      ;  
+                                                            ;      |        |      ;  
          music_introA: db $3B,$04,$80                       ;F2C0BD|        |      ;  
                        db $14,$3C,$00,$00,$34,$3C,$54,$3C   ;F2C0C0|        |      ;  
                        db $CB,$3C,$EA,$3C,$15,$3D,$32,$3D   ;F2C0C8|        |      ;  
@@ -2229,6 +2235,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2C548|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2C550|        |FFFFFF;  
                        db $FF,$09,$B7,$00,$FF               ;F2C558|        |00B709;  
+                                                            ;      |        |      ;  
          music_introB: db $27,$09,$80                       ;F2C55D|        |      ;  
                        db $1A,$3C,$0A,$3C,$2A,$3C,$00,$00   ;F2C560|        |      ;  
                        db $00,$00,$3A,$3C,$36,$3D,$06,$3F   ;F2C568|        |      ;  
@@ -2539,6 +2546,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2CEEC|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$10,$B7,$00   ;F2CEF4|        |FFFFFF;  
                        db $FF                               ;F2CEFC|        |8001B5;  
+                                                            ;      |        |      ;  
        music_password: db $B5,$01,$80                       ;F2CEFD|        |      ;  
                        db $08,$3C,$C8,$00,$00,$3C,$00,$00   ;F2CF00|        |      ;  
                        db $18,$3C,$55,$3C,$91,$3C,$D9,$3C   ;F2CF08|        |      ;  
@@ -2609,6 +2617,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2D10A|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$17   ;F2D112|        |FFFFFF;  
                        db $B7,$00,$FF                       ;F2D11A|        |000000;  
+                                                            ;      |        |      ;  
        music_gameOver: db $19,$01,$80                       ;F2D11D|        |      ;  
                        db $04,$3C,$00,$00,$14,$3C,$37,$3C   ;F2D120|        |      ;  
                        db $5D,$3C,$7E,$3C,$B0,$3C,$E3,$3C   ;F2D128|        |      ;  
@@ -2658,6 +2667,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2D285|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2D28D|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$1E,$B7,$00,$FF   ;F2D295|        |FFFFFF;  
+                                                            ;      |        |      ;  
            music_map1: db $D7,$02,$80                       ;F2D29D|        |      ;  
                        db $04,$3C,$00,$00,$14,$3C,$5E,$3C   ;F2D2A0|        |      ;  
                        db $AA,$3C,$20,$3D,$96,$3D,$24,$3E   ;F2D2A8|        |      ;  
@@ -2764,6 +2774,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2D5CC|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$ED,$B6,$00   ;F2D5D4|        |FFFFFF;  
                        db $FF                               ;F2D5DC|        |80099C;  
+                                                            ;      |        |      ;  
            music_boss: db $9C,$09,$80                       ;F2D5DD|        |      ;  
                        db $1A,$3C,$0A,$3C,$C8,$00,$02,$3C   ;F2D5E0|        |      ;  
                        db $00,$00,$2A,$3C,$76,$3D,$DA,$3E   ;F2D5E8|        |      ;  
@@ -3086,6 +3097,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2DFC9|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2DFD1|        |FFFFFF;  
                        db $F4,$B6,$00,$FF                   ;F2DFD9|        |0000B6;  
+                                                            ;      |        |      ;  
     music_boss_castle: db $58,$0A,$80                       ;F2DFDD|        |      ;  
                        db $10,$3C,$20,$3C,$30,$3C,$40,$3C   ;F2DFE0|        |      ;  
                        db $50,$3C,$C8,$00,$02,$3C,$00,$00   ;F2DFE8|        |      ;  
@@ -3431,6 +3443,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2EA85|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2EA8D|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$99,$B6,$00,$FF   ;F2EA95|        |FFFFFF;  
+                                                            ;      |        |      ;  
 music_stage5_entrance: db $1E,$02,$80                       ;F2EA9D|        |      ;  
                        db $1A,$3C,$0A,$3C,$C8,$00,$02,$3C   ;F2EAA0|        |      ;  
                        db $00,$00,$2A,$3C,$4F,$3C,$75,$3C   ;F2EAA8|        |      ;  
@@ -3513,6 +3526,7 @@ music_stage5_entrance: db $1E,$02,$80                       ;F2EA9D|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2ED0B|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$3A,$B7   ;F2ED13|        |FFFFFF;  
                        db $00,$FF                           ;F2ED1B|        |      ;  
+                                                            ;      |        |      ;  
             music_orb: db $2D,$01,$80                       ;F2ED1D|        |      ;  
                        db $04,$3C,$00,$00,$14,$3C,$40,$3C   ;F2ED20|        |      ;  
                        db $65,$3C,$95,$3C,$C3,$3C,$F0,$3C   ;F2ED28|        |      ;  
@@ -3567,6 +3581,7 @@ music_stage5_entrance: db $1E,$02,$80                       ;F2EA9D|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2EEAA|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$41   ;F2EEB2|        |FFFFFF;  
                        db $B7,$00,$FF                       ;F2EEBA|        |000000;  
+                                                            ;      |        |      ;  
     music_orb_dracula: db $03,$02,$80                       ;F2EEBD|        |      ;  
                        db $04,$3C,$00,$00,$14,$3C,$63,$3C   ;F2EEC0|        |      ;  
                        db $B8,$3C,$01,$3D,$4D,$3D,$9A,$3D   ;F2EEC8|        |      ;  
@@ -3644,6 +3659,7 @@ music_stage5_entrance: db $1E,$02,$80                       ;F2EA9D|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2F108|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2F110|        |FFFFFF;  
                        db $FF,$48,$B7,$00,$FF               ;F2F118|        |00B748;  
+                                                            ;      |        |      ;  
          music_ending: db $18,$0D,$80                       ;F2F11D|        |      ;  
                        db $52,$3C,$12,$3C,$22,$3C,$32,$3C   ;F2F120|        |      ;  
                        db $42,$3C,$62,$3C,$C8,$00,$00,$3C   ;F2F128|        |      ;  
@@ -4077,6 +4093,7 @@ music_stage5_entrance: db $1E,$02,$80                       ;F2EA9D|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2FE85|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F2FE8D|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$E6,$B6,$00,$FF   ;F2FE95|        |FFFFFF;  
+                                                            ;      |        |      ;  
     music_SimonsTheme: db $3E,$13,$80                       ;F2FE9D|        |      ;  
                        db $14,$3C,$64,$3C,$24,$3C,$34,$3C   ;F2FEA0|        |      ;  
                        db $44,$3C,$54,$3C,$64,$3C,$C8,$00   ;F2FEA8|        |      ;  

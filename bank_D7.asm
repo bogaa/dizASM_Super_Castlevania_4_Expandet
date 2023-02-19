@@ -761,6 +761,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D797A8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D797B0|        |FFFFFF;  
                        db $FF,$2B,$07,$03,$FF               ;D797B8|        |03072B;  
+                                                            ;      |        |      ;  
 sceneMabDataStage8_FrankQuater_01_BG1: db $03,$20,$80                       ;D797BD|        |      ;  
                        dw $0001,$0000,$0000,$801A           ;D797C0|        |      ;  
                        dw $8019,$0028,$0000,$0022           ;D797C8|        |      ;  
@@ -1798,6 +1799,7 @@ sceneMabDataStage8_FrankQuater_01_BG1: db $03,$20,$80                       ;D79
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D7B808|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D7B810|        |FFFFFF;  
                        db $FF,$31,$07,$03,$FF               ;D7B818|        |030731;  
+                                                            ;      |        |      ;  
 sceneMabDataStage8_FrankQuater_01_BG0: db $03,$20,$80                       ;D7B81D|        |      ;  
                        dw $0001,$0002,$0003,$001B           ;D7B820|        |      ;  
                        dw $001B,$001B,$0003,$0000           ;D7B828|        |      ;  
@@ -2835,6 +2837,7 @@ sceneMabDataStage8_FrankQuater_01_BG0: db $03,$20,$80                       ;D7B
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;D7D868|        |FFFFFF;  
                        db $FF,$9F,$0A,$03,$FF,$8C,$0A,$03   ;D7D870|        |030A9F;  
                        db $FF,$87,$0A,$03,$FF               ;D7D878|        |030A87;  
+                                                            ;      |        |      ;  
  levelGFXStage9_start: db $03,$40,$80                       ;D7D87D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;D7D880|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;D7D888|        |      ;  

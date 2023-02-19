@@ -1717,6 +1717,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E8B588|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E8B590|        |FFFFFF;  
                        db $FF,$6B,$02,$03,$FF               ;E8B598|        |03026B;  
+                                                            ;      |        |      ;  
 blockMabData_StageB_gaibone_BG1: db $03,$20,$80                       ;E8B59D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;E8B5A0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;E8B5A8|        |      ;  
@@ -2754,6 +2755,7 @@ blockMabData_StageB_gaibone_BG1: db $03,$20,$80                       ;E8B59D|  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E8D5E8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E8D5F0|        |FFFFFF;  
                        db $FF,$61,$08,$03,$FF               ;E8D5F8|        |030861;  
+                                                            ;      |        |      ;  
 sceneMabDataStageB_Gaibone_BG1: db $03,$20,$80                       ;E8D5FD|        |      ;  
                        dw $0002,$0003,$0004,$0009           ;E8D600|        |      ;  
                        dw $000A,$000B,$8009,$8004           ;E8D608|        |      ;  
@@ -3791,6 +3793,7 @@ sceneMabDataStageB_Gaibone_BG1: db $03,$20,$80                       ;E8D5FD|   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E8F648|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;E8F650|        |FFFFFF;  
                        db $FF,$0B,$0B,$03,$FF               ;E8F658|        |030B0B;  
+                                                            ;      |        |      ;  
 levelGFXStageB_deathQuater: db $03,$40,$80                       ;E8F65D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E8F660|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E8F668|        |      ;  

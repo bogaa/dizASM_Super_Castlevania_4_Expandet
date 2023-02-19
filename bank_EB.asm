@@ -801,6 +801,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EB98E8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EB98F0|        |FFFFFF;  
                        db $FF,$28,$0B,$03,$FF               ;EB98F8|        |030B28;  
+                                                            ;      |        |      ;  
 levelGFXStageB_draculasQuater02_cape00: db $23,$03,$80                       ;EB98FD|        |      ;  
                        db $FF,$00,$FF,$00,$FF,$00,$FF,$00   ;EB9900|        |      ;  
                        db $FF,$00,$FF,$00,$FF,$00,$FF,$00   ;EB9908|        |      ;  
@@ -914,6 +915,7 @@ levelGFXStageB_draculasQuater02_cape00: db $23,$03,$80                       ;EB
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EB9C68|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EB9C70|        |FFFFFF;  
                        db $FF,$2D,$0B,$03,$FF               ;EB9C78|        |030B2D;  
+                                                            ;      |        |      ;  
 levelGFXStageB_draculasQuater02_BG: db $84,$01,$80                       ;EB9C7D|        |      ;  
                        db $FF,$00,$FF,$00,$6F,$00,$FE,$00   ;EB9C80|        |      ;  
                        db $BB,$00,$EE,$00,$FF,$00,$52,$00   ;EB9C88|        |      ;  
@@ -979,6 +981,7 @@ levelGFXStageB_draculasQuater02_BG: db $84,$01,$80                       ;EB9C7D
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EB9E68|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EB9E70|        |FFFFFF;  
                        db $FF,$8B,$02,$03,$FF               ;EB9E78|        |03028B;  
+                                                            ;      |        |      ;  
 blockMabData_StageB_Dracula_BG1: db $03,$20,$80                       ;EB9E7D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;EB9E80|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;EB9E88|        |      ;  
@@ -2016,6 +2019,7 @@ blockMabData_StageB_Dracula_BG1: db $03,$20,$80                       ;EB9E7D|  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EBBEC8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EBBED0|        |FFFFFF;  
                        db $FF,$91,$02,$03,$FF               ;EBBED8|        |030291;  
+                                                            ;      |        |      ;  
 blockMabData_StageB_Dracula_BG0: db $03,$20,$80                       ;EBBEDD|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;EBBEE0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;EBBEE8|        |      ;  
@@ -3053,6 +3057,7 @@ blockMabData_StageB_Dracula_BG0: db $03,$20,$80                       ;EBBEDD|  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EBDF28|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EBDF30|        |FFFFFF;  
                        db $FF,$81,$08,$03,$FF               ;EBDF38|        |030881;  
+                                                            ;      |        |      ;  
 sceneMabDataStageB_Dracula_00_BG1: db $03,$20,$80                       ;EBDF3D|        |      ;  
                        dw $0061,$0064,$0065,$0063           ;EBDF40|        |      ;  
                        dw $005E,$0000,$006B,$006C           ;EBDF48|        |      ;  
@@ -4090,6 +4095,7 @@ sceneMabDataStageB_Dracula_00_BG1: db $03,$20,$80                       ;EBDF3D|
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EBFF88|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$97,$08,$03   ;EBFF90|        |FFFFFF;  
                        db $FF,$87,$08,$03,$FF               ;EBFF98|        |030887;  
+                                                            ;      |        |      ;  
 sceneMabDataStageB_Dracula_00_BG0: db $03,$20,$80                       ;EBFF9D|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;EBFFA0|        |      ;  
                        dw $0000,$0000,$0000,$0000           ;EBFFA8|        |      ;  

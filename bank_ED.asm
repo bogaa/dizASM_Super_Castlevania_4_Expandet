@@ -817,6 +817,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ED9968|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$56,$F3,$00   ;ED9970|        |FFFFFF;  
                        db $FF,$00,$BA,$00,$FF               ;ED9978|        |00BA00;  
+                                                            ;      |        |      ;  
  koranotRockstGFXdata: db $83,$03,$80                       ;ED997D|        |      ;  
                        db $00,$00,$7F,$7F,$EB,$9F,$C7,$BF   ;ED9980|        |      ;  
                        db $AB,$FF,$DF,$FF,$F7,$FF,$FF,$FF   ;ED9988|        |      ;  
@@ -942,6 +943,7 @@
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ED9D48|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;ED9D50|        |FFFFFF;  
                        db $FF,$09,$BA,$00,$FF               ;ED9D58|        |00BA09;  
+                                                            ;      |        |      ;  
 medusaBossGFXdataPart2: db $04,$0C,$80                       ;ED9D5D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$03,$00   ;ED9D60|        |      ;  
                        db $03,$01,$00,$00,$01,$00,$07,$0C   ;ED9D68|        |      ;  
@@ -1344,6 +1346,7 @@ medusaBossGFXdataPart2: db $04,$0C,$80                       ;ED9D5D|        |  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EDA9C9|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EDA9D1|        |FFFFFF;  
                        db $0E,$BA,$00,$FF                   ;EDA9D9|        |0000BA;  
+                                                            ;      |        |      ;  
 medusBossGFXdataPart1: db $03,$20,$80                       ;EDA9DD|        |      ;  
                        db $34,$CC,$84,$3D,$5E,$1D,$03,$0E   ;EDA9E0|        |      ;  
                        db $0F,$12,$3C,$21,$1E,$24,$AC,$D8   ;EDA9E8|        |      ;  
@@ -2381,6 +2384,7 @@ medusBossGFXdataPart1: db $03,$20,$80                       ;EDA9DD|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EDCA28|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EDCA30|        |FFFFFF;  
                        db $FF,$17,$BA,$00,$FF               ;EDCA38|        |00BA17;  
+                                                            ;      |        |      ;  
   pwuixelGFXdataPart2: db $03,$0C,$80                       ;EDCA3D|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;EDCA40|        |      ;  
                        db $01,$01,$02,$03,$08,$0E,$0C,$0E   ;EDCA48|        |      ;  
@@ -2778,6 +2782,7 @@ medusBossGFXdataPart1: db $03,$20,$80                       ;EDA9DD|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EDD688|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EDD690|        |FFFFFF;  
                        db $FF,$1C,$BA,$00,$FF               ;EDD698|        |00BA1C;  
+                                                            ;      |        |      ;  
   pwuixelGFXdataPart1: db $03,$20,$80                       ;EDD69D|        |      ;  
                        db $E8,$FC,$40,$E0,$00,$00,$00,$00   ;EDD6A0|        |      ;  
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;EDD6A8|        |      ;  
@@ -3815,6 +3820,7 @@ medusBossGFXdataPart1: db $03,$20,$80                       ;EDA9DD|        |   
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EDF6E8|        |FFFFFF;  
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;EDF6F0|        |FFFFFF;  
                        db $FF,$25,$BA,$00,$FF               ;EDF6F8|        |00BA25;  
+                                                            ;      |        |      ;  
    dancerGFXdataPart2: db $03,$0C,$80                       ;EDF6FD|        |      ;  
                        db $00,$00,$00,$00,$00,$02,$03,$03   ;EDF700|        |      ;  
                        db $01,$00,$00,$00,$03,$00,$08,$00   ;EDF708|        |      ;  
