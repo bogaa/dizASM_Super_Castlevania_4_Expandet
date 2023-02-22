@@ -6976,7 +6976,7 @@ gear_phusing2TheSideStateState02: JSR.W CODE_86BEB3                    ;86BE88|2
                        TAY                                  ;86BF3F|A8      |      ;  
                        LDA.W RAM_simonSlot_SpeedSubXpos     ;86BF40|AD5805  |000558;  
                        SEC                                  ;86BF43|38      |      ;  
-                       SBC.W UNREACH_00FA53,Y               ;86BF44|F953FA  |00FA53;  
+                       SBC.W LOOSE_OP_00FA53,Y              ;86BF44|F953FA  |00FA53;  
                        STA.W RAM_simonSlot_SpeedSubXpos     ;86BF47|8D5805  |000558;  
                        LDA.W RAM_simonSlot_SpeedXpos        ;86BF4A|AD5A05  |00055A;  
                        SBC.W LOOSE_OP_00FA63,Y              ;86BF4D|F963FA  |00FA63;  
@@ -7004,7 +7004,7 @@ gear_phusing2TheSideStateState02: JSR.W CODE_86BEB3                    ;86BE88|2
                        TAY                                  ;86BF78|A8      |      ;  
                        LDA.W RAM_simonSlot_SpeedSubXpos     ;86BF79|AD5805  |000558;  
                        CLC                                  ;86BF7C|18      |      ;  
-                       ADC.W UNREACH_00FA53,Y               ;86BF7D|7953FA  |00FA53;  
+                       ADC.W LOOSE_OP_00FA53,Y              ;86BF7D|7953FA  |00FA53;  
                        STA.W RAM_simonSlot_SpeedSubXpos     ;86BF80|8D5805  |000558;  
                        LDA.W RAM_simonSlot_SpeedXpos        ;86BF83|AD5A05  |00055A;  
                        ADC.W LOOSE_OP_00FA63,Y              ;86BF86|7963FA  |00FA63;  
