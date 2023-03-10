@@ -563,6 +563,7 @@
                        dma_pointerData17 = $818147          ;      |        |      ;  
                        dma_pointerData18 = $8180D7          ;      |        |      ;  
                        mainEventIDPointerTableL = $81A41E   ;      |        |      ;  
+                       secretStairBlockAnimDataLow = $81E2CC;      |        |      ;  
                        GFX_7DFFFB = $7DFFFB                 ;      |        |      ;  
                        GFX_7DFFFE = $7DFFFE                 ;      |        |      ;  
                        CODE_009133 = $009133                ;      |        |      ;  
@@ -774,7 +775,6 @@
                        DATA16_81E0E4 = $81E0E4              ;      |        |      ;  
                        DATA16_81E0EC = $81E0EC              ;      |        |      ;  
                        DATA16_81E0F4 = $81E0F4              ;      |        |      ;  
-                       DATA16_81E2CC = $81E2CC              ;      |        |      ;  
                        DATA16_81E652 = $81E652              ;      |        |      ;  
                        DATA16_81E882 = $81E882              ;      |        |      ;  
                        DATA16_81E838 = $81E838              ;      |        |      ;  

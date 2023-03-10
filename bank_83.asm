@@ -11314,8 +11314,8 @@ event48_SubID05_SecretBlockGra: LDA.B RAM_X_event_slot_state,X       ;83E336|B51
 secretBreakabGrStateTable: dw secretBreakabGrState00            ;83E345|        |83E351;  
                        dw secretBreakabGrState01            ;83E347|        |83E373;  
                        dw secretBreakabGrState01            ;83E349|        |83E373;  
-                       dw CODE_83E3B5                       ;83E34B|        |83E3B5;  
-                       dw CODE_83E3B5                       ;83E34D|        |83E3B5;  
+                       dw secretBreakabGrState03            ;83E34B|        |83E3B5;  
+                       dw secretBreakabGrState03            ;83E34D|        |83E3B5;  
                        dw secretBreakabGrState05            ;83E34F|        |83E403;  
                                                             ;      |        |      ;  
 secretBreakabGrState00: LDA.W $1602                          ;83E351|AD0216  |811602;  
@@ -11341,12 +11341,11 @@ secretBreakabGrState01: LDA.B RAM_X_event_slot_event_slot_health,X;83E373|B506  
                        STA.B RAM_X_event_slot_3e,X          ;83E379|953E    |00003E;  
                        LDA.B RAM_X_event_slot_state,X       ;83E37B|B512    |000012;  
                        CMP.W #$0002                         ;83E37D|C90200  |      ;  
-                       BNE CODE_83E389                      ;83E380|D007    |83E389;  
-                       LDA.W #$0072                         ;83E382|A97200  |      ;  
+                       BNE blockAnimMakeStairAppear         ;83E380|D007    |83E389;  
+                       LDA.W #$0072                         ;83E382|A97200  |      ; play secret found sound
+                       JSL.L lunchSFXfromAccum              ;83E385|22E38580|8085E3;  
                                                             ;      |        |      ;  
-secretBreakabGrState03: JSL.L lunchSFXfromAccum              ;83E385|22E38580|8085E3;  
-                                                            ;      |        |      ;  
-          CODE_83E389: LDA.W #$000C                         ;83E389|A90C00  |      ;  
+blockAnimMakeStairAppear: LDA.W #$000C                         ;83E389|A90C00  |      ;  
                        STA.B RAM_X_event_slot_24,X          ;83E38C|9524    |000024;  
                        INC.B RAM_X_event_slot_state,X       ;83E38E|F612    |000012;  
                        INC.B RAM_X_event_slot_3c,X          ;83E390|F63C    |00003C;  
@@ -11355,29 +11354,29 @@ secretBreakabGrState03: JSL.L lunchSFXfromAccum              ;83E385|22E38580|80
                        ASL A                                ;83E395|0A      |      ;  
                        STA.B RAM_X_event_slot_sprite_assembly;83E396|8500    |000000;  
                        TAY                                  ;83E398|A8      |      ;  
-                       LDA.W DATA16_81E2CB,Y                ;83E399|B9CBE2  |81E2CB;  
+                       LDA.W secretStairBlockAnimDataHigh,Y ;83E399|B9CBE2  |81E2CB;  
                        AND.W #$00FF                         ;83E39C|29FF00  |      ;  
                        LDY.W #$0690                         ;83E39F|A09006  |      ;  
                        JSL.L CODE_83D1E7                    ;83E3A2|22E7D183|83D1E7;  
                        LDY.B RAM_X_event_slot_sprite_assembly;83E3A6|A400    |000000;  
-                       LDA.W DATA16_81E2CC,Y                ;83E3A8|B9CCE2  |81E2CC;  
+                       LDA.W secretStairBlockAnimDataLow,Y  ;83E3A8|B9CCE2  |81E2CC;  
                        AND.W #$00FF                         ;83E3AB|29FF00  |      ;  
                        LDY.W #$0710                         ;83E3AE|A01007  |      ;  
                        JML.L CODE_83D1E7                    ;83E3B1|5CE7D183|83D1E7;  
                                                             ;      |        |      ;  
-          CODE_83E3B5: LDA.W #$0000                         ;83E3B5|A90000  |      ;  
+secretBreakabGrState03: LDA.W #$0000                         ;83E3B5|A90000  |      ; remove Floor Collusion
                        STA.L $7E4E20                        ;83E3B8|8F204E7E|7E4E20;  
                        STA.L $7E4E22                        ;83E3BC|8F224E7E|7E4E22;  
                        STA.L $7E4E24                        ;83E3C0|8F244E7E|7E4E24;  
                        STA.L $7E4E60                        ;83E3C4|8F604E7E|7E4E60;  
                        STA.L $7E4E62                        ;83E3C8|8F624E7E|7E4E62;  
                        STA.L $7E4EA0                        ;83E3CC|8FA04E7E|7E4EA0;  
-                       LDA.W #$8000                         ;83E3D0|A90080  |      ;  
+                       LDA.W #$8000                         ;83E3D0|A90080  |      ; drawStairs
                        STA.L $7E4E26                        ;83E3D3|8F264E7E|7E4E26;  
                        STA.L $7E4E64                        ;83E3D7|8F644E7E|7E4E64;  
                        STA.L $7E4EA2                        ;83E3DB|8FA24E7E|7E4EA2;  
                        STA.L $7E4EE0                        ;83E3DF|8FE04E7E|7E4EE0;  
-                       LDA.W #$0001                         ;83E3E3|A90100  |      ;  
+                       LDA.W #$0001                         ;83E3E3|A90100  |      ; make lower floor
                        STA.L $7E4E66                        ;83E3E6|8F664E7E|7E4E66;  
                        STA.L $7E4EA4                        ;83E3EA|8FA44E7E|7E4EA4;  
                        STA.L $7E4EA6                        ;83E3EE|8FA64E7E|7E4EA6;  
@@ -11385,7 +11384,7 @@ secretBreakabGrState03: JSL.L lunchSFXfromAccum              ;83E385|22E38580|80
                        STA.L $7E4EE4                        ;83E3F6|8FE44E7E|7E4EE4;  
                        STA.L $7E4EE6                        ;83E3FA|8FE64E7E|7E4EE6;  
                        DEC.B RAM_X_event_slot_24,X          ;83E3FE|D624    |000024;  
-                       BEQ CODE_83E389                      ;83E400|F087    |83E389;  
+                       BEQ blockAnimMakeStairAppear         ;83E400|F087    |83E389;  
                        RTL                                  ;83E402|6B      |      ;  
                                                             ;      |        |      ;  
 secretBreakabGrState05: LDA.B RAM_X_event_slot_HitboxID,X    ;83E403|B52E    |00002E;  

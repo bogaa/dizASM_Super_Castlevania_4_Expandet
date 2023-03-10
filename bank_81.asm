@@ -1587,7 +1587,7 @@ whipChain01DirectionProperty05: dw $FFFE,$0012,$0008,$0008           ;819ED7|   
                        dw $0F58,$0F18,$2317,$70FE           ;81A403|        |      ;  
                        dw $FD58,$2BA4,$2C2C,$FD2C           ;81A40B|        |      ;  
                        dw $2BE4,$20FD,$131E,$0F17           ;81A413|        |      ;  
-                       db $FF                               ;81A41B|        |80C9FF;  
+                       db $FF                               ;81A41B|        |      ;  
                                                             ;      |        |      ;  
 mainEventIDPointerTable: dl event_ID_00                       ;81A41C|        |80C9FF; 00
                        dl event_ID_01_Projectile            ;81A41F|        |82FE71; 01
@@ -6249,7 +6249,7 @@ SpriteAnimationTable126: dw sprAssFirstPageID_28              ;81E229|        |8
                        dw $0BF0,$0B72,$09F8,$09FA           ;81E2BD|        |      ;  
                        dw $7473,$7271,$6C75                 ;81E2C5|        |      ;  
                                                             ;      |        |      ;  
-        DATA16_81E2CB: dw $6665,$6867,$6967,$6A67           ;81E2CB|        |      ;  
+secretStairBlockAnimDataHigh: dw $6665,$6867,$6967,$6A67           ;81E2CB|        |      ;  
                                                             ;      |        |      ;  
         DATA16_81E2D3: dw $1300,$1B00,$1800,$1080           ;81E2D3|        |      ;  
                        dw $10A0,$063C,$067C,$06BC           ;81E2DB|        |      ;  
@@ -7723,7 +7723,7 @@ whipGFXtransitionReloadPointer: dw whipLeatherLimpGFXsrcDesPointer   ;81FA0F|   
                        dw $0000,$0000,$FFA0,$2AFF           ;81FC8D|        |      ;  
                        dw $0001,$0000,$0000,$0060           ;81FC95|        |      ;  
                        dw $FF00                             ;81FC9D|        |      ;  
-                       db $FF                               ;81FC9F|        |FDA4F8;  
+                       db $FF                               ;81FC9F|        |      ;  
                                                             ;      |        |      ;  
 spriteAssemblyRingPointer00: dw sprAssID_390                      ;81FCA0|        |84A4F8;  
                                                             ;      |        |      ;  
