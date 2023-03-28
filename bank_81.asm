@@ -4792,9 +4792,10 @@ SpriteAnimationTable64: dw sprAssID_834                      ;81D3E1|        |84
                        dw sprAssID_836                      ;81D3E9|        |84C9AB;  
                        dw $0030                             ;81D3EB|        |      ;  
                        dw sprAssID_837                      ;81D3ED|        |84C9D0;  
-                       dw $0010,$FFFF                       ;81D3EF|        |      ;  
                                                             ;      |        |      ;  
-        DATA16_81D3F3: dw $0008,$0000,$000A,$0000           ;81D3F3|        |      ;  
+  bossFrankSpeedTable: dw $0010,$FFFF                       ;81D3EF|        |      ;  
+                                                            ;      |        |      ;  
+bossFrankSubSpeedTable: dw $0008,$0000,$000A,$0000           ;81D3F3|        |      ;  
                        dw $0008,$0000,$000B,$0000           ;81D3FB|        |      ;  
                        dw $0008,$0000                       ;81D403|        |      ;  
                                                             ;      |        |      ;  
@@ -4837,11 +4838,11 @@ SpriteAnimationTable66: dw sprAssID_844                      ;81D42B|        |84
                        dw sprAssID_860                      ;81D44F|        |84CBCB;  
                        dw $0010,$FFFF                       ;81D451|        |      ;  
                                                             ;      |        |      ;  
-        DATA16_81D455: dw $0008,$0008,$0010,$0018           ;81D455|        |      ;  
+      frankBottleData: dw $0008,$0008,$0010,$0018           ;81D455|        |      ;  
                        dw $0020,$0028,$0030,$0030           ;81D45D|        |      ;  
                        dw $0030,$0030,$0030                 ;81D465|        |      ;  
                                                             ;      |        |      ;  
-SpriteAnimationTable67: dw sprAssID_848                      ;81D46B|        |84CB37;  
+SpriteAnimationTable67_frankBottle: dw sprAssID_848                      ;81D46B|        |84CB37;  
                        dw $0004                             ;81D46D|        |      ;  
                        dw sprAssID_849                      ;81D46F|        |84CB3C;  
                        dw $0005                             ;81D471|        |      ;  

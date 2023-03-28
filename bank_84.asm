@@ -6498,7 +6498,7 @@ NEWbossGrakulSC4edExitHandler: STZ.W $1C00                          ;84E80E|9C00
                        REP #$20                             ;84E92D|C220    |      ;  
                        RTL                                  ;84E92F|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_84E930: LDA.W #$0002                         ;84E930|A90200  |      ;  
+bossDraculaBGscrolling2AppearRightSpot: LDA.W #$0002                         ;84E930|A90200  |      ;  
                        STA.W $12D8                          ;84E933|8DD812  |8112D8;  
                        LDY.W #$00C9                         ;84E936|A0C900  |      ;  
                        LDA.B RAM_X_event_slot_flip_mirror_attribute,X;84E939|B504    |000004;  

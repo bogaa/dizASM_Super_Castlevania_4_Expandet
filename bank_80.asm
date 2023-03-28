@@ -726,7 +726,7 @@ soundEffectProcessing: SEP #$30                             ;808557|E230    |   
                        BEQ CODE_808603                      ;8085F1|F010    |808603;  
                        LDX.B RAM_SFXReadLPtr_Active         ;8085F3|A656    |000056;  
                        STA.B $5C                            ;8085F5|855C    |00005C;  
-                       STA.W RAM_81_SFX_Buffer100ByteLong,X ;8085F7|9D0001  |810100;  
+                       STA.W RAM_SFX_Buffer100ByteLong,X    ;8085F7|9D0001  |000100;  
                        INX                                  ;8085FA|E8      |      ;  
                        STX.B RAM_SFXReadLPtr_Active         ;8085FB|8656    |000056;  
                        CPX.B RAM_SFXReadLPtr_Set            ;8085FD|E454    |000054;  
@@ -737,6 +737,7 @@ soundEffectProcessing: SEP #$30                             ;808557|E230    |   
                        PLY                                  ;808604|7A      |      ;  
                        PLX                                  ;808605|FA      |      ;  
                        RTL                                  ;808606|6B      |      ;  
+                                                            ;      |        |      ;  
                                                             ;      |        |      ;  
           CODE_808607: REP #$30                             ;808607|C230    |      ;  
                        INC.B RAM_X_event_slot_3a            ;808609|E63A    |00003A;  
@@ -13799,7 +13800,7 @@ coffineSnaperStateTable: dw coffineSnaperState00              ;80EC24|        |8
                        BCS CODE_80EF04                      ;80EF01|B001    |80EF04;  
                        RTL                                  ;80EF03|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_80EF04: JSL.L CODE_82B0EE                    ;80EF04|22EEB082|82B0EE;  
+          CODE_80EF04: JSL.L resetSlotRAM22And24            ;80EF04|22EEB082|82B0EE;  
                        JSL.L CODE_82B0E0                    ;80EF08|22E0B082|82B0E0;  
                        LDA.W #$0003                         ;80EF0C|A90300  |      ;  
                        STA.B RAM_X_event_slot_Movement2c,X  ;80EF0F|952C    |00002C;  
@@ -13837,7 +13838,7 @@ coffineSnaperStateTable: dw coffineSnaperState00              ;80EC24|        |8
                        BCS CODE_80EF66                      ;80EF55|B00F    |80EF66;  
                        RTL                                  ;80EF57|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_80EF58: JSL.L CODE_82B0EE                    ;80EF58|22EEB082|82B0EE; unused??
+          CODE_80EF58: JSL.L resetSlotRAM22And24            ;80EF58|22EEB082|82B0EE; unused??
                        JSL.L CODE_82B0E0                    ;80EF5C|22E0B082|82B0E0;  
                        LDA.W #$0003                         ;80EF60|A90300  |      ;  
                        STA.B RAM_X_event_slot_state,X       ;80EF63|9512    |000012;  
@@ -14414,7 +14415,7 @@ event_ID_11and12_SkellyBone: LDA.B RAM_X_event_slot_state,X       ;80F356|B512  
                                                             ;      |        |      ;  
           CODE_80F413: RTL                                  ;80F413|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_80F414: JSL.L CODE_82B0EE                    ;80F414|22EEB082|82B0EE;  
+          CODE_80F414: JSL.L resetSlotRAM22And24            ;80F414|22EEB082|82B0EE;  
                        JSL.L CODE_82B0E0                    ;80F418|22E0B082|82B0E0;  
                        LDA.B RAM_X_event_slot_state,X       ;80F41C|B512    |000012;  
                        STA.B RAM_X_event_slot_34,X          ;80F41E|9534    |000034;  
@@ -14551,7 +14552,7 @@ collusion4movingPlatforms: LDA.B RAM_X_event_slot_HitboxXpos,X  ;80F43E|B528    
                                                             ;      |        |      ;  
           CODE_80F52F: RTL                                  ;80F52F|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_80F530: JSL.L CODE_82B0EE                    ;80F530|22EEB082|82B0EE;  
+          CODE_80F530: JSL.L resetSlotRAM22And24            ;80F530|22EEB082|82B0EE;  
                        JSL.L CODE_82B0E0                    ;80F534|22E0B082|82B0E0;  
                        LDA.B RAM_X_event_slot_state,X       ;80F538|B512    |000012;  
                        STA.B RAM_X_event_slot_34,X          ;80F53A|9534    |000034;  
@@ -14775,7 +14776,7 @@ collusion4movingPlatforms: LDA.B RAM_X_event_slot_HitboxXpos,X  ;80F43E|B528    
           CODE_80F6E7: RTL                                  ;80F6E7|6B      |      ;  
                                                             ;      |        |      ;  
           CODE_80F6E8: JSL.L CODE_82B0E4                    ;80F6E8|22E4B082|82B0E4;  
-                       JSL.L CODE_82B0EE                    ;80F6EC|22EEB082|82B0EE;  
+                       JSL.L resetSlotRAM22And24            ;80F6EC|22EEB082|82B0EE;  
                        STZ.B RAM_X_event_slot_Movement2c,X  ;80F6F0|742C    |00002C;  
                        LDA.W #$0008                         ;80F6F2|A90800  |      ;  
                        STA.B RAM_X_event_slot_state,X       ;80F6F5|9512    |000012;  
@@ -14808,7 +14809,7 @@ collusion4movingPlatforms: LDA.B RAM_X_event_slot_HitboxXpos,X  ;80F43E|B528    
           CODE_80F72C: RTL                                  ;80F72C|6B      |      ;  
                                                             ;      |        |      ;  
           CODE_80F72D: JSL.L CODE_82B0E0                    ;80F72D|22E0B082|82B0E0;  
-                       JSL.L CODE_82B0EE                    ;80F731|22EEB082|82B0EE;  
+                       JSL.L resetSlotRAM22And24            ;80F731|22EEB082|82B0EE;  
                        LDA.W #$0009                         ;80F735|A90900  |      ;  
                        STA.B RAM_X_event_slot_state,X       ;80F738|9512    |000012;  
                        RTL                                  ;80F73A|6B      |      ;  
@@ -14879,7 +14880,7 @@ collusion4movingPlatforms: LDA.B RAM_X_event_slot_HitboxXpos,X  ;80F43E|B528    
                        SBC.B RAM_X_event_slot_ySpd,X        ;80F7BF|F51E    |00001E;  
                        STA.B RAM_X_event_slot_yPos,X        ;80F7C1|950E    |00000E;  
                        JSL.L CODE_82B0E0                    ;80F7C3|22E0B082|82B0E0;  
-                       JSL.L CODE_82B0EE                    ;80F7C7|22EEB082|82B0EE;  
+                       JSL.L resetSlotRAM22And24            ;80F7C7|22EEB082|82B0EE;  
                        LDA.W #$000A                         ;80F7CB|A90A00  |      ;  
                        STA.B RAM_X_event_slot_state,X       ;80F7CE|9512    |000012;  
                        RTL                                  ;80F7D0|6B      |      ;  
@@ -14961,7 +14962,7 @@ collusion4movingPlatforms: LDA.B RAM_X_event_slot_HitboxXpos,X  ;80F43E|B528    
                                                             ;      |        |      ;  
           CODE_80F874: LDA.W #$0003                         ;80F874|A90300  |      ;  
                        STA.B RAM_X_event_slot_Movement2c,X  ;80F877|952C    |00002C;  
-                       JSL.L CODE_82B0EE                    ;80F879|22EEB082|82B0EE;  
+                       JSL.L resetSlotRAM22And24            ;80F879|22EEB082|82B0EE;  
                        JMP.W CODE_80F5D2                    ;80F87D|4CD2F5  |80F5D2;  
                                                             ;      |        |      ;  
           CODE_80F880: LDA.B RAM_X_event_slot_ID,X          ;80F880|B510    |000010;  
@@ -15012,7 +15013,7 @@ collusion4movingPlatforms: LDA.B RAM_X_event_slot_HitboxXpos,X  ;80F43E|B528    
                                                             ;      |        |      ;  
           CODE_80F8E0: RTL                                  ;80F8E0|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_80F8E1: JSL.L CODE_82B0EE                    ;80F8E1|22EEB082|82B0EE;  
+          CODE_80F8E1: JSL.L resetSlotRAM22And24            ;80F8E1|22EEB082|82B0EE;  
                        LDA.B RAM_X_event_slot_state,X       ;80F8E5|B512    |000012;  
                        STA.B RAM_X_event_slot_34,X          ;80F8E7|9534    |000034;  
                        JMP.W CODE_80F5D2                    ;80F8E9|4CD2F5  |80F5D2;  
@@ -15057,7 +15058,7 @@ collusion4movingPlatforms: LDA.B RAM_X_event_slot_HitboxXpos,X  ;80F43E|B528    
                        BCS CODE_80F93A                      ;80F937|B001    |80F93A;  
                        RTL                                  ;80F939|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_80F93A: JSL.L CODE_82B0EE                    ;80F93A|22EEB082|82B0EE;  
+          CODE_80F93A: JSL.L resetSlotRAM22And24            ;80F93A|22EEB082|82B0EE;  
                        LDA.W #$0047                         ;80F93E|A94700  |      ;  
                        STA.B RAM_X_event_slot_HitboxID,X    ;80F941|952E    |00002E;  
                        LDA.W #$0001                         ;80F943|A90100  |      ;  
@@ -15481,7 +15482,7 @@ newSC4edFixCameraUpdateSkip: BCC CODE_80FA09                      ;80FA00|9007  
       leaveManState04: JSL.L CODE_80FC9F                    ;80FC8B|229FFC80|80FC9F;  
                        LDA.W #$002D                         ;80FC8F|A92D00  |      ;  
                        STA.B RAM_X_event_slot_ID,X          ;80FC92|9510    |000010;  
-                       JSL.L CODE_82B0EE                    ;80FC94|22EEB082|82B0EE;  
+                       JSL.L resetSlotRAM22And24            ;80FC94|22EEB082|82B0EE;  
                        STZ.B RAM_X_event_slot_state,X       ;80FC98|7412    |000012;  
                        STZ.B RAM_X_event_slot_Movement2c,X  ;80FC9A|742C    |00002C;  
                        STZ.B RAM_X_event_slot_HitboxID,X    ;80FC9C|742E    |00002E;  
