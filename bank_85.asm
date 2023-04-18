@@ -4600,7 +4600,7 @@ bossDancerHealthHudRoutine: LDA.B RAM_X_event_slot_state,X       ;85E1A1|B512   
           CODE_85E1CB: LDA.W #$1000                         ;85E1CB|A90010  |      ;  
                        STA.W $0EF0                          ;85E1CE|8DF00E  |810EF0;  
                        JSL.L CODE_82B0E0                    ;85E1D1|22E0B082|82B0E0;  
-                       JSL.L resetSlotRAM22And24            ;85E1D5|22EEB082|82B0EE;  
+                       JSL.L resetRAM22And24                ;85E1D5|22EEB082|82B0EE;  
                        JSL.L CODE_85E1F9                    ;85E1D9|22F9E185|85E1F9;  
                        JSL.L CODE_82B3E3                    ;85E1DD|22E3B382|82B3E3;  
                        LDA.W #$0000                         ;85E1E1|A90000  |      ;  
@@ -4615,7 +4615,7 @@ bossDancerHealthHudRoutine: LDA.B RAM_X_event_slot_state,X       ;85E1A1|B512   
           CODE_85E1F9: STZ.B RAM_X_event_slot_sprite_assembly,X;85E1F9|7400    |000000;  
                        STZ.B RAM_X_event_slot_HitboxID,X    ;85E1FB|742E    |00002E;  
                        JSL.L CODE_82B0E0                    ;85E1FD|22E0B082|82B0E0;  
-                       JSL.L resetSlotRAM22And24            ;85E201|22EEB082|82B0EE;  
+                       JSL.L resetRAM22And24                ;85E201|22EEB082|82B0EE;  
                        LDA.W #$05C0                         ;85E205|A9C005  |      ;  
                        STA.B RAM_X_event_slot_sprite_assembly;85E208|8500    |000000;  
                        LDA.W #$0D00                         ;85E20A|A9000D  |      ;  
@@ -4841,10 +4841,10 @@ event_ID_46_breakableStairs: LDA.B RAM_X_event_slot_subId,X       ;85E3DA|B514  
                        BEQ CODE_85E3EE                      ;85E3DF|F00D    |85E3EE;  
                        BIT.W #$0040                         ;85E3E1|894000  |      ;  
                        BNE CODE_85E3E9                      ;85E3E4|D003    |85E3E9;  
-                       JMP.W animatedBackgroundSkelly80     ;85E3E6|4C21E5  |85E521; animatedBackground 80+ 
+                       JMP.W spikeFromCelling80             ;85E3E6|4C21E5  |85E521; animatedBackground 80+ 
                                                             ;      |        |      ;  
           CODE_85E3E9: BEQ CODE_85E3EE                      ;85E3E9|F003    |85E3EE;  
-                       JMP.W animatedBackgroundSkellyc0     ;85E3EB|4CE5E5  |85E5E5;  animatedBackground c0+
+                       JMP.W vegasBridgeC0                  ;85E3EB|4CE5E5  |85E5E5;  animatedBackground c0+
                                                             ;      |        |      ;  
           CODE_85E3EE: BIT.W #$0040                         ;85E3EE|894000  |      ;  
                        BEQ breakableStairsStateRoutine      ;85E3F1|F003    |85E3F6;  
@@ -4921,7 +4921,7 @@ breakableStairState01: LDA.B RAM_X_event_slot_event_slot_health,X;85E41F|B506   
                        LDA.B RAM_X_event_slot_xPos          ;85E487|A50A    |00000A;  
                        JSL.L CODE_83D1E7                    ;85E489|22E7D183|83D1E7;  
                        PLY                                  ;85E48D|7A      |      ;  
-                       LDX.W DATA16_81F2D4,Y                ;85E48E|BED4F2  |81F2D4;  
+                       LDX.W breakableStairsCollusionRemovePointer,Y;85E48E|BED4F2  |81F2D4;  
                        LDA.W #$0000                         ;85E491|A90000  |      ;  
                        CPY.W #$0004                         ;85E494|C00400  |      ;  
                        BCS CODE_85E4B0                      ;85E497|B017    |85E4B0;  
@@ -4984,20 +4984,20 @@ animatedBackgroundSkelly40: LDA.B RAM_X_event_slot_24,X          ;85E4D7|B524   
                        PLA                                  ;85E51C|68      |      ;  
                        JML.L CODE_83D1E7                    ;85E51D|5CE7D183|83D1E7;  
                                                             ;      |        |      ;  
-animatedBackgroundSkelly80: LDA.B RAM_X_event_slot_state,X       ;85E521|B512    |000012;  
+   spikeFromCelling80: LDA.B RAM_X_event_slot_state,X       ;85E521|B512    |000012;  
                        PHX                                  ;85E523|DA      |      ;  
                        ASL A                                ;85E524|0A      |      ;  
                        TAX                                  ;85E525|AA      |      ;  
-                       LDA.L animatedBackgroundSkelly80StateTable,X;85E526|BF30E585|85E530;  
+                       LDA.L spikeFromCelling80StateTable,X ;85E526|BF30E585|85E530;  
                        PLX                                  ;85E52A|FA      |      ;  
                        STA.B RAM_X_event_slot_sprite_assembly;85E52B|8500    |000000;  
                        JMP.W (RAM_X_event_slot_sprite_assembly);85E52D|6C0000  |000000;  
                                                             ;      |        |      ;  
-animatedBackgroundSkelly80StateTable: dw animBGSkelly80State00             ;85E530|        |85E536;  
-                       dw animBGSkelly80State01             ;85E532|        |85E54B;  
-                       dw animBGSkelly80State02             ;85E534|        |85E573;  
+spikeFromCelling80StateTable: dw spikeFromCelling80State00         ;85E530|        |85E536;  
+                       dw spikeFromCelling80State01         ;85E532|        |85E54B;  
+                       dw spikeFromCelling80State02         ;85E534|        |85E573;  
                                                             ;      |        |      ;  
-animBGSkelly80State00: LDA.B RAM_X_event_slot_subId,X       ;85E536|B514    |000014;  
+spikeFromCelling80State00: LDA.B RAM_X_event_slot_subId,X       ;85E536|B514    |000014;  
                        AND.W #$001F                         ;85E538|291F00  |      ;  
                        ASL A                                ;85E53B|0A      |      ;  
                        TAY                                  ;85E53C|A8      |      ;  
@@ -5009,7 +5009,7 @@ animBGSkelly80State00: LDA.B RAM_X_event_slot_subId,X       ;85E536|B514    |000
                        INC.B RAM_X_event_slot_state,X       ;85E548|F612    |000012;  
                        RTL                                  ;85E54A|6B      |      ;  
                                                             ;      |        |      ;  
-animBGSkelly80State01: LDA.B RAM_X_event_slot_24,X          ;85E54B|B524    |000024;  
+spikeFromCelling80State01: LDA.B RAM_X_event_slot_24,X          ;85E54B|B524    |000024;  
                        BEQ CODE_85E552                      ;85E54D|F003    |85E552;  
                        DEC.B RAM_X_event_slot_24,X          ;85E54F|D624    |000024;  
                        RTL                                  ;85E551|6B      |      ;  
@@ -5030,7 +5030,7 @@ animBGSkelly80State01: LDA.B RAM_X_event_slot_24,X          ;85E54B|B524    |000
                                                             ;      |        |      ;  
           CODE_85E572: RTL                                  ;85E572|6B      |      ;  
                                                             ;      |        |      ;  
-animBGSkelly80State02: LDA.B RAM_X_event_slot_24,X          ;85E573|B524    |000024;  
+spikeFromCelling80State02: LDA.B RAM_X_event_slot_24,X          ;85E573|B524    |000024;  
                        BEQ CODE_85E57A                      ;85E575|F003    |85E57A;  
                        DEC.B RAM_X_event_slot_24,X          ;85E577|D624    |000024;  
                        RTL                                  ;85E579|6B      |      ;  
@@ -5068,14 +5068,14 @@ animBGSkelly80State02: LDA.B RAM_X_event_slot_24,X          ;85E573|B524    |000
                        CLC                                  ;85E5B5|18      |      ;  
                        ADC.W #$0040                         ;85E5B6|694000  |      ;  
                        STA.B RAM_X_event_slot_flip_mirror_attribute;85E5B9|8504    |000004;  
-                       LDA.W DATA16_81F2E0,Y                ;85E5BB|B9E0F2  |81F2E0;  
+                       LDA.W spikeFromCellingCollusionData,Y;85E5BB|B9E0F2  |81F2E0;  
                        AND.W #$00FF                         ;85E5BE|29FF00  |      ;  
                        BEQ CODE_85E5C6                      ;85E5C1|F003    |85E5C6;  
                        LDA.W #$0006                         ;85E5C3|A90600  |      ;  
                                                             ;      |        |      ;  
           CODE_85E5C6: STA.L $7E4000,X                      ;85E5C6|9F00407E|7E4000;  
                        PLX                                  ;85E5CA|FA      |      ;  
-                       LDA.W DATA16_81F2E0,Y                ;85E5CB|B9E0F2  |81F2E0;  
+                       LDA.W spikeFromCellingCollusionData,Y;85E5CB|B9E0F2  |81F2E0;  
                        AND.W #$00FF                         ;85E5CE|29FF00  |      ;  
                        ORA.W #$0800                         ;85E5D1|090008  |      ;  
                        STA.L $7E0000,X                      ;85E5D4|9F00007E|7E0000;  
@@ -5087,25 +5087,25 @@ animBGSkelly80State02: LDA.B RAM_X_event_slot_24,X          ;85E573|B524    |000
                        STX.B $50                            ;85E5DF|8650    |000050;  
                        JML.L CODE_808D91                    ;85E5E1|5C918D80|808D91;  
                                                             ;      |        |      ;  
-animatedBackgroundSkellyc0: LDA.B RAM_X_event_slot_state,X       ;85E5E5|B512    |000012;  animatedBackground c0+
+        vegasBridgeC0: LDA.B RAM_X_event_slot_state,X       ;85E5E5|B512    |000012;  animatedBackground c0+
                        PHX                                  ;85E5E7|DA      |      ;  
                        ASL A                                ;85E5E8|0A      |      ;  
                        TAX                                  ;85E5E9|AA      |      ;  
-                       LDA.L animatedBackgroundSkellyc0StateTable,X;85E5EA|BFF4E585|85E5F4;  
+                       LDA.L vegasBridgeC0StateTable,X      ;85E5EA|BFF4E585|85E5F4;  
                        PLX                                  ;85E5EE|FA      |      ;  
                        STA.B RAM_X_event_slot_sprite_assembly;85E5EF|8500    |000000;  
                        JMP.W (RAM_X_event_slot_sprite_assembly);85E5F1|6C0000  |000000;  
                                                             ;      |        |      ;  
-animatedBackgroundSkellyc0StateTable: dw animBGSkellyc0State00             ;85E5F4|        |85E604;  
-                       dw animBGSkellyc0State01             ;85E5F6|        |85E61F;  
-                       dw animBGSkellyc0State02             ;85E5F8|        |85E62D;  
-                       dw animBGSkellyc0State03             ;85E5FA|        |85E639;  
-                       dw animBGSkellyc0State04             ;85E5FC|        |85E64C;  
-                       dw animBGSkellyc0State01             ;85E5FE|        |85E61F;  
-                       dw animBGSkellyc0State02             ;85E600|        |85E62D;  
-                       dw animBGSkellyc0State07             ;85E602|        |85E68D;  
+vegasBridgeC0StateTable: dw vegasBridgeC0State00              ;85E5F4|        |85E604;  
+                       dw vegasBridgeC0State01              ;85E5F6|        |85E61F;  
+                       dw vegasBridgeC0State02              ;85E5F8|        |85E62D;  
+                       dw vegasBridgeC0State03              ;85E5FA|        |85E639;  
+                       dw vegasBridgeC0State04              ;85E5FC|        |85E64C;  
+                       dw vegasBridgeC0State01              ;85E5FE|        |85E61F;  
+                       dw vegasBridgeC0State02              ;85E600|        |85E62D;  
+                       dw vegasBridgeC0State07              ;85E602|        |85E68D;  
                                                             ;      |        |      ;  
-animBGSkellyc0State00: LDA.B RAM_X_event_slot_subId,X       ;85E604|B514    |000014;  
+ vegasBridgeC0State00: LDA.B RAM_X_event_slot_subId,X       ;85E604|B514    |000014;  
                        AND.W #$001F                         ;85E606|291F00  |      ;  
                        ASL A                                ;85E609|0A      |      ;  
                        PHA                                  ;85E60A|48      |      ;  
@@ -5122,7 +5122,7 @@ animBGSkellyc0State00: LDA.B RAM_X_event_slot_subId,X       ;85E604|B514    |000
                        INC.B RAM_X_event_slot_state,X       ;85E61C|F612    |000012;  
                        RTL                                  ;85E61E|6B      |      ;  
                                                             ;      |        |      ;  
-animBGSkellyc0State01: LDA.B RAM_RNG_2                      ;85E61F|A5E8    |0000E8;  
+ vegasBridgeC0State01: LDA.B RAM_RNG_2                      ;85E61F|A5E8    |0000E8;  
                        AND.W #$003F                         ;85E621|293F00  |      ;  
                        CLC                                  ;85E624|18      |      ;  
                        ADC.W #$0040                         ;85E625|694000  |      ;  
@@ -5130,7 +5130,7 @@ animBGSkellyc0State01: LDA.B RAM_RNG_2                      ;85E61F|A5E8    |000
                        INC.B RAM_X_event_slot_state,X       ;85E62A|F612    |000012;  
                        RTL                                  ;85E62C|6B      |      ;  
                                                             ;      |        |      ;  
-animBGSkellyc0State02: DEC.B RAM_X_event_slot_24,X          ;85E62D|D624    |000024;  
+ vegasBridgeC0State02: DEC.B RAM_X_event_slot_24,X          ;85E62D|D624    |000024;  
                        BNE CODE_85E638                      ;85E62F|D007    |85E638;  
                        LDA.W #$0020                         ;85E631|A92000  |      ;  
                        STA.B RAM_X_event_slot_24,X          ;85E634|9524    |000024;  
@@ -5139,7 +5139,7 @@ animBGSkellyc0State02: DEC.B RAM_X_event_slot_24,X          ;85E62D|D624    |000
                                                             ;      |        |      ;  
           CODE_85E638: RTL                                  ;85E638|6B      |      ;  
                                                             ;      |        |      ;  
-animBGSkellyc0State03: DEC.B RAM_X_event_slot_24,X          ;85E639|D624    |000024;  
+ vegasBridgeC0State03: DEC.B RAM_X_event_slot_24,X          ;85E639|D624    |000024;  
                        BEQ CODE_85E636                      ;85E63B|F0F9    |85E636;  
                        LDA.B RAM_X_event_slot_24,X          ;85E63D|B524    |000024;  
                        AND.W #$0002                         ;85E63F|290200  |      ;  
@@ -5148,7 +5148,7 @@ animBGSkellyc0State03: DEC.B RAM_X_event_slot_24,X          ;85E639|D624    |000
                        LDY.B RAM_X_event_slot_32,X          ;85E646|B432    |000032;  
                        JML.L CODE_83D1E7                    ;85E648|5CE7D183|83D1E7;  
                                                             ;      |        |      ;  
-animBGSkellyc0State04: INC.B RAM_X_event_slot_state,X       ;85E64C|F612    |000012;  
+ vegasBridgeC0State04: INC.B RAM_X_event_slot_state,X       ;85E64C|F612    |000012;  
                        LDA.B RAM_X_event_slot_36,X          ;85E64E|B536    |000036;  
                        STA.B RAM_X_event_slot_sprite_assembly;85E650|8500    |000000;  
                        LDA.W #$0000                         ;85E652|A90000  |      ;  
@@ -5173,7 +5173,7 @@ animBGSkellyc0State04: INC.B RAM_X_event_slot_state,X       ;85E64C|F612    |000
                        STA.L $7E8000,X                      ;85E688|9F00807E|7E8000;  
                        RTL                                  ;85E68C|6B      |      ;  
                                                             ;      |        |      ;  
-animBGSkellyc0State07: STZ.B RAM_X_event_slot_state,X       ;85E68D|7412    |000012;  
+ vegasBridgeC0State07: STZ.B RAM_X_event_slot_state,X       ;85E68D|7412    |000012;  
                        LDA.B RAM_X_event_slot_36,X          ;85E68F|B536    |000036;  
                        STA.B RAM_X_event_slot_sprite_assembly;85E691|8500    |000000;  
                        LDA.W #$0001                         ;85E693|A90100  |      ;  

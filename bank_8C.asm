@@ -4064,7 +4064,7 @@ handsSwithSwordSkellyState04: JSL.L CODE_8CF9AE                    ;8CF99A|22AEF
                        BEQ CODE_8CF9BA                      ;8CF9B7|F001    |8CF9BA;  
                        RTL                                  ;8CF9B9|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_8CF9BA: JSL.L resetSlotRAM22And24            ;8CF9BA|22EEB082|82B0EE;  
+          CODE_8CF9BA: JSL.L resetRAM22And24                ;8CF9BA|22EEB082|82B0EE;  
                        LDA.W #$00C7                         ;8CF9BE|A9C700  |      ;  
                        STA.B RAM_X_event_slot_HitboxID,X    ;8CF9C1|952E    |00002E;  
                        LDA.W #$0005                         ;8CF9C3|A90500  |      ;  
@@ -4081,7 +4081,7 @@ handsSwithSwordSkellyState05: LDA.W #$FB96                         ;8CF9C9|A996F
                        BCS CODE_8CF9DF                      ;8CF9DC|B001    |8CF9DF;  
                        RTL                                  ;8CF9DE|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_8CF9DF: JSL.L resetSlotRAM22And24            ;8CF9DF|22EEB082|82B0EE;  
+          CODE_8CF9DF: JSL.L resetRAM22And24                ;8CF9DF|22EEB082|82B0EE;  
                        LDA.W #$0080                         ;8CF9E3|A98000  |      ;  
                        STA.B RAM_X_event_slot_HitboxID,X    ;8CF9E6|952E    |00002E;  
                        LDA.W #$0004                         ;8CF9E8|A90400  |      ;  
@@ -4136,7 +4136,7 @@ handsSwithSwordSkellyState06: LDA.W #$0000                         ;8CFA15|A9000
                        RTL                                  ;8CFA45|6B      |      ;  
                                                             ;      |        |      ;  
           CODE_8CFA46: STZ.B RAM_X_event_slot_state,X       ;8CFA46|7412    |000012;  
-                       JSL.L resetSlotRAM22And24            ;8CFA48|22EEB082|82B0EE;  
+                       JSL.L resetRAM22And24                ;8CFA48|22EEB082|82B0EE;  
                        LDA.W #$003D                         ;8CFA4C|A93D00  |      ;  
                        STA.B RAM_X_event_slot_ID,X          ;8CFA4F|9510    |000010;  
                        LDA.W #$0000                         ;8CFA51|A90000  |      ;  
@@ -4343,7 +4343,7 @@ event_ID_61_SwingingSpikePlatform: LDA.B RAM_X_event_slot_subId,X       ;8CFA57|
                        STZ.B RAM_X_event_slot_sprite_assembly,X;8CFBE5|7400    |000000;  
                        STZ.B RAM_X_event_slot_Movement2c,X  ;8CFBE7|742C    |00002C;  
                        STZ.B RAM_X_event_slot_HitboxID,X    ;8CFBE9|742E    |00002E;  
-                       JSL.L resetSlotRAM22And24            ;8CFBEB|22EEB082|82B0EE;  
+                       JSL.L resetRAM22And24                ;8CFBEB|22EEB082|82B0EE;  
                        JSL.L CODE_82B0E0                    ;8CFBEF|22E0B082|82B0E0;  
                        INC.B RAM_X_event_slot_state,X       ;8CFBF3|F612    |000012;  
                        RTL                                  ;8CFBF5|6B      |      ;  
