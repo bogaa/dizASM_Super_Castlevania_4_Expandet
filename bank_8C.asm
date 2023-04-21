@@ -3997,7 +3997,7 @@ handsSwithSwordSkellyState02: JSL.L CODE_8CF95A                    ;8CF918|225AF
           CODE_8CF937: LDA.W #$0009                         ;8CF937|A90900  |      ;  
                        STA.B RAM_X_event_slot_32,X          ;8CF93A|9532    |000032;  
                        LDA.W #$0001                         ;8CF93C|A90100  |      ;  
-                       STA.B $9C                            ;8CF93F|859C    |00009C;  
+                       STA.B RAM_spritePrioManip            ;8CF93F|859C    |00009C;  
                        INC.B RAM_X_event_slot_34,X          ;8CF941|F634    |000034;  
                        LDA.B RAM_X_event_slot_34,X          ;8CF943|B534    |000034;  
                        CMP.W #$0028                         ;8CF945|C92800  |      ;  
@@ -4005,7 +4005,7 @@ handsSwithSwordSkellyState02: JSL.L CODE_8CF95A                    ;8CF918|225AF
                        RTL                                  ;8CF94A|6B      |      ;  
                                                             ;      |        |      ;  
           CODE_8CF94B: STZ.B RAM_X_event_slot_34,X          ;8CF94B|7434    |000034;  
-                       STZ.B $9C                            ;8CF94D|649C    |00009C;  
+                       STZ.B RAM_spritePrioManip            ;8CF94D|649C    |00009C;  
                        LDA.W #$0009                         ;8CF94F|A90900  |      ;  
                        STA.B RAM_X_event_slot_32,X          ;8CF952|9532    |000032;  
                        LDA.W #$0003                         ;8CF954|A90300  |      ;  
@@ -4108,7 +4108,7 @@ handsSwithSwordSkellyState05: LDA.W #$FB96                         ;8CF9C9|A996F
                        RTL                                  ;8CFA14|6B      |      ;  
                                                             ;      |        |      ;  
 handsSwithSwordSkellyState06: LDA.W #$0000                         ;8CFA15|A90000  |      ;  
-                       STA.B $9C                            ;8CFA18|859C    |00009C;  
+                       STA.B RAM_spritePrioManip            ;8CFA18|859C    |00009C;  
                        LDA.W #$002D                         ;8CFA1A|A92D00  |      ;  
                        STA.B RAM_X_event_slot_ID,X          ;8CFA1D|9510    |000010;  
                        STZ.B RAM_X_event_slot_state,X       ;8CFA1F|7412    |000012;  
@@ -4140,7 +4140,7 @@ handsSwithSwordSkellyState06: LDA.W #$0000                         ;8CFA15|A9000
                        LDA.W #$003D                         ;8CFA4C|A93D00  |      ;  
                        STA.B RAM_X_event_slot_ID,X          ;8CFA4F|9510    |000010;  
                        LDA.W #$0000                         ;8CFA51|A90000  |      ;  
-                       STA.B $9C                            ;8CFA54|859C    |00009C;  
+                       STA.B RAM_spritePrioManip            ;8CFA54|859C    |00009C;  
                        RTL                                  ;8CFA56|6B      |      ;  
                                                             ;      |        |      ;  
 event_ID_61_SwingingSpikePlatform: LDA.B RAM_X_event_slot_subId,X       ;8CFA57|B514    |000014;  

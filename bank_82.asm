@@ -1347,9 +1347,9 @@ event_ID_41_camaraLockEvent: LDA.B RAM_X_event_slot_state,X       ;828B7E|B512  
                                                             ;      |        |      ;  
       ironGateState03: PHX                                  ;828C4A|DA      |      ;  
                        LDY.W #$8018                         ;828C4B|A01880  |      ;  
-                       LDA.B $9C                            ;828C4E|A59C    |00009C;  
+                       LDA.B RAM_spritePrioManip            ;828C4E|A59C    |00009C;  
                        EOR.W #$0001                         ;828C50|490100  |      ;  
-                       STA.B $9C                            ;828C53|859C    |00009C;  
+                       STA.B RAM_spritePrioManip            ;828C53|859C    |00009C;  
                        BEQ CODE_828C5A                      ;828C55|F003    |828C5A;  
                        LDY.W #$0000                         ;828C57|A00000  |      ;  
                                                             ;      |        |      ;  
@@ -3796,7 +3796,7 @@ stealingHandStateTable: dw stealingHandState00               ;829F35|        |82
                        LDA.W #$0002                         ;829FAF|A90200  |      ;  
                        STA.B RAM_X_event_slot_state,X       ;829FB2|9512    |000012;  
                        LDA.W #$0001                         ;829FB4|A90100  |      ;  
-                       STA.B $9C                            ;829FB7|859C    |00009C;  
+                       STA.B RAM_spritePrioManip            ;829FB7|859C    |00009C;  
                        LDA.B RAM_RNG_2                      ;829FB9|A5E8    |0000E8;  
                        AND.W #$001F                         ;829FBB|291F00  |      ;  
                        SEC                                  ;829FBE|38      |      ;  
@@ -3844,7 +3844,7 @@ stealingHandStateTable: dw stealingHandState00               ;829F35|        |82
                        JMP.W CODE_82A096                    ;82A011|4C96A0  |82A096;  
                                                             ;      |        |      ;  
           CODE_82A014: LDA.W #$0001                         ;82A014|A90100  |      ;  
-                       STA.B $9C                            ;82A017|859C    |00009C;  
+                       STA.B RAM_spritePrioManip            ;82A017|859C    |00009C;  
                        SED                                  ;82A019|F8      |      ;  
                        LDA.L $8013F2                        ;82A01A|AFF21380|8013F2;  
                        SEC                                  ;82A01E|38      |      ;  
@@ -3916,7 +3916,7 @@ stealingHandStateTable: dw stealingHandState00               ;829F35|        |82
                        STZ.B RAM_X_event_slot_state,X       ;82A0B8|7412    |000012;  
                        RTL                                  ;82A0BA|6B      |      ;  
                                                             ;      |        |      ;  
-  stealingHandState04: STZ.B $9C                            ;82A0BB|649C    |00009C;  
+  stealingHandState04: STZ.B RAM_spritePrioManip            ;82A0BB|649C    |00009C;  
                        LDA.W #$96B5                         ;82A0BD|A9B596  |      ;  
                        STA.B RAM_X_event_slot_sprite_assembly,X;82A0C0|9500    |000000;  
                        STZ.B RAM_X_event_slot_32,X          ;82A0C2|7432    |000032;  
@@ -7624,7 +7624,7 @@ event_ID_04_PullBridge: LDA.B RAM_X_event_slot_state,X       ;82BD6E|B512    |00
                        CMP.W #$0300                         ;82BD92|C90003  |      ;  
                        BCC CODE_82BDB0                      ;82BD95|9019    |82BDB0;  
                        LDA.W #$0001                         ;82BD97|A90100  |      ;  
-                       STA.B $9C                            ;82BD9A|859C    |00009C;  
+                       STA.B RAM_spritePrioManip            ;82BD9A|859C    |00009C;  
                        LDA.W #$8000                         ;82BD9C|A90080  |      ;  
                        STA.W RAM_81_simonSlot_spritePriority;82BD9F|8D4205  |810542;  
                        LDA.W #$0009                         ;82BDA2|A90900  |      ;  
@@ -13948,9 +13948,9 @@ PwuixleBossArenaBoundries: LDA.B RAM_X_event_slot_state,X       ;82F1A1|B512    
                                                             ;      |        |      ;  
 puwxilArenaBountriesXpos: LDA.B RAM_X_event_slot_xPos,X        ;82F1B6|B50A    |00000A;  
                        CMP.W #$03F0                         ;82F1B8|C9F003  |      ;  
-                       BCS $13                              ;82F1BB|B013    |82F1D0;  
+                       BCS puwexilSetMaxRightBorder         ;82F1BB|B013    |82F1D0;  
                        CMP.W #$0310                         ;82F1BD|C91003  |      ;  
-                       BCC CODE_82F1D6                      ;82F1C0|9014    |82F1D6;  
+                       BCC puwexilSetMaxLeftBorder          ;82F1C0|9014    |82F1D6;  
                        RTL                                  ;82F1C2|6B      |      ;  
                                                             ;      |        |      ;  
 puwxilArenaBountriesYpos: LDA.B RAM_X_event_slot_yPos,X        ;82F1C3|B50E    |00000E;  
@@ -13959,12 +13959,13 @@ puwxilArenaBountriesYpos: LDA.B RAM_X_event_slot_yPos,X        ;82F1C3|B50E    |
                        CMP.W #$0010                         ;82F1CA|C91000  |      ;  
                        BCC CODE_82F1E2                      ;82F1CD|9013    |82F1E2;  
                        RTL                                  ;82F1CF|6B      |      ;  
-                       LDA.W #$03F0                         ;82F1D0|A9F003  |      ;  
+                                                            ;      |        |      ;  
+puwexilSetMaxRightBorder: LDA.W #$03F0                         ;82F1D0|A9F003  |      ;  
                        STA.B RAM_X_event_slot_xPos,X        ;82F1D3|950A    |00000A;  
                        RTL                                  ;82F1D5|6B      |      ;  
                                                             ;      |        |      ;  
                                                             ;      |        |      ;  
-          CODE_82F1D6: LDA.W #$0310                         ;82F1D6|A91003  |      ;  
+puwexilSetMaxLeftBorder: LDA.W #$0310                         ;82F1D6|A91003  |      ;  
                        STA.B RAM_X_event_slot_xPos,X        ;82F1D9|950A    |00000A;  
                        RTL                                  ;82F1DB|6B      |      ;  
                                                             ;      |        |      ;  
@@ -14297,7 +14298,7 @@ bossPwuixleState06_breathCloud: JSL.L CODE_82F406                    ;82F461|220
                        LDA.W #$6000                         ;82F4AF|A90060  |      ;  
                        STA.B $5C,X                          ;82F4B2|955C    |00005C;  
                        LDA.W #$A000                         ;82F4B4|A900A0  |      ;  
-                       STA.B $9C,X                          ;82F4B7|959C    |00009C;  
+                       STA.B RAM_spritePrioManip,X          ;82F4B7|959C    |00009C;  
                        LDA.W #$FFFF                         ;82F4B9|A9FFFF  |      ;  
                        STA.B $9E,X                          ;82F4BC|959E    |00009E;  
                        LDA.W $0584                          ;82F4BE|AD8405  |810584;  

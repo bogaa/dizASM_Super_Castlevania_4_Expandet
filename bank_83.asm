@@ -10245,7 +10245,7 @@ pictureLadyStateTable: dw pictureLadyState00                ;83D686|        |83D
                        CMP.W #$0020                         ;83D6DB|C92000  |      ;  
                        BPL CODE_83D6EF                      ;83D6DE|100F    |83D6EF;  
                        LDA.W #$0001                         ;83D6E0|A90100  |      ;  
-                       STA.B $9C                            ;83D6E3|859C    |00009C;  
+                       STA.B RAM_spritePrioManip            ;83D6E3|859C    |00009C;  
                        STA.W RAM_81_simonStat_Stuck         ;83D6E5|8DA21F  |811FA2;  
                        STZ.B RAM_X_event_slot_HitboxID,X    ;83D6E8|742E    |00002E;  
                        LDA.W #$0040                         ;83D6EA|A94000  |      ;  
@@ -10255,7 +10255,7 @@ pictureLadyStateTable: dw pictureLadyState00                ;83D686|        |83D
                                                             ;      |        |      ;  
           CODE_83D6F0: DEC.B RAM_X_event_slot_24,X          ;83D6F0|D624    |000024;  
                        BNE CODE_83D6EF                      ;83D6F2|D0FB    |83D6EF;  
-                       STZ.B $9C                            ;83D6F4|649C    |00009C;  
+                       STZ.B RAM_spritePrioManip            ;83D6F4|649C    |00009C;  
                        STZ.W RAM_81_simonStat_Stuck         ;83D6F6|9CA21F  |811FA2;  
                        JML.L clearSelectedEventSlotAll      ;83D6F9|5C598C80|808C59;  
                                                             ;      |        |      ;  
@@ -10549,7 +10549,7 @@ handFromGraveStateTable: dw handFromGraveState00              ;83D8F1|        |8
                        LDA.W #$0002                         ;83D93A|A90200  |      ;  
                        STA.B RAM_X_event_slot_state,X       ;83D93D|9512    |000012;  
                        LDA.W #$0001                         ;83D93F|A90100  |      ;  
-                       STA.B $9C                            ;83D942|859C    |00009C;  
+                       STA.B RAM_spritePrioManip            ;83D942|859C    |00009C;  
                        STA.W RAM_81_simonStat_Stuck         ;83D944|8DA21F  |811FA2;  
                        STZ.B RAM_X_event_slot_HitboxID,X    ;83D947|742E    |00002E;  
                        LDA.W #$D9EB                         ;83D949|A9EBD9  |      ;  
@@ -10589,7 +10589,7 @@ handFromGraveStateTable: dw handFromGraveState00              ;83D8F1|        |8
                                                             ;      |        |      ;  
           CODE_83D98F: RTL                                  ;83D98F|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_83D990: STZ.B $9C                            ;83D990|649C    |00009C;  
+          CODE_83D990: STZ.B RAM_spritePrioManip            ;83D990|649C    |00009C;  
                        STZ.W RAM_81_simonStat_Stuck         ;83D992|9CA21F  |811FA2;  
                        STZ.B RAM_X_event_slot_flip_mirror_attribute,X;83D995|7404    |000004;  
                        STZ.B RAM_X_event_slot_22,X          ;83D997|7422    |000022;  

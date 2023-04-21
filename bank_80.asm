@@ -1707,7 +1707,7 @@ clearSelectedEventSlotAll: STZ.B RAM_X_event_slot_sprite_assembly,X;808C59|7400 
                        REP #$20                             ;808DCD|C220    |      ;  
                        LDA.W #$0800                         ;808DCF|A90008  |      ;  
                        STA.B $FE                            ;808DD2|85FE    |0000FE;  
-                       LDA.B $9C                            ;808DD4|A59C    |00009C;  
+                       LDA.B RAM_spritePrioManip            ;808DD4|A59C    |00009C;  
                        BEQ CODE_808DE9                      ;808DD6|F011    |808DE9;  
                        JSR.W drawOAMeventSprites            ;808DD8|20408E  |808E40;  
                        BCS endOAMupdateReady                ;808DDB|B052    |808E2F;  
@@ -11461,7 +11461,7 @@ whipSubweaponDamagCalculation: REP #$30                             ;80DA4F|C230
                        STZ.B RAM_simon_ForceGroundBehavier  ;80DBBA|6480    |000080;  
                        STZ.W $13C8                          ;80DBBC|9CC813  |8113C8;  
                        STZ.W RAM_81_simonStat_Stuck         ;80DBBF|9CA21F  |811FA2;  
-                       STZ.B $9C                            ;80DBC2|649C    |00009C;  
+                       STZ.B RAM_spritePrioManip            ;80DBC2|649C    |00009C;  
                        JMP.W CODE_80DDEE                    ;80DBC4|4CEEDD  |80DDEE;  
                                                             ;      |        |      ;  
           CODE_80DBC7: LDA.W #$0010                         ;80DBC7|A91000  |      ;  
@@ -11606,7 +11606,7 @@ whipSubweaponDamagCalculation: REP #$30                             ;80DA4F|C230
                        LDA.B RAM_currentLevel               ;80DCE9|A586    |000086;  
                        CMP.W #$0008                         ;80DCEB|C90800  |      ;  
                        BNE CODE_80DCF2                      ;80DCEE|D002    |80DCF2;  
-                       STZ.B $9C                            ;80DCF0|649C    |00009C;  
+                       STZ.B RAM_spritePrioManip            ;80DCF0|649C    |00009C;  
                                                             ;      |        |      ;  
           CODE_80DCF2: LDA.W #$000C                         ;80DCF2|A90C00  |      ;  
                        STA.W RAM_81_simonSlot_State         ;80DCF5|8D5205  |810552;  

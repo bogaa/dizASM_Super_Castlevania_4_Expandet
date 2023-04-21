@@ -54,7 +54,7 @@
                        RAM_simon_whipType = $000092         ;      |        |      ;  
                        RAM_pointerEventTracker01 = $000094  ;      |        |      ;  
                        RAM_pointerEventTracker02 = $000096  ;      |        |      ;  
-                       RAM_spritePrioManip = $00009D        ;      |        |      ;  
+                       RAM_spritePrioManip = $00009C        ;      |        |      ;  
                        RAM_camLockLeft = $0000A0            ;      |        |      ;  
                        RAM_camLockRight = $0000A2           ;      |        |      ;  
                        RAM_camLockTop = $0000A4             ;      |        |      ;  

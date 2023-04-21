@@ -6804,10 +6804,10 @@ SpriteAnimationTable131: dw sprAssID_287_plantAppear00        ;81EEFD|        |8
                        dw $0A0A,$0909,$0808,$0707           ;81F071|        |      ;  
                        dw $0606,$0505,$0404,$0202           ;81F079|        |      ;  
                                                             ;      |        |      ;  
-        DATA16_81F081: dw $FFFC,$FFFC,$FFFC,$FFFD           ;81F081|        |      ;  
+ zapfBatDiveSpeedYpos: dw $FFFC,$FFFC,$FFFC,$FFFD           ;81F081|        |      ;  
                        dw $FFFD,$FFFE,$FFFE,$FFFF           ;81F089|        |      ;  
                                                             ;      |        |      ;  
-        DATA16_81F091: dw $0000,$0001,$0002,$0002           ;81F091|        |      ;  
+ zapfBatDiveSpeedXpos: dw $0000,$0001,$0002,$0002           ;81F091|        |      ;  
                        dw $0003,$0003,$0004,$0004           ;81F099|        |      ;  
                        dw $0004,$0004,$0004,$0003           ;81F0A1|        |      ;  
                        dw $0003,$0002,$0002,$0001           ;81F0A9|        |      ;  

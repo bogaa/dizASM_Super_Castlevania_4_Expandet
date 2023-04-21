@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectXmlSerializer-Root xmlns:exs="https://extendedxmlserializer.github.io/v2" xmlns:ns1="clr-namespace:Diz.Core.model;assembly=Diz.Core" xmlns:ns2="clr-namespace:Diz.Core.model.snes;assembly=Diz.Core" xmlns:sys="https://extendedxmlserializer.github.io/system" xmlns:ns3="clr-namespace:IX.Observable;assembly=IX.Observable" xmlns:ns4="clr-namespace:Diz.Core.export;assembly=Diz.Core" SaveVersion="101" Watermark="DiztinGUIsh" Extra1="" Extra2="" xmlns="clr-namespace:Diz.Core.serialization.xml_serializer;assembly=Diz.Core">
-  <Project AttachedRomFilename="C:\GitHub\.dizProjects\dizASM_Super_Castlevania_4_Expandet\main.sfc" InternalRomGameName="SUPER CASTLEVANIA 4  " InternalCheckSum="2583848445" CurrentViewOffset="214556">
-    <LogWriterSettings Format="%label:-22% %code:37%;%pc%|%bytes%|%ia%; %comment%" DataPerLine="8" Unlabeled="ShowInPoints" Structure="OneBankPerFile" IncludeUnusedLabels="false" PrintLabelSpecificComments="false" OutputExtraWhitespace="true" RomSizeOverride="-1" FileOrFolderOutPath="C:\GitHub\.dizProjects\dizASM_Super_Castlevania_4_Expandet" OutputToString="false" ErrorFilename="errors.txt" />
+  <Project AttachedRomFilename="C:\GitHub\.dizProjects\dizSuper_Castlevania_4_Expand\main.sfc" InternalRomGameName="SUPER CASTLEVANIA 4  " InternalCheckSum="2583848445" CurrentViewOffset="187647">
+    <LogWriterSettings Format="%label:-22% %code:37%;%pc%|%bytes%|%ia%; %comment%" DataPerLine="8" Unlabeled="ShowInPoints" Structure="OneBankPerFile" IncludeUnusedLabels="false" PrintLabelSpecificComments="false" OutputExtraWhitespace="true" RomSizeOverride="-1" FileOrFolderOutPath="C:\GitHub\.dizProjects\dizSuper_Castlevania_4_Expand" OutputToString="false" ErrorFilename="errors.txt" />
     <Data RomMapMode="LoRom" RomSpeed="FastRom">
       <Comments AutomaticallyCaptureSubItems="false" HistoryLevels="50">
         <sys:Item Key="8440329" Value="Initiate Event Table" />
@@ -14401,7 +14401,7 @@
           <Value exs:type="ns1:Label" Name="PwuixleBossHealthHUD" Comment="" />
         </sys:Item>
         <sys:Item Key="8581584">
-          <Value exs:type="ns1:Label" Name="" Comment="" />
+          <Value exs:type="ns1:Label" Name="puwexilSetMaxRightBorder" Comment="" />
         </sys:Item>
         <sys:Item Key="8581511">
           <Value exs:type="ns1:Label" Name="bossPwuixleStateTable" Comment="" />
@@ -15655,7 +15655,7 @@
           <Value exs:type="ns1:Label" Name="zapfBat_healthRoutine" Comment="" />
         </sys:Item>
         <sys:Item Key="8772715">
-          <Value exs:type="ns1:Label" Name="zapfSmallHealthRoutine" Comment="" />
+          <Value exs:type="ns1:Label" Name="zapfSmallDeathRoutine" Comment="" />
         </sys:Item>
         <sys:Item Key="8630311">
           <Value exs:type="ns1:Label" Name="mummyStateRoutine" Comment="" />
@@ -16706,6 +16706,63 @@
         </sys:Item>
         <sys:Item Key="8832558">
           <Value exs:type="ns1:Label" Name="setBat6000_1RightSpeed" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8772834">
+          <Value exs:type="ns1:Label" Name="smallZapfDeathSound00" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8772845">
+          <Value exs:type="ns1:Label" Name="smallZapfDeathSound01" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8772856">
+          <Value exs:type="ns1:Label" Name="smallZapfDeathSound02" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8772359">
+          <Value exs:type="ns1:Label" Name="zapfBatEventSlotNext" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8515729">
+          <Value exs:type="ns1:Label" Name="zapfBatDiveSpeedXpos" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8515713">
+          <Value exs:type="ns1:Label" Name="zapfBatDiveSpeedYpos" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8581590">
+          <Value exs:type="ns1:Label" Name="puwexilSetMaxLeftBorder" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8829232">
+          <Value exs:type="ns1:Label" Name="zapfBatOrbMakeStairAppearRoutine" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8829260">
+          <Value exs:type="ns1:Label" Name="zapfRoomStairsStateTable" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8829290">
+          <Value exs:type="ns1:Label" Name="zapfRoomStairsState00" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8829325">
+          <Value exs:type="ns1:Label" Name="zapfRoomStairsState01" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8829338">
+          <Value exs:type="ns1:Label" Name="zapfRoomStairsState02" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8829347">
+          <Value exs:type="ns1:Label" Name="zapfRoomStairsState03" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8829362">
+          <Value exs:type="ns1:Label" Name="zapfRoomStairsState04" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8829434">
+          <Value exs:type="ns1:Label" Name="zapfRoomStairsState0b" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8829500">
+          <Value exs:type="ns1:Label" Name="zapfRoomStairsState0c" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8829525">
+          <Value exs:type="ns1:Label" Name="zapfRoomStairsState0d" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8829564">
+          <Value exs:type="ns1:Label" Name="zapfRoomStairsState0e" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8772878">
+          <Value exs:type="ns1:Label" Name="zapfSpawnGoldSplashOnHit" Comment="" />
         </sys:Item>
       </Labels>
       <RomBytes>
@@ -146076,7 +146133,7 @@ r 60 F086
 +
 .
 .
-r 30 U
+r 30 E086
 +
 .
 .
