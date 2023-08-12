@@ -4170,7 +4170,7 @@ event_ID_61_SwingingSpikePlatform: LDA.B RAM_X_event_slot_subId,X       ;8CFA57|
           CODE_8CFA88: JSL.L getEmptyEventSlot              ;8CFA88|22F1D780|80D7F1;  
                        BCS CODE_8CFAB2                      ;8CFA8C|B024    |8CFAB2;  
                        LDA.W #$0061                         ;8CFA8E|A96100  |      ;  
-                       JSL.L CODE_80D37A                    ;8CFA91|227AD380|80D37A;  
+                       JSL.L crumblingBridgeWriteEventFromA ;8CFA91|227AD380|80D37A;  
                        STZ.B RAM_X_event_slot_HitboxID,X    ;8CFA95|742E    |00002E;  
                        LDA.W #$A864                         ;8CFA97|A964A8  |      ;  
                        STA.B RAM_X_event_slot_sprite_assembly,X;8CFA9A|9500    |000000;  

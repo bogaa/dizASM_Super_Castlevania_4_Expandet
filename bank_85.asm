@@ -3501,7 +3501,7 @@ zapfBatState06_breakUp: JSL.L deathSpawnSythIntervall        ;85D878|22A3D785|85
                                                             ;      |        |      ;  
           CODE_85D8C7: LDA.W #$0001                         ;85D8C7|A90100  |      ;  
                        STA.B RAM_whiteFadeCounter           ;85D8CA|8540    |000040;  
-                       JMP.W CODE_85DD0E                    ;85D8CC|4C0EDD  |85DD0E;  
+                       JMP.W zapfSpawnGoldSplashOnHit       ;85D8CC|4C0EDD  |85DD0E;  
                                                             ;      |        |      ;  
           CODE_85D8CF: LDA.W #$0001                         ;85D8CF|A90100  |      ;  
                        STA.B RAM_whiteFadeCounter           ;85D8D2|8540    |000040;  
@@ -3975,7 +3975,7 @@ zapfSmallDeathRoutine: LDA.B RAM_X_event_slot_3e,X          ;85DC6B|B53E    |000
                                                             ;      |        |      ;  
           CODE_85DCBC: LDA.W #$0008                         ;85DCBC|A90800  |      ;  
                        STA.W $0EF0                          ;85DCBF|8DF00E  |810EF0;  
-                       JSL.L CODE_85DD0E                    ;85DCC2|220EDD85|85DD0E;  
+                       JSL.L zapfSpawnGoldSplashOnHit       ;85DCC2|220EDD85|85DD0E;  
                        JSL.L CODE_85DCCD                    ;85DCC6|22CDDC85|85DCCD;  
                        JMP.W CODE_85DC71                    ;85DCCA|4C71DC  |85DC71;  
                                                             ;      |        |      ;  
@@ -4009,7 +4009,7 @@ smallZapfDeathSound02: LDA.W #$0061                         ;85DCF8|A96100  |   
                        LDX.W #$0640                         ;85DD0A|A24006  |      ;  
                        RTL                                  ;85DD0D|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_85DD0E: LDA.W #$0003                         ;85DD0E|A90300  |      ;  
+zapfSpawnGoldSplashOnHit: LDA.W #$0003                         ;85DD0E|A90300  |      ;  
                        STA.B RAM_X_event_slot_ID            ;85DD11|8510    |000010;  
                        LDY.W #$0D40                         ;85DD13|A0400D  |      ;  
                                                             ;      |        |      ;  
@@ -4889,7 +4889,7 @@ breakableStairState01: LDA.B RAM_X_event_slot_event_slot_health,X;85E41F|B506   
                        BCS CODE_85E466                      ;85E43E|B026    |85E466;  
                        JSL.L clearSelectedEventSlotAll      ;85E440|22598C80|808C59;  
                        LDA.W #$0046                         ;85E444|A94600  |      ;  
-                       JSL.L CODE_80D37A                    ;85E447|227AD380|80D37A;  
+                       JSL.L crumblingBridgeWriteEventFromA ;85E447|227AD380|80D37A;  
                        JSL.L CODE_80D3B1                    ;85E44B|22B1D380|80D3B1;  
                        LDA.W #$A4E4                         ;85E44F|A9E4A4  |      ;  
                        STA.B RAM_X_event_slot_sprite_assembly,X;85E452|9500    |000000;  
@@ -4916,10 +4916,10 @@ breakableStairState01: LDA.B RAM_X_event_slot_event_slot_health,X;85E41F|B506   
                        ADC.W #$0004                         ;85E47C|690400  |      ;  
                        PHA                                  ;85E47F|48      |      ;  
                        LDA.B RAM_X_event_slot_xPosSub       ;85E480|A508    |000008;  
-                       JSL.L CODE_83D1E7                    ;85E482|22E7D183|83D1E7;  
+                       JSL.L BG_blockUpdater                ;85E482|22E7D183|83D1E7;  
                        PLY                                  ;85E486|7A      |      ;  
                        LDA.B RAM_X_event_slot_xPos          ;85E487|A50A    |00000A;  
-                       JSL.L CODE_83D1E7                    ;85E489|22E7D183|83D1E7;  
+                       JSL.L BG_blockUpdater                ;85E489|22E7D183|83D1E7;  
                        PLY                                  ;85E48D|7A      |      ;  
                        LDX.W breakableStairsCollusionRemovePointer,Y;85E48E|BED4F2  |81F2D4;  
                        LDA.W #$0000                         ;85E491|A90000  |      ;  
@@ -4982,7 +4982,7 @@ animatedBackgroundSkelly40: LDA.B RAM_X_event_slot_24,X          ;85E4D7|B524   
                        LDA.W DATA16_81F32B,Y                ;85E518|B92BF3  |81F32B;  
                        TAY                                  ;85E51B|A8      |      ;  
                        PLA                                  ;85E51C|68      |      ;  
-                       JML.L CODE_83D1E7                    ;85E51D|5CE7D183|83D1E7;  
+                       JML.L BG_blockUpdater                ;85E51D|5CE7D183|83D1E7;  
                                                             ;      |        |      ;  
    spikeFromCelling80: LDA.B RAM_X_event_slot_state,X       ;85E521|B512    |000012;  
                        PHX                                  ;85E523|DA      |      ;  
@@ -5146,7 +5146,7 @@ vegasBridgeC0StateTable: dw vegasBridgeC0State00              ;85E5F4|        |8
                        TAY                                  ;85E642|A8      |      ;  
                        LDA.W DATA16_81F2B8,Y                ;85E643|B9B8F2  |81F2B8;  
                        LDY.B RAM_X_event_slot_32,X          ;85E646|B432    |000032;  
-                       JML.L CODE_83D1E7                    ;85E648|5CE7D183|83D1E7;  
+                       JML.L BG_blockUpdater                ;85E648|5CE7D183|83D1E7;  
                                                             ;      |        |      ;  
  vegasBridgeC0State04: INC.B RAM_X_event_slot_state,X       ;85E64C|F612    |000012;  
                        LDA.B RAM_X_event_slot_36,X          ;85E64E|B536    |000036;  
@@ -5156,7 +5156,7 @@ vegasBridgeC0StateTable: dw vegasBridgeC0State00              ;85E5F4|        |8
                                                             ;      |        |      ;  
           CODE_85E657: PHA                                  ;85E657|48      |      ;  
                        LDY.B RAM_X_event_slot_32,X          ;85E658|B432    |000032;  
-                       JSL.L CODE_83D1E7                    ;85E65A|22E7D183|83D1E7;  
+                       JSL.L BG_blockUpdater                ;85E65A|22E7D183|83D1E7;  
                        LDX.B RAM_X_event_slot_sprite_assembly;85E65E|A600    |000000;  
                        LDA.B RAM_X_event_slot_attribute     ;85E660|A502    |000002;  
                        STA.L $7E4080,X                      ;85E662|9F80407E|7E4080;  
@@ -5315,7 +5315,7 @@ bossKoranotStateTable: dw koranotSpawnState00               ;85E6B1|        |85E
                        LDA.W DATA16_81F345,Y                ;85E7EB|B945F3  |81F345;  
                        STA.B RAM_X_event_slot_yPos,X        ;85E7EE|950E    |00000E;  
                        LDA.W #$0017                         ;85E7F0|A91700  |      ;  
-                       JSL.L CODE_80D37A                    ;85E7F3|227AD380|80D37A;  
+                       JSL.L crumblingBridgeWriteEventFromA ;85E7F3|227AD380|80D37A;  
                        LDA.W #$0004                         ;85E7F7|A90400  |      ;  
                        STA.B RAM_X_event_slot_ID,X          ;85E7FA|9510    |000010;  
                        RTS                                  ;85E7FC|60      |      ;  
@@ -7374,7 +7374,7 @@ goldPlatformStateRoutine: LDA.B RAM_X_event_slot_state,X       ;85F97F|B512    |
                        BCS CODE_85FB69                      ;85FB4A|B01D    |85FB69;  
                        JSL.L clearSelectedEventSlotAll      ;85FB4C|22598C80|808C59;  
                        LDA.W #$0026                         ;85FB50|A92600  |      ;  
-                       JSL.L CODE_80D37A                    ;85FB53|227AD380|80D37A;  
+                       JSL.L crumblingBridgeWriteEventFromA ;85FB53|227AD380|80D37A;  
                        STZ.B RAM_X_event_slot_SpriteAdr,X   ;85FB57|7426    |000026;  
                        LDY.B RAM_XregSlotCurrent            ;85FB59|A4FC    |0000FC;  
                        LDA.W RAM_81_X_event_slot_xPos,Y     ;85FB5B|B90A00  |81000A;  
@@ -7400,7 +7400,7 @@ goldPlatformStateRoutine: LDA.B RAM_X_event_slot_state,X       ;85F97F|B512    |
                        STA.L $7E4004,X                      ;85FB82|9F04407E|7E4004;  
                        STA.L $7E4006,X                      ;85FB86|9F06407E|7E4006;  
                        LDA.B RAM_X_event_slot_ID            ;85FB8A|A510    |000010;  
-                       JSL.L CODE_83D1E7                    ;85FB8C|22E7D183|83D1E7;  
+                       JSL.L BG_blockUpdater                ;85FB8C|22E7D183|83D1E7;  
                                                             ;      |        |      ;  
           CODE_85FB90: RTL                                  ;85FB90|6B      |      ;  
                                                             ;      |        |      ;  
@@ -7432,7 +7432,7 @@ collusionRoutineGoldPlatform: LDA.W #$0008                         ;85FB91|A9080
                        BNE CODE_85FBB9                      ;85FBC8|D0EF    |85FBB9;  
                        PLY                                  ;85FBCA|7A      |      ;  
                        LDA.W #$0055                         ;85FBCB|A95500  |      ;  
-                       JSL.L CODE_83D1E7                    ;85FBCE|22E7D183|83D1E7;  
+                       JSL.L BG_blockUpdater                ;85FBCE|22E7D183|83D1E7;  
                        PLY                                  ;85FBD2|7A      |      ;  
                        LDX.W DATA16_81F67B,Y                ;85FBD3|BE7BF6  |81F67B;  
                        LDA.W #$0055                         ;85FBD6|A95500  |      ;  

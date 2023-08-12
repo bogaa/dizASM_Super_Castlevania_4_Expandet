@@ -5941,7 +5941,7 @@ NEWlevelLoadingRoutine: REP #$30                             ;86B4EE|C230    |  
                        BNE CODE_86B514                      ;86B510|D002    |86B514;  
                        INC.B RAM_FlagAllowOutOfBounce       ;86B512|E6B6    |0000B6;  
                                                             ;      |        |      ;  
-          CODE_86B514: LDA.W #$0008                         ;86B514|A90800  |      ;  
+          CODE_86B514: LDA.W #$0008                         ;86B514|A90800  |      ; speed cap cam following Simon
                        LDX.B RAM_currentLevel               ;86B517|A686    |000086;  
                        CPX.W #$0018                         ;86B519|E01800  |      ;  
                        BEQ CODE_86B528                      ;86B51C|F00A    |86B528;  
@@ -5950,7 +5950,7 @@ NEWlevelLoadingRoutine: REP #$30                             ;86B4EE|C230    |  
                        CPX.W #$0008                         ;86B523|E00800  |      ;  
                        BNE CODE_86B52B                      ;86B526|D003    |86B52B;  
                                                             ;      |        |      ;  
-          CODE_86B528: LDA.W #$0005                         ;86B528|A90500  |      ; some camera setting
+          CODE_86B528: LDA.W #$0005                         ;86B528|A90500  |      ; speed cap following Simon
                                                             ;      |        |      ;  
           CODE_86B52B: STA.W $13E0                          ;86B52B|8DE013  |0013E0;  
                        LDA.B RAM_currentLevel               ;86B52E|A586    |000086;  
@@ -6541,7 +6541,7 @@ gearDropOut_StateTable: dw CODE_00BAA3                       ;86BA9D|        |00
                        BCS CODE_86BB09                      ;86BADF|B028    |86BB09;  
                        JSL.L clearSelectedEventSlotAll      ;86BAE1|22598C80|808C59;  
                        LDA.W #$007C                         ;86BAE5|A97C00  |      ;  
-                       JSL.L CODE_80D37A                    ;86BAE8|227AD380|80D37A;  
+                       JSL.L crumblingBridgeWriteEventFromA ;86BAE8|227AD380|80D37A;  
                        JSL.L CODE_80D3B1                    ;86BAEC|22B1D380|80D3B1;  
                        STY.B RAM_X_event_slot_32,X          ;86BAF0|9432    |000032;  
                        LDA.W #$0002                         ;86BAF2|A90200  |      ;  
@@ -6583,11 +6583,11 @@ gearDropOut_StateTable: dw CODE_00BAA3                       ;86BA9D|        |00
                        TAX                                  ;86BB36|AA      |      ;  
                        LDA.W LOOSE_OP_00FA4B,X              ;86BB37|BD4BFA  |00FA4B;  
                        LDY.W #$0714                         ;86BB3A|A01407  |      ;  
-                       JSL.L CODE_83D1E7                    ;86BB3D|22E7D183|83D1E7;  
+                       JSL.L BG_blockUpdater                ;86BB3D|22E7D183|83D1E7;  
                        LDX.B RAM_X_event_slot_sprite_assembly;86BB41|A600    |000000;  
                        LDA.W CODE_00FA4F,X                  ;86BB43|BD4FFA  |00FA4F;  
                        LDY.W #$0718                         ;86BB46|A01807  |      ;  
-                       JSL.L CODE_83D1E7                    ;86BB49|22E7D183|83D1E7;  
+                       JSL.L BG_blockUpdater                ;86BB49|22E7D183|83D1E7;  
                                                             ;      |        |      ;  
           CODE_86BB4D: LDA.W RAM_simonSlot_State            ;86BB4D|AD5205  |000552;  
                        CMP.W #$000F                         ;86BB50|C90F00  |      ;  
@@ -7569,7 +7569,7 @@ deathExitTourchesState06: LDA.B RAM_X_event_slot_yPos,X        ;86C39D|B50E    |
                        TAY                                  ;86C427|A8      |      ;  
                        LDA.B $01                            ;86C428|A501    |000001;  
                        AND.W #$00FF                         ;86C42A|29FF00  |      ;  
-                       JSL.L CODE_83D1E7                    ;86C42D|22E7D183|83D1E7;  
+                       JSL.L BG_blockUpdater                ;86C42D|22E7D183|83D1E7;  
                        LDA.B RAM_X_event_slot_sprite_assembly;86C431|A500    |000000;  
                        AND.W #$00FF                         ;86C433|29FF00  |      ;  
                        TAX                                  ;86C436|AA      |      ;  
