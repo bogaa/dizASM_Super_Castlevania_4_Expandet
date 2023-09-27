@@ -4167,7 +4167,7 @@ event_ID_61_SwingingSpikePlatform: LDA.B RAM_X_event_slot_subId,X       ;8CFA57|
                        LDA.W #$0007                         ;8CFA83|A90700  |      ;  
                        STA.B RAM_X_event_slot_sprite_assembly;8CFA86|8500    |000000;  
                                                             ;      |        |      ;  
-          CODE_8CFA88: JSL.L getEmptyEventSlot              ;8CFA88|22F1D780|80D7F1;  
+          CODE_8CFA88: JSL.L readEventTrackerForward        ;8CFA88|22F1D780|80D7F1;  
                        BCS CODE_8CFAB2                      ;8CFA8C|B024    |8CFAB2;  
                        LDA.W #$0061                         ;8CFA8E|A96100  |      ;  
                        JSL.L crumblingBridgeWriteEventFromA ;8CFA91|227AD380|80D37A;  
@@ -4512,7 +4512,7 @@ subMainGameStateTable: dw LOOSE_OP_00FD32                   ;8CFD2A|        |00F
                        LDX.W #$B50C                         ;8CFD3A|A20CB5  |      ;  
                        JSL.L miscGFXloadRoutineXPlus81Bank  ;8CFD3D|22E88082|8280E8;  
                        LDX.W #$84E4                         ;8CFD41|A2E484  |      ;  
-                       JSL.L CODE_809051                    ;8CFD44|22519080|809051;  
+                       JSL.L hud_drawRoutine                ;8CFD44|22519080|809051;  
                        LDY.W #$86F7                         ;8CFD48|A0F786  |      ;  
                        JSL.L getPaletteFirstTableY2X        ;8CFD4B|22E69080|8090E6;  
                        LDY.B RAM_currentLevel               ;8CFD4F|A486    |000086;  

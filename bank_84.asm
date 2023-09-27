@@ -7770,7 +7770,7 @@ fallingBlocksStateTable: dw fallingBlocksState00              ;84FE8E|        |8
                        STA.B RAM_X_event_slot_attribute     ;84FEF5|8502    |000002;  
                        JML.L readCollusionTable7e4000       ;84FEF7|5C86CF80|80CF86;  
                                                             ;      |        |      ;  
-fallingBlocksRoutine00: JSL.L getEmptyEventSlot              ;84FEFB|22F1D780|80D7F1;  
+fallingBlocksRoutine00: JSL.L readEventTrackerForward        ;84FEFB|22F1D780|80D7F1;  
                        BCS CODE_84FF24                      ;84FEFF|B023    |84FF24;  
                        JSL.L clearSelectedEventSlotAll      ;84FF01|22598C80|808C59;  
                        LDA.W #$0065                         ;84FF05|A96500  |      ;  

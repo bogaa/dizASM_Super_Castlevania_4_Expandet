@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectXmlSerializer-Root xmlns:exs="https://extendedxmlserializer.github.io/v2" xmlns:ns1="clr-namespace:Diz.Core.model;assembly=Diz.Core" xmlns:ns2="clr-namespace:Diz.Core.model.snes;assembly=Diz.Core" xmlns:sys="https://extendedxmlserializer.github.io/system" xmlns:ns3="clr-namespace:IX.Observable;assembly=IX.Observable" xmlns:ns4="clr-namespace:Diz.Core.export;assembly=Diz.Core" SaveVersion="101" Watermark="DiztinGUIsh" Extra1="" Extra2="" xmlns="clr-namespace:Diz.Core.serialization.xml_serializer;assembly=Diz.Core">
-  <Project AttachedRomFilename="C:\GitHub\.dizProjects\dizASM_Super_Castlevania_4_Expandet\main.sfc" InternalRomGameName="SUPER CASTLEVANIA 4  " InternalCheckSum="2583848445" CurrentViewOffset="130061">
-    <LogWriterSettings Format="%label:-22% %code:37%;%pc%|%bytes%|%ia%; %comment%" DataPerLine="8" Unlabeled="ShowInPoints" Structure="OneBankPerFile" IncludeUnusedLabels="false" PrintLabelSpecificComments="false" OutputExtraWhitespace="true" RomSizeOverride="-1" FileOrFolderOutPath="..\dizASM_Super_Castlevania_4_Expandet" OutputToString="false" ErrorFilename="errors.txt" />
+  <Project AttachedRomFilename="C:\GitHub\.dizProjects\dizASM_Super_Castlevania_4_Expandet\main.sfc" InternalRomGameName="SUPER CASTLEVANIA 4  " InternalCheckSum="2583848445" CurrentViewOffset="21177">
+    <LogWriterSettings Format="%label:-22% %code:37%;%pc%|%bytes%|%ia%; %comment%" DataPerLine="8" Unlabeled="ShowInPoints" Structure="OneBankPerFile" IncludeUnusedLabels="false" PrintLabelSpecificComments="false" OutputExtraWhitespace="true" RomSizeOverride="-1" FileOrFolderOutPath="C:\GitHub\.dizProjects\dizASM_Super_Castlevania_4_Expandet" OutputToString="false" ErrorFilename="errors.txt" />
     <Data RomMapMode="LoRom" RomSpeed="FastRom">
       <Comments AutomaticallyCaptureSubItems="false" HistoryLevels="50">
         <sys:Item Key="8440329" Value="Initiate Event Table" />
@@ -349,7 +349,7 @@
         <sys:Item Key="8501142" Value="change Bank" />
         <sys:Item Key="8501179" Value="end New CameraLock settup" />
         <sys:Item Key="8567468" Value="jump to NEW cameraLock setup SC4ed" />
-        <sys:Item Key="8567472" Value="old Unused Routine" />
+        <sys:Item Key="8567472" Value="Vanilla Unused Routine" />
         <sys:Item Key="8567490" Value="end unused routine" />
         <sys:Item Key="8503463" Value="end new entrance routine" />
         <sys:Item Key="9666560" Value="I think this is something else.." />
@@ -551,103 +551,52 @@
         <sys:Item Key="10481931" Value="what action" />
         <sys:Item Key="8427607" Value="load equipment/candle GFX" />
         <sys:Item Key="8828180" Value="speed cap cam following Simon" />
+        <sys:Item Key="8496087" Value="linebreak 2x followed by pointer ??" />
+        <sys:Item Key="8496074" Value="terminator" />
+        <sys:Item Key="8496155" Value="terminateHud" />
+        <sys:Item Key="8496148" Value="linebreak 2x followed by pointer ??" />
+        <sys:Item Key="8439385" Value="HUD" />
+        <sys:Item Key="8439392" Value="HUD Block 00" />
+        <sys:Item Key="8439419" Value="HUD Block 01" />
+        <sys:Item Key="8440234" Value="check flag to not despawn" />
+        <sys:Item Key="8443253" Value="decide on witch side of the screen to spawn based on current cam speed" />
+        <sys:Item Key="8444706" Value="load Slot into Y" />
+        <sys:Item Key="8444871" Value="hitStuneFrames" />
+        <sys:Item Key="8430526" Value="left Jump Init speed" />
+        <sys:Item Key="8430507" Value="right jump init Speed " />
+        <sys:Item Key="8442419" Value="collectable ID is in the subID" />
+        <sys:Item Key="8823733" Value="writes collusion byte to WRAM table" />
       </Comments>
       <Labels>
-        <sys:Item Key="0">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_sprite_assembly" Comment="" />
-        </sys:Item>
-        <sys:Item Key="2">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_attribute" Comment="" />
-        </sys:Item>
-        <sys:Item Key="4">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_flip_mirror_attribute" Comment="" />
-        </sys:Item>
-        <sys:Item Key="6">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_event_slot_health" Comment="" />
-        </sys:Item>
-        <sys:Item Key="8">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_xPosSub" Comment="" />
-        </sys:Item>
-        <sys:Item Key="10">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_xPos" Comment="" />
-        </sys:Item>
-        <sys:Item Key="12">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_yPosSub" Comment="" />
-        </sys:Item>
-        <sys:Item Key="14">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_yPos" Comment="" />
-        </sys:Item>
-        <sys:Item Key="16">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_ID" Comment="" />
-        </sys:Item>
-        <sys:Item Key="18">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_state" Comment="" />
-        </sys:Item>
-        <sys:Item Key="20">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_subId" Comment="" />
-        </sys:Item>
-        <sys:Item Key="22">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_16" Comment="" />
-        </sys:Item>
-        <sys:Item Key="24">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_xSpdSub" Comment="" />
-        </sys:Item>
-        <sys:Item Key="26">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_xSpd" Comment="" />
-        </sys:Item>
         <sys:Item Key="28">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_ySpdSub" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_bg1CamXpos" Comment="" />
         </sys:Item>
         <sys:Item Key="30">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_ySpd" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_bg1CamYpos" Comment="" />
         </sys:Item>
         <sys:Item Key="32">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_20" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_buttonPress" Comment="" />
         </sys:Item>
         <sys:Item Key="34">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_22" Comment="" />
-        </sys:Item>
-        <sys:Item Key="36">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_24" Comment="" />
-        </sys:Item>
-        <sys:Item Key="38">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_SpriteAdr" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_buttonPressPlayer2" Comment="" />
         </sys:Item>
         <sys:Item Key="40">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_HitboxXpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_buttonPressCurFram" Comment="" />
         </sys:Item>
         <sys:Item Key="42">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_HitboxYpos" Comment="" />
-        </sys:Item>
-        <sys:Item Key="44">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_Movement2c" Comment="" />
-        </sys:Item>
-        <sys:Item Key="46">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_HitboxID" Comment="" />
-        </sys:Item>
-        <sys:Item Key="48">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_mask" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_buttonPressCurFramPlayer2" Comment="" />
         </sys:Item>
         <sys:Item Key="50">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_32" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_gameState" Comment="" />
         </sys:Item>
         <sys:Item Key="52">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_34" Comment="" />
-        </sys:Item>
-        <sys:Item Key="54">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_36" Comment="" />
-        </sys:Item>
-        <sys:Item Key="56">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_38" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_subGameState" Comment="" />
         </sys:Item>
         <sys:Item Key="58">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_3a" Comment="" />
-        </sys:Item>
-        <sys:Item Key="60">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_3c" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_frameCounter" Comment="" />
         </sys:Item>
         <sys:Item Key="62">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_3e" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_blackFadeCounter" Comment="" />
         </sys:Item>
         <sys:Item Key="64">
           <Value exs:type="ns1:Label" Name="RAM_whiteFadeCounter" Comment="" />
@@ -743,16 +692,19 @@
           <Value exs:type="ns1:Label" Name="RAM_BG1_YposScrollSpeed" Comment="" />
         </sys:Item>
         <sys:Item Key="172">
-          <Value exs:type="ns1:Label" Name="RAM_whip_Hit_Disable_CounterFlag" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_WhipCancleTimer" Comment="" />
         </sys:Item>
         <sys:Item Key="174">
           <Value exs:type="ns1:Label" Name="RAM_IndexSpecialLevelBehavier" Comment="" />
         </sys:Item>
         <sys:Item Key="186">
-          <Value exs:type="ns1:Label" Name="RAM_subweapon_Hit_Disable_CounterFlag" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_SubweaponCancleTimer" Comment="" />
         </sys:Item>
         <sys:Item Key="182">
           <Value exs:type="ns1:Label" Name="RAM_FlagAllowOutOfBounce" Comment="" />
+        </sys:Item>
+        <sys:Item Key="184">
+          <Value exs:type="ns1:Label" Name="RAM_FlagBossFight" Comment="" />
         </sys:Item>
         <sys:Item Key="188">
           <Value exs:type="ns1:Label" Name="RAM_simon_invulnerable_counter" Comment="" />
@@ -778,7 +730,7 @@
         <sys:Item Key="234">
           <Value exs:type="ns1:Label" Name="RAM_RNG_3" Comment="" />
         </sys:Item>
-        <sys:Item Key="242">
+        <sys:Item Key="240">
           <Value exs:type="ns1:Label" Name="RAM_HUD_RenderFlag" Comment="" />
         </sys:Item>
         <sys:Item Key="244">
@@ -808,11 +760,20 @@
         <sys:Item Key="640">
           <Value exs:type="ns1:Label" Name="RAM_whipSlot02" Comment="" />
         </sys:Item>
+        <sys:Item Key="700">
+          <Value exs:type="ns1:Label" Name="RAM_SubWep_useTimer" Comment="" />
+        </sys:Item>
+        <sys:Item Key="762">
+          <Value exs:type="ns1:Label" Name="RAM_SubWep_slotBackupInit" Comment="" />
+        </sys:Item>
         <sys:Item Key="704">
           <Value exs:type="ns1:Label" Name="RAM_whipSlot03" Comment="" />
         </sys:Item>
         <sys:Item Key="768">
           <Value exs:type="ns1:Label" Name="RAM_whipSlot04" Comment="" />
+        </sys:Item>
+        <sys:Item Key="828">
+          <Value exs:type="ns1:Label" Name="RAM_whipLangthOnRing" Comment="" />
         </sys:Item>
         <sys:Item Key="832">
           <Value exs:type="ns1:Label" Name="RAM_whipSlot05" Comment="" />
@@ -983,85 +944,85 @@
           <Value exs:type="ns1:Label" Name="RAM_simonStat_stopWatchTimer" Comment="" />
         </sys:Item>
         <sys:Item Key="5120">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1400" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1400_R1" Comment="" />
         </sys:Item>
         <sys:Item Key="5122">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1402" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1402_R2" Comment="" />
         </sys:Item>
         <sys:Item Key="5124">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1404" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1404_R3" Comment="" />
         </sys:Item>
         <sys:Item Key="5126">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1406" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1406_R4" Comment="" />
         </sys:Item>
         <sys:Item Key="5128">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1408" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1408_R5" Comment="" />
         </sys:Item>
         <sys:Item Key="5130">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_140A" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_140A_R6" Comment="" />
         </sys:Item>
         <sys:Item Key="5132">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_140C" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_140C_R7" Comment="" />
         </sys:Item>
         <sys:Item Key="5134">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_140E" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_140E_R8" Comment="" />
         </sys:Item>
         <sys:Item Key="5136">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1410" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1410_L1" Comment="" />
         </sys:Item>
         <sys:Item Key="5138">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1412" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1412_L2" Comment="" />
         </sys:Item>
         <sys:Item Key="5140">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1414" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1414_L3" Comment="" />
         </sys:Item>
         <sys:Item Key="5142">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1416" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1416_L4" Comment="" />
         </sys:Item>
         <sys:Item Key="5144">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1418" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1418_L5" Comment="" />
         </sys:Item>
         <sys:Item Key="5146">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_141A" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_141A_L6" Comment="" />
         </sys:Item>
         <sys:Item Key="5148">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_141C" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_141C_L7" Comment="" />
         </sys:Item>
         <sys:Item Key="5150">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_141E" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_141E_L8" Comment="" />
         </sys:Item>
         <sys:Item Key="5152">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1420" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1420_M1_head" Comment="" />
         </sys:Item>
         <sys:Item Key="5154">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1422" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1422_M2_sholder" Comment="" />
         </sys:Item>
         <sys:Item Key="5156">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1424" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1424_M3_chest" Comment="" />
         </sys:Item>
         <sys:Item Key="5158">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1426" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1426_M4_waste" Comment="" />
         </sys:Item>
         <sys:Item Key="5160">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1428" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1428_M5_leg" Comment="" />
         </sys:Item>
         <sys:Item Key="5162">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_142A" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_142A_M6_knee" Comment="" />
         </sys:Item>
         <sys:Item Key="5164">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_142C" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_142C_M7_foot" Comment="" />
         </sys:Item>
         <sys:Item Key="5166">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_142E" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_142E_M8_ground" Comment="" />
         </sys:Item>
         <sys:Item Key="5168">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1430" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1430_first_R" Comment="" />
         </sys:Item>
         <sys:Item Key="5170">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1432" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1432_first_L" Comment="" />
         </sys:Item>
         <sys:Item Key="5172">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1434" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1434_first_M" Comment="" />
         </sys:Item>
         <sys:Item Key="5248">
           <Value exs:type="ns1:Label" Name="RAM_channel_DMA_0" Comment="" />
@@ -1117,6 +1078,9 @@
         <sys:Item Key="7808">
           <Value exs:type="ns1:Label" Name="RAM_blackFade" Comment="" />
         </sys:Item>
+        <sys:Item Key="7810">
+          <Value exs:type="ns1:Label" Name="RAM_autoMove" Comment="" />
+        </sys:Item>
         <sys:Item Key="7812">
           <Value exs:type="ns1:Label" Name="RAM_PPU_Mode" Comment="" />
         </sys:Item>
@@ -1132,6 +1096,9 @@
         <sys:Item Key="8002">
           <Value exs:type="ns1:Label" Name="RAM_scoreHigh" Comment="" />
         </sys:Item>
+        <sys:Item Key="8068">
+          <Value exs:type="ns1:Label" Name="RAM_fatalHitFlag" Comment="" />
+        </sys:Item>
         <sys:Item Key="8070">
           <Value exs:type="ns1:Label" Name="RAM_simon_Jump_State" Comment="" />
         </sys:Item>
@@ -1140,6 +1107,24 @@
         </sys:Item>
         <sys:Item Key="8074">
           <Value exs:type="ns1:Label" Name="RAM_simonStat_direction" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8076">
+          <Value exs:type="ns1:Label" Name="RAM_simon_Ypos_Current" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8082">
+          <Value exs:type="ns1:Label" Name="RAM_simon_Xpos_ColuR" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8084">
+          <Value exs:type="ns1:Label" Name="RAM_simon_Xpos_ColuL" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8088">
+          <Value exs:type="ns1:Label" Name="RAM_simon_Ypos_Colu_M" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8090">
+          <Value exs:type="ns1:Label" Name="RAM_simon_Ypos_Colu_H" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8092">
+          <Value exs:type="ns1:Label" Name="RAM_simon_Ypos_Colu_L" Comment="" />
         </sys:Item>
         <sys:Item Key="8098">
           <Value exs:type="ns1:Label" Name="RAM_simonStat_Stuck" Comment="" />
@@ -1754,7 +1739,7 @@
           <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_subId" Comment="" />
         </sys:Item>
         <sys:Item Key="8454166">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_16" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_hitStueCounter" Comment="" />
         </sys:Item>
         <sys:Item Key="8454168">
           <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_xSpdSub" Comment="" />
@@ -1826,7 +1811,7 @@
           <Value exs:type="ns1:Label" Name="RAM_81_transoEffectSprite" Comment="" />
         </sys:Item>
         <sys:Item Key="8454214">
-          <Value exs:type="ns1:Label" Name="RAM_81_mode7Mode" Comment="" />
+          <Value exs:type="ns1:Label" Name="RAM_81_scrollAndMode7_setting" Comment="" />
         </sys:Item>
         <sys:Item Key="8454216">
           <Value exs:type="ns1:Label" Name="RAM_81_pointerCG_WRAM" Comment="" />
@@ -1858,6 +1843,9 @@
         <sys:Item Key="8454272">
           <Value exs:type="ns1:Label" Name="RAM_81_simon_ForceGroundBehavier" Comment="" />
         </sys:Item>
+        <sys:Item Key="8454274">
+          <Value exs:type="ns1:Label" Name="RAM_81_level_type" Comment="" />
+        </sys:Item>
         <sys:Item Key="8454276">
           <Value exs:type="ns1:Label" Name="RAM_81_simon_DamageDeBuff" Comment="" />
         </sys:Item>
@@ -1885,10 +1873,7 @@
         <sys:Item Key="8454294">
           <Value exs:type="ns1:Label" Name="RAM_81_pointerEventTracker02" Comment="" />
         </sys:Item>
-        <sys:Item Key="8454298">
-          <Value exs:type="ns1:Label" Name="RAM_81_eventTrackerDirection" Comment="" />
-        </sys:Item>
-        <sys:Item Key="8454301">
+        <sys:Item Key="8454300">
           <Value exs:type="ns1:Label" Name="RAM_81_spritePrioManip" Comment="" />
         </sys:Item>
         <sys:Item Key="8454304">
@@ -1909,11 +1894,20 @@
         <sys:Item Key="8454314">
           <Value exs:type="ns1:Label" Name="RAM_81_BG1_YposScrollSpeed" Comment="" />
         </sys:Item>
+        <sys:Item Key="8454316">
+          <Value exs:type="ns1:Label" Name="RAM_81_WhipCancleTimer" Comment="" />
+        </sys:Item>
         <sys:Item Key="8454318">
           <Value exs:type="ns1:Label" Name="RAM_81_IndexSpecialLevelBehavier" Comment="" />
         </sys:Item>
+        <sys:Item Key="8454330">
+          <Value exs:type="ns1:Label" Name="RAM_81_SubweaponCancleTimer" Comment="" />
+        </sys:Item>
         <sys:Item Key="8454326">
           <Value exs:type="ns1:Label" Name="RAM_81_FlagAllowOutOfBounce" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8454328">
+          <Value exs:type="ns1:Label" Name="RAM_81_FlagBossFight" Comment="" />
         </sys:Item>
         <sys:Item Key="8454332">
           <Value exs:type="ns1:Label" Name="RAM_81_simon_invulnerable_counter" Comment="" />
@@ -1927,6 +1921,9 @@
         <sys:Item Key="8454338">
           <Value exs:type="ns1:Label" Name="RAM_81_buttonMapSubWep" Comment="" />
         </sys:Item>
+        <sys:Item Key="8454344">
+          <Value exs:type="ns1:Label" Name="RAM_81_collusionDataPointer" Comment="" />
+        </sys:Item>
         <sys:Item Key="8454374">
           <Value exs:type="ns1:Label" Name="RAM_81_RNG_1" Comment="" />
         </sys:Item>
@@ -1936,7 +1933,7 @@
         <sys:Item Key="8454378">
           <Value exs:type="ns1:Label" Name="RAM_81_RNG_3" Comment="" />
         </sys:Item>
-        <sys:Item Key="8454386">
+        <sys:Item Key="8454384">
           <Value exs:type="ns1:Label" Name="RAM_81_HUD_RenderFlag" Comment="" />
         </sys:Item>
         <sys:Item Key="8454388">
@@ -1966,11 +1963,20 @@
         <sys:Item Key="8454784">
           <Value exs:type="ns1:Label" Name="RAM_81_whipSlot02" Comment="" />
         </sys:Item>
+        <sys:Item Key="8454844">
+          <Value exs:type="ns1:Label" Name="RAM_81_SubWep_useTimer" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8454906">
+          <Value exs:type="ns1:Label" Name="RAM_81_SubWep_slotBackupInit" Comment="" />
+        </sys:Item>
         <sys:Item Key="8454848">
           <Value exs:type="ns1:Label" Name="RAM_81_whipSlot03" Comment="" />
         </sys:Item>
         <sys:Item Key="8454912">
           <Value exs:type="ns1:Label" Name="RAM_81_whipSlot04" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8454972">
+          <Value exs:type="ns1:Label" Name="RAM_81_whipLangthOnRing" Comment="" />
         </sys:Item>
         <sys:Item Key="8454976">
           <Value exs:type="ns1:Label" Name="RAM_81_whipSlot05" Comment="" />
@@ -2110,9 +2116,6 @@
         <sys:Item Key="8459168">
           <Value exs:type="ns1:Label" Name="RAM_81_enemieIDSlotAssignPPUTable" Comment="" />
         </sys:Item>
-        <sys:Item Key="8459206">
-          <Value exs:type="ns1:Label" Name="RAM_81_BG3_subweaponHitCounter" Comment="" />
-        </sys:Item>
         <sys:Item Key="8459216">
           <Value exs:type="ns1:Label" Name="RAM_81_ScrollBG1SyncSpeed" Comment="" />
         </sys:Item>
@@ -2143,6 +2146,87 @@
         <sys:Item Key="8459258">
           <Value exs:type="ns1:Label" Name="RAM_81_simonStat_stopWatchTimer" Comment="" />
         </sys:Item>
+        <sys:Item Key="8459264">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1400_R1" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459266">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1402_R2" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459268">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1404_R3" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459270">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1406_R4" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459272">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1408_R5" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459274">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_140A_R6" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459276">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_140C_R7" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459278">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_140E_R8" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459280">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1410_L1" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459282">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1412_L2" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459284">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1414_L3" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459286">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1416_L4" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459288">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1418_L5" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459290">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_141A_L6" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459292">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_141C_L7" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459294">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_141E_L8" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459296">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1420_M1_head" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459298">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1422_M2_sholder" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459300">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1424_M3_chest" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459302">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1426_M4_waste" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459304">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1428_M5_leg" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459306">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_142A_M6_knee" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459308">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_142C_M7_foot" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459310">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_142E_M8_ground" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459312">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1430_first_R" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459314">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1432_first_L" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459316">
+          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1434_first_M" Comment="" />
+        </sys:Item>
         <sys:Item Key="8459392">
           <Value exs:type="ns1:Label" Name="RAM_81_channel_DMA_0" Comment="" />
         </sys:Item>
@@ -2170,6 +2254,15 @@
         <sys:Item Key="8459520">
           <Value exs:type="ns1:Label" Name="RAM_81_masktTable_respawnEvents" Comment="" />
         </sys:Item>
+        <sys:Item Key="8459778">
+          <Value exs:type="ns1:Label" Name="RAM_81_secretStage6_Floor_Flag" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8459780">
+          <Value exs:type="ns1:Label" Name="RAM_81_secret_Flag" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8461312">
+          <Value exs:type="ns1:Label" Name="RAM_81_state_Map_Scene" Comment="" />
+        </sys:Item>
         <sys:Item Key="8461826">
           <Value exs:type="ns1:Label" Name="RAM_81_titleScreen_menuSelect" Comment="" />
         </sys:Item>
@@ -2188,6 +2281,9 @@
         <sys:Item Key="8461952">
           <Value exs:type="ns1:Label" Name="RAM_81_blackFade" Comment="" />
         </sys:Item>
+        <sys:Item Key="8461954">
+          <Value exs:type="ns1:Label" Name="RAM_81_autoMove" Comment="" />
+        </sys:Item>
         <sys:Item Key="8461956">
           <Value exs:type="ns1:Label" Name="RAM_81_PPU_Mode" Comment="" />
         </sys:Item>
@@ -2203,8 +2299,26 @@
         <sys:Item Key="8462146">
           <Value exs:type="ns1:Label" Name="RAM_81_scoreHigh" Comment="" />
         </sys:Item>
+        <sys:Item Key="8462212">
+          <Value exs:type="ns1:Label" Name="RAM_81_fatalHitFlag" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8462214">
+          <Value exs:type="ns1:Label" Name="RAM_81_simon_Jump_State" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8462216">
+          <Value exs:type="ns1:Label" Name="RAM_81_simon_Mud_State" Comment="" />
+        </sys:Item>
         <sys:Item Key="8462218">
           <Value exs:type="ns1:Label" Name="RAM_81_simonStat_direction" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8462226">
+          <Value exs:type="ns1:Label" Name="RAM_81_simon_Xpos_ColuR" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8462228">
+          <Value exs:type="ns1:Label" Name="RAM_81_simon_Xpos_ColuL" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8462236">
+          <Value exs:type="ns1:Label" Name="RAM_81_simon_Ypos_Colu" Comment="" />
         </sys:Item>
         <sys:Item Key="8462242">
           <Value exs:type="ns1:Label" Name="RAM_81_simonStat_Stuck" Comment="" />
@@ -2465,7 +2579,7 @@
           <Value exs:type="ns1:Label" Name="secretManState12" Comment="" />
         </sys:Item>
         <sys:Item Key="8442419">
-          <Value exs:type="ns1:Label" Name="event_ID_0e_UnusedCandle" Comment="" />
+          <Value exs:type="ns1:Label" Name="event_ID_0e_CandleMain" Comment="" />
         </sys:Item>
         <sys:Item Key="8444135">
           <Value exs:type="ns1:Label" Name="event_ID_0f_BookBird" Comment="" />
@@ -7763,13 +7877,13 @@
           <Value exs:type="ns1:Label" Name="coffineCircleState01" Comment="" />
         </sys:Item>
         <sys:Item Key="8564090">
-          <Value exs:type="ns1:Label" Name="coffineCircleRoutine00" Comment="" />
-        </sys:Item>
-        <sys:Item Key="8564135">
           <Value exs:type="ns1:Label" Name="coffineCircleRoutine01" Comment="" />
         </sys:Item>
-        <sys:Item Key="8564200">
+        <sys:Item Key="8564135">
           <Value exs:type="ns1:Label" Name="coffineCircleRoutine02" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8564200">
+          <Value exs:type="ns1:Label" Name="coffineCircleRoutine03" Comment="" />
         </sys:Item>
         <sys:Item Key="8564228">
           <Value exs:type="ns1:Label" Name="coffineCircleSnapAnimation00" Comment="" />
@@ -9188,7 +9302,7 @@
           <Value exs:type="ns1:Label" Name="gfxLevel34" Comment="" />
         </sys:Item>
         <sys:Item Key="8443889">
-          <Value exs:type="ns1:Label" Name="getEmptyEventSlot" Comment="" />
+          <Value exs:type="ns1:Label" Name="readEventTrackerForward" Comment="" />
         </sys:Item>
         <sys:Item Key="8585152">
           <Value exs:type="ns1:Label" Name="levelLoadInitSC4edHandler" Comment="" />
@@ -11294,10 +11408,10 @@
           <Value exs:type="ns1:Label" Name="simonWalkAnimationSpeedCounter" Comment="" />
         </sys:Item>
         <sys:Item Key="8431375">
-          <Value exs:type="ns1:Label" Name="simonMoveLeftRoutine" Comment="" />
+          <Value exs:type="ns1:Label" Name="" Comment="" />
         </sys:Item>
         <sys:Item Key="8431388">
-          <Value exs:type="ns1:Label" Name="simonAnimationWalkSpeedCounterReset" Comment="" />
+          <Value exs:type="ns1:Label" Name="simonAnimWalkSpeedCounterReset" Comment="" />
         </sys:Item>
         <sys:Item Key="8431211">
           <Value exs:type="ns1:Label" Name="simonWalkLeftGround" Comment="" />
@@ -11333,7 +11447,7 @@
           <Value exs:type="ns1:Label" Name="simonJumpState01" Comment="" />
         </sys:Item>
         <sys:Item Key="8432009">
-          <Value exs:type="ns1:Label" Name="simonJumpState02" Comment="" />
+          <Value exs:type="ns1:Label" Name="simonJumpState02_assend" Comment="" />
         </sys:Item>
         <sys:Item Key="8432031">
           <Value exs:type="ns1:Label" Name="simonJumpState03" Comment="" />
@@ -11342,7 +11456,7 @@
           <Value exs:type="ns1:Label" Name="simonJumpState05" Comment="" />
         </sys:Item>
         <sys:Item Key="8432046">
-          <Value exs:type="ns1:Label" Name="simonJumpState04" Comment="" />
+          <Value exs:type="ns1:Label" Name="simonJumpState04_desend" Comment="" />
         </sys:Item>
         <sys:Item Key="8432073">
           <Value exs:type="ns1:Label" Name="simonJumpState06" Comment="" />
@@ -11528,7 +11642,7 @@
           <Value exs:type="ns1:Label" Name="simonState02_wallCollusion" Comment="" />
         </sys:Item>
         <sys:Item Key="8430482">
-          <Value exs:type="ns1:Label" Name="simonState03" Comment="" />
+          <Value exs:type="ns1:Label" Name="simonState03_initJump" Comment="" />
         </sys:Item>
         <sys:Item Key="8430586">
           <Value exs:type="ns1:Label" Name="simonState04_foundGroundAir" Comment="" />
@@ -11552,19 +11666,19 @@
           <Value exs:type="ns1:Label" Name="simonState0a_spawn" Comment="" />
         </sys:Item>
         <sys:Item Key="8430438">
-          <Value exs:type="ns1:Label" Name="simonState0b" Comment="" />
+          <Value exs:type="ns1:Label" Name="simonState0b_stairs" Comment="" />
         </sys:Item>
         <sys:Item Key="8430804">
-          <Value exs:type="ns1:Label" Name="simonState0c_hurt" Comment="" />
+          <Value exs:type="ns1:Label" Name="simonState0c_hurt_init" Comment="" />
         </sys:Item>
         <sys:Item Key="8430970">
-          <Value exs:type="ns1:Label" Name="simonState0d" Comment="" />
+          <Value exs:type="ns1:Label" Name="simonState0d_hurt" Comment="" />
         </sys:Item>
         <sys:Item Key="8431008">
           <Value exs:type="ns1:Label" Name="simonState0e" Comment="" />
         </sys:Item>
         <sys:Item Key="8431083">
-          <Value exs:type="ns1:Label" Name="simonState0f" Comment="" />
+          <Value exs:type="ns1:Label" Name="simonState0f_simonDeathState" Comment="" />
         </sys:Item>
         <sys:Item Key="8430474">
           <Value exs:type="ns1:Label" Name="simonState10" Comment="" />
@@ -11573,7 +11687,7 @@
           <Value exs:type="ns1:Label" Name="simonStateTable" Comment="" />
         </sys:Item>
         <sys:Item Key="8432353">
-          <Value exs:type="ns1:Label" Name="ringMovementRoutine" Comment="" />
+          <Value exs:type="ns1:Label" Name="ring_dislunchRoutine" Comment="" />
         </sys:Item>
         <sys:Item Key="8503291">
           <Value exs:type="ns1:Label" Name="boneDragonAnimationFrame23" Comment="" />
@@ -12431,7 +12545,7 @@
           <Value exs:type="ns1:Label" Name="eventLoader" Comment="" />
         </sys:Item>
         <sys:Item Key="8565748">
-          <Value exs:type="ns1:Label" Name="clearCurrentEventPreserveXandY" Comment="" />
+          <Value exs:type="ns1:Label" Name="clearY_EventSlotPreserveX" Comment="" />
         </sys:Item>
         <sys:Item Key="15967613">
           <Value exs:type="ns1:Label" Name="konamiLogoFirstScreenGFXData" Comment="" />
@@ -12914,7 +13028,7 @@
           <Value exs:type="ns1:Label" Name="smallTableForWhat16" Comment="" />
         </sys:Item>
         <sys:Item Key="8504099">
-          <Value exs:type="ns1:Label" Name="mightBeAspeedTable00" Comment="" />
+          <Value exs:type="ns1:Label" Name="unusedBatYoffsetFromSimon" Comment="" />
         </sys:Item>
         <sys:Item Key="8504131">
           <Value exs:type="ns1:Label" Name="areThisTimingTablesTable00" Comment="" />
@@ -14048,7 +14162,7 @@
           <Value exs:type="ns1:Label" Name="mainGameState0c" Comment="" />
         </sys:Item>
         <sys:Item Key="8436027">
-          <Value exs:type="ns1:Label" Name="usedEndOfDeathRoutine" Comment="" />
+          <Value exs:type="ns1:Label" Name="subweapon_main" Comment="" />
         </sys:Item>
         <sys:Item Key="8444495">
           <Value exs:type="ns1:Label" Name="whipSubweaponDamagCalculation" Comment="" />
@@ -14960,16 +15074,16 @@
           <Value exs:type="ns1:Label" Name="eventTableReaderTable" Comment="" />
         </sys:Item>
         <sys:Item Key="8443126">
-          <Value exs:type="ns1:Label" Name="LeftRightEventReadDirection" Comment="" />
+          <Value exs:type="ns1:Label" Name="LeftRightEventRead_direction00" Comment="" />
         </sys:Item>
         <sys:Item Key="8443180">
-          <Value exs:type="ns1:Label" Name="rightLeftEventReadDirection" Comment="" />
+          <Value exs:type="ns1:Label" Name="rightLeftEventRead_direction01" Comment="" />
         </sys:Item>
         <sys:Item Key="8443428">
-          <Value exs:type="ns1:Label" Name="upDownEventReadDirection" Comment="" />
+          <Value exs:type="ns1:Label" Name="upDownEventRead_direction02" Comment="" />
         </sys:Item>
         <sys:Item Key="8443467">
-          <Value exs:type="ns1:Label" Name="downUpEventReadDirection" Comment="" />
+          <Value exs:type="ns1:Label" Name="downUpEventRead_direction03" Comment="" />
         </sys:Item>
         <sys:Item Key="8620065">
           <Value exs:type="ns1:Label" Name="GrakulBossStateTable" Comment="" />
@@ -15956,7 +16070,7 @@
           <Value exs:type="ns1:Label" Name="bossMummyYPosData" Comment="" />
         </sys:Item>
         <sys:Item Key="8630686">
-          <Value exs:type="ns1:Label" Name="mummySomeRoutine" Comment="" />
+          <Value exs:type="ns1:Label" Name="mummyAttackPatternSpawn" Comment="" />
         </sys:Item>
         <sys:Item Key="8630696">
           <Value exs:type="ns1:Label" Name="mummyPosRoutine" Comment="" />
@@ -17157,6 +17271,390 @@
         </sys:Item>
         <sys:Item Key="8554045">
           <Value exs:type="ns1:Label" Name="loadingRom2WRAM_7e3000" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8630924">
+          <Value exs:type="ns1:Label" Name="bossMummy_SpawnBandage" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8631623">
+          <Value exs:type="ns1:Label" Name="bossMummyGetEmptyEventSlot" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8630991">
+          <Value exs:type="ns1:Label" Name="bossMummyShot_GetSpeedBasedOnAttribute" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8630791">
+          <Value exs:type="ns1:Label" Name="mummyBossSpawnFireBall" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8496065">
+          <Value exs:type="ns1:Label" Name="pointerPPU_score" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8496075">
+          <Value exs:type="ns1:Label" Name="pointerPPU_score_00_border00" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8496086">
+          <Value exs:type="ns1:Label" Name="" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8496088">
+          <Value exs:type="ns1:Label" Name="pointerPPU_lvlBlock" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8496102">
+          <Value exs:type="ns1:Label" Name="" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8496096">
+          <Value exs:type="ns1:Label" Name="pointerPPU_XX01" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8496109">
+          <Value exs:type="ns1:Label" Name="pointerPPU_XX02" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8496130">
+          <Value exs:type="ns1:Label" Name="pointerPPU_enemy" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8496100">
+          <Value exs:type="ns1:Label" Name="pointerPPU_player" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8496138">
+          <Value exs:type="ns1:Label" Name="pointerPPU_XX03" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8496150">
+          <Value exs:type="ns1:Label" Name="" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8496149">
+          <Value exs:type="ns1:Label" Name="pointerPPU_timer" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8425553">
+          <Value exs:type="ns1:Label" Name="hud_drawRoutine" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8496051">
+          <Value exs:type="ns1:Label" Name="pointerPPU_HUD_start" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8440234">
+          <Value exs:type="ns1:Label" Name="despawnEventOutOfBounderie" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443522">
+          <Value exs:type="ns1:Label" Name="readWriteEventTracker_Main" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443547">
+          <Value exs:type="ns1:Label" Name="eventReadTrackerRight00" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443761">
+          <Value exs:type="ns1:Label" Name="eventReadTracker01" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443628">
+          <Value exs:type="ns1:Label" Name="eventReadTracker02Left" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443578">
+          <Value exs:type="ns1:Label" Name="" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443644">
+          <Value exs:type="ns1:Label" Name="writeEvent2RamSlotLeft" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8453943">
+          <Value exs:type="ns1:Label" Name="costumSC4ed_eventTrackerCandleReverse" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443909">
+          <Value exs:type="ns1:Label" Name="advanceEventTrackerReverse" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8453936">
+          <Value exs:type="ns1:Label" Name="costumSC4ed_eventTracker" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443320">
+          <Value exs:type="ns1:Label" Name="advanceEventTrackerRomData" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443564">
+          <Value exs:type="ns1:Label" Name="writeEvent2RamSlotRight" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443195">
+          <Value exs:type="ns1:Label" Name="" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443253">
+          <Value exs:type="ns1:Label" Name="spawnsTowardRightSide" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443344">
+          <Value exs:type="ns1:Label" Name="spawnsTowardLeftSide" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443188">
+          <Value exs:type="ns1:Label" Name="readNextEvent_LeftSide" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443341">
+          <Value exs:type="ns1:Label" Name="setDirectionProcideSpawn" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443144">
+          <Value exs:type="ns1:Label" Name="direction2Left_nextEvent" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443155">
+          <Value exs:type="ns1:Label" Name="goEndEventTrackerHandler00" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443164">
+          <Value exs:type="ns1:Label" Name="readNextEvent_RightSide" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443172">
+          <Value exs:type="ns1:Label" Name="advanceBuffer_leftRight" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443215">
+          <Value exs:type="ns1:Label" Name="advanceBuffer_RightLeft" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443243">
+          <Value exs:type="ns1:Label" Name="" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443239">
+          <Value exs:type="ns1:Label" Name="endEventTrackerHandler" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443332">
+          <Value exs:type="ns1:Label" Name="endEventTrackerHandler03" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443353">
+          <Value exs:type="ns1:Label" Name="reverseSlot_EventData02" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8443417">
+          <Value exs:type="ns1:Label" Name="reverseSlot_EventData01" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8436538">
+          <Value exs:type="ns1:Label" Name="subweapAxe_counter" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8436548">
+          <Value exs:type="ns1:Label" Name="subweapAxe_animation" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8436497">
+          <Value exs:type="ns1:Label" Name="subweapAxe_speed_movment" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8444706">
+          <Value exs:type="ns1:Label" Name="whipHitDetection" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8445033">
+          <Value exs:type="ns1:Label" Name="goNextWhipSlot" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8444709">
+          <Value exs:type="ns1:Label" Name="slotLoopWhipHitDetection" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8444813">
+          <Value exs:type="ns1:Label" Name="hitRing_InitiateSwing" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8445422">
+          <Value exs:type="ns1:Label" Name="incEventSlotX_doble" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8444801">
+          <Value exs:type="ns1:Label" Name="hitCandle_InitiateDrop" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8444871">
+          <Value exs:type="ns1:Label" Name="eventHealthCalculation_hitStune" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8431735">
+          <Value exs:type="ns1:Label" Name="stopSimonSpeedAndAnim" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8431336">
+          <Value exs:type="ns1:Label" Name="simonStopCrouchMove" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8431354">
+          <Value exs:type="ns1:Label" Name="simonCrouchLeftSpeedAnim" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8431371">
+          <Value exs:type="ns1:Label" Name="simonCrouchRightSpeedAnim" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8490935">
+          <Value exs:type="ns1:Label" Name="simonCrouchAnimFrameTimer" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8431168">
+          <Value exs:type="ns1:Label" Name="simonStopWalkMov" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8430521">
+          <Value exs:type="ns1:Label" Name="" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8436143">
+          <Value exs:type="ns1:Label" Name="subWeapnThrowAnim" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8436198">
+          <Value exs:type="ns1:Label" Name="subWeaponThrow_Timer_Init" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8436111">
+          <Value exs:type="ns1:Label" Name="subWeaponFindEmptySlot" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8436126">
+          <Value exs:type="ns1:Label" Name="spawnSubweaponCurrentSlot" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8434613">
+          <Value exs:type="ns1:Label" Name="simon_collision_solid00" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8434688">
+          <Value exs:type="ns1:Label" Name="simon_collision_crouching" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8434637">
+          <Value exs:type="ns1:Label" Name="simon_collision_GroundStanding" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8434811">
+          <Value exs:type="ns1:Label" Name="simon_collisionSolid_Air" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8434768">
+          <Value exs:type="ns1:Label" Name="simon_collision_moveOutOfSolid" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8430602">
+          <Value exs:type="ns1:Label" Name="simonAirAnim" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8430028">
+          <Value exs:type="ns1:Label" Name="simonJump_clunkSound_frames" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8430016">
+          <Value exs:type="ns1:Label" Name="simonDeathOnGroundL" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8430998">
+          <Value exs:type="ns1:Label" Name="simonDeathOnGround" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8552548">
+          <Value exs:type="ns1:Label" Name="deathStateHandler00" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8491545">
+          <Value exs:type="ns1:Label" Name="holyWaterThrowXspeed" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8491547">
+          <Value exs:type="ns1:Label" Name="" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8491537">
+          <Value exs:type="ns1:Label" Name="holyWater_attribute" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8491541">
+          <Value exs:type="ns1:Label" Name="holyWaterThrowXspeedSub" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8504115">
+          <Value exs:type="ns1:Label" Name="unusedBatXoffsetFromSimon" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8564066">
+          <Value exs:type="ns1:Label" Name="coffineCircleRoutine00" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8435876">
+          <Value exs:type="ns1:Label" Name="tileCollusionActionTable" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8435924">
+          <Value exs:type="ns1:Label" Name="tileCollusionAction_00" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8435928">
+          <Value exs:type="ns1:Label" Name="tileCollusionAction_01" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8435932">
+          <Value exs:type="ns1:Label" Name="tileCollusionAction_02" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8435938">
+          <Value exs:type="ns1:Label" Name="tileCollusionAction_03" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8435947">
+          <Value exs:type="ns1:Label" Name="tileCollusionAction_04" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8435951">
+          <Value exs:type="ns1:Label" Name="tileCollusionAction_05" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8435961">
+          <Value exs:type="ns1:Label" Name="tileCollusionAction_06" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8435971">
+          <Value exs:type="ns1:Label" Name="tileCollusionAction_07" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8435992">
+          <Value exs:type="ns1:Label" Name="tileCollusionAction_09" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8436003">
+          <Value exs:type="ns1:Label" Name="tileCollusionAction_0a" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8436007">
+          <Value exs:type="ns1:Label" Name="tileCollusionAction_0b" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8436011">
+          <Value exs:type="ns1:Label" Name="tileCollusionAction_0c" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8436015">
+          <Value exs:type="ns1:Label" Name="tileCollusionAction_0d" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8436019">
+          <Value exs:type="ns1:Label" Name="tileCollusionAction_0e" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8436023">
+          <Value exs:type="ns1:Label" Name="tileCollusionAction_0f" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8435978">
+          <Value exs:type="ns1:Label" Name="tileCollusionAction_08" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8435843">
+          <Value exs:type="ns1:Label" Name="mudTile_ColusionAction" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8436039">
+          <Value exs:type="ns1:Label" Name="subweaponInitControll" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8436238">
+          <Value exs:type="ns1:Label" Name="subWeaponEventSlots" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8435318">
+          <Value exs:type="ns1:Label" Name="simonFloorCollusionWhileAir" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8433893">
+          <Value exs:type="ns1:Label" Name="setSimonCollusion_02_Byte1410" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8433908">
+          <Value exs:type="ns1:Label" Name="setSimonCollusion_02_Byte1412" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8433931">
+          <Value exs:type="ns1:Label" Name="setSimonCollusion_02_Byte1414" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8433954">
+          <Value exs:type="ns1:Label" Name="setSimonCollusion_02_Byte1416" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8433977">
+          <Value exs:type="ns1:Label" Name="setSimonCollusion_02_Byte1418" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8434000">
+          <Value exs:type="ns1:Label" Name="setSimonCollusion_02_Byte141a" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8434023">
+          <Value exs:type="ns1:Label" Name="setSimonCollusion_02_Byte141c" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8434038">
+          <Value exs:type="ns1:Label" Name="setSimonCollusion_02_Byte141e" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8434055">
+          <Value exs:type="ns1:Label" Name="setSimonCollusion_02_Byte1434" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8434070">
+          <Value exs:type="ns1:Label" Name="setSimonCollusion_02_Byte1420" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8434085">
+          <Value exs:type="ns1:Label" Name="setSimonCollusion_02_Byte1422" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8434108">
+          <Value exs:type="ns1:Label" Name="setSimonCollusion_02_Byte1424" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8434123">
+          <Value exs:type="ns1:Label" Name="setSimonCollusion_02_Byte142a" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8434146">
+          <Value exs:type="ns1:Label" Name="setSimonCollusion_02_Byte142c" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8434161">
+          <Value exs:type="ns1:Label" Name="setSimonCollusion_02_Byte142e" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8433223">
+          <Value exs:type="ns1:Label" Name="setSimonCollusionByte1404" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8433687">
+          <Value exs:type="ns1:Label" Name="setCollusionAir_crouch" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8431016">
+          <Value exs:type="ns1:Label" Name="initSimonDeath" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8432860">
+          <Value exs:type="ns1:Label" Name="simon_deathAnimRoutine" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8491281">
+          <Value exs:type="ns1:Label" Name="simonDeathAnimData" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8491287">
+          <Value exs:type="ns1:Label" Name="simonDeathSpriteAssembly" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8491293">
+          <Value exs:type="ns1:Label" Name="simonDeathAnimSpeed" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8435476">
+          <Value exs:type="ns1:Label" Name="getCollusionJumpLanding" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8435274">
+          <Value exs:type="ns1:Label" Name="moveSimonOutOfWallYpos" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8432018">
+          <Value exs:type="ns1:Label" Name="setJumpTippingPoint" Comment="" />
         </sys:Item>
       </Labels>
       <RomBytes>
@@ -23936,8 +24434,8 @@ E
 +
 .
 +U
-Eg
-r 135 E
+Bg
+r 135 B
 +E81
 .081
 +081
@@ -25461,7 +25959,7 @@ r 9 +B81
 .081
 +081
 .081
-+081
++Y81
 .081
 .081
 .081
@@ -26167,7 +26665,7 @@ r 34 E08
 .081
 +081
 .081
-+081
++I81
 .081
 .081
 .081
@@ -26501,7 +26999,7 @@ r 34 E08
 +081
 .081
 .081
-+081
++I81
 .081
 .081
 .081
@@ -26516,7 +27014,7 @@ r 34 E08
 .081
 +081
 .081
-+081
++Y81
 .081
 .081
 .081
@@ -27752,7 +28250,7 @@ r 14 E08
 .081
 .081
 +081
-+081
++E81
 .081
 .081
 +081
@@ -28236,7 +28734,7 @@ r 9 +081
 +081
 .081
 +081
-+081
++E81
 .081
 .081
 +081
@@ -28513,1071 +29011,1071 @@ r 9 +081
 .081
 +081
 .081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-.081
-+081
++Y81
+.081
+.081
++
+.081
+.081
++
+.081
++
+.081
+.081
++
+.081
++
+.081
+.081
+.081
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
++E
+.
+.
++
+.
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
+.
+.
++
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
+.
++
+.
++
+.
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
+.
+.
++
++
+.
+.
++
+.
++
+.
+.
+.
++
+.
+.
++
 +081
 .081
 .081
@@ -29995,22 +30493,22 @@ r 9 +081
 +081
 .081
 .081
-+081
++I81
 .081
 +081
 .081
 .081
-+081
++I81
 .081
-+081
++Y81
 .081
 .081
-+081
++E81
 .081
 .081
 +081
 .081
-+081
++Y81
 .081
 .081
 +081
@@ -30039,7 +30537,7 @@ r 9 +081
 .081
 +081
 .081
-+081
++I81
 .081
 +081
 .081
@@ -30062,9 +30560,9 @@ r 9 +081
 .081
 +081
 .081
-+081
 +081
 +081
++E81
 .081
 .081
 +081
@@ -30144,7 +30642,7 @@ r 9 +081
 .081
 +081
 +081
-+081
++E81
 .081
 .081
 +081
@@ -30187,7 +30685,7 @@ r 9 +081
 .081
 +081
 +081
-+081
++E81
 .081
 .081
 +081
@@ -30649,8 +31147,8 @@ r 9 +081
 +081
 .081
 .081
-+081
 +081
++E81
 .081
 .081
 +081
@@ -30867,7 +31365,7 @@ r 9 +081
 .081
 +081
 .081
-+081
++Y81
 .081
 .081
 +081
@@ -31252,7 +31750,11 @@ r 9 +081
 +
 .081
 .081
-r 52 E
+r 48 E08
++08
+.08
+.08
++Q8
 +081
 .081
 .081
@@ -31360,7 +31862,7 @@ r 52 E
 .081
 .081
 .081
-+081
++Y81
 .081
 .081
 .081
@@ -31464,7 +31966,7 @@ r 52 E
 .081
 .081
 .081
-+081
++Y81
 .081
 .081
 .081
@@ -31474,7 +31976,7 @@ r 52 E
 +081
 .081
 .081
-+081
++C81
 .081
 .081
 +081
@@ -31523,7 +32025,7 @@ r 52 E
 .081
 .081
 +081
-+081
++E81
 .081
 .081
 +081
@@ -31562,8 +32064,8 @@ r 52 E
 .081
 +081
 .081
-+081
 +081
++E81
 .081
 .081
 +081
@@ -31716,10 +32218,10 @@ E
 +081
 .081
 .081
-E
-E
-E
-E
+E08
+E08
+E08
+E08
 +081
 +081
 .081
@@ -31799,7 +32301,11 @@ E
 .081
 +081
 .081
-+081
++I81
+.081
+.081
+.081
++I81
 .081
 .081
 .081
@@ -31808,17 +32314,6 @@ E
 .081
 .081
 +081
-.081
-.081
-.081
-+081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
 +081
 .081
 +081
@@ -31829,11 +32324,13 @@ E
 +081
 .081
 +081
+.081
+.081
 +081
 .081
 +081
 .081
-.081
++081
 +081
 .081
 +081
@@ -31852,7 +32349,12 @@ E
 +081
 .081
 +081
+.081
+.081
 +081
+.081
++081
++E81
 .081
 +081
 .081
@@ -31862,7 +32364,7 @@ E
 +081
 .081
 +081
-+081
++E81
 .081
 +081
 +081
@@ -34680,7 +35182,7 @@ r 16 E08
 +081
 .081
 .081
-+081
++I81
 .081
 .081
 .081
@@ -38349,7 +38851,7 @@ r 8 E08
 .0A1
 +0A1
 .0A1
-+0A1
++YA1
 .0A1
 .0A1
 +0A1
@@ -38367,7 +38869,7 @@ r 8 E08
 .0A1
 +0A1
 .0A1
-+0A1
++YA1
 .0A1
 .0A1
 +0A1
@@ -38480,7 +38982,7 @@ r 8 E08
 .0A1
 +0A1
 .0A1
-+0A1
++IA1
 .0A1
 .0A1
 .0A1
@@ -38505,7 +39007,7 @@ r 8 E08
 +C81
 .C81
 +081
-+0A1
++EA1
 .0A1
 .0A1
 +EA1
@@ -38686,377 +39188,377 @@ r 8 E08
 .0A1
 +0A1
 .0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-+0A1
-+0A1
-+0A1
-.0A1
-.0A1
-.0A1
-+0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-E
-E
-E
-E
-E
-E
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-+0A1
-+0A1
-.0A1
-.0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-+0A1
-.0A1
-+0A1
-+0A1
-.0A1
-.0A1
-+0A1
-+0A1
-.0A1
-+0A1
-+0A1
-.0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-+0A1
-+0A1
-+0A1
-+0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-+0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-+0A1
-+0A1
-+0A1
-.0A1
-+CA1
-.CA1
-+CA1
-+CA1
-+C81
-.C81
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-.081
-+081
-.081
-+C81
-.C81
-+C81
-+C81
-+CA1
-.CA1
-+0A1
-+0A1
-+0A1
-.0A1
-.0A1
-+0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-+0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-+0A1
-.0A1
-.0A1
-+0A1
-.0A1
-+0A1
-+0A1
-+081
-.081
-+081
-+081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-+081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-+081
-.081
-+081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-+081
 +EA1
 .0A1
 .0A1
 +0A1
+.0A1
+.0A1
++0A1
++0A1
++0A1
++0A1
+.0A1
+.0A1
+.0A1
++0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
+E08
+E08
+E08
+E08
+E08
+E08
++0A1
+.0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
++0A1
++0A1
+.0A1
+.0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
++0A1
+.0A1
++0A1
++0A1
+.0A1
+.0A1
++0A1
++0A1
+.0A1
++0A1
++0A1
+.0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
++0A1
++0A1
++0A1
++0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
++0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++IA1
+.0A1
+.0A1
++0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
++0A1
++0A1
++0A1
+.0A1
++CA1
+.CA1
++CA1
++CA1
++C81
+.C81
++081
+.081
+.081
++081
+.081
+.081
++081
+.081
++081
+.081
+.081
++081
+.081
+.081
++081
+.081
++081
+.081
+.081
++081
++081
+.081
++081
+.081
+.081
++081
+.081
++081
+.081
+.081
++081
+.081
++081
+.081
+.081
++081
+.081
++081
+.081
+.081
+.081
++081
+.081
++C81
+.C81
++C81
++C81
++CA1
+.CA1
++0A1
++0A1
++0A1
+.0A1
+.0A1
++0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
++0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
++0A1
+.0A1
+.0A1
++0A1
+.0A1
++0A1
++0A1
++081
+.081
++081
++081
++081
+.081
++081
++081
+.081
+.081
++081
+.081
+.081
++081
+.081
++081
+.081
++081
++081
++081
+.081
+.081
++081
+.081
++081
+.081
++081
+.081
++081
++081
+.081
+.081
++081
+.081
++081
+.081
++081
++E
+.0A1
+.0A1
++0A1
 +0A1
 .0A1
 +0A1
@@ -39073,7 +39575,7 @@ E
 +0A1
 .0A1
 +0A1
-+0A1
++E
 .0A1
 .0A1
 +0A1
@@ -48332,14 +48834,14 @@ r 12 E08
 .081
 +081
 r 90 X
-+0A1
++MA1
 .0A1
 .0A1
 .0A1
 +0A1
 .0A1
 +0A1
-+0A1
++IA1
 .0A1
 .0A1
 .0A1
@@ -48673,7 +49175,14 @@ r 36 B081
 r 14 E084
 r 246 B081
 r 10 E084
-r 248 B081
+r 110 B081
+E084
+E084
+E084
+E084
+E084
+E084
+r 132 B081
 r 30 E084
 r 268 B081
 Bg81
@@ -48681,7 +49190,58 @@ r 2607 B081
 r 102 E081
 r 412 B081
 Bg81
-r 1309 B081
+r 1207 B081
+r 9 A081
+B081
+B081
+A081
+B081
+B081
+r 8 A081
+B081
+B081
+r 11 A081
+B081
+B081
+A081
+A081
+A081
+A081
+A081
+A081
+B081
+B081
+A081
+A081
+B081
+B081
+A081
+A081
+A081
+A081
+A081
+A081
+A081
+B081
+B081
+r 19 A081
+B081
+B081
+A081
+A081
+A081
+A081
+A081
+A081
+B081
+B081
+r 9 A081
+B081
+B081
+A081
+A081
+A081
+A081
 A081
 r 426 F081
 r 122 B081
@@ -55186,7 +55746,7 @@ r 19 A086
 .081
 .081
 .081
-+081
++E81
 .081
 +081
 .081
@@ -68829,24 +69389,7 @@ r 10 E082
 .081
 .081
 .081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
-.081
-+081
-.081
-+081
-.081
-.081
-+081
-.081
+r 18 X081
 +081
 +081
 .081
@@ -68928,7 +69471,7 @@ r 10 E082
 +081
 .081
 .081
-r 8 U
+r 8 E082
 +081
 +081
 .081
@@ -69007,7 +69550,7 @@ U
 +081
 .081
 .081
-+081
++Y81
 .081
 .081
 +081
@@ -71796,7 +72339,7 @@ r 19 E082
 .
 +
 +
-+
++081
 .
 .
 +
@@ -71807,7 +72350,7 @@ r 19 E082
 .
 +
 .
-+
++081
 .
 .
 +
@@ -97997,7 +98540,7 @@ r 10 E083
 +Y81
 .081
 .081
-+081
++Y81
 .081
 .081
 +E81
@@ -98095,7 +98638,7 @@ r 10 E083
 .081
 .081
 +081
-+081
++E81
 .081
 +081
 .081
@@ -98238,7 +98781,7 @@ r 10 E083
 .081
 +081
 .081
-+081
++I81
 .081
 .081
 .081
@@ -98261,7 +98804,7 @@ r 10 E083
 +081
 .081
 .081
-+081
++I81
 .081
 .081
 .081
@@ -98295,7 +98838,7 @@ r 10 E083
 .081
 +081
 +081
-+081
++E81
 .081
 +081
 .081
@@ -98927,7 +99470,7 @@ r 10 E083
 +Y81
 .081
 .081
-+081
++E81
 .081
 .081
 +081

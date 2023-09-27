@@ -4538,7 +4538,7 @@ bossDancerStateDeath06: INC.B RAM_X_event_slot_34,X          ;85E121|F634    |00
                        BCC CODE_85E14F                      ;85E15D|90F0    |85E14F;  
                        db $6B                               ;85E15F|        |      ;  
                                                             ;      |        |      ;  
-          CODE_85E160: JSL.L clearCurrentEventPreserveXandY ;85E160|22F4B382|82B3F4;  
+          CODE_85E160: JSL.L clearY_EventSlotPreserveX      ;85E160|22F4B382|82B3F4;  
                        CLC                                  ;85E164|18      |      ;  
                        RTL                                  ;85E165|6B      |      ;  
                                                             ;      |        |      ;  
@@ -7370,7 +7370,7 @@ goldPlatformStateRoutine: LDA.B RAM_X_event_slot_state,X       ;85F97F|B512    |
                        LDA.B RAM_X_event_slot_3c,X          ;85FB3F|B53C    |00003C;  
                        CMP.W #$00FF                         ;85FB41|C9FF00  |      ;  
                        BNE CODE_85FB69                      ;85FB44|D023    |85FB69;  
-                       JSL.L getEmptyEventSlot              ;85FB46|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;85FB46|22F1D780|80D7F1;  
                        BCS CODE_85FB69                      ;85FB4A|B01D    |85FB69;  
                        JSL.L clearSelectedEventSlotAll      ;85FB4C|22598C80|808C59;  
                        LDA.W #$0026                         ;85FB50|A92600  |      ;  

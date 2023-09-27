@@ -745,7 +745,7 @@ simonCrouchSpriteAssemblyPointer: dw sprAssID_295                      ;818F9B| 
 simonCrouchAnimDMAframeIndex: dw $0007,$0008,$0009,$000A           ;818FA9|        |      ;  
                        dw $000B,$000C,$0007                 ;818FB1|        |      ;  
                                                             ;      |        |      ;  
-        DATA16_818FB7: dw $004F,$004F,$004F,$0000           ;818FB7|        |      ;  
+simonCrouchAnimFrameTimer: dw $004F,$004F,$004F,$0000           ;818FB7|        |      ;  
                                                             ;      |        |      ;  
 simonOriantationLookupTable: dw $0000,$4000                       ;818FBF|        |      ;  
                                                             ;      |        |      ;  
@@ -890,11 +890,11 @@ simonsSwingAndThrowAssemblyPointerTable: dw sprAssID_336_SwingLeftSpriteAssembly
                                                             ;      |        |      ;  
         DATA16_819209: dw $0000,$8000,$C000,$4000           ;819209|        |      ;  
                                                             ;      |        |      ;  
-        DATA16_819211: dw $0000,$4000                       ;819211|        |      ;  
+  holyWater_attribute: dw $0000,$4000                       ;819211|        |      ;  
                                                             ;      |        |      ;  
-        DATA16_819215: dw $0000,$0000                       ;819215|        |      ;  
+holyWaterThrowXspeedSub: dw $0000,$0000                       ;819215|        |      ;  
                                                             ;      |        |      ;  
-        DATA16_819219: dw $0002,$FFFE                       ;819219|        |      ;  
+ holyWaterThrowXspeed: dw $0002,$FFFE                       ;819219|        |      ;  
                                                             ;      |        |      ;  
         DATA16_81921D: dw $80DC,$8103,$8119,$8103           ;81921D|        |      ;  
                        dw $8119,$8145,$812F,$8145           ;819225|        |      ;  
@@ -1575,20 +1575,43 @@ multiShotUpgradHudSpritePPU: dw $3248,$3264,$3666,$583B           ;81A253|      
                        dw $FF0C,$FF04,$0C00,$04FF           ;81A39B|        |      ;  
                        dw $00FF,$FF0C,$FF04,$0C00           ;81A3A3|        |      ;  
                        dw $05FF,$00FF,$FF0C,$FF05           ;81A3AB|        |      ;  
-                       dw $5810,$24FD,$2C2B,$2C2C           ;81A3B3|        |      ;  
-                       dw $64FD,$FE2B,$5821,$20FD           ;81A3BB|        |      ;  
-                       dw $0D1D,$1C19,$FD0F,$FE2C           ;81A3C3|        |      ;  
-                       dw $582E,$0101,$64FD,$002D           ;81A3CB|        |      ;  
-                       dw $0000,$24FD,$FD2D,$0C20           ;81A3D3|        |      ;  
-                       dw $1916,$150D,$3DFE,$2658           ;81A3DB|        |      ;  
-                       dw $42FE,$1A58,$0B16,$0F23           ;81A3E3|        |      ;  
-                       dw $FE1C,$5850,$64FD,$002D           ;81A3EB|        |      ;  
-                       dw $0000,$24FD,$FD2D,$2720           ;81A3F3|        |      ;  
-                       dw $0025,$0000,$251A,$63FE           ;81A3FB|        |      ;  
-                       dw $0F58,$0F18,$2317,$70FE           ;81A403|        |      ;  
-                       dw $FD58,$2BA4,$2C2C,$FD2C           ;81A40B|        |      ;  
-                       dw $2BE4,$20FD,$131E,$0F17           ;81A413|        |      ;  
-                       db $FF                               ;81A41B|        |      ;  
+                                                            ;      |        |      ;  
+ pointerPPU_HUD_start: dw $5810                             ;81A3B3|        |      ;  
+                       db $FD,$24,$2B,$2C,$2C,$2C,$FD,$64   ;81A3B5|        |      ;  
+                       db $2B                               ;81A3BD|        |      ;  
+                       dw $21FE                             ;81A3BE|        |      ;  
+                       db $58                               ;81A3C0|        |      ;  
+                                                            ;      |        |      ;  
+     pointerPPU_score: dw $20FD                             ;81A3C1|        |      ;  
+                       db $1D,$0D,$19,$1C,$0F,$FD,$2C,$FE   ;81A3C3|        |      ;  
+                                                            ;      |        |      ;  
+pointerPPU_score_00_border00: dw $582E                             ;81A3CB|        |      ;  
+                       db $01,$01,$FD,$64,$2D,$00,$00,$00   ;81A3CD|        |      ;  
+                       db $FD,$24,$2D                       ;81A3D5|        |      ;  
+                                                            ;      |        |      ;  
+  pointerPPU_lvlBlock: dw $20FD                             ;81A3D8|        |      ;  
+                       db $0C,$16,$19,$0D,$15,$FE           ;81A3DA|        |      ;  
+                                                            ;      |        |      ;  
+      pointerPPU_XX01: dw $583D                             ;81A3E0|        |      ;  
+                       db $26,$FE                           ;81A3E2|        |      ;  
+                                                            ;      |        |      ;  
+    pointerPPU_player: dw $5842                             ;81A3E4|        |      ;  
+                       db $1A,$16,$0B,$23,$0F,$1C,$FE       ;81A3E6|        |      ;  
+                                                            ;      |        |      ;  
+      pointerPPU_XX02: dw $5850                             ;81A3ED|        |      ;  
+                       db $FD,$64,$2D,$00,$00,$00,$FD,$24   ;81A3EF|        |      ;  
+                       db $2D,$FD,$20,$27,$25,$00,$00,$00   ;81A3F7|        |      ;  
+                       db $1A,$25,$FE                       ;81A3FF|        |      ;  
+                                                            ;      |        |      ;  
+     pointerPPU_enemy: dw $5863                             ;81A402|        |      ;  
+                       db $0F,$18,$0F,$17,$23,$FE           ;81A404|        |      ;  
+                                                            ;      |        |      ;  
+      pointerPPU_XX03: dw $5870                             ;81A40A|        |      ;  
+                       db $FD,$A4,$2B,$2C,$2C,$2C,$FD,$E4   ;81A40C|        |      ;  
+                       db $2B                               ;81A414|        |      ; linebreak 2x followed by pointer ??
+                                                            ;      |        |      ;  
+     pointerPPU_timer: dw $20FD                             ;81A415|        |      ;  
+                       db $1E,$13,$17,$0F,$FF               ;81A417|        |      ;  
                                                             ;      |        |      ;  
 mainEventIDPointerTable: dl event_ID_00                       ;81A41C|        |80C9FF; 00
                        dl event_ID_01_Projectile            ;81A41F|        |82FE71; 01
@@ -1604,7 +1627,7 @@ mainEventIDPointerTable: dl event_ID_00                       ;81A41C|        |8
                        dl event_ID_0b_BonePillar            ;81A43D|        |80D0BD; 0b
                        dl event_ID_0c_Bat                   ;81A440|        |86C529; 0c
                        dl event_ID_0d_SecretMan             ;81A443|        |83ECBE; 0d
-                       dl event_ID_0e_UnusedCandle          ;81A446|        |80D233; 0e
+                       dl event_ID_0e_CandleMain            ;81A446|        |80D233; 0e
                        dl event_ID_0f_BookBird              ;81A449|        |80D8E7; 0f
                        dl event_ID_10_Bird                  ;81A44C|        |80E26B; 10
                        dl event_ID_11_SkellyWalk            ;81A44F|        |80F2DE; 11
@@ -3293,7 +3316,7 @@ noMoreSpritesHereIGuess03: dw $6000,$FFFD,$0000,$0001           ;81C06D|        
                                                             ;      |        |      ;  
 newSC4edLevelEntranceRoutine: STA.B RAM_X_event_slot_state,X       ;81C07D|9512    |000012; This will make the game use the expanded entrance tables
                                                             ;      |        |      ;  
-          CODE_81C07F: LDA.B RAM_currentLevel               ;81C07F|A586    |000086;  
+                       LDA.B RAM_currentLevel               ;81C07F|A586    |000086;  
                        XBA                                  ;81C081|EB      |      ;  
                        CLC                                  ;81C082|18      |      ;  
                        ADC.B RAM_X_event_slot_state,X       ;81C083|7512    |000012;  
@@ -3481,9 +3504,10 @@ autoSpawn_subID_VisuaID: db $39,$07,$07,$54,$4C,$51,$07,$58   ;81C2D9|        | 
                        dw sprAssID_439                      ;81C31F|        |84A791;  
                        dw sprAssID_437                      ;81C321|        |84A777;  
                                                             ;      |        |      ;  
- mightBeAspeedTable00: dw $FFF9,$FFED,$FFE3,$FFDB           ;81C323|        |      ;  
+unusedBatYoffsetFromSimon: dw $FFF9,$FFED,$FFE3,$FFDB           ;81C323|        |      ;  
                        dw $FFD5,$FFD1,$FFCF,$FFCE           ;81C32B|        |      ;  
-                       dw $FFCE,$FFCF,$FFD1,$FFD5           ;81C333|        |      ;  
+                                                            ;      |        |      ;  
+unusedBatXoffsetFromSimon: dw $FFCE,$FFCF,$FFD1,$FFD5           ;81C333|        |      ;  
                        dw $FFDB,$FFE3,$FFED,$FFF9           ;81C33B|        |      ;  
                                                             ;      |        |      ;  
 areThisTimingTablesTable00: dw $0007,$0013,$001D,$0025           ;81C343|        |      ;  

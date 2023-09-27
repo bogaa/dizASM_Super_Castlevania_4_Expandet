@@ -47,7 +47,7 @@
                        LDA.W #$009D                         ;82805D|A99D00  |      ;  
                        JSL.L lunchSFXfromAccum              ;828060|22E38580|8085E3;  
                                                             ;      |        |      ;  
-          CODE_828064: LDA.B RAM_mainGameState              ;828064|A570    |000070;  
+  deathStateHandler00: LDA.B RAM_mainGameState              ;828064|A570    |000070;  
                        CMP.W #$000C                         ;828066|C90C00  |      ;  
                        BEQ CODE_8280DC                      ;828069|F071    |8280DC;  
                        CMP.W #$0006                         ;82806B|C90600  |      ;  
@@ -1090,12 +1090,12 @@ event_ID_3f_waterDrip: LDA.B RAM_X_event_slot_state,X       ;828950|B512    |000
                        ADC.W #$0002                         ;828A0A|690200  |      ;  
                        STA.B RAM_X_event_slot_yPos,X        ;828A0D|950E    |00000E;  
                        INC.B RAM_X_event_slot_state,X       ;828A0F|F612    |000012;  
-                       JSL.L getEmptyEventSlot              ;828A11|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;828A11|22F1D780|80D7F1;  
                        BCS CODE_828A69                      ;828A15|B052    |828A69;  
                        LDA.W #$E000                         ;828A17|A900E0  |      ;  
                        LDY.W #$0000                         ;828A1A|A00000  |      ;  
                        JSL.L CODE_828A2D                    ;828A1D|222D8A82|828A2D;  
-                       JSL.L getEmptyEventSlot              ;828A21|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;828A21|22F1D780|80D7F1;  
                        BCS CODE_828A69                      ;828A25|B042    |828A69;  
                        LDA.W #$2000                         ;828A27|A90020  |      ;  
                        LDY.W #$FFFF                         ;828A2A|A0FFFF  |      ;  
@@ -2043,7 +2043,7 @@ event_ID_39_bridgeRobe: LDA.B RAM_X_event_slot_state,X       ;82915B|B512    |00
                        LDA.B RAM_X_event_slot_3e,X          ;8291B3|B53E    |00003E;  
                        STA.B RAM_X_event_slot_sprite_assembly;8291B5|8500    |000000;  
                                                             ;      |        |      ;  
-          CODE_8291B7: JSL.L getEmptyEventSlot              ;8291B7|22F1D780|80D7F1;  
+          CODE_8291B7: JSL.L readEventTrackerForward        ;8291B7|22F1D780|80D7F1;  
                        BCS CODE_8291F1                      ;8291BB|B034    |8291F1;  
                        JSL.L clearSelectedEventSlotAll      ;8291BD|22598C80|808C59;  
                        LDY.B RAM_XregSlotCurrent            ;8291C1|A4FC    |0000FC;  
@@ -2150,7 +2150,7 @@ fallingStalactiteState02: JSL.L YposFallSpeed2000              ;829274|222BD682|
                        JSL.L lunchSFXfromAccum              ;829289|22E38580|8085E3;  
                        LDX.B RAM_XregSlotCurrent            ;82928D|A6FC    |0000FC;  
                        INC.B RAM_X_event_slot_state,X       ;82928F|F612    |000012;  
-                       JSL.L getEmptyEventSlot              ;829291|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;829291|22F1D780|80D7F1;  
                        BCS CODE_8292F8                      ;829295|B061    |8292F8;  
                        JSL.L clearSelectedEventSlotAll      ;829297|22598C80|808C59;  
                        LDA.W #$A5EC                         ;82929B|A9ECA5  |      ;  
@@ -2160,7 +2160,7 @@ fallingStalactiteState02: JSL.L YposFallSpeed2000              ;829274|222BD682|
                        LDA.W #$0000                         ;8292A5|A90000  |      ;  
                        STA.B RAM_X_event_slot_xSpd,X        ;8292A8|951A    |00001A;  
                        JSL.L CODE_8292C7                    ;8292AA|22C79282|8292C7;  
-                       JSL.L getEmptyEventSlot              ;8292AE|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;8292AE|22F1D780|80D7F1;  
                        BCS CODE_8292F8                      ;8292B2|B044    |8292F8;  
                        JSL.L clearSelectedEventSlotAll      ;8292B4|22598C80|808C59;  
                        LDA.W #$A5F1                         ;8292B8|A9F1A5  |      ;  
@@ -3002,7 +3002,7 @@ hunchBackJumpSpeedYpos: LDA.B RAM_X_event_slot_ySpdSub,X     ;829896|B51C    |00
                        JSR.W CODE_82998D                    ;829953|208D99  |82998D;  
                        CPY.W #$0003                         ;829956|C00300  |      ;  
                        BCS CODE_82998B                      ;829959|B030    |82998B;  
-                       JSL.L getEmptyEventSlot              ;82995B|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;82995B|22F1D780|80D7F1;  
                        BCS CODE_82998B                      ;82995F|B02A    |82998B;  
                        JSL.L clearSelectedEventSlotAll      ;829961|22598C80|808C59;  
                        LDA.W #$0057                         ;829965|A95700  |      ;  
@@ -5547,13 +5547,13 @@ coffineCircleStateTable: dw coffineCircleState00              ;82ACBF|        |8
                                                             ;      |        |      ;  
           CODE_82AD50: RTL                                  ;82AD50|6B      |      ;  
                                                             ;      |        |      ;  
- coffineCircleState01: JSL.L CODE_82AD62                    ;82AD51|2262AD82|82AD62;  
-                       JSL.L coffineCircleRoutine00         ;82AD55|227AAD82|82AD7A;  
-                       JSL.L coffineCircleRoutine01         ;82AD59|22A7AD82|82ADA7;  
-                       JSL.L coffineCircleRoutine02         ;82AD5D|22E8AD82|82ADE8;  
+ coffineCircleState01: JSL.L coffineCircleRoutine00         ;82AD51|2262AD82|82AD62;  
+                       JSL.L coffineCircleRoutine01         ;82AD55|227AAD82|82AD7A;  
+                       JSL.L coffineCircleRoutine02         ;82AD59|22A7AD82|82ADA7;  
+                       JSL.L coffineCircleRoutine03         ;82AD5D|22E8AD82|82ADE8;  
                        RTL                                  ;82AD61|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_82AD62: INC.B RAM_X_event_slot_38,X          ;82AD62|F638    |000038;  
+coffineCircleRoutine00: INC.B RAM_X_event_slot_38,X          ;82AD62|F638    |000038;  
                        LDA.B RAM_X_event_slot_38,X          ;82AD64|B538    |000038;  
                        AND.W #$001F                         ;82AD66|291F00  |      ;  
                        STA.B RAM_X_event_slot_38,X          ;82AD69|9538    |000038;  
@@ -5567,7 +5567,7 @@ coffineCircleStateTable: dw coffineCircleState00              ;82ACBF|        |8
                        STA.B RAM_X_event_slot_32,X          ;82AD77|9532    |000032;  
                        RTL                                  ;82AD79|6B      |      ;  
                                                             ;      |        |      ;  
-coffineCircleRoutine00: LDA.B RAM_X_event_slot_32,X          ;82AD7A|B532    |000032;  
+coffineCircleRoutine01: LDA.B RAM_X_event_slot_32,X          ;82AD7A|B532    |000032;  
                        AND.W #$00FF                         ;82AD7C|29FF00  |      ;  
                        ASL A                                ;82AD7F|0A      |      ;  
                        TAY                                  ;82AD80|A8      |      ;  
@@ -5598,7 +5598,7 @@ coffineCircleRoutine00: LDA.B RAM_X_event_slot_32,X          ;82AD7A|B532    |00
                        STA.B RAM_X_event_slot_xPos,X        ;82ADA4|950A    |00000A;  
                        RTL                                  ;82ADA6|6B      |      ;  
                                                             ;      |        |      ;  
-coffineCircleRoutine01: LDA.B RAM_X_event_slot_32,X          ;82ADA7|B532    |000032;  
+coffineCircleRoutine02: LDA.B RAM_X_event_slot_32,X          ;82ADA7|B532    |000032;  
                        AND.W #$00FF                         ;82ADA9|29FF00  |      ;  
                        CMP.W #$0080                         ;82ADAC|C98000  |      ;  
                        BCS CODE_82ADB8                      ;82ADAF|B007    |82ADB8;  
@@ -5641,7 +5641,7 @@ coffineCircleRoutine01: LDA.B RAM_X_event_slot_32,X          ;82ADA7|B532    |00
                        STA.B RAM_X_event_slot_yPos,X        ;82ADE5|950E    |00000E;  
                        RTL                                  ;82ADE7|6B      |      ;  
                                                             ;      |        |      ;  
-coffineCircleRoutine02: INC.B RAM_X_event_slot_3a,X          ;82ADE8|F63A    |00003A;  
+coffineCircleRoutine03: INC.B RAM_X_event_slot_3a,X          ;82ADE8|F63A    |00003A;  
                        LDA.B RAM_X_event_slot_3a,X          ;82ADEA|B53A    |00003A;  
                        AND.W #$007F                         ;82ADEC|297F00  |      ;  
                        CMP.W #$0073                         ;82ADEF|C97300  |      ;  
@@ -5883,7 +5883,7 @@ coffineCircleSnapAnimation01: LDA.W #$8B87                         ;82AE0A|A9878
                        BCC CODE_82AF9F                      ;82AFAD|90F0    |82AF9F;  
                        RTL                                  ;82AFAF|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_82AFB0: JSL.L clearCurrentEventPreserveXandY ;82AFB0|22F4B382|82B3F4;  
+          CODE_82AFB0: JSL.L clearY_EventSlotPreserveX      ;82AFB0|22F4B382|82B3F4;  
                        CLC                                  ;82AFB4|18      |      ;  
                        RTL                                  ;82AFB5|6B      |      ;  
                                                             ;      |        |      ;  
@@ -6438,7 +6438,7 @@ vipesDefeatedClearBossFlag: LDA.W #$0000                         ;82B2A2|A90000 
                        STZ.B RAM_X_event_slot_3e,X          ;82B3F1|743E    |00003E;  
                        RTL                                  ;82B3F3|6B      |      ;  
                                                             ;      |        |      ;  
-clearCurrentEventPreserveXandY: PHX                                  ;82B3F4|DA      |      ;  
+clearY_EventSlotPreserveX: PHX                                  ;82B3F4|DA      |      ;  
                        TYX                                  ;82B3F5|BB      |      ;  
                        JSL.L clearSelectedEventSlotAll      ;82B3F6|22598C80|808C59;  
                        PLX                                  ;82B3FA|FA      |      ;  
@@ -7308,13 +7308,9 @@ skellyHighFiveTable05: JSL.L gravetyFallCalculation3000     ;82BA55|2230B482|82B
                        ASL A                                ;82BAAA|0A      |      ;  
                        ASL A                                ;82BAAB|0A      |      ;  
                        JML.L newSC4edLevelEntranceRoutine   ;82BAAC|5C7DC081|81C07D; jump to NEW cameraLock setup SC4ed
-                       AND.W #$00FF                         ;82BAB0|29FF00  |      ; old Unused Routine
-                       STA.B RAM_X_event_slot_state,X       ;82BAB3|9512    |000012;  
-                       LDA.W LOOSE_OP_81C07E,Y              ;82BAB5|B97EC0  |81C07E;  
-                       AND.W #$00FF                         ;82BAB8|29FF00  |      ;  
-                       STA.B RAM_X_event_slot_3c,X          ;82BABB|953C    |00003C;  
-                       LDA.W CODE_81C07F,Y                  ;82BABD|B97FC0  |81C07F;  
-                       STA.B RAM_X_event_slot_3e,X          ;82BAC0|953E    |00003E;  
+                       db $29,$FF,$00,$95,$12,$B9,$7E,$C0   ;82BAB0|        |      ; Vanilla Unused Routine
+                       db $29,$FF,$00,$95,$3C,$B9,$7F,$C0   ;82BAB8|        |      ;  
+                       db $95,$3E                           ;82BAC0|        |      ;  
                                                             ;      |        |      ;  
           CODE_82BAC2: RTL                                  ;82BAC2|6B      |      ; end unused routine
                                                             ;      |        |      ;  
@@ -7357,12 +7353,15 @@ skellyHighFiveTable05: JSL.L gravetyFallCalculation3000     ;82BA55|2230B482|82B
                        PHX                                  ;82BB06|DA      |      ;  
                        ASL A                                ;82BB07|0A      |      ;  
                        TAX                                  ;82BB08|AA      |      ;  
-                       LDA.L UNREACH_82BB13,X               ;82BB09|BF13BB82|82BB13;  
+                       LDA.L PTR16_82BB13,X                 ;82BB09|BF13BB82|82BB13;  
                        PLX                                  ;82BB0D|FA      |      ;  
                        STA.B RAM_X_event_slot_sprite_assembly;82BB0E|8500    |000000;  
                        JMP.W (RAM_X_event_slot_sprite_assembly);82BB10|6C0000  |000000;  
                                                             ;      |        |      ;  
-       UNREACH_82BB13: db $1B,$BB,$1B,$BB,$4E,$BB,$4E,$BB   ;82BB13|        |      ;  
+         PTR16_82BB13: dw sc4edExitHandlerNew00             ;82BB13|        |82BB1B;  
+                       dw sc4edExitHandlerNew00             ;82BB15|        |82BB1B;  
+                       dw sc4edExitHandlerNewCutScene02     ;82BB17|        |82BB4E;  
+                       dw sc4edExitHandlerNewCutScene02     ;82BB19|        |82BB4E;  
                                                             ;      |        |      ;  
 sc4edExitHandlerNew00: PHX                                  ;82BB1B|DA      |      ;  
                        LDA.B RAM_currentLevel               ;82BB1C|A586    |000086;  
@@ -7407,6 +7406,7 @@ sc4edExitHandlerNewCutScene02: LDA.B RAM_X_event_slot_3c,X          ;82BB4E|B53C
                        JSL.L lunchSFXfromAccum              ;82BB62|22E38580|8085E3;  
                        LDA.W #$000B                         ;82BB66|A90B00  |      ;  
                        JMP.W levelLoadInitSC4edHandler      ;82BB69|4CC0FF  |82FFC0;  
+                                                            ;      |        |      ;  
                                                             ;      |        |      ;  
   event_ID_16_Crusher: JSL.L CODE_82BBC4                    ;82BB6C|22C4BB82|82BBC4;  
                                                             ;      |        |      ;  
@@ -8191,7 +8191,7 @@ enemyMedusaStateJumpTable: dw enemyMedusaState00                ;82C1CC|        
    enemyMedusaState03: LDA.W #$0003                         ;82C26A|A90300  |      ;  
                        STA.B RAM_X_event_slot_sprite_assembly;82C26D|8500    |000000;  
                                                             ;      |        |      ;  
-          CODE_82C26F: JSL.L getEmptyEventSlot              ;82C26F|22F1D780|80D7F1;  
+          CODE_82C26F: JSL.L readEventTrackerForward        ;82C26F|22F1D780|80D7F1;  
                        BCS CODE_82C298                      ;82C273|B023    |82C298;  
                        JSL.L clearSelectedEventSlotAll      ;82C275|22598C80|808C59;  
                        LDA.W #$0007                         ;82C279|A90700  |      ;  
@@ -8423,7 +8423,7 @@ autoSpawnSubID00_pillar: LDA.B RAM_frameCounter_effectiv      ;82C42F|A578    |0
                        LDA.W #$0039                         ;82C449|A93900  |      ;  
                        STA.B RAM_X_event_slot_sprite_assembly;82C44C|8500    |000000;  
                                                             ;      |        |      ;  
-          CODE_82C44E: JSL.L getEmptyEventSlot              ;82C44E|22F1D780|80D7F1;  
+          CODE_82C44E: JSL.L readEventTrackerForward        ;82C44E|22F1D780|80D7F1;  
                        BCS CODE_82C479                      ;82C452|B025    |82C479;  
                        JSL.L clearSelectedEventSlotAll      ;82C454|22598C80|808C59;  
                        LDA.B RAM_X_event_slot_sprite_assembly;82C458|A500    |000000;  
@@ -8465,7 +8465,7 @@ autoSpawnSubID01_Medusa: INC.B RAM_X_event_slot_24,X          ;82C499|F624    |0
                        BCC CODE_82C4D4                      ;82C4A0|9032    |82C4D4;  
                                                             ;      |        |      ;  
           CODE_82C4A2: STZ.B RAM_X_event_slot_24,X          ;82C4A2|7424    |000024;  
-                       JSL.L getEmptyEventSlot              ;82C4A4|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;82C4A4|22F1D780|80D7F1;  
                        BCS CODE_82C4D4                      ;82C4A8|B02A    |82C4D4;  
                        JSL.L clearSelectedEventSlotAll      ;82C4AA|22598C80|808C59;  
                        LDA.W #$0007                         ;82C4AE|A90700  |      ;  
@@ -8513,7 +8513,7 @@ autoSpawnSubID03_Zombie: LDA.B RAM_X_event_slot_3e,X          ;82C4DB|B53E    |0
                        LDA.B RAM_X_event_slot_sprite_assembly;82C4FA|A500    |000000;  
                        CMP.W #$0004                         ;82C4FC|C90400  |      ;  
                        BCS CODE_82C4EA                      ;82C4FF|B0E9    |82C4EA;  
-                       JSL.L getEmptyEventSlot              ;82C501|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;82C501|22F1D780|80D7F1;  
                        BCS CODE_82C4D4                      ;82C505|B0CD    |82C4D4;  
                        JSL.L clearSelectedEventSlotAll      ;82C507|22598C80|808C59;  
                        LDA.W #$0054                         ;82C50B|A95400  |      ;  
@@ -8528,7 +8528,7 @@ autoSpawnSubID07_eagles: LDA.B RAM_frameCounter_effectiv      ;82C51C|A578    |0
                        BNE CODE_82C4D4                      ;82C521|D0B1    |82C4D4;  
                        LDA.B RAM_RNG_2                      ;82C523|A5E8    |0000E8;  
                        BMI CODE_82C4D4                      ;82C525|30AD    |82C4D4;  
-                       JSL.L getEmptyEventSlot              ;82C527|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;82C527|22F1D780|80D7F1;  
                        BCS CODE_82C4D4                      ;82C52B|B0A7    |82C4D4;  
                        JSL.L clearSelectedEventSlotAll      ;82C52D|22598C80|808C59;  
                        LDA.W #$0058                         ;82C531|A95800  |      ;  
@@ -8556,7 +8556,7 @@ autoSpawnSubID04_waterSpitter: LDA.W #$004C                         ;82C549|A94C
                        LDA.B RAM_X_event_slot_sprite_assembly;82C561|A500    |000000;  
                        CMP.W #$0003                         ;82C563|C90300  |      ;  
                        BCS CODE_82C594                      ;82C566|B02C    |82C594;  
-                       JSL.L getEmptyEventSlot              ;82C568|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;82C568|22F1D780|80D7F1;  
                        BCS CODE_82C594                      ;82C56C|B026    |82C594;  
                        JSL.L clearSelectedEventSlotAll      ;82C56E|22598C80|808C59;  
                        LDA.B RAM_X_event_slot_attribute     ;82C572|A502    |000002;  
@@ -8611,7 +8611,7 @@ autoSpawnSubID08_grabingHand: LDA.W #$0066                         ;82C5B7|A9660
                        AND.W #$003F                         ;82C5C6|293F00  |      ;  
                        ORA.W #$0080                         ;82C5C9|098000  |      ;  
                        STA.B RAM_X_event_slot_24,X          ;82C5CC|9524    |000024;  
-                       JSL.L getEmptyEventSlot              ;82C5CE|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;82C5CE|22F1D780|80D7F1;  
                        BCS CODE_82C5F3                      ;82C5D2|B01F    |82C5F3;  
                        JSL.L clearSelectedEventSlotAll      ;82C5D4|22598C80|808C59;  
                        LDA.B RAM_X_event_slot_sprite_assembly;82C5D8|A500    |000000;  
@@ -8636,7 +8636,7 @@ autoSpawnSubID08_grabingHand: LDA.W #$0066                         ;82C5B7|A9660
                                                             ;      |        |      ;  
           CODE_82C5FB: LDA.W #$0140                         ;82C5FB|A94001  |      ;  
                        STA.B RAM_X_event_slot_24,X          ;82C5FE|9524    |000024;  
-                       JSL.L getEmptyEventSlot              ;82C600|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;82C600|22F1D780|80D7F1;  
                        BCS CODE_82C5FA                      ;82C604|B0F4    |82C5FA;  
                        JSL.L clearSelectedEventSlotAll      ;82C606|22598C80|808C59;  
                        LDA.W #$000C                         ;82C60A|A90C00  |      ;  
@@ -8668,7 +8668,7 @@ autoSpawnSubID08_grabingHand: LDA.W #$0066                         ;82C5B7|A9660
                        LDA.W DATA16_81C2E7,Y                ;82C635|B9E7C2  |81C2E7;  
                        STA.B RAM_X_event_slot_22,X          ;82C638|9522    |000022;  
                        INC.B RAM_X_event_slot_24,X          ;82C63A|F624    |000024;  
-                       JSL.L getEmptyEventSlot              ;82C63C|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;82C63C|22F1D780|80D7F1;  
                        BCS CODE_82C621                      ;82C640|B0DF    |82C621;  
                        JSL.L clearSelectedEventSlotAll      ;82C642|22598C80|808C59;  
                        LDA.W #$0067                         ;82C646|A96700  |      ;  
@@ -8845,12 +8845,12 @@ event_ID_4a_unusedBat: REP #$20                             ;82C757|C220    |   
                        AND.W #$000F                         ;82C7A4|290F00  |      ;  
                        ASL A                                ;82C7A7|0A      |      ;  
                        TAY                                  ;82C7A8|A8      |      ;  
-                       LDA.W CODE_00C333,Y                  ;82C7A9|B933C3  |00C333;  
+                       LDA.W unusedBatXoffsetFromSimon,Y    ;82C7A9|B933C3  |81C333;  
                        CLC                                  ;82C7AC|18      |      ;  
                        ADC.W RAM_simonSlot_Xpos             ;82C7AD|6D4A05  |00054A;  
                        STA.B RAM_X_event_slot_xPos,X        ;82C7B0|950A    |00000A;  
                        STZ.B RAM_X_event_slot_xPosSub,X     ;82C7B2|7408    |000008;  
-                       LDA.W CODE_00C323,Y                  ;82C7B4|B923C3  |00C323;  
+                       LDA.W unusedBatYoffsetFromSimon,Y    ;82C7B4|B923C3  |81C323;  
                        CLC                                  ;82C7B7|18      |      ;  
                        ADC.W RAM_simonSlot_Ypos             ;82C7B8|6D4E05  |00054E;  
                        STA.B RAM_X_event_slot_yPos,X        ;82C7BB|950E    |00000E;  
@@ -9627,14 +9627,14 @@ chandelireFallingState02: LDA.B RAM_X_event_slot_xPos,X        ;82CD41|B50A    |
                        TAY                                  ;82CDAB|A8      |      ;  
                        LDA.W #$0066                         ;82CDAC|A96600  |      ;  
                        JSL.L BG_blockUpdater                ;82CDAF|22E7D183|83D1E7;  
-                       JSL.L getEmptyEventSlot              ;82CDB3|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;82CDB3|22F1D780|80D7F1;  
                        BCS CODE_82CDF8                      ;82CDB7|B03F    |82CDF8;  
                        JSL.L CODE_82CDCD                    ;82CDB9|22CDCD82|82CDCD;  
                        LDA.W #$0084                         ;82CDBD|A98400  |      ;  
                        STA.B RAM_X_event_slot_subId,X       ;82CDC0|9514    |000014;  
                        LDA.W #$4000                         ;82CDC2|A90040  |      ;  
                        STA.B RAM_X_event_slot_flip_mirror_attribute,X;82CDC5|9504    |000004;  
-                       JSL.L getEmptyEventSlot              ;82CDC7|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;82CDC7|22F1D780|80D7F1;  
                        BCS CODE_82CDF8                      ;82CDCB|B02B    |82CDF8;  
                                                             ;      |        |      ;  
           CODE_82CDCD: JSL.L clearSelectedEventSlotAll      ;82CDCD|22598C80|808C59;  
@@ -10698,7 +10698,7 @@ zombieGhostStateTable: dw zombieGhostState00                ;82D52B|        |82D
                        LDA.W DATA16_81C4BD,Y                ;82D5F4|B9BDC4  |81C4BD;  
                        STA.B RAM_X_event_slot_22,X          ;82D5F7|9522    |000022;  
                        INC.B RAM_X_event_slot_24,X          ;82D5F9|F624    |000024;  
-                       JSL.L getEmptyEventSlot              ;82D5FB|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;82D5FB|22F1D780|80D7F1;  
                        BCS CODE_82D612                      ;82D5FF|B011    |82D612;  
                        JSL.L clearSelectedEventSlotAll      ;82D601|22598C80|808C59;  
                        LDA.W #$002D                         ;82D605|A92D00  |      ;  
@@ -13567,7 +13567,7 @@ bossMedusaStateTableRoutine: LDA.B RAM_X_event_slot_state,X       ;82EC20|B512  
                        RTL                                  ;82EE20|6B      |      ;  
                                                             ;      |        |      ;  
                                                             ;      |        |      ;  
-          CODE_82EE21: JSL.L clearCurrentEventPreserveXandY ;82EE21|22F4B382|82B3F4;  
+          CODE_82EE21: JSL.L clearY_EventSlotPreserveX      ;82EE21|22F4B382|82B3F4;  
                        CLC                                  ;82EE25|18      |      ;  
                        RTL                                  ;82EE26|6B      |      ;  
                                                             ;      |        |      ;  
@@ -14764,7 +14764,7 @@ bossPwuixleState0c_defeatedClear: JSL.L CODE_82B2D4                    ;82F6B3|2
                        BCC CODE_82F835                      ;82F843|90F0    |82F835;  
                        RTL                                  ;82F845|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_82F846: JSL.L clearCurrentEventPreserveXandY ;82F846|22F4B382|82B3F4;  
+          CODE_82F846: JSL.L clearY_EventSlotPreserveX      ;82F846|22F4B382|82B3F4;  
                        CLC                                  ;82F84A|18      |      ;  
                        RTL                                  ;82F84B|6B      |      ;  
                                                             ;      |        |      ;  

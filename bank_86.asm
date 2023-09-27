@@ -4036,7 +4036,7 @@ horizontalScrollingYposBG1: LDA.W RAM_simonSlot_Ypos             ;869F51|AD4E05 
                                                             ;      |        |      ;  
 SC4edNewTableBasedCollusionFirstLevelFIX: PHY                                  ;86A3B3|5A      |      ;  
                        TAY                                  ;86A3B4|A8      |      ;  
-                       LDA.B [RAM_collusionDataPointer],Y   ;86A3B5|B7C8    |0000C8;  
+                       LDA.B [RAM_collusionDataPointer],Y   ;86A3B5|B7C8    |0000C8; writes collusion byte to WRAM table
                        PLY                                  ;86A3B7|7A      |      ;  
                        AND.W #$00FF                         ;86A3B8|29FF00  |      ;  
                        CMP.W #$0002                         ;86A3BB|C90200  |      ;  
@@ -6537,7 +6537,7 @@ gearDropOut_StateTable: dw CODE_00BAA3                       ;86BA9D|        |00
                        LDA.W #$0007                         ;86BAD6|A90700  |      ;  
                        STA.B RAM_X_event_slot_sprite_assembly;86BAD9|8500    |000000;  
                                                             ;      |        |      ;  
-          CODE_86BADB: JSL.L getEmptyEventSlot              ;86BADB|22F1D780|80D7F1;  
+          CODE_86BADB: JSL.L readEventTrackerForward        ;86BADB|22F1D780|80D7F1;  
                        BCS CODE_86BB09                      ;86BADF|B028    |86BB09;  
                        JSL.L clearSelectedEventSlotAll      ;86BAE1|22598C80|808C59;  
                        LDA.W #$007C                         ;86BAE5|A97C00  |      ;  
@@ -7154,7 +7154,7 @@ gear_phusing2TheSideStateState02: JSR.W CODE_86BEB3                    ;86BE88|2
                        STA.B RAM_X_event_slot_yPos,X        ;86C07F|950E    |00000E;  
                        RTL                                  ;86C081|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_86C082: JSL.L getEmptyEventSlot              ;86C082|22F1D780|80D7F1;  
+          CODE_86C082: JSL.L readEventTrackerForward        ;86C082|22F1D780|80D7F1;  
                        BCS CODE_86C0D6                      ;86C086|B04E    |86C0D6;  
                        JSL.L clearSelectedEventSlotAll      ;86C088|22598C80|808C59;  
                        LDA.W #$0048                         ;86C08C|A94800  |      ;  
@@ -7398,7 +7398,7 @@ deathExitTourchesState02: STZ.B RAM_X_event_slot_20            ;86C297|6420    |
                        LDA.B RAM_frameCounter_effectiv      ;86C2AB|A578    |000078;  
                        BIT.W #$000F                         ;86C2AD|890F00  |      ;  
                        BNE CODE_86C2EA                      ;86C2B0|D038    |86C2EA;  
-                       JSL.L getEmptyEventSlot              ;86C2B2|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;86C2B2|22F1D780|80D7F1;  
                        BCS CODE_86C2EA                      ;86C2B6|B032    |86C2EA;  
                        JSL.L clearSelectedEventSlotAll      ;86C2B8|22598C80|808C59;  
                        LDA.W #$0006                         ;86C2BC|A90600  |      ;  
@@ -7455,7 +7455,7 @@ deathExitTourchesState04: LDA.W RAM_simonSlot_Xpos             ;86C2F6|AD4A05  |
                                                             ;      |        |      ;  
           CODE_86C32D: LDA.W #$005C                         ;86C32D|A95C00  |      ;  
                        JSL.L lunchSFXfromAccum              ;86C330|22E38580|8085E3;  
-                       JSL.L getEmptyEventSlot              ;86C334|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;86C334|22F1D780|80D7F1;  
                        BCS CODE_86C35A                      ;86C338|B020    |86C35A;  
                        JSL.L clearSelectedEventSlotAll      ;86C33A|22598C80|808C59;  
                        LDA.W #$0005                         ;86C33E|A90500  |      ;  
@@ -8027,7 +8027,7 @@ draculasSecretState05_multiShootCheck: LDA.B RAM_simon_multiShot            ;86C
                        LDA.B RAM_frameCounter_effectiv      ;86C7AF|A578    |000078;  
                        BIT.B RAM_X_event_slot_attribute     ;86C7B1|2402    |000002;  
                        BNE CODE_86C7DF                      ;86C7B3|D02A    |86C7DF;  
-                       JSL.L getEmptyEventSlot              ;86C7B5|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;86C7B5|22F1D780|80D7F1;  
                        BCS CODE_86C7DF                      ;86C7B9|B024    |86C7DF;  
                        CPX.W #$0900                         ;86C7BB|E00009  |      ; lag reduction only use a view losts??
                        BCS CODE_86C7DF                      ;86C7BE|B01F    |86C7DF;  

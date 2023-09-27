@@ -44,7 +44,7 @@
                        MVN $81,$81                          ;838066|548181  |      ;  
                        PLB                                  ;838069|AB      |      ;  
                        PLX                                  ;83806A|FA      |      ;  
-                       JSL.L CODE_809051                    ;83806B|22519080|809051;  
+                       JSL.L hud_drawRoutine                ;83806B|22519080|809051;  
                        LDA.W #$FFFF                         ;83806F|A9FFFF  |      ;  
                        STA.W $13DE                          ;838072|8DDE13  |8113DE;  
                        LDA.W #$0018                         ;838075|A91800  |      ;  
@@ -646,25 +646,25 @@ passwordScreenMainJumpTableRoutine: REP #$30                             ;83821F
           CODE_838628: RTL                                  ;838628|6B      |      ;  
                                                             ;      |        |      ;  
           CODE_838629: LDX.W #$867B                         ;838629|A27B86  |      ;  
-                       JSL.L CODE_809051                    ;83862C|22519080|809051;  
+                       JSL.L hud_drawRoutine                ;83862C|22519080|809051;  
                        LDA.B RAM_buttonMapJump              ;838630|A5BE    |0000BE;  
                        JSR.W CODE_8387C1                    ;838632|20C187  |8387C1;  
                        LDX.W PTR16_81D0FB,Y                 ;838635|BEFBD0  |81D0FB;  
                        JSL.L CODE_809058                    ;838638|22589080|809058;  
                        LDX.W #$867F                         ;83863C|A27F86  |      ;  
-                       JSL.L CODE_809051                    ;83863F|22519080|809051;  
+                       JSL.L hud_drawRoutine                ;83863F|22519080|809051;  
                        LDA.B RAM_buttonMapWhip              ;838643|A5C0    |0000C0;  
                        JSR.W CODE_8387C1                    ;838645|20C187  |8387C1;  
                        LDX.W PTR16_81D0FB,Y                 ;838648|BEFBD0  |81D0FB;  
                        JSL.L CODE_809058                    ;83864B|22589080|809058;  
                        LDX.W #$8683                         ;83864F|A28386  |      ;  
-                       JSL.L CODE_809051                    ;838652|22519080|809051;  
+                       JSL.L hud_drawRoutine                ;838652|22519080|809051;  
                        LDA.B RAM_buttonMapSubWep            ;838656|A5C2    |0000C2;  
                        JSR.W CODE_8387C1                    ;838658|20C187  |8387C1;  
                        LDX.W PTR16_81D0FB,Y                 ;83865B|BEFBD0  |81D0FB;  
                        JSL.L CODE_809058                    ;83865E|22589080|809058;  
                        LDX.W #$8687                         ;838662|A28786  |      ;  
-                       JSL.L CODE_809051                    ;838665|22519080|809051;  
+                       JSL.L hud_drawRoutine                ;838665|22519080|809051;  
                        LDA.W RAM_81_monoSound_flag          ;838669|AD161E  |811E16;  
                        ASL A                                ;83866C|0A      |      ;  
                        TAY                                  ;83866D|A8      |      ;  
@@ -2074,7 +2074,7 @@ GrakulBossRoutine01_healthRoutine: LDX.W #$0580                         ;839138|
                        BCC CODE_839230                      ;83923E|90F0    |839230;  
                        RTL                                  ;839240|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_839241: JSL.L clearCurrentEventPreserveXandY ;839241|22F4B382|82B3F4;  
+          CODE_839241: JSL.L clearY_EventSlotPreserveX      ;839241|22F4B382|82B3F4;  
                        CLC                                  ;839245|18      |      ;  
                        RTL                                  ;839246|6B      |      ;  
                                                             ;      |        |      ;  
@@ -3083,7 +3083,7 @@ frankGetSlotOffset800Plus: LDY.W #$0800                         ;839ABE|A00008  
                        BCC CODE_839AC1                      ;839ACF|90F0    |839AC1;  
                        db $6B                               ;839AD1|        |      ;  
                                                             ;      |        |      ;  
-          CODE_839AD2: JSL.L clearCurrentEventPreserveXandY ;839AD2|22F4B382|82B3F4;  
+          CODE_839AD2: JSL.L clearY_EventSlotPreserveX      ;839AD2|22F4B382|82B3F4;  
                        CLC                                  ;839AD6|18      |      ;  
                        RTL                                  ;839AD7|6B      |      ;  
                                                             ;      |        |      ;  
@@ -4043,7 +4043,7 @@ gaibonSpawnFireBallGround: LDA.W #$BCC8                         ;83A222|A9C8BC  
                        RTL                                  ;83A2A8|6B      |      ;  
                                                             ;      |        |      ;  
                                                             ;      |        |      ;  
-          CODE_83A2A9: JSL.L clearCurrentEventPreserveXandY ;83A2A9|22F4B382|82B3F4;  
+          CODE_83A2A9: JSL.L clearY_EventSlotPreserveX      ;83A2A9|22F4B382|82B3F4;  
                        CLC                                  ;83A2AD|18      |      ;  
                        RTL                                  ;83A2AE|6B      |      ;  
                                                             ;      |        |      ;  
@@ -5407,7 +5407,7 @@ disableShadowThisFrame: LDA.W #$0000                         ;83AD7D|A90000  |  
                        BCC CODE_83AE14                      ;83AE22|90F0    |83AE14;  
                        db $6B                               ;83AE24|        |      ;  
                                                             ;      |        |      ;  
-          CODE_83AE25: JSL.L clearCurrentEventPreserveXandY ;83AE25|22F4B382|82B3F4;  
+          CODE_83AE25: JSL.L clearY_EventSlotPreserveX      ;83AE25|22F4B382|82B3F4;  
                        CLC                                  ;83AE29|18      |      ;  
                        RTL                                  ;83AE2A|6B      |      ;  
                                                             ;      |        |      ;  
@@ -5723,7 +5723,7 @@ mummyState01_appearing: INC.B RAM_X_event_slot_32,X          ;83B092|F632    |00
                        BNE CODE_83B0A2                      ;83B09D|D003    |83B0A2;  
                        JMP.W CODE_83B13D                    ;83B09F|4C3DB1  |83B13D;  
                                                             ;      |        |      ;  
-          CODE_83B0A2: JSL.L CODE_83B547                    ;83B0A2|2247B583|83B547;  
+          CODE_83B0A2: JSL.L bossMummyGetEmptyEventSlot     ;83B0A2|2247B583|83B547;  
                        JSL.L CODE_83B0F8                    ;83B0A6|22F8B083|83B0F8;  
                        LDA.B RAM_X_event_slot_32,X          ;83B0AA|B532    |000032;  
                        CMP.W #$0080                         ;83B0AC|C98000  |      ;  
@@ -5817,7 +5817,7 @@ mummyState01_appearing: INC.B RAM_X_event_slot_32,X          ;83B092|F632    |00
 mummyState02_attacking: LDA.W #$0047                         ;83B163|A94700  |      ;  
                        STA.B RAM_X_event_slot_HitboxID,X    ;83B166|952E    |00002E;  
                        JSL.L mummySpriteAnimRoutine         ;83B168|22FDB183|83B1FD;  
-                       JSL.L mummySomeRoutine               ;83B16C|229EB183|83B19E;  
+                       JSL.L mummyAttackPatternSpawn        ;83B16C|229EB183|83B19E;  
                        JSL.L bossFaceTowardSimon            ;83B170|22808F83|838F80;  
                        JSL.L mummyPosRoutine                ;83B174|22A8B183|83B1A8;  
                        INC.B RAM_X_event_slot_32,X          ;83B178|F632    |000032;  
@@ -5838,12 +5838,13 @@ mummyState02_attacking: LDA.W #$0047                         ;83B163|A94700  |  
                        JSL.L CODE_83B3EB                    ;83B199|22EBB383|83B3EB;  
                        RTL                                  ;83B19D|6B      |      ;  
                                                             ;      |        |      ;  
-     mummySomeRoutine: LDA.B RAM_X_event_slot_3a,X          ;83B19E|B53A    |00003A;  
+mummyAttackPatternSpawn: LDA.B RAM_X_event_slot_3a,X          ;83B19E|B53A    |00003A;  
                        BNE CODE_83B1A5                      ;83B1A0|D003    |83B1A5;  
-                       JMP.W CODE_83B28C                    ;83B1A2|4C8CB2  |83B28C;  
+                       JMP.W bossMummy_SpawnBandage         ;83B1A2|4C8CB2  |83B28C;  
                                                             ;      |        |      ;  
                                                             ;      |        |      ;  
-          CODE_83B1A5: JMP.W CODE_83B207                    ;83B1A5|4C07B2  |83B207;  
+          CODE_83B1A5: JMP.W mummyBossSpawnFireBall         ;83B1A5|4C07B2  |83B207;  
+                                                            ;      |        |      ;  
                                                             ;      |        |      ;  
       mummyPosRoutine: LDA.B RAM_X_event_slot_38,X          ;83B1A8|B538    |000038;  
                        CMP.W #$0000                         ;83B1AA|C90000  |      ;  
@@ -5899,11 +5900,11 @@ mummySpriteAnimRoutine: LDA.W #$D8E5                         ;83B1FD|A9E5D8  |  
                        JSL.L spriteAnimationRoutine00       ;83B202|2269B082|82B069;  
                        RTL                                  ;83B206|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_83B207: LDA.B RAM_frameCounter_effectiv      ;83B207|A578    |000078;  
+mummyBossSpawnFireBall: LDA.B RAM_frameCounter_effectiv      ;83B207|A578    |000078;  
                        AND.W #$000F                         ;83B209|290F00  |      ;  
                        CMP.W #$0001                         ;83B20C|C90100  |      ;  
                        BNE CODE_83B219                      ;83B20F|D008    |83B219;  
-                       JSL.L CODE_83B547                    ;83B211|2247B583|83B547;  
+                       JSL.L bossMummyGetEmptyEventSlot     ;83B211|2247B583|83B547;  
                        JSL.L CODE_83B21A                    ;83B215|221AB283|83B21A;  
                                                             ;      |        |      ;  
           CODE_83B219: RTL                                  ;83B219|6B      |      ;  
@@ -5954,11 +5955,11 @@ mummySpriteAnimRoutine: LDA.W #$D8E5                         ;83B1FD|A9E5D8  |  
                        STA.W RAM_81_X_event_slot_flip_mirror_attribute,Y;83B288|990400  |810004;  
                        RTL                                  ;83B28B|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_83B28C: LDA.B RAM_frameCounter_effectiv      ;83B28C|A578    |000078;  
+bossMummy_SpawnBandage: LDA.B RAM_frameCounter_effectiv      ;83B28C|A578    |000078;  
                        AND.W #$003F                         ;83B28E|293F00  |      ;  
                        CMP.W #$0001                         ;83B291|C90100  |      ;  
                        BNE CODE_83B2CE                      ;83B294|D038    |83B2CE;  
-                       JSL.L CODE_83B547                    ;83B296|2247B583|83B547;  
+                       JSL.L bossMummyGetEmptyEventSlot     ;83B296|2247B583|83B547;  
                        LDA.B RAM_X_event_slot_xPos,X        ;83B29A|B50A    |00000A;  
                        STA.W RAM_81_X_event_slot_xPos,Y     ;83B29C|990A00  |81000A;  
                        LDA.B RAM_X_event_slot_yPos,X        ;83B29F|B50E    |00000E;  
@@ -5966,7 +5967,7 @@ mummySpriteAnimRoutine: LDA.W #$D8E5                         ;83B1FD|A9E5D8  |  
                        STA.W RAM_81_X_event_slot_mask,Y     ;83B2A4|993000  |810030;  
                        LDA.W #$0003                         ;83B2A7|A90300  |      ;  
                        STA.W RAM_81_X_event_slot_ID,Y       ;83B2AA|991000  |810010;  
-                       JSL.L CODE_83B2CF                    ;83B2AD|22CFB283|83B2CF;  
+                       JSL.L bossMummyShot_GetSpeedBasedOnAttribute;83B2AD|22CFB283|83B2CF;  
                        LDA.W #$0003                         ;83B2B1|A90300  |      ;  
                        STA.W RAM_81_X_event_slot_Movement2c,Y;83B2B4|992C00  |81002C;  
                        LDA.W #$0047                         ;83B2B7|A94700  |      ;  
@@ -5981,7 +5982,7 @@ mummySpriteAnimRoutine: LDA.W #$D8E5                         ;83B1FD|A9E5D8  |  
                                                             ;      |        |      ;  
           CODE_83B2CE: RTL                                  ;83B2CE|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_83B2CF: LDA.B RAM_X_event_slot_flip_mirror_attribute,X;83B2CF|B504    |000004;  
+bossMummyShot_GetSpeedBasedOnAttribute: LDA.B RAM_X_event_slot_flip_mirror_attribute,X;83B2CF|B504    |000004;  
                        BNE CODE_83B2E0                      ;83B2D1|D00D    |83B2E0;  
                        LDA.W #$FFFE                         ;83B2D3|A9FEFF  |      ;  
                        STA.W RAM_81_X_event_slot_xSpd,Y     ;83B2D6|991A00  |81001A;  
@@ -5998,7 +5999,7 @@ mummySpriteAnimRoutine: LDA.W #$D8E5                         ;83B1FD|A9E5D8  |  
                                                             ;      |        |      ;  
 mummyState03_dessaper: INC.B RAM_X_event_slot_32,X          ;83B2ED|F632    |000032;  
                        JSL.L CODE_83B324                    ;83B2EF|2224B383|83B324;  
-                       JSL.L CODE_83B547                    ;83B2F3|2247B583|83B547;  
+                       JSL.L bossMummyGetEmptyEventSlot     ;83B2F3|2247B583|83B547;  
                        JSL.L CODE_83B334                    ;83B2F7|2234B383|83B334;  
                        LDA.W #$D887                         ;83B2FB|A987D8  |      ;  
                        STA.B RAM_X_event_slot_sprite_assembly;83B2FE|8500    |000000;  
@@ -6094,7 +6095,7 @@ mummyState03_dessaper: INC.B RAM_X_event_slot_32,X          ;83B2ED|F632    |000
                        BCS CODE_83B3DC                      ;83B3C3|B017    |83B3DC;  
                        CMP.W #$0110                         ;83B3C5|C91001  |      ;  
                        BCS CODE_83B3D2                      ;83B3C8|B008    |83B3D2;  
-                       JSL.L CODE_83B547                    ;83B3CA|2247B583|83B547;  
+                       JSL.L bossMummyGetEmptyEventSlot     ;83B3CA|2247B583|83B547;  
                        JSL.L CODE_83B334                    ;83B3CE|2234B383|83B334;  
                                                             ;      |        |      ;  
           CODE_83B3D2: LDA.W #$D919                         ;83B3D2|A919D9  |      ;  
@@ -6267,7 +6268,7 @@ mummyEvent2d_destroyed: JSL.L event_ID_2d_smalFlame          ;83B540|2282E980|80
                        JMP.W mummyEventHandlerNextSlot      ;83B544|4C32B4  |83B432;  
                                                             ;      |        |      ;  
                                                             ;      |        |      ;  
-          CODE_83B547: LDY.W #$05C0                         ;83B547|A0C005  |      ;  
+bossMummyGetEmptyEventSlot: LDY.W #$05C0                         ;83B547|A0C005  |      ;  
                                                             ;      |        |      ;  
           CODE_83B54A: LDA.W RAM_81_X_event_slot_ID,Y       ;83B54A|B91000  |810010;  
                        BEQ CODE_83B55B                      ;83B54D|F00C    |83B55B;  
@@ -6279,7 +6280,7 @@ mummyEvent2d_destroyed: JSL.L event_ID_2d_smalFlame          ;83B540|2282E980|80
                        BCC CODE_83B54A                      ;83B558|90F0    |83B54A;  
                        db $6B                               ;83B55A|        |      ;  
                                                             ;      |        |      ;  
-          CODE_83B55B: JSL.L clearCurrentEventPreserveXandY ;83B55B|22F4B382|82B3F4;  
+          CODE_83B55B: JSL.L clearY_EventSlotPreserveX      ;83B55B|22F4B382|82B3F4;  
                        CLC                                  ;83B55F|18      |      ;  
                        RTL                                  ;83B560|6B      |      ;  
                                                             ;      |        |      ;  
@@ -6320,7 +6321,7 @@ mummyEvent2d_destroyed: JSL.L event_ID_2d_smalFlame          ;83B540|2282E980|80
                        STA.B RAM_X_event_slot_36,X          ;83B5AB|9536    |000036;  
                        RTL                                  ;83B5AD|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_83B5AE: JSL.L CODE_83B547                    ;83B5AE|2247B583|83B547;  
+          CODE_83B5AE: JSL.L bossMummyGetEmptyEventSlot     ;83B5AE|2247B583|83B547;  
                        LDA.B RAM_X_event_slot_xPos,X        ;83B5B2|B50A    |00000A;  
                        STA.W RAM_81_X_event_slot_xPos,Y     ;83B5B4|990A00  |81000A;  
                        LDA.B RAM_X_event_slot_yPos,X        ;83B5B7|B50E    |00000E;  
@@ -7439,7 +7440,7 @@ slograEvent03_FireWhenJump: JSL.L event_ID_2d_smalFlame          ;83BEC6|2282E98
                        RTL                                  ;83BEE0|6B      |      ;  
                                                             ;      |        |      ;  
                                                             ;      |        |      ;  
-          CODE_83BEE1: JSL.L clearCurrentEventPreserveXandY ;83BEE1|22F4B382|82B3F4;  
+          CODE_83BEE1: JSL.L clearY_EventSlotPreserveX      ;83BEE1|22F4B382|82B3F4;  
                        CLC                                  ;83BEE5|18      |      ;  
                        RTL                                  ;83BEE6|6B      |      ;  
                                                             ;      |        |      ;  
@@ -7722,7 +7723,7 @@ draculaState02_dracAppear: INC.B RAM_X_event_slot_32,X          ;83C131|F632    
                        RTL                                  ;83C150|6B      |      ;  
                                                             ;      |        |      ;  
           CODE_83C151: LDY.W #$05C0                         ;83C151|A0C005  |      ;  
-                       JSL.L clearCurrentEventPreserveXandY ;83C154|22F4B382|82B3F4;  
+                       JSL.L clearY_EventSlotPreserveX      ;83C154|22F4B382|82B3F4;  
                        LDA.W #$000C                         ;83C158|A90C00  |      ;  
                        STA.W RAM_81_X_event_slot_ID,Y       ;83C15B|991000  |810010;  
                        LDA.W #$8018                         ;83C15E|A91880  |      ;  
@@ -8371,7 +8372,7 @@ dracBossRoutineMosaicEffectOnHit: LDA.W $0EF4                          ;83C604|A
                        BCC CODE_83C6C0                      ;83C6CE|90F0    |83C6C0;  
                        RTL                                  ;83C6D0|6B      |      ;  
                                                             ;      |        |      ;  
-          CODE_83C6D1: JSL.L clearCurrentEventPreserveXandY ;83C6D1|22F4B382|82B3F4;  
+          CODE_83C6D1: JSL.L clearY_EventSlotPreserveX      ;83C6D1|22F4B382|82B3F4;  
                        CLC                                  ;83C6D5|18      |      ;  
                        RTL                                  ;83C6D6|6B      |      ;  
                                                             ;      |        |      ;  
@@ -9827,7 +9828,7 @@ SecretBlockCaveState04: LDA.B RAM_X_event_slot_xPos,X        ;83D195|B50A    |00
           CODE_83D381: LDA.W #$0003                         ;83D381|A90300  |      ;  
                        STA.B RAM_X_event_slot_sprite_assembly;83D384|8500    |000000;  
                                                             ;      |        |      ;  
-          CODE_83D386: JSL.L getEmptyEventSlot              ;83D386|22F1D780|80D7F1;  
+          CODE_83D386: JSL.L readEventTrackerForward        ;83D386|22F1D780|80D7F1;  
                        BCS CODE_83D3AE                      ;83D38A|B022    |83D3AE;  
                        LDA.W #$0064                         ;83D38C|A96400  |      ;  
                        JSL.L crumblingBridgeWriteEventFromA ;83D38F|227AD380|80D37A;  
@@ -10031,7 +10032,7 @@ bolderDropingStatueStateTable: dw bolderDropingStatueState00        ;83D512|    
           CODE_83D51C: LDA.W #$0002                         ;83D51C|A90200  |      ;  
                        STA.B RAM_X_event_slot_sprite_assembly;83D51F|8500    |000000;  
                                                             ;      |        |      ;  
-          CODE_83D521: JSL.L getEmptyEventSlot              ;83D521|22F1D780|80D7F1;  
+          CODE_83D521: JSL.L readEventTrackerForward        ;83D521|22F1D780|80D7F1;  
                        BCS CODE_83D566                      ;83D525|B03F    |83D566;  
                        JSL.L clearSelectedEventSlotAll      ;83D527|22598C80|808C59;  
                        LDY.B RAM_XregSlotCurrent            ;83D52B|A4FC    |0000FC;  
@@ -10673,7 +10674,7 @@ cellingSkellyMod7State01: LDA.B RAM_X_event_slot_subId,X       ;83D9D6|B514    |
                        LDY.B RAM_X_event_slot_xPosSub       ;83DA2D|A408    |000008;  
                        LDA.W #$000C                         ;83DA2F|A90C00  |      ;  
                        JSL.L CODE_83D2DC                    ;83DA32|22DCD283|83D2DC;  
-                       JSL.L getEmptyEventSlot              ;83DA36|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;83DA36|22F1D780|80D7F1;  
                        BCS CODE_83DAB1                      ;83DA3A|B075    |83DAB1;  
                        JSL.L clearSelectedEventSlotAll      ;83DA3C|22598C80|808C59;  
                        LDA.W #$0011                         ;83DA40|A91100  |      ;  
@@ -10688,7 +10689,7 @@ cellingSkellyMod7State01: LDA.B RAM_X_event_slot_subId,X       ;83D9D6|B514    |
                        LDA.W #$0003                         ;83DA58|A90300  |      ;  
                        STA.B RAM_X_event_slot_sprite_assembly;83DA5B|8500    |000000;  
                                                             ;      |        |      ;  
-          CODE_83DA5D: JSL.L getEmptyEventSlot              ;83DA5D|22F1D780|80D7F1;  
+          CODE_83DA5D: JSL.L readEventTrackerForward        ;83DA5D|22F1D780|80D7F1;  
                        BCS CODE_83DAB1                      ;83DA61|B04E    |83DAB1;  
                        JSL.L clearSelectedEventSlotAll      ;83DA63|22598C80|808C59;  
                        LDY.B RAM_XregSlotCurrent            ;83DA67|A4FC    |0000FC;  
@@ -12075,7 +12076,7 @@ event48_SubID07_collusionMod7RoRoom: JSR.W collusionMod7RoRoom            ;83E42
                        INC.B RAM_X_event_slot_state,X       ;83E5B8|F612    |000012;  
                        LDA.W #$0400                         ;83E5BA|A90004  |      ;  
                        STA.B RAM_X_event_slot_24,X          ;83E5BD|9524    |000024;  
-                       JSL.L getEmptyEventSlot              ;83E5BF|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;83E5BF|22F1D780|80D7F1;  
                        BCS CODE_83E5E8                      ;83E5C3|B023    |83E5E8;  
                        JSL.L clearSelectedEventSlotAll      ;83E5C5|22598C80|808C59;  
                        LDA.W #$0038                         ;83E5C9|A93800  |      ;  
@@ -12468,7 +12469,7 @@ event48_SubID09_FanceBG: LDA.B RAM_X_event_slot_state,X       ;83E7E0|B512    |0
                        STA.B RAM_X_event_slot_ID,X          ;83E8F7|9510    |000010;  
                        STZ.B RAM_X_event_slot_subId,X       ;83E8F9|7414    |000014;  
                        STZ.B RAM_X_event_slot_state,X       ;83E8FB|7412    |000012;  
-                       JSL.L getEmptyEventSlot              ;83E8FD|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;83E8FD|22F1D780|80D7F1;  
                        BCS CODE_83E91F                      ;83E901|B01C    |83E91F;  
                        JSL.L clearSelectedEventSlotAll      ;83E903|22598C80|808C59;  
                        LDA.W #$0049                         ;83E907|A94900  |      ;  
@@ -12561,7 +12562,7 @@ event48_SubID09_FanceBG: LDA.B RAM_X_event_slot_state,X       ;83E7E0|B512    |0
                        LDA.B $E9                            ;83E9D4|A5E9    |0000E9;  
                        AND.W #$0001                         ;83E9D6|290100  |      ;  
                        BNE CODE_83EA22                      ;83E9D9|D047    |83EA22;  
-                       JSL.L getEmptyEventSlot              ;83E9DB|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;83E9DB|22F1D780|80D7F1;  
                        BCS CODE_83EA22                      ;83E9DF|B041    |83EA22;  
                        JSL.L clearSelectedEventSlotAll      ;83E9E1|22598C80|808C59;  
                        LDA.W #$0048                         ;83E9E5|A94800  |      ;  
@@ -13465,7 +13466,7 @@ bridgeColaps_stateTable: dw bridgeColaps_state00              ;83F096|        |8
                        LDA.W #$0060                         ;83F114|A96000  |      ;  
                        STA.B RAM_X_event_slot_event_slot_health;83F117|8506    |000006;  
                                                             ;      |        |      ;  
-          CODE_83F119: JSL.L getEmptyEventSlot              ;83F119|22F1D780|80D7F1;  
+          CODE_83F119: JSL.L readEventTrackerForward        ;83F119|22F1D780|80D7F1;  
                        BCS CODE_83F172                      ;83F11D|B053    |83F172;  
                        JSL.L clearSelectedEventSlotAll      ;83F11F|22598C80|808C59;  
                        LDA.W #$007D                         ;83F123|A97D00  |      ;  
@@ -13650,7 +13651,7 @@ crumblingBridgeBatSpawn: LDX.B RAM_XregSlotCurrent            ;83F2A2|A6FC    |0
                        LDY.B RAM_X_event_slot_32,X          ;83F2A4|B432    |000032;  
                        LDA.W fallingStairsMusicData,Y       ;83F2A6|B982E8  |81E882;  
                        JSL.L lunchSFXfromAccum              ;83F2A9|22E38580|8085E3;  
-                       JSL.L getEmptyEventSlot              ;83F2AD|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;83F2AD|22F1D780|80D7F1;  
                        BCS CODE_83F2A1                      ;83F2B1|B0EE    |83F2A1;  
                        JSL.L clearSelectedEventSlotAll      ;83F2B3|22598C80|808C59;  
                        LDA.W #$004E                         ;83F2B7|A94E00  |      ;  
@@ -13818,7 +13819,7 @@ risingPlatforms_state01: LDA.W RAM_81_simonSlot_Ypos          ;83F3B7|AD4E05  |8
                        LDA.W #$0002                         ;83F3F4|A90200  |      ;  
                        STA.B RAM_X_event_slot_sprite_assembly;83F3F7|8500    |000000;  
                                                             ;      |        |      ;  
-          CODE_83F3F9: JSL.L getEmptyEventSlot              ;83F3F9|22F1D780|80D7F1;  
+          CODE_83F3F9: JSL.L readEventTrackerForward        ;83F3F9|22F1D780|80D7F1;  
                        BCS CODE_83F474                      ;83F3FD|B075    |83F474;  
                        CPX.W #$0CC0                         ;83F3FF|E0C00C  |      ;  
                        BCS CODE_83F474                      ;83F402|B070    |83F474;  
@@ -13932,7 +13933,7 @@ risingPlatforms_state03: LDA.B RAM_X_event_slot_xPos,X        ;83F478|B50A    |0
                        LDA.W #$0002                         ;83F4F4|A90200  |      ;  
                        STA.B RAM_X_event_slot_sprite_assembly;83F4F7|8500    |000000;  
                                                             ;      |        |      ;  
-          CODE_83F4F9: JSL.L getEmptyEventSlot              ;83F4F9|22F1D780|80D7F1;  
+          CODE_83F4F9: JSL.L readEventTrackerForward        ;83F4F9|22F1D780|80D7F1;  
                        BCS CODE_83F53D                      ;83F4FD|B03E    |83F53D;  
                        JSL.L clearSelectedEventSlotAll      ;83F4FF|22598C80|808C59;  
                        LDA.W #$007D                         ;83F503|A97D00  |      ;  
@@ -14005,7 +14006,7 @@ risingPlatforms_state03: LDA.B RAM_X_event_slot_xPos,X        ;83F478|B50A    |0
           CODE_83F59B: RTL                                  ;83F59B|6B      |      ;  
                        JML.L CODE_80CDEE                    ;83F59C|5CEECD80|80CDEE;  
                                                             ;      |        |      ;  
-slograAfterDeathAnimation: JSL.L getEmptyEventSlot              ;83F5A0|22F1D780|80D7F1;  
+slograAfterDeathAnimation: JSL.L readEventTrackerForward        ;83F5A0|22F1D780|80D7F1;  
                        BCS CODE_83F5BE                      ;83F5A4|B018    |83F5BE;  
                        JSL.L clearSelectedEventSlotAll      ;83F5A6|22598C80|808C59;  
                        LDA.W #$007D                         ;83F5AA|A97D00  |      ;  
@@ -14120,7 +14121,7 @@ fallingStairsStateTable: dw fallingStairsState00              ;83F5CE|        |8
                        SBC.B RAM_X_event_slot_38,X          ;83F678|F538    |000038;  
                        AND.W #$0BFF                         ;83F67A|29FF0B  |      ;  
                        STA.B RAM_X_event_slot_32,X          ;83F67D|9532    |000032;  
-                       JSL.L getEmptyEventSlot              ;83F67F|22F1D780|80D7F1;  
+                       JSL.L readEventTrackerForward        ;83F67F|22F1D780|80D7F1;  
                        BCS CODE_83F6AB                      ;83F683|B026    |83F6AB;  
                        JSR.W CODE_83F6AC                    ;83F685|20ACF6  |83F6AC;  
                        LDY.B RAM_XregSlotCurrent            ;83F688|A4FC    |0000FC;  
