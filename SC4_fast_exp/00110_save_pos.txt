@@ -1,0 +1,77 @@
+
+;pos=034800
+B
+r 32 G
+B
+B
+r 32 G
+B
+B
+r 32 G
+B
+B
+r 32 G
+B
+B
+r 32 G
+B
+B
+r 224 G
+B
+B
+r 30 G
+B
+B
+r 224 G
+B
+B
+r 64 G
+B
+B
+r 8 G
+B
+B
+r 8 G
+B
+B
+r 8 G
+B
+B
+r 8 G
+B
+B
+G
+G
+B
+B
+r 128 G
+B
+B
+G
+G
+G
+G
+B
+B
+r 160 G
+B
+B
+r 384 G
+B
+B
+r 32 G
+B
+B
+r 96 G
+B
+B
+r 32 G
+B
+B
+r 320 G
+B
+B
+r 64 G
+B
+B
+r 45 G

@@ -1,0 +1,46 @@
+
+;pos=385800
+r 1311 G
+r 93 U
+C
+C
+C
+r 24 B
+r 244 M
+r 113 U
+C
+C
+C
+r 116 B
+r 14 M
+r 15 C
+M
+C
+C
+C
+C
+C
+C
+r 9 M
+C
+C
+C
+C
+C
+C
+M
+r 12 C
+r 14 M
+C
+C
+C
+M
+M
+MC
+r 11 M
+C
+C
+C
+M
+r 18 C
+r 24 M

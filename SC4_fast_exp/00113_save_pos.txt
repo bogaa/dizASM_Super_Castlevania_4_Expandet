@@ -1,0 +1,144 @@
+
+;pos=036000
+r 69 G
+B
+B
+r 32 G
+B
+B
+G
+G
+G
+G
+B
+B
+G
+G
+G
+G
+B
+B
+r 192 G
+B
+B
+r 32 G
+B
+B
+G
+G
+G
+G
+G
+G
+B
+B
+G
+G
+G
+G
+G
+G
+B
+B
+G
+G
+G
+G
+G
+G
+B
+B
+r 192 G
+B
+B
+r 64 G
+B
+B
+r 160 G
+B
+B
+r 32 G
+B
+B
+r 192 G
+B
+B
+r 32 G
+B
+B
+r 12 G
+B
+B
+r 12 G
+B
+B
+r 12 G
+B
+B
+r 12 G
+B
+B
+r 12 G
+B
+B
+r 12 G
+B
+B
+r 224 G
+B
+B
+r 12 G
+B
+B
+r 12 G
+B
+B
+r 12 G
+B
+B
+r 12 G
+B
+B
+r 12 G
+B
+B
+r 12 G
+B
+B
+G
+G
+G
+G
+B
+B
+G
+G
+G
+G
+B
+B
+r 32 G
+B
+B
+r 96 G
+B
+B
+r 32 G
+B
+B
+r 32 G
+B
+B
+r 192 G
+B
+B
+r 32 G
+B
+B
+r 10 G
+B
+B
+r 10 G
+B
+B
+r 137 G

@@ -1,0 +1,288 @@
+
+;pos=020800
+r 373 B07F
+U
+r 36 D
+U
+r 28 D
+U
+r 24 D
+U
+r 12 D
+U
+r 12 D
+U
+D
+D
+D
+D
+U
+r 20 D
+U
+r 20 D
+U
+r 28 D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+r 8 D
+U
+r 8 D
+U
+r 8 D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+r 8 D
+U
+r 8 D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+r 32 D
+U
+r 32 D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+r 20 D
+U
+r 16 D
+U
+r 16 D
+U
+r 12 D
+U
+r 8 D
+U
+r 20 D
+U
+r 28 D
+U
+r 24 D
+U
+r 32 D
+U
+r 32 D
+U
+r 32 D
+U
+r 32 D
+U
+r 8 D
+U
+r 8 D
+U
+r 8 D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+r 24 D
+U
+r 8 D
+U
+r 8 D
+U
+r 8 D
+U
+r 20 D
+U
+r 20 D
+U
+r 16 D
+U
+r 16 D
+U
+r 20 D
+U
+r 16 D
+U
+D
+D
+D
+D
+U
+r 8 D
+U
+r 16 D
+U
+r 20 D
+U
+r 16 D
+U
+r 16 D
+U
+r 8 D
+U
+r 8 D
+U
+r 16 D
+U
+r 16 D
+U
+r 16 D
+U
+r 16 D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+r 24 D
+U
+r 24 D
+U
+r 20 D
+U
+r 20 D
+U
+r 16 D
+U
+r 8 D
+U
+r 8 D
+U
+D
+D
+D
+D
+U
+r 8 D
+U
+r 8 D
+U
+r 20 D
+U
+r 20 D
+U
+r 16 D
+U
+r 20 D
+U
+r 20 D
+U
+r 16 D
+U
+r 16 D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+r 8 D
+U
+D
+D
+D
+D
+U
+r 8 D
+U
+r 16 D
+U
+r 8 D
+U
+r 8 D
+U
+r 8 D
+U
+r 12 D
+U
+r 12 D
+U
+r 12 D
+U
+r 24 D
+U
+r 24 D
+U
+r 20 D
+U
+r 24 D
+U
+r 24 D
+U
+r 24 D
+U
+r 32 D
+U
+r 24 D
+U
+r 31 D

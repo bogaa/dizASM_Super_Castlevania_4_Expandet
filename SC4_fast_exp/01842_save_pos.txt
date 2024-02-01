@@ -1,0 +1,18 @@
+
+;pos=396800
+r 564 M
+r 104 U
+A
+A
+A
+r 539 M
+r 98 U
+A
+A
+A
+r 298 M
+r 115 U
+A
+A
+A
+r 321 M

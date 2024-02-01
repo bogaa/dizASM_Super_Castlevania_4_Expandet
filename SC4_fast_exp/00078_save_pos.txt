@@ -1,0 +1,158 @@
+
+;pos=024800
+r 11 D
+U
+r 44 D
+U
+r 44 D
+U
+r 44 D
+U
+r 28 D
+U
+r 40 D
+U
+r 36 D
+U
+r 36 D
+U
+r 36 D
+U
+r 28 D
+U
+r 36 D
+U
+r 32 D
+U
+r 36 D
+U
+r 32 D
+U
+r 48 D
+U
+r 60 D
+U
+r 60 D
+U
+r 60 D
+U
+r 60 D
+U
+D
+D
+D
+D
+U
+r 8 D
+U
+r 8 D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+r 8 D
+U
+r 16 D
+U
+r 24 D
+U
+r 24 D
+U
+r 24 D
+U
+r 16 D
+U
+r 8 D
+U
+r 16 D
+U
+r 16 D
+U
+r 16 D
+U
+r 16 D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+r 56 D
+U
+r 60 D
+U
+U
+r 56 D
+U
+r 56 D
+U
+r 56 D
+U
+r 60 D
+U
+r 48 D
+U
+r 48 D
+U
+r 60 D
+U
+r 60 D
+U
+r 48 D
+U
+r 48 D
+U
+r 52 D
+U
+r 84 D
+U
+r 96 D
+U
+r 81 D

@@ -1,0 +1,690 @@
+<Comments>
+        <sys:Item Key="8421376" Value="set Native_RESET no emulation and clear decimal flags" />
+        <sys:Item Key="8421385" Value="set A X Y to 16 bit" />
+        <sys:Item Key="8421391" Value="set A to 8bit" />
+        <sys:Item Key="8421393" Value="set data bank ro 81 (fastRom)" />
+        <sys:Item Key="8421599" Value="writes every character one by one" />
+        <sys:Item Key="8421635" Value="store button defaults" />
+        <sys:Item Key="8421696" Value="setDataBank81" />
+        <sys:Item Key="8421733" Value="1f44-1f4a seem unused but cleard here??" />
+        <sys:Item Key="8421769" Value="usage.. 56_whipingSkelleton," />
+        <sys:Item Key="8422029" Value="trash" />
+        <sys:Item Key="8422031" Value="trash" />
+        <sys:Item Key="8422119" Value="used in transitions" />
+        <sys:Item Key="8422723" Value="?? Not sure" />
+        <sys:Item Key="8422845" Value="unused??" />
+        <sys:Item Key="8422888" Value="music Mute?? " />
+        <sys:Item Key="8422913" Value="unused??" />
+        <sys:Item Key="8422951" Value="KonamiScene" />
+        <sys:Item Key="8422965" Value="??" />
+        <sys:Item Key="8423037" Value="unused??" />
+        <sys:Item Key="8423118" Value="pressed Start" />
+        <sys:Item Key="8423359" Value="reset to game start" />
+        <sys:Item Key="8423452" Value="make sue game is not paused" />
+        <sys:Item Key="8423826" Value="leaves out button mapping I think" />
+        <sys:Item Key="8424051" Value="unused??" />
+        <sys:Item Key="8424119" Value="unused??" />
+        <sys:Item Key="8424232" Value="unused??" />
+        <sys:Item Key="8424277" Value="unused??" />
+        <sys:Item Key="8424773" Value="enableDMA" />
+        <sys:Item Key="8424786" Value="zapfStairTileAppear" />
+        <sys:Item Key="8424789" Value="goldPlatformTileUpdate" />
+        <sys:Item Key="8424849" Value="?? not sure but not running it will slowly degrade your PPU content.. " />
+        <sys:Item Key="8424974" Value="not sure here.." />
+        <sys:Item Key="8424993" Value="8 bit for eatch sprite" />
+        <sys:Item Key="8425046" Value="store RAM slotOffset Start" />
+        <sys:Item Key="8425048" Value="store RAM slotOffset Max" />
+        <sys:Item Key="8425054" Value="store sprtie data to zero page to update later" />
+        <sys:Item Key="8425091" Value="loadCurrent RamTable Offset" />
+        <sys:Item Key="8425110" Value="store how many objects the sprite has" />
+        <sys:Item Key="8425170" Value="check if sprite below screen to skip" />
+        <sys:Item Key="8425178" Value="check if abovve screen to skip " />
+        <sys:Item Key="8425267" Value="store to oam table" />
+        <sys:Item Key="8425304" Value="OAM slotCounter??" />
+        <sys:Item Key="8425493" Value="unused??" />
+        <sys:Item Key="8425553" Value="used for HUD" />
+        <sys:Item Key="8426136" Value="unused??" />
+        <sys:Item Key="8426465" Value="unused??" />
+        <sys:Item Key="8426551" Value="backupButtonMapping" />
+        <sys:Item Key="8426615" Value="00" />
+        <sys:Item Key="8426617" Value="01" />
+        <sys:Item Key="8426619" Value="02" />
+        <sys:Item Key="8426621" Value="03 level load" />
+        <sys:Item Key="8426623" Value="04" />
+        <sys:Item Key="8426625" Value="05 mainGame" />
+        <sys:Item Key="8426627" Value="06 win" />
+        <sys:Item Key="8426629" Value="07" />
+        <sys:Item Key="8426631" Value="08" />
+        <sys:Item Key="8426633" Value="09" />
+        <sys:Item Key="8426635" Value="0a whipUpgrad Stune" />
+        <sys:Item Key="8426637" Value="0b" />
+        <sys:Item Key="8426639" Value="death" />
+        <sys:Item Key="8426660" Value="nameScreen??" />
+        <sys:Item Key="8426662" Value="introScene??" />
+        <sys:Item Key="8426664" Value="mainGameStart" />
+        <sys:Item Key="8426687" Value="might be game over routine" />
+        <sys:Item Key="8426693" Value="points neede to get a extra life after startup game" />
+        <sys:Item Key="8426704" Value="start menu selection??" />
+        <sys:Item Key="8426709" Value="setStarting Level" />
+        <sys:Item Key="8426749" Value="cleareScore" />
+        <sys:Item Key="8426951" Value="unused??" />
+        <sys:Item Key="8426968" Value="simonSprite Attribute" />
+        <sys:Item Key="8427006" Value="increase loading sequants" />
+        <sys:Item Key="8427019" Value="mainGamePlayRoutine" />
+        <sys:Item Key="8427077" Value="hardcoded section for lvl 16" />
+        <sys:Item Key="8427125" Value="timer out of bounce checks??" />
+        <sys:Item Key="8427129" Value="clear cam values ??" />
+        <sys:Item Key="8427154" Value="Load" />
+        <sys:Item Key="8427220" Value="gameOver" />
+        <sys:Item Key="8427239" Value="unused??" />
+        <sys:Item Key="8427371" Value="death" />
+        <sys:Item Key="8427527" Value="donno" />
+        <sys:Item Key="8427607" Value="load equipment/candle GFX" />
+        <sys:Item Key="8427623" Value="check game is in play mode " />
+        <sys:Item Key="8427636" Value="loadData for autoplay" />
+        <sys:Item Key="8427660" Value="set next button presses" />
+        <sys:Item Key="8427679" Value="decreas counter till next action" />
+        <sys:Item Key="8427697" Value="1100 1111 0000 0000" />
+        <sys:Item Key="8427700" Value="buttons to press direction ship" />
+        <sys:Item Key="8427704" Value="buttons to press subweapon" />
+        <sys:Item Key="8427783" Value="konamiGFX pointer" />
+        <sys:Item Key="8428223" Value="unused??" />
+        <sys:Item Key="8429826" Value="remove Mud sink sound for gold pit " />
+        <sys:Item Key="8430507" Value="right jump init Speed " />
+        <sys:Item Key="8430526" Value="left Jump Init speed" />
+        <sys:Item Key="8430586" Value="not sure but it seems to run when ground is near while jumping" />
+        <sys:Item Key="8430602" Value="crouchFrame" />
+        <sys:Item Key="8430687" Value="unused?? dont know what state C is used for debugg??" />
+        <sys:Item Key="8430809" Value="unused??" />
+        <sys:Item Key="8431404" Value="unused??" />
+        <sys:Item Key="8433482" Value="ppu mode??" />
+        <sys:Item Key="8434212" Value="check if pressed up" />
+        <sys:Item Key="8435761" Value="donno what it is good for" />
+        <sys:Item Key="8435951" Value="unused??" />
+        <sys:Item Key="8438514" Value="unused??" />
+        <sys:Item Key="8438542" Value="unused??" />
+        <sys:Item Key="8438582" Value="unused??" />
+        <sys:Item Key="8439243" Value="add basepointer at bank 84" />
+        <sys:Item Key="8439385" Value="HUD" />
+        <sys:Item Key="8439392" Value="HUD Block 00" />
+        <sys:Item Key="8439419" Value="HUD Block 01" />
+        <sys:Item Key="8440234" Value="check flag to not despawn" />
+        <sys:Item Key="8440272" Value="check boss byte set" />
+        <sys:Item Key="8440276" Value="calculate long pointer offset" />
+        <sys:Item Key="8440280" Value="ading the number o the index to the doubled value to get long" />
+        <sys:Item Key="8440329" Value="Initiate Event Table" />
+        <sys:Item Key="8440809" Value="unused Experimental??" />
+        <sys:Item Key="8441440" Value="not sure" />
+        <sys:Item Key="8441478" Value="not sure " />
+        <sys:Item Key="8442419" Value="collectable ID is in the subID" />
+        <sys:Item Key="8442440" Value="enable whip drops from small hearts" />
+        <sys:Item Key="8442507" Value="smalll Heart fall behavier" />
+        <sys:Item Key="8442512" Value="counter for left right" />
+        <sys:Item Key="8442576" Value="despawn Timer" />
+        <sys:Item Key="8442593" Value="blink timer" />
+        <sys:Item Key="8442746" Value="crumblingBridge, gold platforms" />
+        <sys:Item Key="8442905" Value=" fix event check FixSC4ed" />
+        <sys:Item Key="8442922" Value="SC4ed New Event Bank" />
+        <sys:Item Key="8443248" Value="is this unused??" />
+        <sys:Item Key="8443253" Value="decide on witch side of the screen to spawn based on current cam speed" />
+        <sys:Item Key="8443881" Value="X is 13a0 table probably small representation of the PPU slot " />
+        <sys:Item Key="8443909" Value="check if we rach the end of the eventslots" />
+        <sys:Item Key="8444392" Value="unused??" />
+        <sys:Item Key="8444706" Value="load Slot into Y" />
+        <sys:Item Key="8444871" Value="hitStuneFrames" />
+        <sys:Item Key="8445443" Value="whip disable hits for x frames" />
+        <sys:Item Key="8445454" Value="disable subweapon hits for x frames" />
+        <sys:Item Key="8445976" Value="check if small heart " />
+        <sys:Item Key="8445984" Value="drop firstWhipWhen more" />
+        <sys:Item Key="8445993" Value="dropSecondWhipWhen more" />
+        <sys:Item Key="8446001" Value="double tripple spawn check" />
+        <sys:Item Key="8446005" Value="no upgrade for clock" />
+        <sys:Item Key="8446013" Value="amount of things hit till it drops upgrade" />
+        <sys:Item Key="8446033" Value="lastCheck to not have 2 whip Upgrades at the same time" />
+        <sys:Item Key="8447151" Value="unused??" />
+        <sys:Item Key="8448018" Value="not sure but it disables it.." />
+        <sys:Item Key="8448098" Value="unused?? " />
+        <sys:Item Key="8448386" Value="spawns after enemie dies" />
+        <sys:Item Key="8449666" Value="eventID78 and 79 small mudMan" />
+        <sys:Item Key="8449724" Value="would this not also work with a subID?? and then adding new states to the mudman??" />
+        <sys:Item Key="8449880" Value="unused??" />
+        <sys:Item Key="8450882" Value="set how often the sword should swing" />
+        <sys:Item Key="8450917" Value="contains action walk,bone,sword and whip skelly" />
+        <sys:Item Key="8451598" Value="not needed bra" />
+        <sys:Item Key="8452392" Value="unused??" />
+        <sys:Item Key="8487501" Value="4360,4361" />
+        <sys:Item Key="8487503" Value="4362,4363" />
+        <sys:Item Key="8487505" Value="4364, bank value should be long but had tourble refferencing since pointer is stored for slowROM" />
+        <sys:Item Key="8487522" Value="420c dma enable flag " />
+        <sys:Item Key="8487636" Value="koranot uses this too" />
+        <sys:Item Key="8488513" Value="posOptionMenu" />
+        <sys:Item Key="8488515" Value="text_options" />
+        <sys:Item Key="8489748" Value="sonno" />
+        <sys:Item Key="8489785" Value="4 levels that are played in the demo" />
+        <sys:Item Key="8491025" Value="left" />
+        <sys:Item Key="8491027" Value="right " />
+        <sys:Item Key="8491607" Value="dagger" />
+        <sys:Item Key="8491609" Value="axe" />
+        <sys:Item Key="8491611" Value="holy water" />
+        <sys:Item Key="8491613" Value="cross" />
+        <sys:Item Key="8491615" Value="clock" />
+        <sys:Item Key="8491617" Value="leather" />
+        <sys:Item Key="8491619" Value="first chain whip" />
+        <sys:Item Key="8491621" Value="second chain whip" />
+        <sys:Item Key="8491623" Value="donno " />
+        <sys:Item Key="8496074" Value="terminator" />
+        <sys:Item Key="8496087" Value="linebreak 2x followed by pointer ??" />
+        <sys:Item Key="8496148" Value="linebreak 2x followed by pointer ??" />
+        <sys:Item Key="8496155" Value="terminateHud" />
+        <sys:Item Key="8496156" Value="00" />
+        <sys:Item Key="8496159" Value="01" />
+        <sys:Item Key="8496162" Value="02" />
+        <sys:Item Key="8496165" Value="03" />
+        <sys:Item Key="8496168" Value="04" />
+        <sys:Item Key="8496171" Value="05" />
+        <sys:Item Key="8496174" Value="06" />
+        <sys:Item Key="8496177" Value="07" />
+        <sys:Item Key="8496180" Value="08" />
+        <sys:Item Key="8496183" Value="09" />
+        <sys:Item Key="8496186" Value="0a" />
+        <sys:Item Key="8496189" Value="0b" />
+        <sys:Item Key="8496192" Value="0c" />
+        <sys:Item Key="8496195" Value="0d" />
+        <sys:Item Key="8496198" Value="0e" />
+        <sys:Item Key="8496201" Value="0f" />
+        <sys:Item Key="8496204" Value="10" />
+        <sys:Item Key="8496207" Value="11" />
+        <sys:Item Key="8496210" Value="12" />
+        <sys:Item Key="8496213" Value="same as ID 00" />
+        <sys:Item Key="8496216" Value="14" />
+        <sys:Item Key="8496219" Value="15" />
+        <sys:Item Key="8496222" Value="16" />
+        <sys:Item Key="8496225" Value="17 Floating Platform sub0:l-r / sub1:5b u-d / sub2:8b u-d fast / sub3: 5b u-d / sub4: 7b u-d slow / sub5: triangle / sub6: Z" />
+        <sys:Item Key="8496228" Value="18 smallHeart" />
+        <sys:Item Key="8496231" Value="19 bigHeart" />
+        <sys:Item Key="8496234" Value="1a dagger" />
+        <sys:Item Key="8496237" Value="1b axe" />
+        <sys:Item Key="8496240" Value="1c holyWater" />
+        <sys:Item Key="8496243" Value="1d cross" />
+        <sys:Item Key="8496246" Value="1e clock" />
+        <sys:Item Key="8496249" Value="1f rossery" />
+        <sys:Item Key="8496252" Value="20 potion" />
+        <sys:Item Key="8496255" Value="21 whipUpgrade" />
+        <sys:Item Key="8496258" Value="22 monyBag" />
+        <sys:Item Key="8496261" Value="23 doulbe" />
+        <sys:Item Key="8496264" Value="24 tripple" />
+        <sys:Item Key="8496267" Value="25 smallMeat" />
+        <sys:Item Key="8496270" Value="26 bigMeat" />
+        <sys:Item Key="8496273" Value="27 orb" />
+        <sys:Item Key="8496276" Value="28 oneUp" />
+        <sys:Item Key="8496279" Value="29" />
+        <sys:Item Key="8496282" Value="2a" />
+        <sys:Item Key="8496285" Value="ID 2b IronGate" />
+        <sys:Item Key="8496288" Value="2c" />
+        <sys:Item Key="8496291" Value="2d" />
+        <sys:Item Key="8496363" Value="points to the end of the stalactite routine" />
+        <sys:Item Key="8496540" Value="RowdinBossMain" />
+        <sys:Item Key="8496543" Value="KoranotBossMain" />
+        <sys:Item Key="8496546" Value="ViperBossMain" />
+        <sys:Item Key="8496549" Value="MedusaBossMain" />
+        <sys:Item Key="8496552" Value="PwuixleBossMain" />
+        <sys:Item Key="8496555" Value="DancersBossMain" />
+        <sys:Item Key="8496558" Value="ZapfBossMain" />
+        <sys:Item Key="8496561" Value="FrankensteinBossMain" />
+        <sys:Item Key="8496564" Value="GayboneBossMain" />
+        <sys:Item Key="8496567" Value="SlograBossMain" />
+        <sys:Item Key="8496570" Value="GrakulBossMain" />
+        <sys:Item Key="8496573" Value="DeathBossMain" />
+        <sys:Item Key="8496576" Value="MummyBossMain" />
+        <sys:Item Key="8496579" Value="DraculaBossMain" />
+        <sys:Item Key="8496680" Value="Small Heart" />
+        <sys:Item Key="8496682" Value="BigHeart" />
+        <sys:Item Key="8496684" Value="Dagger" />
+        <sys:Item Key="8496686" Value="Axe" />
+        <sys:Item Key="8496688" Value="HollyWater" />
+        <sys:Item Key="8496690" Value="Cross" />
+        <sys:Item Key="8496692" Value="StopWatch" />
+        <sys:Item Key="8496694" Value="Rossery" />
+        <sys:Item Key="8496696" Value="Potion" />
+        <sys:Item Key="8497178" Value="lvl3" />
+        <sys:Item Key="8497179" Value="lvl5" />
+        <sys:Item Key="8497180" Value="lvl6" />
+        <sys:Item Key="8497181" Value="swamp" />
+        <sys:Item Key="8497182" Value="puw" />
+        <sys:Item Key="8497183" Value="chan" />
+        <sys:Item Key="8497184" Value="danc" />
+        <sys:Item Key="8497185" Value="danc" />
+        <sys:Item Key="8497186" Value="bibl" />
+        <sys:Item Key="8497187" Value="bibl" />
+        <sys:Item Key="8497188" Value="dung" />
+        <sys:Item Key="8497363" Value="end table" />
+        <sys:Item Key="8497920" Value="ID 01 Projectile ??" />
+        <sys:Item Key="8498056" Value="endTable" />
+        <sys:Item Key="8498431" Value="endTable" />
+        <sys:Item Key="8498687" Value="endTable" />
+        <sys:Item Key="8498815" Value="endTable" />
+        <sys:Item Key="8498816" Value="just wired haha" />
+        <sys:Item Key="8498944" Value="how much damage each enemie deals" />
+        <sys:Item Key="8499070" Value="end Table" />
+        <sys:Item Key="8499684" Value="damage big sythe Death" />
+        <sys:Item Key="8500117" Value="noPW or level select screen.. ??" />
+        <sys:Item Key="8500699" Value="not sure or what bank.." />
+        <sys:Item Key="8501067" Value="not sure what this is" />
+        <sys:Item Key="8501123" Value="expand camera locks $20" />
+        <sys:Item Key="8501142" Value="change Bank" />
+        <sys:Item Key="8501179" Value="end New CameraLock settup" />
+        <sys:Item Key="8501180" Value="generated free space " />
+        <sys:Item Key="8501693" Value="????" />
+        <sys:Item Key="8503421" Value="This will make the game use the expanded entrance tables" />
+        <sys:Item Key="8503463" Value="end new entrance routine" />
+        <sys:Item Key="8503743" Value="left right" />
+        <sys:Item Key="8503745" Value="movingPlatform_UpDown_01 5 blocks" />
+        <sys:Item Key="8503747" Value="movingPlatform_UpDown_02 8 blocks fast" />
+        <sys:Item Key="8503749" Value="movingPlatform_UpDown_03 3blocks" />
+        <sys:Item Key="8503751" Value="movingPlatform_UpDown_04 7 blocks slow " />
+        <sys:Item Key="8503753" Value="movingPlatform_triangle_05" />
+        <sys:Item Key="8503755" Value="movingPlatform_Z_06" />
+        <sys:Item Key="8503757" Value="movingPlatform_Z" />
+        <sys:Item Key="8503959" Value="first platform" />
+        <sys:Item Key="8504079" Value="also no clue for what this is used" />
+        <sys:Item Key="8504967" Value="not sure.." />
+        <sys:Item Key="8507811" Value="not sure" />
+        <sys:Item Key="8513712" Value="simon hair??" />
+        <sys:Item Key="8513730" Value="simon hair?? " />
+        <sys:Item Key="8513762" Value="not sure" />
+        <sys:Item Key="8514343" Value="ending autoplay data pointer" />
+        <sys:Item Key="8517088" Value="00 4 = 1 medatile matrix order (20 is a new row and offset by 1 tile) = 40 is a block hight then 400 800 c00 are the new screens nametable order" />
+        <sys:Item Key="8517090" Value="01" />
+        <sys:Item Key="8517092" Value="02" />
+        <sys:Item Key="8517094" Value="03" />
+        <sys:Item Key="8517096" Value="04" />
+        <sys:Item Key="8517098" Value="05" />
+        <sys:Item Key="8517100" Value="06" />
+        <sys:Item Key="8517102" Value="07" />
+        <sys:Item Key="8517104" Value="08" />
+        <sys:Item Key="8517106" Value="09" />
+        <sys:Item Key="8517108" Value="0a" />
+        <sys:Item Key="8517110" Value="0b" />
+        <sys:Item Key="8517112" Value="0c" />
+        <sys:Item Key="8517114" Value="0d" />
+        <sys:Item Key="8517116" Value="0e" />
+        <sys:Item Key="8517118" Value="0f" />
+        <sys:Item Key="8517120" Value="10" />
+        <sys:Item Key="8517122" Value="11" />
+        <sys:Item Key="8517124" Value="12" />
+        <sys:Item Key="8517126" Value="13" />
+        <sys:Item Key="8517128" Value="14" />
+        <sys:Item Key="8517130" Value="15" />
+        <sys:Item Key="8517132" Value="16" />
+        <sys:Item Key="8517157" Value="00 offset by 2 ??" />
+        <sys:Item Key="8517159" Value="01" />
+        <sys:Item Key="8517161" Value="02" />
+        <sys:Item Key="8517163" Value="03" />
+        <sys:Item Key="8517165" Value="04" />
+        <sys:Item Key="8517167" Value="05" />
+        <sys:Item Key="8517169" Value="06" />
+        <sys:Item Key="8517171" Value="07" />
+        <sys:Item Key="8517173" Value="08" />
+        <sys:Item Key="8517175" Value="09" />
+        <sys:Item Key="8517177" Value="0a" />
+        <sys:Item Key="8517179" Value="0b" />
+        <sys:Item Key="8517181" Value="0c" />
+        <sys:Item Key="8517183" Value="0d" />
+        <sys:Item Key="8517185" Value="0e" />
+        <sys:Item Key="8517187" Value="0f" />
+        <sys:Item Key="8517189" Value="10" />
+        <sys:Item Key="8517191" Value="11" />
+        <sys:Item Key="8517193" Value="12" />
+        <sys:Item Key="8517195" Value="13" />
+        <sys:Item Key="8517197" Value="14" />
+        <sys:Item Key="8517199" Value="15" />
+        <sys:Item Key="8517201" Value="16" />
+        <sys:Item Key="8517243" Value="block update values " />
+        <sys:Item Key="8517251" Value="LevelToHave a Cutscene Map ORB" />
+        <sys:Item Key="8517266" Value="WRAM Dest The whole section will update CGRAM" />
+        <sys:Item Key="8552469" Value="when the timer should start making a waring noice before it runs out " />
+        <sys:Item Key="8552474" Value="sound ID when timer runs out" />
+        <sys:Item Key="8552491" Value="kill Simon when timer runs out" />
+        <sys:Item Key="8552503" Value="checks if Simon falls through camera bottom " />
+        <sys:Item Key="8552508" Value="This happens when u fall into a pit" />
+        <sys:Item Key="8552605" Value="lose a life" />
+        <sys:Item Key="8552705" Value="unusedJump??" />
+        <sys:Item Key="8554442" Value="deforming the walls " />
+        <sys:Item Key="8556051" Value="??" />
+        <sys:Item Key="8557351" Value="loadBossSubIDfromEvent" />
+        <sys:Item Key="8557389" Value="fadeMusic" />
+        <sys:Item Key="8557509" Value="finnal boss check no music change" />
+        <sys:Item Key="8557522" Value="musicID boss 2 Castle" />
+        <sys:Item Key="8557532" Value="musicID boss 1" />
+        <sys:Item Key="8557557" Value="stop watch stop" />
+        <sys:Item Key="8557587" Value="There are two pointer missing Drac Mummy this is skipped for this bosses.." />
+        <sys:Item Key="8557647" Value="unused?? cameralock save routine?? could this make the boss work on different locations??" />
+        <sys:Item Key="8560954" Value="ID $6f Horse head normal, ID $71 Horse head upside down " />
+        <sys:Item Key="8563413" Value="probably unused " />
+        <sys:Item Key="8563805" Value="hitboxSpear??" />
+        <sys:Item Key="8564879" Value="might be unused " />
+        <sys:Item Key="8564889" Value="rowdin" />
+        <sys:Item Key="8564996" Value="not sure what it calculates.. may be how far something should move??" />
+        <sys:Item Key="8565061" Value="drac mummy" />
+        <sys:Item Key="8565098" Value="might be unused" />
+        <sys:Item Key="8567468" Value="jump to NEW cameraLock setup SC4ed" />
+        <sys:Item Key="8567472" Value="Vanilla Unused Routine" />
+        <sys:Item Key="8567490" Value="end unused routine" />
+        <sys:Item Key="8567645" Value="remove increment SC4ed CutScene" />
+        <sys:Item Key="8567717" Value="killSimon" />
+        <sys:Item Key="8568395" Value="might be used when castle map shows" />
+        <sys:Item Key="8568930" Value="tunnelBlock" />
+        <sys:Item Key="8568932" Value="chandelireDoubleBlock" />
+        <sys:Item Key="8568934" Value="chandelireStairBlock" />
+        <sys:Item Key="8568936" Value="chandelireSingleBlock" />
+        <sys:Item Key="8569277" Value="Medusa Load Event State" />
+        <sys:Item Key="8569305" Value="State 0" />
+        <sys:Item Key="8569312" Value="set y SubSpeed" />
+        <sys:Item Key="8569368" Value="medusa movement" />
+        <sys:Item Key="8569524" Value="Settup to get sprite assembly based on levels" />
+        <sys:Item Key="8569554" Value="data pointer for speed in bank 81" />
+        <sys:Item Key="8569559" Value="used 62 moving Spike," />
+        <sys:Item Key="8569599" Value="add table offset" />
+        <sys:Item Key="8569624" Value="skip when On Ring" />
+        <sys:Item Key="8569629" Value="skip on death" />
+        <sys:Item Key="8569634" Value="crouch" />
+        <sys:Item Key="8572026" Value="also fishmanJumpingState0b" />
+        <sys:Item Key="8574315" Value="collusion??" />
+        <sys:Item Key="8574487" Value="axeKnight" />
+        <sys:Item Key="8574632" Value="Rowdin " />
+        <sys:Item Key="8574637" Value="checks HorseDeath state" />
+        <sys:Item Key="8574667" Value="rowdin" />
+        <sys:Item Key="8574744" Value="palettePointerID" />
+        <sys:Item Key="8574747" Value="UpdateSlot palette" />
+        <sys:Item Key="8574754" Value="main event Slot" />
+        <sys:Item Key="8574759" Value="xPos" />
+        <sys:Item Key="8574767" Value="yPos" />
+        <sys:Item Key="8574784" Value="SpeedXpos" />
+        <sys:Item Key="8574786" Value="rowdinBoss ID" />
+        <sys:Item Key="8574791" Value="hitBox hitable and hurt" />
+        <sys:Item Key="8574812" Value="bossHealth" />
+        <sys:Item Key="8574818" Value="bossHealthHUD" />
+        <sys:Item Key="8574828" Value="horseHead??" />
+        <sys:Item Key="8574831" Value="go First State" />
+        <sys:Item Key="8575158" Value="and state02" />
+        <sys:Item Key="8575178" Value="hores Body slot" />
+        <sys:Item Key="8575187" Value="horseHeadSlot" />
+        <sys:Item Key="8575326" Value="unused??" />
+        <sys:Item Key="8575412" Value="Not Sure" />
+        <sys:Item Key="8575423" Value="Not Sure" />
+        <sys:Item Key="8575939" Value="State0b too" />
+        <sys:Item Key="8576011" Value="zero health Hud" />
+        <sys:Item Key="8576015" Value="stop movement " />
+        <sys:Item Key="8577073" Value="frank Rowdin.." />
+        <sys:Item Key="8577087" Value="without x or y used" />
+        <sys:Item Key="8577173" Value="rowdin" />
+        <sys:Item Key="8577231" Value="fireBall Spit frame for the head??" />
+        <sys:Item Key="8577246" Value="state" />
+        <sys:Item Key="8577255" Value="speed" />
+        <sys:Item Key="8577261" Value="subSpeed" />
+        <sys:Item Key="8577276" Value="event ID" />
+        <sys:Item Key="8577279" Value="spriteAssembly ID" />
+        <sys:Item Key="8577285" Value="copy rowdions HeadPossition" />
+        <sys:Item Key="8577321" Value="make it hurt and hitable" />
+        <sys:Item Key="8577352" Value="boss rowdin fireball slots" />
+        <sys:Item Key="8577365" Value="Check if Fireball is destroyed to draw small flame" />
+        <sys:Item Key="8577386" Value="Fireball 800-900" />
+        <sys:Item Key="8577581" Value="movment direction 01 left 00 right" />
+        <sys:Item Key="8577595" Value="sprite animation??" />
+        <sys:Item Key="8577610" Value="sprite animation??" />
+        <sys:Item Key="8578750" Value="fireBrathID 2 slot" />
+        <sys:Item Key="8579267" Value="unused routine!" />
+        <sys:Item Key="8579413" Value="bossSlotOffset viper two " />
+        <sys:Item Key="8579462" Value="shoot ID slot 00" />
+        <sys:Item Key="8579465" Value="shoot ID slot 01" />
+        <sys:Item Key="8579468" Value="shoot ID slot 02" />
+        <sys:Item Key="8580919" Value="700 seems to be the base for medusa boss projectile snake and beems" />
+        <sys:Item Key="8581063" Value="snake Speed Left" />
+        <sys:Item Key="8581069" Value="snake Speed Right" />
+        <sys:Item Key="8581187" Value="freezTimer " />
+        <sys:Item Key="8583244" Value="GFXupdateBasedOnHealth" />
+        <sys:Item Key="8584817" Value="enemy Projectile?" />
+        <sys:Item Key="8584896" Value="?? not sure" />
+        <sys:Item Key="8585152" Value="put A onto 70 and loads level based on expandet Table" />
+        <sys:Item Key="8619540" Value="exitMenu" />
+        <sys:Item Key="8620599" Value="hixboxSlamAxe xPos" />
+        <sys:Item Key="8620605" Value="hixboxSlamAxe yPos" />
+        <sys:Item Key="8621952" Value="grakull mummy" />
+        <sys:Item Key="8622279" Value="ySpeedCalc" />
+        <sys:Item Key="8622753" Value="botleGroundSpread" />
+        <sys:Item Key="8622755" Value="bottle 4 flames" />
+        <sys:Item Key="8622757" Value="bottle Copy" />
+        <sys:Item Key="8623622" Value="bottle slot ID" />
+        <sys:Item Key="8624780" Value="set death state" />
+        <sys:Item Key="8626608" Value="without this he shoots sticly down " />
+        <sys:Item Key="8626620" Value="use the xPosOffset of Simon and Boss as Speed" />
+        <sys:Item Key="8629191" Value="check Xpos collide with death" />
+        <sys:Item Key="8629211" Value="check Ypos collide with death" />
+        <sys:Item Key="8629232" Value="deathBigScyntheAdvance" />
+        <sys:Item Key="8629470" Value="unused??" />
+        <sys:Item Key="8629629" Value="make his sprite flicker based on frame counter" />
+        <sys:Item Key="8631438" Value="unused??" />
+        <sys:Item Key="8634367" Value="skip all if Orb spawned" />
+        <sys:Item Key="8634947" Value="DracNormalFace" />
+        <sys:Item Key="8634959" Value="DracThorUpFace" />
+        <sys:Item Key="8634966" Value="dracHandUp" />
+        <sys:Item Key="8637938" Value="number of bats to spawn" />
+        <sys:Item Key="8638575" Value="Destroyable block array with falling routine (works when simon has now layer priority)" />
+        <sys:Item Key="8639472" Value="Skull Watching Sub 0-9 (80-89) y80 x1b8 208 258 268 xx 538 568 628 7a8, Books Background Vertical loading lvl 24 Sub 8A-91 x10 and f0 y60 b0 120 140 178 358, " />
+        <sys:Item Key="8639474" Value="Lvl 25 horizontal loading sub 90-96 y80 x30 b8 c8 178 1a8, Lvl 26 Sub40-43 LadyPainting (Animation is set to x y)" />
+        <sys:Item Key="8639477" Value="Sub c0-c6 Statue with Ball (Animation is set x y but ball hitzone to event) " />
+        <sys:Item Key="8639932" Value="trigger" />
+        <sys:Item Key="8640489" Value="background update puwxil" />
+        <sys:Item Key="8640937" Value="Skelly out of celling Sub 1 4 8 c 10 y30 x100 180 200 280 300" />
+        <sys:Item Key="8641944" Value="uses state as ID.." />
+        <sys:Item Key="8643458" Value="play secret found sound" />
+        <sys:Item Key="8643465" Value=" " />
+        <sys:Item Key="8643509" Value="remove Floor Collusion" />
+        <sys:Item Key="8643536" Value="drawStairs" />
+        <sys:Item Key="8643555" Value="make lower floor" />
+        <sys:Item Key="8643630" Value="lvl 15 rotating" />
+        <sys:Item Key="8644442" Value="lvl 16 Castle WashingMachine" />
+        <sys:Item Key="8645402" Value="Block N. 39 3a 6c-74 7e 7d " />
+        <sys:Item Key="8646757" Value="ID $7d Gear Spike SUB 20, Sub 0 Bridge final stage, Stair Falling SUB CO-CD, Rising Platforms SUB 40 Trigger=y700-550 4c0-400 1d0-A0 " />
+        <sys:Item Key="8647610" Value="firstSectionStart" />
+        <sys:Item Key="8647615" Value="firstSectionEnd" />
+        <sys:Item Key="8647620" Value="secondSectionStart" />
+        <sys:Item Key="8647625" Value="secondSectionEnd" />
+        <sys:Item Key="8647630" Value="last Section End" />
+        <sys:Item Key="8647635" Value="lastSectionStart" />
+        <sys:Item Key="8647642" Value="intervall ApawnTimer" />
+        <sys:Item Key="8647647" Value="Hight offset between Platform?" />
+        <sys:Item Key="8647802" Value="remove after XposCross" />
+        <sys:Item Key="8649346" Value="starting Xpos BG scroll Ending " />
+        <sys:Item Key="8649419" Value="ending SceneCastle " />
+        <sys:Item Key="8649422" Value="stop scrolling at the left side and advance " />
+        <sys:Item Key="8649733" Value="set small letters " />
+        <sys:Item Key="8649968" Value="Simons Head" />
+        <sys:Item Key="8684102" Value="This are pointers to WRAM 7f 0000" />
+        <sys:Item Key="8685078" Value="same as 38" />
+        <sys:Item Key="8689291" Value="zombie" />
+        <sys:Item Key="8710741" Value="stand on smal platform" />
+        <sys:Item Key="8765072" Value="new death entrance code" />
+        <sys:Item Key="8766024" Value=";bg0 mapping AABB AA=Speed?? BB=BGIndex" />
+        <sys:Item Key="8767286" Value="notSure goes 13d2" />
+        <sys:Item Key="8767410" Value="final tower" />
+        <sys:Item Key="8767418" Value="drac" />
+        <sys:Item Key="8767420" Value="drac" />
+        <sys:Item Key="8767422" Value="stored at $0044" />
+        <sys:Item Key="8767558" Value="Bottom not moving.. toDo describe values and find coresponding routines" />
+        <sys:Item Key="8768420" Value="end sc4ed fixes" />
+        <sys:Item Key="8770430" Value="might be unused" />
+        <sys:Item Key="8771360" Value="death and zapfbat" />
+        <sys:Item Key="8771417" Value="used death and zapfbat" />
+        <sys:Item Key="8774630" Value="animatedBackground 80+ " />
+        <sys:Item Key="8774635" Value=" animatedBackground c0+" />
+        <sys:Item Key="8774643" Value="animatedBackground 40+" />
+        <sys:Item Key="8774871" Value="animatedBackground 40+" />
+        <sys:Item Key="8775141" Value=" animatedBackground c0+" />
+        <sys:Item Key="8775409" Value="yPos data?" />
+        <sys:Item Key="8775418" Value="xpos data?" />
+        <sys:Item Key="8775454" Value="groundSprites for Transition " />
+        <sys:Item Key="8775603" Value="initiate Platform" />
+        <sys:Item Key="8775615" Value="initiate second Platform " />
+        <sys:Item Key="8776455" Value="how many rocks should fall " />
+        <sys:Item Key="8776478" Value="spawn event type falling Rock" />
+        <sys:Item Key="8780085" Value="Gold Platform Disapearing Sub 0-13, Tresure Chest opening/jumping Sub 40-4c, Trap Hole Sub 80-83, Gold Splash SUB f2 and f0 spark, Suckhole SUB C0 SUB C1=Secret and C2=Exit Secret  " />
+        <sys:Item Key="8780087" Value="Trap Hole Sub 80-83" />
+        <sys:Item Key="8780092" Value="Tresure Chest opening/jumping Sub 40-4c" />
+        <sys:Item Key="8780190" Value="BlockReplacment once it is poped and you uscroll it in" />
+        <sys:Item Key="8780244" Value="sate 2 slice timer" />
+        <sys:Item Key="8780256" Value="setCrumbleFromLeft" />
+        <sys:Item Key="8780356" Value="state 2 slice timer " />
+        <sys:Item Key="8780496" Value="remove collusion" />
+        <sys:Item Key="8781412" Value="stop pounding sound" />
+        <sys:Item Key="8781420" Value="timer" />
+        <sys:Item Key="8781425" Value="timer" />
+        <sys:Item Key="8781483" Value="check if we finished Game to play final sound" />
+        <sys:Item Key="8781613" Value="medusa had a orb once Iguess" />
+        <sys:Item Key="8781632" Value="not sure" />
+        <sys:Item Key="8781640" Value="cutscene index" />
+        <sys:Item Key="8781671" Value="probably puwexil" />
+        <sys:Item Key="8781687" Value="probably Mummy" />
+        <sys:Item Key="8781789" Value="end SC4ed Tweaks" />
+        <sys:Item Key="8815254" Value="Editable with SC4ed " />
+        <sys:Item Key="8815389" Value="endOfTable" />
+        <sys:Item Key="8816796" Value="first level seems to be special. Mode7 bridge??" />
+        <sys:Item Key="8816933" Value="PPU dest ??" />
+        <sys:Item Key="8816936" Value="ROM src" />
+        <sys:Item Key="8816939" Value="terminator ??" />
+        <sys:Item Key="8817790" Value="offset of the PPU slot it goes into" />
+        <sys:Item Key="8817802" Value="first byte tells how many enteries are present followed by the even ID used in the scene. They need to be in order so the slot space can be assigned to the event sprite address" />
+        <sys:Item Key="8820549" Value="scroll glitch not catching first row??" />
+        <sys:Item Key="8822615" Value="check crouch state " />
+        <sys:Item Key="8823222" Value="not sure" />
+        <sys:Item Key="8823234" Value="value for Stage B first Section" />
+        <sys:Item Key="8823733" Value="writes collusion byte to WRAM table" />
+        <sys:Item Key="8823742" Value="FIXME!" />
+        <sys:Item Key="8823756" Value="FIXME!" />
+        <sys:Item Key="8823758" Value="FIXME!" />
+        <sys:Item Key="8823763" Value="FIXME!" />
+        <sys:Item Key="8823770" Value="FIXME!" />
+        <sys:Item Key="8823775" Value="FIXME!" />
+        <sys:Item Key="8823777" Value="unsed Setup by Redguy or orginal Setup.." />
+        <sys:Item Key="8823857" Value="end collusion table Setup" />
+        <sys:Item Key="8824043" Value="FIXME" />
+        <sys:Item Key="8824047" Value="FIXME // BEQ - branch if 2 (#8000)" />
+        <sys:Item Key="8824052" Value="// FIXME" />
+        <sys:Item Key="8824057" Value="end reguy edits" />
+        <sys:Item Key="8824087" Value="// FIXME" />
+        <sys:Item Key="8824092" Value="// FIXME" />
+        <sys:Item Key="8824097" Value="// FIXME" />
+        <sys:Item Key="8824101" Value="end redguy collusion table setup edits" />
+        <sys:Item Key="8824781" Value="ySpeed BG blocks moving Up Slow" />
+        <sys:Item Key="8824784" Value="ySpeed BG blocks moving Up Slow" />
+        <sys:Item Key="8824795" Value="ySpeed BG blocks moving Up Fas" />
+        <sys:Item Key="8824798" Value="ySpeed BG blocks moving Up Fas" />
+        <sys:Item Key="8824812" Value="ySpeed BG blocks moving Stop" />
+        <sys:Item Key="8824947" Value="tilemap update verticle " />
+        <sys:Item Key="8826106" Value="donno when this is used " />
+        <sys:Item Key="8826571" Value="decrease index " />
+        <sys:Item Key="8828142" Value="check if $33 or $1C requiring STZ $13D4 and INC of $1602/$1604. fix secret exits to use entrance 2" />
+        <sys:Item Key="8828180" Value="speed cap cam following Simon" />
+        <sys:Item Key="8828200" Value="speed cap following Simon" />
+        <sys:Item Key="8828661" Value="end secret entrance Fix" />
+        <sys:Item Key="8828664" Value="old Routine" />
+        <sys:Item Key="8828825" Value="End old Routine" />
+        <sys:Item Key="8829017" Value=" replace collision setup with table base setup in $C8" />
+        <sys:Item Key="8829020" Value="SC4ed Edit by Redguy" />
+        <sys:Item Key="8829063" Value="callculation collusion data pointer" />
+        <sys:Item Key="8829502" Value="remove Increment On Bat SC4ed Edit" />
+        <sys:Item Key="8829572" Value="Gear Big SUB 0, Gear Little SUB 2, Gear Force Horizontal SUB C0, Gear Falling out SUB(80 &gt; Fast)(81 &lt; Slow)(82 &gt; Slow) " />
+        <sys:Item Key="8831564" Value="auto walk right" />
+        <sys:Item Key="8831734" Value="exit trigger after death" />
+        <sys:Item Key="8832065" Value="after medusa" />
+        <sys:Item Key="8832136" Value="music waterslide.. initating music early for smoth transition" />
+        <sys:Item Key="8832643" Value="hard on level" />
+        <sys:Item Key="8832955" Value="lag reduction only use a view losts??" />
+        <sys:Item Key="8836314" Value="paletteDataSpriteStagel09_zapfBatQuater01" />
+        <sys:Item Key="8838816" Value="firstByte is alwayse teh size of palette data to load" />
+        <sys:Item Key="9238687" Value="might be unused??" />
+        <sys:Item Key="9239513" Value="spawns after killing a enemy" />
+        <sys:Item Key="9239813" Value="enemy projectile Bone" />
+        <sys:Item Key="9239858" Value="unused??" />
+        <sys:Item Key="9240327" Value="Ring Event Main" />
+        <sys:Item Key="9240463" Value="SC4ed Fix" />
+        <sys:Item Key="9666560" Value="I think this is something else.." />
+        <sys:Item Key="10481930" Value="AA BC    AA=frames | B=8_jump,4_whip, 1_subweapon | C=D_PAD " />
+        <sys:Item Key="10481946" Value="null terminator" />
+        <sys:Item Key="10551248" Value="donno what this is should be spriteGFX lol" />
+        <sys:Item Key="10784768" Value="unusedSpace??" />
+        <sys:Item Key="10846208" Value="one entery is $0b bytes long and each level has $1f enteries" />
+        <sys:Item Key="10977310" Value="donno for what.." />
+        <sys:Item Key="11042845" Value="size" />
+        <sys:Item Key="11042848" Value="gfx_data" />
+        <sys:Item Key="11044381" Value="size" />
+        <sys:Item Key="11044384" Value="gfx data" />
+        <sys:Item Key="11072960" Value="end of table" />
+        <sys:Item Key="11114016" Value="end of Table" />
+        <sys:Item Key="11130335" Value="end of table" />
+        <sys:Item Key="11239424" Value="probably space that cant be used as scene data" />
+        <sys:Item Key="11304960" Value="data does bank cross!!" />
+        <sys:Item Key="11567104" Value="data does BankCross!!" />
+        <sys:Item Key="11632640" Value="data does BankCross!!" />
+        <sys:Item Key="11763712" Value="data does BankCross!!" />
+        <sys:Item Key="11894784" Value="data does BankCross!!" />
+        <sys:Item Key="12025856" Value="data does BankCross!!" />
+        <sys:Item Key="12091392" Value="data does BankCross!!" />
+        <sys:Item Key="12222464" Value="data does BankCross!!" />
+        <sys:Item Key="12288000" Value="data does BankCross!!" />
+        <sys:Item Key="12353536" Value="data does BankCross!!" />
+        <sys:Item Key="12419072" Value="data does BankCross!!" />
+        <sys:Item Key="12615680" Value="data does BankCross!!" />
+        <sys:Item Key="12681216" Value="data does BankCross!!" />
+        <sys:Item Key="12812288" Value="data does BankCross!!" />
+        <sys:Item Key="12877824" Value="data does BankCross!!" />
+        <sys:Item Key="13008896" Value="data does BankCross!!" />
+        <sys:Item Key="13074432" Value="data does BankCross!!" />
+        <sys:Item Key="13205504" Value="data does BankCross!!" />
+        <sys:Item Key="13271040" Value="data does BankCross!!" />
+        <sys:Item Key="13336576" Value="data does BankCross!!" />
+        <sys:Item Key="13402112" Value="data does BankCross!!" />
+        <sys:Item Key="13467648" Value="data does BankCross!!" />
+        <sys:Item Key="13598720" Value="data does BankCross!!" />
+        <sys:Item Key="13664256" Value="data does BankCross!!" />
+        <sys:Item Key="13729792" Value="data does BankCross!!" />
+        <sys:Item Key="13795328" Value="data does BankCross!!" />
+        <sys:Item Key="13860864" Value="data does BankCross!!" />
+        <sys:Item Key="13991936" Value="data does BankCross!!" />
+        <sys:Item Key="14123008" Value="data does BankCross!!" />
+        <sys:Item Key="14254080" Value="data does BankCross!!" />
+        <sys:Item Key="14319616" Value="data does BankCross!!" />
+        <sys:Item Key="14385152" Value="data does BankCross!!" />
+        <sys:Item Key="14450688" Value="data does BankCross!!" />
+        <sys:Item Key="14516224" Value="data does BankCross!!" />
+        <sys:Item Key="14647296" Value="data does BankCross!!" />
+        <sys:Item Key="14778368" Value="data does BankCross!!" />
+        <sys:Item Key="14843904" Value="data does BankCross!!" />
+        <sys:Item Key="14974976" Value="data does BankCross!!" />
+        <sys:Item Key="15106048" Value="data does BankCross!!" />
+        <sys:Item Key="15171584" Value="data does BankCross!!" />
+        <sys:Item Key="15368192" Value="data does BankCross!!" />
+        <sys:Item Key="15499264" Value="data does BankCross!!" />
+        <sys:Item Key="15785344" Value="trackerPointer00" />
+        <sys:Item Key="15785346" Value="??" />
+        <sys:Item Key="15785348" Value="startMusicData in APU" />
+        <sys:Item Key="15785350" Value="??" />
+        <sys:Item Key="15785352" Value="channel 1 Pointer" />
+        <sys:Item Key="15785354" Value="channel 2 Pointer" />
+        <sys:Item Key="15785356" Value="channel 3 Pointer" />
+        <sys:Item Key="15785358" Value="channel 4 Pointer" />
+        <sys:Item Key="15785360" Value="channel 5 Pointer" />
+        <sys:Item Key="15785362" Value="channel 6 Pointer" />
+        <sys:Item Key="15785364" Value="channel 7 Pointer" />
+        <sys:Item Key="15785366" Value="channel 8 Pointer" />
+        <sys:Item Key="15785728" Value="??channel 1" />
+        <sys:Item Key="15785730" Value="??channel 2" />
+        <sys:Item Key="15785732" Value="??channel 3" />
+        <sys:Item Key="15785734" Value="??channel 4" />
+        <sys:Item Key="15785736" Value="??channel 5" />
+        <sys:Item Key="15785738" Value="??channel 6" />
+        <sys:Item Key="15785740" Value="??channel 7" />
+        <sys:Item Key="16096893" Value="probably tilemap titlescreen stuff.." />
+        <sys:Item Key="16613381" Value="musicEngineStart" />
+      </Comments>
+      

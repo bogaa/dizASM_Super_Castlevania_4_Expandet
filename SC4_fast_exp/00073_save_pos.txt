@@ -1,0 +1,345 @@
+
+;pos=022000
+D
+D
+U
+r 20 D
+U
+r 24 D
+U
+r 32 D
+U
+r 24 D
+U
+r 28 D
+U
+r 32 D
+U
+r 24 D
+U
+r 28 D
+U
+r 32 D
+U
+r 20 D
+U
+r 24 D
+U
+r 24 D
+U
+r 24 D
+U
+r 28 D
+U
+r 24 D
+U
+r 32 D
+U
+r 32 D
+U
+r 32 D
+U
+r 24 D
+U
+r 24 D
+U
+r 28 D
+U
+r 24 D
+U
+r 32 D
+U
+r 28 D
+U
+r 28 D
+U
+r 20 D
+U
+r 28 D
+U
+r 32 D
+U
+r 28 D
+U
+r 28 D
+U
+r 28 D
+U
+r 28 D
+U
+r 28 D
+U
+r 12 D
+U
+r 28 D
+U
+r 28 D
+U
+r 24 D
+U
+r 28 D
+U
+r 24 D
+U
+r 24 D
+U
+r 48 D
+U
+D
+D
+D
+D
+U
+r 32 D
+U
+r 12 D
+U
+r 8 D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+r 16 D
+U
+r 12 D
+U
+r 16 D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+r 8 D
+U
+r 12 D
+U
+r 8 D
+U
+r 12 D
+U
+r 32 D
+U
+r 8 D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+r 8 D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+r 12 D
+U
+r 8 D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+r 12 D
+U
+r 8 D
+U
+r 12 D
+U
+r 104 D
+U
+r 16 D
+U
+r 64 D
+U
+r 16 D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+r 8 D
+U
+r 8 D
+U
+r 8 D
+U
+r 64 D
+U
+r 8 D
+U
+r 8 D
+U
+r 16 D
+U
+r 8 D
+U
+r 8 D
+U
+r 16 D
+U
+r 16 D
+U
+r 8 D
+U
+r 16 D
+U
+r 24 D
+U
+r 16 D
+U
+D
+D
+D
+D
+U
+D
+D
+D
+D
+U
+r 8 D
+U
+D
+D
+D
+D
+D
+D
+D

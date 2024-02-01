@@ -1,0 +1,17 @@
+
+;pos=193000
+r 92 U
+A
+A
+A
+r 576 G
+r 125 U
+A
+A
+A
+r 832 G
+r 93 U
+A
+A
+A
+r 321 G

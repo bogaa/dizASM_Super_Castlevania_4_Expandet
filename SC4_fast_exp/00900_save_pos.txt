@@ -1,0 +1,13 @@
+
+;pos=1BF800
+r 607 G
+r 93 U
+A
+A
+A
+r 640 G
+r 125 U
+A
+A
+A
+r 577 B

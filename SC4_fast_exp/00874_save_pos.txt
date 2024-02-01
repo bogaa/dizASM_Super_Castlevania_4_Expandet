@@ -1,0 +1,13 @@
+
+;pos=1B2800
+r 927 G
+r 93 U
+A
+A
+A
+r 832 G
+r 93 U
+A
+A
+A
+r 97 B

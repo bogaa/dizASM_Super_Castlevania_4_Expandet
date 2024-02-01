@@ -1,0 +1,13 @@
+
+;pos=1BF000
+r 287 G
+r 93 U
+A
+A
+A
+r 1520 G
+r 109 U
+A
+A
+A
+r 33 G

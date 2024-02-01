@@ -11440,7 +11440,8 @@ axeKnightStateRoutine:
           CODE_82CFFB:
                        CMP.W #$0007                         ;82CFFB|C90700  |      ;
                        BNE CODE_82D003                      ;82CFFE|D003    |82D003;
-                       db $4C,$0F,$D0                       ;82D000|        |82D00F;
+                       JMP.W CODE_82D00F                    ;82D000|4C0FD0  |82D00F;
+                                                            ;      |        |      ;
                                                             ;      |        |      ;
           CODE_82D003:
                        CMP.W #$0004                         ;82D003|C90400  |      ;
@@ -11502,14 +11503,16 @@ axeKnightStateRoutine:
                        BEQ CODE_82D095                      ;82D06C|F027    |82D095;
                        CMP.W #$0005                         ;82D06E|C90500  |      ;
                        BNE CODE_82D076                      ;82D071|D003    |82D076;
-                       db $4C,$84,$D0                       ;82D073|        |82D084;
+                       JMP.W CODE_82D084                    ;82D073|4C84D0  |82D084;
+                                                            ;      |        |      ;
                                                             ;      |        |      ;
           CODE_82D076:
                        CMP.W #$0007                         ;82D076|C90700  |      ;
                        BEQ CODE_82D084                      ;82D079|F009    |82D084;
                        CMP.W #$0004                         ;82D07B|C90400  |      ;
                        BEQ CODE_82D084                      ;82D07E|F004    |82D084;
-                       db $4C,$95,$D0                       ;82D080|        |82D095;
+                       JMP.W CODE_82D095                    ;82D080|4C95D0  |82D095;
+                                                            ;      |        |      ;
                                                             ;      |        |      ;
           CODE_82D083:
                        RTL                                  ;82D083|6B      |      ;
@@ -11550,7 +11553,8 @@ axeKnightStateRoutine:
                        CMP.W #$0003                         ;82D0C2|C90300  |      ;
                        BEQ CODE_82D0CA                      ;82D0C5|F003    |82D0CA;
                        BRA CODE_82D0D0                      ;82D0C7|8007    |82D0D0;
-                       db $6B                               ;82D0C9|        |      ;
+                       RTL                                  ;82D0C9|6B      |      ;
+                                                            ;      |        |      ;
                                                             ;      |        |      ;
           CODE_82D0CA:
                        LDA.W #$0002                         ;82D0CA|A90200  |      ;
@@ -13066,8 +13070,12 @@ rowdinState0a_walkRight:
                        LDA.W #$0007                         ;82DBB1|A90700  |      ;
                        STA.B RAM_X_event_slot_state,X       ;82DBB4|9512    |000012;
                        RTL                                  ;82DBB6|6B      |      ;
-                       db $A9,$0B,$00,$95,$12,$A9,$10,$00   ;82DBB7|        |      ;
-                       db $9D,$24,$00,$6B                   ;82DBBF|        |000024;
+                       LDA.W #$000B                         ;82DBB7|A90B00  |      ;
+                       STA.B RAM_X_event_slot_state,X       ;82DBBA|9512    |000012;
+                       LDA.W #$0010                         ;82DBBC|A91000  |      ;
+                       STA.W RAM_81_X_event_slot_24,X       ;82DBBF|9D2400  |810024;
+                       RTL                                  ;82DBC2|6B      |      ;
+                                                            ;      |        |      ;
                                                             ;      |        |      ;
 rowdinState09_jumpAttack:
                        JSL.L gravetyFallCalculation4000     ;82DBC3|2259B482|82B459; State0b too
@@ -13926,7 +13934,8 @@ searchEmptySlotForRowdinFireball:
                        TAY                                  ;82E224|A8      |      ;
                        CPY.W #$0900                         ;82E225|C00009  |      ;
                        BCC CODE_82E21A                      ;82E228|90F0    |82E21A;
-                       db $6B                               ;82E22A|        |      ;
+                       RTL                                  ;82E22A|6B      |      ;
+                                                            ;      |        |      ;
                                                             ;      |        |      ;
           CODE_82E22B:
                        CLC                                  ;82E22B|18      |      ;
@@ -14421,8 +14430,13 @@ bossViper00Sate02_main:
                        CMP.W #$00DF                         ;82E5E7|C9DF00  |      ;
                        BCS CODE_82E5FB                      ;82E5EA|B00F    |82E5FB;
                        RTL                                  ;82E5EC|6B      |      ;
-                       db $AD,$8A,$06,$C9,$60,$00,$90,$14   ;82E5ED|        |00068A;
-                       db $C9,$F9,$00,$B0,$16,$6B           ;82E5F5|        |      ;
+                       LDA.W $068A                          ;82E5ED|AD8A06  |81068A;
+                       CMP.W #$0060                         ;82E5F0|C96000  |      ;
+                       BCC CODE_82E609                      ;82E5F3|9014    |82E609;
+                       CMP.W #$00F9                         ;82E5F5|C9F900  |      ;
+                       BCS CODE_82E610                      ;82E5F8|B016    |82E610;
+                       RTL                                  ;82E5FA|6B      |      ;
+                                                            ;      |        |      ;
                                                             ;      |        |      ;
           CODE_82E5FB:
                        DEC.W $090E                          ;82E5FB|CE0E09  |00090E;
@@ -14434,8 +14448,18 @@ bossViper00Sate02_main:
                        INC.W $090E                          ;82E602|EE0E09  |81090E;
                        INC.W $090E                          ;82E605|EE0E09  |81090E;
                        RTL                                  ;82E608|6B      |      ;
-                       db $EE,$0A,$09,$EE,$0A,$09,$6B,$CE   ;82E609|        |00090A;
-                       db $0A,$09,$CE,$0A,$09,$6B           ;82E611|        |      ;
+                                                            ;      |        |      ;
+          CODE_82E609:
+                       INC.W $090A                          ;82E609|EE0A09  |81090A;
+                       INC.W $090A                          ;82E60C|EE0A09  |81090A;
+                       RTL                                  ;82E60F|6B      |      ;
+                                                            ;      |        |      ;
+                                                            ;      |        |      ;
+          CODE_82E610:
+                       DEC.W $090A                          ;82E610|CE0A09  |81090A;
+                       DEC.W $090A                          ;82E613|CE0A09  |81090A;
+                       RTL                                  ;82E616|6B      |      ;
+                                                            ;      |        |      ;
                                                             ;      |        |      ;
     bossViper00Sate03:
                        RTL                                  ;82E617|6B      |      ;

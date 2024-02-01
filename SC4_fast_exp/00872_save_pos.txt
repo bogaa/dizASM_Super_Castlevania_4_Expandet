@@ -1,0 +1,13 @@
+
+;pos=1B1800
+r 799 G
+r 93 U
+A
+A
+A
+r 960 G
+r 93 U
+A
+A
+A
+r 97 G

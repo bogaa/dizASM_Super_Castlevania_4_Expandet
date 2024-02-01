@@ -1,0 +1,20 @@
+
+;pos=3CF800
+r 895 B
+r 93 U
+r 132 A
+r 124 U
+A
+A
+A
+r 256 B
+r 93 U
+A
+A
+A
+r 256 B
+r 93 U
+A
+A
+A
+r 97 B

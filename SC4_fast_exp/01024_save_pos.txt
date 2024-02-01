@@ -1,0 +1,13 @@
+
+;pos=1FD800
+r 352 G
+r 124 U
+A
+A
+A
+r 704 G
+r 93 U
+A
+A
+A
+r 769 B

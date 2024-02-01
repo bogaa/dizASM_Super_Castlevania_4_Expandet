@@ -1,0 +1,58 @@
+
+;pos=035000
+r 83 G
+B
+B
+r 192 G
+B
+B
+r 256 G
+B
+B
+r 63 G
+B
+B
+r 639 G
+B
+B
+r 32 G
+B
+B
+r 128 G
+r 256 U
+B
+B
+r 32 G
+B
+B
+r 32 G
+B
+B
+r 32 G
+B
+B
+r 32 G
+B
+B
+r 32 G
+B
+B
+r 32 G
+B
+B
+r 32 G
+B
+B
+r 32 G
+B
+B
+r 32 G
+B
+B
+r 32 G
+B
+B
+r 32 G
+B
+B
+r 11 G

@@ -1,0 +1,3 @@
+<RomBytesOutputFormatSettings CompressGroupBlock="true" CompressUsingTable1="true" InsertCommentIntoOutputLinesEveryNBytes="2048" />
+    </ProjectSettings>
+    

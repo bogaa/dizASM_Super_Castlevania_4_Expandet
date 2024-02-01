@@ -1,0 +1,18 @@
+
+;pos=359800
+r 159 G
+r 93 U
+A
+A
+A
+r 800 G
+r 93 U
+A
+A
+A
+r 384 G
+r 125 U
+A
+A
+A
+r 385 B
