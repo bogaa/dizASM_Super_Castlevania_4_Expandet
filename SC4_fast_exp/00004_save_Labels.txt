@@ -1,741 +1,741 @@
 <Labels>
         <sys:Item Key="0">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_sprite_assembly" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_00_sprite" Comment="" />
         </sys:Item>
         <sys:Item Key="2">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_attribute" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_02_pri_attri" Comment="" />
         </sys:Item>
         <sys:Item Key="4">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_flip_mirror_attribute" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_04_flip_mirror_attri" Comment="" />
         </sys:Item>
         <sys:Item Key="6">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_event_slot_health" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_06_health" Comment="" />
         </sys:Item>
         <sys:Item Key="8">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_xPosSub" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_08_xPosSub" Comment="" />
         </sys:Item>
         <sys:Item Key="10">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_xPos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_0a_xPos" Comment="" />
         </sys:Item>
         <sys:Item Key="12">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_yPosSub" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_0c_yPosSub" Comment="" />
         </sys:Item>
         <sys:Item Key="14">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_yPos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_0e_yPos" Comment="" />
         </sys:Item>
         <sys:Item Key="16">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_ID" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_10_ID" Comment="" />
         </sys:Item>
         <sys:Item Key="18">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_state" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_12_state" Comment="" />
         </sys:Item>
         <sys:Item Key="20">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_subId" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_14_subId" Comment="" />
         </sys:Item>
         <sys:Item Key="22">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_hitStueCounter" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_16_hitStunCount" Comment="" />
         </sys:Item>
         <sys:Item Key="24">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_xSpdSub" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_18_xSpdSub" Comment="" />
         </sys:Item>
         <sys:Item Key="26">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_xSpd" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_1a_xSpd" Comment="" />
         </sys:Item>
         <sys:Item Key="28">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_ySpdSub" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_1c_ySpdSub" Comment="" />
         </sys:Item>
         <sys:Item Key="30">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_ySpd" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_1e_ySpd" Comment="" />
         </sys:Item>
         <sys:Item Key="32">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_20" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_20" Comment="" />
         </sys:Item>
         <sys:Item Key="34">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_22" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_22" Comment="" />
         </sys:Item>
         <sys:Item Key="36">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_24" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_24" Comment="" />
         </sys:Item>
         <sys:Item Key="38">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_SpriteAdr" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_26_SpriteAdr" Comment="" />
         </sys:Item>
         <sys:Item Key="40">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_HitboxXpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_28_HitboxXpos" Comment="" />
         </sys:Item>
         <sys:Item Key="42">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_HitboxYpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_2a_HitboxYpos" Comment="" />
         </sys:Item>
         <sys:Item Key="44">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_Movement2c" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_2c_Movement2c" Comment="" />
         </sys:Item>
         <sys:Item Key="46">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_HitboxID" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_2e_HitboxID" Comment="" />
         </sys:Item>
         <sys:Item Key="48">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_mask" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_30_mask" Comment="" />
         </sys:Item>
         <sys:Item Key="50">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_32" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_32" Comment="" />
         </sys:Item>
         <sys:Item Key="52">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_34" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_34" Comment="" />
         </sys:Item>
         <sys:Item Key="54">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_36" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_36" Comment="" />
         </sys:Item>
         <sys:Item Key="56">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_38" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_38" Comment="" />
         </sys:Item>
         <sys:Item Key="58">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_3a" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_3a" Comment="" />
         </sys:Item>
         <sys:Item Key="60">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_3c" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_3c" Comment="" />
         </sys:Item>
         <sys:Item Key="62">
-          <Value exs:type="ns1:Label" Name="RAM_X_event_slot_3e" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ev_3e" Comment="" />
         </sys:Item>
         <sys:Item Key="64">
-          <Value exs:type="ns1:Label" Name="RAM_whiteFadeCounter" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_whiteFadeCounter" Comment="" />
         </sys:Item>
         <sys:Item Key="66">
-          <Value exs:type="ns1:Label" Name="RAM_transpEffectBG" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_transpEffectBG" Comment="" />
         </sys:Item>
         <sys:Item Key="68">
-          <Value exs:type="ns1:Label" Name="RAM_transoEffectSprite" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_transoEffectSprite" Comment="" />
         </sys:Item>
         <sys:Item Key="70">
-          <Value exs:type="ns1:Label" Name="RAM_scrollAndMode7_setting" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_scrollAndMode7_setting" Comment="" />
         </sys:Item>
         <sys:Item Key="72">
-          <Value exs:type="ns1:Label" Name="RAM_pointerCG_WRAM" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_pointerCG_WRAM" Comment="" />
         </sys:Item>
         <sys:Item Key="76">
-          <Value exs:type="ns1:Label" Name="RAM_introScreenIndex" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_introScreenIndex" Comment="" />
         </sys:Item>
         <sys:Item Key="80">
-          <Value exs:type="ns1:Label" Name="RAM_VRAM_updateSize" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_VRAM_updateSize" Comment="" />
         </sys:Item>
         <sys:Item Key="84">
-          <Value exs:type="ns1:Label" Name="RAM_SFXReadLPtr_Set" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_SFXReadLPtr_Set" Comment="" />
         </sys:Item>
         <sys:Item Key="86">
-          <Value exs:type="ns1:Label" Name="RAM_SFXReadLPtr_Active" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_SFXReadLPtr_Active" Comment="" />
         </sys:Item>
         <sys:Item Key="102">
-          <Value exs:type="ns1:Label" Name="RAM_pauseFlag" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_pauseFlag" Comment="" />
         </sys:Item>
         <sys:Item Key="112">
-          <Value exs:type="ns1:Label" Name="RAM_mainGameState" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_mainGameState" Comment="" />
         </sys:Item>
         <sys:Item Key="120">
-          <Value exs:type="ns1:Label" Name="RAM_frameCounter_effectiv" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_frameCounter_effectiv" Comment="" />
         </sys:Item>
         <sys:Item Key="122">
-          <Value exs:type="ns1:Label" Name="RAM_SFX_Ptr_Repeat" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_SFX_Ptr_Repeat" Comment="" />
         </sys:Item>
         <sys:Item Key="124">
-          <Value exs:type="ns1:Label" Name="RAM_simon_Lifes" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simon_Lifes" Comment="" />
         </sys:Item>
         <sys:Item Key="126">
-          <Value exs:type="ns1:Label" Name="RAM_simon_PointsTillExtraLife" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simon_PointsTillExtraLife" Comment="" />
         </sys:Item>
         <sys:Item Key="128">
-          <Value exs:type="ns1:Label" Name="RAM_simon_ForceGroundBehavier" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simon_ForceGroundBehavier" Comment="" />
         </sys:Item>
         <sys:Item Key="130">
-          <Value exs:type="ns1:Label" Name="RAM_level_type" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_level_type" Comment="" />
         </sys:Item>
         <sys:Item Key="132">
-          <Value exs:type="ns1:Label" Name="RAM_simon_DamageDeBuff" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simon_DamageDeBuff" Comment="" />
         </sys:Item>
         <sys:Item Key="134">
-          <Value exs:type="ns1:Label" Name="RAM_currentLevel" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_currentLevel" Comment="" />
         </sys:Item>
         <sys:Item Key="136">
-          <Value exs:type="ns1:Label" Name="RAM_setSecondQuest" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_setSecondQuest" Comment="" />
         </sys:Item>
         <sys:Item Key="140">
-          <Value exs:type="ns1:Label" Name="RAM_disableHUDupdate" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_disableHUDupdate" Comment="" />
         </sys:Item>
         <sys:Item Key="142">
-          <Value exs:type="ns1:Label" Name="RAM_simon_subWeapon" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simon_subWeapon" Comment="" />
         </sys:Item>
         <sys:Item Key="144">
-          <Value exs:type="ns1:Label" Name="RAM_simon_multiShot" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simon_multiShot" Comment="" />
         </sys:Item>
         <sys:Item Key="146">
-          <Value exs:type="ns1:Label" Name="RAM_simon_whipType" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simon_whipType" Comment="" />
         </sys:Item>
         <sys:Item Key="148">
-          <Value exs:type="ns1:Label" Name="RAM_pointerEventTracker01" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_pointerEventTracker01" Comment="" />
         </sys:Item>
         <sys:Item Key="150">
-          <Value exs:type="ns1:Label" Name="RAM_pointerEventTracker02" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_pointerEventTracker02" Comment="" />
         </sys:Item>
         <sys:Item Key="152">
-          <Value exs:type="ns1:Label" Name="RAM_camBuffer_80_eventSpawn" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_camBuffer_80_eventSpawn" Comment="" />
         </sys:Item>
         <sys:Item Key="154">
-          <Value exs:type="ns1:Label" Name="RAM_eventSpawnDirection" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_eventSpawnDirection" Comment="" />
         </sys:Item>
         <sys:Item Key="156">
-          <Value exs:type="ns1:Label" Name="RAM_spritePrioManip" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_spritePrioManip" Comment="" />
         </sys:Item>
         <sys:Item Key="160">
-          <Value exs:type="ns1:Label" Name="RAM_camLockLeft" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_camLockLeft" Comment="" />
         </sys:Item>
         <sys:Item Key="162">
-          <Value exs:type="ns1:Label" Name="RAM_camLockRight" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_camLockRight" Comment="" />
         </sys:Item>
         <sys:Item Key="164">
-          <Value exs:type="ns1:Label" Name="RAM_camLockTop" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_camLockTop" Comment="" />
         </sys:Item>
         <sys:Item Key="166">
-          <Value exs:type="ns1:Label" Name="RAM_camLockBottom" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_camLockBottom" Comment="" />
         </sys:Item>
         <sys:Item Key="168">
-          <Value exs:type="ns1:Label" Name="RAM_BG1_XposScrollSpeed" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_BG1_XposScrollSpeed" Comment="" />
         </sys:Item>
         <sys:Item Key="170">
-          <Value exs:type="ns1:Label" Name="RAM_BG1_YposScrollSpeed" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_BG1_YposScrollSpeed" Comment="" />
         </sys:Item>
         <sys:Item Key="172">
-          <Value exs:type="ns1:Label" Name="RAM_WhipCancleTimer" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_WhipCancleTimer" Comment="" />
         </sys:Item>
         <sys:Item Key="174">
-          <Value exs:type="ns1:Label" Name="RAM_IndexSpecialLevelBehavier" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_IndexSpecialLevelBehavier" Comment="" />
         </sys:Item>
         <sys:Item Key="180">
-          <Value exs:type="ns1:Label" Name="RAM_Cam_yPosTob" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_Cam_yPosTob" Comment="" />
         </sys:Item>
         <sys:Item Key="182">
-          <Value exs:type="ns1:Label" Name="RAM_FlagAllowOutOfBounce" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_FlagAllowOutOfBounce" Comment="" />
         </sys:Item>
         <sys:Item Key="184">
-          <Value exs:type="ns1:Label" Name="RAM_FlagBossFight" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_FlagBossFight" Comment="" />
         </sys:Item>
         <sys:Item Key="186">
-          <Value exs:type="ns1:Label" Name="RAM_SubweaponCancleTimer" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_SubweaponCancleTimer" Comment="" />
         </sys:Item>
         <sys:Item Key="188">
-          <Value exs:type="ns1:Label" Name="RAM_simon_invulnerable_counter" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simon_invulnerable_counter" Comment="" />
         </sys:Item>
         <sys:Item Key="190">
-          <Value exs:type="ns1:Label" Name="RAM_buttonMapJump" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_buttonMapJump" Comment="" />
         </sys:Item>
         <sys:Item Key="192">
-          <Value exs:type="ns1:Label" Name="RAM_buttonMapWhip" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_buttonMapWhip" Comment="" />
         </sys:Item>
         <sys:Item Key="194">
-          <Value exs:type="ns1:Label" Name="RAM_buttonMapSubWep" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_buttonMapSubWep" Comment="" />
         </sys:Item>
         <sys:Item Key="200">
-          <Value exs:type="ns1:Label" Name="RAM_collusionDataPointer" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_collusionDataPointer" Comment="" />
         </sys:Item>
         <sys:Item Key="202">
-          <Value exs:type="ns1:Label" Name="RAM_collusionDataPointerBank" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_collusionDataPointerBank" Comment="" />
         </sys:Item>
         <sys:Item Key="204">
-          <Value exs:type="ns1:Label" Name="RAM_collusion_01" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_collusion_01" Comment="" />
         </sys:Item>
         <sys:Item Key="206">
-          <Value exs:type="ns1:Label" Name="RAM_collusion_02" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_collusion_02" Comment="" />
         </sys:Item>
         <sys:Item Key="208">
-          <Value exs:type="ns1:Label" Name="RAM_collusion_03" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_collusion_03" Comment="" />
         </sys:Item>
         <sys:Item Key="210">
-          <Value exs:type="ns1:Label" Name="RAM_collusion_04" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_collusion_04" Comment="" />
         </sys:Item>
         <sys:Item Key="212">
-          <Value exs:type="ns1:Label" Name="RAM_collusion_05" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_collusion_05" Comment="" />
         </sys:Item>
         <sys:Item Key="214">
-          <Value exs:type="ns1:Label" Name="RAM_collusion_06" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_collusion_06" Comment="" />
         </sys:Item>
         <sys:Item Key="216">
-          <Value exs:type="ns1:Label" Name="RAM_collusion_07" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_collusion_07" Comment="" />
         </sys:Item>
         <sys:Item Key="218">
-          <Value exs:type="ns1:Label" Name="RAM_collusion_08" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_collusion_08" Comment="" />
         </sys:Item>
         <sys:Item Key="220">
-          <Value exs:type="ns1:Label" Name="RAM_collusion_09" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_collusion_09" Comment="" />
         </sys:Item>
         <sys:Item Key="222">
-          <Value exs:type="ns1:Label" Name="RAM_collusion_0a" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_collusion_0a" Comment="" />
         </sys:Item>
         <sys:Item Key="224">
-          <Value exs:type="ns1:Label" Name="RAM_collusion_0b" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_collusion_0b" Comment="" />
         </sys:Item>
         <sys:Item Key="226">
-          <Value exs:type="ns1:Label" Name="RAM_collusion_0c" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_collusion_0c" Comment="" />
         </sys:Item>
         <sys:Item Key="228">
-          <Value exs:type="ns1:Label" Name="RAM_collusion_0d" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_collusion_0d" Comment="" />
         </sys:Item>
         <sys:Item Key="230">
-          <Value exs:type="ns1:Label" Name="RAM_RNG_1" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_RNG_1" Comment="" />
         </sys:Item>
         <sys:Item Key="232">
-          <Value exs:type="ns1:Label" Name="RAM_RNG_2" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_RNG_2" Comment="" />
         </sys:Item>
         <sys:Item Key="234">
-          <Value exs:type="ns1:Label" Name="RAM_RNG_3" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_RNG_3" Comment="" />
         </sys:Item>
         <sys:Item Key="240">
-          <Value exs:type="ns1:Label" Name="RAM_HUD_RenderFlag" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_HUD_RenderFlag" Comment="" />
         </sys:Item>
         <sys:Item Key="244">
-          <Value exs:type="ns1:Label" Name="RAM_free00cleared" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_free00cleared" Comment="" />
         </sys:Item>
         <sys:Item Key="246">
-          <Value exs:type="ns1:Label" Name="RAM_gameOverStuffs" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_gameOverStuffs" Comment="" />
         </sys:Item>
         <sys:Item Key="248">
-          <Value exs:type="ns1:Label" Name="RAM_free01cleared" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_free01cleared" Comment="" />
         </sys:Item>
         <sys:Item Key="250">
-          <Value exs:type="ns1:Label" Name="RAM_free02cleared" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_free02cleared" Comment="" />
         </sys:Item>
         <sys:Item Key="252">
-          <Value exs:type="ns1:Label" Name="RAM_XregSlotCurrent" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_XregSlotCurrent" Comment="" />
         </sys:Item>
         <sys:Item Key="254">
-          <Value exs:type="ns1:Label" Name="RAM_currentEventROM" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_currentEventROM" Comment="" />
         </sys:Item>
         <sys:Item Key="256">
-          <Value exs:type="ns1:Label" Name="RAM_SFX_Buffer100ByteLong" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_SFX_Buffer100ByteLong" Comment="" />
         </sys:Item>
         <sys:Item Key="512">
-          <Value exs:type="ns1:Label" Name="RAM_whipSlot00" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_whipSlot00" Comment="" />
         </sys:Item>
         <sys:Item Key="530">
-          <Value exs:type="ns1:Label" Name="RAM_whipState" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_whipState" Comment="" />
         </sys:Item>
         <sys:Item Key="558">
-          <Value exs:type="ns1:Label" Name="RAM_whipDisableMovement" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_whipDisableMovement" Comment="" />
         </sys:Item>
         <sys:Item Key="576">
-          <Value exs:type="ns1:Label" Name="RAM_whipSlot01" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_whipSlot01" Comment="" />
         </sys:Item>
         <sys:Item Key="640">
-          <Value exs:type="ns1:Label" Name="RAM_whipSlot02" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_whipSlot02" Comment="" />
         </sys:Item>
         <sys:Item Key="700">
-          <Value exs:type="ns1:Label" Name="RAM_SubWep_useTimer" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_SubWep_useTimer" Comment="" />
         </sys:Item>
         <sys:Item Key="704">
-          <Value exs:type="ns1:Label" Name="RAM_whipSlot03" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_whipSlot03" Comment="" />
         </sys:Item>
         <sys:Item Key="762">
-          <Value exs:type="ns1:Label" Name="RAM_SubWep_slotBackupInit" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_SubWep_slotBackupInit" Comment="" />
         </sys:Item>
         <sys:Item Key="768">
-          <Value exs:type="ns1:Label" Name="RAM_whipSlot04" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_whipSlot04" Comment="" />
         </sys:Item>
         <sys:Item Key="828">
-          <Value exs:type="ns1:Label" Name="RAM_whipLangthOnRing" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_whipLangthOnRing" Comment="" />
         </sys:Item>
         <sys:Item Key="832">
-          <Value exs:type="ns1:Label" Name="RAM_whipSlot05" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_whipSlot05" Comment="" />
         </sys:Item>
         <sys:Item Key="896">
-          <Value exs:type="ns1:Label" Name="RAM_whipSlot06" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_whipSlot06" Comment="" />
         </sys:Item>
         <sys:Item Key="960">
-          <Value exs:type="ns1:Label" Name="RAM_whipSlot07" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_whipSlot07" Comment="" />
         </sys:Item>
         <sys:Item Key="1024">
-          <Value exs:type="ns1:Label" Name="RAM_whipSlot08" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_whipSlot08" Comment="" />
         </sys:Item>
         <sys:Item Key="1088">
-          <Value exs:type="ns1:Label" Name="RAM_subWepSlot00" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_subWepSlot00" Comment="" />
         </sys:Item>
         <sys:Item Key="1152">
-          <Value exs:type="ns1:Label" Name="RAM_subWepSlot01" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_subWepSlot01" Comment="" />
         </sys:Item>
         <sys:Item Key="1216">
-          <Value exs:type="ns1:Label" Name="RAM_subWepSlot02" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_subWepSlot02" Comment="" />
         </sys:Item>
         <sys:Item Key="1280">
-          <Value exs:type="ns1:Label" Name="RAM_sparkSlot" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_sparkSlot" Comment="" />
         </sys:Item>
         <sys:Item Key="1344">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_00" Comment="" />
         </sys:Item>
         <sys:Item Key="1346">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_spritePriority" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_02_spritePriority" Comment="" />
         </sys:Item>
         <sys:Item Key="1348">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_spriteAttributeFlipMirror" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_04_spriteAttributeFlipMirror" Comment="" />
         </sys:Item>
         <sys:Item Key="1350">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_empty00" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_06_empty00" Comment="" />
         </sys:Item>
         <sys:Item Key="1352">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_subXpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_08_xPosSub" Comment="" />
         </sys:Item>
         <sys:Item Key="1354">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_Xpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_0a_xPos" Comment="" />
         </sys:Item>
         <sys:Item Key="1356">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_subYpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_0c_yPosSub" Comment="" />
         </sys:Item>
         <sys:Item Key="1358">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_Ypos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_0e_yPos" Comment="" />
         </sys:Item>
         <sys:Item Key="1360">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_empty01" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_10_empty01" Comment="" />
         </sys:Item>
         <sys:Item Key="1362">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_State" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_12_State" Comment="" />
         </sys:Item>
         <sys:Item Key="1364">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_empty02" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_14_empty02" Comment="" />
         </sys:Item>
         <sys:Item Key="1366">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_StateBackUp" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_16_StateBackUp" Comment="" />
         </sys:Item>
         <sys:Item Key="1368">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_SpeedSubXpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_18_xSpdSub" Comment="" />
         </sys:Item>
         <sys:Item Key="1370">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_SpeedXpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_1a_xSpd" Comment="" />
         </sys:Item>
         <sys:Item Key="1372">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_SpeedSubYpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_1c_ySpdSub" Comment="" />
         </sys:Item>
         <sys:Item Key="1374">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_SpeedYpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_1e_ySpd" Comment="" />
         </sys:Item>
         <sys:Item Key="1376">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_AnimationCounter" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_20_AnimationCounter" Comment="" />
         </sys:Item>
         <sys:Item Key="1378">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_SubAnimationCounter" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_22_SubAnimationCounter" Comment="" />
         </sys:Item>
         <sys:Item Key="1382">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_SpriteAttributeSub_Pallete" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_26_SpriteAttributeSub_Pallete" Comment="" />
         </sys:Item>
         <sys:Item Key="1388">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_Collusion_Donno00" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_2c_Collusion_Donno00" Comment="" />
         </sys:Item>
         <sys:Item Key="1390">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_forceCrouchFrameCounter" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_2e_forceCrouchFrameCounter" Comment="" />
         </sys:Item>
         <sys:Item Key="1396">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_RingSpeed" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_34_RingSpeed" Comment="" />
         </sys:Item>
         <sys:Item Key="1398">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_Collusion_Donno01" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_36_Collusion_Donno01" Comment="" />
         </sys:Item>
         <sys:Item Key="1400">
-          <Value exs:type="ns1:Label" Name="RAM_simonSlot_direction" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_player_38_direction" Comment="" />
         </sys:Item>
         <sys:Item Key="1408">
-          <Value exs:type="ns1:Label" Name="RAM_eventSlot_Base" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_eventSlot_Base" Comment="" />
         </sys:Item>
         <sys:Item Key="3840">
-          <Value exs:type="ns1:Label" Name="RAM_OAM_Page" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_OAM_Page" Comment="" />
         </sys:Item>
         <sys:Item Key="4384">
-          <Value exs:type="ns1:Label" Name="RAM_FreeRamPage_E0_byte_not_cleard" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_FreeRamPage_E0_byte_not_cleard" Comment="" />
         </sys:Item>
         <sys:Item Key="4608">
-          <Value exs:type="ns1:Label" Name="RAM_channel_W_0_paletteAnimation" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_channel_W_0_paletteAnimation" Comment="" />
         </sys:Item>
         <sys:Item Key="4624">
-          <Value exs:type="ns1:Label" Name="RAM_channel_W_1_paletteAnimation" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_channel_W_1_paletteAnimation" Comment="" />
         </sys:Item>
         <sys:Item Key="4640">
-          <Value exs:type="ns1:Label" Name="RAM_channel_W_2_paletteAnimation" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_channel_W_2_paletteAnimation" Comment="" />
         </sys:Item>
         <sys:Item Key="4656">
-          <Value exs:type="ns1:Label" Name="RAM_channel_W_3_paletteAnimation" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_channel_W_3_paletteAnimation" Comment="" />
         </sys:Item>
         <sys:Item Key="4672">
-          <Value exs:type="ns1:Label" Name="RAM_channel_W_4_paletteAnimation" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_channel_W_4_paletteAnimation" Comment="" />
         </sys:Item>
         <sys:Item Key="4688">
-          <Value exs:type="ns1:Label" Name="RAM_channel_W_5_paletteAnimation" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_channel_W_5_paletteAnimation" Comment="" />
         </sys:Item>
         <sys:Item Key="4704">
-          <Value exs:type="ns1:Label" Name="RAM_channel_W_6_paletteAnimation" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_channel_W_6_paletteAnimation" Comment="" />
         </sys:Item>
         <sys:Item Key="4720">
-          <Value exs:type="ns1:Label" Name="RAM_channel_W_7_paletteAnimation" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_channel_W_7_paletteAnimation" Comment="" />
         </sys:Item>
         <sys:Item Key="4736">
-          <Value exs:type="ns1:Label" Name="RAM_BG1_ScrollingSlot" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_BG1_ScrollingSlot" Comment="" />
         </sys:Item>
         <sys:Item Key="4800">
-          <Value exs:type="ns1:Label" Name="RAM_BG2_ScrollingSlot" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_BG2_ScrollingSlot" Comment="" />
         </sys:Item>
         <sys:Item Key="4864">
-          <Value exs:type="ns1:Label" Name="RAM_BG3_ScrollingSlot" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_BG3_ScrollingSlot" Comment="" />
         </sys:Item>
         <sys:Item Key="5024">
-          <Value exs:type="ns1:Label" Name="RAM_enemieIDSlotAssignPPUTable" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_enemieIDSlotAssignPPUTable" Comment="" />
         </sys:Item>
         <sys:Item Key="5056">
-          <Value exs:type="ns1:Label" Name="RAM_counter2StopPlayerMovement" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_counter2StopPlayerMovement" Comment="" />
         </sys:Item>
         <sys:Item Key="5072">
-          <Value exs:type="ns1:Label" Name="RAM_ScrollBG1SyncSpeed" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ScrollBG1SyncSpeed" Comment="" />
         </sys:Item>
         <sys:Item Key="5074">
-          <Value exs:type="ns1:Label" Name="RAM_ScrollBG3SyncSpeed" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ScrollBG3SyncSpeed" Comment="" />
         </sys:Item>
         <sys:Item Key="5076">
-          <Value exs:type="ns1:Label" Name="RAM_deathEntrance" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_deathEntrance" Comment="" />
         </sys:Item>
         <sys:Item Key="5084">
-          <Value exs:type="ns1:Label" Name="RAM_ringPlatformTracking" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_ringPlatformTracking" Comment="" />
         </sys:Item>
         <sys:Item Key="5086">
-          <Value exs:type="ns1:Label" Name="RAM_OAM_BaseYpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_OAM_BaseYpos" Comment="" />
         </sys:Item>
         <sys:Item Key="5090">
-          <Value exs:type="ns1:Label" Name="RAM_currentMusicTrack" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_currentMusicTrack" Comment="" />
         </sys:Item>
         <sys:Item Key="5100">
-          <Value exs:type="ns1:Label" Name="RAM_simonStat_whipUpgradDropFlag" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonStat_whipUpgradDropFlag" Comment="" />
         </sys:Item>
         <sys:Item Key="5104">
-          <Value exs:type="ns1:Label" Name="RAM_simonStat_Timer" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonStat_Timer" Comment="" />
         </sys:Item>
         <sys:Item Key="5106">
-          <Value exs:type="ns1:Label" Name="RAM_simonStat_Hearts" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonStat_Hearts" Comment="" />
         </sys:Item>
         <sys:Item Key="5108">
-          <Value exs:type="ns1:Label" Name="RAM_simonStat_Health_HUD" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonStat_Health_HUD" Comment="" />
         </sys:Item>
         <sys:Item Key="5110">
-          <Value exs:type="ns1:Label" Name="RAM_boss_Health_HUD" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_boss_Health_HUD" Comment="" />
         </sys:Item>
         <sys:Item Key="5114">
-          <Value exs:type="ns1:Label" Name="RAM_simonStat_stopWatchTimer" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonStat_stopWatchTimer" Comment="" />
         </sys:Item>
         <sys:Item Key="5120">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1400_R1" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_1400_R1" Comment="" />
         </sys:Item>
         <sys:Item Key="5122">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1402_R2" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_1402_R2" Comment="" />
         </sys:Item>
         <sys:Item Key="5124">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1404_R3" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_1404_R3" Comment="" />
         </sys:Item>
         <sys:Item Key="5126">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1406_R4" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_1406_R4" Comment="" />
         </sys:Item>
         <sys:Item Key="5128">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1408_R5" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_1408_R5" Comment="" />
         </sys:Item>
         <sys:Item Key="5130">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_140A_R6" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_140A_R6" Comment="" />
         </sys:Item>
         <sys:Item Key="5132">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_140C_R7" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_140C_R7" Comment="" />
         </sys:Item>
         <sys:Item Key="5134">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_140E_R8" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_140E_R8" Comment="" />
         </sys:Item>
         <sys:Item Key="5136">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1410_L1" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_1410_L1" Comment="" />
         </sys:Item>
         <sys:Item Key="5138">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1412_L2" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_1412_L2" Comment="" />
         </sys:Item>
         <sys:Item Key="5140">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1414_L3" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_1414_L3" Comment="" />
         </sys:Item>
         <sys:Item Key="5142">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1416_L4" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_1416_L4" Comment="" />
         </sys:Item>
         <sys:Item Key="5144">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1418_L5" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_1418_L5" Comment="" />
         </sys:Item>
         <sys:Item Key="5146">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_141A_L6" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_141A_L6" Comment="" />
         </sys:Item>
         <sys:Item Key="5148">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_141C_L7" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_141C_L7" Comment="" />
         </sys:Item>
         <sys:Item Key="5150">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_141E_L8" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_141E_L8" Comment="" />
         </sys:Item>
         <sys:Item Key="5152">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1420_M1_head" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_1420_M1_head" Comment="" />
         </sys:Item>
         <sys:Item Key="5154">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1422_M2_sholder" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_1422_M2_sholder" Comment="" />
         </sys:Item>
         <sys:Item Key="5156">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1424_M3_chest" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_1424_M3_chest" Comment="" />
         </sys:Item>
         <sys:Item Key="5158">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1426_M4_waste" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_1426_M4_waste" Comment="" />
         </sys:Item>
         <sys:Item Key="5160">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1428_M5_leg" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_1428_M5_leg" Comment="" />
         </sys:Item>
         <sys:Item Key="5162">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_142A_M6_knee" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_142A_M6_knee" Comment="" />
         </sys:Item>
         <sys:Item Key="5164">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_142C_M7_foot" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_142C_M7_foot" Comment="" />
         </sys:Item>
         <sys:Item Key="5166">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_142E_M8_ground" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_142E_M8_ground" Comment="" />
         </sys:Item>
         <sys:Item Key="5168">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1430_first_R" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_1430_first_R" Comment="" />
         </sys:Item>
         <sys:Item Key="5170">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1432_first_L" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_1432_first_L" Comment="" />
         </sys:Item>
         <sys:Item Key="5172">
-          <Value exs:type="ns1:Label" Name="RAM_simonCollusionByte_1434_first_M" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonCollusionByte_1434_first_M" Comment="" />
         </sys:Item>
         <sys:Item Key="5248">
-          <Value exs:type="ns1:Label" Name="RAM_channel_DMA_0" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_channel_DMA_0" Comment="" />
         </sys:Item>
         <sys:Item Key="5264">
-          <Value exs:type="ns1:Label" Name="RAM_channel_DMA_1" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_channel_DMA_1" Comment="" />
         </sys:Item>
         <sys:Item Key="5280">
-          <Value exs:type="ns1:Label" Name="RAM_channel_DMA_2" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_channel_DMA_2" Comment="" />
         </sys:Item>
         <sys:Item Key="5296">
-          <Value exs:type="ns1:Label" Name="RAM_channel_DMA_3" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_channel_DMA_3" Comment="" />
         </sys:Item>
         <sys:Item Key="5312">
-          <Value exs:type="ns1:Label" Name="RAM_channel_DMA_4" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_channel_DMA_4" Comment="" />
         </sys:Item>
         <sys:Item Key="5328">
-          <Value exs:type="ns1:Label" Name="RAM_channel_DMA_5" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_channel_DMA_5" Comment="" />
         </sys:Item>
         <sys:Item Key="5344">
-          <Value exs:type="ns1:Label" Name="RAM_channel_DMA_6" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_channel_DMA_6" Comment="" />
         </sys:Item>
         <sys:Item Key="5360">
-          <Value exs:type="ns1:Label" Name="RAM_channel_DMA_7" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_channel_DMA_7" Comment="" />
         </sys:Item>
         <sys:Item Key="5376">
-          <Value exs:type="ns1:Label" Name="RAM_masktTable_respawnEvents" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_masktTable_respawnEvents" Comment="" />
         </sys:Item>
         <sys:Item Key="5634">
-          <Value exs:type="ns1:Label" Name="RAM_secretStage6_Floor_Flag" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_secretStage6_Floor_Flag" Comment="" />
         </sys:Item>
         <sys:Item Key="5636">
-          <Value exs:type="ns1:Label" Name="RAM_secret_Flag" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_secret_Flag" Comment="" />
         </sys:Item>
         <sys:Item Key="6592">
-          <Value exs:type="ns1:Label" Name="RAM_breakableWall_Flags" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_breakableWall_Flags" Comment="" />
         </sys:Item>
         <sys:Item Key="6656">
-          <Value exs:type="ns1:Label" Name="RAM_loadingStuff_00" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_loadingStuff_00" Comment="" />
         </sys:Item>
         <sys:Item Key="6720">
-          <Value exs:type="ns1:Label" Name="RAM_loadingStuff_01" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_loadingStuff_01" Comment="" />
         </sys:Item>
         <sys:Item Key="7168">
-          <Value exs:type="ns1:Label" Name="RAM_state_Map_Scene" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_state_Map_Scene" Comment="" />
         </sys:Item>
         <sys:Item Key="7682">
-          <Value exs:type="ns1:Label" Name="RAM_titleScreen_menuSelect" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_titleScreen_menuSelect" Comment="" />
         </sys:Item>
         <sys:Item Key="7690">
-          <Value exs:type="ns1:Label" Name="RAM_characterString_Castlevania4" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_characterString_Castlevania4" Comment="" />
         </sys:Item>
         <sys:Item Key="7702">
-          <Value exs:type="ns1:Label" Name="RAM_monoSound_flag" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_monoSound_flag" Comment="" />
         </sys:Item>
         <sys:Item Key="7704">
-          <Value exs:type="ns1:Label" Name="RAM_freeSpaceTill_1e7f_exeptOptionsMenu" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_freeSpaceTill_1e7f_exeptOptionsMenu" Comment="" />
         </sys:Item>
         <sys:Item Key="7726">
-          <Value exs:type="ns1:Label" Name="RAM_freeSpaceTill_1e7f" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_freeSpaceTill_1e7f" Comment="" />
         </sys:Item>
         <sys:Item Key="7808">
-          <Value exs:type="ns1:Label" Name="RAM_blackFade" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_blackFade" Comment="" />
         </sys:Item>
         <sys:Item Key="7810">
-          <Value exs:type="ns1:Label" Name="RAM_FlagNMI_81" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_FlagNMI_81" Comment="" />
         </sys:Item>
         <sys:Item Key="7812">
-          <Value exs:type="ns1:Label" Name="RAM_PPU_Mode" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_PPU_Mode" Comment="" />
         </sys:Item>
         <sys:Item Key="7814">
-          <Value exs:type="ns1:Label" Name="RAM_sprite_size_mode" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_sprite_size_mode" Comment="" />
         </sys:Item>
         <sys:Item Key="7818">
-          <Value exs:type="ns1:Label" Name="RAM_mosaicEffect_Value_BG" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_mosaicEffect_Value_BG" Comment="" />
         </sys:Item>
         <sys:Item Key="7838">
-          <Value exs:type="ns1:Label" Name="RAM_MOD7_X_stretch_A" Comment="&#x9;" />
+          <Value exs:type="ns1:Label" Name="r_MOD7_X_stretch_A" Comment="&#x9;" />
         </sys:Item>
         <sys:Item Key="7840">
-          <Value exs:type="ns1:Label" Name="RAM_MOD7_shear_B" Comment="&#x9;" />
+          <Value exs:type="ns1:Label" Name="r_MOD7_shear_B" Comment="&#x9;" />
         </sys:Item>
         <sys:Item Key="7842">
-          <Value exs:type="ns1:Label" Name="RAM_MOD7_shear_C" Comment="&#x9;&#x9;" />
+          <Value exs:type="ns1:Label" Name="r_MOD7_shear_C" Comment="&#x9;&#x9;" />
         </sys:Item>
         <sys:Item Key="7844">
-          <Value exs:type="ns1:Label" Name="RAM_MOD7_Y_Stretch_D" Comment=" &#x9;" />
+          <Value exs:type="ns1:Label" Name="r_MOD7_Y_Stretch_D" Comment=" &#x9;" />
         </sys:Item>
         <sys:Item Key="7846">
-          <Value exs:type="ns1:Label" Name="RAM_MOD7_scrollXpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_MOD7_scrollXpos" Comment="" />
         </sys:Item>
         <sys:Item Key="7848">
-          <Value exs:type="ns1:Label" Name="RAM_MOD7_scrollYpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_MOD7_scrollYpos" Comment="" />
         </sys:Item>
         <sys:Item Key="7850">
-          <Value exs:type="ns1:Label" Name="RAM_MOD7_x" Comment="&#x9;" />
+          <Value exs:type="ns1:Label" Name="r_MOD7_x" Comment="&#x9;" />
         </sys:Item>
         <sys:Item Key="7852">
-          <Value exs:type="ns1:Label" Name="RAM_MOD7_xx" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_MOD7_xx" Comment="" />
         </sys:Item>
         <sys:Item Key="8000">
-          <Value exs:type="ns1:Label" Name="RAM_scoreLow" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_scoreLow" Comment="" />
         </sys:Item>
         <sys:Item Key="8002">
-          <Value exs:type="ns1:Label" Name="RAM_scoreHigh" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_scoreHigh" Comment="" />
         </sys:Item>
         <sys:Item Key="8068">
-          <Value exs:type="ns1:Label" Name="RAM_fatalHitFlag" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_fatalHitFlag" Comment="" />
         </sys:Item>
         <sys:Item Key="8070">
-          <Value exs:type="ns1:Label" Name="RAM_simon_Jump_State" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simon_Jump_State" Comment="" />
         </sys:Item>
         <sys:Item Key="8072">
-          <Value exs:type="ns1:Label" Name="RAM_simon_Mud_State" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simon_Mud_State" Comment="" />
         </sys:Item>
         <sys:Item Key="8074">
-          <Value exs:type="ns1:Label" Name="RAM_simonStat_direction" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonStat_direction" Comment="" />
         </sys:Item>
         <sys:Item Key="8076">
-          <Value exs:type="ns1:Label" Name="RAM_simon_Ypos_Current" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simon_Ypos_Current" Comment="" />
         </sys:Item>
         <sys:Item Key="8082">
-          <Value exs:type="ns1:Label" Name="RAM_simon_Xpos_ColuR" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simon_Xpos_ColuR" Comment="" />
         </sys:Item>
         <sys:Item Key="8084">
-          <Value exs:type="ns1:Label" Name="RAM_simon_Xpos_ColuL" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simon_Xpos_ColuL" Comment="" />
         </sys:Item>
         <sys:Item Key="8088">
-          <Value exs:type="ns1:Label" Name="RAM_simon_Ypos_Colu_M" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simon_Ypos_Colu_M" Comment="" />
         </sys:Item>
         <sys:Item Key="8090">
-          <Value exs:type="ns1:Label" Name="RAM_simon_Ypos_Colu_H" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simon_Ypos_Colu_H" Comment="" />
         </sys:Item>
         <sys:Item Key="8092">
-          <Value exs:type="ns1:Label" Name="RAM_simon_Ypos_Colu_L" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simon_Ypos_Colu_L" Comment="" />
         </sys:Item>
         <sys:Item Key="8098">
-          <Value exs:type="ns1:Label" Name="RAM_simonStat_Stuck" Comment="" />
+          <Value exs:type="ns1:Label" Name="r_simonStat_Stuck" Comment="" />
         </sys:Item>
         <sys:Item Key="8448">
           <Value exs:type="ns1:Label" Name="SNES_INIDISP" Comment="" />
@@ -3156,742 +3156,742 @@
           <Value exs:type="ns1:Label" Name="costumSC4ed_eventTrackerCandleReverse" Comment="" />
         </sys:Item>
         <sys:Item Key="8454144">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_sprite_assembly" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_00_sprite" Comment="" />
         </sys:Item>
         <sys:Item Key="8454146">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_attribute" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_02_pri_attri" Comment="" />
         </sys:Item>
         <sys:Item Key="8454148">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_flip_mirror_attribute" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_04_flip_mirror_attri" Comment="" />
         </sys:Item>
         <sys:Item Key="8454150">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_event_slot_health" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_06_health" Comment="" />
         </sys:Item>
         <sys:Item Key="8454152">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_xPosSub" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_08_xPosSub" Comment="" />
         </sys:Item>
         <sys:Item Key="8454154">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_xPos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_0a_xPos" Comment="" />
         </sys:Item>
         <sys:Item Key="8454156">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_yPosSub" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_0c_yPosSub" Comment="" />
         </sys:Item>
         <sys:Item Key="8454158">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_yPos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_0e_yPos" Comment="" />
         </sys:Item>
         <sys:Item Key="8454160">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_ID" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_10_ID" Comment="" />
         </sys:Item>
         <sys:Item Key="8454162">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_state" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_12_state" Comment="" />
         </sys:Item>
         <sys:Item Key="8454164">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_subId" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_14_subId" Comment="" />
         </sys:Item>
         <sys:Item Key="8454166">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_hitStueCounter" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_16_hitStunCount" Comment="" />
         </sys:Item>
         <sys:Item Key="8454168">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_xSpdSub" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_18_xSpdSub" Comment="" />
         </sys:Item>
         <sys:Item Key="8454170">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_xSpd" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_1a_xSpd" Comment="" />
         </sys:Item>
         <sys:Item Key="8454172">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_ySpdSub" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_1c_ySpdSub" Comment="" />
         </sys:Item>
         <sys:Item Key="8454174">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_ySpd" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_1e_ySpd" Comment="" />
         </sys:Item>
         <sys:Item Key="8454176">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_20" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_20" Comment="" />
         </sys:Item>
         <sys:Item Key="8454178">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_22" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_22" Comment="" />
         </sys:Item>
         <sys:Item Key="8454180">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_24" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_24" Comment="" />
         </sys:Item>
         <sys:Item Key="8454182">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_SpriteAdr" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_26_SpriteAdr" Comment="" />
         </sys:Item>
         <sys:Item Key="8454184">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_HitboxXpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_28_HitboxXpos" Comment="" />
         </sys:Item>
         <sys:Item Key="8454186">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_HitboxYpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_2a_HitboxYpos" Comment="" />
         </sys:Item>
         <sys:Item Key="8454188">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_Movement2c" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_2c_Movement2c" Comment="" />
         </sys:Item>
         <sys:Item Key="8454190">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_HitboxID" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_2e_HitboxID" Comment="" />
         </sys:Item>
         <sys:Item Key="8454192">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_mask" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_30_mask" Comment="" />
         </sys:Item>
         <sys:Item Key="8454194">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_32" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_32" Comment="" />
         </sys:Item>
         <sys:Item Key="8454196">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_34" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_34" Comment="" />
         </sys:Item>
         <sys:Item Key="8454198">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_36" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_36" Comment="" />
         </sys:Item>
         <sys:Item Key="8454200">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_38" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_38" Comment="" />
         </sys:Item>
         <sys:Item Key="8454202">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_3a" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_3a" Comment="" />
         </sys:Item>
         <sys:Item Key="8454204">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_3c" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_3c" Comment="" />
         </sys:Item>
         <sys:Item Key="8454206">
-          <Value exs:type="ns1:Label" Name="RAM_81_X_event_slot_3e" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ev_3e" Comment="" />
         </sys:Item>
         <sys:Item Key="8454208">
-          <Value exs:type="ns1:Label" Name="RAM_81_whiteFadeCounter" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_whiteFadeCounter" Comment="" />
         </sys:Item>
         <sys:Item Key="8454210">
-          <Value exs:type="ns1:Label" Name="RAM_81_transpEffectBG" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_transpEffectBG" Comment="" />
         </sys:Item>
         <sys:Item Key="8454212">
-          <Value exs:type="ns1:Label" Name="RAM_81_transoEffectSprite" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_transoEffectSprite" Comment="" />
         </sys:Item>
         <sys:Item Key="8454214">
-          <Value exs:type="ns1:Label" Name="RAM_81_scrollAndMode7_setting" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_scrollAndMode7_setting" Comment="" />
         </sys:Item>
         <sys:Item Key="8454216">
-          <Value exs:type="ns1:Label" Name="RAM_81_pointerCG_WRAM" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_pointerCG_WRAM" Comment="" />
         </sys:Item>
         <sys:Item Key="8454220">
-          <Value exs:type="ns1:Label" Name="RAM_81_introScreenIndex" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_introScreenIndex" Comment="" />
         </sys:Item>
         <sys:Item Key="8454224">
-          <Value exs:type="ns1:Label" Name="RAM_81_VRAM_updateSize" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_VRAM_updateSize" Comment="" />
         </sys:Item>
         <sys:Item Key="8454228">
-          <Value exs:type="ns1:Label" Name="RAM_81_SFXReadLPtr_Set" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_SFXReadLPtr_Set" Comment="" />
         </sys:Item>
         <sys:Item Key="8454230">
-          <Value exs:type="ns1:Label" Name="RAM_81_SFXReadLPtr_Active" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_SFXReadLPtr_Active" Comment="" />
         </sys:Item>
         <sys:Item Key="8454246">
-          <Value exs:type="ns1:Label" Name="RAM_81_pauseFlag" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_pauseFlag" Comment="" />
         </sys:Item>
         <sys:Item Key="8454256">
-          <Value exs:type="ns1:Label" Name="RAM_81_mainGameState" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_mainGameState" Comment="" />
         </sys:Item>
         <sys:Item Key="8454264">
-          <Value exs:type="ns1:Label" Name="RAM_81_frameCounter_effectiv" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_frameCounter_effectiv" Comment="" />
         </sys:Item>
         <sys:Item Key="8454266">
-          <Value exs:type="ns1:Label" Name="RAM_81_SFX_Ptr_Repeat" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_SFX_Ptr_Repeat" Comment="" />
         </sys:Item>
         <sys:Item Key="8454268">
-          <Value exs:type="ns1:Label" Name="RAM_81_simon_Lifes" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simon_Lifes" Comment="" />
         </sys:Item>
         <sys:Item Key="8454270">
-          <Value exs:type="ns1:Label" Name="RAM_81_simon_PointsTillExtraLife" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simon_PointsTillExtraLife" Comment="" />
         </sys:Item>
         <sys:Item Key="8454272">
-          <Value exs:type="ns1:Label" Name="RAM_81_simon_ForceGroundBehavier" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simon_ForceGroundBehavier" Comment="" />
         </sys:Item>
         <sys:Item Key="8454274">
-          <Value exs:type="ns1:Label" Name="RAM_81_level_type" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_level_type" Comment="" />
         </sys:Item>
         <sys:Item Key="8454276">
-          <Value exs:type="ns1:Label" Name="RAM_81_simon_DamageDeBuff" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simon_DamageDeBuff" Comment="" />
         </sys:Item>
         <sys:Item Key="8454278">
-          <Value exs:type="ns1:Label" Name="RAM_81_currentLevel" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_currentLevel" Comment="" />
         </sys:Item>
         <sys:Item Key="8454280">
-          <Value exs:type="ns1:Label" Name="RAM_81_setSecondQuest" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_setSecondQuest" Comment="" />
         </sys:Item>
         <sys:Item Key="8454284">
-          <Value exs:type="ns1:Label" Name="RAM_81_disableHUDupdate" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_disableHUDupdate" Comment="" />
         </sys:Item>
         <sys:Item Key="8454286">
-          <Value exs:type="ns1:Label" Name="RAM_81_simon_subWeapon" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simon_subWeapon" Comment="" />
         </sys:Item>
         <sys:Item Key="8454288">
-          <Value exs:type="ns1:Label" Name="RAM_81_simon_multiShot" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simon_multiShot" Comment="" />
         </sys:Item>
         <sys:Item Key="8454290">
-          <Value exs:type="ns1:Label" Name="RAM_81_simon_whipType" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simon_whipType" Comment="" />
         </sys:Item>
         <sys:Item Key="8454292">
-          <Value exs:type="ns1:Label" Name="RAM_81_pointerEventTracker01" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_pointerEventTracker01" Comment="" />
         </sys:Item>
         <sys:Item Key="8454294">
-          <Value exs:type="ns1:Label" Name="RAM_81_pointerEventTracker02" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_pointerEventTracker02" Comment="" />
         </sys:Item>
         <sys:Item Key="8454296">
-          <Value exs:type="ns1:Label" Name="RAM_81_camBuffer_80_eventSpawn" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_camBuffer_80_eventSpawn" Comment="" />
         </sys:Item>
         <sys:Item Key="8454298">
-          <Value exs:type="ns1:Label" Name="RAM_81_eventSpawnDirection" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_eventSpawnDirection" Comment="" />
         </sys:Item>
         <sys:Item Key="8454300">
-          <Value exs:type="ns1:Label" Name="RAM_81_spritePrioManip" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_spritePrioManip" Comment="" />
         </sys:Item>
         <sys:Item Key="8454304">
-          <Value exs:type="ns1:Label" Name="RAM_81_camLockLeft" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_camLockLeft" Comment="" />
         </sys:Item>
         <sys:Item Key="8454306">
-          <Value exs:type="ns1:Label" Name="RAM_81_camLockRight" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_camLockRight" Comment="" />
         </sys:Item>
         <sys:Item Key="8454308">
-          <Value exs:type="ns1:Label" Name="RAM_81_camLockTop" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_camLockTop" Comment="" />
         </sys:Item>
         <sys:Item Key="8454310">
-          <Value exs:type="ns1:Label" Name="RAM_81_camLockBottom" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_camLockBottom" Comment="" />
         </sys:Item>
         <sys:Item Key="8454312">
-          <Value exs:type="ns1:Label" Name="RAM_81_BG1_XposScrollSpeed" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_BG1_XposScrollSpeed" Comment="" />
         </sys:Item>
         <sys:Item Key="8454314">
-          <Value exs:type="ns1:Label" Name="RAM_81_BG1_YposScrollSpeed" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_BG1_YposScrollSpeed" Comment="" />
         </sys:Item>
         <sys:Item Key="8454316">
-          <Value exs:type="ns1:Label" Name="RAM_81_WhipCancleTimer" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_WhipCancleTimer" Comment="" />
         </sys:Item>
         <sys:Item Key="8454318">
-          <Value exs:type="ns1:Label" Name="RAM_81_IndexSpecialLevelBehavier" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_IndexSpecialLevelBehavier" Comment="" />
         </sys:Item>
         <sys:Item Key="8454324">
-          <Value exs:type="ns1:Label" Name="RAM_81_Cam_yPosTob" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_Cam_yPosTob" Comment="" />
         </sys:Item>
         <sys:Item Key="8454326">
-          <Value exs:type="ns1:Label" Name="RAM_81_FlagAllowOutOfBounce" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_FlagAllowOutOfBounce" Comment="" />
         </sys:Item>
         <sys:Item Key="8454328">
-          <Value exs:type="ns1:Label" Name="RAM_81_FlagBossFight" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_FlagBossFight" Comment="" />
         </sys:Item>
         <sys:Item Key="8454330">
-          <Value exs:type="ns1:Label" Name="RAM_81_SubweaponCancleTimer" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_SubweaponCancleTimer" Comment="" />
         </sys:Item>
         <sys:Item Key="8454332">
-          <Value exs:type="ns1:Label" Name="RAM_81_simon_invulnerable_counter" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simon_invulnerable_counter" Comment="" />
         </sys:Item>
         <sys:Item Key="8454334">
-          <Value exs:type="ns1:Label" Name="RAM_81_buttonMapJump" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_buttonMapJump" Comment="" />
         </sys:Item>
         <sys:Item Key="8454336">
-          <Value exs:type="ns1:Label" Name="RAM_81_buttonMapWhip" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_buttonMapWhip" Comment="" />
         </sys:Item>
         <sys:Item Key="8454338">
-          <Value exs:type="ns1:Label" Name="RAM_81_buttonMapSubWep" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_buttonMapSubWep" Comment="" />
         </sys:Item>
         <sys:Item Key="8454344">
-          <Value exs:type="ns1:Label" Name="RAM_81_collusionDataPointer" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_collusionDataPointer" Comment="" />
         </sys:Item>
         <sys:Item Key="8454346">
-          <Value exs:type="ns1:Label" Name="RAM_81_collusionDataPointerBank" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_collusionDataPointerBank" Comment="" />
         </sys:Item>
         <sys:Item Key="8454348">
-          <Value exs:type="ns1:Label" Name="RAM_81_collusion_01" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_collusion_01" Comment="" />
         </sys:Item>
         <sys:Item Key="8454350">
-          <Value exs:type="ns1:Label" Name="RAM_81_collusion_02" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_collusion_02" Comment="" />
         </sys:Item>
         <sys:Item Key="8454352">
-          <Value exs:type="ns1:Label" Name="RAM_81_collusion_03" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_collusion_03" Comment="" />
         </sys:Item>
         <sys:Item Key="8454354">
-          <Value exs:type="ns1:Label" Name="RAM_81_collusion_04" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_collusion_04" Comment="" />
         </sys:Item>
         <sys:Item Key="8454356">
-          <Value exs:type="ns1:Label" Name="RAM_81_collusion_05" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_collusion_05" Comment="" />
         </sys:Item>
         <sys:Item Key="8454358">
-          <Value exs:type="ns1:Label" Name="RAM_81_collusion_06" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_collusion_06" Comment="" />
         </sys:Item>
         <sys:Item Key="8454360">
-          <Value exs:type="ns1:Label" Name="RAM_81_collusion_07" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_collusion_07" Comment="" />
         </sys:Item>
         <sys:Item Key="8454362">
-          <Value exs:type="ns1:Label" Name="RAM_81_collusion_08" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_collusion_08" Comment="" />
         </sys:Item>
         <sys:Item Key="8454364">
-          <Value exs:type="ns1:Label" Name="RAM_81_collusion_09" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_collusion_09" Comment="" />
         </sys:Item>
         <sys:Item Key="8454366">
-          <Value exs:type="ns1:Label" Name="RAM_81_collusion_0a" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_collusion_0a" Comment="" />
         </sys:Item>
         <sys:Item Key="8454368">
-          <Value exs:type="ns1:Label" Name="RAM_81_collusion_0b" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_collusion_0b" Comment="" />
         </sys:Item>
         <sys:Item Key="8454370">
-          <Value exs:type="ns1:Label" Name="RAM_81_collusion_0c" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_collusion_0c" Comment="" />
         </sys:Item>
         <sys:Item Key="8454372">
-          <Value exs:type="ns1:Label" Name="RAM_81_collusion_0d" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_collusion_0d" Comment="" />
         </sys:Item>
         <sys:Item Key="8454374">
-          <Value exs:type="ns1:Label" Name="RAM_81_RNG_1" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_RNG_1" Comment="" />
         </sys:Item>
         <sys:Item Key="8454376">
-          <Value exs:type="ns1:Label" Name="RAM_81_RNG_2" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_RNG_2" Comment="" />
         </sys:Item>
         <sys:Item Key="8454378">
-          <Value exs:type="ns1:Label" Name="RAM_81_RNG_3" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_RNG_3" Comment="" />
         </sys:Item>
         <sys:Item Key="8454384">
-          <Value exs:type="ns1:Label" Name="RAM_81_HUD_RenderFlag" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_HUD_RenderFlag" Comment="" />
         </sys:Item>
         <sys:Item Key="8454388">
-          <Value exs:type="ns1:Label" Name="RAM_81_free00cleared" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_free00cleared" Comment="" />
         </sys:Item>
         <sys:Item Key="8454390">
-          <Value exs:type="ns1:Label" Name="RAM_81_gameOverStuffs" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_gameOverStuffs" Comment="" />
         </sys:Item>
         <sys:Item Key="8454392">
-          <Value exs:type="ns1:Label" Name="RAM_81_free01cleared" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_free01cleared" Comment="" />
         </sys:Item>
         <sys:Item Key="8454394">
-          <Value exs:type="ns1:Label" Name="RAM_81_free02cleared" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_free02cleared" Comment="" />
         </sys:Item>
         <sys:Item Key="8454396">
-          <Value exs:type="ns1:Label" Name="RAM_81_XregSlotCurrent" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_XregSlotCurrent" Comment="" />
         </sys:Item>
         <sys:Item Key="8454398">
-          <Value exs:type="ns1:Label" Name="RAM_81_currentEventROM" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_currentEventROM" Comment="" />
         </sys:Item>
         <sys:Item Key="8454400">
-          <Value exs:type="ns1:Label" Name="RAM_81_SFX_Buffer100ByteLong" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_SFX_Buffer100ByteLong" Comment="" />
         </sys:Item>
         <sys:Item Key="8454656">
-          <Value exs:type="ns1:Label" Name="RAM_81_whipSlot00" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_whipSlot00" Comment="" />
         </sys:Item>
         <sys:Item Key="8454674">
-          <Value exs:type="ns1:Label" Name="RAM_81_whipState" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_whipState" Comment="" />
         </sys:Item>
         <sys:Item Key="8454702">
-          <Value exs:type="ns1:Label" Name="RAM_81_whipDisableMovement" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_whipDisableMovement" Comment="" />
         </sys:Item>
         <sys:Item Key="8454720">
-          <Value exs:type="ns1:Label" Name="RAM_81_whipSlot01" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_whipSlot01" Comment="" />
         </sys:Item>
         <sys:Item Key="8454784">
-          <Value exs:type="ns1:Label" Name="RAM_81_whipSlot02" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_whipSlot02" Comment="" />
         </sys:Item>
         <sys:Item Key="8454844">
-          <Value exs:type="ns1:Label" Name="RAM_81_SubWep_useTimer" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_SubWep_useTimer" Comment="" />
         </sys:Item>
         <sys:Item Key="8454848">
-          <Value exs:type="ns1:Label" Name="RAM_81_whipSlot03" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_whipSlot03" Comment="" />
         </sys:Item>
         <sys:Item Key="8454906">
-          <Value exs:type="ns1:Label" Name="RAM_81_SubWep_slotBackupInit" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_SubWep_slotBackupInit" Comment="" />
         </sys:Item>
         <sys:Item Key="8454912">
-          <Value exs:type="ns1:Label" Name="RAM_81_whipSlot04" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_whipSlot04" Comment="" />
         </sys:Item>
         <sys:Item Key="8454972">
-          <Value exs:type="ns1:Label" Name="RAM_81_whipLangthOnRing" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_whipLangthOnRing" Comment="" />
         </sys:Item>
         <sys:Item Key="8454976">
-          <Value exs:type="ns1:Label" Name="RAM_81_whipSlot05" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_whipSlot05" Comment="" />
         </sys:Item>
         <sys:Item Key="8455040">
-          <Value exs:type="ns1:Label" Name="RAM_81_whipSlot06" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_whipSlot06" Comment="" />
         </sys:Item>
         <sys:Item Key="8455104">
-          <Value exs:type="ns1:Label" Name="RAM_81_whipSlot07" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_whipSlot07" Comment="" />
         </sys:Item>
         <sys:Item Key="8455168">
-          <Value exs:type="ns1:Label" Name="RAM_81_whipSlot08" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_whipSlot08" Comment="" />
         </sys:Item>
         <sys:Item Key="8455232">
-          <Value exs:type="ns1:Label" Name="RAM_81_subWepSlot00" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_subWepSlot00" Comment="" />
         </sys:Item>
         <sys:Item Key="8455296">
-          <Value exs:type="ns1:Label" Name="RAM_81_subWepSlot01" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_subWepSlot01" Comment="" />
         </sys:Item>
         <sys:Item Key="8455360">
-          <Value exs:type="ns1:Label" Name="RAM_81_subWepSlot02" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_subWepSlot02" Comment="" />
         </sys:Item>
         <sys:Item Key="8455424">
-          <Value exs:type="ns1:Label" Name="RAM_81_sparkSlot" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_sparkSlot" Comment="" />
         </sys:Item>
         <sys:Item Key="8455488">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_00" Comment="" />
         </sys:Item>
         <sys:Item Key="8455490">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_spritePriority" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_02_spritePriority" Comment="" />
         </sys:Item>
         <sys:Item Key="8455492">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_spriteAttributeFlipMirror" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_04_spriteAttributeFlipMirror" Comment="" />
         </sys:Item>
         <sys:Item Key="8455494">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_empty00" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_06_empty00" Comment="" />
         </sys:Item>
         <sys:Item Key="8455496">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_subXpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_08_xPosSub" Comment="" />
         </sys:Item>
         <sys:Item Key="8455498">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_Xpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_0a_xPos" Comment="" />
         </sys:Item>
         <sys:Item Key="8455500">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_subYpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_0c_yPosSub" Comment="" />
         </sys:Item>
         <sys:Item Key="8455502">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_Ypos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_0e_yPos" Comment="" />
         </sys:Item>
         <sys:Item Key="8455504">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_empty01" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_10_empty01" Comment="" />
         </sys:Item>
         <sys:Item Key="8455506">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_State" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_12_State" Comment="" />
         </sys:Item>
         <sys:Item Key="8455508">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_empty02" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_14_empty02" Comment="" />
         </sys:Item>
         <sys:Item Key="8455510">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_StateBackUp" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_16_StateBackUp" Comment="" />
         </sys:Item>
         <sys:Item Key="8455512">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_SpeedSubXpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_18_xSpdSub" Comment="" />
         </sys:Item>
         <sys:Item Key="8455514">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_SpeedXpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_1a_xSpd" Comment="" />
         </sys:Item>
         <sys:Item Key="8455516">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_SpeedSubYpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_1c_ySpdSub" Comment="" />
         </sys:Item>
         <sys:Item Key="8455518">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_SpeedYpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_1e_ySpd" Comment="" />
         </sys:Item>
         <sys:Item Key="8455520">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_AnimationCounter" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_20_AnimationCounter" Comment="" />
         </sys:Item>
         <sys:Item Key="8455522">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_SubAnimationCounter" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_22_SubAnimationCounter" Comment="" />
         </sys:Item>
         <sys:Item Key="8455526">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_SpriteAttributeSub_Pallete" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_26_SpriteAttributeSub_Pallete" Comment="" />
         </sys:Item>
         <sys:Item Key="8455532">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_Collusion_Donno00" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_2c_Collusion_Donno00" Comment="" />
         </sys:Item>
         <sys:Item Key="8455534">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_forceCrouchFrameCounter" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_2e_forceCrouchFrameCounter" Comment="" />
         </sys:Item>
         <sys:Item Key="8455540">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_RingSpeed" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_34_RingSpeed" Comment="" />
         </sys:Item>
         <sys:Item Key="8455542">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_Collusion_Donno01" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_36_Collusion_Donno01" Comment="" />
         </sys:Item>
         <sys:Item Key="8455544">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonSlot_direction" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_player_38_direction" Comment="" />
         </sys:Item>
         <sys:Item Key="8455552">
-          <Value exs:type="ns1:Label" Name="RAM_81_eventSlot_Base" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_eventSlot_Base" Comment="" />
         </sys:Item>
         <sys:Item Key="8457984">
-          <Value exs:type="ns1:Label" Name="RAM_81_OAM_Page" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_OAM_Page" Comment="" />
         </sys:Item>
         <sys:Item Key="8458528">
-          <Value exs:type="ns1:Label" Name="RAM_81_FreeRamPage_E0_byte_not_cleard" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_FreeRamPage_E0_byte_not_cleard" Comment="" />
         </sys:Item>
         <sys:Item Key="8458752">
-          <Value exs:type="ns1:Label" Name="RAM_81_channel_W_0_paletteAnimation" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_channel_W_0_paletteAnimation" Comment="" />
         </sys:Item>
         <sys:Item Key="8458768">
-          <Value exs:type="ns1:Label" Name="RAM_81_channel_W_1_paletteAnimation" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_channel_W_1_paletteAnimation" Comment="" />
         </sys:Item>
         <sys:Item Key="8458784">
-          <Value exs:type="ns1:Label" Name="RAM_81_channel_W_2_paletteAnimation" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_channel_W_2_paletteAnimation" Comment="" />
         </sys:Item>
         <sys:Item Key="8458800">
-          <Value exs:type="ns1:Label" Name="RAM_81_channel_W_3_paletteAnimation" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_channel_W_3_paletteAnimation" Comment="" />
         </sys:Item>
         <sys:Item Key="8458816">
-          <Value exs:type="ns1:Label" Name="RAM_81_channel_W_4_paletteAnimation" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_channel_W_4_paletteAnimation" Comment="" />
         </sys:Item>
         <sys:Item Key="8458832">
-          <Value exs:type="ns1:Label" Name="RAM_81_channel_W_5_paletteAnimation" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_channel_W_5_paletteAnimation" Comment="" />
         </sys:Item>
         <sys:Item Key="8458848">
-          <Value exs:type="ns1:Label" Name="RAM_81_channel_W_6_paletteAnimation" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_channel_W_6_paletteAnimation" Comment="" />
         </sys:Item>
         <sys:Item Key="8458864">
-          <Value exs:type="ns1:Label" Name="RAM_81_channel_W_7_paletteAnimation" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_channel_W_7_paletteAnimation" Comment="" />
         </sys:Item>
         <sys:Item Key="8458880">
-          <Value exs:type="ns1:Label" Name="RAM_81_BG1_ScrollingSlot" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_BG1_ScrollingSlot" Comment="" />
         </sys:Item>
         <sys:Item Key="8458944">
-          <Value exs:type="ns1:Label" Name="RAM_81_BG2_ScrollingSlot" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_BG2_ScrollingSlot" Comment="" />
         </sys:Item>
         <sys:Item Key="8459008">
-          <Value exs:type="ns1:Label" Name="RAM_81_BG3_ScrollingSlot" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_BG3_ScrollingSlot" Comment="" />
         </sys:Item>
         <sys:Item Key="8459168">
-          <Value exs:type="ns1:Label" Name="RAM_81_enemieIDSlotAssignPPUTable" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_enemieIDSlotAssignPPUTable" Comment="" />
         </sys:Item>
         <sys:Item Key="8459200">
-          <Value exs:type="ns1:Label" Name="RAM_81_counter2StopPlayerMovement" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_counter2StopPlayerMovement" Comment="" />
         </sys:Item>
         <sys:Item Key="8459216">
-          <Value exs:type="ns1:Label" Name="RAM_81_ScrollBG1SyncSpeed" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ScrollBG1SyncSpeed" Comment="" />
         </sys:Item>
         <sys:Item Key="8459218">
-          <Value exs:type="ns1:Label" Name="RAM_81_ScrollBG3SyncSpeed" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ScrollBG3SyncSpeed" Comment="" />
         </sys:Item>
         <sys:Item Key="8459220">
-          <Value exs:type="ns1:Label" Name="RAM_81_deathEntrance" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_deathEntrance" Comment="" />
         </sys:Item>
         <sys:Item Key="8459228">
-          <Value exs:type="ns1:Label" Name="RAM_81_ringPlatformTracking" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_ringPlatformTracking" Comment="" />
         </sys:Item>
         <sys:Item Key="8459230">
-          <Value exs:type="ns1:Label" Name="RAM_81_OAM_BaseYpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_OAM_BaseYpos" Comment="" />
         </sys:Item>
         <sys:Item Key="8459234">
-          <Value exs:type="ns1:Label" Name="RAM_81_currentMusicTrack" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_currentMusicTrack" Comment="" />
         </sys:Item>
         <sys:Item Key="8459244">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonStat_whipUpgradDropFlag" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonStat_whipUpgradDropFlag" Comment="" />
         </sys:Item>
         <sys:Item Key="8459248">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonStat_Timer" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonStat_Timer" Comment="" />
         </sys:Item>
         <sys:Item Key="8459250">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonStat_Hearts" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonStat_Hearts" Comment="" />
         </sys:Item>
         <sys:Item Key="8459252">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonStat_Health_HUD" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonStat_Health_HUD" Comment="" />
         </sys:Item>
         <sys:Item Key="8459254">
-          <Value exs:type="ns1:Label" Name="RAM_81_boss_Health_HUD" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_boss_Health_HUD" Comment="" />
         </sys:Item>
         <sys:Item Key="8459258">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonStat_stopWatchTimer" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonStat_stopWatchTimer" Comment="" />
         </sys:Item>
         <sys:Item Key="8459264">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1400_R1" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_1400_R1" Comment="" />
         </sys:Item>
         <sys:Item Key="8459266">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1402_R2" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_1402_R2" Comment="" />
         </sys:Item>
         <sys:Item Key="8459268">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1404_R3" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_1404_R3" Comment="" />
         </sys:Item>
         <sys:Item Key="8459270">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1406_R4" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_1406_R4" Comment="" />
         </sys:Item>
         <sys:Item Key="8459272">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1408_R5" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_1408_R5" Comment="" />
         </sys:Item>
         <sys:Item Key="8459274">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_140A_R6" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_140A_R6" Comment="" />
         </sys:Item>
         <sys:Item Key="8459276">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_140C_R7" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_140C_R7" Comment="" />
         </sys:Item>
         <sys:Item Key="8459278">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_140E_R8" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_140E_R8" Comment="" />
         </sys:Item>
         <sys:Item Key="8459280">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1410_L1" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_1410_L1" Comment="" />
         </sys:Item>
         <sys:Item Key="8459282">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1412_L2" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_1412_L2" Comment="" />
         </sys:Item>
         <sys:Item Key="8459284">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1414_L3" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_1414_L3" Comment="" />
         </sys:Item>
         <sys:Item Key="8459286">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1416_L4" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_1416_L4" Comment="" />
         </sys:Item>
         <sys:Item Key="8459288">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1418_L5" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_1418_L5" Comment="" />
         </sys:Item>
         <sys:Item Key="8459290">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_141A_L6" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_141A_L6" Comment="" />
         </sys:Item>
         <sys:Item Key="8459292">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_141C_L7" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_141C_L7" Comment="" />
         </sys:Item>
         <sys:Item Key="8459294">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_141E_L8" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_141E_L8" Comment="" />
         </sys:Item>
         <sys:Item Key="8459296">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1420_M1_head" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_1420_M1_head" Comment="" />
         </sys:Item>
         <sys:Item Key="8459298">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1422_M2_sholder" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_1422_M2_sholder" Comment="" />
         </sys:Item>
         <sys:Item Key="8459300">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1424_M3_chest" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_1424_M3_chest" Comment="" />
         </sys:Item>
         <sys:Item Key="8459302">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1426_M4_waste" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_1426_M4_waste" Comment="" />
         </sys:Item>
         <sys:Item Key="8459304">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1428_M5_leg" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_1428_M5_leg" Comment="" />
         </sys:Item>
         <sys:Item Key="8459306">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_142A_M6_knee" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_142A_M6_knee" Comment="" />
         </sys:Item>
         <sys:Item Key="8459308">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_142C_M7_foot" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_142C_M7_foot" Comment="" />
         </sys:Item>
         <sys:Item Key="8459310">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_142E_M8_ground" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_142E_M8_ground" Comment="" />
         </sys:Item>
         <sys:Item Key="8459312">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1430_first_R" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_1430_first_R" Comment="" />
         </sys:Item>
         <sys:Item Key="8459314">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1432_first_L" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_1432_first_L" Comment="" />
         </sys:Item>
         <sys:Item Key="8459316">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonCollusionByte_1434_first_M" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonCollusionByte_1434_first_M" Comment="" />
         </sys:Item>
         <sys:Item Key="8459392">
-          <Value exs:type="ns1:Label" Name="RAM_81_channel_DMA_0" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_channel_DMA_0" Comment="" />
         </sys:Item>
         <sys:Item Key="8459408">
-          <Value exs:type="ns1:Label" Name="RAM_81_channel_DMA_1" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_channel_DMA_1" Comment="" />
         </sys:Item>
         <sys:Item Key="8459424">
-          <Value exs:type="ns1:Label" Name="RAM_81_channel_DMA_2" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_channel_DMA_2" Comment="" />
         </sys:Item>
         <sys:Item Key="8459440">
-          <Value exs:type="ns1:Label" Name="RAM_81_channel_DMA_3" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_channel_DMA_3" Comment="" />
         </sys:Item>
         <sys:Item Key="8459456">
-          <Value exs:type="ns1:Label" Name="RAM_81_channel_DMA_4" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_channel_DMA_4" Comment="" />
         </sys:Item>
         <sys:Item Key="8459472">
-          <Value exs:type="ns1:Label" Name="RAM_81_channel_DMA_5" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_channel_DMA_5" Comment="" />
         </sys:Item>
         <sys:Item Key="8459488">
-          <Value exs:type="ns1:Label" Name="RAM_81_channel_DMA_6" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_channel_DMA_6" Comment="" />
         </sys:Item>
         <sys:Item Key="8459504">
-          <Value exs:type="ns1:Label" Name="RAM_81_channel_DMA_7" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_channel_DMA_7" Comment="" />
         </sys:Item>
         <sys:Item Key="8459520">
-          <Value exs:type="ns1:Label" Name="RAM_81_masktTable_respawnEvents" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_masktTable_respawnEvents" Comment="" />
         </sys:Item>
         <sys:Item Key="8459778">
-          <Value exs:type="ns1:Label" Name="RAM_81_secretStage6_Floor_Flag" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_secretStage6_Floor_Flag" Comment="" />
         </sys:Item>
         <sys:Item Key="8459780">
-          <Value exs:type="ns1:Label" Name="RAM_81_secret_Flag" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_secret_Flag" Comment="" />
         </sys:Item>
         <sys:Item Key="8460736">
-          <Value exs:type="ns1:Label" Name="RAM_81_breakableWall_Flags" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_breakableWall_Flags" Comment="" />
         </sys:Item>
         <sys:Item Key="8460800">
-          <Value exs:type="ns1:Label" Name="RAM_81_loadingStuff_00" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_loadingStuff_00" Comment="" />
         </sys:Item>
         <sys:Item Key="8460864">
-          <Value exs:type="ns1:Label" Name="RAM_81_loadingStuff_01" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_loadingStuff_01" Comment="" />
         </sys:Item>
         <sys:Item Key="8461312">
-          <Value exs:type="ns1:Label" Name="RAM_81_state_Map_Scene" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_state_Map_Scene" Comment="" />
         </sys:Item>
         <sys:Item Key="8461826">
-          <Value exs:type="ns1:Label" Name="RAM_81_titleScreen_menuSelect" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_titleScreen_menuSelect" Comment="" />
         </sys:Item>
         <sys:Item Key="8461834">
-          <Value exs:type="ns1:Label" Name="RAM_81_characterString_Castlevania4" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_characterString_Castlevania4" Comment="" />
         </sys:Item>
         <sys:Item Key="8461846">
-          <Value exs:type="ns1:Label" Name="RAM_81_monoSound_flag" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_monoSound_flag" Comment="" />
         </sys:Item>
         <sys:Item Key="8461848">
-          <Value exs:type="ns1:Label" Name="RAM_81_freeSpaceTill_1e7f_exeptOptionsMenu" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_freeSpaceTill_1e7f_exeptOptionsMenu" Comment="" />
         </sys:Item>
         <sys:Item Key="8461870">
-          <Value exs:type="ns1:Label" Name="RAM_81_freeSpaceTill_1e7f" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_freeSpaceTill_1e7f" Comment="" />
         </sys:Item>
         <sys:Item Key="8461952">
-          <Value exs:type="ns1:Label" Name="RAM_81_blackFade" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_blackFade" Comment="" />
         </sys:Item>
         <sys:Item Key="8461954">
-          <Value exs:type="ns1:Label" Name="RAM_81_FlagNMI_81" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_FlagNMI_81" Comment="" />
         </sys:Item>
         <sys:Item Key="8461956">
-          <Value exs:type="ns1:Label" Name="RAM_81_PPU_Mode" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_PPU_Mode" Comment="" />
         </sys:Item>
         <sys:Item Key="8461958">
-          <Value exs:type="ns1:Label" Name="RAM_81_sprite_size_mode" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_sprite_size_mode" Comment="" />
         </sys:Item>
         <sys:Item Key="8461962">
-          <Value exs:type="ns1:Label" Name="RAM_81_mosaicEffect_Value_BG" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_mosaicEffect_Value_BG" Comment="" />
         </sys:Item>
         <sys:Item Key="8461982">
-          <Value exs:type="ns1:Label" Name="RAM_81_MOD7_X_stretch_A" Comment="&#x9;" />
+          <Value exs:type="ns1:Label" Name="r81_MOD7_X_stretch_A" Comment="&#x9;" />
         </sys:Item>
         <sys:Item Key="8461984">
-          <Value exs:type="ns1:Label" Name="RAM_81_MOD7_shear_B" Comment="&#x9;" />
+          <Value exs:type="ns1:Label" Name="r81_MOD7_shear_B" Comment="&#x9;" />
         </sys:Item>
         <sys:Item Key="8461986">
-          <Value exs:type="ns1:Label" Name="RAM_81_MOD7_shear_C" Comment="&#x9;&#x9;" />
+          <Value exs:type="ns1:Label" Name="r81_MOD7_shear_C" Comment="&#x9;&#x9;" />
         </sys:Item>
         <sys:Item Key="8461988">
-          <Value exs:type="ns1:Label" Name="RAM_81_MOD7_Y_Stretch_D" Comment=" &#x9;" />
+          <Value exs:type="ns1:Label" Name="r81_MOD7_Y_Stretch_D" Comment=" &#x9;" />
         </sys:Item>
         <sys:Item Key="8461990">
-          <Value exs:type="ns1:Label" Name="RAM_81_MOD7_scrollXpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_MOD7_scrollXpos" Comment="" />
         </sys:Item>
         <sys:Item Key="8461992">
-          <Value exs:type="ns1:Label" Name="RAM_81_MOD7_scrollYpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_MOD7_scrollYpos" Comment="" />
         </sys:Item>
         <sys:Item Key="8461994">
-          <Value exs:type="ns1:Label" Name="RAM_81_MOD7_x" Comment="&#x9;" />
+          <Value exs:type="ns1:Label" Name="r81_MOD7_x" Comment="&#x9;" />
         </sys:Item>
         <sys:Item Key="8461996">
-          <Value exs:type="ns1:Label" Name="RAM_81_MOD7_xx" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_MOD7_xx" Comment="" />
         </sys:Item>
         <sys:Item Key="8462144">
-          <Value exs:type="ns1:Label" Name="RAM_81_scoreLow" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_scoreLow" Comment="" />
         </sys:Item>
         <sys:Item Key="8462146">
-          <Value exs:type="ns1:Label" Name="RAM_81_scoreHigh" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_scoreHigh" Comment="" />
         </sys:Item>
         <sys:Item Key="8462212">
-          <Value exs:type="ns1:Label" Name="RAM_81_fatalHitFlag" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_fatalHitFlag" Comment="" />
         </sys:Item>
         <sys:Item Key="8462214">
-          <Value exs:type="ns1:Label" Name="RAM_81_simon_Jump_State" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simon_Jump_State" Comment="" />
         </sys:Item>
         <sys:Item Key="8462216">
-          <Value exs:type="ns1:Label" Name="RAM_81_simon_Mud_State" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simon_Mud_State" Comment="" />
         </sys:Item>
         <sys:Item Key="8462218">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonStat_direction" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonStat_direction" Comment="" />
         </sys:Item>
         <sys:Item Key="8462220">
-          <Value exs:type="ns1:Label" Name="RAM_81_simon_Ypos_Current" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simon_Ypos_Current" Comment="" />
         </sys:Item>
         <sys:Item Key="8462226">
-          <Value exs:type="ns1:Label" Name="RAM_81_simon_Xpos_ColuR" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simon_Xpos_ColuR" Comment="" />
         </sys:Item>
         <sys:Item Key="8462228">
-          <Value exs:type="ns1:Label" Name="RAM_81_simon_Xpos_ColuL" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simon_Xpos_ColuL" Comment="" />
         </sys:Item>
         <sys:Item Key="8462232">
-          <Value exs:type="ns1:Label" Name="RAM_81_simon_Ypos_Colu_M" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simon_Ypos_Colu_M" Comment="" />
         </sys:Item>
         <sys:Item Key="8462234">
-          <Value exs:type="ns1:Label" Name="RAM_81_simon_Ypos_Colu_H" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simon_Ypos_Colu_H" Comment="" />
         </sys:Item>
         <sys:Item Key="8462236">
-          <Value exs:type="ns1:Label" Name="RAM_81_simon_Ypos_Colu_L" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simon_Ypos_Colu_L" Comment="" />
         </sys:Item>
         <sys:Item Key="8462242">
-          <Value exs:type="ns1:Label" Name="RAM_81_simonStat_Stuck" Comment="" />
+          <Value exs:type="ns1:Label" Name="r81_simonStat_Stuck" Comment="" />
         </sys:Item>
         <sys:Item Key="8486914">
           <Value exs:type="ns1:Label" Name="RAM_whiteFade_data03" Comment="" />
@@ -4561,6 +4561,9 @@
         </sys:Item>
         <sys:Item Key="8499729">
           <Value exs:type="ns1:Label" Name="viperSwarmSpriteAss" Comment="" />
+        </sys:Item>
+        <sys:Item Key="8500067">
+          <Value exs:type="ns1:Label" Name="leaveManAnimTable" Comment="" />
         </sys:Item>
         <sys:Item Key="8500117">
           <Value exs:type="ns1:Label" Name="deathStageDataTable" Comment="" />
@@ -5519,8 +5522,11 @@
         <sys:Item Key="8510041">
           <Value exs:type="ns1:Label" Name="somePaletteLoadMayBeBoss27" Comment="" />
         </sys:Item>
+        <sys:Item Key="8510054">
+          <Value exs:type="ns1:Label" Name="bossMummySpawnXposOffset" Comment="" />
+        </sys:Item>
         <sys:Item Key="8510056">
-          <Value exs:type="ns1:Label" Name="curiosWhatThisTablesDo00" Comment="" />
+          <Value exs:type="ns1:Label" Name="" Comment="" />
         </sys:Item>
         <sys:Item Key="8510062">
           <Value exs:type="ns1:Label" Name="bossMummyXPosData" Comment="" />
@@ -6243,37 +6249,37 @@
           <Value exs:type="ns1:Label" Name="conveyorPlatformRingMovmentData0b" Comment="" />
         </sys:Item>
         <sys:Item Key="8519708">
-          <Value exs:type="ns1:Label" Name="RAM_82_bg1CamXpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r82_bg1CamXpos" Comment="" />
         </sys:Item>
         <sys:Item Key="8519710">
-          <Value exs:type="ns1:Label" Name="RAM_82_bg1CamYpos" Comment="" />
+          <Value exs:type="ns1:Label" Name="r82_bg1CamYpos" Comment="" />
         </sys:Item>
         <sys:Item Key="8519712">
-          <Value exs:type="ns1:Label" Name="RAM_82_buttonPress" Comment="" />
+          <Value exs:type="ns1:Label" Name="r82_buttonPress" Comment="" />
         </sys:Item>
         <sys:Item Key="8519714">
-          <Value exs:type="ns1:Label" Name="RAM_82_buttonPressPlayer2" Comment="" />
+          <Value exs:type="ns1:Label" Name="r82_buttonPressPlayer2" Comment="" />
         </sys:Item>
         <sys:Item Key="8519720">
-          <Value exs:type="ns1:Label" Name="RAM_82_buttonPressCurFram" Comment="" />
+          <Value exs:type="ns1:Label" Name="r82_buttonPressCurFram" Comment="" />
         </sys:Item>
         <sys:Item Key="8519722">
-          <Value exs:type="ns1:Label" Name="RAM_82_buttonPressCurFramPlayer2" Comment="" />
+          <Value exs:type="ns1:Label" Name="r82_buttonPressCurFramPlayer2" Comment="" />
         </sys:Item>
         <sys:Item Key="8519730">
-          <Value exs:type="ns1:Label" Name="RAM_82_gameState" Comment="" />
+          <Value exs:type="ns1:Label" Name="r82_gameState" Comment="" />
         </sys:Item>
         <sys:Item Key="8519732">
-          <Value exs:type="ns1:Label" Name="RAM_82_subGameState" Comment="" />
+          <Value exs:type="ns1:Label" Name="r82_subGameState" Comment="" />
         </sys:Item>
         <sys:Item Key="8519738">
-          <Value exs:type="ns1:Label" Name="RAM_82_frameCounter" Comment="" />
+          <Value exs:type="ns1:Label" Name="r82_frameCounter" Comment="" />
         </sys:Item>
         <sys:Item Key="8519742">
-          <Value exs:type="ns1:Label" Name="RAM_82_blackFadeCounter" Comment="" />
+          <Value exs:type="ns1:Label" Name="r82_blackFadeCounter" Comment="" />
         </sys:Item>
         <sys:Item Key="8552448">
-          <Value exs:type="ns1:Label" Name="levelTimerRoutine" Comment="" />
+          <Value exs:type="ns1:Label" Name="rlTimerRoutine" Comment="" />
         </sys:Item>
         <sys:Item Key="8552496">
           <Value exs:type="ns1:Label" Name="cam1FGBehavier" Comment="" />
