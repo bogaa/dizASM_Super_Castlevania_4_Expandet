@@ -1827,7 +1827,7 @@
                        db $FF,$16,$13,$03,$FF               ;DEB8F8|        |031316;
                                                             ;      |        |      ;
 spriteGFX_bigGearCogs:
-                       db $C4,$03,$80                       ;DEB8FD|        |      ;
+                       dl $8003C4                           ;DEB8FD|        |      ;
                        db $10,$00,$20,$3F,$18,$07,$98,$C0   ;DEB900|        |      ;
                        db $3F,$80,$7C,$80,$F8,$80,$F0,$80   ;DEB908|        |      ;
                        db $1F,$00,$40,$00,$80,$60,$3F,$00   ;DEB910|        |      ;
@@ -1966,7 +1966,7 @@ spriteGFX_bigGearCogs:
                        db $FF,$1B,$02,$03,$FF               ;DEBD38|        |03021B;
                                                             ;      |        |      ;
 blockMabData_StageA_clockTower_BG1:
-                       db $03,$20,$80                       ;DEBD3D|        |      ;
+                       dl $802003                           ;DEBD3D|        |      ;
                        dw $0800,$0800,$0800,$0800           ;DEBD40|        |      ;
                        dw $0800,$0800,$0800,$0800           ;DEBD48|        |      ;
                        dw $0800,$0800,$0800,$0800           ;DEBD50|        |      ;
@@ -3005,7 +3005,7 @@ blockMabData_StageA_clockTower_BG1:
                        db $FF,$21,$02,$03,$FF               ;DEDD98|        |030221;
                                                             ;      |        |      ;
 blockMabData_StageA_clockTower_BG0:
-                       db $03,$20,$80                       ;DEDD9D|        |      ;
+                       dl $802003                           ;DEDD9D|        |      ;
                        dw $1800,$1800,$1800,$1800           ;DEDDA0|        |      ;
                        dw $1800,$1800,$1800,$1800           ;DEDDA8|        |      ;
                        dw $1800,$1800,$1800,$1800           ;DEDDB0|        |      ;
@@ -4044,7 +4044,7 @@ blockMabData_StageA_clockTower_BG0:
                        db $FF,$D1,$07,$03,$FF               ;DEFDF8|        |0307D1;
                                                             ;      |        |      ;
 sceneMabDataStageA_ClockTower_00_BG1:
-                       db $03,$20,$80                       ;DEFDFD|        |      ;
+                       dl $802003                           ;DEFDFD|        |      ;
                        dw $0001,$0002,$0003,$0001           ;DEFE00|        |      ;
                        dw $0007,$000A,$000B,$0012           ;DEFE08|        |      ;
                        dw $0007,$0007,$0007,$0001           ;DEFE10|        |      ;

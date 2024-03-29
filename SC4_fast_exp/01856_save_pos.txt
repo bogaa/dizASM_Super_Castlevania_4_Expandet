@@ -2,34 +2,37 @@
 ;pos=39D800
 r 607 G
 r 93 U
-A
-A
-A
+C
+C
+C
 r 128 G
 r 93 U
-A
-A
-A
+C
+C
+C
 r 128 G
 r 93 U
-A
-A
-A
+C
+C
+C
 r 32 G
 r 93 U
-A
-A
-A
+C
+C
+C
 r 128 G
 r 93 U
-A
-A
-A
+C
+C
+C
 r 128 G
 r 93 U
-A
-A
-A
+C
+C
+C
 r 32 G
 r 93 U
-r 196 A
+C
+C
+C
+r 193 A

@@ -2,7 +2,7 @@
 ;pos=2C8000
 r 1023 B
 r 93 U
-A
-A
-A
+C
+C
+C
 r 929 B

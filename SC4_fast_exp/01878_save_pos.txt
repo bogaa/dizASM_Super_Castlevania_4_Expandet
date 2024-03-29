@@ -2,7 +2,7 @@
 ;pos=3A8800
 r 1471 B
 r 93 U
-A
-A
-A
+C
+C
+C
 r 481 B

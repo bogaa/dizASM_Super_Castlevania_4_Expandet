@@ -2,7 +2,7 @@
 ;pos=3B4000
 r 1407 G
 r 125 U
-A
-A
-A
+C
+C
+C
 r 513 G

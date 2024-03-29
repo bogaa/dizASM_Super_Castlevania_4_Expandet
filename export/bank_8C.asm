@@ -4558,22 +4558,24 @@ getCollusionDataFallingDagger:
           CODE_8CFD1A:
                        RTL                                  ;8CFD1A|6B      |      ;
                                                             ;      |        |      ;
-          CODE_8CFD1B:
+   gameOverRoutine_00:
                        LDA.B $72                            ;8CFD1B|A572    |000072;
                        PHX                                  ;8CFD1D|DA      |      ;
                        ASL A                                ;8CFD1E|0A      |      ;
                        TAX                                  ;8CFD1F|AA      |      ;
-                       LDA.L subMainGameStateTable,X        ;8CFD20|BF2AFD8C|8CFD2A;
+                       LDA.L subGameOverState,X             ;8CFD20|BF2AFD8C|8CFD2A;
                        PLX                                  ;8CFD24|FA      |      ;
                        STA.B r_ev_00_sprite                 ;8CFD25|8500    |000000;
                        JMP.W (r_ev_00_sprite)               ;8CFD27|6C0000  |000000;
                                                             ;      |        |      ;
                                                             ;      |        |      ;
-subMainGameStateTable:
-                       dw LOOSE_OP_00FD32                   ;8CFD2A|        |00FD32;
-                       dw LOOSE_OP_00FD6C                   ;8CFD2C|        |00FD6C;
-                       dw PTR16_00FD8B                      ;8CFD2E|        |00FD8B;
-                       dw CODE_00FDCE                       ;8CFD30|        |00FDCE;
+     subGameOverState:
+                       dw gameOverState_00                  ;8CFD2A|        |8CFD32;
+                       dw gameOverState_01                  ;8CFD2C|        |8CFD6C;
+                       dw gameOverState_02                  ;8CFD2E|        |8CFD8B;
+                       dw gameOverState_03                  ;8CFD30|        |8CFDCE;
+                                                            ;      |        |      ;
+     gameOverState_00:
                        JSL.L muteMusic                      ;8CFD32|22848580|808584; unused??
                        JSL.L clearWindowEffectALL_endingSequ;8CFD36|22638F80|808F63;
                        LDX.W #$B50C                         ;8CFD3A|A20CB5  |      ;
@@ -4583,7 +4585,7 @@ subMainGameStateTable:
                        LDY.W #$86F7                         ;8CFD48|A0F786  |      ;
                        JSL.L getPaletteY2_X1200             ;8CFD4B|22E69080|8090E6;
                        LDY.B r_currentLevel                 ;8CFD4F|A486    |000086;
-                       LDA.W LOOSE_OP_00FBAC,Y              ;8CFD51|B9ACFB  |00FBAC;
+                       LDA.W continueLevels,Y               ;8CFD51|B9ACFB  |81FBAC;
                        AND.W #$00FF                         ;8CFD54|29FF00  |      ;
                                                             ;      |        |      ;
 newSC4edContinueSupport:
@@ -4596,20 +4598,67 @@ newSC4edContinueSupport:
                        JSL.L musicFixFlagCheck              ;8CFD67|229E8580|80859E;
                        RTL                                  ;8CFD6B|6B      |      ;
                                                             ;      |        |      ;
-                       db $A5,$28,$89,$00,$10,$F0,$02,$E6   ;8CFD6C|        |000028;
-                       db $72,$89,$00,$2C,$F0,$07,$A5,$68   ;8CFD74|        |000089;
-                       db $49,$02,$00,$85,$68,$A4,$68,$BE   ;8CFD7C|        |      ;
-                       db $A8,$FB,$22,$51,$90,$80,$6B,$CE   ;8CFD84|        |      ;
-                       db $80,$1E,$D0,$09,$A5,$68,$F0,$06   ;8CFD8C|        |8CFDAC;
-                       db $9C,$00,$1C,$E6,$72,$6B,$A9,$05   ;8CFD94|        |001C00;
-                       db $00,$85,$7C,$A9,$10,$00,$8D,$F4   ;8CFD9C|        |      ;
-                       db $13,$8D,$F6,$13,$A9,$05,$00,$8D   ;8CFDA4|        |00008D;
-                       db $F2,$13,$64,$8E,$64,$90,$64,$92   ;8CFDAC|        |000013;
-                       db $9C,$00,$16,$9C,$02,$16,$9C,$04   ;8CFDB4|        |001600;
-                       db $16,$A9,$00,$20,$85,$7E,$9C,$40   ;8CFDBC|        |0000A9;
-                       db $1F,$9C,$42,$1F,$A9,$03,$00,$85   ;8CFDC4|        |1F429C;
-                       db $70,$6B,$A9,$0F,$00,$8D,$80,$1E   ;8CFDCC|        |8CFE39;
-                       db $5C,$5A,$84,$83                   ;8CFDD4|        |83845A;
+                                                            ;      |        |      ;
+     gameOverState_01:
+                       LDA.B r_ev_28_HitboxXpos             ;8CFD6C|A528    |000028;
+                       BIT.W #$1000                         ;8CFD6E|890010  |      ;
+                       BEQ CODE_8CFD75                      ;8CFD71|F002    |8CFD75;
+                       INC.B $72                            ;8CFD73|E672    |000072;
+                                                            ;      |        |      ;
+          CODE_8CFD75:
+                       BIT.W #$2C00                         ;8CFD75|89002C  |      ;
+                       BEQ CODE_8CFD81                      ;8CFD78|F007    |8CFD81;
+                       LDA.B $68                            ;8CFD7A|A568    |000068;
+                       EOR.W #$0002                         ;8CFD7C|490200  |      ;
+                       STA.B $68                            ;8CFD7F|8568    |000068;
+                                                            ;      |        |      ;
+          CODE_8CFD81:
+                       LDY.B $68                            ;8CFD81|A468    |000068;
+                       LDX.W textDataContinue,Y             ;8CFD83|BEA8FB  |81FBA8;
+                       JSL.L PPU_load_HUD                   ;8CFD86|22519080|809051;
+                       RTL                                  ;8CFD8A|6B      |      ;
+                                                            ;      |        |      ;
+                                                            ;      |        |      ;
+     gameOverState_02:
+                       DEC.W r_blackFade                    ;8CFD8B|CE801E  |001E80;
+                       BNE CODE_8CFD99                      ;8CFD8E|D009    |8CFD99;
+                       LDA.B $68                            ;8CFD90|A568    |000068;
+                       BEQ CODE_8CFD9A                      ;8CFD92|F006    |8CFD9A;
+                       STZ.W r_state_Map_Scene              ;8CFD94|9C001C  |001C00;
+                       INC.B $72                            ;8CFD97|E672    |000072;
+                                                            ;      |        |      ;
+          CODE_8CFD99:
+                       RTL                                  ;8CFD99|6B      |      ;
+                                                            ;      |        |      ;
+                                                            ;      |        |      ;
+          CODE_8CFD9A:
+                       LDA.W #$0005                         ;8CFD9A|A90500  |      ;
+                       STA.B r_simon_Lifes                  ;8CFD9D|857C    |00007C;
+                       LDA.W #$0010                         ;8CFD9F|A91000  |      ;
+                       STA.W r_simonStat_Health_HUD         ;8CFDA2|8DF413  |0013F4;
+                       STA.W r_boss_Health_HUD              ;8CFDA5|8DF613  |0013F6;
+                       LDA.W #$0005                         ;8CFDA8|A90500  |      ;
+                       STA.W r_simonStat_Hearts             ;8CFDAB|8DF213  |0013F2;
+                       STZ.B r_simon_subWeapon              ;8CFDAE|648E    |00008E;
+                       STZ.B r_simon_multiShot              ;8CFDB0|6490    |000090;
+                       STZ.B r_simon_whipType               ;8CFDB2|6492    |000092;
+                       STZ.W $1600                          ;8CFDB4|9C0016  |001600;
+                       STZ.W r_secretStage6_Floor_Flag      ;8CFDB7|9C0216  |001602;
+                       STZ.W r_secret_Flag                  ;8CFDBA|9C0416  |001604;
+                       LDA.W #$2000                         ;8CFDBD|A90020  |      ;
+                       STA.B r_simon_PointsTillExtraLife    ;8CFDC0|857E    |00007E;
+                       STZ.W r_scoreLow                     ;8CFDC2|9C401F  |001F40;
+                       STZ.W r_scoreHigh                    ;8CFDC5|9C421F  |001F42;
+                       LDA.W #$0003                         ;8CFDC8|A90300  |      ;
+                       STA.B r_mainGameState                ;8CFDCB|8570    |000070;
+                       RTL                                  ;8CFDCD|6B      |      ;
+                                                            ;      |        |      ;
+                                                            ;      |        |      ;
+     gameOverState_03:
+                       LDA.W #$000F                         ;8CFDCE|A90F00  |      ;
+                       STA.W r_blackFade                    ;8CFDD1|8D801E  |001E80;
+                       JML.L showPasswordRoutine            ;8CFDD4|5C5A8483|83845A;
+                                                            ;      |        |      ;
                                                             ;      |        |      ;
 rowdinLastStandBoneStateRoutine:
                        LDA.W #$0001                         ;8CFDD8|A90100  |      ;
@@ -4755,7 +4804,7 @@ boneProjectileSpriteFlipMirror:
                        RTL                                  ;8CFEC2|6B      |      ;
                                                             ;      |        |      ;
           CODE_8CFEC3:
-                       LDA.W DATA16_81FBF0,Y                ;8CFEC3|B9F0FB  |81FBF0;
+                       LDA.W boneBurstRotatingSprite,Y      ;8CFEC3|B9F0FB  |81FBF0;
                        STA.W r81_ev_00_sprite,X             ;8CFEC6|9D0000  |810000;
                        BRA CODE_8CFEBC                      ;8CFEC9|80F1    |8CFEBC;
                                                             ;      |        |      ;

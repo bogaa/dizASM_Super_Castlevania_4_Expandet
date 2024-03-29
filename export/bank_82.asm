@@ -84,7 +84,7 @@
                        STA.B r_simon_Lifes                  ;8280A4|857C    |00007C;
                        CLD                                  ;8280A6|D8      |      ;
                        LDY.B r_currentLevel                 ;8280A7|A486    |000086;
-                       LDA.W deathStageDataTable,Y          ;8280A9|B995B3  |81B395;
+                       LDA.W deathEntrance_DataTable,Y      ;8280A9|B995B3  |81B395;
                        AND.W #$00FF                         ;8280AC|29FF00  |      ;
                                                             ;      |        |      ;
 newSC4edReversLevelSupportDeath:
@@ -124,25 +124,27 @@ miscGFXloadRoutineXPlus81Bank:
                        LDA.L r81_ev_00_sprite,X             ;8280EA|BF000081|810000;
                        INX                                  ;8280EE|E8      |      ;
                        AND.W #$00FF                         ;8280EF|29FF00  |      ;
-                       BEQ CODE_82810E                      ;8280F2|F01A    |82810E;
+                       BEQ miscGFXloader                    ;8280F2|F01A    |82810E;
                        CMP.W #$0001                         ;8280F4|C90100  |      ;
                        BNE CODE_8280FC                      ;8280F7|D003    |8280FC;
-                       JMP.W CODE_8282E3                    ;8280F9|4CE382  |8282E3;
+                       JMP.W miscTilmapLoader               ;8280F9|4CE382  |8282E3;
+                                                            ;      |        |      ;
                                                             ;      |        |      ;
           CODE_8280FC:
                        CMP.W #$0002                         ;8280FC|C90200  |      ;
                        BNE CODE_828104                      ;8280FF|D003    |828104;
-                       JMP.W CODE_8283B4                    ;828101|4CB483  |8283B4; unusedJump??
+                       JMP.W miscMusicLoader                ;828101|4CB483  |8283B4; unusedJump??
                                                             ;      |        |      ;
                                                             ;      |        |      ;
           CODE_828104:
-                       JMP.W CODE_828203                    ;828104|4C0382  |828203;
+                       JMP.W misc2bppLoader                 ;828104|4C0382  |828203;
+                                                            ;      |        |      ;
                                                             ;      |        |      ;
           CODE_828107:
                        JSL.L CODE_82814B                    ;828107|224B8182|82814B;
                        JMP.W CODE_82830E                    ;82810B|4C0E83  |82830E;
                                                             ;      |        |      ;
-          CODE_82810E:
+        miscGFXloader:
                        PHP                                  ;82810E|08      |      ;
                        PHD                                  ;82810F|0B      |      ;
                        LDY.W #$1A00                         ;828110|A0001A  |      ;
@@ -290,8 +292,8 @@ removeEventIDStateYpos16:
                        PLP                                  ;828201|28      |      ;
                        RTL                                  ;828202|6B      |      ;
                                                             ;      |        |      ;
-          CODE_828203:
-                       PHP                                  ;828203|08      |      ;
+       misc2bppLoader:
+                       PHP                                  ;828203|08      |      ; not sure
                        PHD                                  ;828204|0B      |      ;
                        REP #$20                             ;828205|C220    |      ;
                        REP #$10                             ;828207|C210    |      ;
@@ -418,7 +420,7 @@ removeEventIDStateYpos16:
                        LDA.B r_ev_16_hitStunCount           ;8282E0|A516    |001A16;
                        RTS                                  ;8282E2|60      |      ;
                                                             ;      |        |      ;
-          CODE_8282E3:
+     miscTilmapLoader:
                        PHP                                  ;8282E3|08      |      ;
                        PHD                                  ;8282E4|0B      |      ;
                        LDY.W #$1A40                         ;8282E5|A0401A  |      ;
@@ -545,7 +547,7 @@ removeEventIDStateYpos16:
                        STZ.B $6A                            ;8283B1|646A    |00006A;
                        RTL                                  ;8283B3|6B      |      ;
                                                             ;      |        |      ;
-          CODE_8283B4:
+      miscMusicLoader:
                        PHP                                  ;8283B4|08      |      ;
                        PHD                                  ;8283B5|0B      |      ;
                        LDY.W #$1F00                         ;8283B6|A0001F  |      ;
@@ -623,7 +625,7 @@ optionMusicPlayerRoutine:
                                                             ;      |        |      ;
                                                             ;      |        |      ;
           CODE_828432:
-                       JSL.L CODE_8283B4                    ;828432|22B48382|8283B4;
+                       JSL.L miscMusicLoader                ;828432|22B48382|8283B4;
                        LDA.W #$0001                         ;828436|A90100  |      ;
                        STA.B r_ev_12_state                  ;828439|8512    |001F12;
                        LDA.W #$0002                         ;82843B|A90200  |      ;
@@ -8144,7 +8146,7 @@ event_ID_5d_5e_boneDragon:
                        AND.W #$00FF                         ;82B85D|29FF00  |      ;
                        ASL A                                ;82B860|0A      |      ;
                        TAY                                  ;82B861|A8      |      ;
-                       LDA.W DATA16_81CD95,Y                ;82B862|B995CD  |81CD95;
+                       LDA.W mod7RotationTable,Y            ;82B862|B995CD  |81CD95;
                        LDY.B r_ev_36,X                      ;82B865|B436    |000036;
                        CLC                                  ;82B867|18      |      ;
                        ADC.W r81_ev_0a_xPos,Y               ;82B868|790A00  |81000A;
@@ -8155,7 +8157,7 @@ event_ID_5d_5e_boneDragon:
                        CLC                                  ;82B873|18      |      ;
                        ADC.W #$0080                         ;82B874|698000  |      ;
                        TAY                                  ;82B877|A8      |      ;
-                       LDA.W DATA16_81CD95,Y                ;82B878|B995CD  |81CD95;
+                       LDA.W mod7RotationTable,Y            ;82B878|B995CD  |81CD95;
                        LDY.B r_ev_36,X                      ;82B87B|B436    |000036;
                        CLC                                  ;82B87D|18      |      ;
                        ADC.W r81_ev_0e_yPos,Y               ;82B87E|790E00  |81000E;
@@ -17284,7 +17286,7 @@ puwexil_Event02_mentos:
                        ASL A                                ;82FB7C|0A      |      ;
                        PHY                                  ;82FB7D|5A      |      ;
                        TAY                                  ;82FB7E|A8      |      ;
-                       LDA.W DATA16_81CD95,Y                ;82FB7F|B995CD  |81CD95;
+                       LDA.W mod7RotationTable,Y            ;82FB7F|B995CD  |81CD95;
                        PLY                                  ;82FB82|7A      |      ;
                        CLC                                  ;82FB83|18      |      ;
                        ADC.W r81_ev_0a_xPos,Y               ;82FB84|790A00  |81000A;
@@ -17296,7 +17298,7 @@ puwexil_Event02_mentos:
                        ADC.W #$0080                         ;82FB90|698000  |      ;
                        PHY                                  ;82FB93|5A      |      ;
                        TAY                                  ;82FB94|A8      |      ;
-                       LDA.W DATA16_81CD95,Y                ;82FB95|B995CD  |81CD95;
+                       LDA.W mod7RotationTable,Y            ;82FB95|B995CD  |81CD95;
                        PLY                                  ;82FB98|7A      |      ;
                        CLC                                  ;82FB99|18      |      ;
                        ADC.W r81_ev_0e_yPos,Y               ;82FB9A|790E00  |81000E;

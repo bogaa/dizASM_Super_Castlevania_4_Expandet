@@ -1194,7 +1194,7 @@ gfxLvlDataPointerTable:
                        dw $4000                             ;8689DC|        |      ;
                        dl spriteGFX_crusherWithFloatingBlock;8689DE|        |C0DE1D;
                        dw $5180                             ;8689E1|        |      ;
-                       dl UNREACH_C0E13D                    ;8689E3|        |C0E13D;
+                       dl someMissedGFX                     ;8689E3|        |C0E13D;
                        dw $FFFF                             ;8689E6|        |      ;
                                                             ;      |        |      ;
            gfxLevel14:
@@ -2510,8 +2510,8 @@ paletteAnimationPointerForEachLevel:
                        dw paletteNoAnimationEmpty           ;86947D|        |8186F5;
                        dw paletteNoAnimationEmpty           ;86947F|        |8186F5;
                        dw paletteAnimationStagel02_Swamp    ;869481|        |81F869;
-                       dw paletteAnimationWaterSlide        ;869483|        |81F886;
-                       dw paletteAnimationWaterSlide        ;869485|        |81F886;
+                       dw paletteAnimationWaterSlide1       ;869483|        |81F886;
+                       dw paletteAnimationWaterSlide1       ;869485|        |81F886;
                        dw paletteNoAnimationEmpty           ;869487|        |8186F5;
                        dw paletteAnimationCave              ;869489|        |81F8F0;
                        dw paletteAnimationAquaduct          ;86948B|        |81F8FD;
@@ -4663,8 +4663,6 @@ SC4edSeconLevelColluisonTableFIX00:
                        CMP.B r_collusion_01                 ;86A4ED|C5CC    |0000CC;
                        BEQ CODE_86A4F6                      ;86A4EF|F005    |86A4F6; FIXME // BEQ - branch if 2 (#8000)
                        LDA.W #$0000                         ;86A4F1|A90000  |      ;
-                                                            ;      |        |      ;
-          CODE_86A4F4:
                        BRA CODE_86A4FC                      ;86A4F4|8006    |86A4FC; // FIXME
                                                             ;      |        |      ;
           CODE_86A4F6:
@@ -6592,12 +6590,12 @@ NEWlevelLoadingRoutine:
                        TAX                                  ;86B531|AA      |      ;
                        STX.B r_XregSlotCurrent              ;86B532|86FC    |0000FC;
                        LDA.W $13E8                          ;86B534|ADE813  |0013E8;
-                       BEQ CODE_86B543                      ;86B537|F00A    |86B543;
+                       BEQ gfxLoad4Levels                   ;86B537|F00A    |86B543;
                        LDA.L TimerDefault4EachLevel,X       ;86B539|BFF8BC85|85BCF8;
                        STA.W r_simonStat_Timer              ;86B53D|8DF013  |0013F0;
                        STZ.W $13E8                          ;86B540|9CE813  |0013E8;
                                                             ;      |        |      ;
-          CODE_86B543:
+       gfxLoad4Levels:
                        LDA.L thisHasToDoWithScrollBehavier4EachLevel,X;86B543|BF80BD85|85BD80;
                        STA.W $13CE                          ;86B547|8DCE13  |0013CE;
                        LDA.W #$1280                         ;86B54A|A98012  |      ;
@@ -6644,7 +6642,7 @@ NEWlevelLoadingRoutine:
                        LDX.B r_XregSlotCurrent              ;86B5B6|A6FC    |0000FC;
                        LDA.L enemyGFXPointerForEachLevel,X  ;86B5B8|BF458B86|868B45;
                        CMP.W #$FFFF                         ;86B5BC|C9FFFF  |      ;
-                       BEQ CODE_86B5D2                      ;86B5BF|F011    |86B5D2;
+                       BEQ palleteLoad4Levels               ;86B5BF|F011    |86B5D2;
                        STA.B r_ev_00_sprite                 ;86B5C1|8500    |000000;
                        LDA.W #$0006                         ;86B5C3|A90600  |      ;
                        STA.B r_ev_02_pri_attri              ;86B5C6|8502    |000002;
@@ -6652,7 +6650,7 @@ NEWlevelLoadingRoutine:
                        LDX.W #$1750                         ;86B5CB|A25017  |      ;
                        JSL.L miscGFXloadRoutineXPlus81Bank  ;86B5CE|22E88082|8280E8;
                                                             ;      |        |      ;
-          CODE_86B5D2:
+   palleteLoad4Levels:
                        LDY.W #$8715                         ;86B5D2|A01587  |      ;
                        JSL.L getPaletteY2_X1200             ;86B5D5|22E69080|8090E6;
                        LDX.B r_XregSlotCurrent              ;86B5D9|A6FC    |0000FC;
@@ -6778,8 +6776,6 @@ NewEntranceSC4edFixSecretRoom00:
                        LDA.L entrance_scrollSpeed_Ypos,X    ;86B6EA|BF1C80A7|A7801C;
                        STA.B r_BG1_YposScrollSpeed          ;86B6EE|85AA    |0000AA;
                        LDA.L entrance_pointer,X             ;86B6F0|BF1E80A7|A7801E;
-                                                            ;      |        |      ;
-          CODE_86B6F4:
                        TAX                                  ;86B6F4|AA      |      ;
                        BRL CODE_86B79A                      ;86B6F5|82A200  |86B79A; end secret entrance Fix
                        db $12,$A9,$02,$00,$8D,$02,$16,$80   ;86B6F8|        |0000A9; old Routine
@@ -8937,42 +8933,42 @@ draculasSecretState05_multiShootCheck:
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;86C7F0|        |      ;
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;86C7F8|        |      ;
                                                             ;      |        |      ;
-konamiScreenDataPaletteData00:
+   PAL_konamiScreen00:
                        dw $001F                             ;86C800|        |      ;
                        db $20,$04,$01,$00,$01,$00,$01,$00   ;86C802|        |      ;
                        db $01,$00,$08,$20,$4D,$2C,$B2,$38   ;86C80A|        |      ;
                        db $7C,$55,$DC,$59,$3C,$62,$BD,$6A   ;86C812|        |      ;
                        db $9E,$7B,$01,$00,$01,$00,$01,$00   ;86C81A|        |      ;
                                                             ;      |        |      ;
-konamiScreenDataPaletteData01:
+   PAL_konamiScreen01:
                        dw $001F                             ;86C822|        |      ;
                        db $00,$00,$00,$00,$00,$30,$00,$44   ;86C824|        |      ;
                        db $00,$58,$00,$7C,$00,$00,$00,$00   ;86C82C|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86C834|        |      ;
                        db $00,$00,$20,$00,$00,$00,$00,$00   ;86C83C|        |      ;
                                                             ;      |        |      ;
-konamiScreenDataPaletteData02:
+   PAL_konamiScreen02:
                        dw $001F                             ;86C844|        |      ;
                        db $00,$00,$00,$00,$7B,$6F,$B5,$56   ;86C846|        |      ;
                        db $10,$42,$A5,$14,$D6,$66,$94,$5E   ;86C84E|        |      ;
                        db $52,$56,$10,$4E,$EF,$49,$AD,$41   ;86C856|        |      ;
                        db $6B,$39,$4A,$35,$08,$2D,$A5,$20   ;86C85E|        |      ;
                                                             ;      |        |      ;
-konamiScreenDataPaletteData03:
+   PAL_konamiScreen03:
                        dw $001F                             ;86C866|        |      ;
                        db $FF,$7F,$00,$00,$7E,$02,$3B,$02   ;86C868|        |      ;
                        db $F9,$01,$75,$05,$9F,$03,$5E,$03   ;86C870|        |      ;
                        db $1D,$03,$DC,$02,$9B,$02,$7A,$02   ;86C878|        |      ;
                        db $3A,$02,$F9,$01,$B8,$01,$56,$01   ;86C880|        |      ;
                                                             ;      |        |      ;
-konamiScreenDataPaletteData04:
+   PAL_konamiScreen04:
                        dw $001F                             ;86C888|        |      ;
                        db $FF,$7F,$00,$00,$BE,$01,$5B,$01   ;86C88A|        |      ;
                        db $18,$01,$92,$04,$1F,$02,$9E,$01   ;86C892|        |      ;
                        db $1D,$01,$1B,$00,$19,$00,$17,$00   ;86C89A|        |      ;
                        db $15,$00,$13,$04,$11,$04,$2E,$08   ;86C8A2|        |      ;
                                                             ;      |        |      ;
-mainSpritePaletteData:
+     spritePAL_0_main:
                        dw $00DF                             ;86C8AA|        |      ;
                        db $00,$00,$F8,$3D,$6A,$08,$1F,$43   ;86C8AC|        |      ;
                        db $3C,$1E,$F1,$1C,$02,$00,$7E,$5F   ;86C8B4|        |      ;
@@ -9003,14 +8999,14 @@ mainSpritePaletteData:
                        db $5D,$0D,$FA,$7E,$F0,$59,$2C,$49   ;86C97C|        |      ;
                        db $65,$20,$9D,$5B,$13,$2A,$0C,$0D   ;86C984|        |      ;
                                                             ;      |        |      ;
-   mainHUDpaletteData:
+         PAL_HUD_FONT:
                        dw $001D                             ;86C98C|        |      ;
                        db $6F,$57,$26,$02,$A3,$08,$00,$00   ;86C98E|        |      ;
                        db $8B,$3D,$E6,$28,$21,$0C,$00,$00   ;86C996|        |      ;
                        db $62,$10,$73,$66,$17,$00,$E7,$1C   ;86C99E|        |      ;
                        db $FF,$1E,$F7,$00,$44,$10           ;86C9A6|        |      ;
                                                             ;      |        |      ;
-titleScreenPaletteData01:
+      PAL_titleScreen:
                        dw $00DF                             ;86C9AC|        |      ;
                        db $AA,$14,$F7,$62,$73,$52,$EE,$41   ;86C9AE|        |      ;
                        db $8B,$31,$26,$25,$C4,$1C,$61,$0C   ;86C9B6|        |      ;
@@ -9041,7 +9037,7 @@ titleScreenPaletteData01:
                        db $85,$08,$E7,$04,$48,$15,$B9,$2D   ;86CA7E|        |      ;
                        db $EF,$29,$29,$04,$2F,$04,$13,$00   ;86CA86|        |      ;
                                                             ;      |        |      ;
-introStoryScreenPaletteData00:
+       PAL_mapWater00:
                        dw $003F                             ;86CA8E|        |      ;
                        db $00,$00,$15,$6F,$95,$56,$33,$3E   ;86CA90|        |      ;
                        db $D0,$35,$90,$21,$2D,$15,$EB,$10   ;86CA98|        |      ;
@@ -9052,27 +9048,27 @@ introStoryScreenPaletteData00:
                        db $48,$00,$24,$00,$42,$08,$63,$0C   ;86CAC0|        |      ;
                        db $CD,$39,$29,$25,$C6,$18,$84,$10   ;86CAC8|        |      ;
                                                             ;      |        |      ;
-introStoryScreenPaletteData01:
+       PAL_mapWater00:
                        dw $0007                             ;86CAD0|        |      ;
                        db $A5,$30,$82,$20,$82,$18,$E5,$2C   ;86CAD2|        |      ;
                                                             ;      |        |      ;
-introStoryScreenPaletteData02:
+  PAL_mapWater01_Anim:
                        dw $0007                             ;86CADA|        |      ;
                        db $E5,$2C,$A5,$30,$82,$20,$82,$18   ;86CADC|        |      ;
                                                             ;      |        |      ;
-introStoryScreenPaletteData03:
+  PAL_mapWater02_Anim:
                        dw $0007                             ;86CAE4|        |      ;
                        db $82,$18,$E5,$2C,$A5,$30,$82,$20   ;86CAE6|        |      ;
                                                             ;      |        |      ;
-introStoryScreenPaletteData04:
+  PAL_mapWater03_Anim:
                        dw $0007                             ;86CAEE|        |      ;
                        db $82,$20,$82,$18,$E5,$2C,$A5,$30   ;86CAF0|        |      ;
                                                             ;      |        |      ;
-introStoryScreenPaletteData05:
+         PAL_BG_color:
                        dw $0001                             ;86CAF8|        |      ;
                        db $00,$00                           ;86CAFA|        |      ;
                                                             ;      |        |      ;
-introStoryScreenPaletteData06:
+   PAL_PW_screenTiles:
                        dw $007F                             ;86CAFC|        |      ;
                        db $00,$00,$63,$0C,$85,$08,$C8,$0C   ;86CAFE|        |      ;
                        db $4D,$19,$F2,$29,$55,$3E,$18,$5B   ;86CB06|        |      ;
@@ -9091,11 +9087,11 @@ introStoryScreenPaletteData06:
                        db $21,$08,$00,$00,$24,$00,$87,$04   ;86CB6E|        |      ;
                        db $0B,$11,$B1,$25,$F2,$29,$A8,$04   ;86CB76|        |      ;
                                                             ;      |        |      ;
-introStoryScreenPaletteData07:
+     PAL_PW_screenRED:
                        dw $0003                             ;86CB7E|        |      ;
                        db $00,$00,$9B,$00                   ;86CB80|        |      ;
                                                             ;      |        |      ;
-introStoryScreenPaletteData08:
+PAL_titleCrittersSprite:
                        dw $009F                             ;86CB84|        |      ;
                        db $00,$00,$21,$04,$62,$10,$E8,$18   ;86CB86|        |      ;
                        db $4A,$25,$AE,$31,$53,$46,$F8,$5A   ;86CB8E|        |      ;
@@ -9118,7 +9114,7 @@ introStoryScreenPaletteData08:
                        db $00,$00,$20,$04,$20,$04,$20,$04   ;86CC16|        |      ;
                        db $20,$04,$20,$04,$20,$04,$20,$04   ;86CC1E|        |      ;
                                                             ;      |        |      ;
-introStoryScreenPaletteData09:
+PAL_titleScreenThunder:
                        dw $017F                             ;86CC26|        |      ;
                        db $00,$00,$53,$4E,$B7,$52,$18,$63   ;86CC28|        |      ;
                        db $CE,$39,$E8,$18,$D6,$56,$10,$3E   ;86CC30|        |      ;
@@ -9169,14 +9165,14 @@ introStoryScreenPaletteData09:
                        db $20,$04,$20,$04,$20,$04,$20,$04   ;86CD98|        |      ;
                        db $20,$04,$20,$04,$20,$04,$20,$04   ;86CDA0|        |      ;
                                                             ;      |        |      ;
-introStoryScreenPaletteData10:
+  PAL_nameScreenFlame:
                        dw $001F                             ;86CDA8|        |      ;
                        db $00,$00,$84,$0C,$E7,$1C,$EF,$3D   ;86CDAA|        |      ;
                        db $0C,$24,$07,$3C,$0C,$5D,$B1,$5D   ;86CDB2|        |      ;
                        db $17,$62,$1C,$6F,$00,$00,$00,$00   ;86CDBA|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86CDC2|        |      ;
                                                             ;      |        |      ;
-introStoryScreenPaletteData11:
+  PAL_nameScreenTiles:
                        dw $005F                             ;86CDCA|        |      ;
                        db $00,$00,$22,$04,$61,$04,$C6,$14   ;86CDCC|        |      ;
                        db $29,$21,$8B,$29,$8C,$21,$43,$04   ;86CDD4|        |      ;
@@ -9191,14 +9187,14 @@ introStoryScreenPaletteData11:
                        db $83,$08,$E6,$14,$AF,$29,$54,$3E   ;86CE1C|        |      ;
                        db $D9,$4A,$75,$42,$74,$4E,$BF,$63   ;86CE24|        |      ;
                                                             ;      |        |      ;
-introStoryScreenPaletteData12:
+      PAL_ScreenFlame:
                        dw $001F                             ;86CE2C|        |      ;
                        db $00,$00,$84,$0C,$E7,$1C,$EF,$3D   ;86CE2E|        |      ;
                        db $0C,$24,$07,$3C,$0C,$5D,$B1,$5D   ;86CE36|        |      ;
                        db $17,$62,$1C,$6F,$00,$00,$00,$00   ;86CE3E|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86CE46|        |      ;
                                                             ;      |        |      ;
-introStoryScreenPaletteData13:
+  PAL_introScreenWhip:
                        dw $013F                             ;86CE4E|        |      ;
                        db $00,$00,$23,$00,$AB,$00,$10,$01   ;86CE50|        |      ;
                        db $54,$01,$56,$01,$DB,$11,$80,$00   ;86CE58|        |      ;
@@ -9241,7 +9237,7 @@ introStoryScreenPaletteData13:
                        db $D8,$0D,$72,$01,$0F,$05,$CB,$00   ;86CF80|        |      ;
                        db $5D,$3F,$76,$2A,$4B,$15,$0D,$4C   ;86CF88|        |      ;
                                                             ;      |        |      ;
-introStoryScreenPaletteData14:
+ PAL_mapScreenBorders:
                        dw $003F                             ;86CF90|        |      ;
                        db $00,$00,$66,$0C,$EA,$0C,$76,$36   ;86CF92|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86CF9A|        |      ;
@@ -9252,7 +9248,7 @@ introStoryScreenPaletteData14:
                        db $FD,$6B,$93,$3E,$6C,$29,$08,$1D   ;86CFC2|        |      ;
                        db $C7,$14,$A4,$08,$00,$00,$00,$00   ;86CFCA|        |      ;
                                                             ;      |        |      ;
-introStoryScreenPaletteData15:
+      PAL_map_2_tiles:
                        dw $007F                             ;86CFD2|        |      ;
                        db $00,$00,$95,$3A,$D0,$21,$6C,$1D   ;86CFD4|        |      ;
                        db $08,$11,$C7,$0C,$85,$0C,$5D,$4B   ;86CFDC|        |      ;
@@ -9271,7 +9267,7 @@ introStoryScreenPaletteData15:
                        db $07,$2D,$C6,$28,$A4,$20,$83,$1C   ;86D044|        |      ;
                        db $42,$14,$00,$0C,$22,$04,$00,$00   ;86D04C|        |      ;
                                                             ;      |        |      ;
-introStoryScreenPaletteData16:
+          PAL_mapLogo:
                        dw $00BF                             ;86D054|        |      ;
                        db $13,$22,$0F,$3E,$6A,$29,$C6,$18   ;86D056|        |      ;
                        db $C6,$18,$83,$10,$6C,$04,$68,$08   ;86D05E|        |      ;
@@ -9298,7 +9294,7 @@ introStoryScreenPaletteData16:
                        db $FD,$6B,$93,$3E,$6C,$29,$08,$1D   ;86D106|        |      ;
                        db $C7,$14,$A4,$08,$00,$00,$00,$00   ;86D10E|        |      ;
                                                             ;      |        |      ;
-introStoryScreenPaletteData17:
+PAL_introGraveAnim_17:
                        dw $00FF                             ;86D116|        |      ;
                        db $00,$00,$7B,$6F,$08,$21,$00,$00   ;86D118|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86D120|        |      ;
@@ -9320,6 +9316,8 @@ introStoryScreenPaletteData17:
                        db $C3,$34,$06,$41,$68,$49,$CA,$55   ;86D1A0|        |      ;
                        db $2F,$66,$00,$00,$00,$00,$00,$00   ;86D1A8|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86D1B0|        |      ;
+                                                            ;      |        |      ;
+    introAnimNight_17:
                        db $00,$00,$73,$4E,$00,$00,$00,$00   ;86D1B8|        |      ;
                        db $00,$00,$18,$63,$16,$5F,$00,$00   ;86D1C0|        |      ;
                        db $00,$00,$9C,$73,$00,$00,$39,$67   ;86D1C8|        |      ;
@@ -9333,7 +9331,7 @@ introStoryScreenPaletteData17:
                        db $94,$66,$D5,$6A,$17,$6F,$7B,$7B   ;86D208|        |      ;
                        db $6A,$39,$07,$29,$C5,$20,$00,$00   ;86D210|        |      ;
                                                             ;      |        |      ;
-introStoryScreenPaletteData18:
+  PAL_introGraveStart:
                        dw $003F                             ;86D218|        |      ;
                        db $00,$00,$00,$00,$22,$00,$64,$08   ;86D21A|        |      ;
                        db $A7,$0C,$09,$19,$6C,$29,$CF,$35   ;86D222|        |      ;
@@ -9345,7 +9343,10 @@ introStoryScreenPaletteData18:
                        db $8A,$44,$70,$65,$56,$6A,$19       ;86D252|        |      ;
                                                             ;      |        |      ;
 introStoryScreenPaletteData19:
-                       dw $007B                             ;86D259|        |      ;
+                       db $7B                               ;86D259|        |      ;
+                                                            ;      |        |      ;
+introPalettAnimTrickery:
+                       db $00                               ;86D25A|        |      ;
                        db $00,$00,$00,$42,$00,$A6,$10,$2B   ;86D25B|        |      ;
                        db $1D,$AD,$29,$52,$3E,$00,$00,$00   ;86D263|        |      ;
                        db $00,$6F,$15,$D1,$1D,$54,$2E,$B6   ;86D26B|        |      ;
@@ -9421,11 +9422,13 @@ introStoryScreenPaletteData19:
                        db $00,$00,$00,$00,$00,$44,$04,$A7   ;86D49B|        |      ;
                        db $0C,$09,$15,$4D,$21,$EB,$04,$00   ;86D4A3|        |      ;
                        db $00,$22,$00,$06,$08,$06,$18,$09   ;86D4AB|        |      ;
-                       db $14,$00,$00,$44,$00,$88,$08,$00   ;86D4B3|        |      ;
-                       db $00,$00,$00,$22,$00,$64,$08,$A7   ;86D4BB|        |      ;
-                       db $0C,$09,$19,$6C,$25,$EB,$04,$52   ;86D4C3|        |      ;
-                       db $46,$00,$00,$04,$0C,$06,$18,$0A   ;86D4CB|        |      ;
-                       db $1C,$22,$00,$44,$00,$A8,$08       ;86D4D3|        |      ;
+                       db $14,$00,$00,$44,$00,$88,$08       ;86D4B3|        |      ;
+                                                            ;      |        |      ;
+PAL_introGraveAnimNight_19:
+                       db $00,$00,$00,$00,$22,$00,$64,$08   ;86D4BA|        |      ;
+                       db $A7,$0C,$09,$19,$6C,$25,$EB,$04   ;86D4C2|        |      ;
+                       db $52,$46,$00,$00,$04,$0C,$06,$18   ;86D4CA|        |      ;
+                       db $0A,$1C,$22,$00,$44,$00,$A8,$08   ;86D4D2|        |      ;
                                                             ;      |        |      ;
 paletteDataSpriteStagel09_gold01:
                        dw $001F                             ;86D4DA|        |      ; paletteDataSpriteStagel09_zapfBatQuater01
@@ -9434,7 +9437,7 @@ paletteDataSpriteStagel09_gold01:
                        db $3F,$02,$36,$0D,$AF,$04,$49,$00   ;86D4EC|        |      ;
                        db $9F,$43,$76,$2A,$4B,$15,$0D,$4C   ;86D4F4|        |      ;
                                                             ;      |        |      ;
-    morePaletteData00:
+      PAL_endingTiles:
                        dw $017F                             ;86D4FC|        |      ;
                        db $93,$5A,$DF,$63,$DB,$42,$D0,$21   ;86D4FE|        |      ;
                        db $A5,$04,$42,$00,$E0,$01,$C3,$2C   ;86D506|        |      ;
@@ -9453,123 +9456,123 @@ paletteDataSpriteStagel09_gold01:
                        db $73,$56,$73,$52,$47,$00,$AF,$00   ;86D56E|        |      ;
                        db $77,$01,$7D,$16,$7F,$57,$6C,$41   ;86D576|        |      ;
                        db $00,$00,$52,$52,$31,$52,$10,$4E   ;86D57E|        |      ;
-                       db $EF,$4D,$CE,$49,$AD,$49,$8C,$45   ;86D586|        |49CE4D;
+                       db $EF,$4D,$CE,$49,$AD,$49,$8C,$45   ;86D586|        |      ;
                        db $6B,$45,$4A,$41,$29,$41,$08,$3D   ;86D58E|        |      ;
-                       db $E7,$38,$C6,$34,$A5,$30,$84,$2C   ;86D596|        |000038;
+                       db $E7,$38,$C6,$34,$A5,$30,$84,$2C   ;86D596|        |      ;
                        db $00,$00,$3E,$2A,$8A,$04,$2F,$01   ;86D59E|        |      ;
-                       db $3C,$1E,$3F,$27,$54,$15,$9F,$5F   ;86D5A6|        |003F1E;
+                       db $3C,$1E,$3F,$27,$54,$15,$9F,$5F   ;86D5A6|        |      ;
                        db $F8,$77,$B0,$52,$E3,$18,$C8,$35   ;86D5AE|        |      ;
-                       db $EF,$4D,$40,$04,$B3,$01,$03,$00   ;86D5B6|        |04404D;
+                       db $EF,$4D,$40,$04,$B3,$01,$03,$00   ;86D5B6|        |      ;
                        db $00,$00,$3E,$2A,$8A,$04,$F7,$6A   ;86D5BE|        |      ;
-                       db $3C,$1E,$FF,$26,$54,$15,$9F,$5F   ;86D5C6|        |00FF1E;
+                       db $3C,$1E,$FF,$26,$54,$15,$9F,$5F   ;86D5C6|        |      ;
                        db $F8,$77,$B0,$52,$E3,$18,$C8,$35   ;86D5CE|        |      ;
-                       db $EF,$4D,$40,$04,$08,$31,$03,$00   ;86D5D6|        |04404D;
+                       db $EF,$4D,$40,$04,$08,$31,$03,$00   ;86D5D6|        |      ;
                        db $00,$00,$3E,$22,$E9,$39,$06,$1D   ;86D5DE|        |      ;
-                       db $3C,$1E,$DF,$73,$07,$25,$7F,$47   ;86D5E6|        |00DF1E;
-                       db $95,$19,$9D,$1E,$60,$08,$DF,$36   ;86D5EE|        |000019;
-                       db $B0,$52,$9F,$02,$ED,$00,$B5,$01   ;86D5F6|        |86D64A;
-                       db $93,$5A,$DF,$63,$DB,$42,$D0,$21   ;86D5FE|        |00005A;
-                       db $A5,$04,$42,$00,$E0,$01,$C3,$2C   ;86D606|        |000004;
+                       db $3C,$1E,$DF,$73,$07,$25,$7F,$47   ;86D5E6|        |      ;
+                       db $95,$19,$9D,$1E,$60,$08,$DF,$36   ;86D5EE|        |      ;
+                       db $B0,$52,$9F,$02,$ED,$00,$B5,$01   ;86D5F6|        |      ;
+                       db $93,$5A,$DF,$63,$DB,$42,$D0,$21   ;86D5FE|        |      ;
+                       db $A5,$04,$42,$00,$E0,$01,$C3,$2C   ;86D606|        |      ;
                        db $00,$00,$02,$00,$00,$00,$00,$00   ;86D60E|        |      ;
                        db $00,$00,$00,$00,$00,$00,$B5,$56   ;86D616|        |      ;
                        db $00,$00,$FF,$7F,$B9,$73,$F2,$66   ;86D61E|        |      ;
                        db $EB,$4D,$46,$39,$2B,$5A,$60,$1C   ;86D626|        |      ;
                        db $00,$03,$02,$00,$47,$00,$AF,$00   ;86D62E|        |      ;
-                       db $77,$01,$7D,$16,$7F,$57,$B3,$5E   ;86D636|        |000001;
+                       db $77,$01,$7D,$16,$7F,$57,$B3,$5E   ;86D636|        |      ;
                        db $00,$00,$3E,$2A,$CC,$04,$2F,$01   ;86D63E|        |      ;
-                       db $3C,$1E,$3F,$27,$74,$1D,$5F,$57   ;86D646|        |003F1E;
+                       db $3C,$1E,$3F,$27,$74,$1D,$5F,$57   ;86D646|        |      ;
                        db $B8,$77,$70,$4E,$06,$1D,$E9,$39   ;86D64E|        |      ;
-                       db $EF,$4D,$60,$08,$B3,$01,$05,$00   ;86D656|        |08604D;
+                       db $EF,$4D,$60,$08,$B3,$01,$05,$00   ;86D656|        |      ;
                        db $00,$00,$3E,$22,$E9,$39,$06,$1D   ;86D65E|        |      ;
-                       db $3C,$1E,$DF,$73,$07,$25,$7F,$47   ;86D666|        |00DF1E;
-                       db $95,$19,$9D,$1E,$24,$00,$DF,$36   ;86D66E|        |000019;
-                       db $B0,$52,$9F,$02,$ED,$00,$B5,$01   ;86D676|        |86D6CA;
+                       db $3C,$1E,$DF,$73,$07,$25,$7F,$47   ;86D666|        |      ;
+                       db $95,$19,$9D,$1E,$24,$00,$DF,$36   ;86D66E|        |      ;
+                       db $B0,$52,$9F,$02,$ED,$00,$B5,$01   ;86D676|        |      ;
                                                             ;      |        |      ;
-  paletteDataMain0500:
+       PAL_koranot_00:
                        dw $001F                             ;86D67E|        |      ;
                        db $00,$00,$00,$00,$94,$42,$12,$32   ;86D680|        |      ;
                        db $B0,$29,$6D,$21,$0A,$19,$A8,$10   ;86D688|        |      ;
                        db $85,$0C,$B5,$5A,$96,$71,$95,$58   ;86D690|        |      ;
                        db $72,$3C,$6E,$24,$4A,$2C,$40,$18   ;86D698|        |      ;
                                                             ;      |        |      ;
-  paletteDataMain0501:
+       PAL_koranot_01:
                        dw $001F                             ;86D6A0|        |      ;
                        db $00,$00,$FC,$3A,$35,$1E,$B2,$15   ;86D6A2|        |      ;
                        db $0B,$0D,$86,$00,$00,$00,$20,$00   ;86D6AA|        |      ;
                        db $20,$04,$F7,$42,$94,$36,$31,$32   ;86D6B2|        |      ;
                        db $CE,$25,$4A,$19,$A5,$04,$42,$00   ;86D6BA|        |      ;
                                                             ;      |        |      ;
-  paletteDataMain0502:
+       PAL_koranot_02:
                        dw $001F                             ;86D6C2|        |      ;
                        db $00,$00,$96,$3E,$33,$32,$8F,$25   ;86D6C4|        |      ;
                        db $B5,$14,$B5,$46,$30,$56,$0A,$0D   ;86D6CC|        |      ;
                        db $65,$08,$7D,$05,$81,$46,$E1,$35   ;86D6D4|        |      ;
                        db $81,$31,$20,$25,$A0,$18,$40,$0C   ;86D6DC|        |      ;
                                                             ;      |        |      ;
-  paletteDataMain0503:
+unused_paletteDataMain0503:
                        dw $001F                             ;86D6E4|        |      ;
                        db $00,$00,$BB,$3A,$F7,$19,$95,$05   ;86D6E6|        |      ;
                        db $11,$01,$AC,$04,$67,$00,$04,$00   ;86D6EE|        |      ;
                        db $59,$26,$6E,$0C,$4B,$00,$D1,$04   ;86D6F6|        |      ;
                        db $55,$19,$0E,$3D,$D4,$55,$A8,$28   ;86D6FE|        |      ;
                                                             ;      |        |      ;
-  paletteDataMain0504:
+unused_paletteDataMain0504:
                        dw $001F                             ;86D706|        |      ;
                        db $00,$00,$BB,$3A,$F7,$19,$95,$05   ;86D708|        |      ;
                        db $11,$01,$AC,$04,$67,$00,$37,$5A   ;86D710|        |      ;
                        db $37,$5A,$37,$5A,$37,$5A,$37,$5A   ;86D718|        |      ;
                        db $37,$5A,$0E,$3D,$D4,$55,$A8,$28   ;86D720|        |      ;
                                                             ;      |        |      ;
-  paletteDataMain0505:
+unused_paletteDataMain0505:
                        dw $001F                             ;86D728|        |      ;
                        db $00,$00,$96,$3E,$33,$32,$8F,$25   ;86D72A|        |      ;
                        db $B5,$14,$B5,$46,$30,$56,$0A,$0D   ;86D732|        |      ;
                        db $65,$08,$7D,$05,$81,$46,$E1,$35   ;86D73A|        |      ;
                        db $81,$31,$20,$25,$A0,$18,$40,$0C   ;86D742|        |      ;
                                                             ;      |        |      ;
-  paletteDataMain0506:
+unused_paletteDataMain0506:
                        dw $001F                             ;86D74A|        |      ;
                        db $00,$00,$B5,$56,$10,$42,$4C,$51   ;86D74C|        |      ;
                        db $A7,$38,$45,$2C,$03,$20,$8C,$31   ;86D754|        |      ;
                        db $29,$25,$8E,$04,$14,$09,$98,$11   ;86D75C|        |      ;
                        db $01,$14,$C6,$18,$0E,$00,$63,$0C   ;86D764|        |      ;
                                                             ;      |        |      ;
-    paletteDataMain07:
+unused_paletteDataMain07:
                        dw $001F                             ;86D76C|        |      ;
                        db $2F,$01,$00,$32,$80,$21,$20,$19   ;86D76E|        |      ;
                        db $60,$3A,$B4,$00,$F7,$5E,$73,$4E   ;86D776|        |      ;
                        db $4A,$29,$BC,$36,$36,$32,$A0,$08   ;86D77E|        |      ;
                        db $6F,$1D,$EA,$10,$61,$10,$00,$00   ;86D786|        |      ;
                                                             ;      |        |      ;
-  paletteDataMain0508:
+unused_paletteDataMain0508:
                        dw $001F                             ;86D78E|        |      ;
                        db $00,$00,$BB,$3A,$F7,$19,$95,$05   ;86D790|        |      ;
                        db $11,$01,$AC,$04,$67,$00,$04,$00   ;86D798|        |      ;
                        db $59,$26,$6E,$0C,$4B,$00,$D1,$04   ;86D7A0|        |      ;
                        db $55,$19,$0E,$3D,$D4,$55,$A8,$28   ;86D7A8|        |      ;
                                                             ;      |        |      ;
-  paletteDataMain0509:
+unused_paletteDataMain0509:
                        dw $001F                             ;86D7B0|        |      ;
                        db $00,$00,$F7,$5E,$94,$52,$10,$42   ;86D7B2|        |      ;
                        db $8C,$31,$08,$1D,$84,$10,$21,$04   ;86D7BA|        |      ;
                        db $D9,$0D,$73,$01,$10,$05,$CC,$00   ;86D7C2|        |      ;
                        db $13,$00,$05,$20,$0A,$34,$0E,$4C   ;86D7CA|        |      ;
                                                             ;      |        |      ;
-  paletteDataMain0510:
+unused_paletteDataMain0510:
                        dw $001F                             ;86D7D2|        |      ;
                        db $00,$00,$93,$29,$A9,$04,$D7,$19   ;86D7D4|        |      ;
                        db $51,$01,$0D,$15,$44,$00,$D6,$2D   ;86D7DC|        |      ;
                        db $66,$29,$E2,$28,$60,$10,$20,$04   ;86D7E4|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86D7EC|        |      ;
                                                             ;      |        |      ;
-  paletteDataMain0511:
+unused_paletteDataMain0511:
                        dw $001F                             ;86D7F4|        |      ;
                        db $20,$00,$01,$00,$21,$00,$01,$00   ;86D7F6|        |      ;
                        db $01,$04,$01,$00,$01,$00,$00,$00   ;86D7FE|        |      ;
                        db $01,$00,$00,$00,$00,$00,$00,$04   ;86D806|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86D80E|        |      ;
                                                             ;      |        |      ;
-  paletteDataMain0512:
+           PAL_dancer:
                        dw $003F                             ;86D816|        |      ;
                        db $00,$00,$DE,$7B,$39,$67,$52,$4A   ;86D818|        |      ;
                        db $8C,$31,$08,$21,$84,$10,$14,$77   ;86D820|        |      ;
@@ -9580,7 +9583,7 @@ paletteDataSpriteStagel09_gold01:
                        db $98,$11,$C0,$01,$10,$05,$42,$00   ;86D848|        |      ;
                        db $00,$00,$EE,$0C,$00,$00,$00,$00   ;86D850|        |      ;
                                                             ;      |        |      ;
-paletteDataBossRowdin0513:
+           PAL_rowdin:
                        dw $003F                             ;86D858|        |      ;
                        db $00,$00,$7F,$6F,$99,$52,$F4,$3D   ;86D85A|        |      ;
                        db $4C,$29,$C8,$18,$44,$08,$01,$00   ;86D862|        |      ;
@@ -9591,21 +9594,21 @@ paletteDataBossRowdin0513:
                        db $78,$3E,$B2,$25,$0D,$11,$C9,$10   ;86D88A|        |      ;
                        db $65,$04,$5C,$1E,$0A,$34,$0E,$4C   ;86D892|        |      ;
                                                             ;      |        |      ;
-  paletteDataMain0514:
+       PAL_zapfBat_00:
                        dw $001F                             ;86D89A|        |      ;
                        db $00,$00,$3D,$4B,$BB,$36,$59,$26   ;86D89C|        |      ;
                        db $D5,$1D,$50,$15,$A9,$08,$44,$00   ;86D8A4|        |      ;
                        db $02,$00,$2E,$05,$1F,$3E,$C5,$46   ;86D8AC|        |      ;
                        db $21,$72,$E6,$63,$58,$7F,$BF,$7E   ;86D8B4|        |      ;
                                                             ;      |        |      ;
-  paletteDataMain0515:
+       PAL_zapfBat_01:
                        dw $001F                             ;86D8BC|        |      ;
                        db $FF,$7F,$FF,$7F,$FF,$7F,$FF,$7F   ;86D8BE|        |      ;
                        db $FF,$7F,$FF,$7F,$FF,$7F,$FF,$7F   ;86D8C6|        |      ;
                        db $FF,$7F,$FF,$7F,$FF,$7F,$FF,$7F   ;86D8CE|        |      ;
                        db $FF,$7F,$FF,$7F,$FF,$7F,$FF,$7F   ;86D8D6|        |      ;
                                                             ;      |        |      ;
-  paletteDataMain0516:
+unused_paletteDataMain0516:
                        dw $005F                             ;86D8DE|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86D8E0|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86D8E8|        |      ;
@@ -9620,7 +9623,7 @@ paletteDataBossRowdin0513:
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86D930|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86D938|        |      ;
                                                             ;      |        |      ;
-morePaletteBossGetHitColor01:
+    bossGetHitColor01:
                        dw $003F                             ;86D940|        |      ;
                        db $1F,$00,$00,$7C,$E0,$03,$1F,$00   ;86D942|        |      ;
                        db $00,$7C,$E0,$03,$1F,$00,$00,$7C   ;86D94A|        |      ;
@@ -9631,14 +9634,14 @@ morePaletteBossGetHitColor01:
                        db $E0,$03,$1F,$00,$00,$7C,$E0,$03   ;86D972|        |      ;
                        db $1F,$00,$00,$7C,$E0,$03,$1F,$00   ;86D97A|        |      ;
                                                             ;      |        |      ;
-    morePaletteData02:
+        PAL_medusa_01:
                        dw $001F                             ;86D982|        |      ;
                        db $2F,$01,$F8,$3D,$6A,$08,$1F,$43   ;86D984|        |      ;
                        db $3C,$1E,$F1,$1C,$02,$00,$BF,$6F   ;86D98C|        |      ;
                        db $B8,$77,$70,$4E,$28,$25,$62,$04   ;86D994|        |      ;
                        db $44,$00,$00,$00,$00,$00,$00,$00   ;86D99C|        |      ;
                                                             ;      |        |      ;
-    morePaletteData03:
+        PAL_medusa_02:
                        dw $005F                             ;86D9A4|        |      ;
                        db $01,$00,$FF,$53,$9B,$37,$52,$02   ;86D9A6|        |      ;
                        db $8C,$01,$E7,$00,$5F,$4B,$17,$15   ;86D9AE|        |      ;
@@ -9653,14 +9656,14 @@ morePaletteBossGetHitColor01:
                        db $22,$00,$9F,$57,$BF,$3E,$DB,$25   ;86D9F6|        |      ;
                        db $16,$0D,$AF,$00,$0B,$00,$26,$00   ;86D9FE|        |      ;
                                                             ;      |        |      ;
-    morePaletteData04:
+        PAL_medusa_00:
                        dw $001F                             ;86DA06|        |      ;
                        db $01,$00,$39,$67,$8C,$31,$9C,$73   ;86DA08|        |      ;
                        db $D7,$5A,$53,$4A,$C6,$18,$BD,$77   ;86DA10|        |      ;
                        db $9C,$73,$F7,$5E,$CE,$39,$08,$21   ;86DA18|        |      ;
                        db $08,$21,$00,$00,$00,$00,$00,$00   ;86DA20|        |      ;
                                                             ;      |        |      ;
-    morePaletteData05:
+            PAL_viper:
                        dw $005F                             ;86DA28|        |      ;
                        db $01,$00,$00,$24,$80,$30,$00,$2C   ;86DA2A|        |      ;
                        db $55,$73,$67,$45,$00,$00,$70,$5E   ;86DA32|        |      ;
@@ -9675,7 +9678,7 @@ morePaletteBossGetHitColor01:
                        db $4A,$29,$7C,$4B,$D4,$3E,$8D,$00   ;86DA7A|        |      ;
                        db $AC,$29,$C5,$10,$67,$00,$41,$00   ;86DA82|        |      ;
                                                             ;      |        |      ;
-    morePaletteData06:
+       PAL_puwexil_00:
                        dw $005F                             ;86DA8A|        |      ;
                        db $00,$00,$59,$5F,$93,$46,$0F,$36   ;86DA8C|        |      ;
                        db $8B,$25,$07,$15,$83,$04,$20,$00   ;86DA94|        |      ;
@@ -9690,42 +9693,42 @@ morePaletteBossGetHitColor01:
                        db $41,$08,$20,$08,$20,$04,$20,$04   ;86DADC|        |      ;
                        db $42,$08,$42,$08,$62,$08,$20,$04   ;86DAE4|        |      ;
                                                             ;      |        |      ;
-    morePaletteData07:
+       PAL_puwexil_01:
                        dw $001F                             ;86DAEC|        |      ;
                        db $00,$00,$02,$00,$AB,$04,$12,$11   ;86DAEE|        |      ;
                        db $96,$19,$1D,$26,$1E,$53,$FF,$7F   ;86DAF6|        |      ;
                        db $65,$00,$90,$00,$6C,$00,$F8,$10   ;86DAFE|        |      ;
                        db $BE,$15,$70,$49,$36,$5A,$00,$00   ;86DB06|        |      ;
                                                             ;      |        |      ;
-    morePaletteData08:
+  PAL_frank_bottle_00:
                        dw $001F                             ;86DB0E|        |      ;
                        db $00,$00,$5A,$6B,$94,$52,$EF,$3D   ;86DB10|        |      ;
                        db $4A,$29,$D0,$5C,$5B,$76,$08,$2C   ;86DB18|        |      ;
                        db $EB,$42,$AF,$5F,$28,$32,$FB,$7F   ;86DB20|        |      ;
                        db $72,$6F,$80,$56,$E7,$1C,$00,$00   ;86DB28|        |      ;
                                                             ;      |        |      ;
-    morePaletteData09:
+  PAL_frank_bottle_01:
                        dw $001F                             ;86DB30|        |      ;
                        db $00,$00,$5A,$6B,$94,$52,$EF,$3D   ;86DB32|        |      ;
                        db $4A,$29,$D0,$5C,$5B,$76,$08,$2C   ;86DB3A|        |      ;
                        db $DB,$65,$3F,$72,$36,$41,$1E,$7F   ;86DB42|        |      ;
                        db $77,$7E,$2D,$7D,$21,$00,$00,$00   ;86DB4A|        |      ;
                                                             ;      |        |      ;
-    morePaletteData10:
+            PAL_frank:
                        dw $001F                             ;86DB52|        |      ;
                        db $00,$00,$1C,$4B,$76,$3E,$D0,$29   ;86DB54|        |      ;
                        db $4C,$1D,$09,$11,$D9,$72,$53,$5E   ;86DB5C|        |      ;
                        db $AD,$49,$09,$35,$E6,$14,$41,$10   ;86DB64|        |      ;
                        db $CA,$0C,$0C,$09,$83,$04,$C5,$04   ;86DB6C|        |      ;
                                                             ;      |        |      ;
-    morePaletteData11:
+  PAL_frank_bottle_02:
                        dw $001F                             ;86DB74|        |      ;
                        db $00,$00,$5A,$6B,$94,$52,$EF,$3D   ;86DB76|        |      ;
                        db $4A,$29,$D0,$5C,$5B,$76,$08,$2C   ;86DB7E|        |      ;
                        db $F7,$5E,$9C,$73,$31,$46,$00,$00   ;86DB86|        |      ;
                        db $00,$00,$00,$00,$21,$00,$00,$00   ;86DB8E|        |      ;
                                                             ;      |        |      ;
-    morePaletteData12:
+       PAL_gaibone_00:
                        dw $005F                             ;86DB96|        |      ;
                        db $00,$00,$03,$00,$CC,$00,$6F,$19   ;86DB98|        |      ;
                        db $5D,$01,$5C,$0A,$DE,$17,$FE,$73   ;86DBA0|        |      ;
@@ -9740,7 +9743,7 @@ morePaletteBossGetHitColor01:
                        db $AA,$10,$ED,$1C,$6E,$08,$B5,$0C   ;86DBE8|        |      ;
                        db $38,$29,$E5,$30,$EE,$55,$B5,$7E   ;86DBF0|        |      ;
                                                             ;      |        |      ;
-    morePaletteData13:
+       PAL_gaibone_01:
                        dw $005F                             ;86DBF8|        |      ;
                        db $00,$00,$03,$00,$CC,$00,$6F,$19   ;86DBFA|        |      ;
                        db $5D,$01,$5C,$0A,$DE,$17,$FE,$73   ;86DC02|        |      ;
@@ -9755,7 +9758,7 @@ morePaletteBossGetHitColor01:
                        db $44,$25,$C8,$2D,$6E,$08,$B5,$0C   ;86DC4A|        |      ;
                        db $38,$29,$E5,$18,$EE,$3D,$B5,$52   ;86DC52|        |      ;
                                                             ;      |        |      ;
-    morePaletteData14:
+        PAL_slogra_00:
                        dw $005F                             ;86DC5A|        |      ;
                        db $00,$00,$61,$00,$87,$08,$0A,$11   ;86DC5C|        |      ;
                        db $B3,$21,$DA,$46,$65,$00,$AA,$08   ;86DC64|        |      ;
@@ -9770,15 +9773,15 @@ morePaletteBossGetHitColor01:
                        db $1E,$02,$7E,$03,$FF,$57,$00,$00   ;86DCAC|        |      ;
                        db $08,$21,$EF,$3D,$B5,$56,$FE,$7F   ;86DCB4|        |      ;
                                                             ;      |        |      ;
-moreSingleColorLoad00:
+PAL_slogra_singlCo_00:
                        dw $0001                             ;86DCBC|        |      ;
                        db $EC,$33                           ;86DCBE|        |      ;
                                                             ;      |        |      ;
-moreSingleColorLoad01:
+unused_moreSingleColorLoad01:
                        dw $0001                             ;86DCC0|        |      ;
                        db $EC,$33                           ;86DCC2|        |      ;
                                                             ;      |        |      ;
-    morePaletteData15:
+        PAL_slogra_01:
                        dw $005F                             ;86DCC4|        |      ;
                        db $00,$00,$00,$00,$00,$00,$A5,$14   ;86DCC6|        |      ;
                        db $EF,$3D,$EC,$33,$65,$00,$05,$00   ;86DCCE|        |      ;
@@ -9793,7 +9796,7 @@ moreSingleColorLoad01:
                        db $1E,$02,$7E,$03,$FF,$57,$00,$00   ;86DD16|        |      ;
                        db $08,$21,$EF,$3D,$B5,$56,$FE,$7F   ;86DD1E|        |      ;
                                                             ;      |        |      ;
-    morePaletteData16:
+           PAL_grakul:
                        dw $005F                             ;86DD26|        |      ;
                        db $00,$00,$FF,$7F,$B9,$46,$B2,$25   ;86DD28|        |      ;
                        db $0C,$01,$67,$00,$04,$00,$01,$00   ;86DD30|        |      ;
@@ -9808,21 +9811,21 @@ moreSingleColorLoad01:
                        db $D9,$0D,$73,$01,$10,$05,$42,$00   ;86DD78|        |      ;
                        db $45,$04,$EE,$0C,$97,$19,$3D,$26   ;86DD80|        |      ;
                                                             ;      |        |      ;
-    morePaletteData17:
+         PAL_mummy_00:
                        dw $001F                             ;86DD88|        |      ;
                        db $01,$00,$1D,$4B,$98,$3A,$14,$2E   ;86DD8A|        |      ;
                        db $90,$1D,$0C,$15,$88,$00,$02,$00   ;86DD92|        |      ;
                        db $A0,$01,$00,$00,$00,$00,$00,$00   ;86DD9A|        |      ;
                        db $F2,$00,$9F,$57,$9E,$3E,$B9,$19   ;86DDA2|        |      ;
                                                             ;      |        |      ;
-    morePaletteData18:
+         PAL_mummy_01:
                        dw $001F                             ;86DDAA|        |      ;
                        db $00,$00,$BD,$77,$39,$67,$73,$4E   ;86DDAC|        |      ;
                        db $8C,$31,$29,$25,$84,$10,$21,$04   ;86DDB4|        |      ;
                        db $D9,$0D,$73,$01,$10,$05,$42,$00   ;86DDBC|        |      ;
                        db $F2,$00,$9F,$57,$9E,$3E,$B9,$19   ;86DDC4|        |      ;
                                                             ;      |        |      ;
-    morePaletteData19:
+            PAL_death:
                        dw $005F                             ;86DDCC|        |      ;
                        db $00,$00,$0B,$00,$40,$14,$A4,$20   ;86DDCE|        |      ;
                        db $E6,$30,$89,$49,$D1,$1D,$5F,$40   ;86DDD6|        |      ;
@@ -9837,15 +9840,15 @@ moreSingleColorLoad01:
                        db $D6,$56,$46,$04,$8A,$0C,$32,$15   ;86DE1E|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86DE26|        |      ;
                                                             ;      |        |      ;
-moreSingleColorLoad02:
+ PAL_death_singlCo_00:
                        dw $0001                             ;86DE2E|        |      ;
                        db $0B,$00                           ;86DE30|        |      ;
                                                             ;      |        |      ;
-moreSingleColorLoad03:
+ PAL_death_singlCo_01:
                        dw $0003                             ;86DE32|        |      ;
                        db $5F,$40,$1F,$00                   ;86DE34|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel0B_drac01:
+           PAL_drac01:
                        dw $003F                             ;86DE38|        |      ;
                        db $00,$00,$94,$5A,$A6,$0C,$4A,$31   ;86DE3A|        |      ;
                        db $31,$4A,$01,$0C,$42,$14,$82,$1C   ;86DE42|        |      ;
@@ -9856,18 +9859,18 @@ paletteDataSpriteStagel0B_drac01:
                        db $FF,$7F,$00,$00,$3D,$7F,$A5,$14   ;86DE6A|        |      ;
                        db $73,$4E,$DD,$1D,$6B,$2D,$BF,$3A   ;86DE72|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationXX08:
+          PAL_drac_A0:
                        dw $0001                             ;86DE7A|        |      ;
                        db $FF,$7F                           ;86DE7C|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel05_castlEntrance:
+spritePAL_Stage5_castlEntrance:
                        dw $001F                             ;86DE7E|        |      ;
                        db $01,$00,$51,$4B,$BF,$53,$9A,$32   ;86DE80|        |      ;
                        db $00,$00,$BA,$01,$00,$00,$4E,$01   ;86DE88|        |      ;
                        db $66,$00,$00,$00,$00,$00,$00,$00   ;86DE90|        |      ;
                        db $F3,$5B,$8B,$32,$66,$1D,$A2,$10   ;86DE98|        |      ;
                                                             ;      |        |      ;
-paletteDataStage1Beginning:
+lvlGFX_stage1_entrance:
                        dw $009F                             ;86DEA0|        |      ; firstByte is alwayse teh size of palette data to load
                        db $22,$10,$18,$36,$98,$09,$B2,$08   ;86DEA2|        |      ;
                        db $6C,$00,$8E,$30,$48,$00,$AB,$08   ;86DEAA|        |      ;
@@ -9890,7 +9893,7 @@ paletteDataStage1Beginning:
                        db $22,$11,$E2,$08,$A0,$0C,$84,$10   ;86DF32|        |      ;
                        db $A9,$08,$0F,$05,$86,$08,$41,$08   ;86DF3A|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStage1Beginning:
+          spritePAL_0:
                        dw $003F                             ;86DF42|        |      ;
                        db $23,$20,$AE,$35,$6C,$29,$2A,$25   ;86DF44|        |      ;
                        db $00,$00,$C7,$18,$E6,$2C,$03,$10   ;86DF4C|        |      ;
@@ -9901,7 +9904,7 @@ paletteDataSpriteStage1Beginning:
                        db $55,$3A,$4C,$42,$86,$31,$06,$25   ;86DF74|        |      ;
                        db $C3,$1C,$82,$0C,$C6,$01,$00,$00   ;86DF7C|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel01_Garden:
+ lvlPAL_Stage1_Garden:
                        dw $00BF                             ;86DF84|        |      ;
                        db $00,$00,$B4,$02,$2D,$02,$AA,$0D   ;86DF86|        |      ;
                        db $46,$01,$E3,$00,$A2,$00,$00,$00   ;86DF8E|        |      ;
@@ -9928,22 +9931,22 @@ paletteDataTilesStagel01_Garden:
                        db $EC,$00,$A7,$00,$05,$00,$25,$01   ;86E036|        |      ;
                        db $29,$35,$00,$00,$00,$00,$00,$00   ;86E03E|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel01_Garden:
+spritePAL_Stage1_Garden:
                        dw $001F                             ;86E046|        |      ;
                        db $00,$00,$16,$22,$52,$11,$CF,$0C   ;86E048|        |      ;
                        db $2B,$0C,$00,$00,$00,$00,$00,$00   ;86E050|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86E058|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86E060|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationStagel01_Garden00:
+lvlPAL_Anim_1_Garden00:
                        dw $0003                             ;86E068|        |      ;
                        db $E0,$75,$F4,$03                   ;86E06A|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationStagel01_Garden01:
+lvlPAL_Anim_1_Garden01:
                        dw $0003                             ;86E06E|        |      ;
                        db $DA,$00,$0B,$50                   ;86E070|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel01_Castle:
+ lvlPAL_Stage1_Castle:
                        dw $00BF                             ;86E074|        |      ;
                        db $00,$00,$00,$00,$11,$56,$52,$01   ;86E076|        |      ;
                        db $D1,$00,$0D,$00,$46,$1C,$AC,$3D   ;86E07E|        |      ;
@@ -9970,26 +9973,26 @@ paletteDataTilesStagel01_Castle:
                        db $00,$00,$00,$00,$01,$08,$01,$10   ;86E126|        |      ;
                        db $02,$18,$02,$20,$03,$28,$04,$2C   ;86E12E|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel01_Castle:
+spritePAL_Stage1_Castle:
                        dw $001F                             ;86E136|        |      ;
                        db $00,$00,$AE,$39,$6C,$29,$2A,$25   ;86E138|        |      ;
                        db $4B,$01,$C7,$18,$E6,$2C,$89,$00   ;86E140|        |      ;
                        db $A8,$00,$00,$00,$EB,$2C,$D3,$46   ;86E148|        |      ;
                        db $D0,$31,$2A,$2D,$A6,$20,$05,$14   ;86E150|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationStagel01_Castle00:
+lvlPAL_Anim_1_Castle00:
                        dw $0005                             ;86E158|        |      ;
                        db $64,$2C,$83,$38,$65,$34           ;86E15A|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationStagel01_Castle01:
+lvlPAL_Anim_1_Castle01:
                        dw $0005                             ;86E160|        |      ;
                        db $65,$34,$64,$2C,$83,$38           ;86E162|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationStagel01_Castle02:
+lvlPAL_Anim_1_Castle02:
                        dw $0005                             ;86E168|        |      ;
                        db $83,$38,$65,$34,$64,$2C           ;86E16A|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel01_Stable:
+ lvlPAL_Stage1_Stable:
                        dw $00BF                             ;86E170|        |      ;
                        db $00,$00,$00,$00,$B5,$6E,$99,$46   ;86E172|        |      ;
                        db $11,$2E,$08,$26,$6B,$35,$08,$25   ;86E17A|        |      ;
@@ -10016,7 +10019,7 @@ paletteDataTilesStagel01_Stable:
                        db $01,$0C,$02,$10,$03,$14,$C0,$39   ;86E222|        |      ;
                        db $60,$29,$E0,$1C,$60,$0C,$A0,$00   ;86E22A|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteTilesStagel01_Stable:
+spritePAL_Stage1_Stable:
                        dw $003F                             ;86E232|        |      ;
                        db $00,$00,$8B,$4D,$49,$3D,$E6,$2C   ;86E234|        |      ;
                        db $00,$00,$A4,$14,$05,$3D,$00,$00   ;86E23C|        |      ;
@@ -10027,7 +10030,7 @@ paletteDataSpriteTilesStagel01_Stable:
                        db $83,$00,$42,$00,$00,$00,$00,$00   ;86E264|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86E26C|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel02_graveyard:
+lvlPAL_Stage2_graveyard:
                        dw $009F                             ;86E274|        |      ;
                        db $00,$28,$41,$04,$D1,$12,$2E,$05   ;86E276|        |      ;
                        db $EA,$04,$A8,$00,$66,$04,$44,$00   ;86E27E|        |      ;
@@ -10050,14 +10053,14 @@ paletteDataTilesStagel02_graveyard:
                        db $63,$1C,$8E,$39,$4C,$35,$2A,$2D   ;86E306|        |      ;
                        db $E8,$24,$A5,$1C,$83,$10,$61,$0C   ;86E30E|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel02_graveyard:
+spritePAL_Stage2_graveyard:
                        dw $001F                             ;86E316|        |      ;
                        db $63,$00,$72,$05,$0E,$05,$CA,$00   ;86E318|        |      ;
                        db $94,$79,$D2,$6C,$6D,$50,$49,$34   ;86E320|        |      ;
                        db $15,$0C,$00,$00,$00,$00,$00,$00   ;86E328|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86E330|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel02_swamp00:
+lvlPAL_Stage2_swamp00:
                        dw $00BF                             ;86E338|        |      ;
                        db $40,$18,$21,$04,$75,$42,$D0,$29   ;86E33A|        |      ;
                        db $2C,$19,$E8,$18,$A7,$04,$64,$00   ;86E342|        |      ;
@@ -10084,44 +10087,44 @@ paletteDataTilesStagel02_swamp00:
                        db $45,$0C,$49,$31,$07,$25,$C5,$20   ;86E3EA|        |      ;
                        db $A4,$18,$83,$14,$62,$10,$41,$10   ;86E3F2|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel02_swamp:
+spritePAL_Stage2_swamp:
                        dw $001F                             ;86E3FA|        |      ;
                        db $00,$00,$43,$00,$7F,$53,$76,$32   ;86E3FC|        |      ;
                        db $B0,$19,$0A,$09,$C5,$0C,$83,$08   ;86E404|        |      ;
                        db $50,$01,$EB,$00,$A8,$00,$03,$01   ;86E40C|        |      ;
                        db $4E,$00,$F3,$14,$00,$00,$00,$00   ;86E414|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationStagel02_Swamp00:
+lvlPAL_Anim_2_Swamp00:
                        dw $000B                             ;86E41C|        |      ;
                        db $0F,$01,$ED,$00,$CD,$08,$AB,$00   ;86E41E|        |      ;
                        db $CC,$00,$ED,$08                   ;86E426|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationStagel02_Swamp01:
+lvlPAL_Anim_2_Swamp01:
                        dw $000B                             ;86E42A|        |      ;
                        db $ED,$08,$0F,$01,$ED,$00,$CD,$08   ;86E42C|        |      ;
                        db $AB,$00,$CC,$00                   ;86E434|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationStagel02_Swamp02:
+lvlPAL_Anim_2_Swamp02:
                        dw $000B                             ;86E438|        |      ;
                        db $CC,$00,$ED,$08,$0F,$01,$ED,$00   ;86E43A|        |      ;
                        db $CD,$08,$AB,$00                   ;86E442|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationStagel02_Swamp03:
+lvlPAL_Anim_2_Swamp03:
                        dw $000B                             ;86E446|        |      ;
                        db $AB,$00,$CC,$00,$ED,$08,$0F,$01   ;86E448|        |      ;
                        db $ED,$00,$CD,$08                   ;86E450|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationStagel02_Swamp04:
+lvlPAL_Anim_2_Swamp04:
                        dw $000B                             ;86E454|        |      ;
                        db $CD,$08,$AB,$00,$CC,$00,$ED,$08   ;86E456|        |      ;
                        db $0F,$01,$ED,$00                   ;86E45E|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationStagel02_Swamp05:
+lvlPAL_Anim_2_Swamp05:
                        dw $000B                             ;86E462|        |      ;
                        db $ED,$00,$CD,$08,$AB,$00,$CC,$00   ;86E464|        |      ;
                        db $ED,$08,$0F,$01                   ;86E46C|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel02_waterSlide00:
+lvlPAL_Stage2_waterSlide00:
                        dw $00DF                             ;86E470|        |      ;
                        db $00,$00,$2E,$3A,$CE,$29,$69,$1D   ;86E472|        |      ;
                        db $00,$00,$CB,$25,$68,$19,$07,$11   ;86E47A|        |      ;
@@ -10152,52 +10155,52 @@ paletteDataTilesStagel02_waterSlide00:
                        db $00,$00,$28,$7B,$07,$56,$87,$41   ;86E542|        |      ;
                        db $47,$39,$27,$31,$07,$2D,$E5,$24   ;86E54A|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationWaterSlide00:
+lvlPAL_Anim_2_WaterSlide00:
                        dw $000B                             ;86E552|        |      ;
                        db $69,$41,$2A,$3D,$07,$3D,$05,$31   ;86E554|        |      ;
                        db $27,$29,$46,$31                   ;86E55C|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationWaterSlide01:
+lvlPAL_Anim_2_WaterSlide01:
                        dw $000B                             ;86E560|        |      ;
                        db $46,$31,$69,$41,$2A,$3D,$07,$3D   ;86E562|        |      ;
                        db $05,$31,$27,$29                   ;86E56A|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationWaterSlide02:
+lvlPAL_Anim_2_WaterSlide02:
                        dw $000B                             ;86E56E|        |      ;
                        db $27,$29,$46,$31,$69,$41,$2A,$3D   ;86E570|        |      ;
                        db $07,$3D,$05,$31                   ;86E578|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationWaterSlide03:
+lvlPAL_Anim_2_WaterSlide03:
                        dw $000B                             ;86E57C|        |      ;
                        db $05,$31,$27,$29,$46,$31,$69,$41   ;86E57E|        |      ;
                        db $2A,$3D,$07,$3D                   ;86E586|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationWaterSlide04:
+lvlPAL_Anim_2_WaterSlide04:
                        dw $000B                             ;86E58A|        |      ;
                        db $07,$3D,$05,$31,$27,$29,$46,$31   ;86E58C|        |      ;
                        db $69,$41,$2A,$3D                   ;86E594|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationWaterSlide05:
+lvlPAL_Anim_2_WaterSlide05:
                        dw $000B                             ;86E598|        |      ;
                        db $2A,$3D,$07,$3D,$05,$31,$27,$29   ;86E59A|        |      ;
                        db $46,$31,$69,$41                   ;86E5A2|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationWaterSlide10:
+lvlPAL_Anim_2_WaterSlide10:
                        dw $0003                             ;86E5A6|        |      ;
                        db $26,$35,$87,$35                   ;86E5A8|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationWaterSlide11:
+lvlPAL_Anim_2_WaterSlide11:
                        dw $0003                             ;86E5AC|        |      ;
                        db $C7,$35,$26,$35                   ;86E5AE|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel02_waterSlide:
+spritePAL_Stage2_waterSlide:
                        dw $001F                             ;86E5B2|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86E5B4|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86E5BC|        |      ;
                        db $00,$00,$00,$00,$00,$00,$14,$53   ;86E5C4|        |      ;
                        db $EC,$2D,$29,$21,$00,$00,$21,$0C   ;86E5CC|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel03_cave:
+   lvlPAL_Stage3_cave:
                        dw $005F                             ;86E5D4|        |      ;
                        db $00,$00,$62,$1D,$21,$19,$E0,$14   ;86E5D6|        |      ;
                        db $00,$00,$21,$1D,$E0,$14,$A0,$10   ;86E5DE|        |      ;
@@ -10212,21 +10215,21 @@ paletteDataTilesStagel03_cave:
                        db $05,$19,$A4,$0C,$00,$00,$00,$00   ;86E626|        |      ;
                        db $44,$04,$00,$00,$00,$00,$67,$10   ;86E62E|        |      ;
                                                             ;      |        |      ;
-paletteDataTileStagel03_cave00:
+ lvlPAL_Stage3_cave00:
                        dw $001F                             ;86E636|        |      ;
                        db $00,$00,$00,$00,$AD,$35,$6D,$29   ;86E638|        |      ;
                        db $2C,$21,$EA,$14,$A8,$0C,$86,$08   ;86E640|        |      ;
                        db $65,$08,$40,$08,$44,$08,$C6,$20   ;86E648|        |      ;
                        db $20,$10,$21,$10,$00,$00,$00,$00   ;86E650|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel03_cave00:
+spritePAL_Stage3_cave00:
                        dw $001F                             ;86E658|        |      ;
                        db $00,$00,$00,$00,$96,$52,$56,$42   ;86E65A|        |      ;
                        db $F3,$31,$72,$1D,$0D,$0D,$CC,$0C   ;86E662|        |      ;
                        db $8A,$08,$64,$0C,$2B,$18,$CD,$3D   ;86E66A|        |      ;
                        db $44,$04,$28,$31,$00,$00,$67,$10   ;86E672|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel03_waterfall:
+lvlPAL_Stage3_waterfall:
                        dw $00BF                             ;86E67A|        |      ;
                        db $84,$00,$13,$42,$8B,$31,$E7,$30   ;86E67C|        |      ;
                        db $00,$00,$08,$31,$A6,$28,$43,$20   ;86E684|        |      ;
@@ -10253,24 +10256,24 @@ paletteDataTilesStagel03_waterfall:
                        db $8D,$04,$61,$08,$22,$0C,$A2,$10   ;86E72C|        |      ;
                        db $E3,$08,$00,$00,$00,$00,$00,$00   ;86E734|        |      ;
                                                             ;      |        |      ;
-paletteDataSpritesStagel03_waterfall:
+spritePAL_Stage3_waterfall:
                        dw $001F                             ;86E73C|        |      ;
                        db $00,$00,$37,$22,$90,$05,$17,$01   ;86E73E|        |      ;
                        db $D1,$00,$6E,$00,$8A,$00,$27,$00   ;86E746|        |      ;
                        db $D0,$3E,$C7,$21,$03,$15,$5F,$4B   ;86E74E|        |      ;
                        db $59,$26,$52,$05,$CC,$04,$22,$08   ;86E756|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationWaterfall00:
+lvlPAL_Anim_3_waterFall_00:
                        dw $0009                             ;86E75E|        |      ;
                        db $28,$21,$8E,$3E,$16,$5B,$0E,$2E   ;86E760|        |      ;
                        db $B2,$42                           ;86E768|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationWaterfal01:
+lvlPAL_Anim_3_waterFall_01:
                        dw $0009                             ;86E76A|        |      ;
                        db $84,$18,$16,$5B,$8E,$3E,$B2,$42   ;86E76C|        |      ;
                        db $0E,$2E                           ;86E774|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel03_aquaduct:
+lvlPAL_Stage3_aquaduct:
                        dw $00BF                             ;86E776|        |      ;
                        db $00,$00,$4E,$46,$CF,$19,$10,$11   ;86E778|        |      ;
                        db $AE,$04,$A7,$00,$27,$24,$00,$14   ;86E780|        |      ;
@@ -10297,39 +10300,39 @@ paletteDataTilesStagel03_aquaduct:
                        db $00,$00,$11,$7E,$6A,$7D,$25,$38   ;86E828|        |      ;
                        db $00,$3C,$00,$00,$00,$00,$00,$00   ;86E830|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel03_aquaduct:
+spritePAL_Stage3_aquaduct:
                        dw $001F                             ;86E838|        |      ;
                        db $00,$3C,$6E,$4E,$CE,$15,$30,$11   ;86E83A|        |      ;
                        db $AD,$04,$C7,$00,$47,$30,$00,$1C   ;86E842|        |      ;
                        db $36,$63,$8A,$69,$E9,$30,$14,$53   ;86E84A|        |      ;
                        db $EC,$2D,$29,$21,$C6,$18,$21,$0C   ;86E852|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationAquaduct00:
+lvlPAL_Anim_3_Aquaduct00:
                        dw $0009                             ;86E85A|        |      ;
                        db $02,$30,$03,$38,$06,$44,$00,$40   ;86E85C|        |      ;
                        db $00,$38                           ;86E864|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationAquaduct01:
+lvlPAL_Anim_3_Aquaduct01:
                        dw $0009                             ;86E866|        |      ;
                        db $00,$38,$02,$30,$03,$38,$06,$44   ;86E868|        |      ;
                        db $00,$40                           ;86E870|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationAquaduct02:
+lvlPAL_Anim_3_Aquaduct02:
                        dw $0009                             ;86E872|        |      ;
                        db $00,$40,$00,$38,$02,$30,$03,$38   ;86E874|        |      ;
                        db $06,$44                           ;86E87C|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationAquaduct03:
+lvlPAL_Anim_3_Aquaduct03:
                        dw $0009                             ;86E87E|        |      ;
                        db $06,$44,$00,$40,$00,$38,$02,$30   ;86E880|        |      ;
                        db $03,$38                           ;86E888|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationAquaduct04:
+lvlPAL_Anim_3_Aquaduct04:
                        dw $0009                             ;86E88A|        |      ;
                        db $03,$38,$06,$44,$00,$40,$00,$38   ;86E88C|        |      ;
                        db $02,$30                           ;86E894|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel04_SkullTower:
+lvlPAL_Stage4_SkullTower:
                        dw $009F                             ;86E896|        |      ;
                        db $00,$00,$00,$00,$94,$5F,$8D,$4E   ;86E898|        |      ;
                        db $E9,$3D,$67,$41,$E6,$34,$A5,$24   ;86E8A0|        |      ;
@@ -10352,18 +10355,18 @@ paletteDataTilesStagel04_SkullTower:
                        db $66,$20,$00,$00,$25,$2C,$06,$20   ;86E928|        |      ;
                        db $42,$20,$00,$00,$00,$00,$00,$0C   ;86E930|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel04_SkullTower:
+spritePAL_Stage4_SkullTower:
                        dw $001F                             ;86E938|        |      ;
                        db $08,$00,$83,$00,$D2,$33,$EA,$0E   ;86E93A|        |      ;
                        db $E3,$01,$23,$01,$C3,$0C,$44,$10   ;86E942|        |      ;
                        db $A3,$1C,$C9,$31,$00,$00,$C8,$08   ;86E94A|        |      ;
                        db $86,$24,$E5,$28,$00,$00,$00,$00   ;86E952|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationSkullTower00:
+lvlPAL_Anim_4_SkullTower00:
                        dw $0001                             ;86E95A|        |      ;
                        db $14,$00                           ;86E95C|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel04_RotatingRoom:
+lvlPAL_Stage4_RotatingRoom:
                        dw $003F                             ;86E95E|        |      ;
                        db $00,$00,$51,$31,$11,$19,$B0,$00   ;86E960|        |      ;
                        db $6C,$0C,$09,$18,$06,$04,$22,$04   ;86E968|        |      ;
@@ -10374,14 +10377,14 @@ paletteDataTilesStagel04_RotatingRoom:
                        db $70,$49,$0C,$49,$AA,$3C,$AE,$29   ;86E990|        |      ;
                        db $2B,$15,$AB,$08,$00,$00,$00,$00   ;86E998|        |      ;
                                                             ;      |        |      ;
-paletteDataSprtieStagel04_RotatingRoom:
+spritePAL_Stage4_RotatingRoom:
                        dw $001F                             ;86E9A0|        |      ;
                        db $4C,$21,$FC,$01,$38,$01,$D1,$00   ;86E9A2|        |      ;
                        db $6C,$00,$45,$00,$00,$00,$00,$00   ;86E9AA|        |      ;
                        db $00,$00,$00,$00,$00,$00,$39,$33   ;86E9B2|        |      ;
                        db $35,$0E,$6D,$09,$E8,$04,$A5,$04   ;86E9BA|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel04_washingmachine:
+lvlPAL_Stage4_washingmachine:
                        dw $007F                             ;86E9C2|        |      ;
                        db $00,$00,$30,$21,$CE,$1C,$AA,$1C   ;86E9C4|        |      ;
                        db $88,$1C,$45,$14,$02,$10,$E3,$0C   ;86E9CC|        |      ;
@@ -10400,14 +10403,14 @@ paletteDataTilesStagel04_washingmachine:
                        db $16,$15,$D2,$14,$2F,$10,$0C,$0C   ;86EA34|        |      ;
                        db $08,$0C,$04,$08,$00,$00,$00,$00   ;86EA3C|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel04_washingmachine:
+spritePAL_Stage4_washingmachine:
                        dw $001F                             ;86EA44|        |      ;
                        db $00,$00,$34,$2E,$B1,$15,$2E,$0D   ;86EA46|        |      ;
                        db $CB,$08,$6A,$04,$08,$00,$05,$08   ;86EA4E|        |      ;
                        db $D9,$01,$0A,$0C,$9E,$56,$F7,$49   ;86EA56|        |      ;
                        db $B6,$31,$16,$15,$D2,$14,$2F,$10   ;86EA5E|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel04_koranotQuater:
+lvlPAL_Stage4_koranotQuater:
                        dw $00BF                             ;86EA66|        |      ;
                        db $00,$00,$E3,$00,$A2,$04,$60,$00   ;86EA68|        |      ;
                        db $00,$00,$44,$20,$25,$18,$23,$0C   ;86EA70|        |      ;
@@ -10434,14 +10437,14 @@ paletteDataTilesStagel04_koranotQuater:
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86EB18|        |      ;
                        db $00,$00,$00,$00,$00,$00,$48,$15   ;86EB20|        |      ;
                                                             ;      |        |      ;
-paletteDataSprtieStagel04_koranotQuater:
+spritePAL_Stage4_koranotQuater:
                        dw $001F                             ;86EB28|        |      ;
                        db $00,$00,$00,$00,$98,$79,$B4,$78   ;86EB2A|        |      ;
                        db $4E,$5C,$4A,$4C,$27,$3C,$24,$2C   ;86EB32|        |      ;
                        db $85,$0C,$99,$66,$96,$71,$95,$58   ;86EB3A|        |      ;
                        db $72,$3C,$6E,$24,$4A,$2C,$40,$18   ;86EB42|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel05_blueGune:
+lvlPAL_Stage5_blueGune:
                        dw $00BF                             ;86EB4A|        |      ;
                        db $80,$00,$00,$00,$C5,$68,$43,$50   ;86EB4C|        |      ;
                        db $42,$3C,$41,$30,$21,$20,$00,$00   ;86EB54|        |      ;
@@ -10468,11 +10471,11 @@ paletteDataTilesStagel05_blueGune:
                        db $83,$0C,$00,$00,$68,$21,$07,$19   ;86EBFC|        |      ;
                        db $C4,$10,$00,$00,$08,$28,$04,$10   ;86EC04|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationBlueGune:
+lvlPAL_Anim_5_BlueGune:
                        dw $0005                             ;86EC0C|        |      ;
                        db $08,$00,$0E,$00,$59,$00           ;86EC0E|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel05_castlEntrance:
+lvlPAL_Stage5_castlEntrance:
                        dw $007F                             ;86EC14|        |      ;
                        db $21,$00,$41,$04,$34,$4A,$B0,$35   ;86EC16|        |      ;
                        db $6D,$31,$4C,$21,$2A,$25,$08,$21   ;86EC1E|        |      ;
@@ -10491,11 +10494,11 @@ paletteDataTilesStagel05_castlEntrance:
                        db $69,$3D,$05,$25,$83,$14,$23,$04   ;86EC86|        |      ;
                        db $65,$08,$00,$00,$41,$04,$62,$00   ;86EC8E|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationCastleEntrance:
+lvlPAL_Anim_6_CastleEntrance:
                        dw $0001                             ;86EC96|        |      ;
                        db $2E,$60                           ;86EC98|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel06_castleEntrance:
+lvlPAL_Stage6_castleEntrance:
                        dw $009F                             ;86EC9A|        |      ;
                        db $00,$00,$C4,$1C,$A3,$18,$82,$18   ;86EC9C|        |      ;
                        db $00,$00,$29,$25,$07,$21,$E6,$1C   ;86ECA4|        |      ;
@@ -10518,7 +10521,7 @@ paletteDataTilesStagel06_castleEntrance:
                        db $E4,$30,$C3,$24,$A4,$18,$61,$14   ;86ED2C|        |      ;
                        db $43,$08,$00,$00,$00,$00,$00,$00   ;86ED34|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel06_chandelire:
+lvlPAL_Stage6_chandelire:
                        dw $005F                             ;86ED3C|        |      ;
                        db $0A,$00,$24,$00,$14,$1E,$B0,$1D   ;86ED3E|        |      ;
                        db $6D,$11,$4B,$11,$29,$0D,$E9,$0C   ;86ED46|        |      ;
@@ -10533,18 +10536,18 @@ paletteDataTilesStagel06_chandelire:
                        db $10,$46,$EB,$45,$00,$00,$00,$00   ;86ED8E|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86ED96|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel06_chandelire:
+spritePAL_Stage6_chandelire:
                        dw $001F                             ;86ED9E|        |      ;
                        db $00,$00,$00,$00,$73,$4E,$AF,$39   ;86EDA0|        |      ;
                        db $4D,$29,$0C,$19,$CB,$10,$89,$04   ;86EDA8|        |      ;
                        db $68,$04,$47,$04,$25,$00,$94,$63   ;86EDB0|        |      ;
                        db $4D,$36,$87,$29,$23,$15,$C1,$0C   ;86EDB8|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationChandelires:
+lvlPAL_Anim_6_Chandelires:
                        dw $0001                             ;86EDC0|        |      ;
                        db $0A,$00                           ;86EDC2|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel06_middle:
+ lvlPAL_Stage6_middle:
                        dw $00BF                             ;86EDC4|        |      ;
                        db $00,$00,$00,$00,$F2,$43,$D0,$39   ;86EDC6|        |      ;
                        db $8E,$31,$4D,$29,$0B,$21,$EA,$1C   ;86EDCE|        |      ;
@@ -10571,18 +10574,18 @@ paletteDataTilesStagel06_middle:
                        db $A5,$18,$84,$18,$64,$14,$43,$10   ;86EE76|        |      ;
                        db $00,$00,$2A,$39,$00,$00,$00,$00   ;86EE7E|        |      ;
                                                             ;      |        |      ;
-paletteDataSpritesStagel06_middle:
+spritePAL_Stage6_middle:
                        dw $001F                             ;86EE86|        |      ;
                        db $00,$00,$2E,$5E,$AB,$45,$48,$31   ;86EE88|        |      ;
                        db $C8,$30,$E2,$0C,$A0,$04,$25,$1C   ;86EE90|        |      ;
                        db $D5,$7A,$FB,$15,$32,$01,$EB,$00   ;86EE98|        |      ;
                        db $67,$00,$16,$00,$5E,$01,$62,$04   ;86EEA0|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationCastleMiddle:
+lvlPAL_Anim_6_CastleMiddle:
                        dw $0003                             ;86EEA8|        |      ;
                        db $0E,$00,$96,$00                   ;86EEAA|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel06_danceQuater:
+lvlPAL_Stage6_danceQuater:
                        dw $00BF                             ;86EEAE|        |      ;
                        db $00,$00,$00,$00,$F4,$31,$B3,$2D   ;86EEB0|        |      ;
                        db $71,$25,$2D,$1D,$EB,$08,$A9,$00   ;86EEB8|        |      ;
@@ -10609,15 +10612,15 @@ paletteDataTilesStagel06_danceQuater:
                        db $64,$14,$63,$0C,$43,$0C,$22,$08   ;86EF60|        |      ;
                        db $E1,$07,$2B,$2D,$03,$01,$C1,$00   ;86EF68|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationLiberarry00:
+lvlPAL_Anim_7_Liberarry00:
                        dw $0005                             ;86EF70|        |      ;
                        db $27,$35,$E5,$28,$A4,$20           ;86EF72|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationLiberarry01:
+lvlPAL_Anim_7_Liberarry01:
                        dw $0005                             ;86EF78|        |      ;
                        db $89,$61,$E5,$38,$A4,$28           ;86EF7A|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel07_liberarry:
+lvlPAL_Stage7_liberarry:
                        dw $00BF                             ;86EF80|        |      ;
                        db $00,$14,$20,$04,$93,$15,$2F,$0D   ;86EF82|        |      ;
                        db $ED,$08,$AB,$04,$69,$08,$27,$10   ;86EF8A|        |      ;
@@ -10644,18 +10647,18 @@ paletteDataTilesStagel07_liberarry:
                        db $64,$0C,$43,$1D,$00,$11,$C0,$0C   ;86F032|        |      ;
                        db $00,$00,$00,$00,$00,$00,$85,$00   ;86F03A|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel07_liberarry:
+spritePAL_Stage7_liberarry:
                        dw $001F                             ;86F042|        |      ;
                        db $00,$38,$15,$6C,$0E,$44,$09,$2C   ;86F044|        |      ;
                        db $60,$03,$45,$02,$65,$01,$52,$4A   ;86F04C|        |      ;
                        db $8C,$31,$03,$01,$00,$00,$00,$00   ;86F054|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86F05C|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationDungeon00:
+lvlPAL_Anim_8_Dungeon00:
                        dw $0003                             ;86F064|        |      ;
                        db $D1,$01,$9F,$02                   ;86F066|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel08_dungeon:
+lvlPAL_Stage8_dungeon1:
                        dw $009F                             ;86F06A|        |      ;
                        db $60,$0C,$F7,$5E,$94,$52,$10,$42   ;86F06C|        |      ;
                        db $6B,$2D,$E7,$1C,$84,$10,$21,$04   ;86F074|        |      ;
@@ -10678,18 +10681,18 @@ paletteDataTilesStagel08_dungeon:
                        db $C0,$3C,$C0,$24,$A0,$18,$47,$13   ;86F0FC|        |      ;
                        db $65,$04,$86,$00,$00,$00,$43,$08   ;86F104|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel08_dungeon:
+spritePAL_Stage8_dungeon2:
                        dw $001F                             ;86F10C|        |      ;
                        db $00,$00,$DC,$46,$95,$62,$11,$4A   ;86F10E|        |      ;
                        db $8D,$3D,$29,$2D,$C7,$20,$A6,$0C   ;86F116|        |      ;
                        db $0E,$2D,$CC,$1C,$88,$1C,$2C,$41   ;86F11E|        |      ;
                        db $E9,$30,$46,$14,$A6,$20,$62,$08   ;86F126|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationDungeon01:
+lvlPAL_Anim_8_Dungeon01:
                        dw $0001                             ;86F12E|        |      ;
                        db $3A,$00                           ;86F130|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStage08_dungeon:
+lvlPAL_Stage8_dungeon:
                        dw $009F                             ;86F132|        |      ;
                        db $00,$00,$00,$00,$EA,$75,$EE,$55   ;86F134|        |      ;
                        db $8D,$35,$2D,$21,$CD,$08,$69,$04   ;86F13C|        |      ;
@@ -10712,26 +10715,26 @@ paletteDataTilesStage08_dungeon:
                        db $83,$0C,$07,$1D,$42,$08,$89,$28   ;86F1C4|        |      ;
                        db $65,$20,$C6,$1C,$00,$00,$00,$00   ;86F1CC|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationGold00:
+ lvlPAL_Anim_9_Gold00:
                        dw $0005                             ;86F1D4|        |      ;
                        db $03,$09,$C2,$00,$83,$00           ;86F1D6|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationGold01:
+ lvlPAL_Anim_9_Gold01:
                        dw $0005                             ;86F1DC|        |      ;
                        db $83,$00,$03,$09,$C2,$00           ;86F1DE|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationGold02:
+ lvlPAL_Anim_9_Gold02:
                        dw $0005                             ;86F1E4|        |      ;
                        db $C2,$00,$83,$00,$03,$09           ;86F1E6|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStage08_dungeon:
+spritePAL_Stage8_dungeon:
                        dw $001F                             ;86F1EC|        |      ;
                        db $00,$00,$52,$4A,$AF,$35,$49,$29   ;86F1EE|        |      ;
                        db $C8,$30,$E6,$04,$C6,$1C,$84,$10   ;86F1F6|        |      ;
                        db $3B,$67,$42,$01,$00,$00,$6B,$02   ;86F1FE|        |      ;
                        db $C5,$00,$03,$01,$00,$00,$25,$0C   ;86F206|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel08_frankQuater:
+lvlPAL_Stage8_frankQuater:
                        dw $00BF                             ;86F20E|        |      ;
                        db $00,$00,$21,$04,$54,$52,$EF,$39   ;86F210|        |      ;
                        db $6A,$3D,$E6,$2C,$A4,$18,$63,$0C   ;86F218|        |      ;
@@ -10758,14 +10761,14 @@ paletteDataTilesStagel08_frankQuater:
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86F2C0|        |      ;
                        db $E0,$32,$E3,$19,$40,$11,$E0,$0C   ;86F2C8|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel08_frankQuater:
+spritePAL_Stage8_frankQuater:
                        dw $001F                             ;86F2D0|        |      ;
                        db $00,$00,$52,$4A,$AF,$35,$49,$29   ;86F2D2|        |      ;
                        db $C8,$30,$E6,$04,$C6,$1C,$84,$10   ;86F2DA|        |      ;
                        db $3B,$67,$8A,$00,$4F,$1D,$6B,$02   ;86F2E2|        |      ;
                        db $C5,$00,$03,$01,$CB,$00,$25,$0C   ;86F2EA|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel09_gold:
+   lvlPAL_Stage9_gold:
                        dw $009F                             ;86F2F2|        |      ;
                        db $00,$00,$EF,$4D,$8C,$3D,$07,$25   ;86F2F4|        |      ;
                        db $00,$00,$D5,$4A,$10,$32,$4A,$1D   ;86F2FC|        |      ;
@@ -10788,38 +10791,38 @@ paletteDataTilesStagel09_gold:
                        db $8A,$08,$67,$08,$45,$04,$E8,$5A   ;86F384|        |      ;
                        db $62,$29,$A5,$20,$84,$18,$63,$10   ;86F38C|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel09_gold00:
+spritePAL_Stage9_gold00:
                        dw $001F                             ;86F394|        |      ;
                        db $61,$00,$00,$00,$99,$3A,$F4,$19   ;86F396|        |      ;
                        db $2E,$01,$C9,$00,$85,$00,$0F,$42   ;86F39E|        |      ;
                        db $29,$25,$C7,$18,$E0,$01,$FF,$7B   ;86F3A6|        |      ;
                        db $7D,$2E,$34,$09,$CC,$0C,$67,$00   ;86F3AE|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationClockTower00:
+lvlPAL_Anim_A_ClockTowerB00:
                        dw $0001                             ;86F3B6|        |      ;
                        db $FF,$7F                           ;86F3B8|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationClockTower01:
+lvlPAL_Anim_A_ClockTowerB01:
                        dw $0001                             ;86F3BA|        |      ;
                        db $DF,$15                           ;86F3BC|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationClockTower02:
+lvlPAL_Anim_A_ClockTowerB02:
                        dw $0001                             ;86F3BE|        |      ;
                        db $4A,$6E                           ;86F3C0|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationClockTower03:
+lvlPAL_Anim_A_ClockTowerB03:
                        dw $0003                             ;86F3C2|        |      ;
                        db $D4,$76,$69,$55                   ;86F3C4|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationClockTower04:
+lvlPAL_Anim_A_ClockTowerB04:
                        dw $0003                             ;86F3C8|        |      ;
                        db $CF,$49,$07,$39                   ;86F3CA|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationClockTower05:
+lvlPAL_Anim_A_ClockTowerB05:
                        dw $0003                             ;86F3CE|        |      ;
                        db $C7,$3C,$C7,$08                   ;86F3D0|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel09_zapfBatQuater:
+lvlPAL_Stage9_zapfBatQuater:
                        dw $009F                             ;86F3D4|        |      ;
                        db $00,$00,$21,$04,$4E,$6E,$AC,$41   ;86F3D6|        |      ;
                        db $2C,$19,$CA,$10,$87,$08,$64,$08   ;86F3DE|        |      ;
@@ -10842,61 +10845,61 @@ paletteDataTilesStagel09_zapfBatQuater:
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86F466|        |      ;
                        db $00,$00,$00,$00,$B2,$5A,$69,$49   ;86F46E|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel09_zapfBatQuater00:
+spritePAL_Stage9_zapfBatQuater00:
                        dw $001F                             ;86F476|        |      ;
                        db $00,$00,$B4,$72,$2F,$5E,$8A,$45   ;86F478|        |      ;
                        db $E6,$34,$23,$11,$83,$08,$62,$04   ;86F480|        |      ;
                        db $9A,$7F,$C4,$14,$00,$00,$7D,$57   ;86F488|        |      ;
                        db $BD,$2E,$34,$09,$B0,$00,$48,$00   ;86F490|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationXX00:
+lvlPAL_Anim_9_GoldTwinkel00:
                        dw $0003                             ;86F498|        |      ;
                        db $77,$3E,$93,$29                   ;86F49A|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationXX01:
+lvlPAL_Anim_9_GoldTwinkel01:
                        dw $0003                             ;86F49E|        |      ;
                        db $9E,$6F,$93,$29                   ;86F4A0|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationXX02:
+lvlPAL_Anim_9_GoldTwinkel02:
                        dw $0003                             ;86F4A4|        |      ;
                        db $DF,$73,$D0,$5A                   ;86F4A6|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationXX03:
+PAL_zapfBat_stones_GFXsuckhole:
                        dw $001F                             ;86F4AA|        |      ;
                        db $C9,$0C,$CC,$45,$49,$2D,$E6,$18   ;86F4AC|        |      ;
                        db $A4,$0C,$83,$08,$62,$04,$00,$00   ;86F4B4|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86F4BC|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86F4C4|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationXX04:
+       PAL_zapfBat_A0:
                        dw $001F                             ;86F4CC|        |      ;
                        db $00,$00,$62,$08,$6F,$62,$2E,$56   ;86F4CE|        |      ;
                        db $8D,$39,$0C,$19,$86,$04,$57,$35   ;86F4D6|        |      ;
                        db $66,$30,$05,$20,$03,$14,$99,$52   ;86F4DE|        |      ;
                        db $A8,$3C,$0D,$54,$C8,$00,$A8,$24   ;86F4E6|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationXX05:
+       PAL_zapfBat_A1:
                        dw $001F                             ;86F4EE|        |      ;
                        db $00,$00,$62,$08,$FA,$46,$77,$26   ;86F4F0|        |      ;
                        db $92,$11,$0E,$05,$86,$04,$57,$35   ;86F4F8|        |      ;
                        db $66,$30,$05,$20,$03,$14,$FF,$7F   ;86F500|        |      ;
                        db $A8,$3C,$0D,$54,$C8,$00,$AB,$00   ;86F508|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationXX06:
+       PAL_zapfBat_A2:
                        dw $001F                             ;86F510|        |      ;
                        db $00,$00,$41,$04,$7A,$36,$F7,$1D   ;86F512|        |      ;
                        db $32,$0D,$D0,$04,$6D,$00,$89,$00   ;86F51A|        |      ;
                        db $45,$04,$AB,$45,$28,$29,$E6,$18   ;86F522|        |      ;
                        db $A4,$0C,$41,$04,$77,$3E,$93,$29   ;86F52A|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationXX07:
+       PAL_zapfBat_A3:
                        dw $001F                             ;86F532|        |      ;
                        db $00,$00,$41,$04,$1A,$2E,$76,$0D   ;86F534|        |      ;
                        db $D1,$08,$8E,$04,$4A,$00,$67,$00   ;86F53C|        |      ;
                        db $45,$04,$AB,$45,$28,$29,$E6,$18   ;86F544|        |      ;
                        db $A4,$0C,$41,$04,$77,$3E,$93,$29   ;86F54C|        |      ;
                                                             ;      |        |      ;
-paletteDataStagel0A_clockTower:
+lvlPAL_StageA_clockTower:
                        dw $00DF                             ;86F554|        |      ;
                        db $00,$00,$21,$00,$A3,$14,$89,$00   ;86F556|        |      ;
                        db $C6,$24,$00,$00,$81,$0C,$62,$0C   ;86F55E|        |      ;
@@ -10927,32 +10930,32 @@ paletteDataStagel0A_clockTower:
                        db $00,$00,$45,$18,$63,$0C,$08,$21   ;86F626|        |      ;
                        db $C6,$18,$A5,$14,$84,$10,$21,$04   ;86F62E|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel0A_clockTower:
+spritePAL_StageA_clockTower:
                        dw $001F                             ;86F636|        |      ;
                        db $0F,$00,$B5,$52,$10,$42,$8C,$31   ;86F638|        |      ;
                        db $08,$21,$C6,$18,$A6,$10,$63,$08   ;86F640|        |      ;
                        db $9A,$7F,$84,$14,$00,$00,$7D,$57   ;86F648|        |      ;
                        db $BD,$2E,$34,$09,$B0,$00,$48,$00   ;86F650|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimation00ClockTower00:
+lvlPAL_Anim_A_ClockTower00:
                        dw $0013                             ;86F658|        |      ;
                        db $C7,$1C,$A5,$14,$63,$0C,$49,$29   ;86F65A|        |      ;
                        db $6A,$2D,$28,$25,$07,$21,$29,$29   ;86F662|        |      ;
                        db $E8,$20,$A6,$18                   ;86F66A|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimation00ClockTower01:
+lvlPAL_Anim_A_ClockTower01:
                        dw $0013                             ;86F66E|        |      ;
                        db $63,$0C,$C7,$1C,$A5,$14,$49,$29   ;86F670|        |      ;
                        db $07,$21,$6A,$2D,$28,$25,$A6,$18   ;86F678|        |      ;
                        db $29,$29,$E8,$20                   ;86F680|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimation00ClockTower02:
+lvlPAL_Anim_A_ClockTower02:
                        dw $0013                             ;86F684|        |      ;
                        db $A5,$14,$63,$0C,$C7,$1C,$49,$29   ;86F686|        |      ;
                        db $28,$25,$07,$21,$6A,$2D,$E8,$20   ;86F68E|        |      ;
                        db $A6,$18,$29,$29                   ;86F696|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel0A_mummyQuater:
+lvlPAL_StageA_mummyQuater:
                        dw $007F                             ;86F69A|        |      ;
                        db $00,$00,$23,$04,$B1,$42,$0D,$32   ;86F69C|        |      ;
                        db $6C,$21,$EB,$14,$8A,$0C,$66,$08   ;86F6A4|        |      ;
@@ -10971,26 +10974,26 @@ paletteDataTilesStagel0A_mummyQuater:
                        db $04,$20,$04,$24,$85,$10,$A6,$14   ;86F70C|        |      ;
                        db $E8,$1C,$E7,$1C,$29,$25,$8C,$31   ;86F714|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimation00ClockTower03:
+lvlPAL_Anim_A_ClockTower03:
                        dw $0005                             ;86F71C|        |      ;
                        db $E7,$1C,$29,$25,$8C,$31           ;86F71E|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimation00ClockTower04:
+lvlPAL_Anim_A_ClockTower04:
                        dw $0005                             ;86F724|        |      ;
                        db $8C,$31,$E7,$1C,$29,$25           ;86F726|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimation00ClockTower05:
+lvlPAL_Anim_A_ClockTower05:
                        dw $0005                             ;86F72C|        |      ;
                        db $29,$25,$8C,$31,$E7,$1C           ;86F72E|        |      ;
                                                             ;      |        |      ;
-paletteDataSprtieStagel0A_mummyQuater:
+spritePAL_StageA_mummyQuater:
                        dw $001F                             ;86F734|        |      ;
                        db $00,$00,$CB,$5C,$94,$52,$EE,$39   ;86F736|        |      ;
                        db $4C,$21,$E9,$1C,$A5,$14,$63,$0C   ;86F73E|        |      ;
                        db $42,$04,$95,$56,$94,$56,$00,$00   ;86F746|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86F74E|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel0B_bridge:
+ lvlPAL_StageB_bridge:
                        dw $00DF                             ;86F756|        |      ;
                        db $00,$00,$42,$04,$64,$08,$A6,$0C   ;86F758|        |      ;
                        db $0A,$15,$6D,$21,$33,$36,$21,$04   ;86F760|        |      ;
@@ -11021,58 +11024,52 @@ paletteDataTilesStagel0B_bridge:
                        db $01,$15,$24,$19,$00,$00,$00,$00   ;86F828|        |      ;
                        db $00,$00,$43,$00,$86,$00,$00,$0C   ;86F830|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel0B_bridge:
+spritePAL_StageB_bridge:
                        dw $001F                             ;86F838|        |      ;
                        db $00,$00,$32,$36,$F1,$21,$AF,$21   ;86F83A|        |      ;
                        db $2C,$0D,$87,$00,$43,$00,$44,$00   ;86F842|        |      ;
                        db $60,$00,$A5,$18,$49,$21,$8B,$2D   ;86F84A|        |      ;
                        db $73,$4A,$C3,$10,$8B,$21,$42,$08   ;86F852|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel0B_tower:
+  lvlPAL_StageB_tower:
                        dw $00DF                             ;86F85A|        |      ;
                        db $00,$00,$2B,$19,$E9,$14,$C8,$10   ;86F85C|        |      ;
                        db $86,$08,$64,$08,$20,$04,$D6,$36   ;86F864|        |      ;
                        db $36,$26,$D4,$11,$6F,$11,$0E,$09   ;86F86C|        |      ;
                        db $C9,$04,$65,$00,$F0,$35,$8F,$21   ;86F874|        |      ;
                        db $00,$00,$20,$08,$A5,$20,$29,$2D   ;86F87C|        |      ;
-                       db $8C,$41                           ;86F884|        |      ;
+                       db $8C,$41,$CE,$45,$10,$52,$51,$5A   ;86F884|        |      ;
+                       db $94,$66,$D5,$6A,$17,$6F,$7B,$7B   ;86F88C|        |      ;
+                       db $6A,$39,$07,$29,$C5,$20,$00,$00   ;86F894|        |      ;
+                       db $00,$00,$54,$2E,$B0,$25,$2D,$11   ;86F89C|        |      ;
+                       db $C8,$00,$65,$00,$03,$00,$00,$00   ;86F8A4|        |      ;
+                       db $00,$00,$F3,$2D,$70,$21,$2D,$15   ;86F8AC|        |      ;
+                       db $EB,$0C,$A8,$0C,$44,$04,$AD,$0C   ;86F8B4|        |      ;
+                       db $1D,$00,$2B,$19,$E9,$14,$C8,$10   ;86F8BC|        |      ;
+                       db $87,$08,$64,$04,$23,$00,$21,$00   ;86F8C4|        |      ;
+                       db $D4,$46,$EE,$2D,$6A,$21,$08,$11   ;86F8CC|        |      ;
+                       db $C5,$0C,$62,$08,$42,$04,$35,$2E   ;86F8D4|        |      ;
+                       db $00,$00,$2D,$19,$E9,$14,$C8,$10   ;86F8DC|        |      ;
+                       db $87,$08,$44,$04,$23,$00,$21,$00   ;86F8E4|        |      ;
+                       db $EC,$31,$6A,$25,$07,$1D,$C8,$18   ;86F8EC|        |      ;
+                       db $86,$14,$43,$10,$02,$08,$72,$4A   ;86F8F4|        |      ;
+                       db $00,$00,$D6,$52,$32,$3E,$AF,$31   ;86F8FC|        |      ;
+                       db $2C,$25,$E6,$1C,$2B,$19,$E9,$14   ;86F904|        |      ;
+                       db $D6,$36,$54,$2E,$B0,$25,$2D,$11   ;86F90C|        |      ;
+                       db $C8,$00,$65,$00,$8B,$08,$11,$0D   ;86F914|        |      ;
+                       db $00,$00,$B0,$46,$EC,$31,$6A,$25   ;86F91C|        |      ;
+                       db $07,$1D,$C8,$18,$86,$14,$43,$0C   ;86F924|        |      ;
+                       db $02,$04,$39,$15,$34,$0D,$D0,$0C   ;86F92C|        |      ;
+                       db $6A,$00,$4C,$15,$EA,$1C,$A8,$10   ;86F934|        |      ;
                                                             ;      |        |      ;
-           GFX_86F886:
-                       db $CE,$45,$10,$52,$51,$5A,$94,$66   ;86F886|        |      ;
-                       db $D5,$6A,$17,$6F,$7B,$7B,$6A,$39   ;86F88E|        |      ;
-                       db $07,$29,$C5,$20,$00,$00,$00,$00   ;86F896|        |      ;
-                       db $54,$2E,$B0,$25,$2D,$11,$C8,$00   ;86F89E|        |      ;
-                       db $65,$00,$03,$00,$00,$00,$00,$00   ;86F8A6|        |      ;
-                       db $F3,$2D,$70,$21,$2D,$15,$EB,$0C   ;86F8AE|        |      ;
-                       db $A8,$0C,$44,$04,$AD               ;86F8B6|        |      ;
-                                                            ;      |        |      ;
-           GFX_86F8BB:
-                       db $0C,$1D,$00,$2B,$19,$E9,$14,$C8   ;86F8BB|        |      ;
-                       db $10,$87,$08,$64,$04,$23,$00,$21   ;86F8C3|        |      ;
-                       db $00,$D4,$46,$EE,$2D,$6A,$21,$08   ;86F8CB|        |      ;
-                       db $11,$C5,$0C,$62,$08,$42,$04,$35   ;86F8D3|        |      ;
-                       db $2E,$00,$00,$2D,$19,$E9,$14,$C8   ;86F8DB|        |      ;
-                       db $10,$87,$08,$44,$04,$23,$00,$21   ;86F8E3|        |      ;
-                       db $00,$EC,$31,$6A,$25,$07,$1D,$C8   ;86F8EB|        |      ;
-                       db $18,$86,$14,$43,$10,$02,$08,$72   ;86F8F3|        |      ;
-                       db $4A,$00,$00,$D6,$52,$32,$3E,$AF   ;86F8FB|        |      ;
-                       db $31,$2C,$25,$E6,$1C,$2B,$19,$E9   ;86F903|        |      ;
-                       db $14,$D6,$36,$54,$2E,$B0,$25,$2D   ;86F90B|        |      ;
-                       db $11,$C8,$00,$65,$00,$8B,$08,$11   ;86F913|        |      ;
-                       db $0D,$00,$00,$B0,$46,$EC,$31,$6A   ;86F91B|        |      ;
-                       db $25,$07,$1D,$C8,$18,$86,$14,$43   ;86F923|        |      ;
-                       db $0C,$02,$04,$39,$15,$34,$0D,$D0   ;86F92B|        |      ;
-                       db $0C,$6A,$00,$4C,$15,$EA,$1C,$A8   ;86F933|        |      ;
-                       db $10                               ;86F93B|        |      ;
-                                                            ;      |        |      ;
-paletteDataSpriteStagel0B_tower:
+spritePAL_StageB_tower:
                        dw $001F                             ;86F93C|        |      ;
                        db $C9,$20,$BE,$6F,$95,$42,$B0,$31   ;86F93E|        |      ;
                        db $4A,$21,$07,$11,$A2,$14,$62,$04   ;86F946|        |      ;
                        db $36,$01,$CF,$00,$66,$08,$93,$62   ;86F94E|        |      ;
                        db $CC,$59,$28,$49,$A5,$2C,$61,$18   ;86F956|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel0B_slogra:
+ lvlPAL_StageB_slogra:
                        dw $00DF                             ;86F95E|        |      ;
                        db $00,$00,$AD,$3D,$4A,$25,$E8,$18   ;86F960|        |      ;
                        db $85,$14,$8C,$31,$00,$00,$00,$00   ;86F968|        |      ;
@@ -11103,14 +11100,14 @@ paletteDataTilesStagel0B_slogra:
                        db $63,$18,$62,$18,$61,$1C,$41,$1C   ;86FA30|        |      ;
                        db $40,$18,$20,$14,$20,$10,$20,$08   ;86FA38|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel0B_slogra:
+spritePAL_StageB_slogra:
                        dw $001F                             ;86FA40|        |      ;
                        db $00,$00,$00,$00,$B1,$5A,$ED,$49   ;86FA42|        |      ;
                        db $6A,$39,$28,$35,$E5,$2C,$A2,$20   ;86FA4A|        |      ;
                        db $63,$14,$00,$00,$00,$00,$00,$00   ;86FA52|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;86FA5A|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel0B_gaibone:
+lvlPAL_StageB_gaibone:
                        dw $00DF                             ;86FA62|        |      ;
                        db $00,$00,$AD,$3D,$4A,$25,$E8,$18   ;86FA64|        |      ;
                        db $85,$14,$8C,$31,$00,$00,$00,$00   ;86FA6C|        |      ;
@@ -11141,7 +11138,7 @@ paletteDataTilesStagel0B_gaibone:
                        db $63,$18,$62,$18,$61,$1C,$41,$1C   ;86FB34|        |      ;
                        db $40,$18,$20,$14,$20,$10,$20,$08   ;86FB3C|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel0B_death:
+  lvlPAL_StageB_death:
                        dw $00BF                             ;86FB44|        |      ;
                        db $00,$00,$21,$00,$B4,$4A,$AC,$2D   ;86FB46|        |      ;
                        db $6A,$25,$29,$19,$E6,$10,$A3,$08   ;86FB4E|        |      ;
@@ -11168,28 +11165,28 @@ paletteDataTilesStagel0B_death:
                        db $AD,$04,$89,$00,$44,$04,$1F,$22   ;86FBF6|        |      ;
                        db $74,$0D,$F4,$00,$12,$32,$AF,$29   ;86FBFE|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel0B_death:
+PAL_death_sprite_tourch:
                        dw $001F                             ;86FC06|        |      ;
                        db $00,$00,$21,$00,$DA,$46,$34,$36   ;86FC08|        |      ;
                        db $D0,$2D,$AE,$21,$4B,$19,$E8,$10   ;86FC10|        |      ;
                        db $A4,$08,$62,$00,$00,$00,$00,$00   ;86FC18|        |      ;
                        db $FA,$00,$72,$00,$2B,$00,$9F,$01   ;86FC20|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel0B_extra_death:
+PAL_death_tiles_tourch:
                        dw $001F                             ;86FC28|        |      ;
                        db $00,$00,$43,$08,$72,$4A,$CD,$31   ;86FC2A|        |      ;
                        db $6B,$29,$29,$1D,$C7,$10,$85,$08   ;86FC32|        |      ;
                        db $AD,$04,$89,$00,$44,$04,$1F,$22   ;86FC3A|        |      ;
                        db $74,$0D,$F4,$00,$12,$32,$AF,$29   ;86FC42|        |      ;
                                                             ;      |        |      ;
-paletteDataAnimationXX0f:
+PAL_death_tiles_tourch_02:
                        dw $001F                             ;86FC4A|        |      ;
                        db $00,$00,$43,$08,$CE,$35,$49,$25   ;86FC4C|        |      ;
                        db $07,$1D,$C5,$10,$85,$08,$63,$04   ;86FC54|        |      ;
                        db $49,$04,$66,$00,$23,$04,$8D,$29   ;86FC5C|        |      ;
                        db $2A,$19,$67,$00,$12,$32,$AF,$29   ;86FC64|        |      ;
                                                             ;      |        |      ;
-paletteDataTilesStagel0B_drac:
+   lvlPAL_StageB_drac:
                        dw $009F                             ;86FC6C|        |      ;
                        db $20,$08,$20,$04,$4A,$25,$E7,$24   ;86FC6E|        |      ;
                        db $A5,$18,$63,$14,$42,$10,$EC,$15   ;86FC76|        |      ;
@@ -11212,7 +11209,7 @@ paletteDataTilesStagel0B_drac:
                        db $63,$18,$62,$18,$61,$1C,$41,$1C   ;86FCFE|        |      ;
                        db $40,$18,$20,$14,$20,$10,$20,$08   ;86FD06|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel0B_drac00:
+           PAL_drac00:
                        dw $003F                             ;86FD0E|        |      ;
                        db $00,$00,$04,$00,$EF,$00,$98,$01   ;86FD10|        |      ;
                        db $5D,$32,$5F,$01,$27,$00,$6D,$00   ;86FD18|        |      ;
@@ -11223,7 +11220,7 @@ paletteDataSpriteStagel0B_drac00:
                        db $2E,$00,$08,$00,$BF,$6F,$F9,$6E   ;86FD40|        |      ;
                        db $35,$62,$50,$4D,$A8,$34,$43,$30   ;86FD48|        |      ;
                                                             ;      |        |      ;
-paletteDataSpriteStagel0B_tower00:
+spritePAL_StageB_tower00:
                        dw $001F                             ;86FD50|        |      ;
                        db $86,$08,$58,$67,$30,$4A,$EE,$31   ;86FD52|        |      ;
                        db $49,$25,$08,$1D,$A5,$14,$63,$10   ;86FD5A|        |      ;

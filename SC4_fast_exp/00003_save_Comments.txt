@@ -172,6 +172,7 @@
         <sys:Item Key="8491619" Value="first chain whip" />
         <sys:Item Key="8491621" Value="second chain whip" />
         <sys:Item Key="8491623" Value="donno " />
+        <sys:Item Key="8495707" Value="probably functions as text" />
         <sys:Item Key="8496074" Value="terminator" />
         <sys:Item Key="8496087" Value="linebreak 2x followed by pointer ??" />
         <sys:Item Key="8496148" Value="linebreak 2x followed by pointer ??" />
@@ -267,8 +268,8 @@
         <sys:Item Key="8498944" Value="how much damage each enemie deals" />
         <sys:Item Key="8499070" Value="end Table" />
         <sys:Item Key="8499684" Value="damage big sythe Death" />
-        <sys:Item Key="8500117" Value="noPW or level select screen.. ??" />
         <sys:Item Key="8500699" Value="not sure or what bank.." />
+        <sys:Item Key="8500740" Value="music BRR samples" />
         <sys:Item Key="8501067" Value="not sure what this is" />
         <sys:Item Key="8501123" Value="expand camera locks $20" />
         <sys:Item Key="8501142" Value="change Bank" />
@@ -289,10 +290,12 @@
         <sys:Item Key="8504079" Value="also no clue for what this is used" />
         <sys:Item Key="8504967" Value="not sure.." />
         <sys:Item Key="8507811" Value="not sure" />
+        <sys:Item Key="8512117" Value="the second value is used for something else" />
         <sys:Item Key="8513712" Value="simon hair??" />
         <sys:Item Key="8513730" Value="simon hair?? " />
         <sys:Item Key="8513762" Value="not sure" />
         <sys:Item Key="8514343" Value="ending autoplay data pointer" />
+        <sys:Item Key="8516506" Value="might be mode7 related.." />
         <sys:Item Key="8517088" Value="00 4 = 1 medatile matrix order (20 is a new row and offset by 1 tile) = 40 is a block hight then 400 800 c00 are the new screens nametable order" />
         <sys:Item Key="8517090" Value="01" />
         <sys:Item Key="8517092" Value="02" />
@@ -349,6 +352,7 @@
         <sys:Item Key="8552508" Value="This happens when u fall into a pit" />
         <sys:Item Key="8552605" Value="lose a life" />
         <sys:Item Key="8552705" Value="unusedJump??" />
+        <sys:Item Key="8552963" Value="not sure" />
         <sys:Item Key="8554442" Value="deforming the walls " />
         <sys:Item Key="8556051" Value="??" />
         <sys:Item Key="8557351" Value="loadBossSubIDfromEvent" />
@@ -504,6 +508,8 @@
         <sys:Item Key="8685078" Value="same as 38" />
         <sys:Item Key="8689291" Value="zombie" />
         <sys:Item Key="8710741" Value="stand on smal platform" />
+        <sys:Item Key="8711612" Value="not sure" />
+        <sys:Item Key="8715352" Value="not sure " />
         <sys:Item Key="8765072" Value="new death entrance code" />
         <sys:Item Key="8766024" Value=";bg0 mapping AABB AA=Speed?? BB=BGIndex" />
         <sys:Item Key="8767286" Value="notSure goes 13d2" />
@@ -635,6 +641,7 @@
         <sys:Item Key="12353536" Value="data does BankCross!!" />
         <sys:Item Key="12419072" Value="data does BankCross!!" />
         <sys:Item Key="12615680" Value="data does BankCross!!" />
+        <sys:Item Key="12640573" Value="2BPP??" />
         <sys:Item Key="12681216" Value="data does BankCross!!" />
         <sys:Item Key="12812288" Value="data does BankCross!!" />
         <sys:Item Key="12877824" Value="data does BankCross!!" />
@@ -684,7 +691,8 @@
         <sys:Item Key="15785736" Value="??channel 5" />
         <sys:Item Key="15785738" Value="??channel 6" />
         <sys:Item Key="15785740" Value="??channel 7" />
+        <sys:Item Key="15972829" Value="konamiName" />
+        <sys:Item Key="15974973" Value="line" />
         <sys:Item Key="16096893" Value="probably tilemap titlescreen stuff.." />
-        <sys:Item Key="16613381" Value="musicEngineStart" />
       </Comments>
       

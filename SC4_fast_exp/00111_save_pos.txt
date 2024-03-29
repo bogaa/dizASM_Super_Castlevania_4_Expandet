@@ -10,16 +10,15 @@ r 256 G
 B
 B
 r 63 G
-B
-B
+A
+A
 r 639 G
 B
 B
 r 32 G
 B
 B
-r 128 G
-r 256 U
+r 384 G
 B
 B
 r 32 G

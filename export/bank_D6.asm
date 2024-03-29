@@ -103,7 +103,7 @@
                        db $FF,$7E,$0A,$03,$FF               ;D68318|        |030A7E;
                                                             ;      |        |      ;
 levelGFXStage8_dungeon_BG:
-                       db $C3,$12,$80                       ;D6831D|        |      ;
+                       dl $8012C3                           ;D6831D|        |      ;
                        db $A0,$E0,$A8,$60,$C0,$30,$70,$30   ;D68320|        |      ;
                        db $30,$70,$30,$70,$70,$70,$70,$70   ;D68328|        |      ;
                        db $00,$10,$10,$00,$08,$40,$88,$40   ;D68330|        |      ;
@@ -718,7 +718,7 @@ levelGFXStage8_dungeon_BG:
                        db $FF,$EB,$01,$03,$FF               ;D69638|        |0301EB;
                                                             ;      |        |      ;
 blockMabData_Stage8_frankQuater_BG1:
-                       db $03,$20,$80                       ;D6963D|        |      ;
+                       dl $802003                           ;D6963D|        |      ;
                        dw $0800,$0800,$0800,$0800           ;D69640|        |      ;
                        dw $0800,$0800,$0800,$0800           ;D69648|        |      ;
                        dw $0800,$0800,$0800,$0800           ;D69650|        |      ;
@@ -1757,7 +1757,7 @@ blockMabData_Stage8_frankQuater_BG1:
                        db $FF,$F1,$01,$03,$FF               ;D6B698|        |0301F1;
                                                             ;      |        |      ;
 blockMabData_Stage8_frankQuater_BG0:
-                       db $03,$20,$80                       ;D6B69D|        |      ;
+                       dl $802003                           ;D6B69D|        |      ;
                        dw $0000,$0000,$0000,$0000           ;D6B6A0|        |      ;
                        dw $0000,$0000,$0000,$0000           ;D6B6A8|        |      ;
                        dw $0000,$0000,$0000,$0000           ;D6B6B0|        |      ;
@@ -2796,7 +2796,7 @@ blockMabData_Stage8_frankQuater_BG0:
                        db $FF,$1B,$07,$03,$FF               ;D6D6F8|        |03071B;
                                                             ;      |        |      ;
 sceneMabDataStage8_FrankQuater_00_BG1:
-                       db $03,$20,$80                       ;D6D6FD|        |      ;
+                       dl $802003                           ;D6D6FD|        |      ;
                        dw $0010,$0011,$0001,$0000           ;D6D700|        |      ;
                        dw $0029,$004F,$000F,$001D           ;D6D708|        |      ;
                        dw $0014,$0015,$0032,$0000           ;D6D710|        |      ;
@@ -3835,7 +3835,7 @@ sceneMabDataStage8_FrankQuater_00_BG1:
                        db $FF,$21,$07,$03,$FF               ;D6F758|        |030721;
                                                             ;      |        |      ;
 sceneMabDataStage8_FrankQuater_00_BG0:
-                       db $03,$20,$80                       ;D6F75D|        |      ;
+                       dl $802003                           ;D6F75D|        |      ;
                        dw $0001,$0002,$0003,$000C           ;D6F760|        |      ;
                        dw $000C,$000C,$0003,$8001           ;D6F768|        |      ;
                        dw $0001,$0002,$0003,$000C           ;D6F770|        |      ;

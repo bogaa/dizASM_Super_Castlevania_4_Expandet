@@ -4868,10 +4868,23 @@ bossDancerHealthHudRoutine:
                        JSL.L bossGetPaletteY2X              ;85E261|22E99080|8090E9;
                        LDX.W #$0580                         ;85E265|A28005  |      ;
                        RTL                                  ;85E268|6B      |      ;
-                       db $AD,$4A,$05,$D5,$0A,$B0,$09,$B5   ;85E269|        |00054A;
-                       db $0A,$18,$69,$04,$00,$95,$0A,$6B   ;85E271|        |      ;
-                       db $B5,$0A,$38,$E9,$04,$00,$95,$0A   ;85E279|        |00000A;
-                       db $6B                               ;85E281|        |      ;
+                       LDA.W r81_player_0a_xPos             ;85E269|AD4A05  |81054A;
+                       CMP.B r_ev_0a_xPos,X                 ;85E26C|D50A    |00000A;
+                       BCS CODE_85E279                      ;85E26E|B009    |85E279;
+                       LDA.B r_ev_0a_xPos,X                 ;85E270|B50A    |00000A;
+                       CLC                                  ;85E272|18      |      ;
+                       ADC.W #$0004                         ;85E273|690400  |      ;
+                       STA.B r_ev_0a_xPos,X                 ;85E276|950A    |00000A;
+                       RTL                                  ;85E278|6B      |      ;
+                                                            ;      |        |      ;
+                                                            ;      |        |      ;
+          CODE_85E279:
+                       LDA.B r_ev_0a_xPos,X                 ;85E279|B50A    |00000A;
+                       SEC                                  ;85E27B|38      |      ;
+                       SBC.W #$0004                         ;85E27C|E90400  |      ;
+                       STA.B r_ev_0a_xPos,X                 ;85E27F|950A    |00000A;
+                       RTL                                  ;85E281|6B      |      ;
+                                                            ;      |        |      ;
                                                             ;      |        |      ;
           CODE_85E282:
                        LDX.W #$05C0                         ;85E282|A2C005  |      ;
@@ -4944,7 +4957,7 @@ bossDancerHealthHudRoutine:
                        AND.W #$00FF                         ;85E319|29FF00  |      ;
                        ASL A                                ;85E31C|0A      |      ;
                        TAY                                  ;85E31D|A8      |      ;
-                       LDA.W DATA16_81CD95,Y                ;85E31E|B995CD  |81CD95;
+                       LDA.W mod7RotationTable,Y            ;85E31E|B995CD  |81CD95;
                        BMI CODE_85E335                      ;85E321|3012    |85E335;
                        ASL A                                ;85E323|0A      |      ;
                        ASL A                                ;85E324|0A      |      ;
@@ -4988,7 +5001,7 @@ bossDancerHealthHudRoutine:
                        CLC                                  ;85E351|18      |      ;
                        ADC.W #$0080                         ;85E352|698000  |      ;
                        TAY                                  ;85E355|A8      |      ;
-                       LDA.W DATA16_81CD95,Y                ;85E356|B995CD  |81CD95;
+                       LDA.W mod7RotationTable,Y            ;85E356|B995CD  |81CD95;
                        BMI CODE_85E36D                      ;85E359|3012    |85E36D;
                        ASL A                                ;85E35B|0A      |      ;
                        ASL A                                ;85E35C|0A      |      ;
@@ -5195,14 +5208,14 @@ animatedBackgroundSkelly40:
                                                             ;      |        |      ;
           CODE_85E4DE:
                        LDY.B r_ev_34,X                      ;85E4DE|B434    |000034;
-                       LDA.W DATA16_81F33D,Y                ;85E4E0|B93DF3  |81F33D;
+                       LDA.W DATA8_81F33D,Y                 ;85E4E0|B93DF3  |81F33D;
                        JSL.L lunchSFXfromAccum              ;85E4E3|22E38580|8085E3;
                        TYA                                  ;85E4E7|98      |      ;
                        EOR.W #$0002                         ;85E4E8|490200  |      ;
                        STA.B r_ev_34,X                      ;85E4EB|9534    |000034;
                        LDY.B r_ev_22,X                      ;85E4ED|B422    |000022;
                        INC.B r_ev_22,X                      ;85E4EF|F622    |000022;
-                       LDA.W DATA16_81F323,Y                ;85E4F1|B923F3  |81F323;
+                       LDA.W DATA8_81F323,Y                 ;85E4F1|B923F3  |81F323;
                        AND.W #$00FF                         ;85E4F4|29FF00  |      ;
                        CMP.W #$00FF                         ;85E4F7|C9FF00  |      ;
                        BNE CODE_85E500                      ;85E4FA|D004    |85E500;
@@ -5215,14 +5228,14 @@ animatedBackgroundSkelly40:
                        TYA                                  ;85E504|98      |      ;
                        EOR.W #$0001                         ;85E505|490100  |      ;
                        STA.B r_ev_32,X                      ;85E508|9532    |000032;
-                       LDA.W DATA16_81F33B,Y                ;85E50A|B93BF3  |81F33B;
+                       LDA.W DATA8_81F33B,Y                 ;85E50A|B93BF3  |81F33B;
                        AND.W #$00FF                         ;85E50D|29FF00  |      ;
                        PHA                                  ;85E510|48      |      ;
                        LDA.B r_ev_14_subId,X                ;85E511|B514    |000014;
                        AND.W #$001F                         ;85E513|291F00  |      ;
                        ASL A                                ;85E516|0A      |      ;
                        TAY                                  ;85E517|A8      |      ;
-                       LDA.W DATA16_81F32B,Y                ;85E518|B92BF3  |81F32B;
+                       LDA.W DATA8_81F32B,Y                 ;85E518|B92BF3  |81F32B;
                        TAY                                  ;85E51B|A8      |      ;
                        PLA                                  ;85E51C|68      |      ;
                        JML.L BG_blockUpdater                ;85E51D|5CE7D183|83D1E7;
@@ -5250,7 +5263,7 @@ spikeFromCelling80State00:
                        LDA.B r_RNG_2                        ;85E53D|A5E8    |0000E8;
                        AND.W #$0003                         ;85E53F|290300  |      ;
                        CLC                                  ;85E542|18      |      ;
-                       ADC.W DATA16_81F311,Y                ;85E543|7911F3  |81F311;
+                       ADC.W DATA8_81F311,Y                 ;85E543|7911F3  |81F311;
                        STA.B r_ev_32,X                      ;85E546|9532    |000032;
                        INC.B r_ev_12_state,X                ;85E548|F612    |000012;
                        RTL                                  ;85E54A|6B      |      ;
@@ -5263,7 +5276,7 @@ spikeFromCelling80State01:
                                                             ;      |        |      ;
           CODE_85E552:
                        LDY.B r_ev_34,X                      ;85E552|B434    |000034;
-                       LDA.W DATA16_81F30A,Y                ;85E554|B90AF3  |81F30A;
+                       LDA.W DATA8_81F30A,Y                 ;85E554|B90AF3  |81F30A;
                        AND.W #$00FF                         ;85E557|29FF00  |      ;
                        STA.B r_ev_24,X                      ;85E55A|9524    |000024;
                        JSL.L CODE_85E58E                    ;85E55C|228EE585|85E58E;
@@ -5583,9 +5596,9 @@ bossKoranotStateTable:
           CODE_85E7E0:
                        JSL.L clearSelectedEventSlotAll      ;85E7E0|22598C80|808C59;
                        STA.B r_ev_14_subId,X                ;85E7E4|9514    |000014;
-                       LDA.W DATA16_81F341,Y                ;85E7E6|B941F3  |81F341;
+                       LDA.W DATA8_81F341,Y                 ;85E7E6|B941F3  |81F341;
                        STA.B r_ev_0a_xPos,X                 ;85E7E9|950A    |00000A;
-                       LDA.W DATA16_81F345,Y                ;85E7EB|B945F3  |81F345;
+                       LDA.W DATA8_81F345,Y                 ;85E7EB|B945F3  |81F345;
                        STA.B r_ev_0e_yPos,X                 ;85E7EE|950E    |00000E;
                        LDA.W #$0017                         ;85E7F0|A91700  |      ;
                        JSL.L eventFromA_bridgeAndGoldPil    ;85E7F3|227AD380|80D37A;
@@ -6901,21 +6914,28 @@ bossThrowBlockJumpTable:
                        ASL A                                ;85F13D|0A      |      ;
                        TAY                                  ;85F13E|A8      |      ;
                        LDA.B r_ev_1c_ySpdSub                ;85F13F|A51C    |00001C;
-                       BEQ UNREACH_85F158                   ;85F141|F015    |85F158;
-                       LDA.W DATA16_81F39E,Y                ;85F143|B99EF3  |81F39E;
+                       BEQ CODE_85F158                      ;85F141|F015    |85F158;
+                       LDA.W DATA8_81F39E,Y                 ;85F143|B99EF3  |81F39E;
                        STA.B r_ev_18_xSpdSub,X              ;85F146|9518    |000018;
-                       LDA.W DATA16_81F3A0,Y                ;85F148|B9A0F3  |81F3A0;
+                       LDA.W someXspeedValues,Y             ;85F148|B9A0F3  |81F3A0;
                        STA.B r_ev_1a_xSpd,X                 ;85F14B|951A    |00001A;
-                       LDA.W DATA16_81F39A,Y                ;85F14D|B99AF3  |81F39A;
+                       LDA.W someYspeedValues,Y             ;85F14D|B99AF3  |81F39A;
                        STA.B r_ev_1c_ySpdSub,X              ;85F150|951C    |00001C;
-                       LDA.W DATA16_81F39C,Y                ;85F152|B99CF3  |81F39C;
+                       LDA.W DATA8_81F39C,Y                 ;85F152|B99CF3  |81F39C;
                        STA.B r_ev_1e_ySpd,X                 ;85F155|951E    |00001E;
                        RTS                                  ;85F157|60      |      ;
                                                             ;      |        |      ;
-       UNREACH_85F158:
-                       db $B9,$9A,$F3,$95,$18,$B9,$9C,$F3   ;85F158|        |00F39A;
-                       db $95,$1A,$B9,$9E,$F3,$95,$1C,$B9   ;85F160|        |00001A;
-                       db $A0,$F3,$95,$1E,$60               ;85F168|        |      ;
+          CODE_85F158:
+                       LDA.W someYspeedValues,Y             ;85F158|B99AF3  |81F39A;
+                       STA.B r_ev_18_xSpdSub,X              ;85F15B|9518    |000018;
+                       LDA.W DATA8_81F39C,Y                 ;85F15D|B99CF3  |81F39C;
+                       STA.B r_ev_1a_xSpd,X                 ;85F160|951A    |00001A;
+                       LDA.W DATA8_81F39E,Y                 ;85F162|B99EF3  |81F39E;
+                       STA.B r_ev_1c_ySpdSub,X              ;85F165|951C    |00001C;
+                       LDA.W someXspeedValues,Y             ;85F167|B9A0F3  |81F3A0;
+                       STA.B r_ev_1e_ySpd,X                 ;85F16A|951E    |00001E;
+                       RTS                                  ;85F16C|60      |      ;
+                                                            ;      |        |      ;
                                                             ;      |        |      ;
           CODE_85F16D:
                        LDA.B r_ev_18_xSpdSub                ;85F16D|A518    |000018;
@@ -6925,26 +6945,39 @@ bossThrowBlockJumpTable:
           CODE_85F175:
                        LDA.B r_ev_1a_xSpd                   ;85F175|A51A    |00001A;
                        BEQ CODE_85F17D                      ;85F177|F004    |85F17D;
-                       db $22,$3B,$EF,$85                   ;85F179|        |85EF3B;
+                       JSL.L CODE_85EF3B                    ;85F179|223BEF85|85EF3B;
                                                             ;      |        |      ;
           CODE_85F17D:
                        RTL                                  ;85F17D|6B      |      ;
                                                             ;      |        |      ;
-          CODE_85F17E:
+    introStoryRoutine:
                        LDA.W r81_state_Map_Scene            ;85F17E|AD001C  |811C00;
                        PHX                                  ;85F181|DA      |      ;
                        ASL A                                ;85F182|0A      |      ;
                        TAX                                  ;85F183|AA      |      ;
-                       LDA.L UNREACH_85F18E,X               ;85F184|BF8EF185|85F18E;
+                       LDA.L introTextRoutines,X            ;85F184|BF8EF185|85F18E;
                        PLX                                  ;85F188|FA      |      ;
                        STA.B r_ev_00_sprite                 ;85F189|8500    |000000;
                        JMP.W (r_ev_00_sprite)               ;85F18B|6C0000  |000000;
                                                             ;      |        |      ;
-       UNREACH_85F18E:
-                       db $AC,$F1,$43,$F2,$4A,$F2,$50,$F2   ;85F18E|        |0043F1;
-                       db $7C,$F2,$4A,$F2,$C5,$F2,$CF,$F2   ;85F196|        |854AF2;
-                       db $35,$F3,$6A,$F3,$C5,$F3,$EB,$F3   ;85F19E|        |0000F3;
-                       db $28,$F5,$02,$F6,$0D,$F5           ;85F1A6|        |      ;
+    introTextRoutines:
+                       dw introTextState_clearLoad_00       ;85F18E|        |85F1AC;
+                       dw introTextState_BlackFade_01       ;85F190|        |85F243;
+                       dw introTextState_02                 ;85F192|        |85F24A;
+                       dw introTextState_03                 ;85F194|        |85F250;
+                       dw introTextState_04                 ;85F196|        |85F27C;
+                       dw introTextState_02                 ;85F198|        |85F24A;
+                       dw introTextState_06                 ;85F19A|        |85F2C5;
+                       dw introTextState_07                 ;85F19C|        |85F2CF;
+                       dw introTextState_08                 ;85F19E|        |85F335;
+                       dw introTextState_09                 ;85F1A0|        |85F36A;
+                       dw introTextState_0a                 ;85F1A2|        |85F3C5;
+                       dw introTextState_0b                 ;85F1A4|        |85F3EB;
+                       dw introTextState_0c                 ;85F1A6|        |85F528;
+                       dw introTextState_0d                 ;85F1A8|        |85F602;
+                       dw introTextState_0e                 ;85F1AA|        |85F50D;
+                                                            ;      |        |      ;
+introTextState_clearLoad_00:
                        REP #$30                             ;85F1AC|C230    |      ;
                        PHB                                  ;85F1AE|8B      |      ;
                        LDA.W #$0000                         ;85F1AF|A90000  |      ;
@@ -7000,12 +7033,18 @@ bossThrowBlockJumpTable:
           CODE_85F23F:
                        INC.W r81_state_Map_Scene            ;85F23F|EE001C  |811C00;
                        RTL                                  ;85F242|6B      |      ;
+                                                            ;      |        |      ;
+introTextState_BlackFade_01:
                        JSL.L blackFadeRoutine               ;85F243|22019680|809601;
                        BCS CODE_85F23F                      ;85F247|B0F6    |85F23F;
                        RTL                                  ;85F249|6B      |      ;
+                                                            ;      |        |      ;
+    introTextState_02:
                        DEC.W $1C02                          ;85F24A|CE021C  |811C02;
                        BEQ CODE_85F23F                      ;85F24D|F0F0    |85F23F;
                        RTL                                  ;85F24F|6B      |      ;
+                                                            ;      |        |      ;
+    introTextState_03:
                        LDA.W $1C04                          ;85F250|AD041C  |811C04;
                        CMP.W #$0014                         ;85F253|C91400  |      ;
                        BCS CODE_85F23F                      ;85F256|B0E7    |85F23F;
@@ -7033,6 +7072,8 @@ bossThrowBlockJumpTable:
                        MVN $7E,$86                          ;85F277|547E86  |      ;
                        PLB                                  ;85F27A|AB      |      ;
                        RTS                                  ;85F27B|60      |      ;
+                                                            ;      |        |      ;
+    introTextState_04:
                        LDA.W $1C06                          ;85F27C|AD061C  |811C06;
                        BEQ CODE_85F285                      ;85F27F|F004    |85F285;
                        DEC.W $1C06                          ;85F281|CE061C  |811C06;
@@ -7068,9 +7109,13 @@ bossThrowBlockJumpTable:
                        STA.W $1C02                          ;85F2BE|8D021C  |811C02;
                        INC.W r81_state_Map_Scene            ;85F2C1|EE001C  |811C00;
                        RTL                                  ;85F2C4|6B      |      ;
+                                                            ;      |        |      ;
+    introTextState_06:
                        LDA.W #$0073                         ;85F2C5|A97300  |      ;
                        JSL.L lunchSFXfromAccum              ;85F2C8|22E38580|8085E3;
                        INC.W r81_state_Map_Scene            ;85F2CC|EE001C  |811C00;
+                                                            ;      |        |      ;
+    introTextState_07:
                        JSL.L CODE_85F310                    ;85F2CF|2210F385|85F310;
                        LDY.W $1C0C                          ;85F2D3|AC0C1C  |811C0C;
                        LDA.W DATA16_81F3C2,Y                ;85F2D6|B9C2F3  |81F3C2;
@@ -7079,7 +7124,7 @@ bossThrowBlockJumpTable:
                        STA.W $12D8                          ;85F2DF|8DD812  |8112D8;
                        LDA.W DATA16_81F3D2,Y                ;85F2E2|B9D2F3  |81F3D2;
                        STA.W r81_blackFade                  ;85F2E5|8D801E  |811E80;
-                       LDX.W DATA16_81F3DA,Y                ;85F2E8|BEDAF3  |81F3DA;
+                       LDX.W setPaletteNightIntroAfterThunder,Y;85F2E8|BEDAF3  |81F3DA;
                        JSR.W CODE_85F270                    ;85F2EB|2070F2  |85F270;
                        LDA.W $1C0C                          ;85F2EE|AD0C1C  |811C0C;
                        INC A                                ;85F2F1|1A      |      ;
@@ -7117,6 +7162,8 @@ bossThrowBlockJumpTable:
                                                             ;      |        |      ;
           CODE_85F334:
                        RTL                                  ;85F334|6B      |      ;
+                                                            ;      |        |      ;
+    introTextState_08:
                        LDY.W #$0000                         ;85F335|A00000  |      ;
                        LDX.W #$0580                         ;85F338|A28005  |      ;
                                                             ;      |        |      ;
@@ -7142,6 +7189,8 @@ bossThrowBlockJumpTable:
                        LDA.W #$0060                         ;85F361|A96000  |      ;
                        STA.W $1C02                          ;85F364|8D021C  |811C02;
                        INC.W r81_state_Map_Scene            ;85F367|EE001C  |811C00;
+                                                            ;      |        |      ;
+    introTextState_09:
                        DEC.W $1C02                          ;85F36A|CE021C  |811C02;
                        BEQ CODE_85F399                      ;85F36D|F02A    |85F399;
                        LDX.W #$0580                         ;85F36F|A28005  |      ;
@@ -7192,6 +7241,8 @@ bossThrowBlockJumpTable:
                        ADC.B r_ev_1e_ySpd,X                 ;85F3C0|751E    |00001E;
                        STA.B r_ev_0e_yPos,X                 ;85F3C2|950E    |00000E;
                        RTL                                  ;85F3C4|6B      |      ;
+                                                            ;      |        |      ;
+    introTextState_0a:
                        LDX.W #$0580                         ;85F3C5|A28005  |      ;
                        LDA.W #$0060                         ;85F3C8|A96000  |      ;
                        STA.B r_ev_0a_xPos,X                 ;85F3CB|950A    |00000A;
@@ -7210,6 +7261,8 @@ bossThrowBlockJumpTable:
                                                             ;      |        |      ;
           CODE_85F3EA:
                        RTL                                  ;85F3EA|6B      |      ;
+                                                            ;      |        |      ;
+    introTextState_0b:
                        LDX.W #$0580                         ;85F3EB|A28005  |      ;
                        LDA.W #$F4C0                         ;85F3EE|A9C0F4  |      ;
                        STA.B r_ev_00_sprite                 ;85F3F1|8500    |000000;
@@ -7356,13 +7409,23 @@ bossThrowBlockJumpTable:
                        DEY                                  ;85F509|88      |      ;
                        BNE CODE_85F4FB                      ;85F50A|D0EF    |85F4FB;
                        RTS                                  ;85F50C|60      |      ;
-                       db $A5,$28,$89,$80,$00,$F0,$13,$A2   ;85F50D|        |000028;
-                       db $80,$05,$22,$59,$8C,$80,$A9,$80   ;85F515|        |85F51C;
-                       db $00,$8D,$02,$1C,$A9,$09,$00,$8D   ;85F51D|        |      ;
-                       db $00,$1C                           ;85F525|        |      ;
+                                                            ;      |        |      ;
+    introTextState_0e:
+                       LDA.B r_ev_28_HitboxXpos             ;85F50D|A528    |000028;
+                       BIT.W #$0080                         ;85F50F|898000  |      ;
+                       BEQ CODE_85F527                      ;85F512|F013    |85F527;
+                       LDX.W #$0580                         ;85F514|A28005  |      ;
+                       JSL.L clearSelectedEventSlotAll      ;85F517|22598C80|808C59;
+                       LDA.W #$0080                         ;85F51B|A98000  |      ;
+                       STA.W $1C02                          ;85F51E|8D021C  |811C02;
+                       LDA.W #$0009                         ;85F521|A90900  |      ;
+                       STA.W r81_state_Map_Scene            ;85F524|8D001C  |811C00;
                                                             ;      |        |      ;
           CODE_85F527:
                        RTL                                  ;85F527|6B      |      ;
+                                                            ;      |        |      ;
+                                                            ;      |        |      ;
+    introTextState_0c:
                        JSL.L CODE_85F445                    ;85F528|2245F485|85F445;
                        LDA.W $1C16                          ;85F52C|AD161C  |811C16;
                        BIT.W #$0007                         ;85F52F|890700  |      ;
@@ -7422,7 +7485,7 @@ bossThrowBlockJumpTable:
                        CMP.W #$00FE                         ;85F597|C9FE00  |      ;
                        BEQ CODE_85F5AD                      ;85F59A|F011    |85F5AD;
                        CMP.W #$003F                         ;85F59C|C93F00  |      ;
-                       BEQ UNREACH_85F5DE                   ;85F59F|F03D    |85F5DE;
+                       BEQ CODE_85F5DE                      ;85F59F|F03D    |85F5DE;
                        ORA.W #$2000                         ;85F5A1|090020  |      ;
                        JSL.L setSmallUpdateSize             ;85F5A4|22868D80|808D86;
                        INC.W $1C12                          ;85F5A8|EE121C  |811C12;
@@ -7454,12 +7517,22 @@ bossThrowBlockJumpTable:
                        STA.W $1C14                          ;85F5D9|8D141C  |811C14;
                        BRA CODE_85F5B1                      ;85F5DC|80D3    |85F5B1;
                                                             ;      |        |      ;
-       UNREACH_85F5DE:
-                       db $22,$91,$8D,$80,$AD,$12,$1C,$38   ;85F5DE|        |808D91;
-                       db $E9,$21,$00,$A8,$22,$52,$8D,$80   ;85F5E6|        |      ;
-                       db $A9,$3F,$20,$22,$86,$8D,$80,$22   ;85F5EE|        |      ;
-                       db $91,$8D,$80,$AC,$12,$1C,$22,$52   ;85F5F6|        |00008D;
-                       db $8D,$80,$80,$83                   ;85F5FE|        |008080;
+          CODE_85F5DE:
+                       JSL.L setUpdateSize                  ;85F5DE|22918D80|808D91;
+                       LDA.W $1C12                          ;85F5E2|AD121C  |811C12;
+                       SEC                                  ;85F5E5|38      |      ;
+                       SBC.W #$0021                         ;85F5E6|E92100  |      ;
+                       TAY                                  ;85F5E9|A8      |      ;
+                       JSL.L endGeneralTileUpdate           ;85F5EA|22528D80|808D52;
+                       LDA.W #$203F                         ;85F5EE|A93F20  |      ;
+                       JSL.L setSmallUpdateSize             ;85F5F1|22868D80|808D86;
+                       JSL.L setUpdateSize                  ;85F5F5|22918D80|808D91;
+                       LDY.W $1C12                          ;85F5F9|AC121C  |811C12;
+                       JSL.L endGeneralTileUpdate           ;85F5FC|22528D80|808D52;
+                       BRA CODE_85F585                      ;85F600|8083    |85F585;
+                                                            ;      |        |      ;
+                                                            ;      |        |      ;
+    introTextState_0d:
                        JSL.L CODE_85F445                    ;85F602|2245F485|85F445;
                        LDA.B r_ev_3a                        ;85F606|A53A    |00003A;
                        BIT.W #$0001                         ;85F608|890100  |      ;

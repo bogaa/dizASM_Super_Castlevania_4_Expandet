@@ -647,7 +647,7 @@
                        db $FF,$61,$02,$03,$FF               ;E79418|        |030261;
                                                             ;      |        |      ;
 blockMabData_StageB_slogra_BG0:
-                       db $03,$20,$80                       ;E7941D|        |      ;
+                       dl $802003                           ;E7941D|        |      ;
                        dw $0400,$0400,$0400,$0400           ;E79420|        |      ;
                        dw $0400,$0400,$0400,$0400           ;E79428|        |      ;
                        dw $0400,$0400,$0400,$0400           ;E79430|        |      ;
@@ -1686,7 +1686,7 @@ blockMabData_StageB_slogra_BG0:
                        db $FF,$51,$08,$03,$FF               ;E7B478|        |030851;
                                                             ;      |        |      ;
 sceneMabDataStageB_Slogra_BG1:
-                       db $03,$20,$80                       ;E7B47D|        |      ;
+                       dl $802003                           ;E7B47D|        |      ;
                        dw $0005,$0007,$0006,$0002           ;E7B480|        |      ;
                        dw $000C,$000D,$0012,$0005           ;E7B488|        |      ;
                        dw $0004,$0007,$0006,$0001           ;E7B490|        |      ;
@@ -2725,7 +2725,7 @@ sceneMabDataStageB_Slogra_BG1:
                        db $FF,$57,$08,$03,$FF               ;E7D4D8|        |030857;
                                                             ;      |        |      ;
 sceneMabDataStageB_SlograAndGaibon_BG0:
-                       db $03,$20,$80                       ;E7D4DD|        |      ;
+                       dl $802003                           ;E7D4DD|        |      ;
                        dw $0000,$0000,$0000,$0000           ;E7D4E0|        |      ;
                        dw $0000,$0000,$0000,$0000           ;E7D4E8|        |      ;
                        dw $0000,$0000,$0000,$0002           ;E7D4F0|        |      ;
@@ -3764,7 +3764,7 @@ sceneMabDataStageB_SlograAndGaibon_BG0:
                        db $FF,$FD,$0A,$03,$FF               ;E7F538|        |030AFD;
                                                             ;      |        |      ;
 levelGFXStageB_gaiboneQuater:
-                       db $03,$40,$80                       ;E7F53D|        |      ;
+                       dl $804003                           ;E7F53D|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E7F540|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E7F548|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E7F550|        |      ;

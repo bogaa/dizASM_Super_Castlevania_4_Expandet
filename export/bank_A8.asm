@@ -2265,7 +2265,7 @@ levelGFXStage1_entrance:
                        db $FF,$64,$0C,$03,$FF               ;A8C678|        |030C64;
                                                             ;      |        |      ;
 gfxCrumblinkBlocksRings01:
-                       db $C3,$03,$80                       ;A8C67D|        |      ;
+                       dl $8003C3                           ;A8C67D|        |      ;
                        db $13,$2F,$17,$60,$0E,$C0,$B5,$18   ;A8C680|        |      ;
                        db $C0,$3F,$00,$7B,$40,$3F,$80,$7F   ;A8C688|        |      ;
                        db $30,$00,$40,$08,$80,$31,$01,$42   ;A8C690|        |      ;
@@ -2400,7 +2400,7 @@ gfxCrumblinkBlocksRings01:
                        db $FF,$69,$0C,$03,$FF               ;A8CA98|        |030C69;
                                                             ;      |        |      ;
 gfxSpritePillarEntrance:
-                       db $43,$07,$80                       ;A8CA9D|        |      ;
+                       dl $800743                           ;A8CA9D|        |      ;
                                                             ;      |        |      ;
    pillarSpriteLevel0:
                        db $3D,$0E,$05,$2E,$52,$2E,$0E,$24   ;A8CAA0|        |      ;
@@ -2649,7 +2649,7 @@ gfxSpritePillarEntrance:
                        db $FF,$6E,$0C,$03,$FF               ;A8D238|        |030C6E;
                                                             ;      |        |      ;
  spriteGFXBridgeChain:
-                       db $04,$03,$80                       ;A8D23D|        |      ;
+                       dl $800304                           ;A8D23D|        |      ;
                                                             ;      |        |      ;
     chainSpriteLevel0:
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;A8D240|        |      ;
@@ -2766,7 +2766,7 @@ gfxSpritePillarEntrance:
                        db $FF,$8D,$00,$03,$FF               ;A8D5B8|        |03008D;
                                                             ;      |        |      ;
 blockMabData_LvL00_BG1:
-                       db $03,$20,$80                       ;A8D5BD|        |      ;
+                       dl $802003                           ;A8D5BD|        |      ;
                        dw $0800,$0800,$0800,$0800           ;A8D5C0|        |      ;
                        dw $0800,$0800,$0800,$0800           ;A8D5C8|        |      ;
                        dw $0800,$0800,$0800,$0800           ;A8D5D0|        |      ;
@@ -3806,7 +3806,7 @@ blockMabData_LvL00_BG1:
                        db $00,$03,$FF                       ;A8F61A|        |      ;
                                                             ;      |        |      ;
 blockMabData_LvL00_BG0:
-                       db $03,$20,$80                       ;A8F61D|        |      ;
+                       dl $802003                           ;A8F61D|        |      ;
                        dw $0000,$0000,$0000,$0000           ;A8F620|        |      ;
                        dw $0000,$0000,$0000,$0000           ;A8F628|        |      ;
                        dw $0000,$0000,$0000,$0000           ;A8F630|        |      ;

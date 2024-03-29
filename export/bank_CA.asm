@@ -427,7 +427,7 @@
                        db $FF,$3C,$0A,$03,$FF               ;CA8D38|        |030A3C;
                                                             ;      |        |      ;
 levelGFXStage5_dancingQuater:
-                       db $03,$40,$80                       ;CA8D3D|        |      ;
+                       dl $804003                           ;CA8D3D|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;CA8D40|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;CA8D48|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;CA8D50|        |      ;
@@ -2490,7 +2490,7 @@ levelGFXStage5_dancingQuater:
                        db $FF,$5E,$10,$03,$FF               ;CACD98|        |03105E;
                                                             ;      |        |      ;
   spriteGFX_redSkelly:
-                       db $C4,$0A,$80                       ;CACD9D|        |      ;
+                       dl $800AC4                           ;CACD9D|        |      ;
                        db $00,$00,$00,$00,$0A,$0E,$0D,$13   ;CACDA0|        |      ;
                        db $2C,$32,$13,$1E,$3E,$1D,$1D,$1B   ;CACDA8|        |      ;
                        db $00,$00,$00,$00,$01,$00,$00,$00   ;CACDB0|        |      ;
@@ -2853,7 +2853,7 @@ levelGFXStage5_dancingQuater:
                        db $FF,$AB,$01,$03,$FF               ;CAD8D8|        |0301AB;
                                                             ;      |        |      ;
 blockMabData_Stage6_DanceQuater_BG1:
-                       db $03,$20,$80                       ;CAD8DD|        |      ;
+                       dl $802003                           ;CAD8DD|        |      ;
                        dw $1C00,$1C00,$1C00,$1C00           ;CAD8E0|        |      ;
                        dw $1C00,$1C00,$1C00,$1C00           ;CAD8E8|        |      ;
                        dw $1C00,$1C00,$1C00,$1C00           ;CAD8F0|        |      ;
@@ -3892,7 +3892,7 @@ blockMabData_Stage6_DanceQuater_BG1:
                        db $FF,$B1,$01,$03,$FF               ;CAF938|        |0301B1;
                                                             ;      |        |      ;
 blockMabData_Stage6_DanceQuater_BG0:
-                       db $03,$20,$80                       ;CAF93D|        |      ;
+                       dl $802003                           ;CAF93D|        |      ;
                        dw $0000,$0000,$0000,$0000           ;CAF940|        |      ;
                        dw $0000,$0000,$0000,$0000           ;CAF948|        |      ;
                        dw $0000,$0000,$0000,$0000           ;CAF950|        |      ;

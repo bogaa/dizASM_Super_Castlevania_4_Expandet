@@ -2,8 +2,8 @@
 ;pos=17B800
 r 959 B
 r 93 U
-A
-A
-A
+C
+C
+C
 r 960 G
 r 33 U

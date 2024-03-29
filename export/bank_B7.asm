@@ -539,7 +539,7 @@
                        db $FF,$D9,$04,$03,$FF               ;B790B8|        |0304D9;
                                                             ;      |        |      ;
 sceneMabDataStage3_Cave_00_BG0:
-                       db $03,$20,$80                       ;B790BD|        |      ;
+                       dl $802003                           ;B790BD|        |      ;
                        dw $0013,$C00E,$C00D,$4012           ;B790C0|        |      ;
                        dw $0000,$C00B,$400D,$400D           ;B790C8|        |      ;
                        dw $401F,$0010,$0011,$0012           ;B790D0|        |      ;
@@ -1578,7 +1578,7 @@ sceneMabDataStage3_Cave_00_BG0:
                        db $FF,$98,$09,$03,$FF               ;B7B118|        |030998;
                                                             ;      |        |      ;
 levelGFXStage3_waterFall:
-                       db $03,$40,$80                       ;B7B11D|        |      ;
+                       dl $804003                           ;B7B11D|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B7B120|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B7B128|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B7B130|        |      ;
@@ -3641,7 +3641,7 @@ levelGFXStage3_waterFall:
                        db $FF,$A2,$09,$03,$FF               ;B7F178|        |0309A2;
                                                             ;      |        |      ;
 levelGFXStage3_waterfall_2bppBG:
-                       db $F3,$05,$80                       ;B7F17D|        |      ;
+                       dl $8005F3                           ;B7F17D|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B7F180|        |      ;
                        db $00,$00,$03,$00,$0F,$00,$3F,$00   ;B7F188|        |      ;
                        db $00,$00,$03,$00,$0C,$03,$30,$0F   ;B7F190|        |      ;
@@ -3848,7 +3848,7 @@ levelGFXStage3_waterfall_2bppBG:
                        db $FF,$35,$0E,$03,$FF               ;B7F7D8|        |030E35;
                                                             ;      |        |      ;
 spriteGFX_woodenSinkingBridg:
-                       db $83,$02,$80                       ;B7F7DD|        |      ;
+                       dl $800283                           ;B7F7DD|        |      ;
                        db $0A,$08,$4D,$4B,$CE,$90,$AF,$4F   ;B7F7E0|        |      ;
                        db $22,$93,$44,$FC,$26,$DD,$45,$9F   ;B7F7E8|        |      ;
                        db $0E,$00,$5F,$06,$C1,$01,$90,$1F   ;B7F7F0|        |      ;
@@ -3943,7 +3943,7 @@ spriteGFX_woodenSinkingBridg:
                        db $FF,$49,$0E,$03,$FF               ;B7FAB8|        |030E49;
                                                             ;      |        |      ;
   spriteGFX_fuzzyBall:
-                       db $84,$02,$80                       ;B7FABD|        |      ;
+                       dl $800284                           ;B7FABD|        |      ;
                        db $00,$04,$00,$24,$03,$12,$04,$4F   ;B7FAC0|        |      ;
                        db $19,$7E,$14,$1F,$24,$BF,$18,$7F   ;B7FAC8|        |      ;
                        db $00,$00,$04,$00,$10,$00,$40,$00   ;B7FAD0|        |      ;
@@ -4042,7 +4042,7 @@ spriteGFX_woodenSinkingBridg:
                        db $FF,$0D,$01,$03,$FF               ;B7FDB8|        |03010D;
                                                             ;      |        |      ;
 blockMabData_Stage3Waterfall_BG1:
-                       db $03,$20,$80                       ;B7FDBD|        |      ;
+                       dl $802003                           ;B7FDBD|        |      ;
                        dw $0800,$0800,$0800,$0800           ;B7FDC0|        |      ;
                        dw $0800,$0800,$0800,$0800           ;B7FDC8|        |      ;
                        dw $0800,$0800,$0800,$0800           ;B7FDD0|        |      ;

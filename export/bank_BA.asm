@@ -911,7 +911,7 @@
                        db $FF,$F9,$04,$03,$FF               ;BA9C58|        |0304F9;
                                                             ;      |        |      ;
 sceneMabDataStage3_Aquaduct_00_BG1:
-                       db $03,$20,$80                       ;BA9C5D|        |      ;
+                       dl $802003                           ;BA9C5D|        |      ;
                        dw $0003,$0003,$8002,$8004           ;BA9C60|        |      ;
                        dw $8005,$0009,$0000,$0000           ;BA9C68|        |      ;
                        dw $0003,$0001,$8002,$8005           ;BA9C70|        |      ;
@@ -1950,7 +1950,7 @@ sceneMabDataStage3_Aquaduct_00_BG1:
                        db $FF,$FF,$04,$03,$FF               ;BABCB8|        |0304FF;
                                                             ;      |        |      ;
 sceneMabDataStage3_Aquaduct_00_BG0:
-                       db $03,$20,$80                       ;BABCBD|        |      ;
+                       dl $802003                           ;BABCBD|        |      ;
                        dw $0009,$0009,$0009,$0009           ;BABCC0|        |      ;
                        dw $0009,$0009,$0009,$0009           ;BABCC8|        |      ;
                        dw $0011,$0012,$0013,$001A           ;BABCD0|        |      ;
@@ -2989,7 +2989,7 @@ sceneMabDataStage3_Aquaduct_00_BG0:
                        db $FF,$09,$05,$03,$FF               ;BADD18|        |030509;
                                                             ;      |        |      ;
 sceneMabDataStage3_Aquaduct_01_BG1:
-                       db $03,$20,$80                       ;BADD1D|        |      ;
+                       dl $802003                           ;BADD1D|        |      ;
                        dw $8025,$0025,$0023,$0044           ;BADD20|        |      ;
                        dw $0045,$0046,$0000,$0008           ;BADD28|        |      ;
                        dw $0026,$0022,$0047,$0022           ;BADD30|        |      ;
@@ -4028,7 +4028,7 @@ sceneMabDataStage3_Aquaduct_01_BG1:
                        db $FF,$0F,$05,$03,$FF               ;BAFD78|        |03050F;
                                                             ;      |        |      ;
 sceneMabDataStage3_Aquaduct_01_BG0:
-                       db $03,$20,$80                       ;BAFD7D|        |      ;
+                       dl $802003                           ;BAFD7D|        |      ;
                        dw $0000,$0000,$0000,$0009           ;BAFD80|        |      ;
                        dw $0009,$0009,$0009,$0009           ;BAFD88|        |      ;
                        dw $0000,$0000,$0000,$001A           ;BAFD90|        |      ;

@@ -2,7 +2,7 @@
 ;pos=3E9000
 r 1023 G
 r 93 U
-A
-A
-A
+C
+C
+C
 r 929 G

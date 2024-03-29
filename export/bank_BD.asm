@@ -935,7 +935,7 @@
                        db $FF,$33,$01,$03,$FF               ;BD9D18|        |030133;
                                                             ;      |        |      ;
 blockMabData_Stage4_SkullTower_BG0:
-                       db $03,$20,$80                       ;BD9D1D|        |      ;
+                       dl $802003                           ;BD9D1D|        |      ;
                        dw $0000,$0000,$0000,$0000           ;BD9D20|        |      ;
                        dw $0000,$0000,$0000,$0000           ;BD9D28|        |      ;
                        dw $0000,$0000,$0000,$0000           ;BD9D30|        |      ;
@@ -1974,7 +1974,7 @@ blockMabData_Stage4_SkullTower_BG0:
                        db $FF,$39,$05,$03,$FF               ;BDBD78|        |030539;
                                                             ;      |        |      ;
 sceneMabDataStage4_SkullTower_00_BG1:
-                       db $03,$20,$80                       ;BDBD7D|        |      ;
+                       dl $802003                           ;BDBD7D|        |      ;
                        dw $0002,$0048,$004A,$004D           ;BDBD80|        |      ;
                        dw $004E,$0000,$0000,$0000           ;BDBD88|        |      ;
                        dw $0002,$0049,$0048,$0048           ;BDBD90|        |      ;
@@ -3013,7 +3013,7 @@ sceneMabDataStage4_SkullTower_00_BG1:
                        db $FF,$3F,$05,$03,$FF               ;BDDDD8|        |03053F;
                                                             ;      |        |      ;
 sceneMabDataStage4_SkullTower_01_BG0:
-                       db $03,$20,$80                       ;BDDDDD|        |      ;
+                       dl $802003                           ;BDDDDD|        |      ;
                        dw $0008,$0008,$0007,$0008           ;BDDDE0|        |      ;
                        dw $0008,$0008,$0008,$0008           ;BDDDE8|        |      ;
                        dw $0003,$0005,$0001,$0002           ;BDDDF0|        |      ;
@@ -4052,7 +4052,7 @@ sceneMabDataStage4_SkullTower_01_BG0:
                        db $FF,$29,$0F,$03,$FF               ;BDFE38|        |030F29;
                                                             ;      |        |      ;
 spriteGFX_highFiveSkelly:
-                       db $84,$07,$80                       ;BDFE3D|        |      ;
+                       dl $800784                           ;BDFE3D|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;BDFE40|        |      ;
                        db $00,$01,$04,$04,$00,$02,$09,$08   ;BDFE48|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;BDFE50|        |      ;

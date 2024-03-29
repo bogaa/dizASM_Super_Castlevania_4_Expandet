@@ -1,12 +1,18 @@
 
 ;pos=39C000
-r 479 A
+r 479 B
 r 93 U
-r 515 A
+C
+C
+C
+r 512 B
 r 93 U
-r 515 A
+C
+C
+C
+r 512 B
 r 93 U
-A
-A
-A
+C
+C
+C
 r 257 G

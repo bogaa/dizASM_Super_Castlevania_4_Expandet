@@ -2,7 +2,7 @@
 ;pos=2D6000
 r 1599 G
 r 93 U
-A
-A
-A
+C
+C
+C
 r 353 G

@@ -111,7 +111,7 @@
                        db $FF,$2A,$BA,$00,$FF               ;EE8358|        |00BA2A;
                                                             ;      |        |      ;
    dancerGFXdataPart1:
-                       db $03,$20,$80                       ;EE835D|        |      ;
+                       dl $802003                           ;EE835D|        |      ;
                        db $E0,$1E,$CE,$3F,$DF,$3F,$DF,$3F   ;EE8360|        |      ;
                        db $DE,$3F,$C0,$3F,$C7,$38,$FF,$00   ;EE8368|        |      ;
                        db $7E,$FE,$FF,$FB,$FF,$F9,$FF,$F9   ;EE8370|        |      ;
@@ -1150,7 +1150,7 @@
                        db $FF,$33,$BA,$00,$FF               ;EEA3B8|        |00BA33;
                                                             ;      |        |      ;
   zapfBatGFXdataPart2:
-                       db $03,$0C,$80                       ;EEA3BD|        |      ;
+                       dl $800C03                           ;EEA3BD|        |      ;
                        db $02,$01,$00,$03,$00,$00,$00,$00   ;EEA3C0|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;EEA3C8|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;EEA3D0|        |      ;
@@ -1549,7 +1549,7 @@
                        db $FF,$38,$BA,$00,$FF               ;EEB018|        |00BA38;
                                                             ;      |        |      ;
   zapfBatGFXdataPart1:
-                       db $04,$20,$80                       ;EEB01D|        |      ;
+                       dl $802004                           ;EEB01D|        |      ;
                        db $30,$10,$44,$80,$C0,$14,$20,$20   ;EEB020|        |      ;
                        db $B6,$82,$82,$86,$01,$08,$02,$03   ;EEB028|        |      ;
                        db $30,$00,$5C,$10,$FC,$38,$10,$10   ;EEB030|        |      ;
@@ -2593,7 +2593,7 @@
                        db $41,$BA,$00,$FF                   ;EED099|        |0000BA;
                                                             ;      |        |      ;
 frankenSteinGFXdataPart2:
-                       db $03,$0C,$80                       ;EED09D|        |      ;
+                       dl $800C03                           ;EED09D|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;EED0A0|        |      ;
                        db $00,$00,$00,$00,$A3,$00,$01,$F0   ;EED0A8|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;EED0B0|        |      ;
@@ -2992,7 +2992,7 @@ frankenSteinGFXdataPart2:
                        db $FF,$46,$BA,$00,$FF               ;EEDCF8|        |00BA46;
                                                             ;      |        |      ;
 frankensteinGFXdataPart1:
-                       db $03,$20,$80                       ;EEDCFD|        |      ;
+                       dl $802003                           ;EEDCFD|        |      ;
                        db $07,$00,$03,$00,$08,$0E,$01,$05   ;EEDD00|        |      ;
                        db $08,$04,$00,$04,$01,$01,$01,$00   ;EEDD08|        |      ;
                        db $03,$04,$00,$0F,$08,$07,$01,$0C   ;EEDD10|        |      ;
@@ -4031,7 +4031,7 @@ frankensteinGFXdataPart1:
                        db $FF,$4F,$BA,$00,$FF               ;EEFD58|        |00BA4F;
                                                             ;      |        |      ;
   gaiboneGFXdataPart2:
-                       db $03,$0C,$80                       ;EEFD5D|        |      ;
+                       dl $800C03                           ;EEFD5D|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;EEFD60|        |      ;
                        db $00,$00,$40,$40,$20,$20,$10,$30   ;EEFD68|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;EEFD70|        |      ;

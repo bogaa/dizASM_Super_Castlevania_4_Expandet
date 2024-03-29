@@ -799,7 +799,7 @@
                        db $FF,$91,$0A,$03,$FF               ;D898D8|        |030A91;
                                                             ;      |        |      ;
 levelGFXStage9_2bpp_Ghosts:
-                       db $43,$02,$80                       ;D898DD|        |      ;
+                       dl $800243                           ;D898DD|        |      ;
                        db $07,$07,$38,$3F,$67,$78,$5F,$60   ;D898E0|        |      ;
                        db $BF,$C0,$A7,$D8,$99,$FF,$A4,$E7   ;D898E8|        |      ;
                        db $00,$00,$80,$80,$40,$C0,$A0,$60   ;D898F0|        |      ;
@@ -886,7 +886,7 @@ levelGFXStage9_2bpp_Ghosts:
                        db $FF,$1D,$12,$03,$FF               ;D89B78|        |03121D;
                                                             ;      |        |      ;
 spriteGFX_suckholeStone01:
-                       db $44,$07,$80                       ;D89B7D|        |      ;
+                       dl $800744                           ;D89B7D|        |      ;
                        db $82,$00,$28,$00,$6C,$28,$10,$10   ;D89B80|        |      ;
                        db $6C,$28,$28,$00,$82,$00,$00,$00   ;D89B88|        |      ;
                        db $82,$82,$6C,$6C,$54,$7C,$28,$38   ;D89B90|        |      ;
@@ -1137,7 +1137,7 @@ spriteGFX_suckholeStone01:
                        db $FF,$FB,$01,$03,$FF               ;D8A338|        |0301FB;
                                                             ;      |        |      ;
 blockMabData_Stage9_Gold_BG0:
-                       db $03,$20,$80                       ;D8A33D|        |      ;
+                       dl $802003                           ;D8A33D|        |      ;
                        dw $0800,$0800,$0800,$0800           ;D8A340|        |      ;
                        dw $0800,$0800,$0800,$0800           ;D8A348|        |      ;
                        dw $0800,$0800,$0800,$0800           ;D8A350|        |      ;
@@ -2176,7 +2176,7 @@ blockMabData_Stage9_Gold_BG0:
                        db $FF,$01,$02,$03,$FF               ;D8C398|        |030201;
                                                             ;      |        |      ;
 blockMabData_Stage9_Gold_BG1:
-                       db $03,$20,$80                       ;D8C39D|        |      ;
+                       dl $802003                           ;D8C39D|        |      ;
                        dw $0CB9,$0CB9,$0CB9,$0CB9           ;D8C3A0|        |      ;
                        dw $0CB9,$0CB9,$0CB9,$0CB9           ;D8C3A8|        |      ;
                        dw $0CB9,$0CB9,$0CB9,$0CB9           ;D8C3B0|        |      ;
@@ -3215,7 +3215,7 @@ blockMabData_Stage9_Gold_BG1:
                        db $FF,$3B,$07,$03,$FF               ;D8E3F8|        |03073B;
                                                             ;      |        |      ;
 sceneMabDataStage9_Gold_00_BG1:
-                       db $03,$20,$80                       ;D8E3FD|        |      ;
+                       dl $802003                           ;D8E3FD|        |      ;
                        dw $0000,$0000,$0000,$000B           ;D8E400|        |      ;
                        dw $0009,$000A,$000B,$0009           ;D8E408|        |      ;
                        dw $0001,$0001,$0002,$000D           ;D8E410|        |      ;

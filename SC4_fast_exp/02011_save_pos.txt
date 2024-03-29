@@ -2,12 +2,12 @@
 ;pos=3EB000
 r 1119 G
 r 93 U
-A
-A
-A
+C
+C
+C
 r 576 G
 r 93 U
-A
-A
-A
+C
+C
+C
 r 161 G

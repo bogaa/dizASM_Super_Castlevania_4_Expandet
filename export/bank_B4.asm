@@ -51,7 +51,7 @@
                        db $FF,$B5,$0D,$03,$FF               ;B48178|        |030DB5;
                                                             ;      |        |      ;
    spriteGFX_gargoyle:
-                       db $C4,$0B,$80                       ;B4817D|        |      ;
+                       dl $800BC4                           ;B4817D|        |      ;
                        db $00,$00,$00,$00,$00,$40,$40,$40   ;B48180|        |      ;
                        db $20,$20,$20,$20,$10,$10,$08,$08   ;B48188|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B48190|        |      ;
@@ -446,7 +446,7 @@
                        db $FF,$C4,$0D,$03,$FF               ;B48DB8|        |030DC4;
                                                             ;      |        |      ;
 spriteGFX_stealingHand:
-                       db $03,$03,$80                       ;B48DBD|        |      ;
+                       dl $800303                           ;B48DBD|        |      ;
                        db $38,$08,$6C,$1C,$DF,$BF,$BF,$FE   ;B48DC0|        |      ;
                        db $CF,$CC,$AE,$A9,$4D,$4B,$4B,$4F   ;B48DC8|        |      ;
                        db $18,$08,$2C,$04,$9F,$8B,$BE,$1A   ;B48DD0|        |      ;
@@ -557,7 +557,7 @@ spriteGFX_stealingHand:
                        db $FF,$ED,$00,$03,$FF               ;B49118|        |0300ED;
                                                             ;      |        |      ;
 blockMabData_Stage2WaterSlide_BG1:
-                       db $03,$20,$80                       ;B4911D|        |      ;
+                       dl $802003                           ;B4911D|        |      ;
                        dw $0000,$0000,$0000,$0000           ;B49120|        |      ;
                        dw $0000,$0000,$0000,$0000           ;B49128|        |      ;
                        dw $0000,$0000,$0000,$0000           ;B49130|        |      ;
@@ -1596,7 +1596,7 @@ blockMabData_Stage2WaterSlide_BG1:
                        db $FF,$F3,$00,$03,$FF               ;B4B178|        |0300F3;
                                                             ;      |        |      ;
 blockMabData_Stage2WaterSlide_BG0:
-                       db $03,$20,$80                       ;B4B17D|        |      ;
+                       dl $802003                           ;B4B17D|        |      ;
                        dw $0000,$0000,$0000,$0000           ;B4B180|        |      ;
                        dw $0000,$0000,$0000,$0000           ;B4B188|        |      ;
                        dw $0000,$0000,$0000,$0000           ;B4B190|        |      ;
@@ -2635,7 +2635,7 @@ blockMabData_Stage2WaterSlide_BG0:
                        db $FF,$71,$04,$03,$FF               ;B4D1D8|        |030471;
                                                             ;      |        |      ;
 sceneMabDataStage2_WaterSlide_00_BG1:
-                       db $03,$20,$80                       ;B4D1DD|        |      ;
+                       dl $802003                           ;B4D1DD|        |      ;
                        dw $0049,$0045,$8044,$0049           ;B4D1E0|        |      ;
                        dw $0045,$0044,$0045,$8044           ;B4D1E8|        |      ;
                        dw $004C,$0043,$8042,$004C           ;B4D1F0|        |      ;
@@ -3674,7 +3674,7 @@ sceneMabDataStage2_WaterSlide_00_BG1:
                        db $FF,$83,$04,$03,$FF               ;B4F238|        |030483;
                                                             ;      |        |      ;
 sceneMabDataStage2_WaterSlide_00_BG0:
-                       db $03,$20,$80                       ;B4F23D|        |      ;
+                       dl $802003                           ;B4F23D|        |      ;
                        dw $0011,$000D,$000D,$400C           ;B4F240|        |      ;
                        dw $400D,$000D,$0011,$000D           ;B4F248|        |      ;
                        dw $0011,$000E,$000E,$0011           ;B4F250|        |      ;

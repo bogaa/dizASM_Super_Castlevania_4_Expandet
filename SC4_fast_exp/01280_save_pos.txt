@@ -2,9 +2,12 @@
 ;pos=27D800
 r 767 B
 r 93 U
-A
-A
-A
+C
+C
+C
 r 640 G
 r 93 U
-r 452 B
+C
+C
+C
+r 449 B

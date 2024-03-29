@@ -431,7 +431,7 @@
                        db $FF,$C1,$03,$03,$FF               ;AB8D58|        |0303C1;
                                                             ;      |        |      ;
 sceneMabDataLvL01_Garden_BG0:
-                       db $03,$20,$80                       ;AB8D5D|        |      ;
+                       dl $802003                           ;AB8D5D|        |      ;
                        dw $0025,$0029,$0000,$0000           ;AB8D60|        |      ;
                        dw $0000,$0000,$0000,$0000           ;AB8D68|        |      ;
                        dw $0025,$0023,$0000,$0000           ;AB8D70|        |      ;
@@ -1470,7 +1470,7 @@ sceneMabDataLvL01_Garden_BG0:
                        db $FF,$3F,$09,$03,$FF               ;ABADB8|        |03093F;
                                                             ;      |        |      ;
 levelGFXStage1_Castle:
-                       db $03,$40,$80                       ;ABADBD|        |      ;
+                       dl $804003                           ;ABADBD|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;ABADC0|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;ABADC8|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;ABADD0|        |      ;
@@ -3533,7 +3533,7 @@ levelGFXStage1_Castle:
                        db $FF,$A0,$0C,$03,$FF               ;ABEE18|        |030CA0;
                                                             ;      |        |      ;
  spriteGFX_bonePillar:
-                       db $03,$08,$80                       ;ABEE1D|        |      ;
+                       dl $800803                           ;ABEE1D|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;ABEE20|        |      ;
                        db $02,$00,$0E,$07,$02,$07,$08,$09   ;ABEE28|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;ABEE30|        |      ;
@@ -3804,7 +3804,7 @@ levelGFXStage1_Castle:
                        db $FF,$AD,$00,$03,$FF               ;ABF678|        |0300AD;
                                                             ;      |        |      ;
 blockMabData_Stage1Castle_BG1:
-                       db $03,$20,$80                       ;ABF67D|        |      ;
+                       dl $802003                           ;ABF67D|        |      ;
                        dw $2400,$2400,$2400,$2400           ;ABF680|        |      ;
                        dw $2400,$2400,$2400,$2400           ;ABF688|        |      ;
                        dw $2400,$2400,$2400,$2400           ;ABF690|        |      ;

@@ -2,12 +2,12 @@
 ;pos=39A000
 r 557 M
 r 111 U
-A
-A
-A
+C
+C
+C
 r 624 M
 r 109 U
-A
-A
-A
+C
+C
+C
 r 641 G

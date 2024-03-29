@@ -2,7 +2,7 @@
 ;pos=1CD800
 r 831 G
 r 93 U
-A
-A
-A
+C
+C
+C
 r 1121 B

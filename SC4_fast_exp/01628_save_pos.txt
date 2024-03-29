@@ -2,7 +2,7 @@
 ;pos=32B800
 r 1407 G
 r 93 U
-A
-A
-A
+C
+C
+C
 r 545 G

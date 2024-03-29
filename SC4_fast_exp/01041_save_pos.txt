@@ -1,8 +1,13 @@
 
 ;pos=206000
 r 223 G
-r 1085 U
-A
-A
-A
+r 93 U
+C
+C
+C
+r 880 G
+r 109 U
+C
+C
+C
 r 737 B

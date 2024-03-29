@@ -1,11 +1,8 @@
 
 ;pos=3E8000
-A
-A
-A
-A
-r 2040 U
-A
-A
-A
+r 1951 A
+r 93 U
+C
+C
+C
 G

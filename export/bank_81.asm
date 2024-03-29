@@ -297,10 +297,21 @@ hdmaTable_RoomX_Data_08:
                        dw $FFFF                             ;8182C3|        |      ;
                                                             ;      |        |      ;
 bossKoranotSceneData00:
-                       dw $77C0,$7F85,$8A85,$0185           ;8182C5|        |      ;
-                       dw $0200,$0400,$0800,$8000           ;8182CD|        |      ;
-                       dw $0000,$0000,$8001,$0000           ;8182D5|        |      ;
-                       db $01,$00,$00,$00,$00,$00,$01       ;8182DD|        |      ;
+                       db $C0                               ;8182C5|        |      ;
+                                                            ;      |        |      ;
+textPointerStartContinueOptions:
+                       dw textTitle_Start                   ;8182C6|        |818577;
+                       dw textTitle_Continue                ;8182C8|        |81857F;
+                       dw textTitle_Option                  ;8182CA|        |81858A;
+                                                            ;      |        |      ;
+        DATA16_8182CC:
+                       dw $0001,$0002,$0004,$0008           ;8182CC|        |      ;
+                                                            ;      |        |      ;
+        mod7PosData00:
+                       dw $0080,$0000,$0100,$0080           ;8182D4|        |      ; koranot uses this too
+                                                            ;      |        |      ;
+   mode7RotationIndex:
+                       db $00,$01,$00,$00,$00,$00,$00,$01   ;8182DC|        |      ;
                                                             ;      |        |      ;
 ringSwingRotationTable:
                        dw $0000,$0324,$0648,$096C           ;8182E4|        |      ;
@@ -384,10 +395,14 @@ ringSwingRotationTable:
                        dw $5AEC                             ;8184FB|        |      ;
                        db $1A,$0B,$1D,$1D,$21,$19,$1C,$0E   ;8184FD|        |      ;
                        db $FF                               ;818505|        |      ;
+                                                            ;      |        |      ;
+     continueSelec_00:
                        dw $5AAA                             ;818506|        |      ;
                        db $27,$FE                           ;818508|        |      ;
                        dw $5AEA                             ;81850A|        |      ;
                        db $00,$FF                           ;81850C|        |      ;
+                                                            ;      |        |      ;
+     continueSelec_01:
                        dw $5AAA                             ;81850E|        |      ;
                        db $00,$FE                           ;818510|        |      ;
                        dw $5AEA                             ;818512|        |      ;
@@ -573,119 +588,119 @@ paletteNoAnimationEmpty:
  paletteMainPointer00:
                        db $01                               ;8186F7|        |      ;
                        dw $0000                             ;8186F8|        |      ;
-                       dw introStoryScreenPaletteData05     ;8186FA|        |86CAF8;
+                       dw PAL_BG_color                      ;8186FA|        |86CAF8;
                        dw $2200                             ;8186FC|        |      ;
-                       dw mainHUDpaletteData                ;8186FE|        |86C98C;
+                       dw PAL_HUD_FONT                      ;8186FE|        |86C98C;
                        dw $2202                             ;818700|        |      ;
-                       dw titleScreenPaletteData01          ;818702|        |86C9AC;
+                       dw PAL_titleScreen                   ;818702|        |86C9AC;
                        dw $2220                             ;818704|        |      ;
-                       dw introStoryScreenPaletteData08     ;818706|        |86CB84;
+                       dw PAL_titleCrittersSprite           ;818706|        |86CB84;
                        dw $2300,$0000                       ;818708|        |      ;
                                                             ;      |        |      ;
  paletteMainPointer01:
                        db $01                               ;81870C|        |      ;
                        dw $0000                             ;81870D|        |      ;
-                       dw introStoryScreenPaletteData09     ;81870F|        |86CC26;
+                       dw PAL_titleScreenThunder            ;81870F|        |86CC26;
                        dw $2220,$0000                       ;818711|        |      ;
                                                             ;      |        |      ;
 paletteMainSpriteAndHUDpointer:
                        db $01                               ;818715|        |      ;
                        dw $0000                             ;818716|        |      ;
-                       dw mainHUDpaletteData                ;818718|        |86C98C;
+                       dw PAL_HUD_FONT                      ;818718|        |86C98C;
                        dw $2202                             ;81871A|        |      ;
-                       dw mainSpritePaletteData             ;81871C|        |86C8AA;
+                       dw spritePAL_0_main                  ;81871C|        |86C8AA;
                        dw $2300,$0000                       ;81871E|        |      ;
                                                             ;      |        |      ;
  paletteMainPointer02:
                        db $01                               ;818722|        |      ;
                        dw $0000                             ;818723|        |      ;
-                       dw introStoryScreenPaletteData05     ;818725|        |86CAF8;
+                       dw PAL_BG_color                      ;818725|        |86CAF8;
                        dw $2200                             ;818727|        |      ;
-                       dw mainHUDpaletteData                ;818729|        |86C98C;
+                       dw PAL_HUD_FONT                      ;818729|        |86C98C;
                        dw $2202                             ;81872B|        |      ;
-                       dw introStoryScreenPaletteData10     ;81872D|        |86CDA8;
+                       dw PAL_nameScreenFlame               ;81872D|        |86CDA8;
                        dw $2220                             ;81872F|        |      ;
-                       dw introStoryScreenPaletteData11     ;818731|        |86CDCA;
+                       dw PAL_nameScreenTiles               ;818731|        |86CDCA;
                        dw $2240                             ;818733|        |      ;
-                       dw introStoryScreenPaletteData12     ;818735|        |86CE2C;
+                       dw PAL_ScreenFlame                   ;818735|        |86CE2C;
                        dw $2300,$0000                       ;818737|        |      ;
                                                             ;      |        |      ;
  paletteMainPointer03:
                        db $01                               ;81873B|        |      ;
                        dw $0000                             ;81873C|        |      ;
-                       dw introStoryScreenPaletteData13     ;81873E|        |86CE4E;
+                       dw PAL_introScreenWhip               ;81873E|        |86CE4E;
                        dw $2200,$0000                       ;818740|        |      ;
                                                             ;      |        |      ;
  paletteMainPointer04:
                        db $01                               ;818744|        |      ;
                        dw $0000                             ;818745|        |      ;
-                       dw introStoryScreenPaletteData05     ;818747|        |86CAF8;
+                       dw PAL_BG_color                      ;818747|        |86CAF8;
                        dw $2200                             ;818749|        |      ;
-                       dw mainHUDpaletteData                ;81874B|        |86C98C;
+                       dw PAL_HUD_FONT                      ;81874B|        |86C98C;
                        dw $2202                             ;81874D|        |      ;
-                       dw introStoryScreenPaletteData06     ;81874F|        |86CAFC;
+                       dw PAL_PW_screenTiles                ;81874F|        |86CAFC;
                        dw $2240                             ;818751|        |      ;
-                       dw mainSpritePaletteData             ;818753|        |86C8AA;
+                       dw spritePAL_0_main                  ;818753|        |86C8AA;
                        dw $2300                             ;818755|        |      ;
-                       dw introStoryScreenPaletteData07     ;818757|        |86CB7E;
+                       dw PAL_PW_screenRED                  ;818757|        |86CB7E;
                        dw $23E0,$0000                       ;818759|        |      ;
                                                             ;      |        |      ;
- paletteMainPointer05:
+ paletteLoadKoranot00:
                        db $01                               ;81875D|        |      ;
                        dw $0000                             ;81875E|        |      ;
-                       dw paletteDataMain0500               ;818760|        |86D67E;
+                       dw PAL_koranot_00                    ;818760|        |86D67E;
                        dw $22E0                             ;818762|        |      ;
-                       dw paletteDataMain0502               ;818764|        |86D6C2;
+                       dw PAL_koranot_02                    ;818764|        |86D6C2;
                        dw $23A0                             ;818766|        |      ;
-                       dw paletteDataMain0500               ;818768|        |86D67E;
+                       dw PAL_koranot_00                    ;818768|        |86D67E;
                        dw $23E0,$0000                       ;81876A|        |      ;
                                                             ;      |        |      ;
  paletteMainPointer06:
                        db $01                               ;81876E|        |      ;
                        dw $0000                             ;81876F|        |      ;
-                       dw introStoryScreenPaletteData14     ;818771|        |86CF90;
+                       dw PAL_mapScreenBorders              ;818771|        |86CF90;
                        dw $2200                             ;818773|        |      ;
-                       dw introStoryScreenPaletteData00     ;818775|        |86CA8E;
+                       dw PAL_mapWater00                    ;818775|        |86CA8E;
                        dw $2240                             ;818777|        |      ;
-                       dw introStoryScreenPaletteData16     ;818779|        |86D054;
+                       dw PAL_mapLogo                       ;818779|        |86D054;
                        dw $2320,$0000                       ;81877B|        |      ;
                                                             ;      |        |      ;
  paletteMainPointer07:
                        db $01                               ;81877F|        |      ;
                        dw $0000                             ;818780|        |      ;
-                       dw introStoryScreenPaletteData14     ;818782|        |86CF90;
+                       dw PAL_mapScreenBorders              ;818782|        |86CF90;
                        dw $2200                             ;818784|        |      ;
-                       dw introStoryScreenPaletteData15     ;818786|        |86CFD2;
+                       dw PAL_map_2_tiles                   ;818786|        |86CFD2;
                        dw $22A0                             ;818788|        |      ;
-                       dw introStoryScreenPaletteData16     ;81878A|        |86D054;
+                       dw PAL_mapLogo                       ;81878A|        |86D054;
                        dw $2320,$0000                       ;81878C|        |      ;
                                                             ;      |        |      ;
  paletteMainPointer08:
                        db $01                               ;818790|        |      ;
                        dw $8004                             ;818791|        |      ;
-                       dw introStoryScreenPaletteData01     ;818793|        |86CAD0;
+                       dw PAL_mapWater00                    ;818793|        |86CAD0;
                        dw $2258                             ;818795|        |      ;
-                       dw introStoryScreenPaletteData02     ;818797|        |86CADA;
+                       dw PAL_mapWater01_Anim               ;818797|        |86CADA;
                        dw $2258                             ;818799|        |      ;
-                       dw introStoryScreenPaletteData03     ;81879B|        |86CAE4;
+                       dw PAL_mapWater02_Anim               ;81879B|        |86CAE4;
                        dw $2258                             ;81879D|        |      ;
-                       dw introStoryScreenPaletteData04     ;81879F|        |86CAEE;
+                       dw PAL_mapWater03_Anim               ;81879F|        |86CAEE;
                        dw $2258,$0000                       ;8187A1|        |      ;
                                                             ;      |        |      ;
- paletteMainPointer09:
+ paletteLoadMapScreen:
                        db $01                               ;8187A5|        |      ;
                        dw $0000                             ;8187A6|        |      ;
-                       dw introStoryScreenPaletteData17     ;8187A8|        |86D116;
+                       dw PAL_introGraveAnim_17             ;8187A8|        |86D116;
                        dw $2200                             ;8187AA|        |      ;
-                       dw mainHUDpaletteData                ;8187AC|        |86C98C;
+                       dw PAL_HUD_FONT                      ;8187AC|        |86C98C;
                        dw $2202                             ;8187AE|        |      ;
-                       dw introStoryScreenPaletteData18     ;8187B0|        |86D218;
+                       dw PAL_introGraveStart               ;8187B0|        |86D218;
                        dw $2320,$0000                       ;8187B2|        |      ;
                                                             ;      |        |      ;
  paletteMainPointer0a:
                        db $01                               ;8187B6|        |      ;
                        dw $0000                             ;8187B7|        |      ;
-                       dw morePaletteData00                 ;8187B9|        |86D4FC;
+                       dw PAL_endingTiles                   ;8187B9|        |86D4FC;
                        dw $2200,$0000                       ;8187BB|        |      ;
                                                             ;      |        |      ;
 levelTileAnimationEnteryEmpty00:
@@ -889,87 +904,113 @@ konamiGFXsrcDestPointer:
                        dw $0000,$2000                       ;818B5D|        |      ;
                        dl konamiLogoFirstScreenGFXData      ;818B61|        |F3A57D;
                        dw $1000                             ;818B64|        |      ;
-                       dl miscContentTable00                ;818B66|        |F3B9DD;
+                       dl konamiScreenBG2_tilemap           ;818B66|        |F3B9DD;
                        dw $0000                             ;818B69|        |      ;
-                       dl miscContentTable01                ;818B6B|        |F3C23D;
+                       dl konamiScreenBG1_tilemap           ;818B6B|        |F3C23D;
                        dw $0100                             ;818B6E|        |      ;
-                       dl miscContentTable03                ;818B70|        |F3C49D;
-                       dw $FFFF,$0001,$0000,$60C8           ;818B73|        |      ;
-                       dw $2222,$00C8,$2222,$20C8           ;818B7B|        |      ;
-                       dw $2222,$40C8,$0022,$0100           ;818B83|        |      ;
-                       dw $0000,$C844,$2200,$0000           ;818B8B|        |      ;
-                       dw $0001,$6600,$20C8,$0022           ;818B93|        |      ;
-                       dw $0100,$0000,$C888,$2240           ;818B9B|        |      ;
-                       dw $0000,$586D,$003F,$0000           ;818BA3|        |      ;
-                       dw $FE3F,$588A,$4740,$4B60           ;818BAB|        |      ;
-                       dw $427D,$5400,$4665,$657C           ;818BB3|        |      ;
-                       dw $CAFE,$1D58,$0B1E,$0F11           ;818BBB|        |      ;
-                       dw $1D00,$160F,$0D0F,$FE1E           ;818BC3|        |      ;
-                       dw $5A86,$0B1A,$1D1F,$000F           ;818BCB|        |      ;
-                       dw $534B,$1D00,$160F,$0D0F           ;818BD3|        |      ;
-                       dw $001E,$FE6E,$5AB2,$003F           ;818BDB|        |      ;
-                       dw $0000,$3F00,$CDFE,$445A           ;818BE3|        |      ;
-                       dw $544C,$5949,$6345,$566F           ;818BEB|        |      ;
-                       dw $5464,$FE67,$59CC,$003F           ;818BF3|        |      ;
-                       dw $0000,$0000,$0000,$0000           ;818BFB|        |      ;
-                       dw $0000,$FE3F,$59E6,$0016           ;818C03|        |      ;
-                       dw $0054,$001C,$0053,$1E1D           ;818C0B|        |      ;
-                       dw $110B,$000F,$006E,$6543           ;818C13|        |      ;
-                       dw $FE5B,$5A0C,$FE3F,$5A26           ;818C1B|        |      ;
-                       dw $1E1D,$1C0B,$001E,$0053           ;818C23|        |      ;
-                       dw $504C,$5440,$0AFE,$1D5B           ;818C2B|        |      ;
-                       dw $0B1E,$0F11,$10FF,$FF5B           ;818C33|        |      ;
-                       dw $2602,$2602,$FF02,$2602           ;818C3B|        |      ;
-                       dw $2602,$FF03,$2602,$2603           ;818C43|        |      ;
-                       dw $FF02,$2602,$2603,$FF03           ;818C4B|        |      ;
-                       dw $2602,$2603,$FF04,$2602           ;818C53|        |      ;
-                       dw $2604,$FF02,$2602,$2604           ;818C5B|        |      ;
-                       dw $FF03,$2602,$2604,$FF04           ;818C63|        |      ;
-                       dw $2603,$2602,$FF02,$2603           ;818C6B|        |      ;
-                       dw $2603,$FF02,$2603,$2604           ;818C73|        |      ;
-                       dw $FF02,$2603,$2604,$FF03           ;818C7B|        |      ;
-                       dw $2604,$2602,$FF02,$2604           ;818C83|        |      ;
-                       dw $2603,$FF02,$2604,$2604           ;818C8B|        |      ;
-                       dw $FF02,$2604,$2604,$FF03           ;818C93|        |      ;
-                       dw $2604,$2604,$FF04,$2604           ;818C9B|        |      ;
-                       dw $2604,$FF05,$2605,$2602           ;818CA3|        |      ;
-                       dw $FF02,$2605,$2602,$FF03           ;818CAB|        |      ;
-                       dw $2605,$2602,$FF04,$2605           ;818CB3|        |      ;
-                       dw $2603,$FF02,$2605,$2604           ;818CBB|        |      ;
-                       dw $FF02,$2605,$2605,$FF02           ;818CC3|        |      ;
-                       dw $2606,$2602,$FF02,$2606           ;818CCB|        |      ;
-                       dw $2603,$FF02,$2607,$2602           ;818CD3|        |      ;
-                       dw $FF02,$2607,$2602,$FF03           ;818CDB|        |      ;
-                       dw $2607,$2603,$FF02,$2607           ;818CE3|        |      ;
-                       dw $2603,$FF03,$2607,$2603           ;818CEB|        |      ;
-                       dw $FF04,$2607,$2604,$FF02           ;818CF3|        |      ;
-                       dw $2607,$2604,$FF03,$2607           ;818CFB|        |      ;
-                       dw $2604,$FF04,$2607,$2604           ;818D03|        |      ;
-                       dw $FF05,$2608,$2602,$FF02           ;818D0B|        |      ;
-                       dw $2608,$2602,$FF03,$2608           ;818D13|        |      ;
-                       dw $2602,$FF04,$2608,$2603           ;818D1B|        |      ;
-                       dw $FF02,$2608,$2603,$FF03           ;818D23|        |      ;
-                       dw $2608,$2603,$FF04,$2608           ;818D2B|        |      ;
-                       dw $2603,$FF05,$2609,$2602           ;818D33|        |      ;
-                       dw $FF02,$2609,$2602,$FF03           ;818D3B|        |      ;
-                       dw $2609,$2603,$FF02,$2609           ;818D43|        |      ;
-                       dw $2603,$FF03,$260A,$2602           ;818D4B|        |      ;
-                       dw $FF02,$260A,$2602,$FF03           ;818D53|        |      ;
-                       dw $260A,$2602,$FF04,$260A           ;818D5B|        |      ;
-                       dw $2603,$FF02,$260A,$2603           ;818D63|        |      ;
-                       dw $FF03,$260A,$2603,$FF04           ;818D6B|        |      ;
-                       dw $260A,$2603,$FF05,$260A           ;818D73|        |      ;
-                       dw $2603,$FF06,$260A,$2603           ;818D7B|        |      ;
-                       dw $FF07,$260B,$2602,$FF02           ;818D83|        |      ;
-                       dw $260B,$2602,$FF03,$260B           ;818D8B|        |      ;
-                       dw $2602,$FF04,$260B,$2602           ;818D93|        |      ;
-                       dw $FF05,$260B,$2603,$FF02           ;818D9B|        |      ;
-                       dw $260C,$2602,$FF02,$260C           ;818DA3|        |      ;
-                       dw $2602,$FF03,$260C,$2603           ;818DAB|        |      ;
-                       dw $FF02,$260C,$2604,$FF02           ;818DB3|        |      ;
-                       dw $260C,$2604,$FF03,$260C           ;818DBB|        |      ;
-                       dw $2604,$FF04,$260C,$2605           ;818DC3|        |      ;
-                       dw $FF02,$260C,$2605,$FF03           ;818DCB|        |      ;
+                       dl konamiScreemBG2_transparent       ;818B70|        |F3C49D;
+                       dw $FFFF                             ;818B73|        |      ;
+                                                            ;      |        |      ;
+     konamiPalAnim_00:
+                       db $01                               ;818B75|        |      ;
+                       dw $0000                             ;818B76|        |      ;
+                       dw PAL_konamiScreen00                ;818B78|        |86C800;
+                       dw $2260                             ;818B7A|        |      ;
+                       dw PAL_konamiScreen01                ;818B7C|        |86C822;
+                       dw $2200                             ;818B7E|        |      ;
+                       dw PAL_konamiScreen01                ;818B80|        |86C822;
+                       dw $2220                             ;818B82|        |      ;
+                       dw PAL_konamiScreen01                ;818B84|        |86C822;
+                       dw $2240,$0000                       ;818B86|        |      ;
+                                                            ;      |        |      ;
+     konamiPalAnim_01:
+                       db $01                               ;818B8A|        |      ;
+                       dw $0000                             ;818B8B|        |      ;
+                       dw PAL_konamiScreen02                ;818B8D|        |86C844;
+                       dw $2200,$0000                       ;818B8F|        |      ;
+                                                            ;      |        |      ;
+     konamiPalAnim_02:
+                       db $01                               ;818B93|        |      ;
+                       dw $0000                             ;818B94|        |      ;
+                       dw PAL_konamiScreen03                ;818B96|        |86C866;
+                       dw $2220,$0000                       ;818B98|        |      ;
+                                                            ;      |        |      ;
+     konamiPalAnim_03:
+                       db $01                               ;818B9C|        |      ;
+                       dw $0000                             ;818B9D|        |      ;
+                       dw PAL_konamiScreen04                ;818B9F|        |86C888;
+                       dw $2240,$0000                       ;818BA1|        |      ;
+                       dl $3F586D,$000000,$8AFE3F           ;818BA5|        |      ;
+                       db $58                               ;818BAE|        |      ;
+                       dw $4740,$4B60,$427D,$5400           ;818BAF|        |      ;
+                       dw $4665,$657C,$CAFE,$1D58           ;818BB7|        |      ;
+                       dw $0B1E,$0F11,$1D00,$160F           ;818BBF|        |      ;
+                       dw $0D0F,$FE1E,$5A86,$0B1A           ;818BC7|        |      ;
+                       dw $1D1F,$000F,$534B,$1D00           ;818BCF|        |      ;
+                       dw $160F,$0D0F,$001E,$FE6E           ;818BD7|        |      ;
+                       dw $5AB2,$003F,$0000,$3F00           ;818BDF|        |      ;
+                       dw $CDFE,$445A,$544C,$5949           ;818BE7|        |      ;
+                       dw $6345,$566F,$5464,$FE67           ;818BEF|        |      ;
+                       dw $59CC,$003F,$0000,$0000           ;818BF7|        |      ;
+                       dw $0000,$0000,$0000,$FE3F           ;818BFF|        |      ;
+                       dw $59E6,$0016,$0054,$001C           ;818C07|        |      ;
+                       dw $0053,$1E1D,$110B,$000F           ;818C0F|        |      ;
+                       dw $006E,$6543,$FE5B,$5A0C           ;818C17|        |      ;
+                       dw $FE3F,$5A26,$1E1D,$1C0B           ;818C1F|        |      ;
+                       dw $001E,$0053,$504C,$5440           ;818C27|        |      ;
+                       dw $0AFE,$1D5B,$0B1E,$0F11           ;818C2F|        |      ;
+                       dw $10FF,$FF5B,$2602,$2602           ;818C37|        |      ;
+                       dw $FF02,$2602,$2602,$FF03           ;818C3F|        |      ;
+                       dw $2602,$2603,$FF02,$2602           ;818C47|        |      ;
+                       dw $2603,$FF03,$2602,$2603           ;818C4F|        |      ;
+                       dw $FF04,$2602,$2604,$FF02           ;818C57|        |      ;
+                       dw $2602,$2604,$FF03,$2602           ;818C5F|        |      ;
+                       dw $2604,$FF04,$2603,$2602           ;818C67|        |      ;
+                       dw $FF02,$2603,$2603,$FF02           ;818C6F|        |      ;
+                       dw $2603,$2604,$FF02,$2603           ;818C77|        |      ;
+                       dw $2604,$FF03,$2604,$2602           ;818C7F|        |      ;
+                       dw $FF02,$2604,$2603,$FF02           ;818C87|        |      ;
+                       dw $2604,$2604,$FF02,$2604           ;818C8F|        |      ;
+                       dw $2604,$FF03,$2604,$2604           ;818C97|        |      ;
+                       dw $FF04,$2604,$2604,$FF05           ;818C9F|        |      ;
+                       dw $2605,$2602,$FF02,$2605           ;818CA7|        |      ;
+                       dw $2602,$FF03,$2605,$2602           ;818CAF|        |      ;
+                       dw $FF04,$2605,$2603,$FF02           ;818CB7|        |      ;
+                       dw $2605,$2604,$FF02,$2605           ;818CBF|        |      ;
+                       dw $2605,$FF02,$2606,$2602           ;818CC7|        |      ;
+                       dw $FF02,$2606,$2603,$FF02           ;818CCF|        |      ;
+                       dw $2607,$2602,$FF02,$2607           ;818CD7|        |      ;
+                       dw $2602,$FF03,$2607,$2603           ;818CDF|        |      ;
+                       dw $FF02,$2607,$2603,$FF03           ;818CE7|        |      ;
+                       dw $2607,$2603,$FF04,$2607           ;818CEF|        |      ;
+                       dw $2604,$FF02,$2607,$2604           ;818CF7|        |      ;
+                       dw $FF03,$2607,$2604,$FF04           ;818CFF|        |      ;
+                       dw $2607,$2604,$FF05,$2608           ;818D07|        |      ;
+                       dw $2602,$FF02,$2608,$2602           ;818D0F|        |      ;
+                       dw $FF03,$2608,$2602,$FF04           ;818D17|        |      ;
+                       dw $2608,$2603,$FF02,$2608           ;818D1F|        |      ;
+                       dw $2603,$FF03,$2608,$2603           ;818D27|        |      ;
+                       dw $FF04,$2608,$2603,$FF05           ;818D2F|        |      ;
+                       dw $2609,$2602,$FF02,$2609           ;818D37|        |      ;
+                       dw $2602,$FF03,$2609,$2603           ;818D3F|        |      ;
+                       dw $FF02,$2609,$2603,$FF03           ;818D47|        |      ;
+                       dw $260A,$2602,$FF02,$260A           ;818D4F|        |      ;
+                       dw $2602,$FF03,$260A,$2602           ;818D57|        |      ;
+                       dw $FF04,$260A,$2603,$FF02           ;818D5F|        |      ;
+                       dw $260A,$2603,$FF03,$260A           ;818D67|        |      ;
+                       dw $2603,$FF04,$260A,$2603           ;818D6F|        |      ;
+                       dw $FF05,$260A,$2603,$FF06           ;818D77|        |      ;
+                       dw $260A,$2603,$FF07,$260B           ;818D7F|        |      ;
+                       dw $2602,$FF02,$260B,$2602           ;818D87|        |      ;
+                       dw $FF03,$260B,$2602,$FF04           ;818D8F|        |      ;
+                       dw $260B,$2602,$FF05,$260B           ;818D97|        |      ;
+                       dw $2603,$FF02,$260C,$2602           ;818D9F|        |      ;
+                       dw $FF02,$260C,$2602,$FF03           ;818DA7|        |      ;
+                       dw $260C,$2603,$FF02,$260C           ;818DAF|        |      ;
+                       dw $2604,$FF02,$260C,$2604           ;818DB7|        |      ;
+                       dw $FF03,$260C,$2604,$FF04           ;818DBF|        |      ;
+                       dw $260C,$2605,$FF02,$260C           ;818DC7|        |      ;
+                       dw $2605,$FF03                       ;818DCF|        |      ;
                                                             ;      |        |      ;
         DATA16_818DD3:
                        dw $0080                             ;818DD3|        |      ;
@@ -2000,61 +2041,66 @@ subWeaponUpgradHudSpritePPU:
                        dw $3244                             ;81A251|        |      ;
                                                             ;      |        |      ;
 multiShotUpgradHudSpritePPU:
-                       dw $3248,$3264,$3666,$583B           ;81A253|        |      ;
-                       dw $3EFF,$FF58,$0200,$02FF           ;81A25B|        |      ;
-                       dw $00FF,$FF02,$FF02,$0200           ;81A263|        |      ;
-                       dw $03FF,$00FF,$FF02,$FF03           ;81A26B|        |      ;
-                       dw $0200,$03FF,$00FF,$FF02           ;81A273|        |      ;
-                       dw $FF04,$0200,$04FF,$00FF           ;81A27B|        |      ;
-                       dw $FF02,$FF04,$0300,$02FF           ;81A283|        |      ;
-                       dw $00FF,$FF03,$FF03,$0300           ;81A28B|        |      ;
-                       dw $04FF,$00FF,$FF03,$FF04           ;81A293|        |      ;
-                       dw $0400,$02FF,$00FF,$FF04           ;81A29B|        |      ;
-                       dw $FF03,$0400,$04FF,$00FF           ;81A2A3|        |      ;
-                       dw $FF04,$FF04,$0400,$04FF           ;81A2AB|        |      ;
-                       dw $00FF,$FF04,$FF04,$0500           ;81A2B3|        |      ;
-                       dw $02FF,$00FF,$FF05,$FF02           ;81A2BB|        |      ;
-                       dw $0500,$02FF,$00FF,$FF05           ;81A2C3|        |      ;
-                       dw $FF03,$0500,$04FF,$00FF           ;81A2CB|        |      ;
-                       dw $FF05,$FF05,$0600,$02FF           ;81A2D3|        |      ;
-                       dw $00FF,$FF06,$FF03,$0700           ;81A2DB|        |      ;
-                       dw $02FF,$00FF,$FF07,$FF02           ;81A2E3|        |      ;
-                       dw $0700,$03FF,$00FF,$FF07           ;81A2EB|        |      ;
-                       dw $FF03,$0700,$03FF,$00FF           ;81A2F3|        |      ;
-                       dw $FF07,$FF04,$0700,$04FF           ;81A2FB|        |      ;
-                       dw $00FF,$FF07,$FF04,$0700           ;81A303|        |      ;
-                       dw $04FF,$00FF,$FF08,$FF02           ;81A30B|        |      ;
-                       dw $0800,$02FF,$00FF,$FF08           ;81A313|        |      ;
-                       dw $FF02,$0800,$03FF,$00FF           ;81A31B|        |      ;
-                       dw $FF08,$FF03,$0800,$03FF           ;81A323|        |      ;
-                       dw $00FF,$FF08,$FF03,$0900           ;81A32B|        |      ;
-                       dw $02FF,$00FF,$FF09,$FF02           ;81A333|        |      ;
-                       dw $0900,$03FF,$00FF,$FF09           ;81A33B|        |      ;
-                       dw $FF03,$0A00,$02FF,$00FF           ;81A343|        |      ;
-                       dw $FF0A,$FF02,$0A00,$02FF           ;81A34B|        |      ;
-                       dw $00FF,$FF0A,$FF03,$0A00           ;81A353|        |      ;
-                       dw $03FF,$00FF,$FF0A,$FF03           ;81A35B|        |      ;
-                       dw $0A00,$03FF,$00FF,$FF0A           ;81A363|        |      ;
-                       dw $FF03,$0A00,$03FF,$00FF           ;81A36B|        |      ;
-                       dw $FF0B,$FF02,$0B00,$02FF           ;81A373|        |      ;
-                       dw $00FF,$FF0B,$FF02,$0B00           ;81A37B|        |      ;
-                       dw $02FF,$00FF,$FF0B,$FF03           ;81A383|        |      ;
-                       dw $0C00,$02FF,$00FF,$FF0C           ;81A38B|        |      ;
-                       dw $FF02,$0C00,$03FF,$00FF           ;81A393|        |      ;
-                       dw $FF0C,$FF04,$0C00,$04FF           ;81A39B|        |      ;
-                       dw $00FF,$FF0C,$FF04,$0C00           ;81A3A3|        |      ;
-                       dw $05FF,$00FF,$FF0C,$FF05           ;81A3AB|        |      ;
+                       dw $3248,$3264,$3666                 ;81A253|        |      ;
                                                             ;      |        |      ;
- pointerPPU_HUD_start:
+      HUD_Construct00:
+                       dw $583B                             ;81A259|        |      ;
+                       db $FF,$3E,$58,$FF                   ;81A25B|        |      ; probably functions as text
+                                                            ;      |        |      ;
+  levelNumberTableHUD:
+                       db $00,$02,$FF,$02,$FF,$00,$02,$FF   ;81A25F|        |      ;
+                       db $02,$FF,$00,$02,$FF,$03,$FF,$00   ;81A267|        |      ;
+                       db $02,$FF,$03,$FF,$00,$02,$FF,$03   ;81A26F|        |      ;
+                       db $FF,$00,$02,$FF,$04,$FF,$00,$02   ;81A277|        |      ;
+                       db $FF,$04,$FF,$00,$02,$FF,$04,$FF   ;81A27F|        |      ;
+                       db $00,$03,$FF,$02,$FF,$00,$03,$FF   ;81A287|        |      ;
+                       db $03,$FF,$00,$03,$FF,$04,$FF,$00   ;81A28F|        |      ;
+                       db $03,$FF,$04,$FF,$00,$04,$FF,$02   ;81A297|        |      ;
+                       db $FF,$00,$04,$FF,$03,$FF,$00,$04   ;81A29F|        |      ;
+                       db $FF,$04,$FF,$00,$04,$FF,$04,$FF   ;81A2A7|        |      ;
+                       db $00,$04,$FF,$04,$FF,$00,$04,$FF   ;81A2AF|        |      ;
+                       db $04,$FF,$00,$05,$FF,$02,$FF,$00   ;81A2B7|        |      ;
+                       db $05,$FF,$02,$FF,$00,$05,$FF,$02   ;81A2BF|        |      ;
+                       db $FF,$00,$05,$FF,$03,$FF,$00,$05   ;81A2C7|        |      ;
+                       db $FF,$04,$FF,$00,$05,$FF,$05,$FF   ;81A2CF|        |      ;
+                       db $00,$06,$FF,$02,$FF,$00,$06,$FF   ;81A2D7|        |      ;
+                       db $03,$FF,$00,$07,$FF,$02,$FF,$00   ;81A2DF|        |      ;
+                       db $07,$FF,$02,$FF,$00,$07,$FF,$03   ;81A2E7|        |      ;
+                       db $FF,$00,$07,$FF,$03,$FF,$00,$07   ;81A2EF|        |      ;
+                       db $FF,$03,$FF,$00,$07,$FF,$04,$FF   ;81A2F7|        |      ;
+                       db $00,$07,$FF,$04,$FF,$00,$07,$FF   ;81A2FF|        |      ;
+                       db $04,$FF,$00,$07,$FF,$04,$FF,$00   ;81A307|        |      ;
+                       db $08,$FF,$02,$FF,$00,$08,$FF,$02   ;81A30F|        |      ;
+                       db $FF,$00,$08,$FF,$02,$FF,$00,$08   ;81A317|        |      ;
+                       db $FF,$03,$FF,$00,$08,$FF,$03,$FF   ;81A31F|        |      ;
+                       db $00,$08,$FF,$03,$FF,$00,$08,$FF   ;81A327|        |      ;
+                       db $03,$FF,$00,$09,$FF,$02,$FF,$00   ;81A32F|        |      ;
+                       db $09,$FF,$02,$FF,$00,$09,$FF,$03   ;81A337|        |      ;
+                       db $FF,$00,$09,$FF,$03,$FF,$00,$0A   ;81A33F|        |      ;
+                       db $FF,$02,$FF,$00,$0A,$FF,$02,$FF   ;81A347|        |      ;
+                       db $00,$0A,$FF,$02,$FF,$00,$0A,$FF   ;81A34F|        |      ;
+                       db $03,$FF,$00,$0A,$FF,$03,$FF,$00   ;81A357|        |      ;
+                       db $0A,$FF,$03,$FF,$00,$0A,$FF,$03   ;81A35F|        |      ;
+                       db $FF,$00,$0A,$FF,$03,$FF,$00,$0A   ;81A367|        |      ;
+                       db $FF,$03,$FF,$00,$0B,$FF,$02,$FF   ;81A36F|        |      ;
+                       db $00,$0B,$FF,$02,$FF,$00,$0B,$FF   ;81A377|        |      ;
+                       db $02,$FF,$00,$0B,$FF,$02,$FF,$00   ;81A37F|        |      ;
+                       db $0B,$FF,$03,$FF,$00,$0C,$FF,$02   ;81A387|        |      ;
+                       db $FF,$00,$0C,$FF,$02,$FF,$00,$0C   ;81A38F|        |      ;
+                       db $FF,$03,$FF,$00,$0C,$FF,$04,$FF   ;81A397|        |      ;
+                       db $00,$0C,$FF,$04,$FF,$00,$0C,$FF   ;81A39F|        |      ;
+                       db $04,$FF,$00,$0C,$FF,$05,$FF,$00   ;81A3A7|        |      ;
+                       db $0C,$FF,$05,$FF                   ;81A3AF|        |      ;
+                                                            ;      |        |      ;
+      HUD_Construct01:
                        dw $5810                             ;81A3B3|        |      ;
                        db $FD,$24,$2B,$2C,$2C,$2C,$FD,$64   ;81A3B5|        |      ;
-                       db $2B                               ;81A3BD|        |      ;
-                       dw $21FE                             ;81A3BE|        |      ;
-                       db $58                               ;81A3C0|        |      ;
+                       db $2B,$FE                           ;81A3BD|        |      ;
+                       dw $5821                             ;81A3BF|        |      ;
                                                             ;      |        |      ;
      pointerPPU_score:
-                       dw $20FD                             ;81A3C1|        |      ;
-                       db $1D,$0D,$19,$1C,$0F,$FD,$2C,$FE   ;81A3C3|        |      ;
+                       db $FD,$20,$1D,$0D,$19,$1C,$0F,$FD   ;81A3C1|        |      ;
+                       db $2C,$FE                           ;81A3C9|        |      ;
                                                             ;      |        |      ;
 pointerPPU_score_00_border00:
                        dw $582E                             ;81A3CB|        |      ;
@@ -2062,8 +2108,7 @@ pointerPPU_score_00_border00:
                        db $FD,$24,$2D                       ;81A3D5|        |      ;
                                                             ;      |        |      ;
   pointerPPU_lvlBlock:
-                       dw $20FD                             ;81A3D8|        |      ;
-                       db $0C,$16,$19,$0D,$15,$FE           ;81A3DA|        |      ;
+                       db $FD,$20,$0C,$16,$19,$0D,$15,$FE   ;81A3D8|        |      ;
                                                             ;      |        |      ;
       pointerPPU_XX01:
                        dw $583D                             ;81A3E0|        |      ;
@@ -2089,8 +2134,7 @@ pointerPPU_score_00_border00:
                        db $2B                               ;81A414|        |      ; linebreak 2x followed by pointer ??
                                                             ;      |        |      ;
      pointerPPU_timer:
-                       dw $20FD                             ;81A415|        |      ;
-                       db $1E,$13,$17,$0F,$FF               ;81A417|        |      ;
+                       db $FD,$20,$1E,$13,$17,$0F,$FF       ;81A415|        |      ;
                                                             ;      |        |      ;
 mainEventIDPointerTable:
                        dl event_ID_00                       ;81A41C|        |80C9FF; 00
@@ -2888,8 +2932,8 @@ enemieDeathActionThingy:
                        dw $FFFF,$8976,$0004,$899B           ;81B385|        |      ;
                        dw $0004,$89B8,$0004,$FFFF           ;81B38D|        |      ;
                                                             ;      |        |      ;
-  deathStageDataTable:
-                       db $00,$01,$02,$02,$02,$05,$06,$06   ;81B395|        |      ; noPW or level select screen.. ??
+deathEntrance_DataTable:
+                       db $00,$01,$02,$02,$02,$05,$06,$06   ;81B395|        |      ;
                        db $08,$09,$0A,$0A,$0C,$0D,$0E,$0E   ;81B39D|        |      ;
                        db $10,$10,$12,$13,$13,$15,$16,$17   ;81B3A5|        |      ;
                        db $18,$19,$1A,$1A,$1C,$1C,$1C,$1F   ;81B3AD|        |      ;
@@ -3003,7 +3047,7 @@ some0cGFXsrcDesPointer:
                        dl fontGFXdata2bpp                   ;81B4A7|        |F3C6FD;
                        dw $FFFF                             ;81B4AA|        |      ;
                                                             ;      |        |      ;
-some0dGFXsrcDesPointer:
+ simonSpriteSheetLoad:
                        dw $0001                             ;81B4AC|        |      ;
                        dl $7F0000                           ;81B4AE|        |      ;
                        dl simonSpriteData00                 ;81B4B1|        |F6A57D;
@@ -3109,7 +3153,7 @@ some14GFXsrcDesPointer:
                        dl mightBeTilemapDataGraveExplosion03;81B5A2|        |F9FF9D;
                        dw $FFFF                             ;81B5A5|        |      ;
                                                             ;      |        |      ;
-some15GFXsrcDesPointer:
+titleScreenGFX_tilmapLoad:
                        dw $0000,$2000                       ;81B5A7|        |      ;
                        dl titleScreenCastlevaniaLogoGFXdata ;81B5AB|        |F8C67D;
                        dw $3000                             ;81B5AE|        |      ;
@@ -3135,24 +3179,24 @@ some17GFXsrcDesPointer:
                        dw $0000,$2000                       ;81B5D7|        |      ;
                        dl introScreenCastleGFXdata          ;81B5DB|        |FADF1D; not sure or what bank..
                        dw $3000                             ;81B5DE|        |      ;
-                       dl UNREACH_FAFF7D                    ;81B5E0|        |FAFF7D;
+                       dl someOtherTMdata                   ;81B5E0|        |FAFF7D;
                        dw $4000                             ;81B5E3|        |      ;
                        dl levelGFXStageB_tower_BG_Clouds    ;81B5E5|        |E59E1D;
                        dw $0000                             ;81B5E8|        |      ;
-                       dl UNREACH_FB9FDD                    ;81B5EA|        |FB9FDD;
+                       dl someOtherTMdata01                 ;81B5EA|        |FB9FDD;
                        dw $1000                             ;81B5ED|        |      ;
-                       dl UNREACH_FBB03D                    ;81B5EF|        |FBB03D;
+                       dl someOtherTMdata02                 ;81B5EF|        |FBB03D;
                        dw $6000                             ;81B5F2|        |      ;
                        dl introSimonWhipingGFXdata          ;81B5F4|        |FBB89D;
                        dw $FFFF                             ;81B5F7|        |      ;
                                                             ;      |        |      ;
-some18GFXsrcDesPointer:
+musicData_18_srcDesPointer:
                        dw $0002,$7F80                       ;81B5F9|        |      ;
-                       dl UNREACH_FBCF3D                    ;81B5FD|        |FBCF3D;
+                       dl musicData_7f80                    ;81B5FD|        |FBCF3D;
                        dw $FFFE,$5000                       ;81B600|        |      ;
-                       dl GFX_1DAD35                        ;81B604|        |1DAD35;
+                       dl MUSIC_1DAD35                      ;81B604|        |1DAD35; music BRR samples
                        dw $2F80,$0400                       ;81B607|        |      ;
-                       dl UNREACH_FCCF9D                    ;81B60B|        |FCCF9D;
+                       dl musicEngine                       ;81B60B|        |FCCF9D;
                        dw $FFFF                             ;81B60E|        |      ;
                                                             ;      |        |      ;
        musicIDpointer:
@@ -3334,7 +3378,7 @@ music_SrcDes_OrbDracula:
                                                             ;      |        |      ;
           sound_empty:
                        dw $A5C2,$A5B9                       ;81B74B|        |      ; not sure what this is
-                       dl DATA16_AFA5B4                     ;81B74F|        |AFA5B4;
+                       dl soundEmptySpace                   ;81B74F|        |AFA5B4;
                        db $A5                               ;81B752|        |      ;
                                                             ;      |        |      ;
         DATA16_81B753:
@@ -3572,7 +3616,7 @@ gaiboneSrcDestPointer:
                        dw $FFFF                             ;81BA81|        |      ;
                                                             ;      |        |      ;
   mummySrcDestPointer:
-                       db $00,$01,$00,$6A                   ;81BA83|        |      ;
+                       dw $0100,$6A00                       ;81BA83|        |      ;
                        dl mummyGFXdataPart2                 ;81BA87|        |F0B09D;
                        db $00,$70                           ;81BA8A|        |      ;
                        dl mummyGFXdataPart1                 ;81BA8C|        |F0BD1D;
@@ -4577,22 +4621,26 @@ SpriteAnimationTable28:
                        dw sprAssID_492                      ;81C681|        |84AF02;
                        dw $0100,$FFFF                       ;81C683|        |      ;
                                                             ;      |        |      ;
-bossRowdinPaletteTablePointers:
+bossRowdinPalettePointer00:
                        db $01                               ;81C687|        |      ; not sure..
                        dw $0000                             ;81C688|        |      ;
-                       dw paletteDataBossRowdin0513         ;81C68A|        |86D858;
+                       dw PAL_rowdin                        ;81C68A|        |86D858;
                        dw $23A0,$0000                       ;81C68C|        |      ;
+                                                            ;      |        |      ;
+bossRowdinPalettePointer01:
                        db $01                               ;81C690|        |      ;
                        dw $0401                             ;81C691|        |      ;
-                       dw morePaletteBossGetHitColor01      ;81C693|        |86D940;
+                       dw bossGetHitColor01                 ;81C693|        |86D940;
                        dw $23A0                             ;81C695|        |      ;
-                       dw paletteDataBossRowdin0513         ;81C697|        |86D858;
+                       dw PAL_rowdin                        ;81C697|        |86D858;
                        dw $23A0,$0000                       ;81C699|        |      ;
+                                                            ;      |        |      ;
+bossRowdinPalettePointer02:
                        db $01                               ;81C69D|        |      ;
                        dw $0C01                             ;81C69E|        |      ;
-                       dw morePaletteBossGetHitColor01      ;81C6A0|        |86D940;
+                       dw bossGetHitColor01                 ;81C6A0|        |86D940;
                        dw $23A0                             ;81C6A2|        |      ;
-                       dw paletteDataBossRowdin0513         ;81C6A4|        |86D858;
+                       dw PAL_rowdin                        ;81C6A4|        |86D858;
                        dw $23A0,$0000                       ;81C6A6|        |      ;
                                                             ;      |        |      ;
 rowdinSpriteAnimationData:
@@ -4676,16 +4724,18 @@ SpriteAnimationTable30:
                        dw $0060,$0020,$0030,$0070           ;81C764|        |      ;
                        dw $0030,$0040,$0000                 ;81C76C|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss00:
+bossViperPaletteLoad00:
                        db $01                               ;81C772|        |      ;
                        dw $0000                             ;81C773|        |      ;
-                       dw morePaletteData05                 ;81C775|        |86DA28;
+                       dw PAL_viper                         ;81C775|        |86DA28;
                        dw $2380,$0000                       ;81C777|        |      ;
+                                                            ;      |        |      ;
+bossViperPaletteLoad01:
                        db $01                               ;81C77B|        |      ;
                        dw $0401                             ;81C77C|        |      ;
-                       dw morePaletteBossGetHitColor01      ;81C77E|        |86D940;
+                       dw bossGetHitColor01                 ;81C77E|        |86D940;
                        dw $23A0                             ;81C780|        |      ;
-                       dw morePaletteData05                 ;81C782|        |86DA28;
+                       dw PAL_viper                         ;81C782|        |86DA28;
                        dw $2380,$0000                       ;81C784|        |      ;
                                                             ;      |        |      ;
 SpriteAnimationTable31:
@@ -4969,36 +5019,38 @@ SpriteAnimationTable43:
                        dw sprAssID_545                      ;81CB82|        |84B263;
                        dw $0002,$FFFF                       ;81CB84|        |      ;
                                                             ;      |        |      ;
-palettePointerSimonStone01:
+bossMedusaPaletteLoad00:
                        db $01                               ;81CB88|        |      ;
                        dw $0000                             ;81CB89|        |      ;
-                       dw morePaletteData04                 ;81CB8B|        |86DA06;
+                       dw PAL_medusa_00                     ;81CB8B|        |86DA06;
                        dw $2300,$0000                       ;81CB8D|        |      ;
+                                                            ;      |        |      ;
+bossMedusaPaletteLoad01:
                        db $01                               ;81CB91|        |      ;
                        dw $0000                             ;81CB92|        |      ;
-                       dw morePaletteData02                 ;81CB94|        |86D982;
+                       dw PAL_medusa_01                     ;81CB94|        |86D982;
                        dw $2300,$0000                       ;81CB96|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss02:
+bossMedusaPaletteLoad02:
                        db $01                               ;81CB9A|        |      ;
                        dw $8002                             ;81CB9B|        |      ;
-                       dw morePaletteBossGetHitColor01      ;81CB9D|        |86D940;
+                       dw bossGetHitColor01                 ;81CB9D|        |86D940;
                        dw $23A0                             ;81CB9F|        |      ;
-                       dw morePaletteData03                 ;81CBA1|        |86D9A4;
+                       dw PAL_medusa_02                     ;81CBA1|        |86D9A4;
                        dw $2380,$0000                       ;81CBA3|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss03:
+bossMedusaPaletteLoad03:
                        db $01                               ;81CBA7|        |      ;
                        dw $0401                             ;81CBA8|        |      ;
-                       dw morePaletteBossGetHitColor01      ;81CBAA|        |86D940;
+                       dw bossGetHitColor01                 ;81CBAA|        |86D940;
                        dw $23A0                             ;81CBAC|        |      ;
-                       dw morePaletteData03                 ;81CBAE|        |86D9A4;
+                       dw PAL_medusa_02                     ;81CBAE|        |86D9A4;
                        dw $2380,$0000                       ;81CBB0|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss04:
+bossMedusaPaletteLoad04:
                        db $01                               ;81CBB4|        |      ;
                        dw $0000                             ;81CBB5|        |      ;
-                       dw morePaletteData03                 ;81CBB7|        |86D9A4;
+                       dw PAL_medusa_02                     ;81CBB7|        |86D9A4;
                        dw $2380,$0000                       ;81CBB9|        |      ;
                                                             ;      |        |      ;
          PTR16_81CBBD:
@@ -5040,21 +5092,27 @@ somePaletteLoadMayBeBoss04:
         DATA16_81CBE1:
                        dw $0040,$0020,$0070,$0030           ;81CBE1|        |      ;
                        dw $0070,$0000,$0030,$0050           ;81CBE9|        |      ;
-                       dw $0040,$0080,$0000,$0403           ;81CBF1|        |      ;
-                       dw $DA8A,$2380,$0000                 ;81CBF9|        |      ;
+                       dw $0040,$0080,$0000                 ;81CBF1|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss05:
+bossPuwexilPaletteLoad00:
+                       dw $0403                             ;81CBF7|        |      ;
+                       dw PAL_puwexil_00                    ;81CBF9|        |86DA8A;
+                       dw $2380,$0000                       ;81CBFB|        |      ;
+                                                            ;      |        |      ;
+bossPuwexilPaletteLoad01:
                        db $01                               ;81CBFF|        |      ;
                        dw $0401                             ;81CC00|        |      ;
-                       dw morePaletteData07                 ;81CC02|        |86DAEC;
+                       dw PAL_puwexil_01                    ;81CC02|        |86DAEC;
                        dw $23A0                             ;81CC04|        |      ;
-                       dw morePaletteData06                 ;81CC06|        |86DA8A;
+                       dw PAL_puwexil_00                    ;81CC06|        |86DA8A;
                        dw $2380,$0000                       ;81CC08|        |      ;
+                                                            ;      |        |      ;
+bossPuwexilPaletteLoad02:
                        db $01                               ;81CC0C|        |      ;
                        dw $8002                             ;81CC0D|        |      ;
-                       dw morePaletteData07                 ;81CC0F|        |86DAEC;
+                       dw PAL_puwexil_01                    ;81CC0F|        |86DAEC;
                        dw $23A0                             ;81CC11|        |      ;
-                       dw morePaletteData06                 ;81CC13|        |86DA8A;
+                       dw PAL_puwexil_00                    ;81CC13|        |86DA8A;
                        dw $2380,$0000                       ;81CC15|        |      ;
                                                             ;      |        |      ;
 SpriteAnimationTable44:
@@ -5233,7 +5291,7 @@ SpriteAnimationTable48:
                        dw sprAssID_593                      ;81CD91|        |84B4E3;
                        dw sprAssID_592                      ;81CD93|        |84B4DE;
                                                             ;      |        |      ;
-        DATA16_81CD95:
+    mod7RotationTable:
                        dw $0000,$0000,$0000,$0000           ;81CD95|        |      ;
                        dw $0000,$0001,$0001,$0001           ;81CD9D|        |      ;
                        dw $0001,$0002,$0002,$0002           ;81CDA5|        |      ;
@@ -5354,14 +5412,10 @@ SpriteAnimationTable51:
                                                             ;      |        |      ;
 somePaletteLoadMayBeBoss06:
                        db $01                               ;81D073|        |      ;
-                       dw $0000,$0200                       ;81D074|        |      ;
-                       dl DATA8_22E00C                      ;81D078|        |22E00C;
-                       dw $2300                             ;81D07B|        |      ;
+                       dw $0000,$0200,$E00C,$0022           ;81D074|        |      ;
+                       dw $0223                             ;81D07C|        |      ;
                                                             ;      |        |      ;
-passwordInputScreenStuff:
-                       db $02                               ;81D07D|        |      ;
-                                                            ;      |        |      ;
-         DATA8_81D07E:
+     pwSpritePlacment:
                        db $03,$01,$00,$03,$02,$02,$01,$03   ;81D07E|        |      ;
                        db $01,$00,$00,$01,$02,$03,$00,$01   ;81D086|        |      ;
                        db $01,$02,$00,$03,$03,$00,$02,$00   ;81D08E|        |      ;
@@ -5655,18 +5709,18 @@ SpriteAnimationTable60:
                        dw sprAssFirstPageID_28              ;81D2A5|        |8480DC;
                        dw $0002,$FFFF                       ;81D2A7|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss07:
+bossGrakulPaletteLoad00:
                        db $01                               ;81D2AB|        |      ;
                        dw $0000                             ;81D2AC|        |      ;
-                       dw morePaletteData16                 ;81D2AE|        |86DD26;
+                       dw PAL_grakul                        ;81D2AE|        |86DD26;
                        dw $2380,$0000                       ;81D2B0|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss08:
+bossGrakulPaletteLoad01:
                        db $01                               ;81D2B4|        |      ;
                        dw $0202                             ;81D2B5|        |      ;
-                       dw morePaletteBossGetHitColor01      ;81D2B7|        |86D940;
+                       dw bossGetHitColor01                 ;81D2B7|        |86D940;
                        dw $2380                             ;81D2B9|        |      ;
-                       dw morePaletteData16                 ;81D2BB|        |86DD26;
+                       dw PAL_grakul                        ;81D2BB|        |86DD26;
                        dw $2380                             ;81D2BD|        |      ;
                                                             ;      |        |      ;
         DATA16_81D2BF:
@@ -5919,75 +5973,74 @@ SpriteAnimationTable69:
                        dw $000A                             ;81D519|        |      ;
                        dw sprAssID_867                      ;81D51B|        |84CC22;
                        dw $0009,$0000,$0010,$FFFF           ;81D51D|        |      ;
+                                                            ;      |        |      ;
+bossFrankPaletteLoad00:
                        dw $0203                             ;81D525|        |      ;
-                       dw morePaletteData10                 ;81D527|        |86DB52;
+                       dw PAL_frank                         ;81D527|        |86DB52;
                        dw $23C0                             ;81D529|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss09:
+bossFrankPaletteLoad01:
                        db $01                               ;81D52B|        |      ;
                        dw $0000                             ;81D52C|        |      ;
-                       dw morePaletteData08                 ;81D52E|        |86DB0E;
+                       dw PAL_frank_bottle_00               ;81D52E|        |86DB0E;
                        dw $2380                             ;81D530|        |      ;
-                       dw morePaletteData09                 ;81D532|        |86DB30;
+                       dw PAL_frank_bottle_01               ;81D532|        |86DB30;
                        dw $23A0                             ;81D534|        |      ;
-                       dw morePaletteData11                 ;81D536|        |86DB74;
+                       dw PAL_frank_bottle_02               ;81D536|        |86DB74;
                        dw $23E0,$0000                       ;81D538|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss10:
+bossFrankPaletteLoad02_bottle1:
                        db $01                               ;81D53C|        |      ;
                        dw $0000                             ;81D53D|        |      ;
-                       dw morePaletteData09                 ;81D53F|        |86DB30;
+                       dw PAL_frank_bottle_01               ;81D53F|        |86DB30;
                        dw $23E0,$0000                       ;81D541|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss11:
+bossFrankPaletteLoad03_bottle2:
                        db $01                               ;81D545|        |      ;
                        dw $0000                             ;81D546|        |      ;
-                       dw morePaletteData08                 ;81D548|        |86DB0E;
+                       dw PAL_frank_bottle_00               ;81D548|        |86DB0E;
                        dw $23E0,$0000                       ;81D54A|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss12:
+bossFrankPaletteLoad04_bottle3:
                        db $01                               ;81D54E|        |      ;
                        dw $0000                             ;81D54F|        |      ;
-                       dw morePaletteData11                 ;81D551|        |86DB74;
+                       dw PAL_frank_bottle_02               ;81D551|        |86DB74;
                        dw $23E0,$0000                       ;81D553|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss13:
+bossFrankPaletteLoad05_hit:
                        db $01                               ;81D557|        |      ;
                        dw $0002                             ;81D558|        |      ;
-                       dw morePaletteBossGetHitColor01      ;81D55A|        |86D940;
+                       dw bossGetHitColor01                 ;81D55A|        |86D940;
                        dw $23A0                             ;81D55C|        |      ;
-                       dw morePaletteData10                 ;81D55E|        |86DB52;
+                       dw PAL_frank                         ;81D55E|        |86DB52;
                        dw $23C0                             ;81D560|        |      ;
-                       dw morePaletteBossGetHitColor01      ;81D562|        |86D940;
+                       dw bossGetHitColor01                 ;81D562|        |86D940;
                        dw $23A0                             ;81D564|        |      ;
-                       dw morePaletteData10                 ;81D566|        |86DB52;
+                       dw PAL_frank                         ;81D566|        |86DB52;
                        dw $23C0                             ;81D568|        |      ;
-                       dw morePaletteData08                 ;81D56A|        |86DB0E;
+                       dw PAL_frank_bottle_00               ;81D56A|        |86DB0E;
                        dw $2380                             ;81D56C|        |      ;
-                       dw morePaletteData09                 ;81D56E|        |86DB30;
+                       dw PAL_frank_bottle_01               ;81D56E|        |86DB30;
                        dw $23A0,$0000                       ;81D570|        |      ;
                                                             ;      |        |      ;
 somePaletteLoadMayBeBoss14:
-                       dw $0102                             ;81D574|        |      ;
-                       dw $2380                             ;81D576|        |862380;
-                       dw $23A0                             ;81D578|        |      ;
-                       dw $23C0                             ;81D57A|        |8623C0;
+                       dw $0102,$2380,$23A0,$23C0           ;81D574|        |      ;
                        dw $23E0,$0000                       ;81D57C|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss15:
+bossFrankPaletteLoad06_death:
                        db $01                               ;81D580|        |      ;
                        dw $0802                             ;81D581|        |      ;
-                       dw morePaletteBossGetHitColor01      ;81D583|        |86D940;
+                       dw bossGetHitColor01                 ;81D583|        |86D940;
                        dw $23A0                             ;81D585|        |      ;
-                       dw morePaletteData10                 ;81D587|        |86DB52;
+                       dw PAL_frank                         ;81D587|        |86DB52;
                        dw $23C0                             ;81D589|        |      ;
-                       dw morePaletteBossGetHitColor01      ;81D58B|        |86D940;
+                       dw bossGetHitColor01                 ;81D58B|        |86D940;
                        dw $23A0                             ;81D58D|        |      ;
-                       dw morePaletteData10                 ;81D58F|        |86DB52;
+                       dw PAL_frank                         ;81D58F|        |86DB52;
                        dw $23C0                             ;81D591|        |      ;
-                       dw morePaletteData08                 ;81D593|        |86DB0E;
+                       dw PAL_frank_bottle_00               ;81D593|        |86DB0E;
                        dw $2380                             ;81D595|        |      ;
-                       dw morePaletteData09                 ;81D597|        |86DB30;
+                       dw PAL_frank_bottle_01               ;81D597|        |86DB30;
                        dw $23A0                             ;81D599|        |      ;
                                                             ;      |        |      ;
 gaibonFireBallAirSpeedData00:
@@ -6081,7 +6134,7 @@ SpriteAnimationTable73:
                        dw $0006,$FFFF                       ;81D641|        |      ;
                                                             ;      |        |      ;
 SpriteAnimationTable74:
-                       dw UNREACH_84BCFF                    ;81D645|        |84BCFF;
+                       dw sprAssID_705                      ;81D645|        |84BCFF;
                        dw $0020                             ;81D647|        |      ;
                        dw sprAssID_706                      ;81D649|        |84BD24;
                        dw $0020                             ;81D64B|        |      ;
@@ -6124,34 +6177,34 @@ SpriteAnimationTable78:
                        dw sprAssID_711                      ;81D68D|        |84BD7D;
                        dw $0006,$0000,$0004,$FFFF           ;81D68F|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss16:
+bossGaibonPaletteLoad00:
                        db $01                               ;81D697|        |      ;
                        dw $0000                             ;81D698|        |      ;
-                       dw morePaletteData13                 ;81D69A|        |86DBF8;
+                       dw PAL_gaibone_01                    ;81D69A|        |86DBF8;
                        dw $2380,$0000                       ;81D69C|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss17:
+bossGaibonPaletteLoad01:
                        db $01                               ;81D6A0|        |      ;
                        dw $0302                             ;81D6A1|        |      ;
-                       dw morePaletteBossGetHitColor01      ;81D6A3|        |86D940;
+                       dw bossGetHitColor01                 ;81D6A3|        |86D940;
                        dw $23A0                             ;81D6A5|        |      ;
-                       dw morePaletteData13                 ;81D6A7|        |86DBF8;
+                       dw PAL_gaibone_01                    ;81D6A7|        |86DBF8;
                        dw $2380,$0000                       ;81D6A9|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss18:
+bossGaibonPaletteLoad02:
                        db $01                               ;81D6AD|        |      ;
                        dw $0302                             ;81D6AE|        |      ;
-                       dw morePaletteBossGetHitColor01      ;81D6B0|        |86D940;
+                       dw bossGetHitColor01                 ;81D6B0|        |86D940;
                        dw $23A0                             ;81D6B2|        |      ;
-                       dw morePaletteData12                 ;81D6B4|        |86DB96;
+                       dw PAL_gaibone_00                    ;81D6B4|        |86DB96;
                        dw $2380,$0000                       ;81D6B6|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss19:
+bossGaibonPaletteLoad03:
                        db $01                               ;81D6BA|        |      ;
                        dw $0802                             ;81D6BB|        |      ;
-                       dw morePaletteBossGetHitColor01      ;81D6BD|        |86D940;
+                       dw bossGetHitColor01                 ;81D6BD|        |86D940;
                        dw $23A0                             ;81D6BF|        |      ;
-                       dw morePaletteData12                 ;81D6C1|        |86DB96;
+                       dw PAL_gaibone_00                    ;81D6C1|        |86DB96;
                        dw $2380,$0000                       ;81D6C3|        |      ;
                                                             ;      |        |      ;
 deathShadowSpawningXPos:
@@ -6260,31 +6313,31 @@ SpriteAnimationTable90:
                        dw sprAssID_833                      ;81D7A7|        |84C948;
                        dw $0002,$FFFF                       ;81D7A9|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss20:
+bossDeathPaletteLoad00:
                        dw $0104                             ;81D7AD|        |      ;
-                       dw moreSingleColorLoad02             ;81D7AF|        |86DE2E;
+                       dw PAL_death_singlCo_00              ;81D7AF|        |86DE2E;
                        dw $2382,$0000                       ;81D7B1|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss21:
+bossDeathPaletteLoad01:
                        dw $0004                             ;81D7B5|        |      ;
-                       dw moreSingleColorLoad03             ;81D7B7|        |86DE32;
+                       dw PAL_death_singlCo_01              ;81D7B7|        |86DE32;
                        dw $238E,$0000                       ;81D7B9|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss22:
+bossDeathPaletteLoad02:
                        db $01                               ;81D7BD|        |      ;
                        dw $0000                             ;81D7BE|        |      ;
-                       dw morePaletteData19                 ;81D7C0|        |86DDCC;
+                       dw PAL_death                         ;81D7C0|        |86DDCC;
                        dw $2380,$0000                       ;81D7C2|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss23:
+bossDeathPaletteLoad04:
                        db $01                               ;81D7C6|        |      ;
                        dw $0202                             ;81D7C7|        |      ;
-                       dw morePaletteBossGetHitColor01      ;81D7C9|        |86D940;
+                       dw bossGetHitColor01                 ;81D7C9|        |86D940;
                        dw $2380                             ;81D7CB|        |      ;
-                       dw morePaletteData19                 ;81D7CD|        |86DDCC;
+                       dw PAL_death                         ;81D7CD|        |86DDCC;
                        dw $2380,$0000                       ;81D7CF|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss24:
+bossDeathPaletteLoad03:
                        dw $0102,$2380,$0000                 ;81D7D3|        |      ;
                                                             ;      |        |      ;
         DATA16_81D7D9:
@@ -6569,24 +6622,26 @@ SpriteAnimationTable95:
                        dw sprAssID_1046_bossMummyFire03     ;81DA3D|        |84DFB9;
                        dw $0007,$FFFF                       ;81DA3F|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss25:
+bossMummyPalettLoad00:
                        db $01                               ;81DA43|        |      ;
                        dw $0000                             ;81DA44|        |      ;
-                       dw morePaletteData17                 ;81DA46|        |86DD88;
+                       dw PAL_mummy_00                      ;81DA46|        |86DD88;
                        dw $2380,$0000                       ;81DA48|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss26:
+bossMummyPalettLoad01:
                        db $01                               ;81DA4C|        |      ;
                        dw $0202                             ;81DA4D|        |      ;
-                       dw morePaletteBossGetHitColor01      ;81DA4F|        |86D940;
-                       dw $2380,$DD88,$2380,$0000           ;81DA51|        |      ;
+                       dw bossGetHitColor01                 ;81DA4F|        |86D940;
+                       dw $2380                             ;81DA51|        |      ;
+                       dw PAL_mummy_00                      ;81DA53|        |86DD88;
+                       dw $2380,$0000                       ;81DA55|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss27:
+bossMummyPalettLoad02:
                        db $01                               ;81DA59|        |      ;
                        dw $0302                             ;81DA5A|        |      ;
-                       dw morePaletteData18                 ;81DA5C|        |86DDAA;
+                       dw PAL_mummy_01                      ;81DA5C|        |86DDAA;
                        dw $2380                             ;81DA5E|        |      ;
-                       dw morePaletteData17                 ;81DA60|        |86DD88;
+                       dw PAL_mummy_00                      ;81DA60|        |86DD88;
                        dw $2380,$0000                       ;81DA62|        |      ;
                                                             ;      |        |      ;
 bossMummySpawnXposOffset:
@@ -6793,50 +6848,52 @@ SpriteAnimationTable104:
                        dw sprAssID_899                      ;81DC24|        |84D31C;
                        dw $0008,$FFFF                       ;81DC26|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss28:
+bossSlograPaletteLoad00:
                        dw $0004                             ;81DC2A|        |      ;
-                       dw moreSingleColorLoad00             ;81DC2C|        |86DCBC;
+                       dw PAL_slogra_singlCo_00             ;81DC2C|        |86DCBC;
                        dw $238A,$0000                       ;81DC2E|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss29:
+bossSlograPaletteLoad01:
                        dw $0004                             ;81DC32|        |      ;
-                       dw moreSingleColorLoad00             ;81DC34|        |86DCBC;
+                       dw PAL_slogra_singlCo_00             ;81DC34|        |86DCBC;
                        dw $23AA,$0000                       ;81DC36|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss30:
+bossSlograPaletteLoad02:
                        db $01                               ;81DC3A|        |      ;
                        dw $0403                             ;81DC3B|        |      ;
-                       dw morePaletteData15                 ;81DC3D|        |86DCC4;
+                       dw PAL_slogra_01                     ;81DC3D|        |86DCC4;
                        dw $2380                             ;81DC3F|        |      ;
-                       dw morePaletteData14                 ;81DC41|        |86DC5A;
+                       dw PAL_slogra_00                     ;81DC41|        |86DC5A;
                        dw $2380,$0000                       ;81DC43|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss31:
+bossSlograPaletteLoad03:
                        db $01                               ;81DC47|        |      ;
                        dw $0000                             ;81DC48|        |      ;
-                       dw morePaletteData14                 ;81DC4A|        |86DC5A;
+                       dw PAL_slogra_00                     ;81DC4A|        |86DC5A;
                        dw $2380,$0000                       ;81DC4C|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss32:
+bossSlograPaletteLoad04:
                        db $01                               ;81DC50|        |      ;
                        dw $0202                             ;81DC51|        |      ;
-                       dw morePaletteBossGetHitColor01      ;81DC53|        |86D940;
+                       dw bossGetHitColor01                 ;81DC53|        |86D940;
                        dw $2380                             ;81DC55|        |      ;
-                       dw morePaletteData15                 ;81DC57|        |86DCC4;
+                       dw PAL_slogra_01                     ;81DC57|        |86DCC4;
                        dw $2380,$0000                       ;81DC59|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss33:
+bossSlograPaletteLoad05:
                        db $01                               ;81DC5D|        |      ;
                        dw $4002                             ;81DC5E|        |      ;
-                       dw morePaletteBossGetHitColor01      ;81DC60|        |86D940;
+                       dw bossGetHitColor01                 ;81DC60|        |86D940;
                        dw $2380                             ;81DC62|        |      ;
-                       dw morePaletteData15                 ;81DC64|        |86DCC4;
+                       dw PAL_slogra_01                     ;81DC64|        |86DCC4;
                        dw $2380                             ;81DC66|        |      ;
                                                             ;      |        |      ;
         DATA16_81DC68:
-                       dw $0000,$FFF8,$FFF8,$FFF9           ;81DC68|        |      ;
-                       dw $FFF9,$FFFA,$FFFA,$FFFB           ;81DC70|        |      ;
-                       dw $FFFB                             ;81DC78|        |      ;
+                       dw $0000                             ;81DC68|        |      ;
+                                                            ;      |        |      ;
+   porbablySlograData:
+                       dw $FFF8,$FFF8,$FFF9,$FFF9           ;81DC6A|        |      ;
+                       dw $FFFA,$FFFA,$FFFB,$FFFB           ;81DC72|        |      ;
                                                             ;      |        |      ;
         DATA16_81DC7A:
                        dw $0000,$FFFF,$0001,$FFFE           ;81DC7A|        |      ;
@@ -7108,12 +7165,12 @@ SpriteAnimationTableA118:
                        dw sprAssID_784                      ;81DF12|        |84C3C6;
                        dw $0004,$FFFF                       ;81DF14|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss34:
+  bossDracPaletteLoad:
                        db $01                               ;81DF18|        |      ;
                        dw $0000                             ;81DF19|        |      ;
-                       dw paletteDataSpriteStagel0B_drac01  ;81DF1B|        |86DE38;
+                       dw PAL_drac01                        ;81DF1B|        |86DE38;
                        dw $23A0                             ;81DF1D|        |      ;
-                       dw paletteDataAnimationXX08          ;81DF1F|        |86DE7A;
+                       dw PAL_drac_A0                       ;81DF1F|        |86DE7A;
                        dw $2200,$0000                       ;81DF21|        |      ;
                                                             ;      |        |      ;
         DATA16_81DF25:
@@ -7362,15 +7419,15 @@ SpriteAnimationTable126:
                        dl viperBossGFXdataPart1             ;81E270|        |FD945D;
                        dw $FFFF                             ;81E273|        |      ;
                                                             ;      |        |      ;
-        DATA16_81E275:
-                       dw $6000,$A000,$2000,$E000           ;81E275|        |      ;
+ waterCurrentForceSub:
+                       dw $6000,$A000,$2000,$E000           ;81E275|        |      ; the second value is used for something else
                                                             ;      |        |      ;
-        DATA16_81E27D:
+    waterCurrentForce:
                        dw $0000,$FFFF,$0001,$FFFE           ;81E27D|        |      ;
                                                             ;      |        |      ;
-         PTR16_81E285:
-                       dw GFX_86F886                        ;81E285|        |86F886;
-                       dw GFX_86F8BB                        ;81E287|        |86F8BB;
+watterCurrentPaletteAnim:
+                       dw paletteAnimationWaterSlide1       ;81E285|        |81F886;
+                       dw paletteAnimationWaterSlide2       ;81E287|        |81F8BB;
                                                             ;      |        |      ;
         DATA16_81E289:
                        dw $87D3,$87D7                       ;81E289|        |      ;
@@ -8101,23 +8158,23 @@ SpriteAnimationTable131:
                        dw $0000,$0022,$0021,$0038           ;81EF41|        |      ;
                                                             ;      |        |      ;
      noClueWhatThiIs4:
-                       dw someClueData00                    ;81EF49|        |84EDBC;
-                       dw UNREACH_84EE98                    ;81EF4B|        |84EE98;
-                       dw UNREACH_84EF74                    ;81EF4D|        |84EF74;
-                       dw UNREACH_84F050                    ;81EF4F|        |84F050;
-                       dw UNREACH_84F12C                    ;81EF51|        |84F12C;
-                       dw UNREACH_84F208                    ;81EF53|        |84F208;
-                       dw UNREACH_84F2E4                    ;81EF55|        |84F2E4;
-                       dw UNREACH_84F3C0                    ;81EF57|        |84F3C0;
-                       dw UNREACH_84F49C                    ;81EF59|        |84F49C;
-                       dw UNREACH_84F578                    ;81EF5B|        |84F578;
-                       dw UNREACH_84F654                    ;81EF5D|        |84F654;
-                       dw UNREACH_84F730                    ;81EF5F|        |84F730;
-                       dw UNREACH_84F80C                    ;81EF61|        |84F80C;
-                       dw UNREACH_84F8E8                    ;81EF63|        |84F8E8;
-                       dw UNREACH_84F9C4                    ;81EF65|        |84F9C4;
-                       dw UNREACH_84FAA0                    ;81EF67|        |84FAA0;
-                       dw UNREACH_84FB7C                    ;81EF69|        |84FB7C;
+                       dw someTileMapData00                 ;81EF49|        |84EDBC;
+                       dw someTileMapData01                 ;81EF4B|        |84EE98;
+                       dw someTileMapData02                 ;81EF4D|        |84EF74;
+                       dw someTileMapData03                 ;81EF4F|        |84F050;
+                       dw someTileMapData05                 ;81EF51|        |84F12C;
+                       dw someTileMapData06                 ;81EF53|        |84F208;
+                       dw DATA16_84F2E4                     ;81EF55|        |84F2E4;
+                       dw DATA16_84F3C0                     ;81EF57|        |84F3C0;
+                       dw DATA16_84F49C                     ;81EF59|        |84F49C;
+                       dw DATA16_84F578                     ;81EF5B|        |84F578;
+                       dw DATA16_84F654                     ;81EF5D|        |84F654;
+                       dw DATA16_84F730                     ;81EF5F|        |84F730;
+                       dw DATA16_84F80C                     ;81EF61|        |84F80C;
+                       dw DATA16_84F8E8                     ;81EF63|        |84F8E8;
+                       dw DATA16_84F9C4                     ;81EF65|        |84F9C4;
+                       dw DATA16_84FAA0                     ;81EF67|        |84FAA0;
+                       dw DATA16_84FB7C                     ;81EF69|        |84FB7C;
                        dw $0100,$0100,$0230,$0100           ;81EF6B|        |      ;
                        dw $0100,$0038,$0230,$0038           ;81EF73|        |      ;
                        dw $5D5C                             ;81EF7B|        |      ;
@@ -8356,38 +8413,38 @@ SpriteAnimationTable140:
                        dw sprAssID_697                      ;81F21D|        |84BBA5;
                        dw $0020,$FFFF                       ;81F21F|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss35:
+ zapfBatPaletteLoad00:
                        db $01                               ;81F223|        |      ;
                        dw $0302                             ;81F224|        |      ;
-                       dw paletteDataAnimationXX05          ;81F226|        |86F4EE;
+                       dw PAL_zapfBat_A1                    ;81F226|        |86F4EE;
                        dw $22A0                             ;81F228|        |      ;
-                       dw paletteDataAnimationXX04          ;81F22A|        |86F4CC;
+                       dw PAL_zapfBat_A0                    ;81F22A|        |86F4CC;
                        dw $22A0,$0000                       ;81F22C|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss36:
+ zapfBatPaletteLoad01:
                        db $01                               ;81F230|        |      ;
                        dw $0000                             ;81F231|        |      ;
-                       dw paletteDataAnimationXX06          ;81F233|        |86F510;
+                       dw PAL_zapfBat_A2                    ;81F233|        |86F510;
                        dw $2260                             ;81F235|        |      ;
-                       dw paletteDataAnimationXX07          ;81F237|        |86F532;
+                       dw PAL_zapfBat_A3                    ;81F237|        |86F532;
                        dw $2260,$0000                       ;81F239|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss37:
+ zapfBatPaletteLoad02:
                        db $01                               ;81F23D|        |      ;
                        dw $0000                             ;81F23E|        |      ;
-                       dw paletteDataMain0514               ;81F240|        |86D89A;
+                       dw PAL_zapfBat_00                    ;81F240|        |86D89A;
                        dw $2380,$0000                       ;81F242|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss38:
+ zapfBatPaletteLoad03:
                        db $01                               ;81F246|        |      ;
                        dw $0002                             ;81F247|        |      ;
-                       dw paletteDataMain0515               ;81F249|        |86D8BC;
+                       dw PAL_zapfBat_01                    ;81F249|        |86D8BC;
                        dw $2380                             ;81F24B|        |      ;
-                       dw paletteDataMain0514               ;81F24D|        |86D89A;
+                       dw PAL_zapfBat_00                    ;81F24D|        |86D89A;
                        dw $2380                             ;81F24F|        |      ;
-                       dw paletteDataMain0515               ;81F251|        |86D8BC;
+                       dw PAL_zapfBat_01                    ;81F251|        |86D8BC;
                        dw $2380                             ;81F253|        |      ;
-                       dw paletteDataMain0514               ;81F255|        |86D89A;
+                       dw PAL_zapfBat_00                    ;81F255|        |86D89A;
                        dw $2380,$0000                       ;81F257|        |      ;
                                                             ;      |        |      ;
         DATA16_81F25B:
@@ -8427,17 +8484,17 @@ somePaletteLoadMayBeBoss39:
                        dw $2380                             ;81F29D|        |862380;
                        dw $23A0,$0000                       ;81F29F|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss40:
+bossDancerPaletteLoad00:
                        dw $0104                             ;81F2A3|        |      ;
-                       dw paletteDataMain0512               ;81F2A5|        |86D816;
+                       dw PAL_dancer                        ;81F2A5|        |86D816;
                        dw $2380,$0000                       ;81F2A7|        |      ;
                                                             ;      |        |      ;
-somePaletteLoadMayBeBoss41:
+bossDancerPaletteLoad01:
                        db $01                               ;81F2AB|        |      ;
                        dw $0202                             ;81F2AC|        |      ;
-                       dw morePaletteBossGetHitColor01      ;81F2AE|        |86D940;
+                       dw bossGetHitColor01                 ;81F2AE|        |86D940;
                        dw $2380                             ;81F2B0|        |      ;
-                       dw paletteDataMain0512               ;81F2B2|        |86D816;
+                       dw PAL_dancer                        ;81F2B2|        |86D816;
                        dw $2380,$0000                       ;81F2B4|        |      ;
                                                             ;      |        |      ;
         DATA16_81F2B8:
@@ -8466,18 +8523,39 @@ spikeFromCellingCollusionData:
                        dw $4342,$0044,$40D5,$4241           ;81F300|        |      ;
                        dw $4443                             ;81F308|        |      ;
                                                             ;      |        |      ;
-        DATA16_81F30A:
-                       dw $0000,$0318,$0102,$C840           ;81F30A|        |      ;
-                       dw $CC05,$D005,$D405,$C005           ;81F312|        |      ;
-                       dw $C401,$C801,$CC01,$D001           ;81F31A|        |      ;
-                       dw $0801,$0408,$0404,$5008           ;81F322|        |      ;
-                       dw $88FF,$9000,$8801,$1C05           ;81F32A|        |      ;
-                       dw $0805,$1C01,$9001,$8C05           ;81F332|        |      ;
-                       dw $3200,$0461,$0500,$2800           ;81F33A|        |      ;
-                       dw $D807,$5807,$A800,$0300           ;81F342|        |      ;
-                       dw $0002,$5D00,$FDB7,$FFFF           ;81F34A|        |      ;
-                       db $00                               ;81F352|        |      ;
-                       dw $0000,$7D6C,$ED99,$FFFF           ;81F353|        |      ;
+         DATA8_81F30A:
+                       db $00,$00,$18,$03,$02,$01,$40       ;81F30A|        |      ;
+                                                            ;      |        |      ;
+         DATA8_81F311:
+                       db $C8,$05,$CC,$05,$D0,$05,$D4,$05   ;81F311|        |      ;
+                       db $C0,$01,$C4,$01,$C8,$01,$CC,$01   ;81F319|        |      ;
+                       db $D0,$01                           ;81F321|        |      ;
+                                                            ;      |        |      ;
+         DATA8_81F323:
+                       db $08,$08,$04,$04,$04,$08,$50,$FF   ;81F323|        |      ;
+                                                            ;      |        |      ;
+         DATA8_81F32B:
+                       db $88,$00,$90,$01,$88,$05,$1C,$05   ;81F32B|        |      ;
+                       db $08,$01,$1C,$01,$90,$05,$8C,$00   ;81F333|        |      ;
+                                                            ;      |        |      ;
+         DATA8_81F33B:
+                       db $32,$61                           ;81F33B|        |      ;
+                                                            ;      |        |      ;
+         DATA8_81F33D:
+                       db $04,$00,$05,$00                   ;81F33D|        |      ;
+                                                            ;      |        |      ;
+         DATA8_81F341:
+                       db $28,$07,$D8,$07                   ;81F341|        |      ;
+                                                            ;      |        |      ;
+         DATA8_81F345:
+                       db $58,$00,$A8,$00                   ;81F345|        |      ;
+                                                            ;      |        |      ;
+ koranotGFX_miscLoade:
+                       dw $0203,$0000                       ;81F349|        |      ;
+                       dl koranotGFXdataMod7_8bppLinear     ;81F34D|        |FDB75D;
+                       dw $FFFF,$0000,$6C00                 ;81F350|        |      ;
+                       dl koranotRockstGFXdata              ;81F356|        |ED997D;
+                       dw $FFFF                             ;81F359|        |      ;
                                                             ;      |        |      ;
 koranotFallingBlockBaseXpos:
                        dw $0708,$0738,$0768,$0798           ;81F35B|        |      ;
@@ -8486,77 +8564,131 @@ koranotFallingBlockBaseXpos:
                        dw $0020,$FB1D,$0020,$FB89           ;81F373|        |      ;
                        dw $0020,$FBF5,$0020,$FC61           ;81F37B|        |      ;
                        dw $0020,$FCCD,$0020,$FFFF           ;81F383|        |      ;
-                       dw $0802,$2220,$2240,$0403           ;81F38B|        |      ;
-                       dw $D6A0,$2240,$0000,$0000           ;81F393|        |      ;
-                       dw $0000,$0000,$0180,$9300           ;81F39B|        |      ;
-                       dw $008E,$8B00,$0164,$2A00           ;81F3A3|        |      ;
-                       dw $010C,$DA00,$0112,$0200           ;81F3AB|        |      ;
-                       dw $0110,$0240,$0340,$0210           ;81F3B3|        |      ;
-                       dw $0108,$0160,$0330,$00FF           ;81F3BB|        |      ;
-                       dw $0000,$0001,$0000,$0000           ;81F3C3|        |      ;
-                       dw $0001,$0001,$0000,$0F00           ;81F3CB|        |      ;
-                       dw $0F00,$0F00,$0000,$BA00           ;81F3D3|        |      ;
-                       dw $BAD4,$B8D4,$BAD1,$88D4           ;81F3DB|        |      ;
-                       dw $8C10,$0410,$0811,$0C11           ;81F3E3|        |      ;
-                       dw $8411,$8811,$8C11,$0411           ;81F3EB|        |      ;
-                       dw $0812,$0C12,$1012,$8412           ;81F3F3|        |      ;
-                       dw $8812,$8C12,$9012,$0112           ;81F3FB|        |      ;
-                       dw $0100,$4400,$4500,$0100           ;81F403|        |      ;
-                       dw $4600,$4700,$0100,$4800           ;81F40B|        |      ;
-                       dw $4900,$4A00,$4E00,$4B00           ;81F413|        |      ;
-                       dw $4C00,$4D00,$4F00,$8200           ;81F41B|        |      ;
-                       dw $82F4,$82F4,$A4F4                 ;81F423|        |      ;
-                       dw CODE_86A4F4                       ;81F429|        |86A4F4;
-                       dw CODE_86A4F4                       ;81F42B|        |86A4F4;
-                       dw CODE_86A4F4                       ;81F42D|        |86A4F4;
-                       dw CODE_86B6F4                       ;81F42F|        |86B6F4;
-                       dw $B6F4,$B6F4,$B6F4,$B6F4           ;81F431|        |      ;
-                       dw $B6F4,$B6F4,$B6F4,$B6F4           ;81F439|        |      ;
-                       dw $05F4,$0200,$0000,$FF00           ;81F441|        |      ;
-                       dw $01FF,$FE00,$00FF,$FD00           ;81F449|        |      ;
-                       dw $03FF,$0200,$0100,$FD00           ;81F451|        |      ;
-                       dw $01FF,$0400,$0000,$FC00           ;81F459|        |      ;
-                       dw $F9FF,$FAFF,$FBFF,$FCFF           ;81F461|        |      ;
-                       dw $FDFF,$FEFF,$FFFF,$00FF           ;81F469|        |      ;
-                       dw $F900,$FAFF,$FBFF,$FCFF           ;81F471|        |      ;
-                       dw $FDFF,$FEFF,$FFFF,$00FF           ;81F479|        |      ;
-                       dw $FB00,$08E1,$0800,$08E2           ;81F481|        |      ;
-                       dw $1500,$08E2,$2200,$08E2           ;81F489|        |      ;
-                       dw $2F00,$08E2,$3C00,$08E2           ;81F491|        |      ;
-                       dw $4900,$08E2,$5600,$08E2           ;81F499|        |      ;
-                       dw $FF00,$63FF,$08E2,$6800           ;81F4A1|        |      ;
-                       dw $08E2,$6D00,$08E2,$7200           ;81F4A9|        |      ;
-                       dw $08E2,$FF00,$77FF,$08E2           ;81F4B1|        |      ;
-                       dw $7C00,$08E2,$FF00,$81FF           ;81F4B9|        |      ;
-                       dw $04E2,$9A00,$04E2,$B300           ;81F4C1|        |      ;
-                       dw $04E2,$FF00,$2EFF,$2300           ;81F4C9|        |      ;
-                       dw $1400,$1800,$0C00,$1800           ;81F4D1|        |      ;
-                       dw $1800,$1000,$2400,$1A00           ;81F4D9|        |      ;
-                       dw $2000,$1800,$1000,$4000           ;81F4E1|        |      ;
-                       dw $1800,$2C00,$1200,$2000           ;81F4E9|        |      ;
-                       dw $FF00,$00FF,$0000,$0000           ;81F4F1|        |      ;
-                       dw $00E0,$0018,$0020,$0000           ;81F4F9|        |      ;
-                       dw $00E0,$0000,$0020,$0000           ;81F501|        |      ;
-                       dw $00D0,$0010,$0030,$0008           ;81F509|        |      ;
-                       dw $00CC,$00FC,$0050,$0000           ;81F511|        |      ;
-                       dw $0000,$FF00,$00FF,$0000           ;81F519|        |      ;
-                       dw $0000,$FF00,$00FF,$0000           ;81F521|        |      ;
-                       dw $0000,$FF00,$00FF,$0000           ;81F529|        |      ;
-                       dw $0000,$FF00,$FFFF,$00FF           ;81F531|        |      ;
-                       dw $0000,$0000,$00EC,$0020           ;81F539|        |      ;
-                       dw $00F4,$0008,$0010,$00E8           ;81F541|        |      ;
-                       dw $0020,$00E0,$0008,$00E0           ;81F549|        |      ;
-                       dw $0020,$00D8,$0030,$00F3           ;81F551|        |      ;
-                       dw $0030,$00DC,$0030,$FFC0           ;81F559|        |      ;
-                       dw $00FF,$FF00,$00FF,$0000           ;81F561|        |      ;
-                       dw $FF00,$00FF,$FF00,$00FF           ;81F569|        |      ;
-                       dw $FF00,$00FF,$FF00,$00FF           ;81F571|        |      ;
-                       dw $FF00,$00FF,$FF00,$00FF           ;81F579|        |      ;
-                       dw $FF00,$00FF,$0080,$00A0           ;81F581|        |      ;
-                       dw $00B0,$00C0,$00D8,$00C0           ;81F589|        |      ;
-                       dw $00A0,$FF80                       ;81F591|        |      ;
-                       db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;81F595|        |      ;
-                       db $FF,$FF,$FF,$FF,$FF,$FF,$FF       ;81F59D|        |      ;
+                                                            ;      |        |      ;
+ paletteLoadKoranot01:
+                       dw $0802,$2220,$2240                 ;81F38B|        |      ;
+                                                            ;      |        |      ;
+ paletteLoadKoranot02:
+                       dw $0403                             ;81F391|        |      ;
+                       dw PAL_koranot_01                    ;81F393|        |86D6A0;
+                       dw $2240,$0000                       ;81F395|        |      ;
+                       db $00                               ;81F399|        |      ;
+                                                            ;      |        |      ;
+     someYspeedValues:
+                       dw $0000                             ;81F39A|        |      ; might be mode7 related..
+                                                            ;      |        |      ;
+         DATA8_81F39C:
+                       db $00,$00                           ;81F39C|        |      ;
+                                                            ;      |        |      ;
+         DATA8_81F39E:
+                       db $00,$80                           ;81F39E|        |      ;
+                                                            ;      |        |      ;
+     someXspeedValues:
+                       dw $0001,$8E93,$0000,$648B           ;81F3A0|        |      ;
+                       dw $0001,$0C2A,$0001,$12DA           ;81F3A8|        |      ;
+                       dw $0001                             ;81F3B0|        |      ;
+                                                            ;      |        |      ;
+        DATA16_81F3B2:
+                       dw $1002,$4001,$4002,$1003           ;81F3B2|        |      ;
+                       dw $0802,$6001,$3001,$FF03           ;81F3BA|        |      ;
+                                                            ;      |        |      ;
+        DATA16_81F3C2:
+                       dw $0000,$0100,$0000,$0000           ;81F3C2|        |      ;
+                                                            ;      |        |      ;
+        DATA16_81F3CA:
+                       dw $0100,$0100,$0000,$0000           ;81F3CA|        |      ;
+                                                            ;      |        |      ;
+        DATA16_81F3D2:
+                       dw $000F,$000F,$000F,$0000           ;81F3D2|        |      ;
+                                                            ;      |        |      ;
+setPaletteNightIntroAfterThunder:
+                       dw PAL_introGraveAnimNight_19        ;81F3DA|        |86D4BA;
+                       dw PAL_introGraveAnimNight_19        ;81F3DC|        |86D4BA;
+                       dw introAnimNight_17                 ;81F3DE|        |86D1B8;
+                       dw PAL_introGraveAnimNight_19        ;81F3E0|        |86D4BA;
+                                                            ;      |        |      ;
+        DATA16_81F3E2:
+                       dw $1088,$108C,$1104,$1108           ;81F3E2|        |      ;
+                       dw $110C,$1184,$1188,$118C           ;81F3EA|        |      ;
+                       dw $1204,$1208,$120C,$1210           ;81F3F2|        |      ;
+                       dw $1284,$1288,$128C,$1290           ;81F3FA|        |      ;
+                                                            ;      |        |      ;
+        DATA16_81F402:
+                       dw $0001,$0001,$0044,$0045           ;81F402|        |      ;
+                       dw $0001,$0046,$0047,$0001           ;81F40A|        |      ;
+                       dw $0048,$0049,$004A,$004E           ;81F412|        |      ;
+                       dw $004B,$004C,$004D,$004F           ;81F41A|        |      ;
+                                                            ;      |        |      ;
+SpriteAnimationTable143:
+                       dw $F482,$F482,$F482                 ;81F422|        |      ;
+                       dw lvlPAL_Anim_9_GoldTwinkel02       ;81F428|        |86F4A4;
+                       dw lvlPAL_Anim_9_GoldTwinkel02       ;81F42A|        |86F4A4;
+                       dw lvlPAL_Anim_9_GoldTwinkel02       ;81F42C|        |86F4A4;
+                       dw lvlPAL_Anim_9_GoldTwinkel02       ;81F42E|        |86F4A4;
+                       dw $F4B6,$F4B6,$F4B6,$F4B6           ;81F430|        |      ;
+                       dw $F4B6,$F4B6,$F4B6,$F4B6           ;81F438|        |      ;
+                       dw $F4B6                             ;81F440|        |      ;
+                                                            ;      |        |      ;
+        DATA16_81F442:
+                       dw $0005,$0002,$0000,$FFFF           ;81F442|        |      ;
+                       dw $0001,$FFFE,$0000,$FFFD           ;81F44A|        |      ;
+                       dw $0003,$0002,$0001,$FFFD           ;81F452|        |      ;
+                       dw $0001,$0004,$0000,$FFFC           ;81F45A|        |      ;
+                                                            ;      |        |      ;
+        DATA16_81F462:
+                       dw $FFF9,$FFFA,$FFFB,$FFFC           ;81F462|        |      ;
+                       dw $FFFD,$FFFE,$FFFF,$0000           ;81F46A|        |      ;
+                       dw $FFF9,$FFFA,$FFFB,$FFFC           ;81F472|        |      ;
+                       dw $FFFD,$FFFE,$FFFF,$0000           ;81F47A|        |      ;
+                       dw $E1FB,$0008,$E208,$0008           ;81F482|        |      ;
+                       dw $E215,$0008,$E222,$0008           ;81F48A|        |      ;
+                       dw $E22F,$0008,$E23C,$0008           ;81F492|        |      ;
+                       dw $E249,$0008,$E256,$0008           ;81F49A|        |      ;
+                       dw $FFFF,$E263,$0008,$E268           ;81F4A2|        |      ;
+                       dw $0008,$E26D,$0008,$E272           ;81F4AA|        |      ;
+                       dw $0008,$FFFF,$E277,$0008           ;81F4B2|        |      ;
+                       dw $E27C,$0008,$FFFF,$E281           ;81F4BA|        |      ;
+                       dw $0004,$E29A,$0004,$E2B3           ;81F4C2|        |      ;
+                       dw $0004,$FFFF                       ;81F4CA|        |      ;
+                                                            ;      |        |      ;
+        DATA16_81F4CE:
+                       dw $002E,$0023,$0014,$0018           ;81F4CE|        |      ;
+                       dw $000C,$0018,$0018,$0010           ;81F4D6|        |      ;
+                       dw $0024,$001A,$0020,$0018           ;81F4DE|        |      ;
+                       dw $0010,$0040,$0018,$002C           ;81F4E6|        |      ;
+                       dw $0012,$0020,$FFFF                 ;81F4EE|        |      ;
+                                                            ;      |        |      ;
+        DATA16_81F4F4:
+                       dw $0000,$0000,$E000,$1800           ;81F4F4|        |      ;
+                       dw $2000,$0000,$E000,$0000           ;81F4FC|        |      ;
+                       dw $2000,$0000,$D000,$1000           ;81F504|        |      ;
+                       dw $3000,$0800,$CC00,$FC00           ;81F50C|        |      ;
+                       dw $5000,$0000                       ;81F514|        |      ;
+                                                            ;      |        |      ;
+        DATA16_81F518:
+                       dw $0000,$0000,$FFFF,$0000           ;81F518|        |      ;
+                       dw $0000,$0000,$FFFF,$0000           ;81F520|        |      ;
+                       dw $0000,$0000,$FFFF,$0000           ;81F528|        |      ;
+                       dw $0000,$0000,$FFFF,$FFFF           ;81F530|        |      ;
+                       dw $0000,$0000                       ;81F538|        |      ;
+                                                            ;      |        |      ;
+        DATA16_81F53C:
+                       dw $EC00,$2000,$F400,$0800           ;81F53C|        |      ;
+                       dw $1000,$E800,$2000,$E000           ;81F544|        |      ;
+                       dw $0800,$E000,$2000,$D800           ;81F54C|        |      ;
+                       dw $3000,$F300,$3000,$DC00           ;81F554|        |      ;
+                       dw $3000,$C000                       ;81F55C|        |      ;
+                                                            ;      |        |      ;
+        DATA16_81F560:
+                       dw $FFFF,$0000,$FFFF,$0000           ;81F560|        |      ;
+                       dw $0000,$FFFF,$0000,$FFFF           ;81F568|        |      ;
+                       dw $0000,$FFFF,$0000,$FFFF           ;81F570|        |      ;
+                       dw $0000,$FFFF,$0000,$FFFF           ;81F578|        |      ;
+                       dw $0000,$FFFF,$8000,$A000           ;81F580|        |      ;
+                       dw $B000,$C000,$D800,$C000           ;81F588|        |      ;
+                       dw $A000,$8000                       ;81F590|        |      ;
+                       db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;81F594|        |      ;
+                       db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;81F59C|        |      ;
                                                             ;      |        |      ;
    goldPlatf_Sounds00:
                        db $60,$61,$62                       ;81F5A4|        |      ;
@@ -8629,197 +8761,197 @@ cutSceenIndexLevelData:
  paletteTiles_Stage01:
                        db $01                               ;81F68D|        |      ;
                        dw $0000                             ;81F68E|        |      ;
-                       dw paletteDataStage1Beginning        ;81F690|        |86DEA0;
+                       dw lvlGFX_stage1_entrance            ;81F690|        |86DEA0;
                        dw $2240                             ;81F692|        |      ; WRAM Dest The whole section will update CGRAM
-                       dw paletteDataSpriteStage1Beginning  ;81F694|        |86DF42;
+                       dw spritePAL_0                       ;81F694|        |86DF42;
                        dw $23C0,$0000                       ;81F696|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel01_Garden:
                        db $01                               ;81F69A|        |      ;
                        dw $0000                             ;81F69B|        |      ;
-                       dw paletteDataTilesStagel01_Garden   ;81F69D|        |86DF84;
+                       dw lvlPAL_Stage1_Garden              ;81F69D|        |86DF84;
                        dw $2240                             ;81F69F|        |      ;
-                       dw paletteDataSpriteStagel01_Garden  ;81F6A1|        |86E046;
+                       dw spritePAL_Stage1_Garden           ;81F6A1|        |86E046;
                        dw $23E0,$0000                       ;81F6A3|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel01_Castle:
                        db $01                               ;81F6A7|        |      ;
                        dw $0000                             ;81F6A8|        |      ;
-                       dw paletteDataTilesStagel01_Castle   ;81F6AA|        |86E074;
+                       dw lvlPAL_Stage1_Castle              ;81F6AA|        |86E074;
                        dw $2240                             ;81F6AC|        |      ;
-                       dw paletteDataSpriteStagel01_Castle  ;81F6AE|        |86E136;
+                       dw spritePAL_Stage1_Castle           ;81F6AE|        |86E136;
                        dw $23E0,$0000                       ;81F6B0|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel01_Stable:
                        db $01                               ;81F6B4|        |      ;
                        dw $0000                             ;81F6B5|        |      ;
-                       dw paletteDataTilesStagel01_Stable   ;81F6B7|        |86E170;
+                       dw lvlPAL_Stage1_Stable              ;81F6B7|        |86E170;
                        dw $2240                             ;81F6B9|        |      ;
-                       dw paletteDataSpriteTilesStagel01_Stable;81F6BB|        |86E232;
+                       dw spritePAL_Stage1_Stable           ;81F6BB|        |86E232;
                        dw $23C0,$0000                       ;81F6BD|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel02_graveyard:
                        db $01                               ;81F6C1|        |      ;
                        dw $0000                             ;81F6C2|        |      ;
-                       dw paletteDataTilesStagel02_graveyard;81F6C4|        |86E274;
+                       dw lvlPAL_Stage2_graveyard           ;81F6C4|        |86E274;
                        dw $2240                             ;81F6C6|        |      ;
-                       dw paletteDataSpriteStagel02_graveyard;81F6C8|        |86E316;
+                       dw spritePAL_Stage2_graveyard        ;81F6C8|        |86E316;
                        dw $23E0,$0000                       ;81F6CA|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel02_swamp:
                        db $01                               ;81F6CE|        |      ;
                        dw $0000                             ;81F6CF|        |      ;
-                       dw paletteDataTilesStagel02_swamp00  ;81F6D1|        |86E338;
+                       dw lvlPAL_Stage2_swamp00             ;81F6D1|        |86E338;
                        dw $2240                             ;81F6D3|        |      ;
-                       dw paletteDataSpriteStagel02_swamp   ;81F6D5|        |86E3FA;
+                       dw spritePAL_Stage2_swamp            ;81F6D5|        |86E3FA;
                        dw $23E0,$0000                       ;81F6D7|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel02_waterSlide:
                        db $01                               ;81F6DB|        |      ;
                        dw $0000                             ;81F6DC|        |      ;
-                       dw paletteDataTilesStagel02_waterSlide00;81F6DE|        |86E470;
+                       dw lvlPAL_Stage2_waterSlide00        ;81F6DE|        |86E470;
                        dw $2220                             ;81F6E0|        |      ;
-                       dw paletteDataSpriteStagel02_waterSlide;81F6E2|        |86E5B2;
+                       dw spritePAL_Stage2_waterSlide       ;81F6E2|        |86E5B2;
                        dw $23E0,$0000                       ;81F6E4|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel03_cave:
                        db $01                               ;81F6E8|        |      ;
                        dw $0000                             ;81F6E9|        |      ;
-                       dw paletteDataTilesStagel03_cave     ;81F6EB|        |86E5D4;
+                       dw lvlPAL_Stage3_cave                ;81F6EB|        |86E5D4;
                        dw $2220                             ;81F6ED|        |      ;
-                       dw paletteDataTileStagel03_cave00    ;81F6EF|        |86E636;
+                       dw lvlPAL_Stage3_cave00              ;81F6EF|        |86E636;
                        dw $22C0                             ;81F6F1|        |      ;
-                       dw paletteDataSpriteStagel03_cave00  ;81F6F3|        |86E658;
+                       dw spritePAL_Stage3_cave00           ;81F6F3|        |86E658;
                        dw $23E0,$0000                       ;81F6F5|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel03_waterfall:
                        db $01                               ;81F6F9|        |      ;
                        dw $0000                             ;81F6FA|        |      ;
-                       dw paletteDataTilesStagel03_waterfall;81F6FC|        |86E67A;
+                       dw lvlPAL_Stage3_waterfall           ;81F6FC|        |86E67A;
                        dw $2220                             ;81F6FE|        |      ;
-                       dw paletteDataSpritesStagel03_waterfall;81F700|        |86E73C;
+                       dw spritePAL_Stage3_waterfall        ;81F700|        |86E73C;
                        dw $23E0,$0000                       ;81F702|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel03_aquaduct:
                        db $01                               ;81F706|        |      ;
                        dw $0000                             ;81F707|        |      ;
-                       dw paletteDataTilesStagel03_aquaduct ;81F709|        |86E776;
+                       dw lvlPAL_Stage3_aquaduct            ;81F709|        |86E776;
                        dw $2240                             ;81F70B|        |      ;
-                       dw paletteDataSpriteStagel03_aquaduct;81F70D|        |86E838;
+                       dw spritePAL_Stage3_aquaduct         ;81F70D|        |86E838;
                        dw $23E0,$0000                       ;81F70F|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel04_SkullTower:
                        db $01                               ;81F713|        |      ;
                        dw $0000                             ;81F714|        |      ;
-                       dw paletteDataTilesStagel04_SkullTower;81F716|        |86E896;
+                       dw lvlPAL_Stage4_SkullTower          ;81F716|        |86E896;
                        dw $2240                             ;81F718|        |      ;
-                       dw paletteDataSpriteStagel04_SkullTower;81F71A|        |86E938;
+                       dw spritePAL_Stage4_SkullTower       ;81F71A|        |86E938;
                        dw $23E0,$0000                       ;81F71C|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel04_RotatingRoom:
                        db $01                               ;81F720|        |      ;
                        dw $0000                             ;81F721|        |      ;
-                       dw paletteDataTilesStagel04_RotatingRoom;81F723|        |86E95E;
+                       dw lvlPAL_Stage4_RotatingRoom        ;81F723|        |86E95E;
                        dw $2240                             ;81F725|        |      ;
-                       dw paletteDataSprtieStagel04_RotatingRoom;81F727|        |86E9A0;
+                       dw spritePAL_Stage4_RotatingRoom     ;81F727|        |86E9A0;
                        dw $23E0,$0000                       ;81F729|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel04_washingmachine:
                        db $01                               ;81F72D|        |      ;
                        dw $0000                             ;81F72E|        |      ;
-                       dw paletteDataTilesStagel04_washingmachine;81F730|        |86E9C2;
+                       dw lvlPAL_Stage4_washingmachine      ;81F730|        |86E9C2;
                        dw $2240                             ;81F732|        |      ;
-                       dw paletteDataSpriteStagel04_washingmachine;81F734|        |86EA44;
+                       dw spritePAL_Stage4_washingmachine   ;81F734|        |86EA44;
                        dw $23E0,$0000                       ;81F736|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel04_koranotQuater:
                        db $01                               ;81F73A|        |      ;
                        dw $0000                             ;81F73B|        |      ;
-                       dw paletteDataTilesStagel04_koranotQuater;81F73D|        |86EA66;
+                       dw lvlPAL_Stage4_koranotQuater       ;81F73D|        |86EA66;
                        dw $2220                             ;81F73F|        |      ;
-                       dw paletteDataSprtieStagel04_koranotQuater;81F741|        |86EB28;
+                       dw spritePAL_Stage4_koranotQuater    ;81F741|        |86EB28;
                        dw $23E0,$0000                       ;81F743|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel05_blueGune:
                        db $01                               ;81F747|        |      ;
                        dw $0000                             ;81F748|        |      ;
-                       dw paletteDataTilesStagel05_blueGune ;81F74A|        |86EB4A;
+                       dw lvlPAL_Stage5_blueGune            ;81F74A|        |86EB4A;
                        dw $2240,$0000                       ;81F74C|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel05_castlEntrance:
                        db $01                               ;81F750|        |      ;
                        dw $0000                             ;81F751|        |      ;
-                       dw paletteDataTilesStagel05_castlEntrance;81F753|        |86EC14;
+                       dw lvlPAL_Stage5_castlEntrance       ;81F753|        |86EC14;
                        dw $2240,$0000                       ;81F755|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel06_castleEntrance:
                        db $01                               ;81F759|        |      ;
                        dw $0000                             ;81F75A|        |      ;
-                       dw paletteDataTilesStagel06_castleEntrance;81F75C|        |86EC9A;
+                       dw lvlPAL_Stage6_castleEntrance      ;81F75C|        |86EC9A;
                        dw $2220                             ;81F75E|        |      ;
-                       dw paletteDataSpriteStagel05_castlEntrance;81F760|        |86DE7E;
+                       dw spritePAL_Stage5_castlEntrance    ;81F760|        |86DE7E;
                        dw $23A0,$0000                       ;81F762|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel06_chandelire:
                        db $01                               ;81F766|        |      ;
                        dw $0000                             ;81F767|        |      ;
-                       dw paletteDataTilesStagel06_chandelire;81F769|        |86ED3C;
+                       dw lvlPAL_Stage6_chandelire          ;81F769|        |86ED3C;
                        dw $2240                             ;81F76B|        |      ;
-                       dw paletteDataSpriteStagel06_chandelire;81F76D|        |86ED9E;
+                       dw spritePAL_Stage6_chandelire       ;81F76D|        |86ED9E;
                        dw $23E0,$0000                       ;81F76F|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel06_middle:
                        db $01                               ;81F773|        |      ;
                        dw $0000                             ;81F774|        |      ;
-                       dw paletteDataTilesStagel06_middle   ;81F776|        |86EDC4;
+                       dw lvlPAL_Stage6_middle              ;81F776|        |86EDC4;
                        dw $2240                             ;81F778|        |      ;
-                       dw paletteDataSpritesStagel06_middle ;81F77A|        |86EE86;
+                       dw spritePAL_Stage6_middle           ;81F77A|        |86EE86;
                        dw $23E0,$0000                       ;81F77C|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel06_danceQuater:
                        db $01                               ;81F780|        |      ;
                        dw $0000                             ;81F781|        |      ;
-                       dw paletteDataTilesStagel06_danceQuater;81F783|        |86EEAE;
+                       dw lvlPAL_Stage6_danceQuater         ;81F783|        |86EEAE;
                        dw $2240,$0000                       ;81F785|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel07_liberarry:
                        db $01                               ;81F789|        |      ;
                        dw $0000                             ;81F78A|        |      ;
-                       dw paletteDataTilesStagel07_liberarry;81F78C|        |86EF80;
+                       dw lvlPAL_Stage7_liberarry           ;81F78C|        |86EF80;
                        dw $2240                             ;81F78E|        |      ;
-                       dw paletteDataSpriteStagel07_liberarry;81F790|        |86F042;
+                       dw spritePAL_Stage7_liberarry        ;81F790|        |86F042;
                        dw $23E0,$0000                       ;81F792|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel07_graqulsQuater:
                        db $01                               ;81F796|        |      ;
                        dw $0000                             ;81F797|        |      ;
-                       dw paletteDataTilesStagel08_dungeon  ;81F799|        |86F06A;
+                       dw lvlPAL_Stage8_dungeon1            ;81F799|        |86F06A;
                        dw $2220                             ;81F79B|        |      ;
-                       dw paletteDataSpriteStagel08_dungeon ;81F79D|        |86F10C;
+                       dw spritePAL_Stage8_dungeon2         ;81F79D|        |86F10C;
                        dw $23E0,$0000                       ;81F79F|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel08_dungeon:
                        db $01                               ;81F7A3|        |      ;
                        dw $0000                             ;81F7A4|        |      ;
-                       dw paletteDataTilesStage08_dungeon   ;81F7A6|        |86F132;
+                       dw lvlPAL_Stage8_dungeon             ;81F7A6|        |86F132;
                        dw $2240                             ;81F7A8|        |      ;
-                       dw paletteDataSpriteStage08_dungeon  ;81F7AA|        |86F1EC;
+                       dw spritePAL_Stage8_dungeon          ;81F7AA|        |86F1EC;
                        dw $23E0,$0000                       ;81F7AC|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel08_frankQuater:
                        db $01                               ;81F7B0|        |      ;
                        dw $0000                             ;81F7B1|        |      ;
-                       dw paletteDataTilesStagel08_frankQuater;81F7B3|        |86F20E;
+                       dw lvlPAL_Stage8_frankQuater         ;81F7B3|        |86F20E;
                        dw $2240                             ;81F7B5|        |      ;
-                       dw paletteDataSpriteStagel08_frankQuater;81F7B7|        |86F2D0;
+                       dw spritePAL_Stage8_frankQuater      ;81F7B7|        |86F2D0;
                        dw $23E0,$0000                       ;81F7B9|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel09_gold:
                        db $01                               ;81F7BD|        |      ;
                        dw $0000                             ;81F7BE|        |      ;
-                       dw paletteDataTilesStagel09_gold     ;81F7C0|        |86F2F2;
+                       dw lvlPAL_Stage9_gold                ;81F7C0|        |86F2F2;
                        dw $2220                             ;81F7C2|        |      ;
-                       dw paletteDataSpriteStagel09_gold00  ;81F7C4|        |86F394;
+                       dw spritePAL_Stage9_gold00           ;81F7C4|        |86F394;
                        dw $23E0                             ;81F7C6|        |      ;
                        dw paletteDataSpriteStagel09_gold01  ;81F7C8|        |86D4DA;
                        dw $2380,$0000                       ;81F7CA|        |      ;
@@ -8827,9 +8959,9 @@ paletteTilesStagel09_gold:
 paletteTilesStagel09_zapfBatQuater:
                        db $01                               ;81F7CE|        |      ;
                        dw $0000                             ;81F7CF|        |      ;
-                       dw paletteDataTilesStagel09_zapfBatQuater;81F7D1|        |86F3D4;
+                       dw lvlPAL_Stage9_zapfBatQuater       ;81F7D1|        |86F3D4;
                        dw $2240                             ;81F7D3|        |      ;
-                       dw paletteDataSpriteStagel09_zapfBatQuater00;81F7D5|        |86F476;
+                       dw spritePAL_Stage9_zapfBatQuater00  ;81F7D5|        |86F476;
                        dw $23E0                             ;81F7D7|        |      ;
                        dw paletteDataSpriteStagel09_gold01  ;81F7D9|        |86D4DA;
                        dw $2380,$0000                       ;81F7DB|        |      ;
@@ -8837,300 +8969,301 @@ paletteTilesStagel09_zapfBatQuater:
 paletteTilesStagel0A_clockTower:
                        db $01                               ;81F7DF|        |      ;
                        dw $0000                             ;81F7E0|        |      ;
-                       dw paletteDataStagel0A_clockTower    ;81F7E2|        |86F554;
+                       dw lvlPAL_StageA_clockTower          ;81F7E2|        |86F554;
                        dw $2220                             ;81F7E4|        |      ;
-                       dw paletteDataSpriteStagel0A_clockTower;81F7E6|        |86F636;
+                       dw spritePAL_StageA_clockTower       ;81F7E6|        |86F636;
                        dw $23E0,$0000                       ;81F7E8|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel0A_mummyQuater:
                        db $01                               ;81F7EC|        |      ;
                        dw $0000                             ;81F7ED|        |      ;
-                       dw paletteDataTilesStagel0A_mummyQuater;81F7EF|        |86F69A;
+                       dw lvlPAL_StageA_mummyQuater         ;81F7EF|        |86F69A;
                        dw $2240                             ;81F7F1|        |      ;
-                       dw paletteDataSprtieStagel0A_mummyQuater;81F7F3|        |86F734;
+                       dw spritePAL_StageA_mummyQuater      ;81F7F3|        |86F734;
                        dw $23E0,$0000                       ;81F7F5|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel0B_bridge:
                        db $01                               ;81F7F9|        |      ;
                        dw $0000                             ;81F7FA|        |      ;
-                       dw paletteDataTilesStagel0B_bridge   ;81F7FC|        |86F756;
+                       dw lvlPAL_StageB_bridge              ;81F7FC|        |86F756;
                        dw $2220                             ;81F7FE|        |      ;
-                       dw paletteDataSpriteStagel0B_bridge  ;81F800|        |86F838;
+                       dw spritePAL_StageB_bridge           ;81F800|        |86F838;
                        dw $23E0,$0000                       ;81F802|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel0B_tower:
                        db $01                               ;81F806|        |      ;
                        dw $0000                             ;81F807|        |      ;
-                       dw paletteDataTilesStagel0B_tower    ;81F809|        |86F85A;
+                       dw lvlPAL_StageB_tower               ;81F809|        |86F85A;
                        dw $2220                             ;81F80B|        |      ;
-                       dw paletteDataSpriteStagel0B_tower00 ;81F80D|        |86FD50;
+                       dw spritePAL_StageB_tower00          ;81F80D|        |86FD50;
                        dw $23A0                             ;81F80F|        |      ;
-                       dw paletteDataSpriteStagel0B_tower   ;81F811|        |86F93C;
+                       dw spritePAL_StageB_tower            ;81F811|        |86F93C;
                        dw $23E0,$0000                       ;81F813|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel0B_slogra:
                        db $01                               ;81F817|        |      ;
                        dw $0000                             ;81F818|        |      ;
-                       dw paletteDataTilesStagel0B_slogra   ;81F81A|        |86F95E;
+                       dw lvlPAL_StageB_slogra              ;81F81A|        |86F95E;
                        dw $2220                             ;81F81C|        |      ;
-                       dw paletteDataSpriteStagel0B_slogra  ;81F81E|        |86FA40;
+                       dw spritePAL_StageB_slogra           ;81F81E|        |86FA40;
                        dw $23E0,$0000                       ;81F820|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel0B_gaibone:
                        db $01                               ;81F824|        |      ;
                        dw $0000                             ;81F825|        |      ;
-                       dw paletteDataTilesStagel0B_gaibone  ;81F827|        |86FA62;
+                       dw lvlPAL_StageB_gaibone             ;81F827|        |86FA62;
                        dw $2220,$0000                       ;81F829|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel0B_death:
                        db $01                               ;81F82D|        |      ;
                        dw $0000                             ;81F82E|        |      ;
-                       dw paletteDataTilesStagel0B_death    ;81F830|        |86FB44;
+                       dw lvlPAL_StageB_death               ;81F830|        |86FB44;
                        dw $2220                             ;81F832|        |      ;
-                       dw paletteDataSpriteStagel0B_death   ;81F834|        |86FC06;
+                       dw PAL_death_sprite_tourch           ;81F834|        |86FC06;
                        dw $23E0,$0000                       ;81F836|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel0B_drac:
                        db $01                               ;81F83A|        |      ;
                        dw $0000                             ;81F83B|        |      ;
-                       dw paletteDataTilesStagel0B_drac     ;81F83D|        |86FC6C;
+                       dw lvlPAL_StageB_drac                ;81F83D|        |86FC6C;
                        dw $2220                             ;81F83F|        |      ;
-                       dw paletteDataSpriteStagel0B_drac00  ;81F841|        |86FD0E;
+                       dw PAL_drac00                        ;81F841|        |86FD0E;
                        dw $22C0                             ;81F843|        |      ;
-                       dw paletteDataSpriteStagel0B_drac01  ;81F845|        |86DE38;
+                       dw PAL_drac01                        ;81F845|        |86DE38;
                        dw $23A0,$0000                       ;81F847|        |      ;
                                                             ;      |        |      ;
 paletteAnimationStagel01_Garden:
                        db $01                               ;81F84B|        |      ;
                        dw $8004                             ;81F84C|        |      ;
-                       dw paletteDataAnimationStagel01_Garden00;81F84E|        |86E068;
+                       dw lvlPAL_Anim_1_Garden00            ;81F84E|        |86E068;
                        dw $22DC                             ;81F850|        |      ;
-                       dw paletteDataAnimationStagel01_Garden01;81F852|        |86E06E;
+                       dw lvlPAL_Anim_1_Garden01            ;81F852|        |86E06E;
                        dw $22DC,$0000                       ;81F854|        |      ;
                                                             ;      |        |      ;
 paletteAnimationStagel01_Castle:
                        db $01                               ;81F858|        |      ;
                        dw $8010                             ;81F859|        |      ;
-                       dw paletteDataAnimationStagel01_Castle00;81F85B|        |86E158;
+                       dw lvlPAL_Anim_1_Castle00            ;81F85B|        |86E158;
                        dw $22C6                             ;81F85D|        |      ;
-                       dw paletteDataAnimationStagel01_Castle01;81F85F|        |86E160;
+                       dw lvlPAL_Anim_1_Castle01            ;81F85F|        |86E160;
                        dw $22C6                             ;81F861|        |      ;
-                       dw paletteDataAnimationStagel01_Castle02;81F863|        |86E168;
+                       dw lvlPAL_Anim_1_Castle02            ;81F863|        |86E168;
                        dw $22C6,$0000                       ;81F865|        |      ;
                                                             ;      |        |      ;
 paletteAnimationStagel02_Swamp:
                        db $01                               ;81F869|        |      ;
                        dw $8010                             ;81F86A|        |      ;
-                       dw paletteDataAnimationStagel02_Swamp00;81F86C|        |86E41C;
+                       dw lvlPAL_Anim_2_Swamp00             ;81F86C|        |86E41C;
                        dw $22C4                             ;81F86E|        |      ;
-                       dw paletteDataAnimationStagel02_Swamp01;81F870|        |86E42A;
+                       dw lvlPAL_Anim_2_Swamp01             ;81F870|        |86E42A;
                        dw $22C4                             ;81F872|        |      ;
-                       dw paletteDataAnimationStagel02_Swamp02;81F874|        |86E438;
+                       dw lvlPAL_Anim_2_Swamp02             ;81F874|        |86E438;
                        dw $22C4                             ;81F876|        |      ;
-                       dw paletteDataAnimationStagel02_Swamp03;81F878|        |86E446;
+                       dw lvlPAL_Anim_2_Swamp03             ;81F878|        |86E446;
                        dw $22C4                             ;81F87A|        |      ;
-                       dw paletteDataAnimationStagel02_Swamp04;81F87C|        |86E454;
+                       dw lvlPAL_Anim_2_Swamp04             ;81F87C|        |86E454;
                        dw $22C4                             ;81F87E|        |      ;
-                       dw paletteDataAnimationStagel02_Swamp05;81F880|        |86E462;
+                       dw lvlPAL_Anim_2_Swamp05             ;81F880|        |86E462;
                        dw $22C4,$0000                       ;81F882|        |      ;
                                                             ;      |        |      ;
-paletteAnimationWaterSlide:
+paletteAnimationWaterSlide1:
                        db $01                               ;81F886|        |      ;
                        dw $8001                             ;81F887|        |      ;
-                       dw paletteDataAnimationWaterSlide00  ;81F889|        |86E552;
+                       dw lvlPAL_Anim_2_WaterSlide00        ;81F889|        |86E552;
                        dw $22E4                             ;81F88B|        |      ;
-                       dw paletteDataAnimationWaterSlide10  ;81F88D|        |86E5A6;
+                       dw lvlPAL_Anim_2_WaterSlide10        ;81F88D|        |86E5A6;
                        dw $2294                             ;81F88F|        |      ;
-                       dw paletteDataAnimationWaterSlide01  ;81F891|        |86E560;
+                       dw lvlPAL_Anim_2_WaterSlide01        ;81F891|        |86E560;
                        dw $22E4                             ;81F893|        |      ;
-                       dw paletteDataAnimationWaterSlide11  ;81F895|        |86E5AC;
+                       dw lvlPAL_Anim_2_WaterSlide11        ;81F895|        |86E5AC;
                        dw $2294                             ;81F897|        |      ;
-                       dw paletteDataAnimationWaterSlide02  ;81F899|        |86E56E;
+                       dw lvlPAL_Anim_2_WaterSlide02        ;81F899|        |86E56E;
                        dw $22E4                             ;81F89B|        |      ;
-                       dw paletteDataAnimationWaterSlide10  ;81F89D|        |86E5A6;
+                       dw lvlPAL_Anim_2_WaterSlide10        ;81F89D|        |86E5A6;
                        dw $2294                             ;81F89F|        |      ;
-                       dw paletteDataAnimationWaterSlide03  ;81F8A1|        |86E57C;
+                       dw lvlPAL_Anim_2_WaterSlide03        ;81F8A1|        |86E57C;
                        dw $22E4                             ;81F8A3|        |      ;
-                       dw paletteDataAnimationWaterSlide11  ;81F8A5|        |86E5AC;
+                       dw lvlPAL_Anim_2_WaterSlide11        ;81F8A5|        |86E5AC;
                        dw $2294                             ;81F8A7|        |      ;
-                       dw paletteDataAnimationWaterSlide04  ;81F8A9|        |86E58A;
+                       dw lvlPAL_Anim_2_WaterSlide04        ;81F8A9|        |86E58A;
                        dw $22E4                             ;81F8AB|        |      ;
-                       dw paletteDataAnimationWaterSlide10  ;81F8AD|        |86E5A6;
+                       dw lvlPAL_Anim_2_WaterSlide10        ;81F8AD|        |86E5A6;
                        dw $2294                             ;81F8AF|        |      ;
-                       dw paletteDataAnimationWaterSlide05  ;81F8B1|        |86E598;
+                       dw lvlPAL_Anim_2_WaterSlide05        ;81F8B1|        |86E598;
                        dw $22E4                             ;81F8B3|        |      ;
-                       dw paletteDataAnimationWaterSlide11  ;81F8B5|        |86E5AC;
+                       dw lvlPAL_Anim_2_WaterSlide11        ;81F8B5|        |86E5AC;
                        dw $2294,$0000                       ;81F8B7|        |      ;
                                                             ;      |        |      ;
-   paletteAnimation01:
+paletteAnimationWaterSlide2:
                        db $01                               ;81F8BB|        |      ;
                        dw $8001                             ;81F8BC|        |      ;
-                       dw paletteDataAnimationWaterSlide11  ;81F8BE|        |86E5AC;
+                       dw lvlPAL_Anim_2_WaterSlide11        ;81F8BE|        |86E5AC;
                        dw $2294                             ;81F8C0|        |      ;
-                       dw paletteDataAnimationWaterSlide05  ;81F8C2|        |86E598;
+                       dw lvlPAL_Anim_2_WaterSlide05        ;81F8C2|        |86E598;
                        dw $22E4                             ;81F8C4|        |      ;
-                       dw paletteDataAnimationWaterSlide10  ;81F8C6|        |86E5A6;
+                       dw lvlPAL_Anim_2_WaterSlide10        ;81F8C6|        |86E5A6;
                        dw $2294                             ;81F8C8|        |      ;
-                       dw paletteDataAnimationWaterSlide04  ;81F8CA|        |86E58A;
+                       dw lvlPAL_Anim_2_WaterSlide04        ;81F8CA|        |86E58A;
                        dw $22E4                             ;81F8CC|        |      ;
-                       dw paletteDataAnimationWaterSlide11  ;81F8CE|        |86E5AC;
+                       dw lvlPAL_Anim_2_WaterSlide11        ;81F8CE|        |86E5AC;
                        dw $2294                             ;81F8D0|        |      ;
-                       dw paletteDataAnimationWaterSlide03  ;81F8D2|        |86E57C;
+                       dw lvlPAL_Anim_2_WaterSlide03        ;81F8D2|        |86E57C;
                        dw $22E4                             ;81F8D4|        |      ;
-                       dw paletteDataAnimationWaterSlide10  ;81F8D6|        |86E5A6;
+                       dw lvlPAL_Anim_2_WaterSlide10        ;81F8D6|        |86E5A6;
                        dw $2294                             ;81F8D8|        |      ;
-                       dw paletteDataAnimationWaterSlide02  ;81F8DA|        |86E56E;
+                       dw lvlPAL_Anim_2_WaterSlide02        ;81F8DA|        |86E56E;
                        dw $22E4                             ;81F8DC|        |      ;
-                       dw paletteDataAnimationWaterSlide11  ;81F8DE|        |86E5AC;
+                       dw lvlPAL_Anim_2_WaterSlide11        ;81F8DE|        |86E5AC;
                        dw $2294                             ;81F8E0|        |      ;
-                       dw paletteDataAnimationWaterSlide01  ;81F8E2|        |86E560;
+                       dw lvlPAL_Anim_2_WaterSlide01        ;81F8E2|        |86E560;
                        dw $22E4                             ;81F8E4|        |      ;
-                       dw paletteDataAnimationWaterSlide10  ;81F8E6|        |86E5A6;
+                       dw lvlPAL_Anim_2_WaterSlide10        ;81F8E6|        |86E5A6;
                        dw $2294                             ;81F8E8|        |      ;
-                       dw paletteDataAnimationWaterSlide00  ;81F8EA|        |86E552;
+                       dw lvlPAL_Anim_2_WaterSlide00        ;81F8EA|        |86E552;
                        dw $22E4,$0000                       ;81F8EC|        |      ;
                                                             ;      |        |      ;
  paletteAnimationCave:
                        db $01                               ;81F8F0|        |      ;
                        dw $8008                             ;81F8F1|        |      ;
-                       dw paletteDataAnimationWaterfall00   ;81F8F3|        |86E75E;
+                       dw lvlPAL_Anim_3_waterFall_00        ;81F8F3|        |86E75E;
                        dw $2296                             ;81F8F5|        |      ;
-                       dw paletteDataAnimationWaterfal01    ;81F8F7|        |86E76A;
+                       dw lvlPAL_Anim_3_waterFall_01        ;81F8F7|        |86E76A;
                        dw $2296,$0000                       ;81F8F9|        |      ;
                                                             ;      |        |      ;
 paletteAnimationAquaduct:
                        db $01                               ;81F8FD|        |      ;
                        dw $8008                             ;81F8FE|        |      ;
-                       dw paletteDataAnimationAquaduct00    ;81F900|        |86E85A;
+                       dw lvlPAL_Anim_3_Aquaduct00          ;81F900|        |86E85A;
                        dw $22A4                             ;81F902|        |      ;
-                       dw paletteDataAnimationAquaduct01    ;81F904|        |86E866;
+                       dw lvlPAL_Anim_3_Aquaduct01          ;81F904|        |86E866;
                        dw $22A4                             ;81F906|        |      ;
-                       dw paletteDataAnimationAquaduct02    ;81F908|        |86E872;
+                       dw lvlPAL_Anim_3_Aquaduct02          ;81F908|        |86E872;
                        dw $22A4                             ;81F90A|        |      ;
-                       dw paletteDataAnimationAquaduct03    ;81F90C|        |86E87E;
+                       dw lvlPAL_Anim_3_Aquaduct03          ;81F90C|        |86E87E;
                        dw $22A4                             ;81F90E|        |      ;
-                       dw paletteDataAnimationAquaduct04    ;81F910|        |86E88A;
+                       dw lvlPAL_Anim_3_Aquaduct04          ;81F910|        |86E88A;
                        dw $22A4,$0000                       ;81F912|        |      ;
                                                             ;      |        |      ;
 paletteAnimationSkullTower00:
                        dw $0004                             ;81F916|        |      ;
-                       dw paletteDataAnimationSkullTower00  ;81F918|        |86E95A;
+                       dw lvlPAL_Anim_4_SkullTower00        ;81F918|        |86E95A;
                        dw $227E,$0000                       ;81F91A|        |      ;
                                                             ;      |        |      ;
 paletteAnimationSkullTower01:
                        dw $0104                             ;81F91E|        |      ;
-                       dw paletteDataAnimationSkullTower00  ;81F920|        |86E95A;
+                       dw lvlPAL_Anim_4_SkullTower00        ;81F920|        |86E95A;
                        dw $227E,$0000                       ;81F922|        |      ;
                                                             ;      |        |      ;
 paletteAnimationBlueGune:
                        dw $0104                             ;81F926|        |      ;
-                       dw paletteDataAnimationBlueGune      ;81F928|        |86EC0C;
+                       dw lvlPAL_Anim_5_BlueGune            ;81F928|        |86EC0C;
                        dw $2294,$0000                       ;81F92A|        |      ;
                                                             ;      |        |      ;
 paletteAnimationCastleEntrance:
                        dw $0104                             ;81F92E|        |      ;
-                       dw paletteDataAnimationCastleEntrance;81F930|        |86EC96;
+                       dw lvlPAL_Anim_6_CastleEntrance      ;81F930|        |86EC96;
                        dw $225A,$0000                       ;81F932|        |      ;
                                                             ;      |        |      ;
 paletteAnimationChandelires:
                        dw $0104                             ;81F936|        |      ;
-                       dw paletteDataAnimationChandelires   ;81F938|        |86EDC0;
+                       dw lvlPAL_Anim_6_Chandelires         ;81F938|        |86EDC0;
                        dw $2240,$0000                       ;81F93A|        |      ;
                                                             ;      |        |      ;
 paletteAnimationCastleMiddle:
                        dw $0104                             ;81F93E|        |      ;
-                       dw paletteDataAnimationCastleMiddle  ;81F940|        |86EEA8;
+                       dw lvlPAL_Anim_6_CastleMiddle        ;81F940|        |86EEA8;
                        dw $2256,$0000                       ;81F942|        |      ;
                                                             ;      |        |      ;
 paletteAnimationLiberarry:
                        db $01                               ;81F946|        |      ;
                        dw $8002                             ;81F947|        |      ;
-                       dw paletteDataAnimationLiberarry00   ;81F949|        |86EF70;
+                       dw lvlPAL_Anim_7_Liberarry00         ;81F949|        |86EF70;
                        dw $2262                             ;81F94B|        |      ;
-                       dw paletteDataAnimationLiberarry01   ;81F94D|        |86EF78;
+                       dw lvlPAL_Anim_7_Liberarry01         ;81F94D|        |86EF78;
                        dw $2262                             ;81F94F|        |      ;
-                       dw paletteDataAnimationLiberarry00   ;81F951|        |86EF70;
+                       dw lvlPAL_Anim_7_Liberarry00         ;81F951|        |86EF70;
                        dw $2262                             ;81F953|        |      ;
-                       dw paletteDataAnimationLiberarry00   ;81F955|        |86EF70;
+                       dw lvlPAL_Anim_7_Liberarry00         ;81F955|        |86EF70;
                        dw $2262                             ;81F957|        |      ;
-                       dw paletteDataAnimationLiberarry00   ;81F959|        |86EF70;
+                       dw lvlPAL_Anim_7_Liberarry00         ;81F959|        |86EF70;
                        dw $2262,$0000                       ;81F95B|        |      ;
                                                             ;      |        |      ;
 paletteAnimationDungeon00:
                        dw $0104                             ;81F95F|        |      ;
-                       dw paletteDataAnimationDungeon00     ;81F961|        |86F064;
+                       dw lvlPAL_Anim_8_Dungeon00           ;81F961|        |86F064;
                        dw $229A,$0000                       ;81F963|        |      ;
                                                             ;      |        |      ;
 paletteAnimationDungeon01:
                        dw $0104                             ;81F967|        |      ;
-                       dw paletteDataAnimationDungeon01     ;81F969|        |86F12E;
+                       dw lvlPAL_Anim_8_Dungeon01           ;81F969|        |86F12E;
                        dw $227E,$0000                       ;81F96B|        |      ;
                                                             ;      |        |      ;
 paletteAnimationGold00:
                        db $01                               ;81F96F|        |      ;
                        dw $8008                             ;81F970|        |      ;
-                       dw paletteDataAnimationGold00        ;81F972|        |86F1D4;
+                       dw lvlPAL_Anim_9_Gold00              ;81F972|        |86F1D4;
                        dw $22BA                             ;81F974|        |      ;
-                       dw paletteDataAnimationGold01        ;81F976|        |86F1DC;
+                       dw lvlPAL_Anim_9_Gold01              ;81F976|        |86F1DC;
                        dw $22BA                             ;81F978|        |      ;
-                       dw paletteDataAnimationGold02        ;81F97A|        |86F1E4;
+                       dw lvlPAL_Anim_9_Gold02              ;81F97A|        |86F1E4;
                        dw $22BA,$0000                       ;81F97C|        |      ;
                                                             ;      |        |      ;
 paletteAnimationClockGold01:
                        db $01                               ;81F980|        |      ;
                        dw $8006                             ;81F981|        |      ;
-                       dw paletteDataAnimationClockTower00  ;81F983|        |86F3B6;
+                       dw lvlPAL_Anim_A_ClockTowerB00       ;81F983|        |86F3B6;
                        dw $2256                             ;81F985|        |      ;
-                       dw paletteDataAnimationClockTower03  ;81F987|        |86F3C2;
+                       dw lvlPAL_Anim_A_ClockTowerB03       ;81F987|        |86F3C2;
                        dw $229C                             ;81F989|        |      ;
-                       dw paletteDataAnimationClockTower01  ;81F98B|        |86F3BA;
+                       dw lvlPAL_Anim_A_ClockTowerB01       ;81F98B|        |86F3BA;
                        dw $2256                             ;81F98D|        |      ;
-                       dw paletteDataAnimationClockTower04  ;81F98F|        |86F3C8;
+                       dw lvlPAL_Anim_A_ClockTowerB04       ;81F98F|        |86F3C8;
                        dw $229C                             ;81F991|        |      ;
-                       dw paletteDataAnimationClockTower02  ;81F993|        |86F3BE;
+                       dw lvlPAL_Anim_A_ClockTowerB02       ;81F993|        |86F3BE;
                        dw $2256                             ;81F995|        |      ;
-                       dw paletteDataAnimationClockTower05  ;81F997|        |86F3CE;
+                       dw lvlPAL_Anim_A_ClockTowerB05       ;81F997|        |86F3CE;
                        dw $229C                             ;81F999|        |      ;
-                       dw paletteDataAnimationClockTower01  ;81F99B|        |86F3BA;
+                       dw lvlPAL_Anim_A_ClockTowerB01       ;81F99B|        |86F3BA;
                        dw $2256                             ;81F99D|        |      ;
-                       dw paletteDataAnimationClockTower04  ;81F99F|        |86F3C8;
+                       dw lvlPAL_Anim_A_ClockTowerB04       ;81F99F|        |86F3C8;
                        dw $229C,$0000                       ;81F9A1|        |      ;
                                                             ;      |        |      ;
    paletteAnimationXX:
                        db $01                               ;81F9A5|        |      ;
                        dw $8006                             ;81F9A6|        |      ;
-                       dw paletteDataAnimationXX00          ;81F9A8|        |86F498;
+                       dw lvlPAL_Anim_9_GoldTwinkel00       ;81F9A8|        |86F498;
                        dw $227C                             ;81F9AA|        |      ;
-                       dw paletteDataAnimationXX01          ;81F9AC|        |86F49E;
+                       dw lvlPAL_Anim_9_GoldTwinkel01       ;81F9AC|        |86F49E;
                        dw $227C                             ;81F9AE|        |      ;
-                       dw paletteDataAnimationXX02          ;81F9B0|        |86F4A4;
+                       dw lvlPAL_Anim_9_GoldTwinkel02       ;81F9B0|        |86F4A4;
                        dw $227C                             ;81F9B2|        |      ;
-                       dw paletteDataAnimationXX01          ;81F9B4|        |86F49E;
+                       dw lvlPAL_Anim_9_GoldTwinkel01       ;81F9B4|        |86F49E;
                        dw $227C,$0000                       ;81F9B6|        |      ;
                                                             ;      |        |      ;
 paletteAnimationClockTower00:
                        db $01                               ;81F9BA|        |      ;
                        dw $800A                             ;81F9BB|        |      ;
-                       dw paletteDataAnimation00ClockTower00;81F9BD|        |86F658;
+                       dw lvlPAL_Anim_A_ClockTower00        ;81F9BD|        |86F658;
                        dw $2282                             ;81F9BF|        |      ;
-                       dw paletteDataAnimation00ClockTower01;81F9C1|        |86F66E;
+                       dw lvlPAL_Anim_A_ClockTower01        ;81F9C1|        |86F66E;
                        dw $2282                             ;81F9C3|        |      ;
-                       dw paletteDataAnimation00ClockTower02;81F9C5|        |86F684;
+                       dw lvlPAL_Anim_A_ClockTower02        ;81F9C5|        |86F684;
                        dw $2282,$0000                       ;81F9C7|        |      ;
                                                             ;      |        |      ;
 paletteAnimationClockTower01:
                        db $01                               ;81F9CB|        |      ;
                        dw $8008                             ;81F9CC|        |      ;
-                       dw paletteDataAnimation00ClockTower03;81F9CE|        |86F71C;
+                       dw lvlPAL_Anim_A_ClockTower03        ;81F9CE|        |86F71C;
                        dw $22BA                             ;81F9D0|        |      ;
-                       dw paletteDataAnimation00ClockTower04;81F9D2|        |86F724;
+                       dw lvlPAL_Anim_A_ClockTower04        ;81F9D2|        |86F724;
                        dw $22BA                             ;81F9D4|        |      ;
-                       dw paletteDataAnimation00ClockTower05;81F9D6|        |86F72C;
+                       dw lvlPAL_Anim_A_ClockTower05        ;81F9D6|        |86F72C;
                        dw $22BA,$0000                       ;81F9D8|        |      ;
                                                             ;      |        |      ;
- MightBeAxeSpeedStuff:
-                       db $03                               ;81F9DC|        |      ;
-                       dw $0001,$FD00,$FDFE,$FFFF           ;81F9DD|        |      ;
+miscGFXload_something:
+                       dw $0103,$0000                       ;81F9DC|        |      ;
+                       dl mostlyEmptySpaceGFXdata           ;81F9E0|        |FDFEFD;
+                       dw $FFFF                             ;81F9E3|        |      ;
                                                             ;      |        |      ;
         DATA16_81F9E5:
                        dw $ECC3                             ;81F9E5|        |      ;
@@ -9146,75 +9279,119 @@ whipGFXtransitionReloadPointer:
                        dw whipLeatherLimpGFXsrcDesPointer   ;81FA0F|        |81B411;
                        dw whipChainLimpGFXsrcDesPointer     ;81FA11|        |81B424;
                        dw whipChainLimpGFXsrcDesPointer     ;81FA13|        |81B424;
-                       dw $0000,$4000,$0100,$6A00           ;81FA15|        |      ;
-                       dw $D39D,$FFDC,$01FF,$0000           ;81FA1D|        |      ;
-                       dw $F4AA,$23E0,$0000,$0001           ;81FA25|        |      ;
-                       dw $0020,$0020,$06D0,$0658           ;81FA2D|        |      ;
-                       dw $0618,$0003,$FFFD,$0001           ;81FA35|        |      ;
-                       dw $0002,$0002,$0002,$E43B           ;81FA3D|        |      ;
-                       dw $E47C,$BCF2,$BD32,$0032           ;81FA45|        |      ;
-                       dw $0039,$0033,$003A,$3000           ;81FA4D|        |      ;
-                       dw $1000,$F000,$C000,$8000           ;81FA55|        |      ;
-                       dw $6000,$4000,$2000,$0001           ;81FA5D|        |      ;
-                       dw $0001,$0000,$0000,$0000           ;81FA65|        |      ;
-                       dw $0000,$0000,$0000,$0002           ;81FA6D|        |      ;
-                       dw $FFFE,$0100,$6A00,$F41D           ;81FA75|        |      ;
-                       dw $FFFD,$58FF                       ;81FA7D|        |      ;
-                       dw $08FC                             ;81FA81|        |8408FC;
-                       dw $5D00                             ;81FA83|        |      ;
-                       dw $08FC                             ;81FA85|        |8408FC;
-                       dw $6200                             ;81FA87|        |      ;
-                       dw $08FC                             ;81FA89|        |8408FC;
-                       dw $6700                             ;81FA8B|        |      ;
-                       dw $08FC                             ;81FA8D|        |8408FC;
-                       dw $FF00,$DCFF,$4801,$B000           ;81FA8F|        |      ;
-                       dw $3801,$7C00,$4801,$5000           ;81FA97|        |      ;
-                       dw $3801,$1C00,$4801,$F000           ;81FA9F|        |      ;
-                       dw $3800,$BC00,$4800,$9000           ;81FAA7|        |      ;
-                       dw $3800,$5C00,$4800,$3000           ;81FAAF|        |      ;
-                       dw $3800,$0800,$1802,$1802           ;81FAB7|        |      ;
-                       dw $0802,$1802,$0802,$1802           ;81FABF|        |      ;
-                       dw $0802,$0802,$0002,$0001           ;81FAC7|        |      ;
-                       dw $5D6A,$FDFB,$FFFF,$0101           ;81FACF|        |      ;
-                       dw $2880,$80FC,$4A22,$80FC           ;81FAD7|        |      ;
-                       dw $0022,$9C00,$9E37,$AC2E           ;81FADF|        |      ;
-                       dw $AE2A,$BC2F,$BE23,$8A32           ;81FAE7|        |      ;
-                       dw $982C,$9A38,$9C25,$AA26           ;81FAEF|        |      ;
-                       dw $BA29,$9623,$9837,$A627           ;81FAF7|        |      ;
-                       dw $A82A,$B62B,$B822,$8431           ;81FAFF|        |      ;
-                       dw $922C,$9438,$9625,$A426           ;81FB07|        |      ;
-                       dw $B429,$9023,$9237,$A027           ;81FB0F|        |      ;
-                       dw $A22A,$B02B,$B222,$0E31           ;81FB17|        |      ;
-                       dw $1C2C,$1E38,$9025,$2E26           ;81FB1F|        |      ;
-                       dw $3E29,$1A23,$1C37,$2A27           ;81FB27|        |      ;
-                       dw $2C2A,$3A2B,$3C23,$0832           ;81FB2F|        |      ;
-                       dw $162C,$1838,$1A25,$2826           ;81FB37|        |      ;
-                       dw $3829,$1423,$1637,$2427           ;81FB3F|        |      ;
-                       dw $262A,$342B,$3623,$0232           ;81FB47|        |      ;
-                       dw $1030,$1238,$1425,$2226           ;81FB4F|        |      ;
-                       dw $2229,$6129,$0C8D,$6600           ;81FB57|        |      ;
-                       dw $0C8D,$6B00,$0C8D,$6600           ;81FB5F|        |      ;
-                       dw $0C8D,$FF00,$DFFF,$0CE1           ;81FB67|        |      ;
-                       dw $E400,$0CE1,$FF00,$E9FF           ;81FB6F|        |      ;
-                       dw $0CE1,$F200,$0CE1,$FF00           ;81FB77|        |      ;
-                       dw $00FF,$0B00,$149A,$1D9A           ;81FB7F|        |      ;
-                       dw $269A,$379A,$489A,$599A           ;81FB87|        |      ;
-                       dw $6A9A,$7B9A,$7B9A,$F09A           ;81FB8F|        |      ;
-                       dw $1093,$0900,$2894,$2600           ;81FB97|        |      ;
-                       dw $0894,$2600,$0094,$FF01           ;81FB9F|        |      ;
-                       dw $06FF,$0E85,$0085                 ;81FBA7|        |      ;
-                       db $00,$00,$00,$00,$00,$00,$00,$08   ;81FBAD|        |      ;
-                       db $08,$08,$08,$0C,$0C,$0C,$0C,$0C   ;81FBB5|        |      ;
-                       db $0C,$12,$12,$12,$12,$12,$12,$18   ;81FBBD|        |      ;
-                       db $18,$1A,$1A,$1A,$1A,$1A,$1A,$1A   ;81FBC5|        |      ;
-                       db $1A,$1A,$23,$23,$23,$23,$23,$23   ;81FBCD|        |      ;
-                       db $23,$2A,$2A,$2A,$2A,$2E,$2E,$2E   ;81FBD5|        |      ;
-                       db $2E,$2E,$2E,$2E,$2E,$2E,$37,$37   ;81FBDD|        |      ;
-                       db $37,$37,$37,$3C,$3C,$3C,$3F,$40   ;81FBE5|        |      ;
-                       db $41,$42,$42                       ;81FBED|        |      ;
+                       dw $0000,$4000                       ;81FA15|        |      ;
                                                             ;      |        |      ;
-        DATA16_81FBF0:
-                       dw $900C,$9011,$9016,$9011           ;81FBF0|        |      ;
+   zapfStairsMiscLoad:
+                       dw $0100,$6A00                       ;81FA19|        |      ;
+                       dl suckholeStone02                   ;81FA1D|        |DCD39D;
+                       dw $FFFF                             ;81FA20|        |      ;
+                                                            ;      |        |      ;
+paletteLoadSomething01:
+                       db $01                               ;81FA22|        |      ;
+                       dw $0000                             ;81FA23|        |      ;
+                       dw PAL_zapfBat_stones_GFXsuckhole    ;81FA25|        |86F4AA;
+                       dw $23E0,$0000,$0001,$0020           ;81FA27|        |      ;
+                       dw $0020,$06D0,$0658,$0618           ;81FA2F|        |      ;
+                       dw $0003,$FFFD,$0001,$0002           ;81FA37|        |      ;
+                       dw $0002,$0002                       ;81FA3F|        |      ;
+                       dw sprAssID_1108                     ;81FA43|        |84E43B;
+                       dw sprAssID_1110                     ;81FA45|        |84E47C;
+                       dw $BCF2,$BD32,$0032,$0039           ;81FA47|        |      ;
+                       dw $0033,$003A,$3000,$1000           ;81FA4F|        |      ;
+                       dw $F000,$C000,$8000,$6000           ;81FA57|        |      ;
+                       dw $4000,$2000,$0001,$0001           ;81FA5F|        |      ;
+                       dw $0000,$0000,$0000,$0000           ;81FA67|        |      ;
+                       dw $0000,$0000,$0002,$FFFE           ;81FA6F|        |      ;
+                                                            ;      |        |      ;
+miscGFXload_mummyExit:
+                       dw $0100,$6A00                       ;81FA77|        |      ;
+                       dl mummyExitGFXdata                  ;81FA7B|        |FDF41D;
+                       dw $FFFF                             ;81FA7E|        |      ;
+                                                            ;      |        |      ;
+deathExitTourchSprite:
+                       dw sprAssID_1111_tourch              ;81FA80|        |84FC58;
+                       dw $0008                             ;81FA82|        |      ;
+                       dw sprAssID_1112                     ;81FA84|        |84FC5D;
+                       dw $0008                             ;81FA86|        |      ;
+                       dw sprAssID_1113                     ;81FA88|        |84FC62;
+                       dw $0008                             ;81FA8A|        |      ;
+                       dw sprAssID_1114                     ;81FA8C|        |84FC67;
+                       dw $0008,$FFFF                       ;81FA8E|        |      ;
+                                                            ;      |        |      ;
+deathExitTourchPosData:
+                       dw $01DC,$0048,$01B0,$0038           ;81FA92|        |      ;
+                       dw $017C,$0048,$0150,$0038           ;81FA9A|        |      ;
+                       dw $011C,$0048,$00F0,$0038           ;81FAA2|        |      ;
+                       dw $00BC,$0048,$0090,$0038           ;81FAAA|        |      ;
+                       dw $005C,$0048,$0030,$0038           ;81FAB2|        |      ;
+                                                            ;      |        |      ;
+spriteFallingBlockXpos:
+                       dw $0208,$0218,$0218,$0208           ;81FABA|        |      ;
+                       dw $0218,$0208,$0218,$0208           ;81FAC2|        |      ;
+                       dw $0208                             ;81FACA|        |      ;
+                                                            ;      |        |      ;
+   miscGFX_tourchLoad:
+                       dw $0100,$6A00                       ;81FACC|        |      ;
+                       dl deathExitGFXdata                  ;81FAD0|        |FDFB5D;
+                       dw $FFFF                             ;81FAD3|        |      ;
+                                                            ;      |        |      ;
+tourchAfterDeathPaletteLoad:
+                       db $01                               ;81FAD5|        |      ;
+                       dw $8001                             ;81FAD6|        |      ;
+                       dw PAL_death_tiles_tourch            ;81FAD8|        |86FC28;
+                       dw $2280                             ;81FADA|        |      ;
+                       dw PAL_death_tiles_tourch_02         ;81FADC|        |86FC4A;
+                       dw $2280,$0000                       ;81FADE|        |      ;
+                                                            ;      |        |      ;
+deathExitTourch_blockMapPresist:
+                       dw $379C,$2E9E,$2AAC,$2FAE           ;81FAE2|        |      ;
+                       dw $23BC,$32BE,$2C8A,$3898           ;81FAEA|        |      ;
+                       dw $259A,$269C,$29AA,$23BA           ;81FAF2|        |      ;
+                       dw $3796,$2798,$2AA6,$2BA8           ;81FAFA|        |      ;
+                       dw $22B6,$31B8,$2C84,$3892           ;81FB02|        |      ;
+                       dw $2594,$2696,$29A4,$23B4           ;81FB0A|        |      ;
+                       dw $3790,$2792,$2AA0,$2BA2           ;81FB12|        |      ;
+                       dw $22B0,$31B2,$2C0E,$381C           ;81FB1A|        |      ;
+                       dw $251E,$2690,$292E,$233E           ;81FB22|        |      ;
+                       dw $371A,$271C,$2A2A,$2B2C           ;81FB2A|        |      ;
+                       dw $233A,$323C,$2C08,$3816           ;81FB32|        |      ;
+                       dw $2518,$261A,$2928,$2338           ;81FB3A|        |      ;
+                       dw $3714,$2716,$2A24,$2B26           ;81FB42|        |      ;
+                       dw $2334,$3236,$3002,$3810           ;81FB4A|        |      ;
+                       dw $2512,$2614,$2922,$2922           ;81FB52|        |      ;
+                       dw $8D61,$000C,$8D66,$000C           ;81FB5A|        |      ;
+                       dw $8D6B,$000C,$8D66,$000C           ;81FB62|        |      ;
+                       dw $FFFF,$E1DF,$000C,$E1E4           ;81FB6A|        |      ;
+                       dw $000C,$FFFF,$E1E9,$000C           ;81FB72|        |      ;
+                       dw $E1F2,$000C,$FFFF                 ;81FB7A|        |      ;
+                                                            ;      |        |      ;
+        DATA16_81FB80:
+                       dw $0000,$9A0B,$9A14,$9A1D           ;81FB80|        |      ;
+                       dw $9A26,$9A37,$9A48,$9A59           ;81FB88|        |      ;
+                       dw $9A6A,$9A7B,$9A7B,$93F0           ;81FB90|        |      ;
+                       dw $0010,$9409,$0028,$9426           ;81FB98|        |      ;
+                       dw $0008,$9426,$0100,$FFFF           ;81FBA0|        |      ;
+                                                            ;      |        |      ;
+     textDataContinue:
+                       dw continueSelec_00                  ;81FBA8|        |818506;
+                       dw continueSelec_01                  ;81FBAA|        |81850E;
+                                                            ;      |        |      ;
+       continueLevels:
+                       db $00,$00,$00,$00,$00,$00,$00,$00   ;81FBAC|        |      ;
+                       db $08,$08,$08,$08,$0C,$0C,$0C,$0C   ;81FBB4|        |      ;
+                       db $0C,$0C,$12,$12,$12,$12,$12,$12   ;81FBBC|        |      ;
+                       db $18,$18,$1A,$1A,$1A,$1A,$1A,$1A   ;81FBC4|        |      ;
+                       db $1A,$1A,$1A,$23,$23,$23,$23,$23   ;81FBCC|        |      ;
+                       db $23,$23,$2A,$2A,$2A,$2A,$2E,$2E   ;81FBD4|        |      ;
+                       db $2E,$2E,$2E,$2E,$2E,$2E,$2E,$37   ;81FBDC|        |      ;
+                       db $37,$37,$37,$37,$3C,$3C,$3C,$3F   ;81FBE4|        |      ;
+                       db $40,$41,$42,$42                   ;81FBEC|        |      ;
+                                                            ;      |        |      ;
+boneBurstRotatingSprite:
+                       dw sprAssID_110_bone00               ;81FBF0|        |84900C;
+                       dw sprAssID_111_bone01               ;81FBF2|        |849011;
+                       dw sprAssID_112_bone02               ;81FBF4|        |849016;
+                       dw sprAssID_111_bone01               ;81FBF6|        |849011;
                                                             ;      |        |      ;
  boneSpriteMirrorFlip:
                        dw $0000,$0000,$4000,$4000           ;81FBF8|        |      ;

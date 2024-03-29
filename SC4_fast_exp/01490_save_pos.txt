@@ -2,7 +2,7 @@
 ;pos=2E6800
 r 1663 G
 r 125 U
-A
-A
-A
+C
+C
+C
 r 257 G

@@ -479,7 +479,7 @@
                        db $FF,$D3,$00,$03,$FF               ;B18ED8|        |0300D3;
                                                             ;      |        |      ;
 blockMabData_Stage2Gravyard_BG0:
-                       db $03,$20,$80                       ;B18EDD|        |      ;
+                       dl $802003                           ;B18EDD|        |      ;
                        dw $0800,$0800,$0800,$0800           ;B18EE0|        |      ;
                        dw $0800,$0800,$0800,$0800           ;B18EE8|        |      ;
                        dw $0800,$0800,$0800,$0800           ;B18EF0|        |      ;
@@ -1518,7 +1518,7 @@ blockMabData_Stage2Gravyard_BG0:
                        db $FF,$1B,$04,$03,$FF               ;B1AF38|        |03041B;
                                                             ;      |        |      ;
 sceneMabDataStage2_Gravyard_BG1:
-                       db $03,$20,$80                       ;B1AF3D|        |      ;
+                       dl $802003                           ;B1AF3D|        |      ;
                        dw $0000,$0000,$0000,$0000           ;B1AF40|        |      ;
                        dw $0000,$0000,$0000,$0000           ;B1AF48|        |      ;
                        dw $0000,$0000,$0000,$0000           ;B1AF50|        |      ;
@@ -2557,7 +2557,7 @@ sceneMabDataStage2_Gravyard_BG1:
                        db $FF,$3F,$04,$03,$FF               ;B1CF98|        |03043F;
                                                             ;      |        |      ;
 sceneMabDataStage2_Gravyard_BG0:
-                       db $03,$20,$80                       ;B1CF9D|        |      ;
+                       dl $802003                           ;B1CF9D|        |      ;
                        dw $0001,$0002,$0003,$0004           ;B1CFA0|        |      ;
                        dw $0001,$000A,$0003,$0006           ;B1CFA8|        |      ;
                        dw $0005,$0005,$0005,$0005           ;B1CFB0|        |      ;
@@ -3596,7 +3596,7 @@ sceneMabDataStage2_Gravyard_BG0:
                        db $FF,$64,$09,$03,$FF               ;B1EFF8|        |030964;
                                                             ;      |        |      ;
  levelGFXStage2_swamp:
-                       db $03,$40,$80                       ;B1EFFD|        |      ;
+                       dl $804003                           ;B1EFFD|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B1F000|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B1F008|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B1F010|        |      ;

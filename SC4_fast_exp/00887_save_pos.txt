@@ -2,7 +2,7 @@
 ;pos=1B9000
 r 95 B
 r 93 U
-A
-A
-A
+C
+C
+C
 r 1857 B

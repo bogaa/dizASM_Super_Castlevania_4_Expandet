@@ -2,7 +2,7 @@
 ;pos=2FB800
 r 1631 B
 r 93 U
-A
-A
-A
+C
+C
+C
 r 321 G

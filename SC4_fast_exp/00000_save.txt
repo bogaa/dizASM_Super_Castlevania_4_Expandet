@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectXmlSerializer-Root xmlns:exs="https://extendedxmlserializer.github.io/v2" xmlns:ns1="clr-namespace:Diz.Core.model;assembly=Diz.Core" xmlns:ns2="clr-namespace:Diz.Core.model.snes;assembly=Diz.Core" xmlns:sys="https://extendedxmlserializer.github.io/system" xmlns:ns3="clr-namespace:System.Collections.Generic;assembly=System.Collections" xmlns:ns4="clr-namespace:Diz.Core.export;assembly=Diz.Core" SaveVersion="102" Watermark="DiztinGUIsh" Extra1="" Extra2="" xmlns="clr-namespace:Diz.Core.serialization.xml_serializer;assembly=Diz.Core">
-  <Project AttachedRomFilename="D:\GitHub\.dizProjects\dizASM_Super_Castlevania_4_Expandet\export\main.sfc" InternalRomGameName="SUPER CASTLEVANIA 4  " InternalCheckSum="2583848445" CurrentViewOffset="133777">
+  <Project AttachedRomFilename="D:\GitHub\.dizProjects\dizASM_Super_Castlevania_4_Expandet\export\main.sfc" InternalRomGameName="SUPER CASTLEVANIA 4  " InternalCheckSum="2583848445" CurrentViewOffset="228691">
     <LogWriterSettings Format="%label:-22% %code:37%;%pc%|%bytes%|%ia%; %comment%" DataPerLine="8" Unlabeled="ShowInPoints" Structure="OneBankPerFile" NewLine="true" OutputExtraWhitespace="true" GenerateFullLine="true" IncludeUnusedLabels="true" PrintLabelSpecificComments="false" RomSizeOverride="-1" FileOrFolderOutPath="..\dizASM_Super_Castlevania_4_Expandet\export" OutputToString="false" ErrorFilename="errors.txt" />
     <ProjectSettings exs:member="" BsnesUsageMapImportOnlyChangedUnmarked="true">
       

@@ -2,7 +2,7 @@
 ;pos=3A5800
 r 1152 A
 r 124 U
-A
-A
-A
+C
+C
+C
 r 769 B

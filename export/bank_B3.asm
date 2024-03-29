@@ -907,7 +907,7 @@
                        db $FF,$61,$04,$03,$FF               ;B39C38|        |030461;
                                                             ;      |        |      ;
 sceneMabDataStage2_Swamp_BG0:
-                       db $03,$20,$80                       ;B39C3D|        |      ;
+                       dl $802003                           ;B39C3D|        |      ;
                        dw $000E,$000B,$000C,$000D           ;B39C40|        |      ;
                        dw $000E,$000C,$000D,$000E           ;B39C48|        |      ;
                        dw $000D,$000D,$000D,$000D           ;B39C50|        |      ;
@@ -1946,7 +1946,7 @@ sceneMabDataStage2_Swamp_BG0:
                        db $FF,$77,$09,$03,$FF               ;B3BC98|        |030977;
                                                             ;      |        |      ;
 levelGFXStage2_waterSlide:
-                       db $03,$40,$80                       ;B3BC9D|        |      ;
+                       dl $804003                           ;B3BC9D|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B3BCA0|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B3BCA8|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B3BCB0|        |      ;
@@ -4009,7 +4009,7 @@ levelGFXStage2_waterSlide:
                        db $FF,$81,$09,$03,$FF               ;B3FCF8|        |030981;
                                                             ;      |        |      ;
 levelGFXStage2_waterSlide2bbpBG:
-                       db $13,$04,$80                       ;B3FCFD|        |      ;
+                       dl $800413                           ;B3FCFD|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B3FD00|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B3FD08|        |      ;
                        db $18,$18,$27,$3F,$47,$7F,$A5,$DF   ;B3FD10|        |      ;

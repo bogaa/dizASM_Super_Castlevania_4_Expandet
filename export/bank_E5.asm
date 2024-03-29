@@ -967,7 +967,7 @@
                        db $FF,$E6,$0A,$03,$FF               ;E59E18|        |030AE6;
                                                             ;      |        |      ;
 levelGFXStageB_tower_BG_Clouds:
-                       db $63,$1F,$80                       ;E59E1D|        |      ;
+                       dl $801F63                           ;E59E1D|        |      ;
                        db $87,$7F,$FF,$08,$0F,$3C,$07,$0E   ;E59E20|        |      ;
                        db $BA,$06,$DF,$02,$42,$22,$61,$02   ;E59E28|        |      ;
                        db $00,$00,$C4,$00,$F3,$00,$F9,$00   ;E59E30|        |      ;
@@ -1986,7 +1986,7 @@ levelGFXStageB_tower_BG_Clouds:
                        db $FF,$C9,$13,$03,$FF               ;E5BDD8|        |0313C9;
                                                             ;      |        |      ;
     spriteGFX_rockMan:
-                       db $03,$0C,$80                       ;E5BDDD|        |      ;
+                       dl $800C03                           ;E5BDDD|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E5BDE0|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$03   ;E5BDE8|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E5BDF0|        |      ;
@@ -2385,7 +2385,7 @@ levelGFXStageB_tower_BG_Clouds:
                        db $FF,$CE,$13,$03,$FF               ;E5CA38|        |0313CE;
                                                             ;      |        |      ;
 spriteGFX_floatingPlatformStairAndRing:
-                       db $C3,$03,$80                       ;E5CA3D|        |      ;
+                       dl $8003C3                           ;E5CA3D|        |      ;
                        db $01,$17,$10,$7F,$1B,$E1,$04,$6C   ;E5CA40|        |      ;
                        db $43,$DE,$DB,$95,$0F,$9E,$3C,$C8   ;E5CA48|        |      ;
                        db $00,$08,$0F,$00,$7C,$02,$23,$90   ;E5CA50|        |      ;
@@ -2520,7 +2520,7 @@ spriteGFX_floatingPlatformStairAndRing:
                        db $FF,$DD,$13,$03,$FF               ;E5CE58|        |0313DD;
                                                             ;      |        |      ;
   spriteGFX_spikeGear:
-                       db $83,$03,$80                       ;E5CE5D|        |      ;
+                       dl $800383                           ;E5CE5D|        |      ;
                        db $02,$01,$00,$02,$00,$00,$00,$01   ;E5CE60|        |      ;
                        db $01,$01,$01,$02,$02,$03,$01,$07   ;E5CE68|        |      ;
                        db $02,$00,$03,$00,$00,$01,$01,$00   ;E5CE70|        |      ;
@@ -2647,7 +2647,7 @@ spriteGFX_floatingPlatformStairAndRing:
                        db $FF,$4B,$02,$03,$FF               ;E5D238|        |03024B;
                                                             ;      |        |      ;
 blockMabData_StageB_tower_BG1andBG0:
-                       db $03,$20,$80                       ;E5D23D|        |      ;
+                       dl $802003                           ;E5D23D|        |      ;
                        dw $0400,$0400,$0400,$0400           ;E5D240|        |      ;
                        dw $0400,$0400,$0400,$0400           ;E5D248|        |      ;
                        dw $0400,$0400,$0400,$0400           ;E5D250|        |      ;
@@ -3686,7 +3686,7 @@ blockMabData_StageB_tower_BG1andBG0:
                        db $FF,$41,$08,$03,$FF               ;E5F298|        |030841;
                                                             ;      |        |      ;
 sceneMabDataStageB_Tower_BG1:
-                       db $03,$20,$80                       ;E5F29D|        |      ;
+                       dl $802003                           ;E5F29D|        |      ;
                        dw $0001,$0001,$0001,$0001           ;E5F2A0|        |      ;
                        dw $0001,$0006,$0007,$0008           ;E5F2A8|        |      ;
                        dw $0001,$0001,$0001,$0001           ;E5F2B0|        |      ;

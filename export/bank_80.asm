@@ -18,6 +18,8 @@
                        PLB                                  ;808014|AB      |      ;
                        JMP.W CODE_80FFB4                    ;808015|4CB4FF  |80FFB4;
                                                             ;      |        |      ;
+                                                            ;      |        |      ;
+          CODE_808018:
                        LDA.B #$00                           ;808018|A900    |      ;
                        STA.W SNES_NMITIMEN                  ;80801A|8D0042  |004200;
                        LDA.B #$80                           ;80801D|A980    |      ;
@@ -77,6 +79,7 @@
                        LDA.W $1E0C                          ;8080A1|AD0C1E  |001E0C;
                        CMP.W #$1E1D                         ;8080A4|C91D1E  |      ;
                        BNE CODE_8080C9                      ;8080A7|D020    |8080C9;
+                                                            ;      |        |      ;
                        LDA.W $1E0E                          ;8080A9|AD0E1E  |001E0E;
                        CMP.W #$0F16                         ;8080AC|C9160F  |      ;
                        BNE CODE_8080C9                      ;8080AF|D018    |8080C9;
@@ -904,7 +907,7 @@ titleScreenCinematicState00:
                        RTL                                  ;8086A6|6B      |      ;
                                                             ;      |        |      ;
 titleScreenCinematicState01:
-                       JSL.L CODE_85F17E                    ;8086A7|227EF185|85F17E;
+                       JSL.L introStoryRoutine              ;8086A7|227EF185|85F17E;
                        LDA.B r_ev_38                        ;8086AB|A538    |000038;
                        BNE CODE_8086B0                      ;8086AD|D001    |8086B0;
                        RTL                                  ;8086AF|6B      |      ;
@@ -960,7 +963,7 @@ initGameFromStartState01:
                        LDA.W r81_titleScreen_menuSelect     ;808700|AD021E  |811E02;
                        ASL A                                ;808703|0A      |      ;
                        TAY                                  ;808704|A8      |      ;
-                       LDX.W DATA16_8182C6,Y                ;808705|BEC682  |8182C6;
+                       LDX.W textPointerStartContinueOptions,Y;808705|BEC682  |8182C6;
                        JSL.L PPU_load_HUD                   ;808708|22519080|809051;
                        JSL.L CODE_808781                    ;80870C|22818780|808781;
                        BNE CODE_808714                      ;808710|D002    |808714;
@@ -3194,7 +3197,7 @@ mainGameStartUp_01_Intro:
                        RTL                                  ;8096D3|6B      |      ;
                                                             ;      |        |      ;
 mainGameState07_gameOver:
-                       JML.L CODE_8CFD1B                    ;8096D4|5C1BFD8C|8CFD1B; gameOver
+                       JML.L gameOverRoutine_00             ;8096D4|5C1BFD8C|8CFD1B; gameOver
                                                             ;      |        |      ;
                                                             ;      |        |      ;
 mainGameState08_pickupFreez:
@@ -17195,6 +17198,7 @@ newSC4edFixCameraUpdateSkip:
           CODE_80FBA3:
                        LDA.B r_ev_28_HitboxXpos,X           ;80FBA3|B528    |000028;
                        STA.W r81_ev_08_xPosSub              ;80FBA5|8D0800  |810008;
+                                                            ;      |        |      ;
                        LDA.B r_ev_2a_HitboxYpos,X           ;80FBA8|B52A    |00002A;
                        STA.W r81_ev_0a_xPos                 ;80FBAA|8D0A00  |81000A;
                        JSL.L getCollusionData               ;80FBAD|220CCE80|80CE0C;
@@ -17693,10 +17697,9 @@ costumSC4ed_eventTrackerCandleReverse:
                                                             ;      |        |      ;
           CODE_80FFB4:
                        LDA.W $4210                          ;80FFB4|AD1042  |A14210;
-                       LDA.W #$8D01                         ;80FFB7|A9018D  |      ;
-                       ORA.W $5C42                          ;80FFBA|0D425C  |A15C42;
-                       CLC                                  ;80FFBD|18      |      ;
-                       BRA LOOSE_OP_80FF40                  ;80FFBE|8080    |80FF40;
+                       LDA.B #$01                           ;80FFB7|A901    |      ;
+                       STA.W $420D                          ;80FFB9|8D0D42  |A1420D;
+                       JML.L CODE_808018                    ;80FFBC|5C188080|808018;
                                                             ;      |        |      ;
                        db "SUPER CASTLEVANIA 4  "           ;80FFC0|        |      ;
                        db $30,$00,$0C,$00,$01,$A4,$00       ;80FFD5|        |      ;

@@ -35,7 +35,7 @@
                        db $FF,$B0,$B5,$00,$FF               ;FA80F8|        |00B5B0;
                                                             ;      |        |      ;
 titleScreenLogoBGwallTileData00:
-                       db $03,$20,$80                       ;FA80FD|        |      ;
+                       dl $802003                           ;FA80FD|        |      ;
                        db $FF,$00,$C0,$00,$01,$00,$5F,$00   ;FA8100|        |      ;
                        db $44,$00,$D8,$DD,$8B,$8B,$C1,$E0   ;FA8108|        |      ;
                        db $00,$00,$FF,$00,$FF,$00,$FF,$00   ;FA8110|        |      ;
@@ -1074,7 +1074,7 @@ titleScreenLogoBGwallTileData00:
                        db $FF,$B5,$B5,$00,$FF               ;FAA158|        |00B5B5;
                                                             ;      |        |      ;
 titleScreenLogoBGwallTileData01:
-                       db $C3,$0D,$80                       ;FAA15D|        |      ;
+                       dl $800DC3                           ;FAA15D|        |      ;
                        db $30,$2C,$C1,$03,$01,$09,$51,$17   ;FAA160|        |      ;
                        db $9F,$1F,$3C,$3C,$60,$60,$00,$0E   ;FAA168|        |      ;
                        db $C3,$00,$3C,$00,$F6,$00,$E8,$00   ;FAA170|        |      ;
@@ -1529,7 +1529,7 @@ titleScreenLogoBGwallTileData01:
                        db $FF,$C4,$B5,$00,$FF               ;FAAF78|        |00B5C4;
                                                             ;      |        |      ;
 probablyTitleScreenBGBlockmapData:
-                       db $03,$08,$80                       ;FAAF7D|        |      ;
+                       dl $800803                           ;FAAF7D|        |      ;
                        dw $2400,$2400,$2400,$2400           ;FAAF80|        |      ;
                        dw $2400,$2400,$2400,$2400           ;FAAF88|        |      ;
                        dw $2400,$2400,$2400,$2400           ;FAAF90|        |      ;
@@ -1800,7 +1800,7 @@ probablyTitleScreenBGBlockmapData:
                        db $FF,$C9,$B5,$00,$FF               ;FAB7D8|        |00B5C9;
                                                             ;      |        |      ;
 probablyTitleScreenBGSceneData:
-                       db $03,$10,$80                       ;FAB7DD|        |      ;
+                       dl $801003                           ;FAB7DD|        |      ;
                        dw $18EF,$18F0,$18F1,$18F2           ;FAB7E0|        |      ;
                        dw $18F3,$18F4,$18F4,$18F5           ;FAB7E8|        |      ;
                        dw $18F6,$18F7,$18F8,$18F9           ;FAB7F0|        |      ;
@@ -2327,7 +2327,7 @@ probablyTitleScreenBGSceneData:
                        db $FF,$D2,$B5,$00,$FF               ;FAC838|        |00B5D2;
                                                             ;      |        |      ;
 titleScreenSpriteGFXdata:
-                       db $83,$16,$80                       ;FAC83D|        |      ;
+                       dl $801683                           ;FAC83D|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;FAC840|        |      ;
                        db $00,$00,$00,$00,$00,$00,$1B,$20   ;FAC848|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;FAC850|        |      ;
@@ -3062,7 +3062,7 @@ titleScreenSpriteGFXdata:
                        db $FF,$DB,$B5,$00,$FF               ;FADF18|        |00B5DB;
                                                             ;      |        |      ;
 introScreenCastleGFXdata:
-                       db $03,$20,$80                       ;FADF1D|        |      ;
+                       dl $802003                           ;FADF1D|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;FADF20|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;FADF28|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;FADF30|        |      ;
@@ -4100,21 +4100,21 @@ introScreenCastleGFXdata:
                        db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FAFF70|        |FFFFFF;
                        db $FF,$E0,$B5,$00,$FF               ;FAFF78|        |00B5E0;
                                                             ;      |        |      ;
-       UNREACH_FAFF7D:
-                       db $03,$20,$80,$FF,$00,$FF,$01,$FC   ;FAFF7D|        |000020;
-                       db $03,$FE,$03,$FD,$03,$FD,$03,$FF   ;FAFF85|        |0000FE;
-                       db $01,$FF,$01,$00,$00,$00,$00,$02   ;FAFF8D|        |0000FF;
-                       db $01,$01,$02,$02,$01,$02,$01,$00   ;FAFF95|        |000001;
-                       db $03,$00,$03,$5F,$00,$57,$6B,$DC   ;FAFF9D|        |000000;
-                       db $EF,$FF,$C0,$01,$E4,$81,$FE,$FF   ;FAFFA5|        |01C0FF;
-                       db $FE,$01,$FE,$E7,$8F,$84,$2F,$00   ;FAFFAD|        |00FE01;
-                       db $03,$00,$07,$7E,$FC,$00,$7E,$00   ;FAFFB5|        |000000;
-                       db $00,$00,$00,$A5,$72,$15,$17,$C7   ;FAFFBD|        |      ;
-                       db $F1,$7C,$00,$61,$FE,$7F,$FF,$06   ;FAFFC5|        |00007C;
-                       db $FF,$1E,$00,$C3,$FF,$E0,$FF,$00   ;FAFFCD|        |C3001E;
-                       db $FF,$00,$FF,$1F,$FF,$00,$FF,$00   ;FAFFD5|        |1FFF00;
-                       db $FF,$00,$FF,$DD,$16,$00,$8E,$2F   ;FAFFDD|        |DDFF00;
-                       db $9D,$16,$0F,$01,$43,$37,$51,$B6   ;FAFFE5|        |000F16;
-                       db $D3,$20,$4D,$00,$FC,$8C,$71,$82   ;FAFFED|        |000020;
-                       db $7C,$00,$FC,$41,$BD,$CA,$BC,$48   ;FAFFF5|        |FAFC00;
-                       db $BC,$41,$BF                       ;FAFFFD|        |00BF41;
+      someOtherTMdata:
+                       dl $802003                           ;FAFF7D|        |      ;
+                       dw $00FF,$01FF,$03FC,$03FE           ;FAFF80|        |      ;
+                       dw $03FD,$03FD,$01FF,$01FF           ;FAFF88|        |      ;
+                       dw $0000,$0000,$0102,$0201           ;FAFF90|        |      ;
+                       dw $0102,$0102,$0300,$0300           ;FAFF98|        |      ;
+                       dw $005F,$6B57,$EFDC,$C0FF           ;FAFFA0|        |      ;
+                       dw $E401,$FE81,$FEFF,$FE01           ;FAFFA8|        |      ;
+                       dw $8FE7,$2F84,$0300,$0700           ;FAFFB0|        |      ;
+                       dw $FC7E,$7E00,$0000,$0000           ;FAFFB8|        |      ;
+                       dw $72A5,$1715,$F1C7,$007C           ;FAFFC0|        |      ;
+                       dw $FE61,$FF7F,$FF06,$001E           ;FAFFC8|        |      ;
+                       dw $FFC3,$FFE0,$FF00,$FF00           ;FAFFD0|        |      ;
+                       dw $FF1F,$FF00,$FF00,$FF00           ;FAFFD8|        |      ;
+                       dw $16DD,$8E00,$9D2F,$0F16           ;FAFFE0|        |      ;
+                       dw $4301,$5137,$D3B6,$4D20           ;FAFFE8|        |      ;
+                       dw $FC00,$718C,$7C82,$FC00           ;FAFFF0|        |      ;
+                       dw $BD41,$BCCA,$BC48,$BF41           ;FAFFF8|        |      ;

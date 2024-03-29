@@ -2,7 +2,7 @@
 ;pos=3CB800
 r 671 G
 r 93 U
-A
-A
-A
+C
+C
+C
 r 1281 G

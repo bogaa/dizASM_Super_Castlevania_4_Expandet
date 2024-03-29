@@ -2,7 +2,7 @@
 ;pos=1CF800
 r 927 B
 r 93 U
-A
-A
-A
+C
+C
+C
 r 1025 B

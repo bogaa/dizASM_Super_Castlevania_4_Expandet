@@ -2,7 +2,7 @@
 ;pos=32D000
 r 479 G
 r 93 U
-A
-A
-A
+C
+C
+C
 r 1473 B

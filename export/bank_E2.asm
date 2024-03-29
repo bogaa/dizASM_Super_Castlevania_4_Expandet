@@ -343,7 +343,7 @@
                        db $FF,$11,$08,$03,$FF               ;E28A98|        |030811;
                                                             ;      |        |      ;
 sceneMabDataStageA_ClockTower_mummyQuater_BG1:
-                       db $03,$20,$80                       ;E28A9D|        |      ;
+                       dl $802003                           ;E28A9D|        |      ;
                        dw $0001,$0002,$0003,$000C           ;E28AA0|        |      ;
                        dw $000D,$0000,$0000,$0000           ;E28AA8|        |      ;
                        dw $0001,$0005,$0006,$0010           ;E28AB0|        |      ;
@@ -1382,7 +1382,7 @@ sceneMabDataStageA_ClockTower_mummyQuater_BG1:
                        db $FF,$17,$08,$03,$FF               ;E2AAF8|        |030817;
                                                             ;      |        |      ;
 sceneMabDataStageA_ClockTower_mummyQuater_BG0:
-                       db $03,$20,$80                       ;E2AAFD|        |      ;
+                       dl $802003                           ;E2AAFD|        |      ;
                        dw $0001,$0001,$0002,$0003           ;E2AB00|        |      ;
                        dw $0008,$0007,$0001,$0001           ;E2AB08|        |      ;
                        dw $0004,$0004,$0004,$0005           ;E2AB10|        |      ;
@@ -2421,7 +2421,7 @@ sceneMabDataStageA_ClockTower_mummyQuater_BG0:
                        db $FF,$CE,$0A,$03,$FF               ;E2CB58|        |030ACE;
                                                             ;      |        |      ;
 levelGFXStageB_bridge:
-                       db $03,$40,$80                       ;E2CB5D|        |      ;
+                       dl $804003                           ;E2CB5D|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E2CB60|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E2CB68|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;E2CB70|        |      ;

@@ -2,8 +2,8 @@
 ;pos=1E6800
 r 959 G
 r 93 U
-A
-A
-A
+C
+C
+C
 r 960 G
 r 33 U

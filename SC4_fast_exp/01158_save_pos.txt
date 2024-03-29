@@ -2,12 +2,12 @@
 ;pos=240800
 r 447 G
 r 93 U
-A
-A
-A
+C
+C
+C
 r 960 G
 r 93 U
-A
-A
-A
+C
+C
+C
 r 449 B

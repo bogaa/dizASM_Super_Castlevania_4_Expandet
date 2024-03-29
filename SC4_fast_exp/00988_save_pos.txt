@@ -2,7 +2,7 @@
 ;pos=1EB800
 r 1311 B
 r 93 U
-A
-A
-A
+C
+C
+C
 r 641 B

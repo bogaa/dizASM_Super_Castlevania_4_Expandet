@@ -8,15 +8,18 @@
                        PHX                                  ;838005|DA      |      ;
                        ASL A                                ;838006|0A      |      ;
                        TAX                                  ;838007|AA      |      ;
-                       LDA.L UNREACH_838012,X               ;838008|BF128083|838012;
+                       LDA.L PTR16_838012,X                 ;838008|BF128083|838012;
                        PLX                                  ;83800C|FA      |      ;
                        STA.B r_ev_00_sprite                 ;83800D|8500    |000000;
                        JMP.W (r_ev_00_sprite)               ;83800F|6C0000  |000000;
                                                             ;      |        |      ;
-       UNREACH_838012:
-                       db $1A,$80,$81,$80,$88,$80,$11,$82   ;838012|        |      ;
+         PTR16_838012:
+                       dw optionMenuMusic00                 ;838012|        |83801A;
+                       dw optionMenuMusic01                 ;838014|        |838081;
+                       dw optionMenuMusic02                 ;838016|        |838088;
+                       dw optionMenuMusic03                 ;838018|        |838211;
                                                             ;      |        |      ;
-          CODE_83801A:
+    optionMenuMusic00:
                        JSL.L optionMusicPlayerRoutine       ;83801A|22F08382|8283F0;
                        BNE CODE_838080                      ;83801E|D060    |838080;
                        JSL.L muteMusic                      ;838020|22848580|808584;
@@ -61,12 +64,12 @@ optionMenuText2PointLoad:
           CODE_838080:
                        RTL                                  ;838080|6B      |      ;
                                                             ;      |        |      ;
-          CODE_838081:
+    optionMenuMusic01:
                        JSL.L blackFadeRoutine               ;838081|22019680|809601;
                        BCS CODE_83807D                      ;838085|B0F6    |83807D;
                        RTL                                  ;838087|6B      |      ;
                                                             ;      |        |      ;
-          CODE_838088:
+    optionMenuMusic02:
                        JSR.W CODE_83808F                    ;838088|208F80  |83808F;
                        JSR.W CODE_83811D                    ;83808B|201D81  |83811D;
                        RTL                                  ;83808E|6B      |      ;
@@ -84,7 +87,7 @@ optionMenuText2PointLoad:
                        LDA.B r_ev_28_HitboxXpos             ;8380A3|A528    |000028;
                        BIT.W #$0020                         ;8380A5|892000  |      ;
                        BEQ CODE_8380AD                      ;8380A8|F003    |8380AD;
-                       db $CE,$08,$1C                       ;8380AA|        |001C08;
+                       DEC.W $1C08                          ;8380AA|CE081C  |811C08;
                                                             ;      |        |      ;
           CODE_8380AD:
                        BIT.W #$0010                         ;8380AD|891000  |      ;
@@ -96,7 +99,7 @@ optionMenuText2PointLoad:
                        BEQ CODE_8380C0                      ;8380B8|F006    |8380C0;
                        DEY                                  ;8380BA|88      |      ;
                        BPL CODE_8380C0                      ;8380BB|1003    |8380C0;
-                       db $A0,$03,$00                       ;8380BD|        |      ;
+                       LDY.W #$0003                         ;8380BD|A00300  |      ;
                                                             ;      |        |      ;
           CODE_8380C0:
                        BIT.W #$0400                         ;8380C0|890004  |      ;
@@ -104,14 +107,14 @@ optionMenuText2PointLoad:
                        INY                                  ;8380C5|C8      |      ;
                        CPY.W #$0004                         ;8380C6|C00400  |      ;
                        BCC CODE_8380CE                      ;8380C9|9003    |8380CE;
-                       db $A0,$00,$00                       ;8380CB|        |      ;
+                       LDY.W #$0000                         ;8380CB|A00000  |      ;
                                                             ;      |        |      ;
           CODE_8380CE:
                        BIT.W #$0200                         ;8380CE|890002  |      ;
                        BEQ CODE_8380D9                      ;8380D1|F006    |8380D9;
                        DEX                                  ;8380D3|CA      |      ;
                        BPL CODE_8380D9                      ;8380D4|1003    |8380D9;
-                       db $A2,$08,$00                       ;8380D6|        |      ;
+                       LDX.W #$0008                         ;8380D6|A20800  |      ;
                                                             ;      |        |      ;
           CODE_8380D9:
                        BIT.W #$0100                         ;8380D9|890001  |      ;
@@ -119,7 +122,7 @@ optionMenuText2PointLoad:
                        INX                                  ;8380DE|E8      |      ;
                        CPX.W #$0009                         ;8380DF|E00900  |      ;
                        BCC CODE_8380E7                      ;8380E2|9003    |8380E7;
-                       db $A2,$00,$00                       ;8380E4|        |      ;
+                       LDX.W #$0000                         ;8380E4|A20000  |      ;
                                                             ;      |        |      ;
           CODE_8380E7:
                        STX.W $1C04                          ;8380E7|8E041C  |811C04;
@@ -271,7 +274,7 @@ optionMenuText2PointLoad:
                        JSL.L setSmallUpdateSize             ;838209|22868D80|808D86;
                        JML.L setUpdateSize                  ;83820D|5C918D80|808D91;
                                                             ;      |        |      ;
-          CODE_838211:
+    optionMenuMusic03:
                        DEC.W r81_blackFade                  ;838211|CE801E  |811E80;
                        LDA.W r81_blackFade                  ;838214|AD801E  |811E80;
                        BNE CODE_83821E                      ;838217|D005    |83821E;
@@ -293,17 +296,17 @@ passwordScreenMainJumpTableRoutine:
                        JMP.W (r_ev_00_sprite)               ;83822E|6C0000  |000000;
                                                             ;      |        |      ;
          PTR16_838231:
-                       dw CODE_83801A                       ;838231|        |83801A;
-                       dw CODE_838081                       ;838233|        |838081;
-                       dw CODE_838088                       ;838235|        |838088;
-                       dw CODE_838211                       ;838237|        |838211;
-                       dw CODE_838243                       ;838239|        |838243;
-                       dw CODE_838081                       ;83823B|        |838081;
-                       dw CODE_838279                       ;83823D|        |838279;
-                       dw UNREACH_83832C                    ;83823F|        |83832C;
-                       dw CODE_838342                       ;838241|        |838342;
+                       dw optionMenuMusic00                 ;838231|        |83801A;
+                       dw optionMenuMusic01                 ;838233|        |838081;
+                       dw optionMenuMusic02                 ;838235|        |838088;
+                       dw optionMenuMusic03                 ;838237|        |838211;
+                       dw optionMenuMusic04                 ;838239|        |838243;
+                       dw optionMenuMusic01                 ;83823B|        |838081;
+                       dw optionMenuMusic06                 ;83823D|        |838279;
+                       dw optionMenuMusic07                 ;83823F|        |83832C;
+                       dw optionMenuMusic08                 ;838241|        |838342;
                                                             ;      |        |      ;
-          CODE_838243:
+    optionMenuMusic04:
                        JSL.L clearWindowEffectALL_endingSequ;838243|22638F80|808F63;
                        LDX.W #$B51A                         ;838247|A21AB5  |      ;
                        JSL.L miscGFXloadRoutineXPlus81Bank  ;83824A|22E88082|8280E8;
@@ -323,7 +326,7 @@ passwordScreenMainJumpTableRoutine:
                        INC.W r81_state_Map_Scene            ;838275|EE001C  |811C00;
                        RTL                                  ;838278|6B      |      ;
                                                             ;      |        |      ;
-          CODE_838279:
+    optionMenuMusic06:
                        JSR.W CODE_838384                    ;838279|208483  |838384;
                        JSR.W CODE_838409                    ;83827C|200984  |838409;
                        JSR.W CODE_838354                    ;83827F|205483  |838354;
@@ -331,7 +334,8 @@ passwordScreenMainJumpTableRoutine:
                        LDA.B r_ev_28_HitboxXpos             ;838285|A528    |000028;
                        BIT.W #$2000                         ;838287|890020  |      ;
                        BEQ CODE_83828F                      ;83828A|F003    |83828F;
-                       db $4C,$12,$83                       ;83828C|        |838312;
+                       JMP.W CODE_838312                    ;83828C|4C1283  |838312;
+                                                            ;      |        |      ;
                                                             ;      |        |      ;
           CODE_83828F:
                        BIT.W #$1000                         ;83828F|890010  |      ;
@@ -342,15 +346,34 @@ passwordScreenMainJumpTableRoutine:
                        STA.B r_currentLevel                 ;83829D|8586    |000086;
                        CMP.W #$0000                         ;83829F|C90000  |      ;
                        BEQ CODE_8382EA                      ;8382A2|F046    |8382EA;
-                       db $C9,$08,$00,$F0,$41,$C9,$0C,$00   ;8382A4|        |      ;
-                       db $F0,$3C,$C9,$12,$00,$F0,$37,$C9   ;8382AC|        |8382EA;
-                       db $18,$00,$F0,$32,$C9,$1A,$00,$F0   ;8382B4|        |      ;
-                       db $2D,$C9,$23,$00,$F0,$28,$C9,$2A   ;8382BC|        |0023C9;
-                       db $00,$F0,$23,$C9,$2E,$00,$F0,$1E   ;8382C4|        |      ;
-                       db $C9,$37,$00,$F0,$19,$C9,$3C,$00   ;8382CC|        |      ;
-                       db $F0,$14,$C9,$3F,$00,$F0,$0F,$C9   ;8382D4|        |8382EA;
-                       db $40,$00,$F0,$0A,$C9,$41,$00,$F0   ;8382DC|        |      ;
-                       db $05,$C9,$42,$00,$D0,$2F           ;8382E4|        |0000C9;
+                       CMP.W #$0008                         ;8382A4|C90800  |      ;
+                       BEQ CODE_8382EA                      ;8382A7|F041    |8382EA;
+                       CMP.W #$000C                         ;8382A9|C90C00  |      ;
+                       BEQ CODE_8382EA                      ;8382AC|F03C    |8382EA;
+                       CMP.W #$0012                         ;8382AE|C91200  |      ;
+                       BEQ CODE_8382EA                      ;8382B1|F037    |8382EA;
+                       CMP.W #$0018                         ;8382B3|C91800  |      ;
+                       BEQ CODE_8382EA                      ;8382B6|F032    |8382EA;
+                       CMP.W #$001A                         ;8382B8|C91A00  |      ;
+                       BEQ CODE_8382EA                      ;8382BB|F02D    |8382EA;
+                       CMP.W #$0023                         ;8382BD|C92300  |      ;
+                       BEQ CODE_8382EA                      ;8382C0|F028    |8382EA;
+                       CMP.W #$002A                         ;8382C2|C92A00  |      ;
+                       BEQ CODE_8382EA                      ;8382C5|F023    |8382EA;
+                       CMP.W #$002E                         ;8382C7|C92E00  |      ;
+                       BEQ CODE_8382EA                      ;8382CA|F01E    |8382EA;
+                       CMP.W #$0037                         ;8382CC|C93700  |      ;
+                       BEQ CODE_8382EA                      ;8382CF|F019    |8382EA;
+                       CMP.W #$003C                         ;8382D1|C93C00  |      ;
+                       BEQ CODE_8382EA                      ;8382D4|F014    |8382EA;
+                       CMP.W #$003F                         ;8382D6|C93F00  |      ;
+                       BEQ CODE_8382EA                      ;8382D9|F00F    |8382EA;
+                       CMP.W #$0040                         ;8382DB|C94000  |      ;
+                       BEQ CODE_8382EA                      ;8382DE|F00A    |8382EA;
+                       CMP.W #$0041                         ;8382E0|C94100  |      ;
+                       BEQ CODE_8382EA                      ;8382E3|F005    |8382EA;
+                       CMP.W #$0042                         ;8382E5|C94200  |      ;
+                       BNE CODE_838319                      ;8382E8|D02F    |838319;
                                                             ;      |        |      ;
           CODE_8382EA:
                        LDA.W $1C15                          ;8382EA|AD151C  |811C15;
@@ -361,28 +384,46 @@ passwordScreenMainJumpTableRoutine:
                        JSR.W CODE_8384DE                    ;8382F8|20DE84  |8384DE;
                        LDA.W $1C10                          ;8382FB|AD101C  |811C10;
                        CMP.W $1C14                          ;8382FE|CD141C  |811C14;
-                       BNE UNREACH_838319                   ;838301|D016    |838319;
+                       BNE CODE_838319                      ;838301|D016    |838319;
                        LDA.W $1C12                          ;838303|AD121C  |811C12;
                        CMP.W $1C16                          ;838306|CD161C  |811C16;
-                       BNE UNREACH_838319                   ;838309|D00E    |838319;
+                       BNE CODE_838319                      ;838309|D00E    |838319;
                        LDA.W #$0008                         ;83830B|A90800  |      ;
                        STA.W r81_state_Map_Scene            ;83830E|8D001C  |811C00;
                                                             ;      |        |      ;
           CODE_838311:
                        RTL                                  ;838311|6B      |      ;
-                       db $A9,$01,$00,$5C,$71,$87,$80       ;838312|        |      ;
                                                             ;      |        |      ;
-       UNREACH_838319:
-                       db $A2,$16,$85,$22,$51,$90,$80,$A9   ;838319|        |      ;
-                       db $40,$00,$85,$68,$A9,$07,$00,$8D   ;838321|        |      ;
-                       db $00,$1C,$6B                       ;838329|        |      ;
+          CODE_838312:
+                       LDA.W #$0001                         ;838312|A90100  |      ;
+                       JML.L CODE_808771                    ;838315|5C718780|808771;
                                                             ;      |        |      ;
-       UNREACH_83832C:
-                       db $C6,$68,$D0,$11,$E6,$F0,$A2,$16   ;83832C|        |000068;
-                       db $85,$22,$51,$90,$80,$64,$F0,$A9   ;838334|        |000022;
-                       db $06,$00,$8D,$00,$1C,$6B           ;83833C|        |000000;
                                                             ;      |        |      ;
-          CODE_838342:
+          CODE_838319:
+                       LDX.W #$8516                         ;838319|A21685  |      ;
+                       JSL.L PPU_load_HUD                   ;83831C|22519080|809051;
+                       LDA.W #$0040                         ;838320|A94000  |      ;
+                       STA.B $68                            ;838323|8568    |000068;
+                       LDA.W #$0007                         ;838325|A90700  |      ;
+                       STA.W r81_state_Map_Scene            ;838328|8D001C  |811C00;
+                       RTL                                  ;83832B|6B      |      ;
+                                                            ;      |        |      ;
+                                                            ;      |        |      ;
+    optionMenuMusic07:
+                       DEC.B $68                            ;83832C|C668    |000068;
+                       BNE CODE_838341                      ;83832E|D011    |838341;
+                       INC.B r_HUD_RenderFlag               ;838330|E6F0    |0000F0;
+                       LDX.W #$8516                         ;838332|A21685  |      ;
+                       JSL.L PPU_load_HUD                   ;838335|22519080|809051;
+                       STZ.B r_HUD_RenderFlag               ;838339|64F0    |0000F0;
+                       LDA.W #$0006                         ;83833B|A90600  |      ;
+                       STA.W r_state_Map_Scene              ;83833E|8D001C  |001C00;
+                                                            ;      |        |      ;
+          CODE_838341:
+                       RTL                                  ;838341|6B      |      ;
+                                                            ;      |        |      ;
+                                                            ;      |        |      ;
+    optionMenuMusic08:
                        DEC.W r81_blackFade                  ;838342|CE801E  |811E80;
                        BNE CODE_838353                      ;838345|D00C    |838353;
                        LDA.W #$0004                         ;838347|A90400  |      ;
@@ -538,17 +579,47 @@ passwordScreenMainJumpTableRoutine:
                        LDA.W #$004B                         ;838454|A94B00  |      ;
                        STA.B r_ev_0e_yPos,X                 ;838457|950E    |00000E;
                        RTS                                  ;838459|60      |      ;
-                       db $C2,$30,$AD,$00,$1C,$DA,$0A,$AA   ;83845A|        |      ;
-                       db $BF,$6C,$84,$83,$FA,$85,$00,$6C   ;838462|        |83846C;
-                       db $00,$00,$70,$84,$D2,$84,$22,$F0   ;83846A|        |      ;
-                       db $83,$82,$D0,$39,$22,$84,$85,$80   ;838472|        |000082;
-                       db $A9,$2A,$00,$22,$DD,$80,$82,$22   ;83847A|        |      ;
-                       db $9E,$85,$80,$22,$63,$8F,$80,$A2   ;838482|        |008085;
-                       db $1A,$B5,$22,$E8,$80,$82,$A0,$44   ;83848A|        |      ;
-                       db $87,$22,$E6,$90,$80,$20,$B0,$84   ;838492|        |000022;
-                       db $9C,$10,$1C,$9C,$12,$1C,$20,$DE   ;83849A|        |001C10;
-                       db $84,$20,$49,$85,$20,$E0,$83,$20   ;8384A2|        |000020;
-                       db $7D,$85,$EE,$00,$1C,$6B           ;8384AA|        |00EE85;
+                                                            ;      |        |      ;
+  showPasswordRoutine:
+                       REP #$30                             ;83845A|C230    |      ;
+                       LDA.W r81_state_Map_Scene            ;83845C|AD001C  |811C00;
+                       PHX                                  ;83845F|DA      |      ;
+                       ASL A                                ;838460|0A      |      ;
+                       TAX                                  ;838461|AA      |      ;
+                       LDA.L showPasswordState,X            ;838462|BF6C8483|83846C;
+                       PLX                                  ;838466|FA      |      ;
+                       STA.B r_ev_00_sprite                 ;838467|8500    |000000;
+                       JMP.W (r_ev_00_sprite)               ;838469|6C0000  |000000;
+                                                            ;      |        |      ;
+                                                            ;      |        |      ;
+    showPasswordState:
+                       dw showPasswordState_00              ;83846C|        |838470;
+                       dw showPasswordState_01              ;83846E|        |8384D2;
+                                                            ;      |        |      ;
+ showPasswordState_00:
+                       JSL.L optionMusicPlayerRoutine       ;838470|22F08382|8283F0;
+                       BNE CODE_8384AF                      ;838474|D039    |8384AF;
+                       JSL.L muteMusic                      ;838476|22848580|808584;
+                       LDA.W #$002A                         ;83847A|A92A00  |      ;
+                       JSL.L lunchMusicFromAccum            ;83847D|22DD8082|8280DD;
+                       JSL.L musicFixFlagCheck              ;838481|229E8580|80859E;
+                       JSL.L clearWindowEffectALL_endingSequ;838485|22638F80|808F63;
+                       LDX.W #$B51A                         ;838489|A21AB5  |      ;
+                       JSL.L miscGFXloadRoutineXPlus81Bank  ;83848C|22E88082|8280E8;
+                       LDY.W #$8744                         ;838490|A04487  |      ;
+                       JSL.L getPaletteY2_X1200             ;838493|22E69080|8090E6;
+                       JSR.W CODE_8384B0                    ;838497|20B084  |8384B0;
+                       STZ.W $1C10                          ;83849A|9C101C  |811C10;
+                       STZ.W $1C12                          ;83849D|9C121C  |811C12;
+                       JSR.W CODE_8384DE                    ;8384A0|20DE84  |8384DE;
+                       JSR.W CODE_838549                    ;8384A3|204985  |838549;
+                       JSR.W CODE_8383E0                    ;8384A6|20E083  |8383E0;
+                       JSR.W CODE_83857D                    ;8384A9|207D85  |83857D;
+                       INC.W r81_state_Map_Scene            ;8384AC|EE001C  |811C00;
+                                                            ;      |        |      ;
+          CODE_8384AF:
+                       RTL                                  ;8384AF|6B      |      ;
+                                                            ;      |        |      ;
                                                             ;      |        |      ;
           CODE_8384B0:
                        LDY.W #$5AEC                         ;8384B0|A0EC5A  |      ;
@@ -565,8 +636,17 @@ passwordScreenMainJumpTableRoutine:
                        BCC CODE_8384BA                      ;8384CB|90ED    |8384BA;
                        JSL.L setUpdateSize                  ;8384CD|22918D80|808D91;
                        RTS                                  ;8384D1|60      |      ;
-                       db $A5,$28,$89,$00,$10,$F0,$04,$64   ;8384D2|        |000028;
-                       db $32,$64,$34,$6B                   ;8384DA|        |000064;
+                                                            ;      |        |      ;
+ showPasswordState_01:
+                       LDA.B r_ev_28_HitboxXpos             ;8384D2|A528    |000028;
+                       BIT.W #$1000                         ;8384D4|890010  |      ;
+                       BEQ CODE_8384DD                      ;8384D7|F004    |8384DD;
+                       STZ.B r_ev_32                        ;8384D9|6432    |000032;
+                       STZ.B r_ev_34                        ;8384DB|6434    |000034;
+                                                            ;      |        |      ;
+          CODE_8384DD:
+                       RTL                                  ;8384DD|6B      |      ;
+                                                            ;      |        |      ;
                                                             ;      |        |      ;
           CODE_8384DE:
                        LDX.W #$0007                         ;8384DE|A20700  |      ;
@@ -600,7 +680,7 @@ passwordScreenMainJumpTableRoutine:
                        AND.W #$00FF                         ;838513|29FF00  |      ;
                        STA.B r_ev_02_pri_attri              ;838516|8502    |000002;
                        LDX.B r_ev_00_sprite                 ;838518|A600    |000000;
-                       LDA.W DATA8_81D07E,X                 ;83851A|BD7ED0  |81D07E;
+                       LDA.W pwSpritePlacment,X             ;83851A|BD7ED0  |81D07E;
                        AND.W #$00FF                         ;83851D|29FF00  |      ;
                        TAX                                  ;838520|AA      |      ;
                                                             ;      |        |      ;
@@ -614,7 +694,7 @@ passwordScreenMainJumpTableRoutine:
                                                             ;      |        |      ;
           CODE_83852D:
                        LDX.B r_ev_00_sprite                 ;83852D|A600    |000000;
-                       LDA.W passwordInputScreenStuff,X     ;83852F|BD7DD0  |81D07D;
+                       LDA.W $D07D,X                        ;83852F|BD7DD0  |81D07D;
                        AND.W #$00FF                         ;838532|29FF00  |      ;
                        TAX                                  ;838535|AA      |      ;
                        LDA.W $1C14,X                        ;838536|BD141C  |811C14;
@@ -626,13 +706,42 @@ passwordScreenMainJumpTableRoutine:
                        CPY.W #$0010                         ;838543|C01000  |      ;
                        BCC CODE_838510                      ;838546|90C8    |838510;
                        RTS                                  ;838548|60      |      ;
-                       db $A9,$00,$00,$E2,$20,$A0,$00,$00   ;838549|        |      ;
-                       db $84,$00,$B9,$7D,$D0,$AA,$BD,$10   ;838551|        |000000;
-                       db $1C,$85,$02,$B9,$7E,$D0,$AA,$A5   ;838559|        |000285;
-                       db $02,$E0,$00,$00,$F0,$05,$4A,$4A   ;838561|        |      ;
-                       db $CA,$80,$F6,$A6,$00,$9D,$20,$1C   ;838569|        |      ;
-                       db $E6,$00,$C8,$C8,$C0,$20,$00,$90   ;838571|        |000000;
-                       db $D9,$C2,$30,$60                   ;838579|        |0030C2;
+                                                            ;      |        |      ;
+          CODE_838549:
+                       LDA.W #$0000                         ;838549|A90000  |      ;
+                       SEP #$20                             ;83854C|E220    |      ;
+                       LDY.W #$0000                         ;83854E|A00000  |      ;
+                       STY.B r_ev_00_sprite                 ;838551|8400    |000000;
+                                                            ;      |        |      ;
+          CODE_838553:
+                       LDA.W $D07D,Y                        ;838553|B97DD0  |81D07D;
+                       TAX                                  ;838556|AA      |      ;
+                       LDA.W $1C10,X                        ;838557|BD101C  |811C10;
+                       STA.B r_ev_02_pri_attri              ;83855A|8502    |000002;
+                       LDA.W pwSpritePlacment,Y             ;83855C|B97ED0  |81D07E;
+                       TAX                                  ;83855F|AA      |      ;
+                       LDA.B r_ev_02_pri_attri              ;838560|A502    |000002;
+                                                            ;      |        |      ;
+          CODE_838562:
+                       CPX.W #$0000                         ;838562|E00000  |      ;
+                       BEQ CODE_83856C                      ;838565|F005    |83856C;
+                       LSR A                                ;838567|4A      |      ;
+                       LSR A                                ;838568|4A      |      ;
+                       DEX                                  ;838569|CA      |      ;
+                       BRA CODE_838562                      ;83856A|80F6    |838562;
+                                                            ;      |        |      ;
+                                                            ;      |        |      ;
+          CODE_83856C:
+                       LDX.B r_ev_00_sprite                 ;83856C|A600    |000000;
+                       STA.W $1C20,X                        ;83856E|9D201C  |811C20;
+                       INC.B r_ev_00_sprite                 ;838571|E600    |000000;
+                       INY                                  ;838573|C8      |      ;
+                       INY                                  ;838574|C8      |      ;
+                       CPY.W #$0020                         ;838575|C02000  |      ;
+                       BCC CODE_838553                      ;838578|90D9    |838553;
+                       REP #$30                             ;83857A|C230    |      ;
+                       RTS                                  ;83857C|60      |      ;
+                                                            ;      |        |      ;
                                                             ;      |        |      ;
           CODE_83857D:
                        LDX.W #$0200                         ;83857D|A20002  |      ;
@@ -12075,7 +12184,7 @@ titleScreenCinematic05:
                        LDA.W #$0001                         ;83DBD8|A90100  |      ;
                        STA.W $1C04                          ;83DBDB|8D041C  |811C04;
                        STZ.W $1C06                          ;83DBDE|9C061C  |811C06;
-                       LDA.W DATA16_81E0F4                  ;83DBE1|ADF4E0  |81E0F4;
+                       LDA.W titleScreenTimerThunder        ;83DBE1|ADF4E0  |81E0F4;
                        AND.W #$00FF                         ;83DBE4|29FF00  |      ;
                        STA.W $1C02                          ;83DBE7|8D021C  |811C02;
                        LDA.W #$008A                         ;83DBEA|A98A00  |      ;
@@ -12103,7 +12212,7 @@ titleScreenCinematic06:
                        LDA.W #$0005                         ;83DC1C|A90500  |      ;
                        STA.W $1C06                          ;83DC1F|8D061C  |811C06;
                        LDX.W $1C04                          ;83DC22|AE041C  |811C04;
-                       LDA.W DATA16_81E0F4,X                ;83DC25|BDF4E0  |81E0F4;
+                       LDA.W titleScreenTimerThunder,X      ;83DC25|BDF4E0  |81E0F4;
                        CMP.W #$FFFF                         ;83DC28|C9FFFF  |      ;
                        BEQ CODE_83DC37                      ;83DC2B|F00A    |83DC37;
                        AND.W #$00FF                         ;83DC2D|29FF00  |      ;
@@ -12582,7 +12691,7 @@ event48_SubID_15_draculasSecret:
                        JML.L draculasSecretStateRoutine     ;83DF3B|5C29C786|86C729;
                                                             ;      |        |      ;
 event48_SubID_0cBGAqiuaduct01:
-                       JML.L UNREACH_84E4BD                 ;83DF3F|5CBDE484|84E4BD;
+                       JML.L CODE_84E4BD                    ;83DF3F|5CBDE484|84E4BD;
                                                             ;      |        |      ;
 event48_SubID_0fBGAqiuaduct02:
                        JML.L CODE_86BFBA                    ;83DF43|5CBABF86|86BFBA;
@@ -12865,7 +12974,7 @@ event48_SubID01_waterCurrent:
                        STA.B r_ev_3e,X                      ;83E146|953E    |00003E;
                        TAY                                  ;83E148|A8      |      ;
                        PHY                                  ;83E149|5A      |      ;
-                       LDA.W PTR16_81E285,Y                 ;83E14A|B985E2  |81E285;
+                       LDA.W watterCurrentPaletteAnim,Y     ;83E14A|B985E2  |81E285;
                        TAY                                  ;83E14D|A8      |      ;
                        LDX.W #$1220                         ;83E14E|A22012  |      ;
                        JSL.L bossGetPaletteY2X              ;83E151|22E99080|8090E9;
@@ -12889,10 +12998,10 @@ event48_SubID01_waterCurrent:
           CODE_83E172:
                        LDA.W r81_player_18_xSpdSub          ;83E172|AD5805  |810558;
                        CLC                                  ;83E175|18      |      ;
-                       ADC.W DATA16_81E275,Y                ;83E176|7975E2  |81E275;
+                       ADC.W waterCurrentForceSub,Y         ;83E176|7975E2  |81E275;
                        STA.W r81_player_18_xSpdSub          ;83E179|8D5805  |810558;
                        LDA.W r81_player_1a_xSpd             ;83E17C|AD5A05  |81055A;
-                       ADC.W DATA16_81E27D,Y                ;83E17F|797DE2  |81E27D;
+                       ADC.W waterCurrentForce,Y            ;83E17F|797DE2  |81E27D;
                        STA.W r81_player_1a_xSpd             ;83E182|8D5A05  |81055A;
                                                             ;      |        |      ;
           CODE_83E185:
@@ -16410,7 +16519,7 @@ backupProgress4EndingSequents:
                        LDA.W endingSceenWindowShrinkPos,Y   ;83FBE3|B95DEB  |81EB5D;
                        AND.W #$00FF                         ;83FBE6|29FF00  |      ;
                        STA.B r_ev_00_sprite                 ;83FBE9|8500    |000000;
-                       LDA.W DATA16_81EB5E,Y                ;83FBEB|B95EEB  |81EB5E;
+                       LDA.W endingSceenWindowShrink,Y      ;83FBEB|B95EEB  |81EB5E;
                        AND.W #$00FF                         ;83FBEE|29FF00  |      ;
                        STA.B r_ev_02_pri_attri              ;83FBF1|8502    |000002;
                        JSL.L CODE_83FD88                    ;83FBF3|2288FD83|83FD88;

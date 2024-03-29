@@ -967,7 +967,7 @@
                        db $FF,$13,$01,$03,$FF               ;B89E18|        |030113;
                                                             ;      |        |      ;
 blockMabData_Stage3Waterfall_BG0:
-                       db $03,$20,$80                       ;B89E1D|        |      ;
+                       dl $802003                           ;B89E1D|        |      ;
                        dw $3000,$3000,$3000,$3000           ;B89E20|        |      ;
                        dw $3000,$3000,$3000,$3000           ;B89E28|        |      ;
                        dw $3000,$3000,$3000,$3000           ;B89E30|        |      ;
@@ -2006,7 +2006,7 @@ blockMabData_Stage3Waterfall_BG0:
                        db $FF,$E9,$04,$03,$FF               ;B8BE78|        |0304E9;
                                                             ;      |        |      ;
 sceneMabDataStage3_Waterfall_00_BG1:
-                       db $03,$20,$80                       ;B8BE7D|        |      ;
+                       dl $802003                           ;B8BE7D|        |      ;
                        dw $002D,$002D,$002D,$002D           ;B8BE80|        |      ;
                        dw $0000,$002D,$802B,$0000           ;B8BE88|        |      ;
                        dw $002D,$002D,$002D,$002D           ;B8BE90|        |      ;
@@ -3045,7 +3045,7 @@ sceneMabDataStage3_Waterfall_00_BG1:
                        db $FF,$EF,$04,$03,$FF               ;B8DED8|        |0304EF;
                                                             ;      |        |      ;
 sceneMabDataStage3_Waterfall_00_BG0:
-                       db $03,$20,$80                       ;B8DEDD|        |      ;
+                       dl $802003                           ;B8DEDD|        |      ;
                        dw $0000,$0000,$0000,$0000           ;B8DEE0|        |      ;
                        dw $0000,$0000,$0000,$0000           ;B8DEE8|        |      ;
                        dw $0000,$0000,$0000,$0000           ;B8DEF0|        |      ;
@@ -4084,7 +4084,7 @@ sceneMabDataStage3_Waterfall_00_BG0:
                        db $FF,$AB,$09,$03,$FF               ;B8FF38|        |0309AB;
                                                             ;      |        |      ;
 levelGFXStage3_aquaduct:
-                       db $03,$40,$80                       ;B8FF3D|        |      ;
+                       dl $804003                           ;B8FF3D|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B8FF40|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B8FF48|        |      ;
                        db $00,$00,$00,$00,$00,$00,$00,$00   ;B8FF50|        |      ;

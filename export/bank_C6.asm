@@ -503,7 +503,7 @@
                        db $FF,$01,$06,$03,$FF               ;C68F98|        |030601;
                                                             ;      |        |      ;
 sceneMabDataStage6_Entrance_BG1:
-                       db $03,$20,$80                       ;C68F9D|        |      ;
+                       dl $802003                           ;C68F9D|        |      ;
                        dw $0005,$000E,$8045,$0002           ;C68FA0|        |      ;
                        dw $800C,$800B,$0044,$801E           ;C68FA8|        |      ;
                        dw $0007,$000F,$8045,$0002           ;C68FB0|        |      ;
@@ -1542,7 +1542,7 @@ sceneMabDataStage6_Entrance_BG1:
                        db $FF,$07,$06,$03,$FF               ;C6AFF8|        |030607;
                                                             ;      |        |      ;
 sceneMabDataStage6_Entrance_BG0:
-                       db $03,$20,$80                       ;C6AFFD|        |      ;
+                       dl $802003                           ;C6AFFD|        |      ;
                        dw $0004,$0001,$0004,$0001           ;C6B000|        |      ;
                        dw $0004,$0001,$0004,$0001           ;C6B008|        |      ;
                        dw $0005,$0001,$0004,$0002           ;C6B010|        |      ;
@@ -2581,7 +2581,7 @@ sceneMabDataStage6_Entrance_BG0:
                        db $FF,$25,$0A,$03,$FF               ;C6D058|        |030A25;
                                                             ;      |        |      ;
 levelGFXStage6_chandelire_8bppLinear:
-                       db $84,$1D,$80                       ;C6D05D|        |      ;
+                       dl $801D84                           ;C6D05D|        |      ;
                        db $20,$20,$20,$20,$20,$20,$20,$20   ;C6D060|        |      ;
                        db $20,$20,$20,$20,$20,$20,$20,$20   ;C6D068|        |      ;
                        db $20,$20,$20,$20,$20,$20,$20,$20   ;C6D070|        |      ;
@@ -3545,7 +3545,7 @@ levelGFXStage6_chandelire_8bppLinear:
                        db $F0,$0F,$03,$FF                   ;C6EE59|        |C6EE6A;
                                                             ;      |        |      ;
 spriteGFX_platformAndStairs:
-                       db $43,$02,$80                       ;C6EE5D|        |      ;
+                       dl $800243                           ;C6EE5D|        |      ;
                        db $30,$1F,$0F,$20,$B0,$B0,$4F,$6F   ;C6EE60|        |      ;
                        db $B1,$89,$1D,$FC,$31,$70,$C0,$6C   ;C6EE68|        |      ;
                        db $1F,$20,$3F,$40,$CF,$00,$90,$00   ;C6EE70|        |      ;
@@ -3632,7 +3632,7 @@ spriteGFX_platformAndStairs:
                        db $FF,$F5,$0F,$03,$FF               ;C6F0F8|        |030FF5;
                                                             ;      |        |      ;
 spriteGFX_crumblingBlockRings02:
-                       db $C3,$03,$80                       ;C6F0FD|        |      ;
+                       dl $8003C3                           ;C6F0FD|        |      ;
                        db $13,$2F,$17,$60,$0E,$C0,$B5,$18   ;C6F100|        |      ;
                        db $C0,$3F,$00,$7B,$40,$3F,$80,$7F   ;C6F108|        |      ;
                        db $30,$00,$40,$08,$80,$31,$01,$42   ;C6F110|        |      ;
@@ -3767,7 +3767,7 @@ spriteGFX_crumblingBlockRings02:
                        db $FF,$91,$01,$03,$FF               ;C6F518|        |030191;
                                                             ;      |        |      ;
 blockMabData_Stage6_Chandelire_BGMode7:
-                       db $03,$20,$80                       ;C6F51D|        |      ;
+                       dl $802003                           ;C6F51D|        |      ;
                        dw $0800,$0800,$0800,$0800           ;C6F520|        |      ;
                        dw $0800,$0800,$0800,$0800           ;C6F528|        |      ;
                        dw $0800,$0800,$0800,$0800           ;C6F530|        |      ;
