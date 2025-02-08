@@ -3,7 +3,7 @@
                                                             ;      |        |      ;
                                                             ;      |        |      ;
                        CLC                                  ;808000|18      |      ; set Native_RESET no emulation and clear decimal flags
-                       XCE                                  ;808001|FB      |      ;
+                       XCE                                  ;808001|FB      |      ; small test
                        SEI                                  ;808002|78      |      ;
                        CLD                                  ;808003|D8      |      ;
                        REP #$30                             ;808004|C230    |      ;
@@ -1467,7 +1467,7 @@ clearPage1C00_endingSequance:
                        REP #$30                             ;808AFB|C230    |      ;
                        PHB                                  ;808AFD|8B      |      ;
                        LDA.W #$0000                         ;808AFE|A90000  |      ;
-                       STA.L $7E8000                        ;808B01|8F00807E|7E8000;
+                       STA.L WRAM_scene_FG_0Fx07            ;808B01|8F00807E|7E8000;
                        LDA.W #$3FFE                         ;808B05|A9FE3F  |      ;
                        LDX.W #$8000                         ;808B08|A20080  |      ;
                        TXY                                  ;808B0B|9B      |      ;
@@ -1477,7 +1477,7 @@ clearPage1C00_endingSequance:
                        REP #$30                             ;808B11|C230    |      ;
                        PHB                                  ;808B13|8B      |      ;
                        LDA.W #$0000                         ;808B14|A90000  |      ;
-                       STA.L $7EE000                        ;808B17|8F00E07E|7EE000;
+                       STA.L WRAM_scene_BG_0Fx07            ;808B17|8F00E07E|7EE000;
                        LDA.W #$1FFE                         ;808B1B|A9FE1F  |      ;
                        LDX.W #$E000                         ;808B1E|A200E0  |      ;
                        TXY                                  ;808B21|9B      |      ;
@@ -1488,7 +1488,7 @@ clearPage1C00_endingSequance:
                        REP #$30                             ;808B28|C230    |      ; unused??
                        PHB                                  ;808B2A|8B      |      ;
                        LDA.W #$0000                         ;808B2B|A90000  |      ;
-                       STA.L $7E8000                        ;808B2E|8F00807E|7E8000;
+                       STA.L WRAM_scene_FG_0Fx07            ;808B2E|8F00807E|7E8000;
                        LDA.W #$1FFE                         ;808B32|A9FE1F  |      ;
                        LDX.W #$8000                         ;808B35|A20080  |      ;
                        TXY                                  ;808B38|9B      |      ;
@@ -1498,7 +1498,7 @@ clearPage1C00_endingSequance:
                        REP #$30                             ;808B3E|C230    |      ;
                        PHB                                  ;808B40|8B      |      ;
                        LDA.W #$0000                         ;808B41|A90000  |      ;
-                       STA.L $7EC000                        ;808B44|8F00C07E|7EC000;
+                       STA.L WRAM_blockMap_BG               ;808B44|8F00C07E|7EC000;
                        LDA.W #$1FFE                         ;808B48|A9FE1F  |      ;
                        LDX.W #$C000                         ;808B4B|A200C0  |      ;
                        TXY                                  ;808B4E|9B      |      ;
@@ -1525,7 +1525,7 @@ clearPage1C00_endingSequance:
                        ADC.L mode7RotationIndex,X           ;808B71|7FDC8281|8182DC;
                        AND.W #$01FF                         ;808B75|29FF01  |      ;
                        TAX                                  ;808B78|AA      |      ;
-                       LDA.L ringSwingRotationTable,X       ;808B79|BFE48281|8182E4;
+                       LDA.L rotationLookUpPlus,X           ;808B79|BFE48281|8182E4;
                        LDX.W $1384,Y                        ;808B7D|BE8413  |811384;
                        JSL.L CODE_808BE5                    ;808B80|22E58B80|808BE5;
                        PLA                                  ;808B84|68      |      ;
@@ -1567,7 +1567,7 @@ mode7ScreenRotationRoutine:
                        ADC.L mode7RotationIndex,X           ;808BB7|7FDC8281|8182DC;
                        AND.W #$01FF                         ;808BBB|29FF01  |      ;
                        TAX                                  ;808BBE|AA      |      ;
-                       LDA.L ringSwingRotationTable,X       ;808BBF|BFE48281|8182E4;
+                       LDA.L rotationLookUpPlus,X           ;808BBF|BFE48281|8182E4;
                        LDX.W $1384,Y                        ;808BC3|BE8413  |811384;
                        JSL.L CODE_808BE5                    ;808BC6|22E58B80|808BE5;
                        PLA                                  ;808BCA|68      |      ;
@@ -3052,7 +3052,7 @@ mainGameStartUp_01_Intro:
                        LDA.B r_ev_32                        ;8095B0|A532    |000032;
                        CMP.W #$0007                         ;8095B2|C90700  |      ;
                        BEQ CODE_8095BB                      ;8095B5|F004    |8095BB;
-                       JSL.L loadEndingSeque00              ;8095B7|2248C680|80C648;
+                       JSL.L HUD_construcMainFrame          ;8095B7|2248C680|80C648;
                                                             ;      |        |      ;
           CODE_8095BB:
                        STZ.W r81_blackFade                  ;8095BB|9C801E  |811E80;
@@ -3384,7 +3384,7 @@ clearAll_initLoadAutoPlay:
                        STA.B r_mainGameState                ;809855|8570    |000070;
                        LDX.W #$B3E2                         ;809857|A2E2B3  |      ; load equipment/candle GFX
                        JSL.L miscGFXloadRoutineXPlus81Bank  ;80985A|22E88082|8280E8;
-                       JSL.L loadEndingSeque00              ;80985E|2248C680|80C648;
+                       JSL.L HUD_construcMainFrame          ;80985E|2248C680|80C648;
                                                             ;      |        |      ;
           CODE_809862:
                        RTL                                  ;809862|6B      |      ;
@@ -5991,7 +5991,7 @@ ringProcessing_27c_leangth:
                        AND.W #$00FF                         ;80AC99|29FF00  |      ;
                        ASL A                                ;80AC9C|0A      |      ;
                        TAX                                  ;80AC9D|AA      |      ;
-                       LDA.L ringSwingRotationTable,X       ;80AC9E|BFE48281|8182E4;
+                       LDA.L rotationLookUpPlus,X           ;80AC9E|BFE48281|8182E4;
                        STA.B r_ev_1c_ySpdSub                ;80ACA2|851C    |00001C;
                        SEP #$20                             ;80ACA4|E220    |      ;
                        SEP #$10                             ;80ACA6|E210    |      ;
@@ -7980,8 +7980,8 @@ subWeaponIDTableRoutine:
                        JMP.W (r_ev_00_sprite)               ;80BA4B|6C0000  |000000;
                                                             ;      |        |      ;
      daggerStateTable:
-                       dw CODE_00BA52                       ;80BA4E|        |00BA52;
-                       dw CODE_00BAA2                       ;80BA50|        |00BAA2;
+                       dw DATA16_81BA52                     ;80BA4E|        |81BA52;
+                       dw PTR16_81BAA2                      ;80BA50|        |81BAA2;
                                                             ;      |        |      ;
         daggerState00:
                        PHX                                  ;80BA52|DA      |      ;
@@ -9593,15 +9593,15 @@ simonSpriteDMAPointerToo1b00:
                        REP #$20                             ;80C645|C220    |      ;
                        RTL                                  ;80C647|6B      |      ;
                                                             ;      |        |      ;
-    loadEndingSeque00:
+HUD_construcMainFrame:
                        REP #$30                             ;80C648|C230    |      ;
                        JSL.L HDMI_windowInit                ;80C64A|220D8580|80850D;
-                       LDX.W #$B4A3                         ;80C64E|A2A3B4  |      ;
+                       LDX.W #$B4A3                         ;80C64E|A2A3B4  |      ; HUD_GFX_srcDesPointer
                        JSL.L miscGFXloadRoutineXPlus81Bank  ;80C651|22E88082|8280E8;
                        JSL.L initBlank_stopHDMI             ;80C655|22258580|808525;
-                       LDX.W #$A3B3                         ;80C659|A2B3A3  |      ; HUD
+                       LDX.W #$A3B3                         ;80C659|A2B3A3  |      ; HUD_Construct01
                        JSL.L PPU_load_HUD                   ;80C65C|22519080|809051;
-                       LDX.W #$A259                         ;80C660|A259A2  |      ; HUD Block 00
+                       LDX.W #$A259                         ;80C660|A259A2  |      ; HUD_Construct02
                        JSL.L PPU_load_HUD                   ;80C663|22519080|809051;
                        LDA.B r_currentLevel                 ;80C667|A586    |000086;
                        ASL A                                ;80C669|0A      |      ;
@@ -9609,7 +9609,7 @@ simonSpriteDMAPointerToo1b00:
                        CLC                                  ;80C66B|18      |      ;
                        ADC.B r_currentLevel                 ;80C66C|6586    |000086;
                        CLC                                  ;80C66E|18      |      ;
-                       ADC.W #$A25F                         ;80C66F|695FA2  |      ;
+                       ADC.W #$A25F                         ;80C66F|695FA2  |      ; levelNumberTableHUD
                        TAX                                  ;80C672|AA      |      ;
                        PHX                                  ;80C673|DA      |      ;
                        LDA.W #$2C00                         ;80C674|A9002C  |      ;
@@ -10169,8 +10169,8 @@ despawnEventOutOfBounderie:
                        LDA.B r_ev_24,X                      ;80CA37|B524    |000024;
                        CMP.W #$0060                         ;80CA39|C96000  |      ;
                        BCC CODE_80CA4D                      ;80CA3C|900F    |80CA4D;
-                       JSL.L CODE_80CAC1                    ;80CA3E|22C1CA80|80CAC1;
-                       JSL.L CODE_80CAE5                    ;80CA42|22E5CA80|80CAE5;
+                       JSL.L chaseSimonXpos                 ;80CA3E|22C1CA80|80CAC1;
+                       JSL.L chaseSimonYpos                 ;80CA42|22E5CA80|80CAE5;
                        STZ.B r_ev_24,X                      ;80CA46|7424    |000024;
                        LDA.W #$0002                         ;80CA48|A90200  |      ;
                        STA.B r_ev_12_state,X                ;80CA4B|9512    |000012;
@@ -10244,7 +10244,7 @@ despawnEventOutOfBounderie:
                        BCS CODE_80CAEC                      ;80CABE|B02C    |80CAEC;
                        RTL                                  ;80CAC0|6B      |      ;
                                                             ;      |        |      ;
-          CODE_80CAC1:
+       chaseSimonXpos:
                        LDA.W r81_player_0a_xPos             ;80CAC1|AD4A05  |81054A;
                        CMP.B r_ev_0a_xPos,X                 ;80CAC4|D50A    |00000A;
                        BCC CODE_80CAD8                      ;80CAC6|9010    |80CAD8;
@@ -10266,7 +10266,7 @@ despawnEventOutOfBounderie:
                        STZ.B r_ev_04_flip_mirror_attri,X    ;80CAE2|7404    |000004;
                        RTL                                  ;80CAE4|6B      |      ;
                                                             ;      |        |      ;
-          CODE_80CAE5:
+       chaseSimonYpos:
                        LDA.W r81_player_0e_yPos             ;80CAE5|AD4E05  |81054E;
                        CMP.B r_ev_0e_yPos,X                 ;80CAE8|D50E    |00000E;
                        BCC CODE_80CAF7                      ;80CAEA|900B    |80CAF7;
@@ -12263,6 +12263,8 @@ calculateSpriteSlotOffset_ID_atRam1a:
                                                             ;      |        |      ;
     getEmptyEventSlot:
                        LDX.W #$0580                         ;80D7F1|A28005  |      ;
+                                                            ;      |        |      ;
+  enterGetEventBasXUp:
                        CLC                                  ;80D7F4|18      |      ;
                                                             ;      |        |      ;
 getEmptyEventSlotCurrentPos:
@@ -14550,7 +14552,7 @@ breakableBlockState04:
     makeBlockCrumbles:
                        CPX.W #$0EC0                         ;80E7D7|E0C00E  |      ;
                        BCS CODE_80E811                      ;80E7DA|B035    |80E811;
-                       JSL.L $80D7F4                        ;80E7DC|22F4D780|80D7F4;
+                       JSL.L enterGetEventBasXUp            ;80E7DC|22F4D780|80D7F4;
                        BCS CODE_80E811                      ;80E7E0|B02F    |80E811;
                        JSL.L clearSelectedEventSlotAll      ;80E7E2|22598C80|808C59;
                        LDA.W #$002F                         ;80E7E6|A92F00  |      ;
@@ -17495,7 +17497,7 @@ newSC4edFixCameraUpdateSkip:
                        AND.W #$FFFC                         ;80FDC0|29FCFF  |      ;
                        CMP.B r_ev_10_ID                     ;80FDC3|C510    |000010;
                        BEQ CODE_80FDD5                      ;80FDC5|F00E    |80FDD5;
-                       JSL.L CODE_80FE6D                    ;80FDC7|226DFE80|80FE6D;
+                       JSL.L sinWaveFly_mask30              ;80FDC7|226DFE80|80FE6D;
                        LDA.W #$B387                         ;80FDCB|A987B3  |      ;
                        STA.B r_ev_00_sprite                 ;80FDCE|8500    |000000;
                        JSL.L spriteAnimationRoutine00       ;80FDD0|2269B082|82B069;
@@ -17589,7 +17591,7 @@ newSC4edFixCameraUpdateSkip:
                        STA.B r_ev_1e_ySpd,X                 ;80FE6A|951E    |00001E;
                        RTL                                  ;80FE6C|6B      |      ;
                                                             ;      |        |      ;
-          CODE_80FE6D:
+    sinWaveFly_mask30:
                        LDA.W r81_ev_0e_yPos,X               ;80FE6D|BD0E00  |81000E;
                        CMP.B r_ev_30_mask,X                 ;80FE70|D530    |000030;
                        BCS CODE_80FEA5                      ;80FE72|B031    |80FEA5;

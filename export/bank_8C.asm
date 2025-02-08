@@ -4300,7 +4300,7 @@ event_ID_61_SwingingSpikePlatform:
                        ASL A                                ;8CFB38|0A      |      ;
                        TAY                                  ;8CFB39|A8      |      ;
                        STY.B r_currentEventROM              ;8CFB3A|84FE    |0000FE;
-                       LDA.W ringSwingRotationTable,Y       ;8CFB3C|B9E482  |8182E4;
+                       LDA.W rotationLookUpPlus,Y           ;8CFB3C|B9E482  |8182E4;
                        STA.B r_ev_00_sprite                 ;8CFB3F|8500    |000000;
                        LDA.W #$0040                         ;8CFB41|A94000  |      ;
                        STA.B r_ev_02_pri_attri              ;8CFB44|8502    |000002;
@@ -4320,7 +4320,7 @@ event_ID_61_SwingingSpikePlatform:
                        SBC.B r_ev_18_xSpdSub                ;8CFB5C|E518    |000018;
                        STA.B r_ev_1a_xSpd,X                 ;8CFB5E|951A    |00001A;
                        LDY.B r_currentEventROM              ;8CFB60|A4FE    |0000FE;
-                       LDA.W rotationValuesBridge,Y         ;8CFB62|B9E483  |8183E4;
+                       LDA.W rotationLookUpMinus,Y          ;8CFB62|B9E483  |8183E4;
                        STA.B r_ev_00_sprite                 ;8CFB65|8500    |000000;
                        JSL.L CODE_808CD8                    ;8CFB67|22D88C80|808CD8;
                        LDX.B r_XregSlotCurrent              ;8CFB6B|A6FC    |0000FC;

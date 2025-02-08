@@ -313,7 +313,7 @@ textPointerStartContinueOptions:
    mode7RotationIndex:
                        db $00,$01,$00,$00,$00,$00,$00,$01   ;8182DC|        |      ;
                                                             ;      |        |      ;
-ringSwingRotationTable:
+   rotationLookUpPlus:
                        dw $0000,$0324,$0648,$096C           ;8182E4|        |      ;
                        dw $0C8F,$0FB2,$12D4,$15F6           ;8182EC|        |      ;
                        dw $1917,$1C37,$1F55,$2273           ;8182F4|        |      ;
@@ -347,8 +347,8 @@ ringSwingRotationTable:
                        dw $FEC3,$FF0D,$FF4D,$FF83           ;8183D4|        |      ;
                        dw $FFAF,$FFD2,$FFEB,$FFFA           ;8183DC|        |      ;
                                                             ;      |        |      ;
- rotationValuesBridge:
-                       dw $FFFF,$FFFA,$FFEB,$FFD2           ;8183E4|        |      ;
+  rotationLookUpMinus:
+                       dw $FFFF,$FFFA,$FFEB,$FFD2           ;8183E4|        |      ; bridge
                        dw $FFB0,$FF83,$FF4D,$FF0D           ;8183EC|        |      ;
                        dw $FEC3,$FE70,$FE12,$FDAB           ;8183F4|        |      ;
                        dw $FD3A,$FCBF,$FC3A,$FBAC           ;8183FC|        |      ;
@@ -707,161 +707,246 @@ levelTileAnimationEnteryEmpty00:
                        dw $0000,$0000                       ;8187BF|        |      ;
                                                             ;      |        |      ;
 levelTileAnimationEntery01:
-                       dw $0001,$8807                       ;8187C3|        |      ;
+                       dw $0001                             ;8187C3|        |      ;
+                       dw tileAnimSrcDest_00                ;8187C5|        |818807;
                                                             ;      |        |      ;
 levelTileAnimationEntery02:
-                       dw $0001,$8849                       ;8187C7|        |      ;
+                       dw $0001                             ;8187C7|        |      ;
+                       dw tileAnimSrcDest_01                ;8187C9|        |818849;
                                                             ;      |        |      ;
 levelTileAnimationEntery03:
-                       dw $0001,$887E                       ;8187CB|        |      ;
+                       dw $0001                             ;8187CB|        |      ;
+                       dw tileAnimSrcDest_02                ;8187CD|        |81887E;
                                                             ;      |        |      ;
 levelTileAnimationEntery04:
-                       dw $0001,$88A2                       ;8187CF|        |      ;
+                       dw $0001                             ;8187CF|        |      ;
+                       dw tileAnimSrcDest_03                ;8187D1|        |8188A2;
                                                             ;      |        |      ;
 levelTileAnimationEntery05:
-                       dw $0001,$88E4                       ;8187D3|        |      ;
+                       dw $0001                             ;8187D3|        |      ;
+                       dw tileAnimSrcDest_04                ;8187D5|        |8188E4;
                                                             ;      |        |      ;
 levelTileAnimationEntery06:
-                       dw $0001,$88F2                       ;8187D7|        |      ;
+                       dw $0001                             ;8187D7|        |      ;
+                       dw tileAnimSrcDest_05                ;8187D9|        |8188F2;
                                                             ;      |        |      ;
 levelTileAnimationEntery07:
-                       dw $0001,$8934                       ;8187DB|        |      ;
+                       dw $0001                             ;8187DB|        |      ;
+                       dw tileAnimSrcDest_06                ;8187DD|        |818934;
                                                             ;      |        |      ;
 levelTileAnimationEntery08:
-                       dw $0001,$8958                       ;8187DF|        |      ;
+                       dw $0001                             ;8187DF|        |      ;
+                       dw tileAnimSrcDest_07                ;8187E1|        |818958;
                                                             ;      |        |      ;
 levelTileAnimationEntery09:
-                       dw $0001,$899A                       ;8187E3|        |      ;
+                       dw $0001                             ;8187E3|        |      ;
+                       dw tileAnimSrcDest_08                ;8187E5|        |81899A;
                                                             ;      |        |      ;
 levelTileAnimationEntery10:
-                       dw $0001,$89DC                       ;8187E7|        |      ;
+                       dw $0001                             ;8187E7|        |      ;
+                       dw tileAnimSrcDest_09                ;8187E9|        |8189DC;
                                                             ;      |        |      ;
 levelTileAnimationEntery11:
-                       dw $0001,$8A11                       ;8187EB|        |      ;
+                       dw $0001                             ;8187EB|        |      ;
+                       dw tileAnimSrcDest_0a                ;8187ED|        |818A11;
                                                             ;      |        |      ;
 levelTileAnimationEntery12:
-                       dw $0001,$8A35                       ;8187EF|        |      ;
+                       dw $0001                             ;8187EF|        |      ;
+                       dw tileAnimSrcDest_0b                ;8187F1|        |818A35;
                                                             ;      |        |      ;
 levelTileAnimationEntery13:
-                       dw $0001,$8A3F                       ;8187F3|        |      ;
+                       dw $0001                             ;8187F3|        |      ;
+                       dw tileAnimSrcDest_0c                ;8187F5|        |818A3F;
                                                             ;      |        |      ;
 levelTileAnimationEntery14:
-                       dw $0001,$8A7D                       ;8187F7|        |      ;
+                       dw $0001                             ;8187F7|        |      ;
+                       dw tileAnimSrcDest_0d                ;8187F9|        |818A7D;
                                                             ;      |        |      ;
 levelTileAnimationEntery15:
-                       dw $0001,$8AA1                       ;8187FB|        |      ;
+                       dw $0001                             ;8187FB|        |      ;
+                       dw tileAnimSrcDest_0e                ;8187FD|        |818AA1;
                                                             ;      |        |      ;
 levelTileAnimationEntery16:
-                       dw $0001,$8AC5                       ;8187FF|        |      ;
+                       dw $0001                             ;8187FF|        |      ;
+                       dw tileAnimSrcDest_0f                ;818801|        |818AC5;
                                                             ;      |        |      ;
 levelTileAnimationEntery17:
-                       dw $0001,$8AF8,$0006,$8000           ;818803|        |      ;
-                       dw DATA16_818815                     ;81880B|        |818815;
-                       dw DATA16_818822                     ;81880D|        |818822;
-                       dw DATA16_81882F                     ;81880F|        |81882F;
-                       dw DATA16_81883C                     ;818811|        |81883C;
+                       dw $0001                             ;818803|        |      ;
+                       dw tileAnimSrcDest_10                ;818805|        |818AF8;
+                                                            ;      |        |      ;
+   tileAnimSrcDest_00:
+                       dw $0006,$8000                       ;818807|        |      ;
+                       dw DATA8_818815                      ;81880B|        |818815;
+                       dw DATA8_818822                      ;81880D|        |818822;
+                       dw DATA8_81882F                      ;81880F|        |81882F;
+                       dw DATA8_81883C                      ;818811|        |81883C;
                        dw $0000                             ;818813|        |      ;
                                                             ;      |        |      ;
-        DATA16_818815:
-                       dw $0080,$1801,$26A0,$E000           ;818815|        |      ;
-                       dw $807F,$0000,$8000,$0100           ;81881D|        |      ;
-                       dw $A018,$8026,$7FE0,$0080           ;818825|        |      ;
-                       dw $0000                             ;81882D|        |      ;
+         DATA8_818815:
+                       db $80,$00,$01,$18,$A0,$26           ;818815|        |      ;
+                       dl $7FE000                           ;81881B|        |7FE000;
+                       db $80,$00,$00,$00                   ;81881E|        |      ;
                                                             ;      |        |      ;
-        DATA16_81882F:
-                       dw $0080,$1801,$26A0,$E100           ;81882F|        |      ;
-                       dw $807F,$0000,$8000,$0100           ;818837|        |      ;
-                       dw $A018,$8026,$7FE1,$0080           ;81883F|        |      ;
-                       dw $0000,$0006,$8000,$8857           ;818847|        |      ;
-                       dw $8864,$8871,$8864,$0000           ;81884F|        |      ;
-                       dw $0080,$1801,$2370,$ED00           ;818857|        |      ;
-                       dw $C07F,$0000,$8000,$0100           ;81885F|        |      ;
-                       dw $7018,$C023,$7FED,$00C0           ;818867|        |      ;
-                       dw $0000,$0080,$1801,$2370           ;81886F|        |      ;
-                       dw $EE80,$C07F,$0000,$1800           ;818877|        |      ;
+         DATA8_818822:
+                       db $80,$00,$01,$18,$A0,$26           ;818822|        |      ;
+                       dl $7FE080                           ;818828|        |7FE080;
+                       db $80,$00,$00,$00                   ;81882B|        |      ;
+                                                            ;      |        |      ;
+         DATA8_81882F:
+                       db $80,$00,$01,$18,$A0,$26           ;81882F|        |      ;
+                       dl $7FE100                           ;818835|        |7FE100;
+                       db $80,$00,$00,$00                   ;818838|        |      ;
+                                                            ;      |        |      ;
+         DATA8_81883C:
+                       db $80,$00,$01,$18,$A0,$26           ;81883C|        |      ;
+                       dl $7FE180                           ;818842|        |7FE180;
+                       db $80,$00,$00,$00                   ;818845|        |      ;
+                                                            ;      |        |      ;
+   tileAnimSrcDest_01:
+                       db $06                               ;818849|        |      ; speed (wait frame)
+                       dw $0000,$5780,$6488,$7188           ;81884A|        |      ;
+                       dw $6488,$0088,$8000,$0100           ;818852|        |      ;
+                       dw $7018,$0023,$7FED,$00C0           ;81885A|        |      ;
+                       dw $0000,$0080,$1801,$2370           ;818862|        |      ;
+                       dw $EDC0,$C07F,$0000,$8000           ;81886A|        |      ;
+                       dw $0100,$7018,$8023,$7FEE           ;818872|        |      ;
+                       dw $00C0,$0000                       ;81887A|        |      ;
+                                                            ;      |        |      ;
+   tileAnimSrcDest_02:
+                       db $18                               ;81887E|        |      ;
                        dw $0000,$8880,$9588,$0088           ;81887F|        |      ;
                        dw $8000,$0100,$E018,$0022           ;818887|        |      ;
                        dw $7FE2,$0040,$0000,$0080           ;81888F|        |      ;
-                       dw $1801,$22E0,$E240,$407F           ;818897|        |      ;
-                       dw $0000,$0C00,$0000,$B080           ;81889F|        |      ;
-                       dw $BD88,$CA88,$D788,$0088           ;8188A7|        |      ;
-                       dw $8000,$0100,$B018,$8027           ;8188AF|        |      ;
-                       dw $7FE2,$0080,$0000,$0080           ;8188B7|        |      ;
-                       dw $1801,$27B0,$E300,$807F           ;8188BF|        |      ;
-                       dw $0000,$8000,$0100,$B018           ;8188C7|        |      ;
-                       dw $8027,$7FE3,$0080,$0000           ;8188CF|        |      ;
-                       dw $0080,$1801,$27B0,$E400           ;8188D7|        |      ;
-                       dw $807F,$0000,$0400,$0000           ;8188DF|        |      ;
-                       dw $0080,$0D89,$1A89,$2789           ;8188E7|        |      ;
-                       dw $0089,$0400,$0000,$2780           ;8188EF|        |      ;
-                       dw $1A89,$0D89,$0089,$0089           ;8188F7|        |      ;
-                       dw $8000,$0100,$0018,$8029           ;8188FF|        |      ;
-                       dw $7FE4,$0080,$0000,$0080           ;818907|        |      ;
-                       dw $1801,$2900,$E500,$807F           ;81890F|        |      ;
-                       dw $0000,$8000,$0100,$0018           ;818917|        |      ;
-                       dw $8029,$7FE5,$0080,$0000           ;81891F|        |      ;
-                       dw $0080,$1801,$2900,$E600           ;818927|        |      ;
-                       dw $807F,$0000,$0400,$0000           ;81892F|        |      ;
-                       dw $3E80,$4B89,$0089,$8000           ;818937|        |      ;
-                       dw $0100,$3018,$8024,$7FE6           ;81893F|        |      ;
-                       dw $0140,$0000,$0080,$1801           ;818947|        |      ;
-                       dw $2430,$E7C0,$407F,$0001           ;81894F|        |      ;
-                       dw $0800,$0000,$6680,$7389           ;818957|        |      ;
-                       dw $8089,$8D89,$0089,$8000           ;81895F|        |      ;
-                       dw $0100,$E018,$2026,$7FE9           ;818967|        |      ;
-                       dw $0020,$0000,$0080,$1801           ;81896F|        |      ;
-                       dw $26E0,$E940,$207F,$0000           ;818977|        |      ;
-                       dw $8000,$0100,$E018,$0026           ;81897F|        |      ;
-                       dw $7FE9,$0020,$0000,$0080           ;818987|        |      ;
-                       dw $1801,$26E0,$E960,$207F           ;81898F|        |      ;
-                       dw $0000,$0800,$0000,$A880           ;818997|        |      ;
-                       dw $B589,$C289,$CF89,$0089           ;81899F|        |      ;
-                       dw $8000,$0100,$F018,$0026           ;8189A7|        |      ;
-                       dw $7FE9,$0020,$0000,$0080           ;8189AF|        |      ;
-                       dw $1801,$26F0,$E960,$207F           ;8189B7|        |      ;
-                       dw $0000,$8000,$0100,$F018           ;8189BF|        |      ;
-                       dw $2026,$7FE9,$0020,$0000           ;8189C7|        |      ;
-                       dw $0080,$1801,$26F0,$E940           ;8189CF|        |      ;
-                       dw $207F,$0000,$0500,$0000           ;8189D7|        |      ;
-                       dw $EA80,$F789,$0489,$F78A           ;8189DF|        |      ;
-                       dw $0089,$8000,$0100,$7018           ;8189E7|        |      ;
-                       dw $8023,$7FE9,$0080,$0000           ;8189EF|        |      ;
-                       dw $0080,$1801,$2370,$EA00           ;8189F7|        |      ;
-                       dw $807F,$0000,$8000,$0100           ;8189FF|        |      ;
-                       dw $7018,$8023,$7FEA,$0080           ;818A07|        |      ;
-                       dw $0000,$000A,$8000,$8A1B           ;818A0F|        |      ;
-                       dw $8A28,$0000,$0080,$1801           ;818A17|        |      ;
-                       dw $29D0,$EB00,$007F,$0001           ;818A1F|        |      ;
-                       dw $8000,$0100,$D018,$0029           ;818A27|        |      ;
-                       dw $7FEC,$0100,$0000,$0005           ;818A2F|        |      ;
-                       dw $8000,$8A49,$8A56,$0000           ;818A37|        |      ;
-                       dw $0005,$8000,$8A63,$8A70           ;818A3F|        |      ;
-                       dw $0000,$0080,$1801,$2E70           ;818A47|        |      ;
-                       dw $EF40,$C07F,$0000,$8000           ;818A4F|        |      ;
-                       dw $0100,$7018,$002E,$7FF0           ;818A57|        |      ;
-                       dw $00C0,$0000,$0080,$1801           ;818A5F|        |      ;
-                       dw $2FC0,$F0C0,$407F,$0000           ;818A67|        |      ;
-                       dw $8000,$0100,$C018,$002F           ;818A6F|        |      ;
-                       dw $7FF1,$0040,$0000,$0005           ;818A77|        |      ;
-                       dw $8000,$8A87,$8A94,$0000           ;818A7F|        |      ;
-                       dw $0080,$1801,$3FC0,$F0C0           ;818A87|        |      ;
-                       dw $407F,$0000,$8000,$0100           ;818A8F|        |      ;
-                       dw $C018,$003F,$7FF1,$0040           ;818A97|        |      ;
-                       dw $0000,$0005,$8000,$8AAB           ;818A9F|        |      ;
-                       dw $8AB8,$0000,$0080,$1801           ;818AA7|        |      ;
-                       dw $2260,$F140,$807F,$0000           ;818AAF|        |      ;
-                       dw $8000,$0100,$6018,$C022           ;818AB7|        |      ;
-                       dw $7FF1,$0080,$0000,$0004           ;818ABF|        |      ;
-                       dw $8000,$8AD1,$8ADE,$8AEB           ;818AC7|        |      ;
-                       dw $0000,$0080,$1801,$2BA0           ;818ACF|        |      ;
-                       dw $F240,$407F,$0000,$8000           ;818AD7|        |      ;
-                       dw $0100,$A018,$802B,$7FF2           ;818ADF|        |      ;
-                       dw $0040,$0000,$0080,$1801           ;818AE7|        |      ;
-                       dw $2BA0,$F2C0,$407F,$0000           ;818AEF|        |      ;
-                       dw $0500,$0000,$0480,$118B           ;818AF7|        |      ;
-                       dw $1E8B,$008B,$8000,$0000           ;818AFF|        |      ;
-                       dw $0019,$0001,$7FF8,$0100           ;818B07|        |      ;
-                       dw $0000,$0080                       ;818B0F|        |      ;
+                       db $01                               ;818897|        |      ;
+                       dw $E018,$4022,$7FE2,$0040           ;818898|        |      ;
+                       dw $0000                             ;8188A0|        |      ;
+                                                            ;      |        |      ;
+   tileAnimSrcDest_03:
+                       db $0C                               ;8188A2|        |      ;
+                       dw $0000,$B080,$BD88,$CA88           ;8188A3|        |      ;
+                       dw $D788,$0088,$8000,$0100           ;8188AB|        |      ;
+                       dw $B018,$8027,$7FE2,$0080           ;8188B3|        |      ;
+                       dw $0000,$0080                       ;8188BB|        |      ;
+                       db $01                               ;8188BF|        |      ;
+                       dw $B018,$0027,$7FE3,$0080           ;8188C0|        |      ;
+                       dw $0000,$0080                       ;8188C8|        |      ;
+                       db $01                               ;8188CC|        |      ;
+                       dw $B018,$8027,$7FE3,$0080           ;8188CD|        |      ;
+                       dw $0000,$0080                       ;8188D5|        |      ;
+                       db $01                               ;8188D9|        |      ;
+                       dw $B018,$0027,$7FE4,$0080           ;8188DA|        |      ;
+                       dw $0000                             ;8188E2|        |      ;
+                                                            ;      |        |      ;
+   tileAnimSrcDest_04:
+                       dw $0004,$8000,$8900,$890D           ;8188E4|        |      ;
+                       dw $891A,$8927,$0000                 ;8188EC|        |      ;
+                                                            ;      |        |      ;
+   tileAnimSrcDest_05:
+                       db $04                               ;8188F2|        |      ;
+                       dw $0000,$2780,$1A89,$0D89           ;8188F3|        |      ;
+                       dw $0089,$0089,$8000,$0100           ;8188FB|        |      ;
+                       dw $0018,$8029,$7FE4,$0080           ;818903|        |      ;
+                       dw $0000,$0080                       ;81890B|        |      ;
+                       db $01                               ;81890F|        |      ;
+                       dw $0018,$0029,$7FE5,$0080           ;818910|        |      ;
+                       dw $0000,$0080                       ;818918|        |      ;
+                       db $01                               ;81891C|        |      ;
+                       dw $0018,$8029,$7FE5,$0080           ;81891D|        |      ;
+                       dw $0000,$0080                       ;818925|        |      ;
+                       db $01                               ;818929|        |      ;
+                       dw $0018,$0029,$7FE6,$0080           ;81892A|        |      ;
+                       dw $0000                             ;818932|        |      ;
+                                                            ;      |        |      ;
+   tileAnimSrcDest_06:
+                       db $04                               ;818934|        |      ;
+                       dw $0000,$3E80,$4B89,$0089           ;818935|        |      ;
+                       dw $8000,$0100,$3018,$8024           ;81893D|        |      ;
+                       dw $7FE6,$0140,$0000,$0080           ;818945|        |      ;
+                       dw $1801,$2430,$E7C0,$407F           ;81894D|        |      ;
+                       db $01                               ;818955|        |      ;
+                       dw $0000                             ;818956|        |      ;
+                                                            ;      |        |      ;
+   tileAnimSrcDest_07:
+                       db $08,$00,$00,$80,$66,$89,$73,$89   ;818958|        |      ;
+                       db $80,$89,$8D,$89,$00,$00,$80,$00   ;818960|        |      ;
+                       db $01,$18,$E0,$26,$20,$E9,$7F,$20   ;818968|        |      ;
+                       db $00,$00,$00,$80,$00,$01,$18,$E0   ;818970|        |      ;
+                       db $26,$40,$E9,$7F,$20,$00,$00,$00   ;818978|        |      ;
+                       db $80,$00,$01,$18,$E0,$26,$00,$E9   ;818980|        |      ;
+                       db $7F,$20,$00,$00,$00,$80,$00,$01   ;818988|        |      ;
+                       db $18,$E0,$26,$60,$E9,$7F,$20,$00   ;818990|        |      ;
+                       db $00,$00                           ;818998|        |      ;
+                                                            ;      |        |      ;
+   tileAnimSrcDest_08:
+                       db $08,$00,$00,$80,$A8,$89,$B5,$89   ;81899A|        |      ;
+                       db $C2,$89,$CF,$89,$00,$00,$80,$00   ;8189A2|        |      ;
+                       db $01,$18,$F0,$26,$00,$E9,$7F,$20   ;8189AA|        |      ;
+                       db $00,$00,$00,$80,$00,$01,$18,$F0   ;8189B2|        |      ;
+                       db $26,$60,$E9,$7F,$20,$00,$00,$00   ;8189BA|        |      ;
+                       db $80,$00,$01,$18,$F0,$26,$20,$E9   ;8189C2|        |      ;
+                       db $7F,$20,$00,$00,$00,$80,$00,$01   ;8189CA|        |      ;
+                       db $18,$F0,$26,$40,$E9,$7F,$20,$00   ;8189D2|        |      ;
+                       db $00,$00                           ;8189DA|        |      ;
+                                                            ;      |        |      ;
+   tileAnimSrcDest_09:
+                       db $05,$00,$00,$80,$EA,$89,$F7,$89   ;8189DC|        |      ;
+                       db $04,$8A,$F7,$89,$00,$00,$80,$00   ;8189E4|        |      ;
+                       db $01,$18,$70,$23,$80,$E9,$7F,$80   ;8189EC|        |      ;
+                       db $00,$00,$00,$80,$00,$01,$18,$70   ;8189F4|        |      ;
+                       db $23,$00,$EA,$7F,$80,$00,$00,$00   ;8189FC|        |      ;
+                       db $80,$00,$01,$18,$70,$23,$80,$EA   ;818A04|        |      ;
+                       db $7F,$80,$00,$00,$00               ;818A0C|        |      ;
+                                                            ;      |        |      ;
+   tileAnimSrcDest_0a:
+                       db $0A,$00,$00,$80,$1B,$8A,$28,$8A   ;818A11|        |      ;
+                       db $00,$00,$80,$00,$01,$18,$D0,$29   ;818A19|        |      ;
+                       db $00,$EB,$7F,$00,$01,$00,$00,$80   ;818A21|        |      ;
+                       db $00,$01,$18,$D0,$29,$00,$EC,$7F   ;818A29|        |      ;
+                       db $00,$01,$00,$00                   ;818A31|        |      ;
+                                                            ;      |        |      ;
+   tileAnimSrcDest_0b:
+                       db $05,$00,$00,$80,$49,$8A,$56,$8A   ;818A35|        |      ;
+                       db $00,$00                           ;818A3D|        |      ;
+                                                            ;      |        |      ;
+   tileAnimSrcDest_0c:
+                       db $05,$00,$00,$80,$63,$8A,$70,$8A   ;818A3F|        |      ;
+                       db $00,$00,$80,$00,$01,$18,$70,$2E   ;818A47|        |      ;
+                       db $40,$EF,$7F,$C0,$00,$00,$00,$80   ;818A4F|        |      ;
+                       db $00,$01,$18,$70,$2E,$00,$F0,$7F   ;818A57|        |      ;
+                       db $C0,$00,$00,$00,$80,$00,$01,$18   ;818A5F|        |      ;
+                       db $C0,$2F,$C0,$F0,$7F,$40,$00,$00   ;818A67|        |      ;
+                       db $00,$80,$00,$01,$18,$C0,$2F,$00   ;818A6F|        |      ;
+                       db $F1,$7F,$40,$00,$00,$00           ;818A77|        |      ;
+                                                            ;      |        |      ;
+   tileAnimSrcDest_0d:
+                       db $05,$00,$00,$80,$87,$8A,$94,$8A   ;818A7D|        |      ;
+                       db $00,$00,$80,$00,$01,$18,$C0,$3F   ;818A85|        |      ;
+                       db $C0,$F0,$7F,$40,$00,$00,$00,$80   ;818A8D|        |      ;
+                       db $00,$01,$18,$C0,$3F,$00,$F1,$7F   ;818A95|        |      ;
+                       db $40,$00,$00,$00                   ;818A9D|        |      ;
+                                                            ;      |        |      ;
+   tileAnimSrcDest_0e:
+                       db $05,$00,$00,$80,$AB,$8A,$B8,$8A   ;818AA1|        |      ;
+                       db $00,$00,$80,$00,$01,$18,$60,$22   ;818AA9|        |      ;
+                       db $40,$F1,$7F,$80,$00,$00,$00,$80   ;818AB1|        |      ;
+                       db $00,$01,$18,$60,$22,$C0,$F1,$7F   ;818AB9|        |      ;
+                       db $80,$00,$00,$00                   ;818AC1|        |      ;
+                                                            ;      |        |      ;
+   tileAnimSrcDest_0f:
+                       db $04,$00,$00,$80,$D1,$8A,$DE,$8A   ;818AC5|        |      ;
+                       db $EB,$8A,$00,$00,$80,$00,$01,$18   ;818ACD|        |      ;
+                       db $A0,$2B,$40,$F2,$7F,$40,$00,$00   ;818AD5|        |      ;
+                       db $00,$80,$00,$01,$18,$A0,$2B,$80   ;818ADD|        |      ;
+                       db $F2,$7F,$40,$00,$00,$00,$80,$00   ;818AE5|        |      ;
+                       db $01,$18,$A0,$2B,$C0,$F2,$7F,$40   ;818AED|        |      ;
+                       db $00,$00,$00                       ;818AF5|        |      ;
+                                                            ;      |        |      ;
+   tileAnimSrcDest_10:
+                       db $05                               ;818AF8|        |      ;
+                       dw $0000,$0480,$118B,$1E8B           ;818AF9|        |      ;
+                       dw $008B,$8000,$0000,$0019           ;818B01|        |      ;
+                       dw $0001,$7FF8,$0100,$0000           ;818B09|        |      ;
+                       dw $0080                             ;818B11|        |      ;
                                                             ;      |        |      ;
 demoLevelStuffTitleScreen00:
                        dw $1900,$0100,$F900,$007F           ;818B13|        |      ;
@@ -2043,7 +2128,7 @@ subWeaponUpgradHudSpritePPU:
 multiShotUpgradHudSpritePPU:
                        dw $3248,$3264,$3666                 ;81A253|        |      ;
                                                             ;      |        |      ;
-      HUD_Construct00:
+      HUD_Construct02:
                        dw $583B                             ;81A259|        |      ;
                        db $FF,$3E,$58,$FF                   ;81A25B|        |      ; probably functions as text
                                                             ;      |        |      ;
@@ -2134,7 +2219,8 @@ pointerPPU_score_00_border00:
                        db $2B                               ;81A414|        |      ; linebreak 2x followed by pointer ??
                                                             ;      |        |      ;
      pointerPPU_timer:
-                       db $FD,$20,$1E,$13,$17,$0F,$FF       ;81A415|        |      ;
+                       dw $20FD                             ;81A415|        |      ;
+                       db $1E,$13,$17,$0F,$FF               ;81A417|        |      ;
                                                             ;      |        |      ;
 mainEventIDPointerTable:
                        dl event_ID_00                       ;81A41C|        |80C9FF; 00
@@ -2160,7 +2246,7 @@ mainEventIDPointerTable:
                        dl event_ID_14_PillarExit            ;81A458|        |8CFF6E; 14
                        dl event_ID_15_Exit                  ;81A45B|        |82BA71; 15
                        dl event_ID_16_Crusher               ;81A45E|        |82BB6C; 16
-                       dl event_ID_17_MovingPlatform        ;81A461|        |82C2B0; 17 Floating Platform sub0:l-r / sub1:5b u-d / sub2:8b u-d fast / sub3: 5b u-d / sub4: 7b u-d slow / sub5: triangle / sub6: Z
+                       dl event_ID_17_MovingPlatform        ;81A461|        |82C2B0; Floating Platform sub0:l-r / sub1:5b u-d / sub2:8b u-d fast / sub3: 5b u-d / sub4: 7b u-d slow / sub5: triangle / sub6: Z / sub7: r-l
                        dl event_ID_CollectableItems         ;81A464|        |80D24C; 18 smallHeart
                        dl event_ID_CollectableItems         ;81A467|        |80D24C; 19 bigHeart
                        dl event_ID_CollectableItems         ;81A46A|        |80D24C; 1a dagger
@@ -2194,7 +2280,7 @@ mainEventIDPointerTable:
                        dl event_ID_36_SkellyHighFive        ;81A4BE|        |82B981;
                        dl event_ID_37_CrubelingBlock        ;81A4C1|        |82905D;
                        dl event_ID_38_AutoSpawner           ;81A4C4|        |82C3F1;
-                       dl event_ID_39_bridgeRobe            ;81A4C7|        |82915B;
+                       dl event_ID_39_fallingPillar         ;81A4C7|        |82915B;
                        dl event_ID_3a_fallingWoodBridge     ;81A4CA|        |828CBE;
                        dl event_ID_3b_turningPlatform       ;81A4CD|        |828A9E;
                        dl event_ID_3c_leaveMan              ;81A4D0|        |80FA1B;
@@ -2222,7 +2308,7 @@ mainEventIDPointerTable:
                        dl event_ID_52_axeKnight             ;81A512|        |82CF58;
                        dl event_ID_53_axeProjectile         ;81A515|        |82D1DA;
                        dl event_ID_54_zombieGhost           ;81A518|        |82D51C;
-                       dl event_ID_55_invisablePlatform     ;81A51B|        |82963B;
+                       dl event_ID_55_bridgeRobe            ;81A51B|        |82963B;
                        dl event_ID_56_whipingSkelleton      ;81A51E|        |80F326;
                        dl event_ID_57_hunchBack             ;81A521|        |82977D;
                        dl event_ID_58_harpie                ;81A524|        |8298B2;
@@ -2350,22 +2436,22 @@ collectableItemDropSpritePointerTable:
                        dw sprAssFirstPageID_26_candleLit    ;81A654|        |8480D2;
                        dw sprAssFirstPageID_27_candleLo     ;81A656|        |8480D7;
                        dw sprAssFirstPageID_39              ;81A658|        |84816D;
-                       dw sprAssFirstPageID_3a              ;81A65A|        |848172;
-                       dw sprAssFirstPageID_32              ;81A65C|        |84814A;
-                       dw sprAssFirstPageID_33              ;81A65E|        |84814F;
-                       dw sprAssFirstPageID_34              ;81A660|        |848154;
-                       dw sprAssFirstPageID_36              ;81A662|        |84815E;
-                       dw sprAssFirstPageID_38              ;81A664|        |848168;
-                       dw sprAssFirstPageID_3b              ;81A666|        |848177;
-                       dw sprAssFirstPageID_3c              ;81A668|        |84817C;
-                       dw sprAssFirstPageID_3d              ;81A66A|        |848181;
-                       dw sprAssFirstPageID_3e              ;81A66C|        |848186;
-                       dw sprAssFirstPageID_3f              ;81A66E|        |84818B;
-                       dw sprAssFirstPageID_40              ;81A670|        |848190;
+                       dw sprAssFirst_rossery_3a            ;81A65A|        |848172;
+                       dw sprAss_dagger_ID_32               ;81A65C|        |84814A;
+                       dw sprAss_axe_ID_33                  ;81A65E|        |84814F;
+                       dw sprAss_holyWater_ID_34            ;81A660|        |848154;
+                       dw sprAss_cross_ID_36                ;81A662|        |84815E;
+                       dw sprAss_bigHeart_ID_38             ;81A664|        |848168;
+                       dw sprAss_rosary_ID_3b               ;81A666|        |848177;
+                       dw sprAss_whipUpgrade_ID_3c          ;81A668|        |84817C;
+                       dw whipUpgradeID_3d                  ;81A66A|        |848181;
+                       dw sprAss_monyBag_ID_3e              ;81A66C|        |848186;
+                       dw sprAss_doubleShot_3f              ;81A66E|        |84818B;
+                       dw sprAss_trippleShot_40             ;81A670|        |848190;
                        dw sprAssFirstPageID_41              ;81A672|        |848195;
                        dw sprAssFirstPageID_42              ;81A674|        |84819A;
                        dw sprAssFirstPageID_43              ;81A676|        |84819F;
-                       dw sprAssFirstPageID_45              ;81A678|        |8481A9;
+                       dw sprAss_oneUp_45                   ;81A678|        |8481A9;
                        dw $0004,$0008,$0008,$0008           ;81A67A|        |      ;
                        dw $0008,$0008,$000A,$0008           ;81A682|        |      ;
                        dw $0008,$000C,$0008,$0008           ;81A68A|        |      ;
@@ -3042,7 +3128,7 @@ some0bGFXsrcDesPointer:
                        dl nameScreenBigFontsGFXdata         ;81B49E|        |F5AADD;
                        dw $FFFF                             ;81B4A1|        |      ;
                                                             ;      |        |      ;
-some0cGFXsrcDesPointer:
+HUD_GFX_srcDesPointer:
                        dw $0000,$5000                       ;81B4A3|        |      ;
                        dl fontGFXdata2bpp                   ;81B4A7|        |F3C6FD;
                        dw $FFFF                             ;81B4AA|        |      ;
@@ -3590,6 +3676,8 @@ frankensteintSrcDestPointer:
 gaiboneSrcDestPointer:
                        dw $0100,$6A00                       ;81BA4B|        |      ;
                        dl gaiboneGFXdataPart2               ;81BA4F|        |EEFD5D;
+                                                            ;      |        |      ;
+        DATA16_81BA52:
                        dw $7000                             ;81BA52|        |      ;
                        dl gaiboneGFXdataPart1               ;81BA54|        |EF89BD;
                        dw $FFFF                             ;81BA57|        |      ;
@@ -5415,7 +5503,6 @@ somePaletteLoadMayBeBoss06:
                        dw $0000,$0200,$E00C,$0022           ;81D074|        |      ;
                        dw $0223                             ;81D07C|        |      ;
                                                             ;      |        |      ;
-     pwSpritePlacment:
                        db $03,$01,$00,$03,$02,$02,$01,$03   ;81D07E|        |      ;
                        db $01,$00,$00,$01,$02,$03,$00,$01   ;81D086|        |      ;
                        db $01,$02,$00,$03,$03,$00,$02,$00   ;81D08E|        |      ;
@@ -5429,9 +5516,9 @@ somePaletteLoadMayBeBoss06:
                                                             ;      |        |      ;
          DATA8_81D0BD:
                        db $00,$00                           ;81D0BD|        |      ;
-                       dw sprAssFirstPageID_33              ;81D0BF|        |84814F;
-                       dw sprAssFirstPageID_34              ;81D0C1|        |848154;
-                       dw sprAssFirstPageID_3a              ;81D0C3|        |848172;
+                       dw sprAss_axe_ID_33                  ;81D0BF|        |84814F;
+                       dw sprAss_holyWater_ID_34            ;81D0C1|        |848154;
+                       dw sprAssFirst_rossery_3a            ;81D0C3|        |848172;
                                                             ;      |        |      ;
 letterDataAlphabetIndexNameScreen:
                        db $0B,$0C,$0D,$0E,$0F,$10,$11,$12   ;81D0C5|        |      ;
@@ -8189,7 +8276,7 @@ SpriteAnimationTable131:
                        dw $0024,$FFF2,$0020,$FFE0           ;81EF97|        |      ;
                        dw $0010                             ;81EF9F|        |      ;
                                                             ;      |        |      ;
-        DATA16_81EFA1:
+event_68_blocksUpdateID:
                        dw $4948,$4D4C,$4040,$4342           ;81EFA1|        |      ;
                        dw $4042,$4340,$4244,$4543           ;81EFA9|        |      ;
                        dw $4144,$4541,$424A,$4B43           ;81EFB1|        |      ;
@@ -8199,14 +8286,17 @@ SpriteAnimationTable131:
                        dw $3300,$4140,$4342,$4544           ;81EFBD|        |      ;
                        dw $4948,$4B4A,$4D4C                 ;81EFC5|        |      ;
                                                             ;      |        |      ;
-        DATA16_81EFCB:
-                       dw $1088,$1078,$10C8,$10F8           ;81EFCB|        |      ;
-                       dw $10C8,$10F8,$60F8,$1078           ;81EFD3|        |      ;
-                       dw $1088,$60F8,$1078,$1088           ;81EFDB|        |      ;
-                       dw $10C8,$60F8,$1088,$1078           ;81EFE3|        |      ;
-                       dw $10C8,$60F8,$1078,$1088           ;81EFEB|        |      ;
-                       dw $60F8,$1078,$1088,$10F8           ;81EFF3|        |      ;
-                       dw $FFFF                             ;81EFFB|        |      ;
+event_68_blocks_spawnXpos:
+                       db $88                               ;81EFCB|        |      ;
+                                                            ;      |        |      ;
+event_68_blocks_spawnSpeed:
+                       db $10                               ;81EFCC|        |      ;
+                       dw $1078,$10C8,$10F8,$10C8           ;81EFCD|        |      ;
+                       dw $10F8,$60F8,$1078,$1088           ;81EFD5|        |      ;
+                       dw $60F8,$1078,$1088,$10C8           ;81EFDD|        |      ;
+                       dw $60F8,$1088,$1078,$10C8           ;81EFE5|        |      ;
+                       dw $60F8,$1078,$1088,$60F8           ;81EFED|        |      ;
+                       dw $1078,$1088,$10F8,$FFFF           ;81EFF5|        |      ;
                                                             ;      |        |      ;
         DATA16_81EFFD:
                        dw $C030                             ;81EFFD|        |      ;
@@ -8214,7 +8304,7 @@ SpriteAnimationTable131:
         DATA16_81EFFF:
                        dw $3FCF                             ;81EFFF|        |      ;
                                                             ;      |        |      ;
-        DATA16_81F001:
+  ectoplasmHDMA_table:
                        dw $0000,$0001,$0002,$0003           ;81F001|        |      ;
                        dw $0003,$0004,$0004,$0004           ;81F009|        |      ;
                        dw $0004,$0003,$0003,$0002           ;81F011|        |      ;
@@ -8925,9 +9015,9 @@ paletteTilesStagel07_liberarry:
 paletteTilesStagel07_graqulsQuater:
                        db $01                               ;81F796|        |      ;
                        dw $0000                             ;81F797|        |      ;
-                       dw lvlPAL_Stage8_dungeon1            ;81F799|        |86F06A;
+                       dw lvlPAL_Stage7_grakulsQuater       ;81F799|        |86F06A;
                        dw $2220                             ;81F79B|        |      ;
-                       dw spritePAL_Stage8_dungeon2         ;81F79D|        |86F10C;
+                       dw spritePAL_Stage7_grakulsQuaterSprite;81F79D|        |86F10C;
                        dw $23E0,$0000                       ;81F79F|        |      ;
                                                             ;      |        |      ;
 paletteTilesStagel08_dungeon:

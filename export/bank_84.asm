@@ -209,31 +209,31 @@ sprAssFirstPageID_27_candleLo:
                        db $01                               ;848145|        |0000F8;
                        dd $2684F8F8                         ;848146|        |      ;
                                                             ;      |        |      ;
- sprAssFirstPageID_32:
+  sprAss_dagger_ID_32:
                        db $01                               ;84814A|        |0000F8;
                        dd $2226F8F8                         ;84814B|        |      ;
                                                             ;      |        |      ;
- sprAssFirstPageID_33:
+     sprAss_axe_ID_33:
                        db $01                               ;84814F|        |0000F8;
                        dd $2228F8F8                         ;848150|        |      ;
                                                             ;      |        |      ;
- sprAssFirstPageID_34:
+sprAss_holyWater_ID_34:
                        db $01                               ;848154|        |0000F7;
                        dd $222AF7F7                         ;848155|        |      ;
                                                             ;      |        |      ;
- sprAssFirstPageID_35:
+sprAss_holyThrow_ID_35:
                        db $01                               ;848159|        |0000F8;
                        dd $222CF8F8                         ;84815A|        |      ;
                                                             ;      |        |      ;
- sprAssFirstPageID_36:
+   sprAss_cross_ID_36:
                        db $01                               ;84815E|        |0000F8;
                        dd $2244F8F8                         ;84815F|        |      ;
                                                             ;      |        |      ;
- sprAssFirstPageID_37:
+   sprAss_clock_ID_37:
                        db $01                               ;848163|        |0000F8;
                        dd $2246F8F8                         ;848164|        |      ;
                                                             ;      |        |      ;
- sprAssFirstPageID_38:
+sprAss_bigHeart_ID_38:
                        db $01                               ;848168|        |0000F8;
                        dd $2248F8F8                         ;848169|        |      ;
                                                             ;      |        |      ;
@@ -241,31 +241,31 @@ sprAssFirstPageID_27_candleLo:
                        db $01                               ;84816D|        |0000FC;
                        dd $069EFCFC                         ;84816E|        |      ;
                                                             ;      |        |      ;
- sprAssFirstPageID_3a:
+sprAssFirst_rossery_3a:
                        db $01                               ;848172|        |0000F8;
                        dd $264AF8F8                         ;848173|        |      ;
                                                             ;      |        |      ;
- sprAssFirstPageID_3b:
+  sprAss_rosary_ID_3b:
                        db $01                               ;848177|        |0000FC;
                        dd $224CF6FC                         ;848178|        |      ;
                                                             ;      |        |      ;
- sprAssFirstPageID_3c:
+sprAss_whipUpgrade_ID_3c:
                        db $01                               ;84817C|        |0000F8;
                        dd $264EF8F8                         ;84817D|        |      ;
                                                             ;      |        |      ;
- sprAssFirstPageID_3d:
+     whipUpgradeID_3d:
                        db $01                               ;848181|        |0000F8;
                        dd $2260F8F8                         ;848182|        |      ;
                                                             ;      |        |      ;
- sprAssFirstPageID_3e:
+ sprAss_monyBag_ID_3e:
                        db $01                               ;848186|        |0000F8;
                        dd $2262F8F8                         ;848187|        |      ;
                                                             ;      |        |      ;
- sprAssFirstPageID_3f:
+ sprAss_doubleShot_3f:
                        db $01                               ;84818B|        |0000F8;
                        dd $2264F8F8                         ;84818C|        |      ;
                                                             ;      |        |      ;
- sprAssFirstPageID_40:
+sprAss_trippleShot_40:
                        db $01                               ;848190|        |0000F8;
                        dd $2666F8F8                         ;848191|        |      ;
                                                             ;      |        |      ;
@@ -285,7 +285,7 @@ sprAssFirstPageID_27_candleLo:
                        db $01                               ;8481A4|        |0000F8;
                        dd $266EF8F8                         ;8481A5|        |      ;
                                                             ;      |        |      ;
- sprAssFirstPageID_45:
+      sprAss_oneUp_45:
                        db $01                               ;8481A9|        |0000F8;
                        dd $2286F8F8                         ;8481AA|        |      ;
                                                             ;      |        |      ;
@@ -7403,7 +7403,7 @@ sprAssID_1046_bossMummyFire03:
                        JSL.L endGeneralTileUpdate           ;84E594|22528D80|808D52;
                        PLY                                  ;84E598|7A      |      ;
                        LDX.B r_VRAM_updateSize              ;84E599|A650    |000050;
-                       LDA.W $C000,Y                        ;84E59B|B900C0  |7EC000;
+                       LDA.W WRAM_blockMap_BG,Y             ;84E59B|B900C0  |7EC000;
                        STA.W $0000,X                        ;84E59E|9D0000  |7E0000;
                        LDA.W $C002,Y                        ;84E5A1|B902C0  |7EC002;
                        STA.W $0002,X                        ;84E5A4|9D0200  |7E0002;
@@ -8427,7 +8427,7 @@ collusionRotatingRoom:
                        AND.W #$00FF                         ;84ED54|29FF00  |      ;
                        ASL A                                ;84ED57|0A      |      ;
                        TAY                                  ;84ED58|A8      |      ;
-                       LDA.W ringSwingRotationTable,Y       ;84ED59|B9E482  |8182E4;
+                       LDA.W rotationLookUpPlus,Y           ;84ED59|B9E482  |8182E4;
                        RTS                                  ;84ED5C|60      |      ;
                                                             ;      |        |      ;
           CODE_84ED5D:
@@ -9034,7 +9034,7 @@ collusionRotatingRoom:
                                                             ;      |        |      ;
           CODE_84FCB9:
                        LDX.W #$0980                         ;84FCB9|A28009  |      ;
-                       JSL.L $80D7F4                        ;84FCBC|22F4D780|80D7F4;
+                       JSL.L enterGetEventBasXUp            ;84FCBC|22F4D780|80D7F4;
                        BCS CODE_84FCB8                      ;84FCC0|B0F6    |84FCB8;
                        JSL.L clearSelectedEventSlotAll      ;84FCC2|22598C80|808C59;
                                                             ;      |        |      ;
@@ -9147,7 +9147,7 @@ collusionRotatingRoom:
                                                             ;      |        |      ;
           CODE_84FD7F:
                        LDX.W #$0980                         ;84FD7F|A28009  |      ;
-                       JSL.L $80D7F4                        ;84FD82|22F4D780|80D7F4;
+                       JSL.L enterGetEventBasXUp            ;84FD82|22F4D780|80D7F4;
                        BCS CODE_84FD21                      ;84FD86|B099    |84FD21;
                        JSL.L clearSelectedEventSlotAll      ;84FD88|22598C80|808C59;
                        LDA.B r_ev_02_pri_attri              ;84FD8C|A502    |000002;
@@ -9190,7 +9190,7 @@ collusionRotatingRoom:
                                                             ;      |        |      ;
           CODE_84FDE0:
                        LDX.W #$0980                         ;84FDE0|A28009  |      ;
-                       JSL.L $80D7F4                        ;84FDE3|22F4D780|80D7F4;
+                       JSL.L enterGetEventBasXUp            ;84FDE3|22F4D780|80D7F4;
                        BCS CODE_84FE13                      ;84FDE7|B02A    |84FE13;
                        JSL.L clearSelectedEventSlotAll      ;84FDE9|22598C80|808C59;
                        LDA.W #$0048                         ;84FDED|A94800  |      ;
@@ -9257,18 +9257,18 @@ fallingBlocksStateTable:
                        INC.B r_ev_22,X                      ;84FEA2|F622    |000022;
                        ASL A                                ;84FEA4|0A      |      ;
                        TAY                                  ;84FEA5|A8      |      ;
-                       LDA.W DATA16_81EFCB,Y                ;84FEA6|B9CBEF  |81EFCB;
+                       LDA.W event_68_blocks_spawnXpos,Y    ;84FEA6|B9CBEF  |81EFCB;
                        CMP.W #$FFFF                         ;84FEA9|C9FFFF  |      ;
-                       BEQ CODE_84FEBF                      ;84FEAC|F011    |84FEBF;
+                       BEQ endBlocksFall                    ;84FEAC|F011    |84FEBF;
                        AND.W #$00FF                         ;84FEAE|29FF00  |      ;
                        STA.B r_ev_00_sprite                 ;84FEB1|8500    |000000;
-                       LDA.W DATA16_81EFCC,Y                ;84FEB3|B9CCEF  |81EFCC;
+                       LDA.W event_68_blocks_spawnSpeed,Y   ;84FEB3|B9CCEF  |81EFCC;
                        AND.W #$00FF                         ;84FEB6|29FF00  |      ;
                        STA.B r_ev_24,X                      ;84FEB9|9524    |000024;
                        JSR.W fallingBlocksRoutine00         ;84FEBB|20FBFE  |84FEFB;
                        RTL                                  ;84FEBE|6B      |      ;
                                                             ;      |        |      ;
-          CODE_84FEBF:
+        endBlocksFall:
                        JML.L clearSelectedEventSlotAll      ;84FEBF|5C598C80|808C59;
                                                             ;      |        |      ;
  fallingBlocksState02:
@@ -9336,7 +9336,7 @@ fallingBlocksRoutine00:
                        ORA.B r_ev_04_flip_mirror_attri      ;84FF3A|0504    |000004;
                        STA.B r_ev_04_flip_mirror_attri      ;84FF3C|8504    |000004;
                        TAX                                  ;84FF3E|AA      |      ;
-                       LDA.L $7E8000,X                      ;84FF3F|BF00807E|7E8000;
+                       LDA.L WRAM_scene_FG_0Fx07,X          ;84FF3F|BF00807E|7E8000;
                        STA.B r_ev_08_xPosSub                ;84FF43|8508    |000008;
                        LDY.W #$0000                         ;84FF45|A00000  |      ;
                                                             ;      |        |      ;
@@ -9361,9 +9361,9 @@ fallingBlocksRoutine00:
                                                             ;      |        |      ;
           CODE_84FF64:
                        LDX.B r_ev_04_flip_mirror_attri      ;84FF64|A604    |000004;
-                       LDA.W DATA16_81EFA1,Y                ;84FF66|B9A1EF  |81EFA1;
+                       LDA.W event_68_blocksUpdateID,Y      ;84FF66|B9A1EF  |81EFA1;
                        AND.W #$00FF                         ;84FF69|29FF00  |      ;
-                       STA.L $7E8000,X                      ;84FF6C|9F00807E|7E8000;
+                       STA.L WRAM_scene_FG_0Fx07,X          ;84FF6C|9F00807E|7E8000;
                        STA.B r_ev_0a_xPos                   ;84FF70|850A    |00000A;
                        LDA.B r_ev_00_sprite                 ;84FF72|A500    |000000;
                        LSR A                                ;84FF74|4A      |      ;

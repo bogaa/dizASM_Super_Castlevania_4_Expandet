@@ -442,6 +442,13 @@
                        WRAM_DMA_Table = $7E2C00             ;      |        |      ;
                        WRAM_DMA_PPU_DATA = $7E3000          ;      |        |      ;
                        WRAM_Collusion_Table = $7E3C00       ;      |        |      ;
+                       WRAM_blockMap_FG = $7E6000           ;      |        |      ;
+                       WRAM_scene_FG_0Fx07 = $7E8000        ;      |        |      ;
+                       WRAM_scene_FG_PPU_Q1 = $7E8400       ;      |        |      ;
+                       WRAM_scene_FG_PPU_Q2 = $7E8800       ;      |        |      ;
+                       WRAM_scene_FG_PPU_Q3 = $7E8C00       ;      |        |      ;
+                       WRAM_blockMap_BG = $7EC000           ;      |        |      ;
+                       WRAM_scene_BG_0Fx07 = $7EE000        ;      |        |      ;
                        WRAM_GFX_SimonsSpriteSheet = $7F0000 ;      |        |      ;
                        r81_ev_00_sprite = $810000           ;      |        |      ;
                        r81_ev_02_pri_attri = $810002        ;      |        |      ;
@@ -707,7 +714,7 @@
                        miscData0b = $81B1E1                 ;      |        |      ;
                        miscData0c = $81B1EB                 ;      |        |      ;
                        miscData0d = $81B1F3                 ;      |        |      ;
-                       ;      |        |      ;
+                       pwSpritePlacment = $81D07D           ;      |        |      ;
                        ;      |        |      ;
                        titleScreenTimerThunder = $81E0F4    ;      |        |      ;
                        secretStairBlockAnimDataLow = $81E2CC;      |        |      ;
@@ -729,6 +736,13 @@
                        ;      |        |      ;
                        ;      |        |      ;
                        ;      |        |      ;
+                       ;      |        |      ;
+                       ;      |        |      ;
+                       ;      |        |      ;
+                       ;      |        |      ;
+                       ;      |        |      ;
+                       eventSpawnState0e = $86A638          ;      |        |      ;
+                       eventSpawnState0f = $86A640          ;      |        |      ;
                        levelTypeSettingTableLong = $86B8F6  ;      |        |      ;
                        ;      |        |      ;
                        ;      |        |      ;
@@ -744,8 +758,6 @@
                        CODE_009736 = $009736                ;      |        |      ;
                        CODE_009746 = $009746                ;      |        |      ;
                        CODE_009761 = $009761                ;      |        |      ;
-                       CODE_00BA52 = $00BA52                ;      |        |      ;
-                       CODE_00BAA2 = $00BAA2                ;      |        |      ;
                        CODE_00BAA3 = $00BAA3                ;      |        |      ;
                        LOOSE_OP_00BB0E = $00BB0E            ;      |        |      ;
                        LOOSE_OP_00BBFD = $00BBFD            ;      |        |      ;
@@ -801,11 +813,10 @@
                        GFX_7DFFFE = $7DFFFE                 ;      |        |      ;
                        DATA16_8182E5 = $8182E5              ;      |        |      ;
                        DATA16_8183E5 = $8183E5              ;      |        |      ;
-                       DATA16_818822 = $818822              ;      |        |      ;
-                       DATA16_81883C = $81883C              ;      |        |      ;
                        DATA16_819534 = $819534              ;      |        |      ;
                        PTR24_81A59E = $81A59E               ;      |        |      ;
                        DATA8_81B201 = $81B201               ;      |        |      ;
+                       PTR16_81BAA2 = $81BAA2               ;      |        |      ;
                        DATA16_81D09E = $81D09E              ;      |        |      ;
                        DATA16_81D114 = $81D114              ;      |        |      ;
                        DATA16_81D116 = $81D116              ;      |        |      ;
@@ -826,7 +837,6 @@
                        DATA16_81E0EC = $81E0EC              ;      |        |      ;
                        DATA16_81E652 = $81E652              ;      |        |      ;
                        DATA16_81E838 = $81E838              ;      |        |      ;
-                       DATA16_81EFCC = $81EFCC              ;      |        |      ;
                        DATA16_81F042 = $81F042              ;      |        |      ;
                        DATA16_81F9FC = $81F9FC              ;      |        |      ;
                        LOOSE_OP_828C59 = $828C59            ;      |        |      ;

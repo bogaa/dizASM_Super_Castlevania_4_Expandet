@@ -1499,7 +1499,7 @@ turningPlaformState01:
                        LDA.B r_ev_3c,X                      ;828AEA|B53C    |00003C;
                        TAX                                  ;828AEC|AA      |      ;
                        LDA.W #$0001                         ;828AED|A90100  |      ;
-                       JSL.L CODE_828B53                    ;828AF0|22538B82|828B53;
+                       JSL.L writeCollusion_baseX           ;828AF0|22538B82|828B53;
                        LDX.B r_XregSlotCurrent              ;828AF4|A6FC    |0000FC;
                        LDA.B r_ev_34,X                      ;828AF6|B534    |000034;
                        CMP.W #$000D                         ;828AF8|C90D00  |      ;
@@ -1550,7 +1550,7 @@ turningPlaformState02:
                        TAX                                  ;828B4F|AA      |      ;
                        LDA.W #$0000                         ;828B50|A90000  |      ;
                                                             ;      |        |      ;
-          CODE_828B53:
+ writeCollusion_baseX:
                        STA.L $7E4000,X                      ;828B53|9F00407E|7E4000;
                        STA.L $7E4002,X                      ;828B57|9F02407E|7E4002;
                        STA.L $7E4004,X                      ;828B5B|9F04407E|7E4004;
@@ -2422,22 +2422,22 @@ crumblingBlockState02:
 crumblingBlockState03:
                        RTL                                  ;82915A|6B      |      ;
                                                             ;      |        |      ;
-event_ID_39_bridgeRobe:
+event_ID_39_fallingPillar:
                        LDA.B r_ev_12_state,X                ;82915B|B512    |000012;
                        PHX                                  ;82915D|DA      |      ;
                        ASL A                                ;82915E|0A      |      ;
                        TAX                                  ;82915F|AA      |      ;
-                       LDA.L bridgeRobeStateTable,X         ;829160|BF6A9182|82916A;
+                       LDA.L fallingPillar,X                ;829160|BF6A9182|82916A;
                        PLX                                  ;829164|FA      |      ;
                        STA.B r_ev_00_sprite                 ;829165|8500    |000000;
                        JMP.W (r_ev_00_sprite)               ;829167|6C0000  |000000;
                                                             ;      |        |      ;
- bridgeRobeStateTable:
-                       dw bridgeState00                     ;82916A|        |829170;
-                       dw bridgeState01                     ;82916C|        |829195;
-                       dw bridgeState02                     ;82916E|        |82919C;
+        fallingPillar:
+                       dw fallingPillarState00              ;82916A|        |829170;
+                       dw fallingPillarState01              ;82916C|        |829195;
+                       dw fallingPillarState02              ;82916E|        |82919C;
                                                             ;      |        |      ;
-        bridgeState00:
+ fallingPillarState00:
                        LDY.W #$0004                         ;829170|A00400  |      ;
                        LDA.W #$A52A                         ;829173|A92AA5  |      ;
                                                             ;      |        |      ;
@@ -2461,12 +2461,12 @@ event_ID_39_bridgeRobe:
                        INC.B r_ev_12_state,X                ;829192|F612    |000012;
                        RTL                                  ;829194|6B      |      ;
                                                             ;      |        |      ;
-        bridgeState01:
+ fallingPillarState01:
                        LDA.B r_ev_0e_yPos,X                 ;829195|B50E    |00000E;
                        CMP.W #$00C0                         ;829197|C9C000  |      ;
                        BPL CODE_8291A0                      ;82919A|1004    |8291A0;
                                                             ;      |        |      ;
-        bridgeState02:
+ fallingPillarState02:
                        JML.L YposFallSpeed2000              ;82919C|5C2BD682|82D62B;
                                                             ;      |        |      ;
           CODE_8291A0:
@@ -2540,8 +2540,8 @@ event_ID_6a_fallingStone_beforPillar:
                                                             ;      |        |      ;
 fallingStone_beforPillarStateTable:
                        dw fallingStone_beforPillarState00   ;829222|        |82922A;
-                       dw bridgeState01                     ;829224|        |829195;
-                       dw bridgeState02                     ;829226|        |82919C;
+                       dw fallingPillarState01              ;829224|        |829195;
+                       dw fallingPillarState02              ;829226|        |82919C;
                        dw fallingStone_beforPillarState03   ;829228|        |8291F7;
                                                             ;      |        |      ;
 fallingStone_beforPillarState00:
@@ -3078,29 +3078,29 @@ draculaAndMummyPosInitReplace:
           CODE_82963A:
                        RTL                                  ;82963A|6B      |      ;
                                                             ;      |        |      ;
-event_ID_55_invisablePlatform:
-                       JSR.W event_ID_55_invisablePlatformRoutine;82963B|20BC96  |8296BC;
+event_ID_55_bridgeRobe:
+                       JSR.W bridgeRobePlayerInteraction    ;82963B|20BC96  |8296BC;
                        LDX.B r_XregSlotCurrent              ;82963E|A6FC    |0000FC;
                        LDA.B r_ev_12_state,X                ;829640|B512    |000012;
                        PHX                                  ;829642|DA      |      ;
                        ASL A                                ;829643|0A      |      ;
                        TAX                                  ;829644|AA      |      ;
-                       LDA.L invisablePlatformStateTable,X  ;829645|BF4F9682|82964F;
+                       LDA.L bridgeRobe,X                   ;829645|BF4F9682|82964F;
                        PLX                                  ;829649|FA      |      ;
                        STA.B r_ev_00_sprite                 ;82964A|8500    |000000;
                        JMP.W (r_ev_00_sprite)               ;82964C|6C0000  |000000;
                                                             ;      |        |      ;
-invisablePlatformStateTable:
-                       dw invisablePlatformState00          ;82964F|        |829657;
-                       dw invisablePlatformState01          ;829651|        |82965A;
-                       dw invisablePlatformState02          ;829653|        |82967A;
-                       dw invisablePlatformState03          ;829655|        |829684;
+           bridgeRobe:
+                       dw bridgeRobeState00                 ;82964F|        |829657;
+                       dw bridgeRobeState01                 ;829651|        |82965A;
+                       dw bridgeRobeState02                 ;829653|        |82967A;
+                       dw bridgeRobeState03                 ;829655|        |829684;
                                                             ;      |        |      ;
-invisablePlatformState00:
+    bridgeRobeState00:
                        INC.B r_ev_12_state,X                ;829657|F612    |000012;
                        RTL                                  ;829659|6B      |      ;
                                                             ;      |        |      ;
-invisablePlatformState01:
+    bridgeRobeState01:
                        LDA.W r81_player_0e_yPos             ;82965A|AD4E05  |81054E;
                        CMP.W #$0080                         ;82965D|C98000  |      ;
                        BCS CODE_829674                      ;829660|B012    |829674;
@@ -3117,14 +3117,14 @@ invisablePlatformState01:
                        STA.B r_ev_34,X                      ;829677|9534    |000034;
                        RTL                                  ;829679|6B      |      ;
                                                             ;      |        |      ;
-invisablePlatformState02:
+    bridgeRobeState02:
                        STZ.B r_ev_24,X                      ;82967A|7424    |000024;
                        LDA.W #$0004                         ;82967C|A90400  |      ;
                        STA.B r_ev_22,X                      ;82967F|9522    |000022;
                        INC.B r_ev_12_state,X                ;829681|F612    |000012;
                        RTL                                  ;829683|6B      |      ;
                                                             ;      |        |      ;
-invisablePlatformState03:
+    bridgeRobeState03:
                        DEC.B r_ev_22,X                      ;829684|D622    |000022;
                        BNE CODE_8296B8                      ;829686|D030    |8296B8;
                        LDA.W #$0004                         ;829688|A90400  |      ;
@@ -3156,7 +3156,7 @@ invisablePlatformState03:
                        STZ.B r_ev_12_state,X                ;8296B9|7412    |000012;
                        RTL                                  ;8296BB|6B      |      ;
                                                             ;      |        |      ;
-event_ID_55_invisablePlatformRoutine:
+bridgeRobePlayerInteraction:
                        LDY.W #$0000                         ;8296BC|A00000  |      ;
                        LDA.W r81_player_0e_yPos             ;8296BF|AD4E05  |81054E;
                        CMP.W #$0080                         ;8296C2|C98000  |      ;
@@ -4497,8 +4497,8 @@ stealingHandStateTable:
                        RTL                                  ;829F82|6B      |      ;
                                                             ;      |        |      ;
   stealingHandState01:
-                       JSL.L CODE_80FE6D                    ;829F83|226DFE80|80FE6D;
-                       JSL.L CODE_82A130                    ;829F87|2230A182|82A130;
+                       JSL.L sinWaveFly_mask30              ;829F83|226DFE80|80FE6D;
+                       JSL.L grabingHandAnim                ;829F87|2230A182|82A130;
                        LDA.W r81_player_0a_xPos             ;829F8B|AD4A05  |81054A;
                        SEC                                  ;829F8E|38      |      ;
                        SBC.B r_ev_0a_xPos,X                 ;829F8F|F50A    |00000A;
@@ -4716,7 +4716,7 @@ stealingHandStateTable:
           CODE_82A12F:
                        RTL                                  ;82A12F|6B      |      ;
                                                             ;      |        |      ;
-          CODE_82A130:
+      grabingHandAnim:
                        LDA.W #$BC19                         ;82A130|A919BC  |      ;
                        STA.B r_ev_00_sprite                 ;82A133|8500    |000000;
                        JSL.L spriteAnimationRoutine00       ;82A135|2269B082|82B069;
@@ -6535,7 +6535,7 @@ coffineCircleRoutine01:
                        AND.W #$00FF                         ;82AD7C|29FF00  |      ;
                        ASL A                                ;82AD7F|0A      |      ;
                        TAY                                  ;82AD80|A8      |      ;
-                       LDA.W ringSwingRotationTable,Y       ;82AD81|B9E482  |8182E4;
+                       LDA.W rotationLookUpPlus,Y           ;82AD81|B9E482  |8182E4;
                        LSR A                                ;82AD84|4A      |      ;
                        LSR A                                ;82AD85|4A      |      ;
                        LSR A                                ;82AD86|4A      |      ;
@@ -6570,7 +6570,7 @@ coffineCircleRoutine02:
                        BCS CODE_82ADB8                      ;82ADAF|B007    |82ADB8;
                        ASL A                                ;82ADB1|0A      |      ;
                        TAY                                  ;82ADB2|A8      |      ;
-                       LDA.W rotationValuesBridge,Y         ;82ADB3|B9E483  |8183E4;
+                       LDA.W rotationLookUpMinus,Y          ;82ADB3|B9E483  |8183E4;
                        BRA CODE_82ADC1                      ;82ADB6|8009    |82ADC1;
                                                             ;      |        |      ;
           CODE_82ADB8:
@@ -6578,7 +6578,7 @@ coffineCircleRoutine02:
                        SBC.W #$0080                         ;82ADB9|E98000  |      ;
                        ASL A                                ;82ADBC|0A      |      ;
                        TAY                                  ;82ADBD|A8      |      ;
-                       LDA.W ringSwingRotationTable,Y       ;82ADBE|B9E482  |8182E4;
+                       LDA.W rotationLookUpPlus,Y           ;82ADBE|B9E482  |8182E4;
                                                             ;      |        |      ;
           CODE_82ADC1:
                        LSR A                                ;82ADC1|4A      |      ;
@@ -8993,7 +8993,7 @@ event_ID_04_PullBridge:
                        LDA.W $1388                          ;82BE70|AD8813  |811388;
                        ASL A                                ;82BE73|0A      |      ;
                        TAX                                  ;82BE74|AA      |      ;
-                       LDA.L rotationValuesBridge,X         ;82BE75|BFE48381|8183E4;
+                       LDA.L rotationLookUpMinus,X          ;82BE75|BFE48381|8183E4;
                        STA.B r_ev_00_sprite                 ;82BE79|8500    |000000;
                        LDA.W #$00E8                         ;82BE7B|A9E800  |      ;
                        STA.B r_ev_02_pri_attri              ;82BE7E|8502    |000002;
@@ -9695,9 +9695,9 @@ autoSpawnSubIDJumpTable:
                        dw autoSpawnSubID01_Medusa           ;82C419|        |82C499;
                        dw autoSpawnSubID02_Medusa           ;82C41B|        |82C484;
                        dw autoSpawnSubID03_Zombie           ;82C41D|        |82C4DB;
-                       dw autoSpawnSubID04_waterSpitter     ;82C41F|        |82C549;
-                       dw autoSpawnSubID05_waterSpitter     ;82C421|        |82C595;
-                       dw autoSpawnSubID06_waterSpitterJump ;82C423|        |82C47A;
+                       dw autoSpawnSubID04_fishmanSpit      ;82C41F|        |82C549;
+                       dw autoSpawnSubID05_fishmanJump      ;82C421|        |82C595;
+                       dw autoSpawnSubID06_spawn_7Medusas   ;82C423|        |82C47A;
                        dw autoSpawnSubID07_eagles           ;82C425|        |82C51C;
                        dw autoSpawnSubID08_grabingHand      ;82C427|        |82C5B7;
                        dw autoSpawnSubID09_bat              ;82C429|        |82C5F4;
@@ -9741,7 +9741,7 @@ autoSpawnSubID00_pillar:
           CODE_82C479:
                        RTL                                  ;82C479|6B      |      ;
                                                             ;      |        |      ;
-autoSpawnSubID06_waterSpitterJump:
+autoSpawnSubID06_spawn_7Medusas:
                        INC.B r_ev_24,X                      ;82C47A|F624    |000024;
                        LDA.B r_ev_24,X                      ;82C47C|B524    |000024;
                        CMP.W #$0045                         ;82C47E|C94500  |      ;
@@ -9853,7 +9853,7 @@ autoSpawnSubID07_eagles:
                        STA.B r_ev_0e_yPos,X                 ;82C544|950E    |00000E;
                        JMP.W CODE_82C4BA                    ;82C546|4CBAC4  |82C4BA;
                                                             ;      |        |      ;
-autoSpawnSubID04_waterSpitter:
+autoSpawnSubID04_fishmanSpit:
                        LDA.W #$004C                         ;82C549|A94C00  |      ;
                                                             ;      |        |      ;
           CODE_82C54C:
@@ -9894,7 +9894,7 @@ autoSpawnSubID04_waterSpitter:
           CODE_82C594:
                        RTL                                  ;82C594|6B      |      ;
                                                             ;      |        |      ;
-autoSpawnSubID05_waterSpitter:
+autoSpawnSubID05_fishmanJump:
                        LDA.W #$0051                         ;82C595|A95100  |      ;
                        BRA CODE_82C54C                      ;82C598|80B2    |82C54C;
                                                             ;      |        |      ;
@@ -11901,9 +11901,9 @@ event_ID_53_axeProjectile:
           CODE_82D32C:
                        ASL A                                ;82D32C|0A      |      ;
                        TAY                                  ;82D32D|A8      |      ;
-                       LDA.W ringSwingRotationTable,Y       ;82D32E|B9E482  |8182E4;
+                       LDA.W rotationLookUpPlus,Y           ;82D32E|B9E482  |8182E4;
                        STA.B r_ev_0c_yPosSub                ;82D331|850C    |00000C;
-                       LDA.W rotationValuesBridge,Y         ;82D333|B9E483  |8183E4;
+                       LDA.W rotationLookUpMinus,Y          ;82D333|B9E483  |8183E4;
                        STA.B r_ev_0e_yPos                   ;82D336|850E    |00000E;
                        LDA.B r_simon_ForceGroundBehavier    ;82D338|A580    |000080;
                        BNE CODE_82D33F                      ;82D33A|D003    |82D33F;

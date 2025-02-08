@@ -2943,7 +2943,7 @@ levelTileUpdateRoutinePart:
                        LDA.B r_currentLevel                 ;86988B|A586    |000086;
                        CMP.W #$0001                         ;86988D|C90100  |      ;
                        BEQ CODE_86989F                      ;869890|F00D    |86989F;
-                       JSL.L CODE_86A363                    ;869892|2263A386|86A363;
+                       JSL.L collusion2WRAMtable            ;869892|2263A386|86A363;
                                                             ;      |        |      ;
           CODE_869896:
                        SEP #$20                             ;869896|E220    |      ;
@@ -3008,7 +3008,7 @@ levelTileUpdateRoutinePart:
                        JSL.L endGeneralTileUpdate           ;8698F4|22528D80|808D52;
                        LDY.W #$4000                         ;8698F8|A00040  |      ;
                        STY.B r_currentEventROM              ;8698FB|84FE    |0000FE;
-                       JSL.L CODE_86A2B7                    ;8698FD|22B7A286|86A2B7;
+                       JSL.L getBlockID_WRAM                ;8698FD|22B7A286|86A2B7;
                        STZ.B r_ev_0e_yPos                   ;869901|640E    |00000E;
                        ASL A                                ;869903|0A      |      ;
                        ROR.B r_ev_0e_yPos                   ;869904|660E    |00000E;
@@ -3018,7 +3018,7 @@ levelTileUpdateRoutinePart:
                        LSR A                                ;86990A|4A      |      ;
                        ORA.B r_ev_0c_yPosSub                ;86990B|050C    |00000C;
                        TAX                                  ;86990D|AA      |      ;
-                       LDA.L UNREACH_86A549,X               ;86990E|BF49A586|86A549;
+                       LDA.L blockSizeOffsets_00,X          ;86990E|BF49A586|86A549;
                        STA.B r_ev_12_state                  ;869912|8512    |000012;
                        LDA.B (r_ev_12_state),Y              ;869914|B112    |000012;
                        EOR.B r_ev_0e_yPos                   ;869916|450E    |00000E;
@@ -3304,7 +3304,7 @@ levelTileUpdateRoutinePart:
                        SEC                                  ;869B43|38      |      ;
                        SBC.L GFX_7DFFFB,X                   ;869B44|FFFBFF7D|7DFFFB;
                        STA.L GFX_7DFFFE,X                   ;869B48|9FFEFF7D|7DFFFE;
-                       JSL.L CODE_86A363                    ;869B4C|2263A386|86A363;
+                       JSL.L collusion2WRAMtable            ;869B4C|2263A386|86A363;
                        SEP #$20                             ;869B50|E220    |      ;
                        LDA.B #$81                           ;869B52|A981    |      ;
                        PHA                                  ;869B54|48      |      ;
@@ -3518,7 +3518,7 @@ levelTileUpdateRoutinePart:
                        SEC                                  ;869CF0|38      |      ;
                        SBC.L GFX_7DFFFB,X                   ;869CF1|FFFBFF7D|7DFFFB;
                        STA.L GFX_7DFFFE,X                   ;869CF5|9FFEFF7D|7DFFFE;
-                       JSL.L CODE_86A363                    ;869CF9|2263A386|86A363;
+                       JSL.L collusion2WRAMtable            ;869CF9|2263A386|86A363;
                        SEP #$20                             ;869CFD|E220    |      ;
                        LDA.B #$81                           ;869CFF|A981    |      ;
                        PHA                                  ;869D01|48      |      ;
@@ -3695,7 +3695,7 @@ levelTileUpdateRoutinePart:
                        SEC                                  ;869E5D|38      |      ;
                        SBC.L GFX_7DFFFB,X                   ;869E5E|FFFBFF7D|7DFFFB;
                        STA.L GFX_7DFFFE,X                   ;869E62|9FFEFF7D|7DFFFE;
-                       JSL.L CODE_86A363                    ;869E66|2263A386|86A363;
+                       JSL.L collusion2WRAMtable            ;869E66|2263A386|86A363;
                        SEP #$20                             ;869E6A|E220    |      ;
                        LDA.B #$81                           ;869E6C|A981    |      ;
                        PHA                                  ;869E6E|48      |      ;
@@ -4247,7 +4247,7 @@ updateCamSpeedVerticalSection:
                        JMP.W CODE_86A19C                    ;86A229|4C9CA1  |86A19C;
                                                             ;      |        |      ;
           CODE_86A22C:
-                       JSL.L CODE_86A2B7                    ;86A22C|22B7A286|86A2B7;
+                       JSL.L getBlockID_WRAM                ;86A22C|22B7A286|86A2B7;
                        CMP.B r_ev_10_ID                     ;86A230|C510    |000010;
                        BEQ CODE_86A25F                      ;86A232|F02B    |86A25F;
                        STA.B r_ev_10_ID                     ;86A234|8510    |000010;
@@ -4262,13 +4262,13 @@ updateCamSpeedVerticalSection:
                        LSR A                                ;86A242|4A      |      ;
                        ORA.B r_ev_0c_yPosSub                ;86A243|050C    |00000C;
                        TAX                                  ;86A245|AA      |      ;
-                       LDA.L UNREACH_86A549,X               ;86A246|BF49A586|86A549;
+                       LDA.L blockSizeOffsets_00,X          ;86A246|BF49A586|86A549;
                        STA.B r_ev_12_state                  ;86A24A|8512    |000012;
-                       LDA.L UNREACH_86A54B,X               ;86A24C|BF4BA586|86A54B;
+                       LDA.L blockSizeOffsets_08,X          ;86A24C|BF4BA586|86A54B;
                        STA.B r_ev_14_subId                  ;86A250|8514    |000014;
-                       LDA.L UNREACH_86A54D,X               ;86A252|BF4DA586|86A54D;
+                       LDA.L blockSizeOffsets_10,X          ;86A252|BF4DA586|86A54D;
                        STA.B r_ev_16_hitStunCount           ;86A256|8516    |000016;
-                       LDA.L UNREACH_86A54F,X               ;86A258|BF4FA586|86A54F;
+                       LDA.L blockSizeOffsets_18,X          ;86A258|BF4FA586|86A54F;
                        STA.B r_ev_18_xSpdSub                ;86A25C|8518    |000018;
                        PLX                                  ;86A25E|FA      |      ;
                                                             ;      |        |      ;
@@ -4292,7 +4292,7 @@ updateCamSpeedVerticalSection:
                        RTL                                  ;86A281|6B      |      ;
                                                             ;      |        |      ;
           CODE_86A282:
-                       JSL.L CODE_86A2B7                    ;86A282|22B7A286|86A2B7;
+                       JSL.L getBlockID_WRAM                ;86A282|22B7A286|86A2B7;
                        CMP.B r_ev_10_ID                     ;86A286|C510    |000010;
                        BEQ CODE_86A2B5                      ;86A288|F02B    |86A2B5;
                        STA.B r_ev_10_ID                     ;86A28A|8510    |000010;
@@ -4307,20 +4307,20 @@ updateCamSpeedVerticalSection:
                        LSR A                                ;86A298|4A      |      ;
                        ORA.B r_ev_0c_yPosSub                ;86A299|050C    |00000C;
                        TAX                                  ;86A29B|AA      |      ;
-                       LDA.L UNREACH_86A5C9,X               ;86A29C|BFC9A586|86A5C9;
+                       LDA.L eventSpawnState00,X            ;86A29C|BFC9A586|86A5C9;
                        STA.B r_ev_12_state                  ;86A2A0|8512    |000012;
-                       LDA.L UNREACH_86A5CB,X               ;86A2A2|BFCBA586|86A5CB;
+                       LDA.L eventSpawnSubID,X              ;86A2A2|BFCBA586|86A5CB;
                        STA.B r_ev_14_subId                  ;86A2A6|8514    |000014;
-                       LDA.L UNREACH_86A5CD,X               ;86A2A8|BFCDA586|86A5CD;
+                       LDA.L eventSpawnHitStune,X           ;86A2A8|BFCDA586|86A5CD;
                        STA.B r_ev_16_hitStunCount           ;86A2AC|8516    |000016;
-                       LDA.L UNREACH_86A5CF,X               ;86A2AE|BFCFA586|86A5CF;
+                       LDA.L eventSpawn_mod,X               ;86A2AE|BFCFA586|86A5CF;
                        STA.B r_ev_18_xSpdSub                ;86A2B2|8518    |000018;
                        PLX                                  ;86A2B4|FA      |      ;
                                                             ;      |        |      ;
           CODE_86A2B5:
                        BRA CODE_86A25F                      ;86A2B5|80A8    |86A25F;
                                                             ;      |        |      ;
-          CODE_86A2B7:
+      getBlockID_WRAM:
                        LDY.B r_ev_04_flip_mirror_attri      ;86A2B7|A404    |000004;
                        LDA.W $4000,Y                        ;86A2B9|B90040  |004000;
                        PHA                                  ;86A2BC|48      |      ;
@@ -4408,7 +4408,7 @@ updateCamSpeedVerticalSection:
                        REP #$10                             ;86A360|C210    |      ;
                        RTL                                  ;86A362|6B      |      ;
                                                             ;      |        |      ;
-          CODE_86A363:
+  collusion2WRAMtable:
                        LDA.B r_currentEventROM              ;86A363|A5FE    |0000FE;
                        CMP.W #$4000                         ;86A365|C90040  |      ;
                        BEQ CODE_86A377                      ;86A368|F00D    |86A377;
@@ -4424,7 +4424,7 @@ updateCamSpeedVerticalSection:
           CODE_86A377:
                        LDX.B r_ev_1c_ySpdSub                ;86A377|A61C    |00001C;
                                                             ;      |        |      ;
-          CODE_86A379:
+   colliTabColumnLoop:
                        LDY.W #$0002                         ;86A379|A00200  |      ;
                        LDA.W r_ev_00_sprite,X               ;86A37C|BD0000  |000000;
                        AND.W #$0001                         ;86A37F|290100  |      ;
@@ -4445,7 +4445,7 @@ updateCamSpeedVerticalSection:
                        STA.B r_ev_02_pri_attri              ;86A39D|8502    |000002;
                        LDY.W #$0000                         ;86A39F|A00000  |      ;
                                                             ;      |        |      ;
-          CODE_86A3A2:
+   colliTab_BlockLoop:
                        LDA.B (r_ev_04_flip_mirror_attri),Y  ;86A3A2|B104    |000004;
                        STA.B r_ev_08_xPosSub                ;86A3A4|8508    |000008;
                        ROL A                                ;86A3A6|2A      |      ;
@@ -4463,13 +4463,13 @@ SC4edNewTableBasedCollusionFirstLevelFIX:
                        PLY                                  ;86A3B7|7A      |      ;
                        AND.W #$00FF                         ;86A3B8|29FF00  |      ;
                        CMP.W #$0002                         ;86A3BB|C90200  |      ;
-                       BCC CODE_86A433                      ;86A3BE|9073    |86A433; FIXME!
+                       BCC $73                              ;86A3BE|9073    |86A433; FIXME!
                        CMP.B r_collusion_0d                 ;86A3C0|C5E4    |0000E4;
                        BEQ CODE_86A42C                      ;86A3C2|F068    |86A42C;
                        CMP.W #$0004                         ;86A3C4|C90400  |      ;
                        BCC CODE_86A431                      ;86A3C7|9068    |86A431;
                        CMP.W #$0006                         ;86A3C9|C90600  |      ;
-                       BCC CODE_86A433                      ;86A3CC|9065    |86A433; FIXME!
+                       BCC $65                              ;86A3CC|9065    |86A433; FIXME!
                        BNE CODE_86A3D5                      ;86A3CE|D005    |86A3D5; FIXME!
                        LDA.W #$FFFF                         ;86A3D0|A9FFFF  |      ;
                        BRA CODE_86A431                      ;86A3D3|805C    |86A431; FIXME!
@@ -4482,7 +4482,7 @@ SC4edNewTableBasedCollusionFirstLevelFIX:
                        BRA CODE_86A431                      ;86A3DF|8050    |86A431; FIXME!
                        BCS CODE_86A3E8                      ;86A3E1|B005    |86A3E8; unsed Setup by Redguy or orginal Setup..
                        LDA.W #$0005                         ;86A3E3|A90500  |      ;
-                       BRA CODE_86A433                      ;86A3E6|804B    |86A433;
+                       BRA $4B                              ;86A3E6|804B    |86A433;
                                                             ;      |        |      ;
                                                             ;      |        |      ;
           CODE_86A3E8:
@@ -4536,16 +4536,14 @@ SC4edNewTableBasedCollusionFirstLevelFIX:
                                                             ;      |        |      ;
           CODE_86A427:
                        LDA.W #$0006                         ;86A427|A90600  |      ;
-                       BRA CODE_86A433                      ;86A42A|8007    |86A433;
+                       BRA $07                              ;86A42A|8007    |86A433;
                                                             ;      |        |      ;
           CODE_86A42C:
                        LDA.W #$0000                         ;86A42C|A90000  |      ;
-                       BRA CODE_86A433                      ;86A42F|8002    |86A433;
+                       BRA $02                              ;86A42F|8002    |86A433;
                                                             ;      |        |      ;
           CODE_86A431:
                        EOR.B r_ev_0a_xPos                   ;86A431|450A    |00000A; end collusion table Setup
-                                                            ;      |        |      ;
-          CODE_86A433:
                        STA.B (r_ev_00_sprite)               ;86A433|9200    |000000;
                        LDA.B r_ev_00_sprite                 ;86A435|A500    |000000;
                        CLC                                  ;86A437|18      |      ;
@@ -4555,7 +4553,8 @@ SC4edNewTableBasedCollusionFirstLevelFIX:
                        INY                                  ;86A43D|C8      |      ;
                        CPY.B r_ev_02_pri_attri              ;86A43E|C402    |000002;
                        BCS CODE_86A445                      ;86A440|B003    |86A445;
-                       JMP.W CODE_86A3A2                    ;86A442|4CA2A3  |86A3A2;
+                       JMP.W colliTab_BlockLoop             ;86A442|4CA2A3  |86A3A2;
+                                                            ;      |        |      ;
                                                             ;      |        |      ;
           CODE_86A445:
                        TXA                                  ;86A445|8A      |      ;
@@ -4564,7 +4563,8 @@ SC4edNewTableBasedCollusionFirstLevelFIX:
                        TAX                                  ;86A44A|AA      |      ;
                        CPX.B $4E                            ;86A44B|E44E    |00004E;
                        BCS CODE_86A452                      ;86A44D|B003    |86A452;
-                       JMP.W CODE_86A379                    ;86A44F|4C79A3  |86A379;
+                       JMP.W colliTabColumnLoop             ;86A44F|4C79A3  |86A379;
+                                                            ;      |        |      ;
                                                             ;      |        |      ;
           CODE_86A452:
                        RTL                                  ;86A452|6B      |      ;
@@ -4725,59 +4725,87 @@ SC4edSeconLevelColluisonTableFIX01:
           CODE_86A548:
                        RTL                                  ;86A548|6B      |      ;
                                                             ;      |        |      ;
-       UNREACH_86A549:
-                       db $00,$00                           ;86A549|        |      ;
+  blockSizeOffsets_00:
+                       dw $0000                             ;86A549|        |      ;
                                                             ;      |        |      ;
-       UNREACH_86A54B:
-                       db $08,$00                           ;86A54B|        |      ;
+  blockSizeOffsets_08:
+                       dw $0008                             ;86A54B|        |      ;
                                                             ;      |        |      ;
-       UNREACH_86A54D:
-                       db $10,$00                           ;86A54D|        |86A54F;
+  blockSizeOffsets_10:
+                       dw $0010                             ;86A54D|        |      ;
                                                             ;      |        |      ;
-       UNREACH_86A54F:
-                       db $18,$00,$02,$00,$0A,$00,$12,$00   ;86A54F|        |      ;
-                       db $1A,$00,$04,$00,$0C,$00,$14,$00   ;86A557|        |      ;
-                       db $1C,$00,$06,$00,$0E,$00,$16,$00   ;86A55F|        |000600;
-                       db $1E,$00,$06,$00,$0E,$00,$16,$00   ;86A567|        |000600;
-                       db $1E,$00,$04,$00,$0C,$00,$14,$00   ;86A56F|        |000400;
-                       db $1C,$00,$02,$00,$0A,$00,$12,$00   ;86A577|        |000200;
-                       db $1A,$00,$00,$00,$08,$00,$10,$00   ;86A57F|        |      ;
-                       db $18,$00,$18,$00,$10,$00,$08,$00   ;86A587|        |      ;
-                       db $00,$00,$1A,$00,$12,$00,$0A,$00   ;86A58F|        |      ;
-                       db $02,$00,$1C,$00,$14,$00,$0C,$00   ;86A597|        |      ;
-                       db $04,$00,$1E,$00,$16,$00,$0E,$00   ;86A59F|        |000000;
-                       db $06,$00,$1E,$00,$16,$00,$0E,$00   ;86A5A7|        |000000;
-                       db $06,$00,$1C,$00,$14,$00,$0C,$00   ;86A5AF|        |000000;
-                       db $04,$00,$1A,$00,$12,$00,$0A,$00   ;86A5B7|        |000000;
-                       db $02,$00,$18,$00,$10,$00,$08,$00   ;86A5BF|        |      ;
-                       db $00,$00                           ;86A5C7|        |      ;
+  blockSizeOffsets_18:
+                       dw $0018,$0002,$000A,$0012           ;86A54F|        |      ;
+                       dw $001A,$0004,$000C,$0014           ;86A557|        |      ;
+                       dw $001C,$0006,$000E,$0016           ;86A55F|        |      ;
+                       dw $001E,$0006,$000E,$0016           ;86A567|        |      ;
+                       dw $001E,$0004,$000C,$0014           ;86A56F|        |      ;
+                       dw $001C,$0002,$000A,$0012           ;86A577|        |      ;
+                       dw $001A,$0000,$0008,$0010           ;86A57F|        |      ;
+                       dw $0018,$0018,$0010,$0008           ;86A587|        |      ;
+                       dw $0000,$001A,$0012,$000A           ;86A58F|        |      ;
+                       dw $0002,$001C,$0014,$000C           ;86A597|        |      ;
+                       dw $0004,$001E,$0016,$000E           ;86A59F|        |      ;
+                       dw $0006,$001E,$0016,$000E           ;86A5A7|        |      ;
+                       dw $0006,$001C,$0014,$000C           ;86A5AF|        |      ;
+                       dw $0004,$001A,$0012,$000A           ;86A5B7|        |      ;
+                       dw $0002,$0018,$0010,$0008           ;86A5BF|        |      ;
+                       dw $0000                             ;86A5C7|        |      ;
                                                             ;      |        |      ;
-       UNREACH_86A5C9:
-                       db $00,$00                           ;86A5C9|        |      ;
+    eventSpawnState00:
+                       dw $0000                             ;86A5C9|        |      ;
                                                             ;      |        |      ;
-       UNREACH_86A5CB:
-                       db $02,$00                           ;86A5CB|        |      ;
+      eventSpawnSubID:
+                       dw $0002                             ;86A5CB|        |      ;
                                                             ;      |        |      ;
-       UNREACH_86A5CD:
-                       db $04,$00                           ;86A5CD|        |000000;
+   eventSpawnHitStune:
+                       dw $0004                             ;86A5CD|        |      ;
                                                             ;      |        |      ;
-       UNREACH_86A5CF:
-                       db $06,$00,$08,$00,$0A,$00,$0C,$00   ;86A5CF|        |000000;
-                       db $0E,$00,$10,$00,$12,$00,$14,$00   ;86A5D7|        |001000;
-                       db $16,$00,$18,$00,$1A,$00,$1C,$00   ;86A5DF|        |000000;
-                       db $1E,$00,$06,$00,$04,$00,$02,$00   ;86A5E7|        |000600;
-                       db $00,$00,$0E,$00,$0C,$00,$0A,$00   ;86A5EF|        |      ;
-                       db $08,$00,$16,$00,$14,$00,$12,$00   ;86A5F7|        |      ;
-                       db $10,$00,$1E,$00,$1C,$00,$1A,$00   ;86A5FF|        |86A601;
-                       db $18,$00,$18,$00,$1A,$00,$1C,$00   ;86A607|        |      ;
-                       db $1E,$00,$10,$00,$12,$00,$14,$00   ;86A60F|        |001000;
-                       db $16,$00,$08,$00,$0A,$00,$0C,$00   ;86A617|        |000000;
-                       db $0E,$00,$00,$00,$02,$00,$04,$00   ;86A61F|        |000000;
-                       db $06,$00,$1E,$00,$1C,$00,$1A,$00   ;86A627|        |000000;
-                       db $18,$00,$16,$00,$14,$00,$12,$00   ;86A62F|        |      ;
-                       db $10,$00,$0E,$00,$0C,$00,$0A,$00   ;86A637|        |86A639;
-                       db $08,$00,$06,$00,$04,$00,$02,$00   ;86A63F|        |      ;
-                       db $00,$00,$6B                       ;86A647|        |      ;
+       eventSpawn_mod:
+                       dw $0006                             ;86A5CF|        |      ;
+                                                            ;      |        |      ;
+    eventSpawnState01:
+                       dw $0008,$000A,$000C,$000E           ;86A5D1|        |      ;
+                                                            ;      |        |      ;
+    eventSpawnState02:
+                       dw $0010,$0012,$0014,$0016           ;86A5D9|        |      ;
+                                                            ;      |        |      ;
+    eventSpawnState03:
+                       dw $0018,$001A,$001C,$001E           ;86A5E1|        |      ;
+                                                            ;      |        |      ;
+    eventSpawnState04:
+                       dw $0006,$0004,$0002,$0000           ;86A5E9|        |      ;
+                                                            ;      |        |      ;
+    eventSpawnState05:
+                       dw $000E,$000C,$000A,$0008           ;86A5F1|        |      ;
+                                                            ;      |        |      ;
+    eventSpawnState06:
+                       dw $0016,$0014,$0012,$0010           ;86A5F9|        |      ;
+                                                            ;      |        |      ;
+    eventSpawnState07:
+                       dw $001E,$001C,$001A,$0018           ;86A601|        |      ;
+                                                            ;      |        |      ;
+    eventSpawnState08:
+                       dw $0018,$001A,$001C,$001E           ;86A609|        |      ;
+                                                            ;      |        |      ;
+    eventSpawnState09:
+                       dw $0010,$0012,$0014,$0016           ;86A611|        |      ;
+                                                            ;      |        |      ;
+    eventSpawnState0a:
+                       dw $0008,$000A,$000C,$000E           ;86A619|        |      ;
+                                                            ;      |        |      ;
+    eventSpawnState0b:
+                       dw $0000,$0002,$0004,$0006           ;86A621|        |      ;
+                                                            ;      |        |      ;
+    eventSpawnState0c:
+                       dw $001E,$001C,$001A,$0018           ;86A629|        |      ;
+                                                            ;      |        |      ;
+    eventSpawnState0d:
+                       dw $0016,$0014,$0012,$0010           ;86A631|        |      ;
+                       dw $000E,$000C,$000A,$0008           ;86A639|        |      ;
+                       dw $0006,$0004,$0002,$0000           ;86A641|        |      ;
+                       RTL                                  ;86A649|6B      |      ;
+                                                            ;      |        |      ;
                        JSL.L sfxPlayBackFromBuffer          ;86A64A|22438580|808543;
                        JSL.L HDMI_windowInit                ;86A64E|220D8580|80850D;
                        LDX.W #$1280                         ;86A652|A28012  |      ;
@@ -5178,7 +5206,7 @@ updateBG1CamSpeed2PosWrappingBG2At400:
                        SEC                                  ;86A97E|38      |      ;
                        SBC.L GFX_7DFFFB,X                   ;86A97F|FFFBFF7D|7DFFFB;
                        STA.L GFX_7DFFFE,X                   ;86A983|9FFEFF7D|7DFFFE;
-                       JSL.L CODE_86A363                    ;86A987|2263A386|86A363;
+                       JSL.L collusion2WRAMtable            ;86A987|2263A386|86A363;
                        SEP #$20                             ;86A98B|E220    |      ;
                        LDA.B #$81                           ;86A98D|A981    |      ;
                        PHA                                  ;86A98F|48      |      ;
@@ -5273,7 +5301,7 @@ verticleTilemapUpdate:
                        SEC                                  ;86AA35|38      |      ;
                        SBC.L GFX_7DFFFB,X                   ;86AA36|FFFBFF7D|7DFFFB;
                        STA.L GFX_7DFFFE,X                   ;86AA3A|9FFEFF7D|7DFFFE;
-                       JSL.L CODE_86A363                    ;86AA3E|2263A386|86A363;
+                       JSL.L collusion2WRAMtable            ;86AA3E|2263A386|86A363;
                        SEP #$20                             ;86AA42|E220    |      ;
                        LDA.B #$81                           ;86AA44|A981    |      ;
                        PHA                                  ;86AA46|48      |      ;
@@ -5744,13 +5772,13 @@ loader4BG3backgroundTilmap:
                        LSR A                                ;86ADE3|4A      |      ;
                        ORA.B r_ev_0c_yPosSub                ;86ADE4|050C    |00000C;
                        TAX                                  ;86ADE6|AA      |      ;
-                       LDA.L UNREACH_86A549,X               ;86ADE7|BF49A586|86A549;
+                       LDA.L blockSizeOffsets_00,X          ;86ADE7|BF49A586|86A549;
                        STA.B r_ev_12_state                  ;86ADEB|8512    |000012;
-                       LDA.L UNREACH_86A54B,X               ;86ADED|BF4BA586|86A54B;
+                       LDA.L blockSizeOffsets_08,X          ;86ADED|BF4BA586|86A54B;
                        STA.B r_ev_14_subId                  ;86ADF1|8514    |000014;
-                       LDA.L UNREACH_86A54D,X               ;86ADF3|BF4DA586|86A54D;
+                       LDA.L blockSizeOffsets_10,X          ;86ADF3|BF4DA586|86A54D;
                        STA.B r_ev_16_hitStunCount           ;86ADF7|8516    |000016;
-                       LDA.L UNREACH_86A54F,X               ;86ADF9|BF4FA586|86A54F;
+                       LDA.L blockSizeOffsets_18,X          ;86ADF9|BF4FA586|86A54F;
                        STA.B r_ev_18_xSpdSub                ;86ADFD|8518    |000018;
                        PLX                                  ;86ADFF|FA      |      ;
                                                             ;      |        |      ;
@@ -5816,7 +5844,7 @@ loader4BG3backgroundTilmap:
                        DEC A                                ;86AE6C|3A      |      ;
                        ASL A                                ;86AE6D|0A      |      ;
                        TAX                                  ;86AE6E|AA      |      ;
-                       LDA.L UNREACH_85C8CE,X               ;86AE6F|BFCEC885|85C8CE;
+                       LDA.L scrollLine_HDMA,X              ;86AE6F|BFCEC885|85C8CE;
                        STA.B r_ev_00_sprite                 ;86AE73|8500    |000000;
                        LDA.W #$0005                         ;86AE75|A90500  |      ;
                        STA.B r_ev_02_pri_attri              ;86AE78|8502    |000002;
@@ -8369,7 +8397,7 @@ deathExitStoneFall_Place_06:
                        TAX                                  ;86C436|AA      |      ;
                        LDA.B $01                            ;86C437|A501    |000001;
                        AND.W #$00FF                         ;86C439|29FF00  |      ;
-                       STA.L $7E8000,X                      ;86C43C|9F00807E|7E8000;
+                       STA.L WRAM_scene_FG_0Fx07,X          ;86C43C|9F00807E|7E8000;
                        RTS                                  ;86C440|60      |      ;
                                                             ;      |        |      ;
        medusaExitMain:
@@ -10658,7 +10686,7 @@ lvlPAL_Anim_8_Dungeon00:
                        dw $0003                             ;86F064|        |      ;
                        db $D1,$01,$9F,$02                   ;86F066|        |      ;
                                                             ;      |        |      ;
-lvlPAL_Stage8_dungeon1:
+lvlPAL_Stage7_grakulsQuater:
                        dw $009F                             ;86F06A|        |      ;
                        db $60,$0C,$F7,$5E,$94,$52,$10,$42   ;86F06C|        |      ;
                        db $6B,$2D,$E7,$1C,$84,$10,$21,$04   ;86F074|        |      ;
@@ -10681,7 +10709,7 @@ lvlPAL_Stage8_dungeon1:
                        db $C0,$3C,$C0,$24,$A0,$18,$47,$13   ;86F0FC|        |      ;
                        db $65,$04,$86,$00,$00,$00,$43,$08   ;86F104|        |      ;
                                                             ;      |        |      ;
-spritePAL_Stage8_dungeon2:
+spritePAL_Stage7_grakulsQuaterSprite:
                        dw $001F                             ;86F10C|        |      ;
                        db $00,$00,$DC,$46,$95,$62,$11,$4A   ;86F10E|        |      ;
                        db $8D,$3D,$29,$2D,$C7,$20,$A6,$0C   ;86F116|        |      ;

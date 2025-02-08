@@ -105,8 +105,10 @@
         <sys:Item Key="8438542" Value="unused??" />
         <sys:Item Key="8438582" Value="unused??" />
         <sys:Item Key="8439243" Value="add basepointer at bank 84" />
-        <sys:Item Key="8439385" Value="HUD" />
-        <sys:Item Key="8439392" Value="HUD Block 00" />
+        <sys:Item Key="8439374" Value="HUD_GFX_srcDesPointer" />
+        <sys:Item Key="8439385" Value="HUD_Construct01" />
+        <sys:Item Key="8439392" Value="HUD_Construct02" />
+        <sys:Item Key="8439407" Value="levelNumberTableHUD" />
         <sys:Item Key="8439419" Value="HUD Block 01" />
         <sys:Item Key="8440234" Value="check flag to not despawn" />
         <sys:Item Key="8440272" Value="check boss byte set" />
@@ -157,8 +159,10 @@
         <sys:Item Key="8487505" Value="4364, bank value should be long but had tourble refferencing since pointer is stored for slowROM" />
         <sys:Item Key="8487522" Value="420c dma enable flag " />
         <sys:Item Key="8487636" Value="koranot uses this too" />
+        <sys:Item Key="8487908" Value="bridge" />
         <sys:Item Key="8488513" Value="posOptionMenu" />
         <sys:Item Key="8488515" Value="text_options" />
+        <sys:Item Key="8489033" Value="speed (wait frame) " />
         <sys:Item Key="8489748" Value="sonno" />
         <sys:Item Key="8489785" Value="4 levels that are played in the demo" />
         <sys:Item Key="8491025" Value="left" />
@@ -200,7 +204,7 @@
         <sys:Item Key="8496216" Value="14" />
         <sys:Item Key="8496219" Value="15" />
         <sys:Item Key="8496222" Value="16" />
-        <sys:Item Key="8496225" Value="17 Floating Platform sub0:l-r / sub1:5b u-d / sub2:8b u-d fast / sub3: 5b u-d / sub4: 7b u-d slow / sub5: triangle / sub6: Z" />
+        <sys:Item Key="8496225" Value="Floating Platform sub0:l-r / sub1:5b u-d / sub2:8b u-d fast / sub3: 5b u-d / sub4: 7b u-d slow / sub5: triangle / sub6: Z / sub7: r-l" />
         <sys:Item Key="8496228" Value="18 smallHeart" />
         <sys:Item Key="8496231" Value="19 bigHeart" />
         <sys:Item Key="8496234" Value="1a dagger" />
@@ -289,6 +293,7 @@
         <sys:Item Key="8503959" Value="first platform" />
         <sys:Item Key="8504079" Value="also no clue for what this is used" />
         <sys:Item Key="8504967" Value="not sure.." />
+        <sys:Item Key="8507517" Value="namescreen?" />
         <sys:Item Key="8507811" Value="not sure" />
         <sys:Item Key="8512117" Value="the second value is used for something else" />
         <sys:Item Key="8513712" Value="simon hair??" />
@@ -518,7 +523,9 @@
         <sys:Item Key="8767420" Value="drac" />
         <sys:Item Key="8767422" Value="stored at $0044" />
         <sys:Item Key="8767558" Value="Bottom not moving.. toDo describe values and find coresponding routines" />
+        <sys:Item Key="8767768" Value="dest 7e3c0.. with offsets" />
         <sys:Item Key="8768420" Value="end sc4ed fixes" />
+        <sys:Item Key="8769627" Value="vanilla entrances ??" />
         <sys:Item Key="8770430" Value="might be unused" />
         <sys:Item Key="8771360" Value="death and zapfbat" />
         <sys:Item Key="8771417" Value="used death and zapfbat" />

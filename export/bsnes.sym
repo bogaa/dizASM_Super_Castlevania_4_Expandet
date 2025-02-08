@@ -443,6 +443,13 @@
 7E:2C00 WRAM_DMA_Table
 7E:3000 WRAM_DMA_PPU_DATA
 7E:3C00 WRAM_Collusion_Table
+7E:6000 WRAM_blockMap_FG
+7E:8000 WRAM_scene_FG_0Fx07
+7E:8400 WRAM_scene_FG_PPU_Q1
+7E:8800 WRAM_scene_FG_PPU_Q2
+7E:8C00 WRAM_scene_FG_PPU_Q3
+7E:C000 WRAM_blockMap_BG
+7E:E000 WRAM_scene_BG_0Fx07
 7F:0000 WRAM_GFX_SimonsSpriteSheet
 80:80DF writeCastlevania4StringtooRAM
 80:8103 writeButtonMappingDefaults
@@ -794,7 +801,7 @@
 80:C3B0 whipSwing01State07
 80:C4B3 whipWindupAnimation
 80:C5BF simonSpriteDMAPointerToo1b00
-80:C648 loadEndingSeque00
+80:C648 HUD_construcMainFrame
 80:C69F UpdateHUDmain
 80:C6BD UpdateHUDdisplay
 80:C6EF multiShotUpgradHUDsprite
@@ -828,6 +835,8 @@
 80:CA4E GhostState02
 80:CA5A GhostState03
 80:CA6C GhostState04
+80:CAC1 chaseSimonXpos
+80:CAE5 chaseSimonYpos
 80:CB02 event_ID_09_porcupine
 80:CB5C unknownEvent00Main
 80:CD86 event_ID_0a_Dog
@@ -897,6 +906,7 @@
 80:D771 eventReadTracker01
 80:D7CC calculateSpriteSlotOffset_ID_atRam1a
 80:D7F1 getEmptyEventSlot
+80:D7F4 enterGetEventBasXUp
 80:D7F5 getEmptyEventSlotCurrentPos
 80:D804 gotEmptyEvSlot
 80:D805 advanceEventTrackerReverse
@@ -1048,6 +1058,7 @@
 80:FE12 gargoyleState03
 80:FE20 gargoyleState04
 80:FE3B gargoyleState05
+80:FE6D sinWaveFly_mask30
 80:FF30 costumSC4ed_eventTracker
 80:FF37 costumSC4ed_eventTrackerCandleReverse
 81:0000 r81_ev_00_sprite
@@ -1340,8 +1351,8 @@
 81:82C6 textPointerStartContinueOptions
 81:82D4 mod7PosData00
 81:82DC mode7RotationIndex
-81:82E4 ringSwingRotationTable
-81:83E4 rotationValuesBridge
+81:82E4 rotationLookUpPlus
+81:83E4 rotationLookUpMinus
 81:84E4 text_GameOver
 81:84F0 text_Continue
 81:84FB text_Password
@@ -1407,6 +1418,23 @@
 81:87FB levelTileAnimationEntery15
 81:87FF levelTileAnimationEntery16
 81:8803 levelTileAnimationEntery17
+81:8807 tileAnimSrcDest_00
+81:8849 tileAnimSrcDest_01
+81:887E tileAnimSrcDest_02
+81:88A2 tileAnimSrcDest_03
+81:88E4 tileAnimSrcDest_04
+81:88F2 tileAnimSrcDest_05
+81:8934 tileAnimSrcDest_06
+81:8958 tileAnimSrcDest_07
+81:899A tileAnimSrcDest_08
+81:89DC tileAnimSrcDest_09
+81:8A11 tileAnimSrcDest_0a
+81:8A35 tileAnimSrcDest_0b
+81:8A3F tileAnimSrcDest_0c
+81:8A7D tileAnimSrcDest_0d
+81:8AA1 tileAnimSrcDest_0e
+81:8AC5 tileAnimSrcDest_0f
+81:8AF8 tileAnimSrcDest_10
 81:8B13 demoLevelStuffTitleScreen00
 81:8B2B titleScreenMenuPointer00
 81:8B31 titleScreenMenu_data00
@@ -1474,7 +1502,7 @@
 81:9ED7 whipChain01DirectionProperty05
 81:A249 subWeaponUpgradHudSpritePPU
 81:A253 multiShotUpgradHudSpritePPU
-81:A259 HUD_Construct00
+81:A259 HUD_Construct02
 81:A25F levelNumberTableHUD
 81:A3B3 HUD_Construct01
 81:A3C1 pointerPPU_score
@@ -1543,7 +1571,7 @@
 81:B465 some09GFXsrcDesPointer
 81:B47D some0aGFXsrcDesPointer
 81:B49A some0bGFXsrcDesPointer
-81:B4A3 some0cGFXsrcDesPointer
+81:B4A3 HUD_GFX_srcDesPointer
 81:B4AC simonSpriteSheetLoad
 81:B4E6 some0eGFXsrcDesPointer
 81:B503 flameSprOptionsGFXsrcDesPointer
@@ -1736,7 +1764,7 @@
 81:D01F SpriteAnimationTable50
 81:D051 SpriteAnimationTable51
 81:D073 somePaletteLoadMayBeBoss06
-81:D07E pwSpritePlacment
+81:D07D pwSpritePlacment
 81:D0C5 letterDataAlphabetIndexNameScreen
 81:D0DF letterDataNumberIndexNameScreen
 81:D0FB buttonMapTextPointer
@@ -1987,6 +2015,10 @@
 81:EC7D bossRowdinLockupTable00
 81:EEFD SpriteAnimationTable131
 81:EF49 noClueWhatThiIs4
+81:EFA1 event_68_blocksUpdateID
+81:EFCB event_68_blocks_spawnXpos
+81:EFCC event_68_blocks_spawnSpeed
+81:F001 ectoplasmHDMA_table
 81:F081 zapfBatDiveSpeedYpos
 81:F091 zapfBatDiveSpeedXpos
 81:F0F1 SpriteAnimationTable132
@@ -2161,6 +2193,7 @@
 82:8ABF turningPlaformState00
 82:8AEA turningPlaformState01
 82:8B3B turningPlaformState02
+82:8B53 writeCollusion_baseX
 82:8B64 turningPlaformState03
 82:8B7E event_ID_41_camaraLockEvent
 82:8B8D camaraLockStateTable
@@ -2197,11 +2230,11 @@
 82:9095 crumblingBlockState01
 82:9117 crumblingBlockState02
 82:915A crumblingBlockState03
-82:915B event_ID_39_bridgeRobe
-82:916A bridgeRobeStateTable
-82:9170 bridgeState00
-82:9195 bridgeState01
-82:919C bridgeState02
+82:915B event_ID_39_fallingPillar
+82:916A fallingPillar
+82:9170 fallingPillarState00
+82:9195 fallingPillarState01
+82:919C fallingPillarState02
 82:91F7 fallingStone_beforPillarState03
 82:91FB setFallSpeedWithIndexIn00
 82:9213 event_ID_6a_fallingStone_beforPillar
@@ -2235,13 +2268,13 @@
 82:9584 grakul_2A_LoadInit0a
 82:95AE deathBoss_2A_LoadInit0b
 82:95CA draculaAndMummyPosInitReplace
-82:963B event_ID_55_invisablePlatform
-82:964F invisablePlatformStateTable
-82:9657 invisablePlatformState00
-82:965A invisablePlatformState01
-82:967A invisablePlatformState02
-82:9684 invisablePlatformState03
-82:96BC event_ID_55_invisablePlatformRoutine
+82:963B event_ID_55_bridgeRobe
+82:964F bridgeRobe
+82:9657 bridgeRobeState00
+82:965A bridgeRobeState01
+82:967A bridgeRobeState02
+82:9684 bridgeRobeState03
+82:96BC bridgeRobePlayerInteraction
 82:977D event_ID_57_hunchBack
 82:978C hunchBackStateTable
 82:979E hunchBackState00
@@ -2310,6 +2343,7 @@
 82:A0A5 stealingHandState03
 82:A0BB stealingHandState04
 82:A0F9 stealingHandState05
+82:A130 grabingHandAnim
 82:A13A event_ID_71_horseHeadNormal
 82:A149 horseHeadNormalStateTable
 82:A155 horseHeadNormalState00
@@ -2470,13 +2504,13 @@
 82:C408 autoSpawnSubIDRoutine
 82:C417 autoSpawnSubIDJumpTable
 82:C42F autoSpawnSubID00_pillar
-82:C47A autoSpawnSubID06_waterSpitterJump
+82:C47A autoSpawnSubID06_spawn_7Medusas
 82:C484 autoSpawnSubID02_Medusa
 82:C499 autoSpawnSubID01_Medusa
 82:C4DB autoSpawnSubID03_Zombie
 82:C51C autoSpawnSubID07_eagles
-82:C549 autoSpawnSubID04_waterSpitter
-82:C595 autoSpawnSubID05_waterSpitter
+82:C549 autoSpawnSubID04_fishmanSpit
+82:C595 autoSpawnSubID05_fishmanJump
 82:C5B2 autoSpawnSubID0b_graveDigger
 82:C5B7 autoSpawnSubID08_grabingHand
 82:C5F4 autoSpawnSubID09_bat
@@ -3407,26 +3441,26 @@
 84:812F sprAssFirstPageID_2f
 84:8134 sprAssFirstPageID_30
 84:8145 sprAssFirstPageID_31
-84:814A sprAssFirstPageID_32
-84:814F sprAssFirstPageID_33
-84:8154 sprAssFirstPageID_34
-84:8159 sprAssFirstPageID_35
-84:815E sprAssFirstPageID_36
-84:8163 sprAssFirstPageID_37
-84:8168 sprAssFirstPageID_38
+84:814A sprAss_dagger_ID_32
+84:814F sprAss_axe_ID_33
+84:8154 sprAss_holyWater_ID_34
+84:8159 sprAss_holyThrow_ID_35
+84:815E sprAss_cross_ID_36
+84:8163 sprAss_clock_ID_37
+84:8168 sprAss_bigHeart_ID_38
 84:816D sprAssFirstPageID_39
-84:8172 sprAssFirstPageID_3a
-84:8177 sprAssFirstPageID_3b
-84:817C sprAssFirstPageID_3c
-84:8181 sprAssFirstPageID_3d
-84:8186 sprAssFirstPageID_3e
-84:818B sprAssFirstPageID_3f
-84:8190 sprAssFirstPageID_40
+84:8172 sprAssFirst_rossery_3a
+84:8177 sprAss_rosary_ID_3b
+84:817C sprAss_whipUpgrade_ID_3c
+84:8181 whipUpgradeID_3d
+84:8186 sprAss_monyBag_ID_3e
+84:818B sprAss_doubleShot_3f
+84:8190 sprAss_trippleShot_40
 84:8195 sprAssFirstPageID_41
 84:819A sprAssFirstPageID_42
 84:819F sprAssFirstPageID_43
 84:81A4 sprAssFirstPageID_44
-84:81A9 sprAssFirstPageID_45
+84:81A9 sprAss_oneUp_45
 84:81AE sprAssFirstPageID_46
 84:81B3 sprAssFirstPageID_47
 84:81B8 sprAssFirstPageID_48
@@ -4700,15 +4734,75 @@
 84:FE8E fallingBlocksStateTable
 84:FE94 fallingBlocksState00
 84:FE99 fallingBlocksState01
+84:FEBF endBlocksFall
 84:FEC3 fallingBlocksState02
 84:FEFB fallingBlocksRoutine00
 85:BCF8 TimerDefault4EachLevel
 85:BD80 thisHasToDoWithScrollBehavier4EachLevel
 85:BE90 loadNewDeathEntranceRoutineSC4ed
 85:C248 levelBG0Mapping
+85:C2D0 vanillaCollusionTables
+85:C358 collusion_vanilla_00
+85:C376 collusion_vanilla_01
+85:C394 collusion_vanilla_02
+85:C3B2 collusion_vanilla_03
+85:C3D0 collusion_vanilla_04
+85:C3EE collusion_vanilla_05
+85:C40C collusion_vanilla_06
+85:C42A collusion_vanilla_07
+85:C448 collusion_vanilla_08
+85:C466 collusion_vanilla_09
+85:C484 collusion_vanilla_0a
+85:C4A2 collusion_vanilla_0b
+85:C4C0 collusion_vanilla_0c
+85:C4DE collusion_vanilla_0d
+85:C4FC collusion_vanilla_0e
+85:C51A collusion_vanilla_0f
+85:C538 collusion_vanilla_10
+85:C556 collusion_vanilla_11
+85:C574 collusion_vanilla_12
+85:C592 collusion_vanilla_13
+85:C5B0 collusion_vanilla_14
+85:C5CE collusion_vanilla_15
+85:C5EC collusion_vanilla_16
+85:C60A collusion_vanilla_17
+85:C628 collusion_vanilla_18
+85:C646 collusion_vanilla_19
+85:C664 collusion_vanilla_1a
+85:C682 collusion_vanilla_1b
+85:C6A0 collusion_vanilla_1c
+85:C6BE collusion_vanilla_1d
+85:C6DC collusion_vanilla_1e
+85:C6FA collusion_vanilla_1f
+85:C718 collusion_vanilla_20
 85:C736 specialBGSetting00
 85:C7BE tranperantSettingBG
 85:C846 levelScrollBGSettings
+85:C8CE scrollLine_HDMA
+85:C918 scrollLine_HDMA_00
+85:C919 scrollLine_HDMA_01
+85:C91E scrollLine_HDMA_02
+85:C926 scrollLine_HDMA_03
+85:C931 scrollLine_HDMA_04
+85:C942 scrollLine_HDMA_05
+85:C94D scrollLine_HDMA_06
+85:C974 scrollLine_HDMA_07
+85:C98E scrollLine_HDMA_08
+85:C9A0 scrollLine_HDMA_09
+85:C9A8 scrollLine_HDMA_0a
+85:C9BE scrollLine_HDMA_0b
+85:C9C9 scrollLine_HDMA_0c
+85:C9D8 scrollLine_HDMA_0d
+85:C9E0 scrollLine_HDMA_0e
+85:C9E8 scrollLine_HDMA_0f
+85:C9F3 scrollLine_HDMA_10
+85:CA02 scrollLine_HDMA_11
+85:CA1F scrollLine_HDMA_12
+85:CA39 scrollLine_HDMA_13
+85:CA50 scrollLine_HDMA_14
+85:CA58 scrollLine_HDMA_15
+85:CA6F scrollLine_HDMA_16
+85:CA7A scrollLine_HDMA_17
 85:CA82 levelTileAnimationPointer00
 85:CB0A levelTileAnimationPointer01
 85:CB92 deathEntranceEventLoadDirectionSC4ed
@@ -5180,9 +5274,36 @@
 86:A0E6 updateCamBG1_Speed2Pos
 86:A15A updateCamSpeedVerticalSection
 86:A1B6 wrappingBackgrounds
+86:A2B7 getBlockID_WRAM
+86:A363 collusion2WRAMtable
+86:A379 colliTabColumnLoop
+86:A3A2 colliTab_BlockLoop
 86:A3B3 SC4edNewTableBasedCollusionFirstLevelFIX
 86:A4DF SC4edSeconLevelColluisonTableFIX00
 86:A50B SC4edSeconLevelColluisonTableFIX01
+86:A549 blockSizeOffsets_00
+86:A54B blockSizeOffsets_08
+86:A54D blockSizeOffsets_10
+86:A54F blockSizeOffsets_18
+86:A5C9 eventSpawnState00
+86:A5CB eventSpawnSubID
+86:A5CD eventSpawnHitStune
+86:A5CF eventSpawn_mod
+86:A5D1 eventSpawnState01
+86:A5D9 eventSpawnState02
+86:A5E1 eventSpawnState03
+86:A5E9 eventSpawnState04
+86:A5F1 eventSpawnState05
+86:A5F9 eventSpawnState06
+86:A601 eventSpawnState07
+86:A609 eventSpawnState08
+86:A611 eventSpawnState09
+86:A619 eventSpawnState0a
+86:A621 eventSpawnState0b
+86:A629 eventSpawnState0c
+86:A631 eventSpawnState0d
+86:A638 eventSpawnState0e
+86:A640 eventSpawnState0f
 86:A74E setting82Routine02
 86:A76F setting82Routine0a
 86:A7B9 setting82Routine0b
@@ -5474,8 +5595,8 @@
 86:EF80 lvlPAL_Stage7_liberarry
 86:F042 spritePAL_Stage7_liberarry
 86:F064 lvlPAL_Anim_8_Dungeon00
-86:F06A lvlPAL_Stage8_dungeon1
-86:F10C spritePAL_Stage8_dungeon2
+86:F06A lvlPAL_Stage7_grakulsQuater
+86:F10C spritePAL_Stage7_grakulsQuaterSprite
 86:F12E lvlPAL_Anim_8_Dungeon01
 86:F132 lvlPAL_Stage8_dungeon
 86:F1D4 lvlPAL_Anim_9_Gold00
@@ -5791,7 +5912,7 @@ A3:BC00 collusionDataLvl2f
 A3:C000 collusionDataLvl30
 A3:C400 collusionDataLvl31
 A3:C800 collusionDataLvl32
-A3:CC00 kcollusionDataLvl33
+A3:CC00 collusionDataLvl33
 A3:D000 collusionDataLvl34
 A3:D400 collusionDataLvl35
 A3:D800 collusionDataLvl36
@@ -5800,7 +5921,7 @@ A3:E000 collusionDataLvl38
 A3:E400 collusionDataLvl39
 A3:E800 collusionDataLvl3a
 A3:EC00 collusionDataLvl3b
-A3:F000 lcollusionDataLvl3c
+A3:F000 collusionDataLvl3c
 A3:F400 collusionDataLvl3d
 A3:F800 collusionDataLvl3e
 A3:FC00 collusionDataLvl3f
@@ -6402,10 +6523,10 @@ FF:8000 emptyBankFF
 81:8593 DATA16_818593
 81:859F DATA16_81859F
 81:85AB DATA16_8185AB
-81:8815 DATA16_818815
-81:8822 DATA16_818822
-81:882F DATA16_81882F
-81:883C DATA16_81883C
+81:8815 DATA8_818815
+81:8822 DATA8_818822
+81:882F DATA8_81882F
+81:883C DATA8_81883C
 81:8B41 PTR16_818B41
 81:8B49 DATA8_818B49
 81:8B4E DATA8_818B4E
@@ -6528,6 +6649,8 @@ FF:8000 emptyBankFF
 81:B9A1 DATA16_81B9A1
 81:B9B3 DATA16_81B9B3
 81:B9BD PTR16_81B9BD
+81:BA52 DATA16_81BA52
+81:BAA2 PTR16_81BAA2
 81:BBA5 DATA16_81BBA5
 81:BBA7 DATA16_81BBA7
 81:BBCB DATA16_81BBCB
@@ -6729,13 +6852,9 @@ FF:8000 emptyBankFF
 81:EF39 DATA16_81EF39
 81:EF7D DATA16_81EF7D
 81:EF7F DATA16_81EF7F
-81:EFA1 DATA16_81EFA1
 81:EFBD DATA16_81EFBD
-81:EFCB DATA16_81EFCB
-81:EFCC DATA16_81EFCC
 81:EFFD DATA16_81EFFD
 81:EFFF DATA16_81EFFF
-81:F001 DATA16_81F001
 81:F041 DATA16_81F041
 81:F042 DATA16_81F042
 81:F0D1 DATA16_81F0D1
@@ -6818,19 +6937,10 @@ FF:8000 emptyBankFF
 84:F9C4 DATA16_84F9C4
 84:FAA0 DATA16_84FAA0
 84:FB7C DATA16_84FB7C
-85:C8CE UNREACH_85C8CE
 85:EE89 UNREACH_85EE89
 85:EE8B UNREACH_85EE8B
 86:9697 UNREACH_869697
 86:9D5C UNREACH_869D5C
-86:A549 UNREACH_86A549
-86:A54B UNREACH_86A54B
-86:A54D UNREACH_86A54D
-86:A54F UNREACH_86A54F
-86:A5C9 UNREACH_86A5C9
-86:A5CB UNREACH_86A5CB
-86:A5CD UNREACH_86A5CD
-86:A5CF UNREACH_86A5CF
 86:B81D UNREACH_86B81D
 86:B81F UNREACH_86B81F
 86:BD52 UNREACH_86BD52
@@ -6897,7 +7007,9 @@ A6:8201 UNREACH_A68201
 81:1EA4  	
 81:1EAA 	
 81:82D4 koranot uses this too
+81:83E4 bridge
 81:8641 posOptionMenu
+81:8849 speed (wait frame) 
 81:8B39 4 levels that are played in the demo
 81:9261 leather
 81:9267 donno 
@@ -6914,6 +7026,7 @@ A6:8201 UNREACH_A68201
 81:C1BF left right
 81:C297 first platform
 81:C687 not sure..
+81:D07D namescreen?
 81:D1A3 not sure
 81:E275 the second value is used for something else
 81:E8B0 simon hair??
@@ -6989,6 +7102,7 @@ A6:8201 UNREACH_A68201
 85:C736 notSure goes 13d2
 85:C7BE stored at $0044
 85:C846 Bottom not moving.. toDo describe values and find coresponding routines
+85:C918 dest 7e3c0.. with offsets
 85:D720 death and zapfbat
 85:D759 used death and zapfbat
 85:E4D7 animatedBackground 40+

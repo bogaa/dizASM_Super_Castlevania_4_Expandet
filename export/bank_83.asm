@@ -680,7 +680,7 @@ passwordScreenMainJumpTableRoutine:
                        AND.W #$00FF                         ;838513|29FF00  |      ;
                        STA.B r_ev_02_pri_attri              ;838516|8502    |000002;
                        LDX.B r_ev_00_sprite                 ;838518|A600    |000000;
-                       LDA.W pwSpritePlacment,X             ;83851A|BD7ED0  |81D07E;
+                       LDA.W $D07E,X                        ;83851A|BD7ED0  |81D07E;
                        AND.W #$00FF                         ;83851D|29FF00  |      ;
                        TAX                                  ;838520|AA      |      ;
                                                             ;      |        |      ;
@@ -694,7 +694,7 @@ passwordScreenMainJumpTableRoutine:
                                                             ;      |        |      ;
           CODE_83852D:
                        LDX.B r_ev_00_sprite                 ;83852D|A600    |000000;
-                       LDA.W $D07D,X                        ;83852F|BD7DD0  |81D07D;
+                       LDA.W pwSpritePlacment,X             ;83852F|BD7DD0  |81D07D;
                        AND.W #$00FF                         ;838532|29FF00  |      ;
                        TAX                                  ;838535|AA      |      ;
                        LDA.W $1C14,X                        ;838536|BD141C  |811C14;
@@ -714,11 +714,11 @@ passwordScreenMainJumpTableRoutine:
                        STY.B r_ev_00_sprite                 ;838551|8400    |000000;
                                                             ;      |        |      ;
           CODE_838553:
-                       LDA.W $D07D,Y                        ;838553|B97DD0  |81D07D;
+                       LDA.W pwSpritePlacment,Y             ;838553|B97DD0  |81D07D;
                        TAX                                  ;838556|AA      |      ;
                        LDA.W $1C10,X                        ;838557|BD101C  |811C10;
                        STA.B r_ev_02_pri_attri              ;83855A|8502    |000002;
-                       LDA.W pwSpritePlacment,Y             ;83855C|B97ED0  |81D07E;
+                       LDA.W $D07E,Y                        ;83855C|B97ED0  |81D07E;
                        TAX                                  ;83855F|AA      |      ;
                        LDA.B r_ev_02_pri_attri              ;838560|A502    |000002;
                                                             ;      |        |      ;
@@ -12935,7 +12935,7 @@ event48_SubID00_HydraBoss:
                        PLB                                  ;83E0ED|AB      |      ;
                        REP #$20                             ;83E0EE|C220    |      ;
                        LDX.B r_VRAM_updateSize              ;83E0F0|A650    |000050;
-                       LDA.W $C000,Y                        ;83E0F2|B900C0  |7EC000;
+                       LDA.W WRAM_blockMap_BG,Y             ;83E0F2|B900C0  |7EC000;
                        ORA.W #$2000                         ;83E0F5|090020  |      ;
                        STA.W $0000,X                        ;83E0F8|9D0000  |7E0000;
                        LDA.W $C002,Y                        ;83E0FB|B902C0  |7EC002;
@@ -15148,7 +15148,7 @@ bridgeColaps_stateTable:
                        LDY.B r_XregSlotCurrent              ;83F18A|A4FC    |0000FC;
                        LDX.W r81_ev_36,Y                    ;83F18C|BE3600  |810036;
                        LDA.B r_ev_00_sprite                 ;83F18F|A500    |000000;
-                       STA.L $7E8000,X                      ;83F191|9F00807E|7E8000;
+                       STA.L WRAM_scene_FG_0Fx07,X          ;83F191|9F00807E|7E8000;
                                                             ;      |        |      ;
           CODE_83F195:
                        LDX.B r_XregSlotCurrent              ;83F195|A6FC    |0000FC;
@@ -15165,7 +15165,7 @@ bridgeColaps_stateTable:
                        LDY.B r_XregSlotCurrent              ;83F1AE|A4FC    |0000FC;
                        LDX.W r81_ev_38,Y                    ;83F1B0|BE3800  |810038;
                        LDA.B r_ev_00_sprite                 ;83F1B3|A500    |000000;
-                       STA.L $7E8000,X                      ;83F1B5|9F00807E|7E8000;
+                       STA.L WRAM_scene_FG_0Fx07,X          ;83F1B5|9F00807E|7E8000;
                                                             ;      |        |      ;
           CODE_83F1B9:
                        LDX.B r_XregSlotCurrent              ;83F1B9|A6FC    |0000FC;
@@ -15210,7 +15210,7 @@ bridgeColaps_stateTable:
                        LDY.B r_XregSlotCurrent              ;83F202|A4FC    |0000FC;
                        LDX.W r81_ev_36,Y                    ;83F204|BE3600  |810036;
                        LDA.W #$0000                         ;83F207|A90000  |      ;
-                       STA.L $7E8000,X                      ;83F20A|9F00807E|7E8000;
+                       STA.L WRAM_scene_FG_0Fx07,X          ;83F20A|9F00807E|7E8000;
                        STA.L $7E8010,X                      ;83F20E|9F10807E|7E8010;
                                                             ;      |        |      ;
           CODE_83F212:
@@ -15251,7 +15251,7 @@ bridgeColaps_stateTable:
                                                             ;      |        |      ;
           CODE_83F262:
                        LDX.W #$0800                         ;83F262|A20008  |      ;
-                       JSL.L $80D7F4                        ;83F265|22F4D780|80D7F4;
+                       JSL.L enterGetEventBasXUp            ;83F265|22F4D780|80D7F4;
                        BCS CODE_83F2A1                      ;83F269|B036    |83F2A1;
                        JSL.L clearSelectedEventSlotAll      ;83F26B|22598C80|808C59;
                        LDA.W #$007D                         ;83F26F|A97D00  |      ;
